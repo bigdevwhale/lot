@@ -34,7 +34,7 @@ mod	c		У тебя своя комната и пианино. Учительни
 mod	y		{Купил|Купила} первый телефон.	You buy your first phone.	town
 mod	y		{Уехал|Уехала} в город. Комната на шестерых.	You move to the city. One room for six.	town
 mod	y		{Сдал|Сдала} выпускные экзамены. Мать раздала соседям сладости.	You pass your final exams. Your mother hands out sweets to the neighbours.	lit
-mod	y		Первая работа: ночная смена на складе.	Your first job: the night shift at a warehouse.	
+mod	y		Первая работа: ночная смена на складе.	Your first job: the night shift at a warehouse.	+town
 mod	y		Друзья уехали за границу. Ты {остался|осталась}.	Your friends go abroad. You stay.	
 mod	y	cn	Гаокао. Два дня экзаменов, дома все ходят на цыпочках.	The gaokao. Two days of exams; at home everyone tiptoes.	lit
 mod	y	in	Результаты экзаменов за десятый класс печатают в газете. Отец ищет твою фамилию.	The tenth-standard results are printed in the paper. Father looks for your name.	lit
@@ -82,7 +82,7 @@ mod	a	ru	Очередь за колбасой. Берёшь и на соседк
 mod	a	ru	Выходные на даче: картошка, баня, шашлык.	Weekends at the dacha: potatoes, the banya, shashlik.	
 mod	a	ru	{Получил|Получила} квартиру от завода. Ждали двенадцать лет.	The factory gives you a flat. You waited twelve years.	+town
 mod	a	jp	Последняя электричка, галстук ослаблен. Начальник опять звал выпить.	The last train, tie loosened. The boss asked you out drinking again.	m r2
-mod	a	jp	Новогодние дни у родни мужа. Ты на кухне с утра до ночи.	New Year at your husband's family. You are in the kitchen from dawn to night.	f married
+mod	a	jp	Новогодние дни у родни мужа. Ты на кухне с утра до ночи.	New Year at your husband's family. You are in the kitchen from dawn to night.	f married !widowed
 mod	a	me	Рамадан. Вечером вся семья ждёт выстрела пушки, чтобы сесть за стол.	Ramadan. In the evening the whole family waits for the cannon to sit down to eat.	
 mod	a	eu us	{Взял|Взяла} ипотеку на двадцать пять лет.	You take out a twenty-five-year mortgage.	r2 r3
 mod	a	us	Страховка не покрыла операцию. Платишь в рассрочку.	The insurance won't cover the operation. You pay in instalments.	
@@ -90,7 +90,7 @@ mod	a	au	Работаешь на руднике: две недели там, н�
 mod	a		Родился первенец. Третью ночь не спишь, не насмотришься.	Your first child is born. Third night without sleep; you can't stop looking.	kids
 mod	a		Учишься водить в сорок лет. Дети смеются.	You learn to drive at forty. The children laugh.	kids
 mod	a		Вечерами учишься на бухгалтера. Засыпаешь над тетрадью.	In the evenings you study bookkeeping. You fall asleep over the notebook.	lit
-mod	a		Бумаги в конторе. Обед — за рабочим столом.	Papers at the office. Lunch at your desk.	r2
+mod	a		Бумаги в конторе. Обед — за рабочим столом.	Papers at the office. Lunch at your desk.	r2 +town
 mod	a		{Купил|Купила} машину. Всей семьёй едете к морю.	You buy a car. The whole family drives to the sea.	r2 r3
 mod	a		У детей няня и шофёр. С няней они говорят на её языке.	The children have a nanny and a driver. They speak the nanny's language with her.	r3 kids
 mod	a		Профсоюз объявил забастовку. Неделю стоите у ворот.	The union calls a strike. For a week you stand at the gates.	r1
@@ -136,7 +136,7 @@ mod	o	af	Сын каждый месяц шлёт деньги на телефо�
 mod	o	af	Под деревом разбираешь споры деревни. Тебя слушают.	Under the tree you settle the village's quarrels. People listen.	m
 mod	o	latam	Смотришь сериал и споришь с соседкой о героях, как о родне.	You watch the soap and argue with the neighbour about the characters as if they were kin.	
 mod	o	ru	Пенсии хватает до двадцатого. Выручает дача.	The pension lasts till the twentieth. The dacha gets you through.	
-mod	o	ru	Варишь варенье. Банок больше, чем внуков.	You make jam. More jars than grandchildren.	
+mod	o	ru	Варишь варенье. Банок больше, чем внуков.	You make jam. More jars than grandchildren.	kids
 mod	o	jp	Утренняя гимнастика по радио, как в детстве.	Morning exercises to the radio, just like in childhood.	
 mod	o	sea	Сидишь у дома и смотришь, как правнуки гоняют на мопедах.	You sit outside the house watching the great-grandchildren race on mopeds.	kids
 mod	o	me	Кофе с соседями после пятничной молитвы.	Coffee with the neighbours after Friday prayers.	m
@@ -146,7 +146,7 @@ mod	o		Плохо слышишь. Телевизор на всю громкос�
 mod	o		{Пережил|Пережила} всех друзей детства.	You outlive all your childhood friends.	
 mod	o		Подписываешь старые фотографии, чтобы внуки знали, кто есть кто.	You label old photographs so the grandchildren know who is who.	lit kids
 mod	o		На рынок ходишь не за покупками, а поговорить.	You go to the market not to buy, but to talk.	
-mod	o		{Похоронил|Похоронила} {жену|мужа}. По привычке ставишь на стол две чашки.	You bury your {wife|husband}. Out of habit you set out two cups.	married
+mod	o		{Похоронил|Похоронила} {жену|мужа}. По привычке ставишь на стол две чашки.	You bury your {wife|husband}. Out of habit you set out two cups.	married +widowed
 mod	x		Завод закрыли. Ты {остался|осталась} без работы.	The factory shuts. You are out of work.	r1 r2
 mod	x		Засуха. Урожай сгорел на корню.	Drought. The harvest withers in the field.	r1 !town
 mod	x		Наводнение. Вода стояла в доме по пояс.	A flood. Water waist-high in the house.	
@@ -216,7 +216,7 @@ mod	y	us	Выпускной бал в спортзале. Над головой 
 mod	y	au	До школы катаешься на доске. В класс приходишь с мокрыми волосами.	You surf before school. You come to class with wet hair.	
 mod	y	eu	Летом разносишь кофе в кафе у моря. Чаевые прячешь в коробку из-под обуви.	In summer you wait tables at a seaside café. You hide the tips in a shoebox.	
 mod	y	eu	С друзьями до полуночи сидите на ступенях у фонтана.	You sit with your friends on the fountain steps until midnight.	
-mod	y	ru	Сидите компанией на подоконнике в подъезде. Соседи гонят.	You and your friends sit on the stairwell windowsill. The neighbours chase you off.	
+mod	y	ru	Сидите компанией на подоконнике в подъезде. Соседи гонят.	You and your friends sit on the stairwell windowsill. The neighbours chase you off.	+town
 mod	y	ru	Гитара во дворе. Знаешь три аккорда и все песни.	A guitar in the yard. You know three chords and every song.	
 mod	y	cn	После школы тебя отправили в деревню. Жать учит старая крестьянка.	After school you are sent down to the countryside. An old peasant woman teaches you to reap.	before:1979
 mod	y	ru	Летом трудовой лагерь: полешь колхозную свёклу, вечером танцы.	A summer labour camp: weeding kolkhoz beets, dancing in the evening.	before:1992
@@ -254,7 +254,7 @@ mod	a	us	Две недели отпуска в году. Снимаете дом
 mod	a	us	Работаешь в ночную на заправке у трассы.	You work nights at a gas station by the highway.	
 mod	a	au	Работаешь на скотоводческой станции. До ближайших соседей час езды.	You work on a cattle station. The nearest neighbours are an hour's drive away.	!town
 mod	a	eu	Поезд в 7:12. Каждое утро одни и те же лица.	The 7.12 train. The same faces every morning.	
-mod	a	eu	Ты с юга, работаешь на заводе на севере. В августе едешь домой с полной машиной подарков.	You are from the south, working at a factory in the north. In August you drive home with the car full of presents.	
+mod	a	eu	Ты с юга, работаешь на заводе на севере. В августе едешь домой с полной машиной подарков.	You are from the south, working at a factory in the north. In August you drive home with the car full of presents.	+town
 mod	a	ru	До ночи на кухне с друзьями: чай, споры, дым коромыслом.	Late into the night in the kitchen with friends: tea, arguments, smoke.	
 mod	a	af	Платишь за всё с телефона. Банка в деревне так и нет.	You pay for everything by phone. There is still no bank in the village.	after:2008
 mod	a		Развозишь еду на мопеде. Приложение считает каждую минуту.	You deliver food on a moped. The app counts every minute.	after:2015 town
@@ -302,7 +302,7 @@ mod	o	latam	По воскресеньям танцуешь на площади �
 mod	o	us	Пенсии не хватает. Укладываешь покупки на кассе в супермаркете.	The pension isn't enough. You bag groceries at the supermarket.	
 mod	o	au	{Перебрался|Перебралась} в домик у моря. Каждое утро плаваешь.	You move to a little house by the sea. You swim every morning.	
 mod	o	eu	С клубом пенсионеров ездишь на автобусе по чужим странам.	You tour foreign countries by coach with the pensioners' club.	
-mod	o	ru	Сидишь на лавочке у подъезда. Знаешь, кто во сколько пришёл.	You sit on the bench by the entrance. You know who came home when.	
+mod	o	ru	Сидишь на лавочке у подъезда. Знаешь, кто во сколько пришёл.	You sit on the bench by the entrance. You know who came home when.	+town
 mod	x		Пожар. Сгорели все документы и фотографии.	A fire. Every paper and photograph burns.	
 mod	x		Тяжёлая болезнь. Лечение стоит больше, чем у вас есть.	A serious illness. The treatment costs more than you have.	
 mod	x		Хозяин поднял плату за жильё вдвое. Ищешь, куда съехать.	The landlord doubles the rent. You look for somewhere else.	

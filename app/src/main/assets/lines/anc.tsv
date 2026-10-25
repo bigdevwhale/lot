@@ -86,7 +86,7 @@ anc	a	cn	Пишешь кистью на бамбуковых планках. О�
 anc	a	in	Жрец назначил свадьбу дочери по звёздам. Ждать ещё два месяца.	The priest sets your daughter's wedding by the stars. Two more months to wait.	kids
 anc	a	in	Муссон запаздывает. Каждое утро вся деревня смотрит на небо.	The monsoon is late. Every morning the whole village looks at the sky.	
 anc	a	in	Брахман пришёл петь гимны над новым домом. Ты {отдал|отдала} ему тёлку.	A Brahmin comes to chant hymns over the new house. You give him a heifer.	
-anc	a	in	Отец лепил горшки, ты лепишь горшки, и сын будет лепить. Такая у вас каста.	Father made pots, you make pots, and your son will too. That is your caste.	r2
+anc	a	in	Отец лепил горшки, ты лепишь горшки, и сын будет лепить. Такая у вас каста.	Father made pots, you make pots, and your son will too. That is your caste.	r2 kids
 anc	a	in	Корова отелилась. Первое молоко отдаёшь богам.	The cow calves. The first milk goes to the gods.	!town
 anc	a	me	Писец храма выдаёт тебе ячмень и пиво: плата за месяц на канале.	The temple scribe hands out barley and beer: your pay for a month on the canal.	
 anc	a	me	Долг записан на табличке. Табличка лежит в храме, а ты дома не спишь.	The debt is written on a tablet. The tablet lies in the temple, and you lie awake at home.	
@@ -115,7 +115,7 @@ anc	a	andes	Сушишь картошку на морозе: ночью она �
 anc	a	andes	Чинишь стену террасы, которую клал ещё дед твоего деда.	You mend a terrace wall laid by your grandfather's grandfather.	
 anc	a	au	Поджигаешь сухую траву, чтобы кенгуру пришли на свежие побеги.	You set the dry grass alight so the kangaroos come to the fresh shoots.	
 anc	a	au	Ваша группа встретилась с соседями у реки. Меняетесь охрой, песнями и новостями.	Your band meets the neighbours at the river. You trade ochre, songs and news.	
-anc	a		Жена родила сына. Три дня ходишь, не чуя под собой ног.	Your wife gives birth to a son. For three days your feet hardly touch the ground.	m married
+anc	a		Жена родила сына. Три дня ходишь, не чуя под собой ног.	Your wife gives birth to a son. For three days your feet hardly touch the ground.	m married !widowed
 anc	a		Родила. Повитуха говорит, что ты кричала громче всех в деревне.	You give birth. The midwife says you screamed louder than anyone in the village.	f married
 anc	a	cn in me eg med	Сын провёл свою первую борозду. Кривую. Ты молчишь.	Your son ploughs his first furrow. Crooked. You say nothing.	kids !town
 anc	a		Ребёнок умер, не дожив до зимы. Ты кладёшь ему в могилу бусину.	A child of yours dies before winter. You put a bead in the grave.	kids
@@ -156,7 +156,7 @@ anc	j	andes	У ламы родился белый детёныш. Все при�
 anc	j	au	Поймали дюгоня. Пир на всю стоянку, пока не кончится жир.	A dugong is caught. A feast for the whole camp until the fat runs out.	
 anc	j	au	Цветёт акация. Старики говорят: пора идти к морю.	The wattle is in flower. The old people say it is time to go to the sea.	
 anc	j		Ребёнок впервые позвал тебя. Ты всё {бросил|бросила} и {побежал|побежала}.	Your child calls for you for the first time. You drop everything and run.	kids
-anc	j		Вечером сидите с {женой|мужем} у огня и молчите. Хорошо.	In the evening you sit by the fire with your {wife|husband}, saying nothing. It is good.	married
+anc	j		Вечером сидите с {женой|мужем} у огня и молчите. Хорошо.	In the evening you sit by the fire with your {wife|husband}, saying nothing. It is good.	married !widowed
 anc	j		{Нашёл|Нашла} на берегу красивую раковину. Носишь её на шее.	You find a pretty shell on the shore. You wear it round your neck.	
 anc	j		Гости хвалят твою похлёбку и просят ещё.	The guests praise your stew and ask for more.	
 anc	j		После жатвы спишь в тени до самого вечера. Никто не будит.	After the harvest you sleep in the shade till evening. No one wakes you.	!town
@@ -187,7 +187,7 @@ anc	o	au	Ты знаешь песню всей дороги до моря. Уч�
 anc	o	in me eg med	Зубов почти не осталось. Хлеб тебе размачивают в молоке.	Hardly a tooth left. They soak your bread in milk.	
 anc	o		Глаза почти не видят. Узнаёшь людей по шагам.	Your eyes are nearly gone. You know people by their steps.	
 anc	o		Ты {пережил|пережила} всех, с кем {играл|играла} в детстве.	You have outlived everyone you played with as a child.	
-anc	o		{Жена умерла|Муж умер} весной. Ты всё ещё ставишь на стол две миски.	Your {wife|husband} died in spring. You still set two bowls on the table.	married
+anc	o		{Жена умерла|Муж умер} весной. Ты всё ещё ставишь на стол две миски.	Your {wife|husband} died in spring. You still set two bowls on the table.	married +widowed
 anc	o		Мясо тебе подают {первому|первой}. Так здесь чтут стариков.	You are served the meat first. That is how the old are honoured here.	
 anc	o		Хозяин отпустил тебя: старый раб ему не нужен. Идти некуда.	Your master sets you free: an old slave is no use to him. You have nowhere to go.	r0
 anc	o		Руки трясутся, работать не можешь. Сидишь в мастерской и ворчишь на учеников.	Your hands shake and you can't work. You sit in the workshop grumbling at the apprentices.	r2
@@ -330,7 +330,7 @@ anc	a		{Повредил|Повредила} ногу. Всю весну раб�
 anc	a		{Нашёл|Нашла} в старой яме чужие кости и {закопал|закопала} их обратно.	You find a stranger's bones in an old pit and bury them again.	
 anc	a		Умер твой лучший друг. Ты долго не можешь есть.	Your best friend dies. For a long time you cannot eat.	
 anc	a		Теперь на сходе тебя слушают. Говоришь мало, и от этого слушают ещё внимательней.	Now they listen to you at the gathering. You say little, and so they listen harder.	
-anc	a		Ты с {женой|мужем} в ссоре третий день. Помирились за общей миской.	You and your {wife|husband} have quarrelled for three days. You make it up over a shared bowl.	married
+anc	a		Ты с {женой|мужем} в ссоре третий день. Помирились за общей миской.	You and your {wife|husband} have quarrelled for three days. You make it up over a shared bowl.	married !widowed
 anc	a	cn in me eg med af meso andes	Сеешь и смотришь на небо: не рано ли. Сосед посеял ещё вчера.	You sow and look at the sky: is it too early? Your neighbour sowed yesterday.	!town
 anc	a	cn in me eg med af meso andes	Мыши добрались до зерна в яме. Половину пришлось выбросить.	Mice get into the grain pit. Half has to be thrown away.	
 anc	a	cn in me eg med af meso andes	Пришли люди господина и забрали десятую часть урожая. Потом пришли ещё раз.	The lord's men come and take a tenth of the harvest. Then they come again.	!town
@@ -493,7 +493,7 @@ anc	o	cn	Сидишь у ворот на солнце и рассказывае�
 anc	o	cn	Ты сам{|а} {выбрал|выбрала} место для могилы: на склоне, лицом к реке. Гадатель одобрил.	You choose the place for your grave yourself: on the slope, facing the river. The diviner approves.	
 anc	o	cn	Каждый день кланяешься табличкам предков. Скоро и твоя встанет рядом.	Every day you bow to the ancestor tablets. Soon yours will stand beside them.	
 anc	o	cn	Зимой не слезаешь с тёплого места у очага. Тебе приносят туда кашу.	In winter you never leave the warm place by the hearth. They bring you porridge there.	
-anc	o	in	До рассвета идёшь к реке омыться. Холодная вода будит лучше сына.	Before dawn you go to the river to bathe. Cold water wakes you better than any son.	
+anc	o	in	До рассвета идёшь к реке омыться. Холодная вода будит лучше сына.	Before dawn you go to the river to bathe. Cold water wakes you better than any son.	kids
 anc	o	in	Рассказываешь детям сказки про говорящих зверей. Ты их слышал{|а} от деда.	You tell the children tales of talking animals. You heard them from your grandfather.	
 anc	o	in	Сидишь со стариками под деревом у храма. Спорите о дождях прошлых лет.	You sit with the old men under the tree by the shrine. You argue about the rains of years gone by.	
 anc	o	in	На берегу горит погребальный костёр соседа. Ты смотришь и думаешь о своём.	A neighbour's pyre burns on the riverbank. You watch and think of your own.	

@@ -284,7 +284,7 @@ out: 40 | Раздачи нет. Неделю едите отруби с вод�
 id: m_forest_dwelling
 groups: anc med early
 tags: in
-need:
+need: kids
 ages: 51-70
 weight: 1
 q: Внуки подросли. По древнему обычаю пора оставить дом сыновьям и уйти жить в лес. | The grandchildren are grown. By old custom it is time to leave the house to your sons and go to live in the forest.
@@ -301,7 +301,7 @@ out: 30 | Невестка ворчит: в доме лишний рот, да �
 id: m_mourning_hut
 groups: anc med
 tags: cn
-need: !town
+need: !town m
 ages: 27-64
 weight: 1
 q: Умерла мать. По обычаю почтительный сын три года живёт в шалаше у её могилы. | Your mother has died. By custom a dutiful son lives three years in a hut by her grave.
@@ -902,7 +902,7 @@ out: 100 | Они приходят к тебе по очереди, в разн�
 id: m_apprentice_old
 groups: anc med early ind
 tags: *
-need: r2
+need: r2 kids
 ages: 51-70
 weight: 1
 q: Чужой парень просится к тебе в ученики. Твои дети за ремесло так и не взялись. | A lad from outside the family asks to be your apprentice. Your own children never took up the trade.

@@ -47,7 +47,7 @@ early	y	jp	Тебя отдали в ученики к мастеру в Эдо. 
 early	y	jp	В деревню пришла бродячая труппа кабуки. Неделю ни о чём другом не говорят.	A travelling kabuki troupe comes to the village. For a week nobody talks of anything else.	
 early	y	en	На ярмарке {нанялся|нанялась} в работники на год. Хозяин дал шиллинг задатка.	At the hiring fair you take service for a year. The master gives you a shilling to seal it.	
 early	y	fr it	Сбор винограда. Ноги лиловые по колено.	The grape harvest. Your legs are purple to the knee.	
-early	y	de	Уходишь подмастерьем странствовать. В котомке книжка с печатями цехов.	You set off wandering as a journeyman. In your pack is a book of guild stamps.	m r2
+early	y	de	Уходишь подмастерьем странствовать. В котомке книжка с печатями цехов.	You set off wandering as a journeyman. In your pack is a book of guild stamps.	m r2 +town
 early	y	us	Семья уходит на запад, за горы. Повозка, корова и мешок семян.	Your family goes west over the mountains. A wagon, a cow and a sack of seed.	
 early	y	latam	Тебя гонят на серебряный рудник. Солнце видишь по воскресеньям.	You are sent down the silver mine. You see the sun on Sundays.	m r0
 early	y	af	Тебе режут на щеках знаки рода. Нельзя ни крикнуть, ни дёрнуться.	They cut your clan marks on your cheeks. You must not cry out or flinch.	
@@ -129,8 +129,8 @@ early	j	ru de	Соседка принесла лукошко первой зем
 early	j		Вся деревня гуляла на свадьбе. Три дня ели и плясали.	The whole village at a wedding. Three days of eating and dancing.	
 early	j		{Купил|Купила} у разносчика книжку. Читаешь её всю зиму.	You buy a book from a pedlar. You read it all winter.	lit
 early	j		Тёплый дождь после засухи. Дети бегают под ним голышом.	Warm rain after the drought. The children run about in it naked.	
-early	j		Муж вернулся с ярмарки и привёз тебе платок.	Your husband comes back from the fair with a shawl for you.	f married
-early	j		Жена ни с того ни с сего испекла пирог.	Your wife bakes a pie for no reason at all.	m married
+early	j		Муж вернулся с ярмарки и привёз тебе платок.	Your husband comes back from the fair with a shawl for you.	f married !widowed
+early	j		Жена ни с того ни с сего испекла пирог.	Your wife bakes a pie for no reason at all.	m married !widowed
 # --- old age
 early	o	fr de en it ru us	Внук читает тебе вслух газету. Половину слов ты не понимаешь.	A grandson reads you the newspaper aloud. You understand half the words.	kids
 early	o		Ты пережил{|а} всех своих ровесников.	You outlive everyone your age.	
@@ -153,7 +153,7 @@ early	o		Зубов не осталось. Хлеб размачиваешь в 
 early	o		Учишь внучку прясть. Она уже ловчее тебя.	You teach your granddaughter to spin. She is already quicker than you.	f kids
 early	o		Внуки дёргают тебя за бороду, а ты притворяешься, что спишь.	The grandchildren tug at your beard while you pretend to sleep.	m kids
 early	o		Тебя зовут, когда надо вспомнить, где шла старая межа.	They call for you when someone needs to remember where the old boundary ran.	!town
-early	o		{Овдовел|Овдовела}. По привычке ставишь на стол вторую миску.	Widowed. Out of habit you still put out a second bowl.	married
+early	o		{Овдовел|Овдовела}. По привычке ставишь на стол вторую миску.	Widowed. Out of habit you still put out a second bowl.	married +widowed
 early	o		На кладбище ходишь чаще, чем в гости.	You go to the graveyard more often than to the neighbours.	
 # --- hard times
 early	x		Голод.	Famine.	
@@ -257,7 +257,7 @@ early	a		Сломал{|а} ногу в самую страду. Твою раб�
 early	a	cn	Тянешь джонку бечевой вверх по реке. Песня держит шаг.	You haul a junk upriver on a towrope. The song keeps the step.	
 early	a	cn	Старейшина вписал в родословную книгу твоё имя. Кистью, рядом с дедовым.	The clan elder writes your name in the genealogy, with a brush, beside your grandfather's.	
 early	a	cn	Носишь ил из пруда под тутовые деревья. В пруду рыба, на деревьях шелкопряд.	You carry silt from the pond to the mulberry trees. Fish in the pond, silkworms in the trees.	
-early	a	cn sea	Буйвол — всё твоё богатство. Моешь его в реке чаще, чем детей.	The buffalo is all your wealth. You wash it in the river more often than the children.	
+early	a	cn sea	Буйвол — всё твоё богатство. Моешь его в реке чаще, чем детей.	The buffalo is all your wealth. You wash it in the river more often than the children.	kids
 early	a	in	Бык ходит по кругу у колодца, кожаный мешок тянет воду на поле. Ты погоняешь с рассвета.	An ox walks round the well; a leather bag lifts water to the field. You drive it from dawn.	!town
 early	a	in	Из красильни индиго так несёт, что соседи обходят твой двор стороной.	Your indigo vats stink so much that the neighbours walk round your yard.	
 early	a	in	Панчаят под деревом решил ваш спор о меже. Недовольны обе стороны.	The village council under the tree settles your boundary quarrel. Both sides are unhappy.	!town

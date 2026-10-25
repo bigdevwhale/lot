@@ -39,7 +39,7 @@ ind	y		На сходке говорят о восьмичасовом дне. Т
 ind	y	ru	Тебя отдали в ученье к сапожнику. Первый год только бегаешь по поручениям.	You are apprenticed to a cobbler. The first year you just run errands.	m
 ind	y		Тебя наняли прислугой в городской дом. Спишь на кухне за ширмой.	You go into service in a town house. You sleep in the kitchen behind a screen.	f
 ind	y	cn	Сваха унесла красную бумажку с днём и часом твоего рождения.	The matchmaker takes away a red paper with the day and hour of your birth.	
-ind	y	jp	Тебя отправили на шелкомотальную фабрику. Всё жалованье уходит домой.	You are sent to the silk-reeling mill. Every wage goes home.	f r1
+ind	y	jp	Тебя отправили на шелкомотальную фабрику. Всё жалованье уходит домой.	You are sent to the silk-reeling mill. Every wage goes home.	f r1 +town
 ind	y	ru	В избе-читальне {выучился|выучилась} читать по газете.	In the village reading room you learn to read from a newspaper.	
 ind	y		Тайком {выкурил|выкурила} первую папиросу. Тошнило до вечера.	You secretly smoke your first cigarette. You feel sick until evening.	
 ind	y		На свадьбе у соседей {проплясал|проплясала} до утра.	At the neighbours' wedding you dance until morning.	
@@ -52,9 +52,9 @@ ind	y		Экзамен в гимназию. Мать ждёт у ворот.	Your
 ind	y	af	Вербовщик набирает парней на рудники. Ты едешь с ними.	A recruiter signs up the young men for the mines. You go with them.	m
 ind	y		Первое любовное письмо. Прячешь его между страниц книги.	Your first love letter. You hide it between the pages of a book.	lit
 ind	y	sea cn in	Ходишь за буйволом на рисовом поле. Тебя он слушается лучше, чем отца.	You drive the buffalo in the rice field. It minds you better than your father.	r1
-ind	y	it de ru	Мать собирает тебе узелок: ты едешь в Америку к дяде.	Mother packs you a bundle: you are going to your uncle in America.	
+ind	y	it de ru	Мать собирает тебе узелок: ты едешь в Америку к дяде.	Mother packs you a bundle: you are going to your uncle in America.	+abroad
 ind	a		В дом провели электричество. Лампочка под потолком ярче десяти свечей.	Electricity comes into the house. The bulb under the ceiling is brighter than ten candles.	
-ind	a		Стачка на заводе. Две недели без денег.	A strike at the works. Two weeks without pay.	r1
+ind	a		Стачка на заводе. Две недели без денег.	A strike at the works. Two weeks without pay.	r1 +town
 ind	a		Пришло письмо от брата — он за океаном.	A letter from your brother: he is across the ocean.	
 ind	a		Ребёнка вылечили новым лекарством. Врач говорит: десять лет назад он бы умер.	A new medicine cures your child. The doctor says ten years ago the child would have died.	kids
 ind	a		Переехали в квартиру с водопроводом.	You move into a flat with running water.	town
@@ -64,11 +64,11 @@ ind	a	cn jp	Возишь рикшу по городу. К вечеру ноги 
 ind	a	in	Плантатор велит сеять индиго вместо риса.	The planter makes you sow indigo instead of rice.	r1 !town
 ind	a	us	Половина хлопка уходит хозяину земли, вторая — за долги в лавке.	Half the cotton goes to the landowner, the other half to the store debt.	r1 !town
 ind	a		Ты у ткацких станков: их шесть, и все грохочут.	You work the looms: six of them, all thundering.	r1
-ind	a		С восьми до шести переписываешь цифры в конторскую книгу.	From eight to six you copy figures into the ledger.	r2 lit
+ind	a		С восьми до шести переписываешь цифры в конторскую книгу.	From eight to six you copy figures into the ledger.	r2 lit +town
 ind	a		{Открыл|Открыла} свою лавку. Над дверью вывеска с твоим именем.	You open your own shop. Over the door hangs a sign with your name.	r2
 ind	a		Купили швейную машинку. По ночам шьёшь на заказ.	You buy a sewing machine. At night you sew for others.	f
 ind	a		Живёшь по гудку: гудок будит, гудок отпускает.	You live by the factory whistle: it wakes you and it lets you go.	r1 town
-ind	a		{Женился|Вышла замуж}. У фотографа снялись в чужих нарядах.	You marry. At the photographer's you pose in borrowed clothes.	married
+ind	a		{Женился|Вышла замуж}. У фотографа снялись в чужих нарядах.	You marry. At the photographer's you pose in borrowed clothes.	married !widowed
 ind	a		Дети пошли в школу. Ты учишься читать по их букварю.	Your children start school. You learn to read from their primer.	kids illit
 ind	a	cn	Через деревню протянули телеграф. Старики говорят, столбы тревожат предков.	The telegraph runs through the village. The old men say the poles disturb the ancestors.	
 ind	a	jp	По новому указу отрезал пучок. Отец месяц не разговаривает с тобой.	By the new decree you cut off your topknot. Father won't speak to you for a month.	m
@@ -126,7 +126,7 @@ ind	o		Пишешь внукам крупными печатными буква�
 ind	o		Тебя снова фотографируют — через шестьдесят лет после первого раза.	You are photographed again, sixty years after the first time.	
 ind	o	de en	Тебе назначили пенсию. Первый раз в жизни деньги ни за что.	You are granted a pension. For the first time in your life, money for nothing.	r1 r2
 ind	o		Внучка читает тебе письма и пишет ответы под твою диктовку.	Your granddaughter reads you the letters and writes your answers as you dictate.	illit kids
-ind	o		Ты помнишь, когда здесь не было железной дороги. Внуки не верят.	You remember when there was no railway here. The grandchildren don't believe you.	
+ind	o		Ты помнишь, когда здесь не было железной дороги. Внуки не верят.	You remember when there was no railway here. The grandchildren don't believe you.	kids
 ind	o	cn	Сыновья заранее купили тебе гроб. Ты с гордостью показываешь его гостям.	Your sons have bought your coffin in good time. You proudly show it to guests.	kids
 ind	o	jp	Сын стал главой дома. Ты {перебрался|перебралась} в маленькую комнату у сада.	Your son becomes head of the house. You move to the small room by the garden.	kids
 ind	o	in	Едешь на поезде в Бенарес. Входишь в Ганг по пояс и молишься.	You go by train to Benares. You wade into the Ganges to the waist and pray.	
@@ -197,7 +197,7 @@ ind	y	us	Нанимаешься на жатву в прериях. Ночуеш�
 ind	y	en	По субботам танцы в зале над пабом.	On Saturdays there are dances in the room above the pub.	
 ind	y	it fr	Сбор винограда кончился. Вечером танцуешь на току под скрипку.	The grape harvest is over. In the evening you dance on the threshing floor to a fiddle.	
 ind	y	in	Тебя выдали замуж ещё девочкой. Теперь пора переезжать в дом мужа.	You were married as a little girl. Now it is time to move to your husband's house.	f
-ind	y	de	Подмастерьем идёшь из города в город. В каждом цеху дают ночлег и хлеб.	As a journeyman you walk from town to town. Every guild gives you a bed and bread.	m
+ind	y	de	Подмастерьем идёшь из города в город. В каждом цеху дают ночлег и хлеб.	As a journeyman you walk from town to town. Every guild gives you a bed and bread.	m +town
 ind	y	sea	Тебя на три месяца отдали в монастырь послушником. Бреют голову.	You are sent to the monastery as a novice for three months. They shave your head.	m
 ind	y	ru	Отец берёт тебя в извоз до губернского города. Ночуете на постоялом дворе.	Father takes you carting to the provincial town. You sleep at a coaching inn.	m
 ind	a		Весной зерно кончилось. Занимаешь мешок у соседа до нового урожая.	In spring the grain runs out. You borrow a sack from the neighbour until the new harvest.	!town
@@ -259,7 +259,7 @@ ind	o		Смертная одежда готова и лежит в сундук�
 ind	o		Ночью почти не спишь. Слушаешь, как дышит дом.	You hardly sleep at night. You listen to the house breathing.	
 ind	o		Только ты помнишь, где шла старая дорога, пока её не распахали.	Only you remember where the old road ran before it was ploughed under.	
 ind	o		Глаза уже не те. Нитку в иголку тебе вдевает соседская девочка.	Your eyes are not what they were. The neighbour's girl threads your needle.	
-ind	o		Тебе дают за столом лучший кусок. Ты отдаёшь его детям.	At the table they give you the best piece. You pass it to the children.	
+ind	o		Тебе дают за столом лучший кусок. Ты отдаёшь его детям.	At the table they give you the best piece. You pass it to the children.	kids
 ind	o		Целый день греешься на солнце у стены. Рядом спит кошка.	All day you warm yourself in the sun by the wall. The cat sleeps beside you.	
 ind	o		Молодые смеются над твоими приметами. А дождь всё-таки пошёл.	The young laugh at your weather signs. But the rain comes all the same.	
 ind	o		На свадьбе тебя посадили на самое почётное место. Ты {задремал|задремала}.	At the wedding they seat you in the place of honour. You doze off.	
@@ -268,10 +268,10 @@ ind	o	ru	Зимой плетёшь лапти на всю семью.	In winter 
 ind	o	cn	Каждое утро выносишь клетку с птицей под деревья и слушаешь, как она поёт.	Every morning you carry your bird's cage out under the trees and listen to it sing.	
 ind	o	in	По вечерам у храма слушаешь, как читают Рамаяну. Знаешь её наизусть, а всё равно плачешь.	In the evenings you listen to the Ramayana read at the temple. You know it by heart and still you cry.	
 ind	o	jp cn	Каждое утро ставишь рис на алтарь предков.	Every morning you set rice on the ancestors' altar.	
-ind	o	af	У вечернего огня рассказываешь внукам про паука Ананси.	By the evening fire you tell the grandchildren about Anansi the spider.	
+ind	o	af	У вечернего огня рассказываешь внукам про паука Ананси.	By the evening fire you tell the grandchildren about Anansi the spider.	kids
 ind	o	me	Перебираешь чётки на пороге и здороваешься с каждым прохожим.	You tell your beads on the doorstep and greet everyone who passes.	
 ind	o	sea in	Жуёшь бетель. Зубы красные, как были у твоей бабки.	You chew betel. Your teeth are red, as your grandmother's were.	
-ind	o	latam	Плетёшь шляпы из пальмового листа. Сын возит их в город на продажу.	You weave palm-leaf hats. Your son takes them to town to sell.	
+ind	o	latam	Плетёшь шляпы из пальмового листа. Сын возит их в город на продажу.	You weave palm-leaf hats. Your son takes them to town to sell.	kids
 ind	o	us	Сидишь у печки в лавке и споришь со стариками о выборах.	You sit by the stove in the general store arguing with the old men about the election.	
 ind	o	en	Ходишь в паб на одну пинту. Твоё место у камина никто не занимает.	You go to the pub for one pint. No one takes your seat by the fire.	
 ind	o	fr de it	После мессы сидишь на лавке у церкви, пока не позовут обедать.	After mass you sit on the bench by the church until they call you to dinner.	

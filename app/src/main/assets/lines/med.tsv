@@ -119,7 +119,7 @@ med	a	andes	Твоя очередь на миту. Месяц строишь т�
 med	a	andes	Сушишь картофель на морозе: топчешь его ногами, пока не выйдет вся вода.	You freeze-dry potatoes: you tread them until all the water is out.	
 med	a	au	Выжигаете сухую траву, чтобы весной пришли кенгуру.	You burn the dry grass so the kangaroos come in spring.	
 med	a	au	Весь род ушёл к реке, где пошла рыба. Там встретили соседей и пели три ночи.	The whole clan goes to the river where the fish are running. You meet the neighbours there and sing for three nights.	
-med	a		Поругались с {женой|мужем} из-за курицы. Мирились до вечера.	You quarrel with your {wife|husband} over a hen. Making up takes till evening.	married
+med	a		Поругались с {женой|мужем} из-за курицы. Мирились до вечера.	You quarrel with your {wife|husband} over a hen. Making up takes till evening.	married !widowed
 med	a	eu ru cn in me eg af jp sea meso andes	Дети выросли и ушли в поле без тебя.	The children are grown and go to the field without you.	kids !town
 med	a	eu ru cn in me eg af jp sea meso andes	Сосед одолжил тебе вола. Весной отработаешь.	A neighbour lends you his ox. You will pay him in work in spring.	
 med	a		Принимаешь гостей. Повар режет третьего барана.	You have guests. The cook slaughters a third ram.	r3
@@ -163,7 +163,7 @@ med	j	andes	Праздник урожая. Пьёшь чичу, весь скл�
 med	j	au	Ночь у костра. Поют о дороге, которой шли предки.	A night by the fire. They sing of the road the ancestors walked.	
 med	j	sea	Новый год: все обливают друг друга водой и хохочут.	New Year: everyone throws water at each other and laughs.	
 med	j		Ребёнок впервые сам поймал рыбу. Несёт её, как царь.	Your child catches a fish alone for the first time. Carries it like a king.	kids
-med	j	eu ru cn in me eg af jp sea meso andes	{Жена принесла|Муж принёс} тебе в поле горячую лепёшку.	Your {wife|husband} brings you a hot flatbread in the field.	married !town
+med	j	eu ru cn in me eg af jp sea meso andes	{Жена принесла|Муж принёс} тебе в поле горячую лепёшку.	Your {wife|husband} brings you a hot flatbread in the field.	married !town !widowed
 med	j	eu ru cn in me eg af jp sea meso andes	{Нашёл|Нашла} в огороде старую монету. Никому не {сказал|сказала}.	You find an old coin in the garden. You tell no one.	!town
 med	j		{Выспался|Выспалась}. Впервые за всю страду.	You sleep your fill. The first time all harvest.	
 med	j		Тёплый дождь после засухи. Стоишь под ним с открытым ртом.	Warm rain after the drought. You stand in it with your mouth open.	
@@ -198,7 +198,7 @@ med	o		Правнук спит у тебя на коленях.	Your great-grand
 med	o	eu	{Заказал|Заказала} заупокойные мессы на сто лет вперёд.	You pay for requiem masses a hundred years ahead.	r3
 med	o		Встать к ночной службе уже не можешь. Брат приносит свечу тебе в келью.	You can no longer rise for the night office. A brother brings a candle to your cell.	monk
 med	o		Рассказываешь молодым, как раньше всё было дешевле.	You tell the young how everything used to be cheaper.	
-med	o		Ты {пережил|пережила} {жену|мужа}. По вечерам говоришь с {ней|ним} вслух.	You have outlived your {wife|husband}. In the evenings you talk to {her|him} out loud.	married
+med	o		Ты {пережил|пережила} {жену|мужа}. По вечерам говоришь с {ней|ним} вслух.	You have outlived your {wife|husband}. In the evenings you talk to {her|him} out loud.	married !widowed
 med	o	sea	Сидишь в тени у храма и плетёшь корзины для риса.	You sit in the shade by the temple weaving rice baskets.	
 med	o		Знаешь все травы. Соседки идут к тебе с каждой хворью.	You know every herb. The neighbour women come to you with every ailment.	f
 med	o		Из всех, с кем ты {рос|росла}, остались двое.	Of all you grew up with, two are left.	
@@ -380,7 +380,7 @@ med	a	au	Зацвело дерево у стоянки. Значит, пора �
 med	a	au	Роешь яму в сухом русле. К вечеру в ней собирается мутная вода.	You dig a hole in the dry riverbed. By evening muddy water seeps into it.	
 med	a	au	Подновляешь охрой рисунки на скале у стоянки. Их оставили ещё деды дедов.	You freshen the ochre paintings on the rock by the camp. The grandfathers' grandfathers left them.	
 med	a	au	Выкурил{|а} опоссума из дупла. Из шкурок сошьёте плащ на зиму.	You smoke a possum out of its hollow. The skins will make a cloak for winter.	
-med	a	eu ru cn in me eg af jp sea meso andes	Живёшь в доме мужа. Свекровь говорит, что ты всё делаешь не так.	You live in your husband's house. His mother says you do everything wrong.	f married
+med	a	eu ru cn in me eg af jp sea meso andes	Живёшь в доме мужа. Свекровь говорит, что ты всё делаешь не так.	You live in your husband's house. His mother says you do everything wrong.	f married !widowed
 med	a	eu ru cn in me eg af jp sea meso andes	Тебя забрали в войско. Вернулся через год, без двух пальцев.	You are taken for the army. You come home a year later, two fingers short.	m
 med	a	eu ru cn in me eg af jp sea meso andes	Обжиг удался: из всей печи не треснул ни один горшок.	The firing goes well: not one pot in the kiln has cracked.	r2
 med	a	eu ru	Тяжба за спорную деревню идёт пятый год. Богатеют только писцы.	The lawsuit over the disputed village is in its fifth year. Only the clerks grow rich.	r3
@@ -438,7 +438,7 @@ med	j	eu	Пир у господина. Павлина подали в его с�
 med	j	eu ru cn in me eg af jp sea meso andes	Звонарь дал тебе ударить в большой колокол. Гул стоял в груди до вечера.	The bell-ringer lets you strike the great bell. The hum stays in your chest till evening.	monk
 med	j	eu ru	Вечером женщины собрались прясть. Тебе дали запевать.	In the evening the women gather to spin. They let you lead the song.	f
 med	j		Дети принесли тебе первые ягоды, что сами нашли. Немытые, мятые. Вкуснее не бывает.	The children bring you the first berries they found themselves. Unwashed, squashed. Nothing tastes better.	kids
-med	o		Ноги далеко не носят. Новости тебе приносят дети.	Your legs won't carry you far now. The children bring you the news.	
+med	o		Ноги далеко не носят. Новости тебе приносят дети.	Your legs won't carry you far now. The children bring you the news.	kids
 med	o		Ты {забыл|забыла}, как звали брата. Ночью {вспомнил|вспомнила} и всех {разбудил|разбудила}.	You forget your brother's name. You remember it in the night and wake everyone.	
 med	o		Тебе снится, что ты снова {молод|молода}.	You dream you are young again.	
 med	o		Молодые спрашивают тебя, будет ли дождь. Ты почти всегда угадываешь.	The young ask you whether it will rain. You are nearly always right.	
@@ -453,12 +453,12 @@ med	o		Ты {видел|видела} две большие засухи. Мол
 med	o		Встаёшь до света по привычке. Делать нечего, а встаёшь.	You rise before dawn out of habit. There is nothing to do, but you rise.	
 med	o	eu ru cn in me eg af jp sea meso andes	Ходишь по деревне с палкой и всех поучаешь. Тебя терпят.	You go round the village with a stick, telling everyone how to do things. They put up with you.	
 med	o	eu ru cn in me eg af jp sea meso andes	Ты помнишь, как на месте этого поля шумел лес.	You remember when this field was forest.	!town
-med	o	cn	Тебе шестьдесят. Начался новый круг лет, внуки поднесли персики долголетия.	You turn sixty. A new cycle of years begins, and the grandchildren bring you peaches of long life.	
+med	o	cn	Тебе шестьдесят. Начался новый круг лет, внуки поднесли персики долголетия.	You turn sixty. A new cycle of years begins, and the grandchildren bring you peaches of long life.	kids
 med	o	cn	Сидишь у реки с птицей в клетке. Птица поёт, ты дремлешь.	You sit by the river with your bird in its cage. The bird sings, you doze.	
 med	o	cn	Ты помнишь каждый год, когда прорывало дамбу. Чиновники ходят к тебе спрашивать.	You remember every year the dyke broke. Officials come to ask you.	
 med	o	cn	Ты старше всех в деревне. Из уезда тебе прислали шёлк и мясо.	You are the oldest in the village. The county sends you silk and meat.	
 med	o	cn	Сын наконец сдал экзамен. Ты {поклонился|поклонилась} табличкам предков и {заплакал|заплакала}.	Your son has passed the examination at last. You bow to the ancestors' tablets and weep.	kids
-med	o	in	Ты {оставил|оставила} дом детям и {поселился|поселилась} у храма. Ешь раз в день.	You leave the house to your children and settle by the temple. You eat once a day.	
+med	o	in	Ты {оставил|оставила} дом детям и {поселился|поселилась} у храма. Ешь раз в день.	You leave the house to your children and settle by the temple. You eat once a day.	kids
 med	o	in	По утрам перебираешь чётки с именами богов. Сбиваешься и начинаешь сначала.	Each morning you tell the gods' names on your beads. You lose count and start again.	
 med	o	in	На совете под баньяном ты говоришь последним. Тебя ждут.	At the council under the banyan you speak last. They wait for you.	m
 med	o	in	Под баньяном женщины ждут, что скажешь ты. Ты говоришь последней.	Under the banyan the women wait to hear what you will say. You speak last.	f

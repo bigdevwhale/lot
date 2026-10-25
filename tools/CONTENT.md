@@ -34,7 +34,7 @@ Tab-separated, one line per row, 6 columns; lines starting with `#` are comments
   `m` / `f` (male / female) · `r0` unfree (slave, serf, bondsman, urban poor today) · `r1` common (peasant, worker) · `r2` craft and trade · `r3` the top (noble, clergy, scribe, rich). Several `r` tokens mean any of them (`r2 r3`) ·
   `lit` / `illit` (can read / can't) · `married` · `single` · `kids` (has living children) · `monk` · `town` (went to town to work or learn).
   `after:YEAR` / `before:YEAR` keep a line to the years it is true (`after:1930` for the kolkhoz, `before:-500` for stone tools after the bronze came; negative = BC). The year is the one the life has reached at that page, not the birth year.
-  `!TOKEN` negates (`!town` = has not moved to town). `+town` is not a condition: a line carrying it makes the life a town life once written (a new flat in the city, the factory hostel), so later lines and forks about fields, harvests, cattle or rent (which carry `!town`) stop coming.
+  `!TOKEN` negates (`!town` = has not moved to town). Marks a line can leave: `+town`, `+widowed` (lines about a living spouse carry `!widowed`), `+abroad` (after it the life gets only untagged lines, forks and events). `+town` is not a condition: a line carrying it makes the life a town life once written (a new flat in the city, the factory hostel), so later lines and forks about fields, harvests, cattle or rent (which carry `!town`) stop coming.
   Use need for lines that only make sense for some people: a slave's line, a noblewoman's line, a line about your children (`kids`), about reading (`lit`).
 - Column text must not contain tabs.
 

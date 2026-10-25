@@ -49,7 +49,7 @@ stone	a	am	Много лун шли по льду и тундре. Вперед�
 stone	a	me	Режешь дикий ячмень серпом с кремнёвыми вкладышами. Зерна хватит до весны.	You cut wild barley with a sickle set with flints. The grain will last till spring.	!town
 stone	a		Твой малыш пошёл — прямо к огню. Ты {успел|успела} поймать.	Your little one walks for the first time, straight to the fire. You catch it just in time.	kids
 stone	a		Родила у ручья, на корточках. К вечеру уже шла со всеми.	You give birth by a stream, squatting. By evening you walk on with the others.	f kids
-stone	a		Лучший кусок мяса отдаёшь родителям жены. Так положено.	You give the best cut of meat to your wife's parents. That is the custom.	m married
+stone	a		Лучший кусок мяса отдаёшь родителям жены. Так положено.	You give the best cut of meat to your wife's parents. That is the custom.	m married !widowed
 stone	a		Умер старик. Положили его на бок, посыпали охрой, рядом — его копьё.	The old man dies. They lay him on his side, scatter ochre on him, and put his spear beside him.	
 stone	a		{Выменял|Выменяла} у горцев красную охру. Отдали за неё три шкуры.	You trade the hill people for red ochre. It costs three hides.	
 stone	a	cn	Бьёшь рыбу острогой с костяными зубцами. К вечеру на плече связка рыбы.	You spear fish with a bone-toothed leister. By evening a string of fish hangs from your shoulder.	
@@ -76,7 +76,7 @@ stone	j	me	На склоне поспели дикие фисташки. Щёл�
 stone	j	am	Лосось пошёл вверх по реке. Его столько, что вода красная.	The salmon run up the river. There are so many the water is red.	
 stone	j	in	Набрели на дикое манго. Ели, пока сок не потёк до локтей.	You come upon a wild mango tree. You eat until the juice runs down to your elbows.	
 stone	j	cn	Нашли горячий источник. Сидели в нём всем родом, а сверху шёл снег.	You find a hot spring. The whole band sits in it while snow falls from above.	
-stone	j		{Жена|Муж} до сих пор смеётся над твоими шутками.	Your {wife|husband} still laughs at your jokes.	married
+stone	j		{Жена|Муж} до сих пор смеётся над твоими шутками.	Your {wife|husband} still laughs at your jokes.	married !widowed
 stone	j		Тёплый день посреди зимы. Весь род сидит на солнце и молчит от удовольствия.	A warm day in the middle of winter. The whole band sits in the sun, silent with pleasure.	
 stone	j		Твой ребёнок принёс первую добычу — ящерицу. Её съели все, по кусочку, с почётом.	Your child brings home a first kill: a lizard. Everyone eats a morsel of it, with honour.	kids
 stone	j		В дождь {спал|спала} под навесом из коры до полудня. Никто не будил.	In the rain you sleep under a bark lean-to till noon. Nobody wakes you.	
@@ -149,7 +149,7 @@ stone	j	cn	Осенью в горах поспели дикие каштаны. 
 stone	j	am	Перезимовали в землянке. Весной вышли — а вся долина гудит от гусей.	You winter in the earth lodge. In spring you come out, and the whole valley is loud with geese.	!town
 stone	j	eu	Зимой {катался|каталась} с горы на шкуре прямо на речной лёд, как ребёнок.	In winter you slide down the hill on a hide right onto the river ice, like a child.	
 stone	j	au	Поспели орехи бунья. Со всех сторон сходятся роды, и пир идёт целую луну.	The bunya nuts are ripe. Bands come in from every side, and the feast lasts a whole moon.	
-stone	j		Вы с {женой|мужем} ушли от стоянки на целый день. Вернулись с пустыми руками и довольные.	You and your {wife|husband} slip away from the camp for a whole day. You come back empty-handed and pleased.	married
+stone	j		Вы с {женой|мужем} ушли от стоянки на целый день. Вернулись с пустыми руками и довольные.	You and your {wife|husband} slip away from the camp for a whole day. You come back empty-handed and pleased.	married !widowed
 stone	o		Глаза уже плохо видят. Зато ты узнаёшь каждого в роду по шагам.	Your eyes are failing. But you know everyone in the band by their footsteps.	
 stone	o		Молодые поют твою любимую песню на новый лад. Ты {ворчал|ворчала}, а потом {стал|стала} подпевать.	The young ones sing your favourite song to a new tune. You grumble, and then you sing along.	
 stone	o		За водой ты больше не ходишь. Её приносят тебе {первому|первой} — так положено старшим.	You no longer fetch water. It is brought to you first: that is due to the eldest.	

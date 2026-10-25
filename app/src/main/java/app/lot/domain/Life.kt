@@ -233,7 +233,8 @@ class Life private constructor(
     private fun add(age: Int, ru: String, en: String, mark: Mark = Mark.PLAIN) = add(age, Tx(ru, en), mark)
 
     private fun line(age: Int, k: Kind, mark: Mark = Mark.PLAIN) {
-        val all = content.lines(era.group, k, region).filter { it.need.holds(this) }
+        // Abroad, the lines of the home region no longer fit; only those true anywhere do.
+        val all = content.lines(era.group, k, region).filter { it.need.holds(this) && ("abroad" !in flags || it.tags.isEmpty()) }
         val fresh = all.filterNot { it in used }
         // Lines the reader met in recent lives wait their turn while there are others.
         val unread = fresh.filterNot { it.text.g(sex).ru in past.read }
@@ -274,7 +275,7 @@ class Life private constructor(
         this.age = age
         var hist: Hist? = null
         if (age >= 4) {
-            val all = content.hist.filter { it.id !in usedHist && it.fits(region, era.i, year + age) }
+            val all = content.hist.filter { it.id !in usedHist && it.fits(region, era.i, year + age) && ("abroad" !in flags || "*" in it.tags) }
             // Events no life has met yet come first: they fill the chronicle.
             val h = all.filterNot { it.id in past.seen }.ifEmpty { all }.randomOrNull(rnd)
             if (h != null && rnd.nextDouble() < if (h.meet) .85 else .45) {
@@ -405,7 +406,10 @@ class Life private constructor(
     /** An everyday fork from the dilemmas that fit this era, place, person and age; null when none fits. */
     private fun fork(age: Int): Ask? {
         if (rnd.nextDouble() < .2) return null
-        val all = content.dilemmas.filter { it.id !in usedForks && era.group in it.groups && age in it.ages && it.fits(region) && it.need.holds(this) }
+        val all = content.dilemmas.filter {
+            it.id !in usedForks && era.group in it.groups && age in it.ages && it.fits(region) && it.need.holds(this) &&
+                ("abroad" !in flags || "*" in it.tags || it.tags.isEmpty())
+        }
         // A fork met in a recent life (one of its outcomes is in that book) waits while others are left.
         val c = all.filterNot { d -> d.doors.any { g -> g.outs.any { it.text.g(sex).ru in past.read } } }.ifEmpty { all }
         if (c.isEmpty()) return null
@@ -436,7 +440,7 @@ class Life private constructor(
             f == "free" -> if (rank == 0) rank = 1
             f == "kids+1" -> { kids++; kidsAlive++ }
             f == "kids-1" -> if (kidsAlive > 0) kidsAlive--
-            f == "married" -> if (!married) bear()
+            f == "married" -> { if (!married) bear(); flags -= "widowed" }
             else -> flags += f
         }
     }
