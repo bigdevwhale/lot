@@ -121,7 +121,7 @@ early	j	latam	Праздник святого покровителя: проце
 early	j	us	Всем миром ставили соседу амбар. Вечером плясали на новом полу.	The whole neighbourhood raises a barn. In the evening you dance on the new floor.	!town
 early	j	af	Собрали ямс. Пляшете под барабаны до утра.	The yams are in. You dance to the drums till morning.	
 early	j	sea	Театр теней до рассвета. Ты знаешь все слова наизусть.	A shadow play till dawn. You know every word by heart.	
-early	j	au	Пошла черепаха. Вечером жарите мясо на берегу, все сыты.	The turtles are running. In the evening you roast meat on the shore and everyone is full.	
+early	j	au	Пошла черепаха. Вечером жарите мясо на берегу, все сыты.	The turtles are running. In the evening you roast meat on the shore and everyone is full.	+sea
 early	j	fr it	Молодое вино разлили по бочкам. Пробуешь прямо из чана.	The new wine goes into the casks. You taste it straight from the vat.	
 early	j		Младший сделал первые шаги — прямо к тебе.	Your youngest takes their first steps, straight to you.	kids
 early	j		Корова отелилась двойней.	The cow has twin calves.	!town
@@ -212,7 +212,7 @@ early	y	in	Под баньяном старик ночь за ночью поё�
 early	y	in	Дядя водит тебя в борцовскую яму. Тело натирают маслом, землю — молитвой.	Your uncle takes you to the wrestling pit. Bodies are rubbed with oil, the earth with prayers.	m
 early	y	sea	Праздник воды: обливают всех подряд. Тебе достаётся больше всех.	The water festival: everyone gets soaked. You get it worst of all.	
 early	y	sea	Тебе подпиливают зубы и чернят их. Теперь ты красив{|а}.	They file your teeth and blacken them. Now you are beautiful.	
-early	y	sea	Отец берёт тебя в море на лодке с балансиром. Тебя мутит, он смеётся.	Father takes you to sea in the outrigger. You are sick; he laughs.	
+early	y	sea	Отец берёт тебя в море на лодке с балансиром. Тебя мутит, он смеётся.	Father takes you to sea in the outrigger. You are sick; he laughs.	+sea
 early	y	sea	На жатве парни и девушки перекидываются стихами через поле. Тебе ответили.	At harvest the boys and girls toss verses across the field. Someone answers yours.	
 early	y	sea	Петушиный бой. Ты {поставил|поставила} на рыжего и {проиграл|проиграла}.	A cockfight. You bet on the red one and lose.	
 early	y	jp	Совершеннолетие: новая причёска, взрослое имя. Мать долго на тебя смотрит.	Coming of age: a new hairstyle, a grown-up name. Mother looks at you for a long time.	
@@ -269,7 +269,7 @@ early	a	sea	Помогаешь соседям поднять новый дом �
 early	a	jp	Налог платит пятидворье. Сосед не сдал рис — платите вы.	The five households pay the tax together. If a neighbour falls short, you pay.	
 early	a	jp	Вечерами плетёшь соломенные сандалии. Сотня пар — мешок риса.	In the evenings you plait straw sandals. A hundred pairs make a bale of rice.	
 early	a	jp	Староста читает указ: шёлк крестьянам носить запрещено.	The headman reads out an edict: peasants may not wear silk.	
-early	a	jp	Сушишь водоросли на кольях у берега. Руки пахнут морем круглый год.	You dry seaweed on poles by the shore. Your hands smell of the sea all year.	
+early	a	jp	Сушишь водоросли на кольях у берега. Руки пахнут морем круглый год.	You dry seaweed on poles by the shore. Your hands smell of the sea all year.	+sea
 early	a	jp	Зимой уходишь в город варить сакэ. Возвращаешься весной с деньгами и кашлем.	In winter you go to town to brew sake. You come back in spring with money and a cough.	m
 early	a	me	Всю зиму ткёшь ковёр. Узор знаешь наизусть, как молитву.	All winter you weave a carpet. You know the pattern by heart, like a prayer.	
 early	a	me	Спор о воде решил кади. Теперь поливаешь по вторникам и пятницам.	The qadi settles the water dispute. Now you irrigate on Tuesdays and Fridays.	
@@ -340,3 +340,61 @@ early	x	jp latam	Землетрясение, а следом пожар.	An eart
 early	x	in	Муссон не пришёл. Колодцы пусты, амбары тоже.	The monsoon never comes. The wells are empty, and so are the granaries.	!town
 early	x	de fr it	Солдаты встали на постой на всю зиму. Съели всё, что было.	Soldiers are quartered on you all winter. They eat everything you have.	
 early	x	me	Чума в городе. Караваны не ходят, базар закрыт.	Plague in the city. The caravans stop; the bazaar is shut.	
+early	y		Послушание тебе дали самое простое: носить воду на кухню. Сорок вёдер в день.	Your first task is the simplest: carrying water to the kitchen. Forty buckets a day.	monk
+early	y	cn jp sea in	Тебе обрили голову. Ветер впервые холодит макушку.	Your head is shaved. For the first time the wind is cold on your crown.	monk
+early	y	cn jp	Учишь сутру наизусть. Наставник стучит палкой об пол, когда ты сбиваешься.	You learn a sutra by heart. Your teacher strikes the floor with a stick when you stumble.	monk
+early	y		Мать приходила к воротам. Тебя к ней не выпустили, только передали её хлеб.	Your mother came to the gate. You were not let out to her; they only passed you her bread.	monk
+early	y		Ночью в общей спальне кто-то плачет. Утром никто не признаётся.	Someone cries in the dormitory at night. In the morning nobody owns up.	monk
+early	y	eu ru	Тебя поймали со сливой из монастырского сада. Неделю ешь стоя.	You are caught with a plum from the monastery garden. For a week you eat standing up.	monk
+early	y		Старш{ий брат|ая сестра} учит тебя растирать краски для книг.	An older {brother|sister} teaches you to grind colours for the books.	monk
+early	y		Ты {принял|приняла} постриг. Тебе дали новое имя, и ты не сразу на него {откликался|откликалась}.	You take your vows. You are given a new name, and at first you do not answer to it.	monk
+early	y	eu ru	Всю ночь перед постригом стоишь на коленях. К утру не чувствуешь ног.	You kneel all night before your vows. By morning you cannot feel your legs.	monk
+early	y	sea in	С чашей для подаяния идёшь по деревне. Тебе кладут рис и не смотрят в глаза.	You walk through the village with your alms bowl. They put rice in it without meeting your eyes.	monk
+early	y	eu ru	Тайком {залез|залезла} на колокольню. Оттуда видно, как далеко тянется мир.	You sneak up the bell tower. From there you can see how far the world goes.	monk
+early	a		Тебя поставили на кухню. Варишь кашу на сорок человек и молчишь.	You are put in the kitchen. You cook porridge for forty and keep silent.	monk
+early	a	eu ru	В обитель пришёл странник. Ты моешь ему ноги, как положено по уставу.	A pilgrim comes to the monastery. You wash his feet, as the rule says.	monk
+early	a		Смотришь за пасекой. Пчёлы тебя не жалят, и {братия|сёстры} зовут это чудом.	You keep the bees. They never sting you, and the others call it a miracle.	monk
+early	a		Неделя молчания. Ты понимаешь, сколько слов {говорил|говорила} зря.	A week of silence. You learn how many of your words were wasted.	monk
+early	a	cn jp sea in	Сидишь в медитации с рассвета. Ноги затекли, а мысли всё бегут.	You sit in meditation from dawn. Your legs go numb and your thoughts keep running.	monk
+early	a	eu ru	Обители принадлежат три деревни. Ты {ездил|ездила} за оброком и {вернулся|вернулась} ни с чем: там нечего взять.	The monastery owns three villages. You go to collect the dues and come back empty-handed: they have nothing to give.	monk
+early	a		Лечишь травами. К воротам приходят больные со всей округи.	You heal with herbs. The sick come to the gate from all around.	monk
+early	a		Тебе велели учить послушников. Самый младший очень похож на тебя в детстве.	You are set to teach the novices. The youngest is very like you as a child.	monk
+early	a	ru	Пишешь икону. Лицо не выходит третий месяц.	You paint an icon. The face has not come right for three months.	monk
+early	a	eu ru	Звонишь к вечерне. Руки знают верёвку лучше, чем губы — слова молитвы.	You ring for vespers. Your hands know the rope better than your lips know the prayer.	monk
+early	a	cn jp	Метёшь двор храма. Листья падают снова, и ты метёшь снова.	You sweep the temple yard. The leaves fall again, and you sweep again.	monk
+early	a		Тебя послали с поручением в город. Ты {отвык|отвыкла} от шума и людей.	You are sent on an errand to the town. You have lost the habit of noise and crowds.	monk
+early	a	eu	Латынь ты знаешь так, что думаешь на ней.	You know Latin well enough to think in it.	monk lit
+early	a	cn jp	Переписываешь сутры. Каждый знак — поклон.	You copy the sutras. Every character is a bow.	monk lit
+early	a	eu ru	В обитель привезли печатные книги. Переписывать больше незачем, а руки привыкли.	Printed books arrive at the monastery. There is no more need to copy, but your hands are used to it.	monk lit
+early	j		Первый снег на монастырских крышах. Во дворе тихо, как на чистой странице.	The first snow on the monastery roofs. The yard is as quiet as a clean page.	monk
+early	j	eu ru	На Пасху звонят все колокола. Тебе разрешили съесть крашеное яйцо.	At Easter all the bells ring. You are allowed a painted egg.	monk
+early	j		Кот приходит в твою келью греться. Ты делишься с ним хлебом.	A cat comes to your cell for warmth. You share your bread with it.	monk
+early	j		Сегодня пение сложилось так, что у тебя мурашки по рукам.	Today the chant comes together so well it raises the hair on your arms.	monk
+early	j	jp	Зацвела сакура у храма. Наставник позволил весь день смотреть на неё.	The cherry by the temple blooms. Your teacher lets you spend the whole day looking at it.	monk
+early	j		{Закончил|Закончила} переписывать книгу. На последней странице оставляешь свою маленькую молитву.	You finish copying a book. On the last page you leave a small prayer of your own.	monk lit
+early	j		В окне кельи все звёзды. Смотришь на них до утренней службы.	All the stars show in your cell window. You watch them till the morning office.	monk
+early	j		Первые огурцы с монастырского огорода. Ешь с солью и улыбаешься.	The first cucumbers from the monastery garden. You eat them with salt and smile.	monk
+early	j		Ласточки свили гнездо над входом в храм. Каждое утро ты с ними здороваешься.	Swallows build a nest over the temple door. Every morning you greet them.	monk
+early	j		Праздник в обители: на столе рыба и мёд. Едите молча, но все улыбаются.	A feast day in the monastery: fish and honey on the table. You eat in silence, but everyone is smiling.	monk
+early	j		Тебе поручили разобрать библиотеку. В одной книге нашёлся засушенный цветок.	You are set to sort the library. In one book there is a pressed flower.	monk lit
+early	j	cn jp sea in	Медитация на рассвете. На миг мыслей нет совсем.	Meditation at dawn. For a moment there are no thoughts at all.	monk
+early	j	eu	Обитель варит пиво. Тебе доверили его пробовать.	The monastery brews beer. You are trusted to taste it.	monk
+early	o		Ты старше всех в обители. Послушники приходят спросить, как было раньше.	You are the oldest in the monastery. The novices come to ask how things used to be.	monk
+early	o		Тебя {сделали настоятелем|сделали настоятельницей}. Ключи тяжелее, чем ты {думал|думала}.	You are made {abbot|abbess}. The keys are heavier than you thought.	monk
+early	o		Слух уходит. Службу ты знаешь наизусть и поёшь её про себя.	Your hearing goes. You know the office by heart and sing it to yourself.	monk
+early	o		Тебе отвели келью потеплее, у кухни. Тебе неловко, но ты {рад|рада}.	You are given a warmer cell, by the kitchen. You are embarrassed and glad.	monk
+early	o		Молод{ой брат|ая сестра} читает тебе вслух: твои глаза больше не видят букв.	A young {brother|sister} reads aloud to you: your eyes no longer see the letters.	monk
+early	o		Сажаешь в саду яблоню. Плоды достанутся тем, кто придёт после.	You plant an apple tree in the garden. The fruit is for those who come after.	monk
+early	o		Ты сорок лет не {выходил|выходила} за ворота. Мир, говорят, стал совсем другим.	You have not gone past the gate in forty years. The world, they say, is quite different now.	monk
+early	o	cn jp	Ученики спорят о сутре. Ты молчишь, и они тоже замолкают.	The disciples argue over a sutra. You say nothing, and they fall silent too.	monk
+early	o		Ночами не спится. Сидишь в храме один, со светильником.	You cannot sleep at night. You sit alone in the temple with a lamp.	monk
+early	x		Мор пришёл в обитель. Хоронили по трое в день.	Plague reaches the monastery. Three are buried a day.	monk
+early	x		Обитель загорелась от свечи. Книги выносили на руках, спасли половину.	The monastery catches fire from a candle. You carry the books out by hand and save half.	monk
+early	x		Неурожай. Монастырь кормит всю округу, пока хватает зерна. Потом не хватает.	A failed harvest. The monastery feeds the whole district while the grain lasts. Then it does not.	monk
+early	x	eu ru	Солдаты неделю стояли в обители. Увели коней, выпили вино, сняли колокол.	Soldiers are quartered in the monastery for a week. They take the horses, drink the wine and take down the bell.	monk
+early	x		Зимой замёрз колодец. Воду топите из снега в котле.	In winter the well freezes. You melt snow in a cauldron for water.	monk
+early	x		Ты тяжело {заболел|заболела}. Над тобой молились три ночи, и ты {встал|встала}.	You fall gravely ill. They pray over you for three nights, and you get up.	monk
+early	x	cn	Чиновники пересчитали монахов и половину отправили обратно в мир.	Officials count the monks and send half of them back into the world.	monk
+early	x	cn jp	Землетрясение повалило пагоду. Разбираете камни руками.	An earthquake brings down the pagoda. You clear the stones by hand.	monk
+early	x		Разбойники вломились в обитель. Ты {отсиделся|отсиделась} в погребе с книгами.	Robbers break into the monastery. You hide in the cellar with the books.	monk
+early	x	eu ru	Обитель закрыли указом. {Братию|Сестёр} развезли по другим монастырям.	The monastery is closed by decree. Its people are scattered among other houses.	monk after:1764

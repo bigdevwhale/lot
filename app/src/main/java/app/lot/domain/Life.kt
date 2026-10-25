@@ -154,6 +154,7 @@ class Life private constructor(
         "!kids" -> kidsAlive == 0
         "monk" -> monk
         "town" -> town
+        "sea" -> sawSea
         "poor" -> wealth <= 0
         "rich" -> wealth >= 2
         "r0" -> rank == 0
@@ -234,14 +235,23 @@ class Life private constructor(
 
     private fun line(age: Int, k: Kind, mark: Mark = Mark.PLAIN) {
         // Abroad, the lines of the home region no longer fit; only those true anywhere do.
-        val all = content.lines(era.group, k, region).filter { it.need.holds(this) && ("abroad" !in flags || it.tags.isEmpty()) }
+        // Behind the monastery gate only the lines written for it fit: no dances, weddings or fields.
+        val all = content.lines(era.group, k, region).filter {
+            it.need.holds(this) && ("abroad" !in flags || it.tags.isEmpty()) && (!monk || it.need.names("monk"))
+        }
         val fresh = all.filterNot { it in used }
         // Lines the reader met in recent lives wait their turn while there are others.
         val unread = fresh.filterNot { it.text.g(sex).ru in past.read }
         val l = (unread.ifEmpty { fresh.ifEmpty { all } }).randomOrNull(rnd) ?: return
         used += l
         add(age, l.text, mark)
-        for (s in l.need.sets) if (s == "town") town = true else flags += s
+        // A line about the coast was lived by it.
+        if ("sea" in l.tags) sawSea = true
+        for (s in l.need.sets) when (s) {
+            "town" -> town = true
+            "sea" -> sawSea = true
+            else -> flags += s
+        }
     }
 
     private class Act(val door: Door, val act: () -> Unit)
@@ -409,8 +419,8 @@ class Life private constructor(
         val all = content.dilemmas.filter {
             it.id !in usedForks && era.group in it.groups && age in it.ages && it.fits(region) && it.need.holds(this) &&
                 ("abroad" !in flags || "*" in it.tags || it.tags.isEmpty()) &&
-                // A monk has taken vows: no fork may bring a wedding or a child.
-                !(monk && it.doors.any { g -> g.outs.any { o -> o.fx.any { f -> f == "married" || f == "kids+1" } } })
+                // A monk has taken vows: only the forks of the cloister.
+                (!monk || it.need.names("monk"))
         }
         // A fork met in a recent life (one of its outcomes is in that book) waits while others are left.
         val c = all.filterNot { d -> d.doors.any { g -> g.outs.any { it.text.g(sex).ru in past.read } } }.ifEmpty { all }
@@ -450,7 +460,7 @@ class Life private constructor(
     private fun crisis(): Ask {
         val unfree = rank == 0 && era.i < 6
         return ask(33, Tx("Беда. Что делать?", "Hard times. What now?"),
-            door("Переждать дома", "Sit it out at home", null) {
+            door(if (monk) "Переждать в обители" else "Переждать дома", if (monk) "Sit it out in the monastery" else "Sit it out at home", null) {
                 if (rnd.nextDouble() < .25) {
                     death = minOf(death, 33 + rnd.nextInt(3))
                     add(33, "Пережидали. Не все пережили.", "You wait it out. Not everyone lives through it.")
@@ -459,10 +469,15 @@ class Life private constructor(
                     add(33, "Пережидали. Выжили, но всё нажитое ушло.", "You wait it out. You live, but everything you had is gone.")
                 }
             },
-            door(when { era.i == 0 -> "Уйти всем родом за зверем"; unfree -> "Бежать"; else -> "Уйти всей семьёй в другие края" },
-                when { era.i == 0 -> "Move the whole band after the game"; unfree -> "Run away"; else -> "Leave with the family for other lands" }, null) {
+            door(when { era.i == 0 -> "Уйти всем родом за зверем"; monk -> "Уйти с братией в другую обитель"; unfree -> "Бежать"; else -> "Уйти всей семьёй в другие края" },
+                when { era.i == 0 -> "Move the whole band after the game"; monk -> "Leave with the others for another monastery"; unfree -> "Run away"; else -> "Leave with the family for other lands" }, null) {
                 if (rnd.nextDouble() < .4) sawSea = true
-                if (unfree && rnd.nextDouble() < .4) {
+                if (monk) {
+                    val lost = rnd.nextDouble() < .15
+                    if (lost) death = minOf(death, 35)
+                    add(33, if (lost) Tx("Ушли. Дорога забрала многих.", "You leave. The road takes many.")
+                        else Tx("Ушли. Дорога забрала стариков, новая обитель приняла остальных.", "You leave. The road takes the old ones; another monastery takes in the rest."))
+                } else if (unfree && rnd.nextDouble() < .4) {
                     death = minOf(death, 34)
                     add(33, "Беглых поймали.", "The runaways are caught.")
                 } else if (unfree) {
@@ -475,16 +490,18 @@ class Life private constructor(
                     add(33, "Ушли. Дорога забрала старших, но на новом месте есть земля.", "You leave. The road takes the old ones, but there is land in the new place.")
                 }
             },
-            door("Поделиться последним с соседями", "Share the last you have with the neighbours",
+            door(if (monk) "Раздать монастырский хлеб голодным" else "Поделиться последним с соседями", if (monk) "Give the monastery's bread to the hungry" else "Share the last you have with the neighbours",
                 if (wealth <= 0 && era.i > 0) why("Делиться нечем: у вас самих пусто.", "There is nothing to share: your own stores are empty.") else null) {
                 kind = true
                 wealth = (wealth - 1).coerceAtLeast(0)
-                add(33, "{Отдал|Отдала} соседям половину запасов. Этого не забудут.", "You give the neighbours half of what you have. It will not be forgotten.")
+                if (monk) add(33, "Хлеб раздали у ворот. Обитель голодает вместе со всеми, и этого не забудут.", "The bread is given out at the gate. The monastery goes hungry with everyone, and it will not be forgotten.")
+                else add(33, "{Отдал|Отдала} соседям половину запасов. Этого не забудут.", "You give the neighbours half of what you have. It will not be forgotten.")
             },
         )
     }
 
     private fun legacy(): Ask {
+        if (monk) return cloisterLegacy()
         val none = if (kidsAlive == 0) why("Детей у тебя нет.", "You have no children.") else null
         return ask(45, Tx("Что оставить детям?", "What will you leave the children?"),
             door("Научить своему делу", "Teach them your trade", none) { add(45, "Дети знают твоё дело лучше тебя.", "The children know your trade better than you do.") },
@@ -514,6 +531,25 @@ class Life private constructor(
         )
     }
 
+    /** A monk leaves no children: what is left is the novices, the books and the stories. */
+    private fun cloisterLegacy(): Ask {
+        val unread = if (!lit) why("Ты и сам{|а} не умеешь читать.", "You cannot read yourself.") else null
+        return ask(45, Tx("Что оставить после себя?", "What will you leave behind?"),
+            door("Учить послушников грамоте", "Teach the novices to read", unread) {
+                taught = true
+                add(45, "Учишь послушников грамоте. Самый бестолковый потом пишет лучше всех.", "You teach the novices their letters. The slowest one ends up writing best of all.")
+            },
+            door("Переписать книгу для обители", "Copy a book for the monastery", unread) {
+                add(45, "Год над одной книгой. Она будет стоять в библиотеке, когда тебя забудут.", "A year over one book. It will stand in the library when you are forgotten.")
+            },
+            door("Рассказывать истории", "Tell them stories", null) {
+                val s = STORIES.random(rnd).g(sex)
+                story = s
+                add(45, Tx("Вечерами рассказываешь послушникам ${s.ru}. Они просят ещё.", "In the evenings you tell the novices ${s.en}. They ask for more."))
+            },
+        )
+    }
+
     private fun wish(): Ask = ask(70, Tx("Последнее желание.", "One last wish."),
         door("Увидеть море", "See the sea", when {
             sawSea -> why("Ты его уже {видел|видела}.", "You have seen it already.")
@@ -527,9 +563,9 @@ class Life private constructor(
         door("Помириться с братом", "Make peace with your brother", null) {
             add(70, "Помирились. Сидели рядом до ночи и не вспоминали, из-за чего.", "You make peace. You sit side by side till night and never mention what it was about.")
         },
-        door("Посадить дерево у дома", "Plant a tree by the house", when {
+        door(if (monk) "Посадить дерево в монастырском саду" else "Посадить дерево у дома", if (monk) "Plant a tree in the monastery garden" else "Plant a tree by the house", when {
             era.i == 0 -> why("Дома нет: род кочует.", "There is no house: the band moves on.")
-            rank == 0 && era.i < 6 -> why("Земля не твоя.", "The land is not yours.")
+            rank == 0 && era.i < 6 && !monk -> why("Земля не твоя.", "The land is not yours.")
             else -> null
         }) {
             tree = true
@@ -547,7 +583,8 @@ class Life private constructor(
             a < 40 -> if (sex == Sex.F && married) listOf(tx("Горячка.", "A fever."), tx("Роды.", "Childbirth."), tx("Мор.", "Plague."))
                 else listOf(tx("Горячка.", "A fever."), tx("Несчастье в поле.", "An accident in the field."), tx("Мор.", "Plague."))
             a < 60 -> listOf(tx("Горячка.", "A fever."), tx("Сердце.", "The heart."), tx("Чахотка.", "Consumption."))
-            else -> listOf(tx("{Уснул|Уснула} и не {проснулся|проснулась}.", "Went to sleep and did not wake."), tx("Сердце.", "The heart."), tx("Старость.", "Old age."), tx("Тихо, при детях.", "Quietly, with the children near."))
+            else -> listOf(tx("{Уснул|Уснула} и не {проснулся|проснулась}.", "Went to sleep and did not wake."), tx("Сердце.", "The heart."), tx("Старость.", "Old age."),
+                when { monk -> tx("Тихо, под пение {братии|сестёр}.", "Quietly, while the others sang."); kidsAlive > 0 -> tx("Тихо, при детях.", "Quietly, with the children near."); else -> tx("Тихо, во сне.", "Quietly, in sleep.") })
         }.random(rnd)
         val when_ = when {
             alive -> tx("Сейчас тебе ${Years.yearsRu(a)}. Дальше книга ещё не написана.", "You are $a now. The rest of the book is not written yet.")
@@ -570,7 +607,7 @@ class Life private constructor(
             if (kind) ep += tx("В голодный год {делился|делилась} последним.", "Shared the last of it in a hungry year.")
             if (love) ep += tx("{Выбрал|Выбрала} сердцем.", "Chose with the heart.")
             if (monk) ep += tx("{Жил|Жила} в тишине.", "Lived in silence.")
-            if (taught) ep += tx("Дети читали благодаря {ему|ей}.", "The children could read because of {him|her}.")
+            if (taught) ep += if (monk) tx("Послушники читали благодаря {ему|ей}.", "The novices could read because of {him|her}.") else tx("Дети читали благодаря {ему|ей}.", "The children could read because of {him|her}.")
             if (tree) ep += tx("Груша у дома цветёт и сейчас.", "The pear tree by the house still blooms.")
             if (meet != null) ep += tx("Однажды {видел|видела} того, о ком потом писали книги.", "Once met someone later written about in books.")
             if ("faith" in flags) ep += tx("{Верил|Верила} крепко.", "Kept the faith.")

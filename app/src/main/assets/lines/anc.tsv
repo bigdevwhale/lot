@@ -56,7 +56,7 @@ anc	y	me	В школе писцов тебя бьют палкой за крив
 anc	y	me	Отец впервые взял тебя на суд у городских ворот.	Father takes you for the first time to the court at the city gate.	m
 anc	y	eg	Ты выучил песню, под которую тянут камень. Голос у тебя громкий.	You learn the song for hauling stone. You have a loud voice.	m
 anc	y	eg	Ты научилась подводить глаза чёрной краской. Мать говорит, что это от мух.	You learn to line your eyes with black paint. Mother says it keeps the flies away.	f
-anc	y	med	Впервые вышел в море с рыбаками. Тошнило до вечера.	You go to sea with the fishermen for the first time. You are sick till evening.	m
+anc	y	med	Впервые вышел в море с рыбаками. Тошнило до вечера.	You go to sea with the fishermen for the first time. You are sick till evening.	m +sea
 anc	y	med	На празднике бога вина пьяны все, даже жрец.	At the wine god's feast everyone is drunk, even the priest.	
 anc	y	med	Бежал на играх в честь бога. Пришёл третьим, венок достался другому.	You run in the games for the god. You come third; the wreath goes to another.	m
 anc	y	af	Тебя увели в лес на обряд. Назад ты приходишь со шрамами и новым именем.	You are taken into the forest for the rite. You come back with scars and a new name.	
@@ -157,7 +157,7 @@ anc	j	au	Поймали дюгоня. Пир на всю стоянку, пок�
 anc	j	au	Цветёт акация. Старики говорят: пора идти к морю.	The wattle is in flower. The old people say it is time to go to the sea.	
 anc	j		Ребёнок впервые позвал тебя. Ты всё {бросил|бросила} и {побежал|побежала}.	Your child calls for you for the first time. You drop everything and run.	kids
 anc	j		Вечером сидите с {женой|мужем} у огня и молчите. Хорошо.	In the evening you sit by the fire with your {wife|husband}, saying nothing. It is good.	married !widowed
-anc	j		{Нашёл|Нашла} на берегу красивую раковину. Носишь её на шее.	You find a pretty shell on the shore. You wear it round your neck.	
+anc	j		{Нашёл|Нашла} на берегу красивую раковину. Носишь её на шее.	You find a pretty shell on the shore. You wear it round your neck.	+sea
 anc	j		Гости хвалят твою похлёбку и просят ещё.	The guests praise your stew and ask for more.	
 anc	j		После жатвы спишь в тени до самого вечера. Никто не будит.	After the harvest you sleep in the shade till evening. No one wakes you.	!town
 anc	j		Старый друг пришёл издалека, через десять лет. {Узнал|Узнала} его по смеху.	An old friend comes from far away after ten years. You know him by his laugh.	
@@ -296,7 +296,7 @@ anc	y	me	Отец учит тебя по запаху ветра узнават�
 anc	y	eg	Впервые {плыл|плыла} на лодке на большой рынок. Туда несло течение, назад гнал ветер.	For the first time you take a boat to the big market. The current carries you there, the wind brings you back.	
 anc	y	eg	Месишь ногами глину для кирпичей. К вечеру ты по пояс в грязи.	You tread clay for bricks. By evening you are mud to the waist.	
 anc	y	med	Бабушка учит тебя прясть. Нить у тебя тонкая, и она довольна.	Grandmother teaches you to spin. Your thread is fine, and she is pleased.	
-anc	y	med	Брат нанялся гребцом на корабль за море. Ты долго {стоял|стояла} на берегу.	Your brother signs on as an oarsman on a ship overseas. You stand on the shore a long time.	
+anc	y	med	Брат нанялся гребцом на корабль за море. Ты долго {стоял|стояла} на берегу.	Your brother signs on as an oarsman on a ship overseas. You stand on the shore a long time.	+sea
 anc	y	med	Ночью стережёшь виноградник от лис. В деревне лают собаки.	At night you guard the vineyard from foxes. Dogs bark down in the village.	
 anc	y	med	На празднике ты впервые {пел|пела} в хоре для богини. Сердце колотится.	At the feast you sing in the chorus for the goddess for the first time. Your heart is pounding.	
 anc	y	med	Отец учит тебя ставить сети на тунца.	Father teaches you to set the nets for tuna.	
@@ -520,7 +520,7 @@ anc	o	au	Сидишь в тени и правишь каменные лезви�
 anc	o	au	Идти к дальнему источнику ты уже не можешь. Тебя несут на руках.	You can no longer walk to the far spring. They carry you.	
 anc	o	au	Учишь девушек, какие травы лечат, а какие убивают.	You teach the girls which plants heal and which kill.	
 anc	o	au	Показываешь молодым тёмного эму в Млечном Пути. Когда он встаёт так, пора искать яйца.	You show the young the dark emu in the Milky Way. When it stands like that, it is time to look for eggs.	
-anc	o	au	Ты помнишь берег, где {родился|родилась}. Его давно забрало море.	You remember the shore where you were born. The sea took it long ago.	before:-4000
+anc	o	au	Ты помнишь берег, где {родился|родилась}. Его давно забрало море.	You remember the shore where you were born. The sea took it long ago.	before:-4000 +sea
 anc	o		Тебя зовут на роды в каждый дом. Через твои руки прошла половина деревни.	They call you to every birth. Half the village has passed through your hands.	f
 anc	o		Ученик работает уже лучше тебя. Ты делаешь вид, что не замечаешь.	Your apprentice works better than you now. You pretend not to notice.	r2
 anc	o		Ты слишком {стар|стара} для поля. Хозяин поставил тебя сторожить гусей.	You are too old for the fields. The master sets you to mind the geese.	r0 !town
@@ -543,11 +543,11 @@ anc	x	med	Пришли римляне. Город, что сопротивлял
 anc	x	af	Дожди начались и сразу кончились. Просо засохло по колено.	The rains start and stop at once. The millet withers knee-high.	
 anc	x	af	Река поднялась на месяц раньше. Просо ушло под воду.	The river rises a month early. The millet goes under water.	
 anc	x	meso	Проснулся вулкан. Пепел засыпал поля по колено.	The volcano wakes. Ash buries the fields knee-deep.	!town
-anc	x	meso	Буря с моря сорвала крыши и положила маис.	A storm from the sea tears off the roofs and flattens the maize.	
+anc	x	meso	Буря с моря сорвала крыши и положила маис.	A storm from the sea tears off the roofs and flattens the maize.	+sea
 anc	x	meso	Война с соседним городом. Пленных ведут на жертвенник, и твой брат среди них.	War with the next city. The captives are led to the altar, and your brother is among them.	
 anc	x	andes	С гор сошёл сель. Деревня внизу исчезла за одну ночь.	A mudslide comes down the mountain. The village below is gone in a night.	
 anc	x	andes	Мор среди лам: стадо лежит в загоне и не встаёт.	Plague among the llamas: the herd lies in the pen and won't get up.	
-anc	x	andes	Море у берега стало тёплым. Рыба ушла, а ливни смывают дома.	The sea by the shore turns warm. The fish leave, and downpours wash the houses away.	
+anc	x	andes	Море у берега стало тёплым. Рыба ушла, а ливни смывают дома.	The sea by the shore turns warm. The fish leave, and downpours wash the houses away.	+sea
 anc	x	au	Самая долгая засуха на памяти стариков. Ямы с водой в песке пусты.	The longest drought the old people remember. The water holes in the sand are empty.	
-anc	x	au	Циклон с моря. Деревья лежат, стоянку смыло.	A cyclone from the sea. The trees are down and the camp is washed away.	
+anc	x	au	Циклон с моря. Деревья лежат, стоянку смыло.	A cyclone from the sea. The trees are down and the camp is washed away.	+sea
 anc	x	au	Чужие пришли на вашу землю с копьями. Началась кровная месть.	Strangers come onto your land with spears. A blood feud begins.	!town

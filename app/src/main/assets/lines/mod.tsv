@@ -91,7 +91,7 @@ mod	a		Родился первенец. Третью ночь не спишь, �
 mod	a		Учишься водить в сорок лет. Дети смеются.	You learn to drive at forty. The children laugh.	kids
 mod	a		Вечерами учишься на бухгалтера. Засыпаешь над тетрадью.	In the evenings you study bookkeeping. You fall asleep over the notebook.	lit
 mod	a		Бумаги в конторе. Обед — за рабочим столом.	Papers at the office. Lunch at your desk.	r2 +town
-mod	a		{Купил|Купила} машину. Всей семьёй едете к морю.	You buy a car. The whole family drives to the sea.	r2 r3
+mod	a		{Купил|Купила} машину. Всей семьёй едете к морю.	You buy a car. The whole family drives to the sea.	r2 r3 +sea
 mod	a		У детей няня и шофёр. С няней они говорят на её языке.	The children have a nanny and a driver. They speak the nanny's language with her.	r3 kids
 mod	a		Профсоюз объявил забастовку. Неделю стоите у ворот.	The union calls a strike. For a week you stand at the gates.	r1
 mod	a		Свекровь учит тебя готовить по-своему.	Your mother-in-law teaches you to cook her way.	f married
@@ -120,7 +120,7 @@ mod	j		Ребёнок сказал первое слово.	Your child says the 
 mod	j		Дали премию. Всем {купил|купила} подарки.	A bonus at work. You buy everyone presents.	r1 r2
 mod	j		{Помирился|Помирилась} с братом после десяти лет молчания.	You make peace with your brother after ten years of silence.	
 mod	j		Соседка принесла горячего хлеба.	The neighbour brings hot bread.	
-mod	j		Впервые {увидел|увидела} море. Вода и правда солёная.	You see the sea for the first time. The water really is salty.	
+mod	j		Впервые {увидел|увидела} море. Вода и правда солёная.	You see the sea for the first time. The water really is salty.	+sea !sea
 mod	j		Сын позвонил просто так.	Your son calls, just because.	kids
 mod	j		Вечер на крыше с друзьями. Песни под гитару.	An evening on the roof with friends. Songs to a guitar.	
 mod	j		Помидоров уродилось столько, что раздаёшь соседям.	So many tomatoes this year you give them to the neighbours.	r1
@@ -214,7 +214,7 @@ mod	y	latam	Работаешь в мастерской у дяди. Руки п�
 mod	y	us	Права в шестнадцать. По субботам отец даёт ключи от пикапа.	A driving licence at sixteen. On Saturdays your father lends you the pickup.	
 mod	y	us	Выпускной бал в спортзале. Над головой крутится зеркальный шар.	Prom in the school gym. A mirror ball turns overhead.	
 mod	y	au	До школы катаешься на доске. В класс приходишь с мокрыми волосами.	You surf before school. You come to class with wet hair.	
-mod	y	eu	Летом разносишь кофе в кафе у моря. Чаевые прячешь в коробку из-под обуви.	In summer you wait tables at a seaside café. You hide the tips in a shoebox.	
+mod	y	eu	Летом разносишь кофе в кафе у моря. Чаевые прячешь в коробку из-под обуви.	In summer you wait tables at a seaside café. You hide the tips in a shoebox.	+sea
 mod	y	eu	С друзьями до полуночи сидите на ступенях у фонтана.	You sit with your friends on the fountain steps until midnight.	
 mod	y	ru	Сидите компанией на подоконнике в подъезде. Соседи гонят.	You and your friends sit on the stairwell windowsill. The neighbours chase you off.	+town
 mod	y	ru	Гитара во дворе. Знаешь три аккорда и все песни.	A guitar in the yard. You know three chords and every song.	
@@ -278,7 +278,7 @@ mod	j	af	Сборная вышла в финал. Вся улица поёт.	Th
 mod	j	latam	Асадо у шурина. Мясо до полуночи, гитара до утра.	An asado at your brother-in-law's. Meat until midnight, guitar until morning.	
 mod	j	us	День благодарения: индейка, вся родня и футбол по телевизору.	Thanksgiving: turkey, the whole family and football on TV.	
 mod	j	au	Барбекю у реки. Пиво в ведре со льдом.	A barbecue by the river. Beer in a bucket of ice.	
-mod	j	eu	Две недели у моря. Ни разу не {посмотрел|посмотрела} на часы.	Two weeks by the sea. You never once look at a clock.	
+mod	j	eu	Две недели у моря. Ни разу не {посмотрел|посмотрела} на часы.	Two weeks by the sea. You never once look at a clock.	+sea
 mod	j	ru	Уха у костра на рыбалке. Комары и звёзды.	Fish soup by the fire on a fishing trip. Mosquitoes and stars.	
 mod	j		Видеозвонок брату за границу. Ты {показал|показала} ему весь дом.	A video call to your brother abroad. You show him the whole house.	after:2012
 mod	o		К врачу ходишь как на работу. Знаешь всех в очереди.	You go to the doctor as if to work. You know everyone in the queue.	
@@ -300,7 +300,7 @@ mod	o	me af	{Совершил|Совершила} хадж. Теперь теб�
 mod	o	af	{Вернулся|Вернулась} из города доживать в деревню. Сажаешь маниок.	You come back from the city to live out your days in the village. You plant cassava.	
 mod	o	latam	По воскресеньям танцуешь на площади дансон.	On Sundays you dance the danzón in the plaza.	
 mod	o	us	Пенсии не хватает. Укладываешь покупки на кассе в супермаркете.	The pension isn't enough. You bag groceries at the supermarket.	
-mod	o	au	{Перебрался|Перебралась} в домик у моря. Каждое утро плаваешь.	You move to a little house by the sea. You swim every morning.	
+mod	o	au	{Перебрался|Перебралась} в домик у моря. Каждое утро плаваешь.	You move to a little house by the sea. You swim every morning.	+sea
 mod	o	eu	С клубом пенсионеров ездишь на автобусе по чужим странам.	You tour foreign countries by coach with the pensioners' club.	
 mod	o	ru	Сидишь на лавочке у подъезда. Знаешь, кто во сколько пришёл.	You sit on the bench by the entrance. You know who came home when.	+town
 mod	x		Пожар. Сгорели все документы и фотографии.	A fire. Every paper and photograph burns.	

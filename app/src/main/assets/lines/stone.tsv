@@ -103,7 +103,7 @@ stone	x		Лихорадка прошла по стоянке. Умерли тр�
 stone	x	af	Загорелась степь. Бежали к реке, бросив всё.	The grassland catches fire. You run for the river, leaving everything.	
 stone	x	eu	Пещерный медведь проснулся раньше срока и пришёл к стоянке.	A cave bear wakes too early and comes to the camp.	
 stone	x		Ночью разлилась река и унесла стоянку.	The river floods in the night and carries off the camp.	
-stone	x	au	Море поднялось и залило земли предков. Где были холмы, теперь острова.	The sea rises over the lands of the ancestors. Where there were hills, there are islands now.	!town
+stone	x	au	Море поднялось и залило земли предков. Где были холмы, теперь острова.	The sea rises over the lands of the ancestors. Where there were hills, there are islands now.	!town +sea
 stone	x	am	Большой зверь пропал. Охотники ходят неделями и возвращаются пустыми.	The great beasts are gone. The hunters walk for weeks and come back empty-handed.	
 stone	x		С неба падает пепел, как снег. Трава почернела, вода горчит.	Ash falls from the sky like snow. The grass turns black, the water tastes bitter.	
 stone	c		Тебе велели сторожить вяленое мясо от собак. Ты {уснул|уснула}, а собаки — нет.	You are told to guard the dried meat from the dogs. You fall asleep; the dogs do not.	

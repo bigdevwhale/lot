@@ -62,7 +62,7 @@ med	y	jp	Приехали сборщики риса от даймё. Отец к
 med	y	meso	Тебя отдали в школу при храме. Там учат петь, плясать и молчать.	You are sent to the temple school. They teach you to sing, to dance and to keep quiet.	
 med	y	andes	Первая мита: месяц таскаешь камни на дорогу Инки.	Your first mit'a: a month hauling stones for the Inca's road.	m
 med	y	eu	Подрался с парнями из соседней деревни. Неделю ходил с подбитым глазом.	You fight the lads from the next village. You go about with a black eye for a week.	m
-med	y		Впервые {увидел|увидела} море. Оно никак не кончалось.	You see the sea for the first time. It goes on and on.	
+med	y		Впервые {увидел|увидела} море. Оно никак не кончалось.	You see the sea for the first time. It goes on and on.	+sea !sea
 med	y	eu ru cn in me eg af jp sea meso andes	Тебя отдали в монастырь. Первую зиму ты {плакал|плакала} по ночам.	You are given to the monastery. The first winter you cry at night.	monk
 med	y		Весной ты {влюбился|влюбилась}. Никому не {сказал|сказала}.	In spring you fall in love. You tell no one.	
 med	y	eu ru cn in me eg af jp sea meso andes	{Ушёл|Ушла} в город наниматься. Первую ночь {спал|спала} под мостом.	You go to town to find work. The first night you sleep under a bridge.	town
@@ -171,7 +171,7 @@ med	j		Внук сказал первое слово. Твоё имя.	Your gran
 med	j	eu me	Соколиная охота. Сокол взял цаплю с первого раза.	Hawking. The falcon takes a heron at the first try.	r3
 med	j		{Справил|Справила} себе новую обувь. Носишь только по праздникам.	You get yourself new shoes. You wear them only on feast days.	
 med	j		{Помирился|Помирилась} с братом после долгой ссоры. Сидели вместе до ночи.	You make peace with your brother after a long quarrel. You sit together till night.	
-med	j		В монастырском саду поспели груши. Настоятель разрешил взять одну.	The pears ripen in the monastery garden. The abbot allows you one.	monk
+med	j		В монастырском саду поспели груши. {Настоятель|Настоятельница} разрешил{|а} взять одну.	The pears ripen in the monastery garden. The abbot allows you one.	monk
 med	j		Тебе дали книгу на одну ночь. Ты так и не {лёг|легла}.	You are lent a book for one night. You never go to bed.	lit
 med	o		Ты помнишь три голодных года и одну комету.	You remember three hungry years and one comet.	
 med	o	eu ru	Сидишь у печи и чинишь сети.	You sit by the stove mending nets.	
@@ -390,7 +390,7 @@ med	a	fr de it en	После мора земли много, а рук мало.
 med	a	jp cn in me af	Купцы привезли табак. Мужчины передают трубку по кругу.	Merchants bring tobacco. The men pass the pipe round.	after:1590
 med	a	eu ru cn in me eg af jp sea meso andes	Хозяин продал поле вместе с тобой. Новый даже не спросил, как тебя зовут.	The master sells the field and you with it. The new one does not even ask your name.	r0 !town
 med	a	eu ru cn in me eg af jp sea meso andes	Ты {бежал|бежала} от господина. Через неделю тебя вернули.	You run away from your master. A week later you are brought back.	r0
-med	a	eu	Тебя сделали келарем. Теперь ты знаешь, сколько в монастыре сыра.	You are made cellarer. Now you know how much cheese the monastery has.	monk
+med	a	eu	Тебя сделали {келарем|келаршей}. Теперь ты знаешь, сколько в монастыре сыра.	You are made cellarer. Now you know how much cheese the monastery has.	monk
 med	j		Тёплая ночь. Лежишь на спине и смотришь, как падают звёзды.	A warm night. You lie on your back and watch the stars fall.	
 med	j		Утро такое тихое, что слышно реку за холмом.	A morning so still you can hear the river beyond the hill.	
 med	j		Рыба шла косяком. Ели все, пока не надоело.	The fish run thick. Everyone eats till they are sick of it.	
@@ -505,13 +505,13 @@ med	x	eg me	Нил не поднялся. Хлеб дорожает каждый
 med	x	eu	Шайка наёмников встала в деревне на зиму. Едят всё подчистую.	A band of mercenaries settles in the village for the winter. They eat everything.	
 med	x	ru	Ранний мороз побил рожь на корню.	An early frost kills the rye where it stands.	
 med	x	af	Мухи погубили весь скот у реки.	The flies kill all the cattle by the river.	!town
-med	x	jp	Земля тряслась, а потом с моря пришла волна.	The earth shakes, and then a wave comes in from the sea.	!town
+med	x	jp	Земля тряслась, а потом с моря пришла волна.	The earth shakes, and then a wave comes in from the sea.	!town +sea
 med	x	sea	Войско соседнего царя пришло на слонах. Угоняют людей целыми деревнями.	The next king's army comes on elephants. They drive off whole villages.	
-med	x	sea	Буря с моря сорвала крыши и положила рис.	A storm off the sea tears away the roofs and flattens the rice.	
+med	x	sea	Буря с моря сорвала крыши и положила рис.	A storm off the sea tears away the roofs and flattens the rice.	+sea
 med	x	meso	Ранний заморозок побил всю кукурузу.	An early frost kills all the maize.	
 med	x	meso	Воины соседнего города увели пленников для жертвы.	Warriors from the next city carry off captives for sacrifice.	
 med	x	andes	Землетрясение обрушило террасы на целом склоне.	An earthquake brings down the terraces on a whole slope.	
-med	x	andes	Море потеплело, рыба ушла, а на побережье льёт, как никогда.	The sea turns warm, the fish leave, and it rains on the coast as never before.	
+med	x	andes	Море потеплело, рыба ушла, а на побережье льёт, как никогда.	The sea turns warm, the fish leave, and it rains on the coast as never before.	+sea
 med	x	au	Чужие пришли охотиться на вашей земле. Будет бой.	Strangers come to hunt on your country. There will be a fight.	
 med	x	au	Река вышла из берегов среди ночи. Пропало всё, что не успели унести.	The river breaks its banks in the night. Everything you could not carry is lost.	
 med	x	au	Кто-то нарушил закон, и теперь между родами вражда.	Someone has broken the law, and now there is a feud between the clans.	
@@ -520,7 +520,62 @@ med	x	au	По стоянке пошёл кашель. Старики умира�
 med	x	au	Пыльная буря три дня. Ни зверя, ни следа.	A dust storm for three days. No game, no tracks.	
 med	x	eu ru me eg	Чёрная смерть. Бубон под мышкой, на третий день человек мёртв. Хоронят в общих ямах.	The Black Death. A swelling in the armpit, and on the third day a man is dead. They bury them in pits.	after:1347 before:1353
 med	x	fr de it en	Под стенами города бьют пушки. Ядра проламывают стену.	Cannon pound the town walls. The balls break through.	after:1420
-med	x	en fr	С моря пришли длинные корабли. Монастырь у бухты сожгли.	Longships come in from the sea. The monastery by the bay is burnt.	after:790 before:1070
+med	x	en fr	С моря пришли длинные корабли. Монастырь у бухты сожгли.	Longships come in from the sea. The monastery by the bay is burnt.	after:790 before:1070 +sea
 med	x	cn me ru	Пришли монголы. Город, что не открыл ворота, вырезали весь.	The Mongols come. The town that did not open its gates is put to the sword.	after:1210 before:1290
 med	x	jp	У врага теперь ружья. Твоих родичей убили издалека, мечи даже не скрестились.	The enemy has guns now. Your kinsmen are killed from afar before a sword is drawn.	after:1550
 med	x	in	Через ваши поля прошло войско султана. Храм разобрали на камень.	The sultan's army crosses your fields. The temple is pulled down for its stone.	after:1200 !town
+med	y		Послушание тебе дали самое простое: носить воду на кухню. Сорок вёдер в день.	Your first task is the simplest: carrying water to the kitchen. Forty buckets a day.	monk
+med	y	cn jp sea in	Тебе обрили голову. Ветер впервые холодит макушку.	Your head is shaved. For the first time the wind is cold on your crown.	monk
+med	y	cn jp	Учишь сутру наизусть. Наставник стучит палкой об пол, когда ты сбиваешься.	You learn a sutra by heart. Your teacher strikes the floor with a stick when you stumble.	monk
+med	y		Мать приходила к воротам. Тебя к ней не выпустили, только передали её хлеб.	Your mother came to the gate. You were not let out to her; they only passed you her bread.	monk
+med	y		Ночью в общей спальне кто-то плачет. Утром никто не признаётся.	Someone cries in the dormitory at night. In the morning nobody owns up.	monk
+med	y	eu ru	Тебя поймали со сливой из монастырского сада. Неделю ешь стоя.	You are caught with a plum from the monastery garden. For a week you eat standing up.	monk
+med	y		Старш{ий брат|ая сестра} учит тебя растирать краски для книг.	An older {brother|sister} teaches you to grind colours for the books.	monk
+med	y		Ты {принял|приняла} постриг. Тебе дали новое имя, и ты не сразу на него {откликался|откликалась}.	You take your vows. You are given a new name, and at first you do not answer to it.	monk
+med	y	eu ru	Всю ночь перед постригом стоишь на коленях. К утру не чувствуешь ног.	You kneel all night before your vows. By morning you cannot feel your legs.	monk
+med	y	sea in	С чашей для подаяния идёшь по деревне. Тебе кладут рис и не смотрят в глаза.	You walk through the village with your alms bowl. They put rice in it without meeting your eyes.	monk
+med	y	eu ru	Тайком {залез|залезла} на колокольню. Оттуда видно, как далеко тянется мир.	You sneak up the bell tower. From there you can see how far the world goes.	monk
+med	a		Тебя поставили на кухню. Варишь кашу на сорок человек и молчишь.	You are put in the kitchen. You cook porridge for forty and keep silent.	monk
+med	a	eu ru	В обитель пришёл странник. Ты моешь ему ноги, как положено по уставу.	A pilgrim comes to the monastery. You wash his feet, as the rule says.	monk
+med	a		Смотришь за пасекой. Пчёлы тебя не жалят, и {братия|сёстры} зовут это чудом.	You keep the bees. They never sting you, and the others call it a miracle.	monk
+med	a		Неделя молчания. Ты понимаешь, сколько слов {говорил|говорила} зря.	A week of silence. You learn how many of your words were wasted.	monk
+med	a	cn jp sea in	Сидишь в медитации с рассвета. Ноги затекли, а мысли всё бегут.	You sit in meditation from dawn. Your legs go numb and your thoughts keep running.	monk
+med	a	eu ru	Обители принадлежат три деревни. Ты {ездил|ездила} за оброком и {вернулся|вернулась} ни с чем: там нечего взять.	The monastery owns three villages. You go to collect the dues and come back empty-handed: they have nothing to give.	monk
+med	a		Лечишь травами. К воротам приходят больные со всей округи.	You heal with herbs. The sick come to the gate from all around.	monk
+med	a		Тебе велели учить послушников. Самый младший очень похож на тебя в детстве.	You are set to teach the novices. The youngest is very like you as a child.	monk
+med	a	ru	Пишешь икону. Лицо не выходит третий месяц.	You paint an icon. The face has not come right for three months.	monk
+med	a	eu ru	Звонишь к вечерне. Руки знают верёвку лучше, чем губы — слова молитвы.	You ring for vespers. Your hands know the rope better than your lips know the prayer.	monk
+med	a	cn jp	Метёшь двор храма. Листья падают снова, и ты метёшь снова.	You sweep the temple yard. The leaves fall again, and you sweep again.	monk
+med	a		Тебя послали с поручением в город. Ты {отвык|отвыкла} от шума и людей.	You are sent on an errand to the town. You have lost the habit of noise and crowds.	monk
+med	a	eu	Латынь ты знаешь так, что думаешь на ней.	You know Latin well enough to think in it.	monk lit
+med	a	cn jp	Переписываешь сутры. Каждый знак — поклон.	You copy the sutras. Every character is a bow.	monk lit
+med	j		Первый снег на монастырских крышах. Во дворе тихо, как на чистой странице.	The first snow on the monastery roofs. The yard is as quiet as a clean page.	monk
+med	j	eu ru	На Пасху звонят все колокола. Тебе разрешили съесть крашеное яйцо.	At Easter all the bells ring. You are allowed a painted egg.	monk
+med	j		Кот приходит в твою келью греться. Ты делишься с ним хлебом.	A cat comes to your cell for warmth. You share your bread with it.	monk
+med	j		Сегодня пение сложилось так, что у тебя мурашки по рукам.	Today the chant comes together so well it raises the hair on your arms.	monk
+med	j	jp	Зацвела сакура у храма. Наставник позволил весь день смотреть на неё.	The cherry by the temple blooms. Your teacher lets you spend the whole day looking at it.	monk
+med	j		{Закончил|Закончила} переписывать книгу. На последней странице оставляешь свою маленькую молитву.	You finish copying a book. On the last page you leave a small prayer of your own.	monk lit
+med	j		В окне кельи все звёзды. Смотришь на них до утренней службы.	All the stars show in your cell window. You watch them till the morning office.	monk
+med	j		Первые огурцы с монастырского огорода. Ешь с солью и улыбаешься.	The first cucumbers from the monastery garden. You eat them with salt and smile.	monk
+med	j		Ласточки свили гнездо над входом в храм. Каждое утро ты с ними здороваешься.	Swallows build a nest over the temple door. Every morning you greet them.	monk
+med	j		Праздник в обители: на столе рыба и мёд. Едите молча, но все улыбаются.	A feast day in the monastery: fish and honey on the table. You eat in silence, but everyone is smiling.	monk
+med	j		Тебе поручили разобрать библиотеку. В одной книге нашёлся засушенный цветок.	You are set to sort the library. In one book there is a pressed flower.	monk lit
+med	j	cn jp sea in	Медитация на рассвете. На миг мыслей нет совсем.	Meditation at dawn. For a moment there are no thoughts at all.	monk
+med	o		Ты старше всех в обители. Послушники приходят спросить, как было раньше.	You are the oldest in the monastery. The novices come to ask how things used to be.	monk
+med	o		Тебя {сделали настоятелем|сделали настоятельницей}. Ключи тяжелее, чем ты {думал|думала}.	You are made {abbot|abbess}. The keys are heavier than you thought.	monk
+med	o		Слух уходит. Службу ты знаешь наизусть и поёшь её про себя.	Your hearing goes. You know the office by heart and sing it to yourself.	monk
+med	o		Тебе отвели келью потеплее, у кухни. Тебе неловко, но ты {рад|рада}.	You are given a warmer cell, by the kitchen. You are embarrassed and glad.	monk
+med	o		Молод{ой брат|ая сестра} читает тебе вслух: твои глаза больше не видят букв.	A young {brother|sister} reads aloud to you: your eyes no longer see the letters.	monk
+med	o		Сажаешь в саду яблоню. Плоды достанутся тем, кто придёт после.	You plant an apple tree in the garden. The fruit is for those who come after.	monk
+med	o		Ты сорок лет не {выходил|выходила} за ворота. Мир, говорят, стал совсем другим.	You have not gone past the gate in forty years. The world, they say, is quite different now.	monk
+med	o	cn jp	Ученики спорят о сутре. Ты молчишь, и они тоже замолкают.	The disciples argue over a sutra. You say nothing, and they fall silent too.	monk
+med	o		Ночами не спится. Сидишь в храме один, со светильником.	You cannot sleep at night. You sit alone in the temple with a lamp.	monk
+med	x		Мор пришёл в обитель. Хоронили по трое в день.	Plague reaches the monastery. Three are buried a day.	monk
+med	x		Обитель загорелась от свечи. Книги выносили на руках, спасли половину.	The monastery catches fire from a candle. You carry the books out by hand and save half.	monk
+med	x		Неурожай. Монастырь кормит всю округу, пока хватает зерна. Потом не хватает.	A failed harvest. The monastery feeds the whole district while the grain lasts. Then it does not.	monk
+med	x	eu ru	Солдаты неделю стояли в обители. Увели коней, выпили вино, сняли колокол.	Soldiers are quartered in the monastery for a week. They take the horses, drink the wine and take down the bell.	monk
+med	x		Зимой замёрз колодец. Воду топите из снега в котле.	In winter the well freezes. You melt snow in a cauldron for water.	monk
+med	x		Ты тяжело {заболел|заболела}. Над тобой молились три ночи, и ты {встал|встала}.	You fall gravely ill. They pray over you for three nights, and you get up.	monk
+med	x	cn	Чиновники пересчитали монахов и половину отправили обратно в мир.	Officials count the monks and send half of them back into the world.	monk
+med	x	cn jp	Землетрясение повалило пагоду. Разбираете камни руками.	An earthquake brings down the pagoda. You clear the stones by hand.	monk
+med	x		Разбойники вломились в обитель. Ты {отсиделся|отсиделась} в погребе с книгами.	Robbers break into the monastery. You hide in the cellar with the books.	monk

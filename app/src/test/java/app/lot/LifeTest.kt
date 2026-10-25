@@ -145,9 +145,9 @@ class LifeTest {
     @Test fun aMonkStaysUnwed() {
         val rnd = Random(5)
         val worldly = Regex("Свадьбу сыграли|Женился|Вышла замуж|Родилось детей|ты невеста|тебе (невесту|жениха)|Тебя сосватали|Тебя выдали замуж|твоей свадьбе|огню жениха")
+        val village = Regex("свадьб|пляс|танц|ярмарк|сватают|при детях", RegexOption.IGNORE_CASE)
         var monks = 0
         repeat(4000) { n ->
-            var vowed = false
             val (p, _) = Life.live(content, n.toLong() * 17, null) { ch, _ ->
                 val open = ch.doors.indices.filter { ch.doors[it].open }
                 open.firstOrNull { ch.doors[it].text.en == "Enter a monastery" } ?: open.random(rnd)
@@ -157,8 +157,26 @@ class LifeTest {
             monks++
             val late = p.entries.drop(at + 1).firstOrNull { worldly.containsMatchIn(it.text.ru) }
             assertTrue("life $n took vows and then: ${late?.text?.ru}", late == null)
+            // Behind the gate the book has no dances, fairs or feasts of the village; real events still reach it.
+            val loud = p.entries.drop(at + 1).firstOrNull { it.mark == app.lot.domain.Mark.PLAIN && "рассказываешь" !in it.text.ru && village.containsMatchIn(it.text.ru) }
+            assertTrue("life $n took vows and then: ${loud?.text?.ru}", loud == null)
         }
         assertTrue(monks > 20)
+    }
+
+    /** A life whose book has been to the sea is never mourned as one that never saw it. */
+    @Test fun whoSawTheSeaIsNotSaidNeverTo() {
+        val sexes = listOf(app.lot.domain.Sex.M, app.lot.domain.Sex.F)
+        val seaside = content.lines.filter { "sea" in it.need.sets }.flatMap { l -> sexes.map { l.text.g(it).ru } }.toSet()
+        val rnd = Random(3)
+        var met = 0
+        repeat(3000) { n ->
+            val (p, _) = Life.live(content, n.toLong() * 13, null) { ch, _ -> ch.doors.indices.filter { ch.doors[it].open }.random(rnd) }
+            if (p.entries.none { it.text.ru in seaside }) return@repeat
+            met++
+            assertTrue("life $n went to the sea, and yet: ${p.end!!.epitaph.ru}", "Моря так и не" !in p.end!!.epitaph.ru)
+        }
+        assertTrue(met > 20)
     }
 
     /** Once a life has moved to town (a flat, a hostel, an apprenticeship), lines and forks about fields, harvests and rent stop. */

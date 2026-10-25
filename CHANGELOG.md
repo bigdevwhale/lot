@@ -6,6 +6,21 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.2.1] - 2026-10-25
+
+### Changed
+- A life behind the monastery gate now reads like one: 113 lines and five forks of the cloister (novices, copying, bells, meditation, plague in the house, a fugitive at the gate, a year of silence), and no more dances, weddings or village fairs. Hard times, the legacy and the last wish speak of the monastery too.
+
+### Fixed
+- A life that went to the sea (a day trip by train, fishing, a house by the shore) is no longer mourned as one that never saw it.
+- A childless death is no longer "with the children near".
+
+<!-- tg
+«Жребий» 1.2.1: жизнь в монастыре теперь монастырская — послушание, переписывание книг, колокол, медитация, беглый у ворот, обет молчания; без танцев, свадеб и ярмарок
+Кто съездил к морю, того эпитафия больше не называет не видевшим моря
+Спасибо Евгении за оба замечания
+-->
+
 ## [1.2.0] - 2026-10-25
 
 ### Added

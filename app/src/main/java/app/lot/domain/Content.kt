@@ -14,6 +14,9 @@ class Need(tokens: Collection<String>) {
     /** `+town` and the like: what a line does to the life once it is written (a line about the new flat makes the life a town life). */
     val sets = tokens.filter { it.startsWith("+") }.map { it.drop(1) }
 
+    /** True when the need names [t] itself (`monk` lines are the only ones a monk's life gets). */
+    fun names(t: String) = t in rest
+
     /** True for a need that a town life can never meet (it asks for `!town`). */
     fun holdsOnlyOutsideTown() = "!town" in rest
 

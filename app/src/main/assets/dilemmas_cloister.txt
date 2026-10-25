@@ -1,0 +1,84 @@
+# Forks for those who took vows. Id prefix k_. A monk meets only forks that need monk.
+
+id: k_copy_error
+groups: med early
+tags: *
+need: monk lit
+ages: 19-64
+weight: 1
+q: Тебе велят переписать старую книгу. В ней ошибка, и ты её видишь. | You are told to copy an old book. There is a mistake in it, and you can see it.
+door: Переписать, как велено | Copy it as you are told
+out: 70 | Ошибка переходит в новую книгу. Ты помнишь о ней до старости. | The mistake passes into the new book. You remember it into old age. |
+out: 30 | Через годы кто-то находит ошибку и в старой книге, и в твоей. | Years later someone finds the mistake in the old book and in yours. |
+door: Исправить молча | Correct it quietly
+out: 60 | Никто не замечает. Новая книга вернее старой. | Nobody notices. The new book is truer than the old. |
+out: 40 | Старшие заметили и велели переписать заново, с ошибкой. | The elders notice and have you copy it again, mistake and all. |
+ep: {Исправил|Исправила} чужую ошибку. | Corrected someone else's mistake.
+door: Сказать старшим | Tell the elders
+out: 50 | Старшие думают неделю и разрешают исправить. | The elders think it over for a week and let you correct it. | faith
+out: 50 | Тебе велят не умничать и переписывать. | You are told not to be clever and to copy. |
+ask: Где ты видишь ошибку, которую все повторяют? | Where do you see a mistake that everyone repeats?
+
+id: k_pilgrimage
+groups: med early
+tags: *
+need: monk
+ages: 19-51
+weight: 1
+q: Обитель отправляет одного в дальнее паломничество, к святым местам. Нужен тот, кто вынесет дорогу. | The monastery is sending one of its own on a long pilgrimage to the holy places. It needs someone who can bear the road.
+door: Вызваться | Volunteer
+shut: poor | Обитель обеднела, и денег на дорогу нет. | The monastery has grown poor; there is no money for the road.
+out: 50 | Год пути. Ты {видел|видела} море, чужие города и святыню, о которой читал{|а}. | A year on the road. You see the sea, strange cities and the shrine you read of. | sea moved faith
+out: 30 | Дошёл{|ла}, но на обратном пути долго болел{|а}. | You get there, but on the way back you are ill a long time. | moved risk15
+out: 20 | Из паломничества ты не вернул{ся|ась}. | You do not come back from the pilgrimage. | risk60
+ep: {Дошёл|Дошла} до святых мест. | Reached the holy places.
+door: Уступить место другому | Let another go
+out: 100 | Другой уходит. Ты ждёшь его писем и молишься за его дорогу. | The other leaves. You wait for word and pray for the road. |
+ask: Куда ты давно собираешься и всё уступаешь дорогу другим? | Where have you long meant to go, while always letting others go first?
+
+id: k_fugitive
+groups: med early
+tags: *
+need: monk
+ages: 19-64
+weight: 1
+q: Ночью в ворота стучит беглый. За ним погоня, к утру будут здесь. | At night a fugitive knocks at the gate. They are after him and will be here by morning.
+door: Спрятать | Hide him
+out: 60 | Утром погоня обыскивает двор и уходит ни с чем. Беглый уходит через неделю. | In the morning they search the yard and leave with nothing. The fugitive leaves a week later. | kind brave
+out: 40 | Его находят. Тебя секут при всей {братии|общине}. | They find him. You are flogged before the whole house. | kind brave risk10
+ep: {Спрятал|Спрятала} беглого. | Hid a fugitive.
+door: Дать хлеба и показать тропу | Give him bread and show him a path
+out: 100 | Он уходит в темноту. Ты так и не узнаешь, ушёл ли он. | He goes off into the dark. You never learn whether he got away. | kind
+door: Не открывать | Keep the gate shut
+out: 100 | Стук стихает. Утром на дороге следы коней. | The knocking stops. In the morning there are hoofprints on the road. |
+ask: Кому ты не {открыл|открыла}, когда стучали? | Whom did you not open to when they knocked?
+
+id: k_silence
+groups: med early
+tags: *
+need: monk
+ages: 27-64
+weight: 1
+q: Наставник предлагает тебе обет молчания на год. | Your teacher offers you a vow of silence for a year.
+door: Принять | Take it
+out: 70 | Год без слов. Ты слышишь то, чего раньше не {слышал|слышала}: шаги, ветер, своё сердце. | A year without words. You hear what you never heard before: footsteps, wind, your own heart. | faith
+out: 30 | К середине года ты едва не {сорвался|сорвалась}. Но {дотерпел|дотерпела}. | Halfway through you nearly break it. But you hold out. | faith
+ep: Год {молчал|молчала}. | Kept silent for a year.
+door: Отказаться | Decline
+out: 100 | Наставник кивает и больше не предлагает. | Your teacher nods and never offers again. |
+ask: Что ты {услышал|услышала} бы, если бы год молчал{|а}? | What would you hear if you kept silent for a year?
+
+id: k_leave_vows
+groups: med early
+tags: *
+need: monk
+ages: 19-39
+weight: 1
+q: Приходит весть: дома умер отец, мать одна, хозяйство гибнет. Тебя зовут вернуться в мир. | Word comes: your father has died at home, your mother is alone, the farm is going to ruin. They ask you to come back into the world.
+door: Остаться в обители | Stay in the monastery
+out: 70 | Ты {остался|осталась}. Мать прислала один раз хлеб, без письма. | You stay. Once your mother sends bread, with no letter. | faith
+out: 30 | Ты {остался|осталась} и посылаешь домой всё, что можно. Этого мало. | You stay and send home all you can. It is not enough. | kind
+door: Отпроситься домой на лето | Ask leave to go home for the summer
+shut: r0 | Тебя не отпустят. | You will not be let go.
+out: 100 | Лето в поле, как в детстве. Осенью ты возвращаешься за ворота. | A summer in the fields, as when you were small. In autumn you go back through the gate. | kind
+ask: Кого ты {оставил|оставила}, чтобы остаться верн{ым|ой} своему? | Whom did you leave behind to stay true to your own?
