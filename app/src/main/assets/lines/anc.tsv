@@ -1,0 +1,553 @@
+# group	kind	tags	ru	en	need
+anc	c		{Собирал|Собирала} колоски за жнецами. Мать тебя хвалит.	You gather the ears of grain behind the reapers. Mother praises you.	
+anc	c		{Видел|Видела} праздник бога реки: в воду бросали цветы.	You see the feast of the river god: flowers are thrown into the water.	
+anc	c		Младший брат умер от лихорадки. Ему было три года.	Your little brother dies of a fever. He was three.	
+anc	c		{Пас|Пасла} коз на склоне и {знал|знала} каждую по голосу.	You herd goats on the slope and know each one by its voice.	
+anc	c		Отец вылепил тебе глиняного бычка на колёсиках.	Father makes you a clay bull on little wheels.	
+anc	c	cn in	Весь день стоишь в воде на рисовом поле и гоняешь птиц.	All day you stand in the water of the rice field, chasing off birds.	
+anc	c	eg	Пришёл разлив, поле стало морем. Плаваешь на связке тростника.	The flood comes and the field becomes a sea. You float on a bundle of reeds.	
+anc	c	med	Смотришь, как в гавань входит корабль с пурпурным парусом.	You watch a ship with a purple sail come into the harbour.	
+anc	c	cn	Дед учит тебя кланяться табличкам предков. Ты путаешь, кто из них кто.	Grandfather teaches you to bow to the ancestor tablets. You mix up who is who.	
+anc	c	cn	Мать кормит шелкопрядов листьями шелковицы. Велят не шуметь: они пугаются.	Mother feeds the silkworms mulberry leaves. You are told to keep quiet: they take fright.	
+anc	c	cn	Сидишь на краю просяного поля с трещоткой и гоняешь воробьёв.	You sit at the edge of the millet field with a rattle, chasing sparrows.	
+anc	c	cn	Тебе сшили первую рубаху из конопли. Колется.	You get your first shirt of hemp. It itches.	
+anc	c	in	Пришли дожди. Бегаешь голышом под ливнем вместе с братьями.	The rains come. You run naked in the downpour with your brothers.	
+anc	c	in	Тебе впервые доверили корову. Ведёшь её к реке и очень гордишься.	For the first time you are trusted with the cow. You lead her to the river, very proud.	
+anc	c	in	Учитель заставляет повторять гимн, пока не скажешь его без единой ошибки.	The teacher makes you repeat the hymn until you say it without a single slip.	m r3
+anc	c	me	Лепишь из глины табличку и царапаешь её палочкой, как писец.	You shape a clay tablet and scratch it with a stick, like a scribe.	
+anc	c	me	Отец взял тебя чистить канал. Стоишь по пояс в тёплом иле.	Father takes you to clear the canal. You stand waist-deep in warm silt.	
+anc	c	me	С крыши видна ступенчатая башня храма. Ты думаешь, что наверху живёт бог.	From the roof you can see the temple's stepped tower. You think the god lives at the top.	
+anc	c	eg	Мать варит пиво из хлеба. Тебе дают облизать сладкую гущу.	Mother brews beer from bread. You are allowed to lick the sweet mash.	
+anc	c	eg	Гоняешь гусей с поля и боишься крокодила в канаве.	You chase the geese off the field and fear the crocodile in the ditch.	
+anc	c	eg	Дядя ушёл строить гробницу фараону. Вернулся с мозолями и новыми песнями.	Your uncle goes off to build the pharaoh's tomb. He comes back with calluses and new songs.	
+anc	c	med	Давишь ногами виноград в каменной давильне. Ноги потом три дня лиловые.	You tread grapes in the stone press. Your feet stay purple for three days.	
+anc	c	med	Сбиваешь палкой оливки, а младшие собирают их в корзины.	You beat the olives down with a stick while the little ones gather them into baskets.	
+anc	c	med	Ловишь осьминога у камней. Он обвивает тебе руку.	You catch an octopus by the rocks. It wraps itself round your arm.	
+anc	c	af	Помогаешь матери толочь ямс в ступе. Пест почти с тебя ростом.	You help your mother pound yams in the mortar. The pestle is nearly as tall as you.	
+anc	c	af	Сидишь у плавильной печи и смотришь, как из красного камня выходит железо.	You sit by the smelting furnace and watch iron come out of red stone.	after:-500
+anc	c	meso	Бабушка учит тебя растирать маис на камне. Пальцы ноют.	Grandmother teaches you to grind maize on the stone. Your fingers ache.	
+anc	c	meso	На празднике тебе дали глоток какао с перцем. Горько, а ты просишь ещё.	At a feast you get a sip of cacao with chilli. Bitter, and still you ask for more.	
+anc	c	andes	Пасёшь лам на склоне. Одна плюнула тебе в лицо.	You herd llamas on the slope. One spits in your face.	
+anc	c	andes	Носишь камни для новой террасы. По одному, зато весь день.	You carry stones for a new terrace. One at a time, all day long.	
+anc	c	au	Бабушка показывает, где под песком прячется вода.	Grandmother shows you where water hides under the sand.	
+anc	c	au	Учишься выкапывать ямс палкой и оставлять в земле мелкие клубни.	You learn to dig yams with a stick and leave the small ones in the ground.	
+anc	c	au	Старики поют песню о пути через эти холмы. Ты засыпаешь на середине.	The old people sing the song of the path across these hills. You fall asleep halfway.	
+anc	c		{Упал|Упала} с дерева и {сломал|сломала} руку. Знахарка привязала к ней палки.	You fall from a tree and break your arm. The healer binds sticks to it.	
+anc	c		Мать родила двойню. В доме теперь никто не спит.	Mother has twins. Now nobody in the house gets any sleep.	
+anc	c		Соседская собака пошла за тобой и осталась жить у вас.	The neighbours' dog follows you home and stays.	
+anc	c		Тебя продали вместе с матерью. Хорошо, что вместе.	You are sold together with your mother. Good that it is together.	r0
+anc	c		В мастерской отца тебе дали ком глины. Горшок вышел кривой, но его обожгли со всеми.	In your father's workshop you get a lump of clay. Your pot comes out crooked, but it is fired with the rest.	r2
+anc	c	me eg in	Ночью у загона выли шакалы. Отец не спал до рассвета.	At night jackals howl by the pen. Father stays awake till dawn.	
+anc	c		Голодной весной {ел|ела} коренья и {варил|варила} с матерью траву.	In a hungry spring you eat roots and boil grass with your mother.	
+anc	c		Всё лето {ходил|ходила} с отцом на дальнее поле. Спали под звёздами.	All summer you go with father to the far field. You sleep under the stars.	
+anc	c		Мать заплетает тебе волосы и рассказывает, как была маленькой.	Mother braids your hair and tells you about when she was little.	
+anc	y		В деревню пришёл сборщик податей с писцом. Писец пересчитал даже кур.	The tax collector comes with a scribe. The scribe counts even the hens.	
+anc	y		Впервые {увидел|увидела} город: стены выше десяти человек.	You see a city for the first time: walls taller than ten men.	
+anc	y	eg me	Разлив был хороший: год будет сытый.	The flood is good: a year of full bellies.	
+anc	y		На сезон тебя отправили на царскую стройку.	You are sent for a season to work on the king's building.	
+anc	y		На празднике тебя {заметил|заметила} кто-то из соседней деревни.	At the feast someone from the next village notices you.	
+anc	y	cn me eg med	Тебя внесли в списки и дали копьё с бронзовым наконечником.	You are put on the muster roll and given a bronze-tipped spear.	m after:-3000
+anc	y	cn	В доме господина гадатель жжёт черепаший панцирь и читает трещины. Ты {смотрел|смотрела} из-за двери.	In the lord's house the diviner scorches a turtle shell and reads the cracks. You watch from behind the door.	
+anc	y	cn	Тебя учат ткать шёлк. Нить рвётся, мать молча связывает её снова.	You are taught to weave silk. The thread breaks; mother ties it again without a word.	f
+anc	y	in	Тебя сосватали. {Невесту|Жениха} ты {видел|видела} только издали, у колодца.	You are betrothed. You have seen your {bride|groom} only from afar, at the well.	single
+anc	y	in	Тебе надели священный шнур. Теперь ты дважды рождённый.	You receive the sacred thread. Now you are twice-born.	m r3
+anc	y	in	В деревню пришёл отшельник, весь в пепле. Ты носишь ему рис.	A hermit comes to the village, covered in ash. You bring him rice.	
+anc	y	me	В школе писцов тебя бьют палкой за кривой клин.	At the scribes' school you are caned for a crooked wedge.	m r3
+anc	y	me	Отец впервые взял тебя на суд у городских ворот.	Father takes you for the first time to the court at the city gate.	m
+anc	y	eg	Ты выучил песню, под которую тянут камень. Голос у тебя громкий.	You learn the song for hauling stone. You have a loud voice.	m
+anc	y	eg	Ты научилась подводить глаза чёрной краской. Мать говорит, что это от мух.	You learn to line your eyes with black paint. Mother says it keeps the flies away.	f
+anc	y	med	Впервые вышел в море с рыбаками. Тошнило до вечера.	You go to sea with the fishermen for the first time. You are sick till evening.	m
+anc	y	med	На празднике бога вина пьяны все, даже жрец.	At the wine god's feast everyone is drunk, even the priest.	
+anc	y	med	Бежал на играх в честь бога. Пришёл третьим, венок достался другому.	You run in the games for the god. You come third; the wreath goes to another.	m
+anc	y	af	Тебя увели в лес на обряд. Назад ты приходишь со шрамами и новым именем.	You are taken into the forest for the rite. You come back with scars and a new name.	
+anc	y	af	Всю ночь {раздувал|раздувала} мехи у плавильной печи. Руки не поднимаются.	All night you work the bellows at the smelting furnace. You can't lift your arms.	after:-500
+anc	y	meso	Впервые играешь в мяч на площадке. Бедро всё в синяках.	For the first time you play the ballgame in the court. Your hip is black and blue.	m
+anc	y	meso	Жрец проколол себе язык шипом. Ты {смотрел|смотрела} и не {мог|могла} отвести глаз.	The priest pierces his tongue with a thorn. You watch and cannot look away.	
+anc	y	andes	Тебя послали на общие работы: месяц строишь дорогу в горах.	You are sent for the common labour: a month building a road in the mountains.	
+anc	y	andes	Старик показывает тебе шнурок с узелками: это, говорит, урожаи за десять лет.	An old man shows you a cord of knots: this, he says, is ten years of harvests.	
+anc	y	au	Тебе разрешили слушать песни, которые поют только мужчины.	You are allowed to hear the songs only men may sing.	m
+anc	y	au	Выследил эму и принёс мясо. У костра тебя впервые хвалят вслух.	You track an emu and bring back the meat. By the fire they praise you aloud for the first time.	m
+anc	y		Ты {влюбился|влюбилась}. Знает вся деревня, кроме {неё|него}.	You fall in love. The whole village knows, except {her|him}.	single
+anc	y		Хозяин отдал тебя в работу гончару. Глина слушается тебя лучше, чем люди.	The master hires you out to a potter. The clay obeys you better than people do.	r0
+anc	y		Отец отдал тебя в ученики к меднику. Первый месяц ты только таскаешь уголь.	Father apprentices you to a coppersmith. For the first month you only carry charcoal.	r2
+anc	y		Первый раз {напился|напилась} пива. Утром мать над тобой смеётся.	You get drunk on beer for the first time. In the morning mother laughs at you.	
+anc	y		Ты впервые сама соткала покрывало. Его отложили в приданое.	You weave a whole blanket by yourself for the first time. It is put away for your dowry.	f
+anc	a		Неурожай. Пришлось занять зерно у храма под проценты.	A bad harvest. You must borrow grain from the temple at interest.	
+anc	a		Через селение прошло войско. Забрали всё сено.	An army passes through the village. It takes all the hay.	
+anc	a		Построили новый дом из сырцового кирпича.	You build a new house of mud brick.	
+anc	a		Отдал{|а} последнюю козу за лекарство для ребёнка. Ребёнок выжил.	You give your last goat for medicine for a child. The child lives.	kids
+anc	a		Сосед продал себя в рабство за долги. Ты помнишь его лицо.	A neighbour sells himself into slavery for his debts. You remember his face.	
+anc	a		Впервые {держал|держала} в руках бронзовый нож. Он стоит дороже коровы.	For the first time you hold a bronze knife. It is worth more than a cow.	after:-3000
+anc	a	cn	Весной всей деревней чините дамбу на Жёлтой реке. Земля сыплется из корзин.	In spring the whole village mends the dyke on the Yellow River. Earth spills from the baskets.	
+anc	a	cn	Приносишь предкам просо и вино. Просишь у них сына.	You offer millet and wine to the ancestors. You ask them for a son.	married
+anc	a	cn	Пришёл указ: каждая семья даёт одного человека на стену.	An order arrives: every family gives one man for the wall.	
+anc	a	cn	Носишь траур по отцу: три года грубая одежда и никакого мяса.	You mourn your father: three years of coarse clothes and no meat.	
+anc	a	cn	Пишешь кистью на бамбуковых планках. Ошибёшься — планку скоблят ножом.	You write with a brush on bamboo slips. Make a mistake and the slip is scraped with a knife.	r3 lit
+anc	a	in	Жрец назначил свадьбу дочери по звёздам. Ждать ещё два месяца.	The priest sets your daughter's wedding by the stars. Two more months to wait.	kids
+anc	a	in	Муссон запаздывает. Каждое утро вся деревня смотрит на небо.	The monsoon is late. Every morning the whole village looks at the sky.	
+anc	a	in	Брахман пришёл петь гимны над новым домом. Ты {отдал|отдала} ему тёлку.	A Brahmin comes to chant hymns over the new house. You give him a heifer.	
+anc	a	in	Отец лепил горшки, ты лепишь горшки, и сын будет лепить. Такая у вас каста.	Father made pots, you make pots, and your son will too. That is your caste.	r2
+anc	a	in	Корова отелилась. Первое молоко отдаёшь богам.	The cow calves. The first milk goes to the gods.	
+anc	a	me	Писец храма выдаёт тебе ячмень и пиво: плата за месяц на канале.	The temple scribe hands out barley and beer: your pay for a month on the canal.	
+anc	a	me	Долг записан на табличке. Табличка лежит в храме, а ты дома не спишь.	The debt is written on a tablet. The tablet lies in the temple, and you lie awake at home.	
+anc	a	me	Новый царь простил все долги. Ты {плакал|плакала} у ворот храма.	The new king cancels all debts. You weep at the temple gate.	
+anc	a	me	Земля на поле белая от соли. Ячмень с каждым годом всё хуже.	The soil of your field is white with salt. The barley is worse every year.	
+anc	a	me	Пишешь письмо за купца. Он диктует, ты выдавливаешь клинья.	You write a letter for a merchant. He dictates; you press the wedges.	r3 lit
+anc	a	eg	После разлива землемер заново размечает поле. Ты следишь, чтобы верёвка шла ровно.	After the flood the surveyor marks out the field again. You make sure the rope runs straight.	
+anc	a	eg	Ты в артели на гробнице. Дают хлеб, лук и пиво.	You work in a gang building a tomb. They give you bread, onions and beer.	m
+anc	a	eg	Рабочим не выдали зерно. Артель бросила работу и села у храма.	The workers' grain does not come. The gang downs tools and sits down by the temple.	m
+anc	a	eg	Пересчитываешь мешки в царском амбаре. Цифры сходятся, и это главное.	You count sacks in the royal granary. The figures add up, which is what matters.	r3 lit
+anc	a	eg	Печёшь хлеб и варишь пиво на весь дом. Соседки приходят занять закваски.	You bake bread and brew beer for the whole house. The neighbour women come to borrow leaven.	f
+anc	a	med	Оливки собраны. Масло в этом году светлое и горькое, как надо.	The olives are in. This year's oil is pale and bitter, just right.	
+anc	a	med	На собрании спорят о войне. Ты голосуешь поднятой рукой.	At the assembly they argue about war. You vote with a raised hand.	m
+anc	a	med	Гребёшь на военном корабле. Ладони стёрты до мяса.	You row in a warship. Your palms are rubbed raw.	m
+anc	a	med	Финикийский купец сбил цену на твои горшки вдвое. Всё равно {продал|продала}.	A Phoenician merchant beats down the price of your pots by half. You sell anyway.	r2
+anc	a	med	Хозяин обещал отпустить тебя на волю, когда умрёт. Он здоров как бык.	Your master has promised to free you when he dies. He is as healthy as an ox.	r0
+anc	a		Кувшин масла разбился по дороге с рынка. Полдня работы в пыль.	A jar of oil breaks on the way back from market. Half a day's work into the dust.	
+anc	a	af	Расчищаешь лес под поле: рубишь, жжёшь, сажаешь ямс в золу.	You clear forest for a field: cut, burn, plant yams in the ash.	
+anc	a	af	Старейшины сели под большим деревом. Говорили до темноты, решили через месяц.	The elders sit down under the big tree. They talk till dark and decide a month later.	
+anc	a	af	Лепишь из глины голову с огромными глазами. Её поставят на алтарь.	You model a clay head with huge eyes. It will stand on the altar.	r2
+anc	a	meso	Сажаешь в одну лунку маис, бобы и тыкву. Пусть растут вместе.	You plant maize, beans and squash in one hole. Let them grow together.	
+anc	a	meso	Платишь подать хлопковыми плащами. Ткали полгода.	You pay the tribute in cotton cloaks. They took half a year to weave.	
+anc	a	meso	Меняешь на рынке перец на горсть какао-бобов. Ими можно платить.	At the market you trade chillies for a handful of cacao beans. They pass as money.	
+anc	a	andes	Стрижёшь лам. Из этой шерсти вся семья будет прясть до зимы.	You shear the llamas. The whole family will spin this wool till winter.	
+anc	a	andes	Сушишь картошку на морозе: ночью она мёрзнет, днём ты её топчешь.	You freeze-dry potatoes: by night they freeze, by day you tread them.	
+anc	a	andes	Чинишь стену террасы, которую клал ещё дед твоего деда.	You mend a terrace wall laid by your grandfather's grandfather.	
+anc	a	au	Поджигаешь сухую траву, чтобы кенгуру пришли на свежие побеги.	You set the dry grass alight so the kangaroos come to the fresh shoots.	
+anc	a	au	Ваша группа встретилась с соседями у реки. Меняетесь охрой, песнями и новостями.	Your band meets the neighbours at the river. You trade ochre, songs and news.	
+anc	a		Жена родила сына. Три дня ходишь, не чуя под собой ног.	Your wife gives birth to a son. For three days your feet hardly touch the ground.	m married
+anc	a		Родила. Повитуха говорит, что ты кричала громче всех в деревне.	You give birth. The midwife says you screamed louder than anyone in the village.	f married
+anc	a	cn in me eg med	Сын провёл свою первую борозду. Кривую. Ты молчишь.	Your son ploughs his first furrow. Crooked. You say nothing.	kids
+anc	a		Ребёнок умер, не дожив до зимы. Ты кладёшь ему в могилу бусину.	A child of yours dies before winter. You put a bead in the grave.	kids
+anc	a		{Поссорился|Поссорилась} с братом из-за поля. Год не разговариваете.	You quarrel with your brother over a field. You do not speak for a year.	
+anc	a		Тебя продали в другой дом. Новая хозяйка злее прежней.	You are sold to another house. The new mistress is crueller than the old.	r0
+anc	a		Таскаешь воду с рассвета. Хозяйские дети думают, что ты не умеешь говорить.	You haul water from dawn. The master's children think you cannot speak.	r0
+anc	a		{Устроил|Устроила} пир на сорок гостей. Певцы пели твоё имя.	You give a feast for forty guests. The singers sing your name.	r3
+anc	a	me eg	Ведёшь ослов с медью через пустыню. До города двадцать дней.	You lead donkeys loaded with copper across the desert. Twenty days to the city.	m r2
+anc	a	cn in me eg med	Бык пал. Пашете с братом, впрягшись сами.	The ox dies. You and your brother plough with yourselves in the harness.	
+anc	a		Сосед передвинул межевой камень. Ты видишь это каждое утро.	A neighbour has moved the boundary stone. You see it every morning.	
+anc	a		Лихорадка трясёт тебя неделю. Знахарка лечит горькой травой и заговором.	A fever shakes you for a week. The healer treats you with a bitter herb and a charm.	
+anc	a		Дочь {выдал|выдала} замуж в соседнюю деревню. В доме стало тихо.	You marry your daughter off into the next village. The house goes quiet.	kids
+anc	a		Чужой человек попросился на ночлег. Ты {накормил|накормила} его, а утром он ушёл.	A stranger asks to stay the night. You feed him, and in the morning he is gone.	
+anc	j		Свадьба у соседей: три дня ели мясо и плясали.	The neighbours' wedding: three days of meat and dancing.	
+anc	j		Первый раз {попробовал|попробовала} мёд с финиками.	For the first time you taste honey with dates.	
+anc	j		Сказитель на площади пел о героях. {Слушал|Слушала} до ночи.	A storyteller in the square sings of heroes. You listen till night.	
+anc	j		Урожай такой, что зерно не помещается в яму.	The harvest is so big the grain won't fit in the pit.	
+anc	j		{Выменял|Выменяла} на рынке бусы из синего камня.	At the market you trade for beads of blue stone.	
+anc	j		Вечером на крыше смотришь с детьми на звёзды.	In the evening you watch the stars from the roof with the children.	kids
+anc	j	cn	Новый год: на дверях свежие обереги из персикового дерева, в котле мясо.	New Year: fresh peach-wood charms on the doors, meat in the pot.	
+anc	j	cn	Шёлковый пояс, первый в жизни. Надеваешь его только по праздникам.	A silk sash, the first in your life. You wear it only on feast days.	
+anc	j	cn	{Выиграл|Выиграла} у соседа в кости кувшин просяного вина.	You win a jar of millet wine from a neighbour at dice.	
+anc	j	in	Первый ливень после жары. Вся деревня стоит под ним и смеётся.	The first downpour after the heat. The whole village stands in it, laughing.	
+anc	j	in	{Выменял|Выменяла} у торговца горсть перца. Еда теперь жжётся и радует.	You trade for a handful of pepper. Now the food bites, and it is a joy.	
+anc	j	me	Новый год: бога везут на лодке по реке, весь город на берегу.	New Year: the god rides a boat down the river, the whole city on the bank.	
+anc	j	me	Пьёте с друзьями пиво из одного кувшина через тростинки.	You and your friends drink beer from one jar through reed straws.	
+anc	j	me	Переписываешь сказание о Гильгамеше и смеёшься в том же месте, что и в первый раз.	You copy out the tale of Gilgamesh and laugh at the same place as the first time.	lit r3
+anc	j	eg	Праздник в долине: пьёшь у гробницы предков и поёшь им.	The Feast of the Valley: you drink at your ancestors' tomb and sing to them.	
+anc	j	eg	{Поймал|Поймала} в Ниле рыбу длиннее руки.	You catch a fish in the Nile longer than your arm.	
+anc	j	med	В театре дают комедию про богов. Хохочешь так, что икаешь до самого дома.	At the theatre they play a comedy about the gods. You laugh so hard you hiccup all the way home.	
+anc	j	med	Первая смоква с твоего дерева. Съедаешь её сам{|а}, никому не показав.	The first fig from your own tree. You eat it yourself and show no one.	
+anc	j	med	В праздник рабов сажают за стол с хозяевами. Один день как равные.	At the feast the slaves sit at table with the masters. For one day, as equals.	r0
+anc	j	af	Пляски при луне под барабаны. Пляшешь, пока ноги держат.	Dancing under the moon to the drums. You dance as long as your legs hold.	
+anc	j	af	Гриот спел о твоём роде. Теперь и твоё имя в песне.	The griot sings of your family. Now your name is in the song too.	
+anc	j	meso	На празднике тебе досталась целая лепёшка с индюшатиной.	At the feast you get a whole tortilla with turkey.	
+anc	j	andes	Праздник урожая: пьёте чичу, пока солнце не сядет за гору.	Harvest feast: you drink chicha till the sun sets behind the mountain.	
+anc	j	andes	У ламы родился белый детёныш. Все приходят посмотреть.	A llama gives birth to a white young one. Everyone comes to look.	
+anc	j	au	Поймали дюгоня. Пир на всю стоянку, пока не кончится жир.	A dugong is caught. A feast for the whole camp until the fat runs out.	
+anc	j	au	Цветёт акация. Старики говорят: пора идти к морю.	The wattle is in flower. The old people say it is time to go to the sea.	
+anc	j		Ребёнок впервые позвал тебя. Ты всё {бросил|бросила} и {побежал|побежала}.	Your child calls for you for the first time. You drop everything and run.	kids
+anc	j		Вечером сидите с {женой|мужем} у огня и молчите. Хорошо.	In the evening you sit by the fire with your {wife|husband}, saying nothing. It is good.	married
+anc	j		{Нашёл|Нашла} на берегу красивую раковину. Носишь её на шее.	You find a pretty shell on the shore. You wear it round your neck.	
+anc	j		Гости хвалят твою похлёбку и просят ещё.	The guests praise your stew and ask for more.	
+anc	j		После жатвы спишь в тени до самого вечера. Никто не будит.	After the harvest you sleep in the shade till evening. No one wakes you.	
+anc	j		Старый друг пришёл издалека, через десять лет. {Узнал|Узнала} его по смеху.	An old friend comes from far away after ten years. You know him by his laugh.	
+anc	j		Хозяин уехал на неделю. Можно спать до восхода.	The master is away for a week. You can sleep till sunrise.	r0
+anc	j		Твою работу купил человек из далёкого города. Заплатил не торгуясь.	A man from a far city buys your work. He pays without haggling.	r2
+anc	j	cn in me eg med	Ласточки вернулись под крышу. Год будет добрый.	The swallows are back under the roof. It will be a good year.	
+anc	j		Тихий вечер: все сыты, никто не болен.	A quiet evening: everyone fed, nobody ill.	
+anc	o		Внуки бегают по двору. Ты рассказываешь им про год, когда река не пришла.	The grandchildren run about the yard. You tell them of the year the river did not come.	kids
+anc	o		Колени болят. Сидишь у порога и плетёшь корзины.	Your knees ache. You sit at the door weaving baskets.	
+anc	o		Тебя зовут рассудить спор о меже: ты помнишь, где она была.	They call you to settle a quarrel over a boundary: you remember where it was.	
+anc	o		Ты {пережил|пережила} трёх царей и ни одного не {видел|видела}.	You outlive three kings and never see one of them.	
+anc	o		Собираешь себе в последний путь: горшок, гребень, немного зерна.	You gather things for your last journey: a pot, a comb, a little grain.	
+anc	o	cn	Сын уже заказал тебе гроб. По обычаю это почёт.	Your son has already had a coffin made for you. By custom it is an honour.	kids
+anc	o	cn	На Новый год внуки кланяются тебе. Ты раздаёшь им сушёный унаби.	At New Year the grandchildren bow to you. You hand out dried jujubes.	kids
+anc	o	in	Старые законы велят уйти в лес и жить отшельником. Но жалко внуков.	The old laws say to go to the forest and live as a hermit. But you would miss the grandchildren.	kids
+anc	o	in	Просишь, чтобы прах опустили в реку. Сын кивает.	You ask for your ashes to be given to the river. Your son nods.	kids
+anc	o	me	Диктуешь писцу, кому что оставить. Он берёт за это овцу.	You dictate to a scribe who gets what after you. He charges a sheep for it.	
+anc	o	me	Река ушла в сторону. В детстве деревня стояла у воды, теперь кругом пыль.	The river has moved away. In your childhood the village stood by the water; now there is dust all round.	
+anc	o	eg	Всю жизнь {копил|копила} на гроб. Теперь он стоит у стены, расписной.	All your life you saved for a coffin. Now it stands against the wall, painted.	
+anc	o	eg	Видишь пятидесятый разлив. Помнишь каждый плохой.	You see your fiftieth flood. You remember every bad one.	
+anc	o	med	Сидишь на скамье у пристани и по парусу узнаёшь, чей корабль.	You sit on the bench by the quay and know by the sail whose ship it is.	
+anc	o	med	Оливу ты {посадил|посадила} в молодости. Теперь с неё собирают внуки.	You planted the olive tree when you were young. Now your grandchildren pick it.	kids
+anc	o	af	Ты старше всех в деревне. Молодые приходят за советом и несут пиво.	You are the oldest in the village. The young come for advice and bring beer.	
+anc	o	meso	Тебе пятьдесят два года, круг замкнулся. Новый огонь зажгли и для тебя.	You are fifty-two: the circle is closed. The new fire is lit for you too.	
+anc	o	andes	Просишь похоронить тебя в пещере над полями, откуда видна вся долина.	You ask to be buried in the cave above the fields, where the whole valley can be seen.	
+anc	o	au	Ты знаешь песню всей дороги до моря. Учишь ей внука, по строчке в день.	You know the song of the whole way to the sea. You teach it to your grandson, a line a day.	kids
+anc	o	in me eg med	Зубов почти не осталось. Хлеб тебе размачивают в молоке.	Hardly a tooth left. They soak your bread in milk.	
+anc	o		Глаза почти не видят. Узнаёшь людей по шагам.	Your eyes are nearly gone. You know people by their steps.	
+anc	o		Ты {пережил|пережила} всех, с кем {играл|играла} в детстве.	You have outlived everyone you played with as a child.	
+anc	o		{Жена умерла|Муж умер} весной. Ты всё ещё ставишь на стол две миски.	Your {wife|husband} died in spring. You still set two bowls on the table.	married
+anc	o		Мясо тебе подают {первому|первой}. Так здесь чтут стариков.	You are served the meat first. That is how the old are honoured here.	
+anc	o		Хозяин отпустил тебя: старый раб ему не нужен. Идти некуда.	Your master sets you free: an old slave is no use to him. You have nowhere to go.	r0
+anc	o		Руки трясутся, работать не можешь. Сидишь в мастерской и ворчишь на учеников.	Your hands shake and you can't work. You sit in the workshop grumbling at the apprentices.	r2
+anc	o	me eg	Велишь высечь на камне свои дела. Половину резчик приукрашивает сам.	You have your deeds carved in stone. Half of it the carver embellishes himself.	r3
+anc	o		Правнук сидит у тебя на коленях. Никак не вспомнишь, как его зовут.	A great-grandchild sits on your knee. You cannot remember his name.	kids
+anc	o		Ночами мёрзнешь даже под двумя шкурами. Спишь у самого очага.	At night you are cold even under two hides. You sleep right by the hearth.	
+anc	o		Каждое утро выходишь посмотреть на поле. Работают на нём уже другие.	Every morning you go out to look at the field. Others work it now.	
+anc	o		Соседи приходят послушать, как было раньше. Ты немного привираешь.	The neighbours come to hear how things used to be. You fib a little.	
+anc	x		Война между царями: деревню сожгли.	War between kings: the village is burned.	
+anc	x		Засуха третий год подряд.	Drought, the third year in a row.	
+anc	x		Саранча съела всё за один день.	Locusts eat everything in one day.	
+anc	x		Мор. Мёртвых не успевают хоронить.	Plague. There is no time to bury the dead.	
+anc	x	cn	Жёлтая река прорвала дамбы. Вода стоит там, где было село.	The Yellow River breaks its dykes. Water stands where the village was.	
+anc	x	in	Муссон не пришёл. Колодцы пересохли, коровы падают.	The monsoon fails. The wells run dry and the cows drop.	
+anc	x	me	Горцы спустились в долину и разорили город. Храм горит.	Hill tribes come down and sack the city. The temple is burning.	
+anc	x	me	Царь угоняет людей в свою землю. Твою деревню целиком.	The king drives whole peoples off to his own land. Your village goes, every soul.	
+anc	x	eg	Разлив слишком низкий. Зерна не хватит до следующего.	The flood is too low. The grain will not last until the next one.	
+anc	x	med	Ночью высадились пираты. Утром недосчитались детей.	Pirates land in the night. In the morning children are missing.	
+anc	x	meso	Дожди не пришли. Жрецы говорят, что боги хотят крови.	The rains do not come. The priests say the gods want blood.	
+anc	x	andes	Земля тряслась. Террасы съехали в реку вместе с урожаем.	The earth shook. The terraces slid into the river with the harvest.	
+anc	x	au	Огонь пошёл не туда, куда его вели. Горит всё до горизонта.	The fire goes where it was not led. Everything is burning to the horizon.	
+anc	x	af	Скот болеет от лесной мухи. Стадо тает на глазах.	The forest fly sickens the cattle. The herd melts away before your eyes.	
+anc	x		Хозяин разгневался и велел тебя бить. Спина не заживает месяц.	Your master is angry and has you beaten. Your back does not heal for a month.	r0
+anc	x	cn in me eg med af	Падёж скота. Через месяц загон пуст.	The cattle die. A month later the pen is empty.	
+anc	c		Старшая сестра носит тебя на спине, пока мать работает.	Your big sister carries you on her back while mother works.	
+anc	c		Ночью гроза. Ты {залез|залезла} к матери под бок и {считал|считала} раскаты.	A storm in the night. You crawl in beside mother and count the thunderclaps.	
+anc	c		Впервые идёшь за водой без взрослых. {Донёс|Донесла} половину, зато сам{|а}.	For the first time you fetch water without a grown-up. You bring back half, but on your own.	
+anc	c		Дети играют в похороны: хоронят жука и плачут понарошку.	The children play at funerals: they bury a beetle and weep for show.	
+anc	c		Выпал первый зуб. Бабушка велит бросить его через плечо и не оглядываться.	Your first tooth falls out. Grandmother tells you to throw it over your shoulder and not look back.	
+anc	c		Дед вырезал тебе свистульку из тростника. Свистишь, пока не прогонят.	Grandfather cuts you a reed whistle. You whistle until they chase you off.	
+anc	c		Все думают, что ты спишь. А ты слушаешь, как взрослые говорят о тебе.	Everyone thinks you are asleep. You lie listening to the grown-ups talk about you.	
+anc	c		{Обжёгся|Обожглась} у очага. Мать мажет ожог жиром и ругает тебя.	You burn yourself at the hearth. Mother smears fat on the burn and scolds you.	
+anc	c		Тебе дали подержать новорождённого брата. Он сжал твой палец и не отпускает.	You are given your newborn brother to hold. He grips your finger and won't let go.	
+anc	c		Ты {потерялся|потерялась} и до темноты {сидел|сидела} под кустом. Нашла тебя собака.	You get lost and sit under a bush till dark. It is the dog that finds you.	
+anc	c		Пчела ужалила тебя в губу. Губу раздуло, смеётся даже мать.	A bee stings your lip. It swells up, and even mother laughs.	
+anc	c		Лепишь из грязи человечков и даёшь им имена соседей.	You make little people out of mud and give them the neighbours' names.	
+anc	c		Взрослые делят мясо. Ты стоишь рядом и ждёшь, когда тебе дадут кость.	The grown-ups share out the meat. You stand by, waiting to be given a bone.	
+anc	c		Старшие не берут тебя в игру. Ты {кидал|кидала} в них камешки из кустов.	The big ones won't let you play. You throw pebbles at them from the bushes.	
+anc	c		Дед ночью показывает тебе звёзды и говорит, как зовут каждую.	At night grandfather shows you the stars and tells you each one's name.	
+anc	c	cn in me eg med af meso andes	Тебе дали свою грядку. Каждое утро бегаешь смотреть, не взошло ли.	You are given your own patch. Every morning you run to see if anything has come up.	
+anc	c	cn in me eg med af meso andes	Носишь жнецам воду. Кувшин тяжёлый, но ты ни разу его не {уронил|уронила}.	You carry water to the reapers. The jar is heavy, but you never once drop it.	
+anc	c	cn in me eg med af	Козлёнок родился слабым. Ты {держал|держала} его у огня и {поил|поила} молоком с пальца.	A kid is born weak. You keep it by the fire and feed it milk from your finger.	
+anc	c	cn in me eg med af	Отец посадил тебя на спину быка. Высоко и страшно, и слезать не хочется.	Father sets you on the ox's back. It is high and frightening, and you don't want to get down.	
+anc	c	af	Ловишь термитов, когда они вылетают после дождя. Мать жарит их на черепке.	You catch termites as they swarm after the rain. Mother roasts them on a potsherd.	
+anc	c	af	Сидишь на дереве у поля и кидаешь комья в обезьян, которые лезут к сорго.	You sit in a tree by the field, throwing clods at the monkeys after the sorghum.	
+anc	c	af	Сестра сделала тебе куклу из тыквы-горлянки и обмотала её бусами.	Your sister makes you a doll from a gourd and winds beads round it.	
+anc	c	af	Учишься носить на голове кувшин с водой. Первый разбился у самого дома.	You learn to carry a water jar on your head. The first one breaks right by the house.	
+anc	c	af	Вечером бабушка рассказывает про паука-хитреца. Тебе страшно, и ты просишь ещё.	In the evening grandmother tells of the trickster spider. You are scared and beg for more.	
+anc	c	af	Гонишь коров на водопой. Самая старая корова знает дорогу лучше тебя.	You drive the cows to water. The oldest cow knows the way better than you.	
+anc	c	meso	Младшему брату привязали к голове дощечки, чтобы лоб стал красивым.	Boards are tied to your little brother's head so his forehead grows handsome.	
+anc	c	meso	Отец учит тебя трубить в раковину, как на празднике. Выходит только хрип.	Father teaches you to blow the conch shell as at the feast. All that comes out is a wheeze.	
+anc	c	meso	Помогаешь матери варить маис с известью. Руки потом щиплет.	You help mother boil maize with lime. Afterwards your hands sting.	
+anc	c	meso	Сидишь в шалаше на краю маисового поля и гоняешь енотов.	You sit in a shelter at the edge of the maize field, chasing off raccoons.	
+anc	c	meso	Дед показывает на Плеяды: когда они уходят, пора сеять.	Grandfather points at the Pleiades: when they go, it is time to sow.	
+anc	c	andes	Мать полет поле, а ты сидишь у неё на спине в платке и смотришь на мир через её плечо.	Mother weeds the field with you tied on her back in a shawl. You see the world over her shoulder.	
+anc	c	andes	Морские свинки бегают по кухне и пищат. Ты даёшь каждой имя, хотя их едят.	Guinea pigs run squeaking round the kitchen. You name every one, though they get eaten.	
+anc	c	andes	Носишь отцу в поле жареную кукурузу в узелке.	You carry toasted maize in a bundle to father in the field.	
+anc	c	andes	Ночью холодно до звона. Спишь между братьями под шерстяным одеялом.	The night is bitterly cold. You sleep between your brothers under a wool blanket.	
+anc	c	andes	Ветер с ледника сорвал с тебя шапку. Ты бежишь за ней вниз по склону.	The wind off the glacier snatches your cap. You run after it down the slope.	
+anc	c	au	Учишься ловить ящериц руками. Первую ты {отпустил|отпустила}: жалко.	You learn to catch lizards with your hands. The first one you let go: you feel sorry for it.	
+anc	c	au	Бабушка печёт черепаху прямо в панцире. Ты сидишь рядом и ждёшь.	Grandmother roasts a turtle in its shell. You sit beside her and wait.	
+anc	c	au	Ныряешь с матерью за ракушками. Набираешь полную сумку из коры.	You dive for shellfish with your mother and fill a bark bag.	
+anc	c	au	Тебя учат читать следы. По отпечатку в песке ты уже знаешь, чей он.	You are taught to read tracks. You can tell from a print in the sand whose it is.	
+anc	c	in	Мажешь с матерью пол коровьим навозом. Он сохнет и пахнет травой.	You and mother smear the floor with cow dung. It dries and smells of grass.	
+anc	c	in	Дед обвязывает тебе запястье ниткой от сглаза.	Grandfather ties a thread round your wrist against the evil eye.	
+anc	c	in	Через деревню прошёл слон. Дети бежали за ним до самой реки.	An elephant walks through the village. The children run after it all the way to the river.	
+anc	c	me	Отец лезет на финиковую пальму опылять её. Ты держишь внизу верёвку.	Father climbs the date palm to pollinate it. You hold the rope below.	
+anc	c	me	Летом спишь во дворе под навесом. Ночью рядом вздыхает осёл.	In summer you sleep in the yard under an awning. At night the donkey sighs beside you.	
+anc	c	med	Играешь в бабки овечьими косточками. {Выиграл|Выиграла} у старшего брата.	You play knucklebones with sheep's ankle bones. You beat your big brother.	
+anc	c	med	После дождя собираешь улиток к ужину.	After the rain you gather snails for supper.	
+anc	c	med	По жаре носишь отцу воду на виноградник.	In the heat you carry water to father in the vineyard.	
+anc	c	cn	Ловишь цикад и держишь их в клетке из соломы.	You catch cicadas and keep them in a straw cage.	
+anc	c	cn	Сидишь на буйволе, пока отец пашет. Буйвол медленный, а ты как князь.	You sit on the buffalo while father ploughs. The buffalo is slow, and you feel like a prince.	
+anc	c	eg	Тебе обрили голову и оставили одну прядь сбоку. Так ходят все дети.	Your head is shaved but for one lock at the side. All the children wear it so.	
+anc	c		Тебе пять лет, и ты уже носишь воду хозяйским детям.	You are five and already carry water for the master's children.	r0
+anc	c		Хозяйские дети играют с тобой, пока никто не видит.	The master's children play with you when no one is looking.	r0
+anc	c		Отец даёт тебе раздувать мехи. Искры летят, а ты смеёшься.	Father lets you work the bellows. Sparks fly and you laugh.	r2 after:-3000
+anc	c	med	Тебя водят в школу с рабом-провожатым. Учитель бьёт за ошибки в счёте.	A slave walks you to school. The teacher beats you for mistakes in sums.	m r3 after:-500
+anc	c	in	Монах в жёлтом погладил тебя по голове и пошёл дальше с пустой чашей.	A monk in yellow pats your head and walks on with his empty bowl.	after:-450
+anc	y		Тебя впервые посадили со взрослыми, когда решают дела. Молчать трудно.	For the first time you sit with the grown-ups while they settle matters. Keeping quiet is hard.	
+anc	y		Ночью {сбежал|сбежала} с друзьями купаться. Утром все сонные и врут одно и то же.	At night you slip off with friends to swim. In the morning you are all sleepy and tell the same lie.	
+anc	y		Старуха бросила для тебя камешки и говорит: проживёшь долго.	An old woman casts pebbles for you and says you will live long.	
+anc	y		Весь день {просидел|просидела} у реки, чтобы будто случайно встретить {её|его}.	You spend all day by the river, to meet {her|him} as if by chance.	
+anc	y		{Подрался с лучшим другом|Подралась с лучшей подругой}. К вечеру помирились.	You fight with your best friend. By evening you have made it up.	
+anc	y		Ты впервые {ушёл|ушла} так далеко, что не видно своих холмов.	For the first time you go so far that your own hills are out of sight.	
+anc	y		Тебе доверили нести огонь на новое место. Угли в горшке, ронять нельзя.	You are trusted to carry the fire to the new place. Embers in a pot, not to be dropped.	
+anc	y		Тебя впервые позвали плясать со взрослыми. Ноги путаются, но никто не смеётся.	For the first time you are called to dance with the grown-ups. Your feet tangle, but nobody laughs.	
+anc	y		Умер дед. Тебя впервые поставили рядом со взрослыми у могилы.	Grandfather dies. For the first time you stand with the grown-ups at the grave.	
+anc	y	cn in me eg med af	Впервые жнёшь наравне со взрослыми. К вечеру спина не разгибается.	For the first time you reap alongside the grown-ups. By evening your back won't straighten.	
+anc	y	cn in me eg med af	Тебе доверили стадо на всё лето. Ночуешь в шалаше на пастбище.	You are trusted with the herd for the whole summer. You sleep in a hut on the pasture.	
+anc	y	cn in me eg med af meso andes	Торговец обсчитал отца. Ты {заметил|заметила} и {промолчал|промолчала}.	A trader cheats your father in the sums. You notice and say nothing.	
+anc	y	cn	На весеннем празднике у реки парни и девушки поют друг другу песни. Ты {отвечал|отвечала} громче всех.	At the spring feast by the river boys and girls sing songs to each other. You answer loudest of all.	
+anc	y	cn	Тебя забрали на общие работы: месяц трамбуешь землю для стены уезда.	You are taken for common labour: a month ramming earth for the county wall.	
+anc	y	cn	Ночью встаёшь кормить шелкопрядов. Они жуют так громко, будто идёт дождь.	At night you get up to feed the silkworms. They chew so loudly it sounds like rain.	
+anc	y	cn	После жатвы ты впервые пьёшь с мужчинами просяное вино. Домой тебя несут.	After the harvest you drink millet wine with the men for the first time. They carry you home.	m
+anc	y	cn	Тебе закололи волосы шпилькой. Теперь ты невеста.	Your hair is pinned up. Now you are of an age to marry.	f
+anc	y	cn	Сосед вернулся с войны. Хвалится, что за отрезанные уши врагов дают землю.	A neighbour comes back from the war. He boasts that land is given for enemies' ears.	after:-350
+anc	y	in	Учишься доить так, чтобы телёнку тоже осталось.	You learn to milk so that something is left for the calf.	
+anc	y	in	Мальчишки поймали кобру в корзину. Ты {держал|держала} крышку.	The boys catch a cobra in a basket. You hold the lid.	
+anc	y	in	Бродячий певец поёт о войне двух родов. Ты {запомнил|запомнила} целую песню.	A wandering singer sings of the war between two clans. You learn a whole song by heart.	
+anc	y	in	В сезон дождей пасёшь коров в лесу. Пиявки, гром и никого из взрослых.	In the rains you graze the cows in the forest. Leeches, thunder and no grown-ups.	
+anc	y	me	Тебя учат печь лепёшки на стенке глиняной печи. Пальцы в ожогах.	You are taught to bake flatbread on the wall of the clay oven. Your fingers are burnt.	
+anc	y	me	В богатом доме играют на лире с бычьей головой. Ты {слушал|слушала} у ворот.	In a rich house they play a lyre with a bull's head. You listen at the gate.	
+anc	y	me	С гор спустились пастухи с овцами. Ты {выменял|выменяла} у них сыр на финики.	Shepherds come down from the hills with their flocks. You trade them dates for cheese.	
+anc	y	me	Отец учит тебя по запаху ветра узнавать, будет ли пыльная буря.	Father teaches you to tell from the smell of the wind whether a dust storm is coming.	
+anc	y	eg	Впервые {плыл|плыла} на лодке на большой рынок. Туда несло течение, назад гнал ветер.	For the first time you take a boat to the big market. The current carries you there, the wind brings you back.	
+anc	y	eg	Месишь ногами глину для кирпичей. К вечеру ты по пояс в грязи.	You tread clay for bricks. By evening you are mud to the waist.	
+anc	y	med	Бабушка учит тебя прясть. Нить у тебя тонкая, и она довольна.	Grandmother teaches you to spin. Your thread is fine, and she is pleased.	
+anc	y	med	Брат нанялся гребцом на корабль за море. Ты долго {стоял|стояла} на берегу.	Your brother signs on as an oarsman on a ship overseas. You stand on the shore a long time.	
+anc	y	med	Ночью стережёшь виноградник от лис. В деревне лают собаки.	At night you guard the vineyard from foxes. Dogs bark down in the village.	
+anc	y	med	На празднике ты впервые {пел|пела} в хоре для богини. Сердце колотится.	At the feast you sing in the chorus for the goddess for the first time. Your heart is pounding.	
+anc	y	med	Отец учит тебя ставить сети на тунца.	Father teaches you to set the nets for tuna.	
+anc	y	af	Толчёте просо вдвоём в одной ступе, по очереди, под песню.	Two of you pound millet in one mortar, taking turns, to a song.	
+anc	y	af	Купцы с севера привели ослов с солью. Ты впервые {видел|видела} соль плитами.	Traders from the north bring donkeys loaded with salt. For the first time you see salt in slabs.	
+anc	y	af	В соседнем роду тебе показали {девушку|юношу}. Теперь ваши отцы считают коров.	In the next clan you are shown a {girl|young man}. Now your fathers are counting cows.	
+anc	y	af	Вечером юноши борются на песке у деревни. Ты {кричал|кричала} громче всех.	In the evening the young men wrestle on the sand by the village. You shout loudest of all.	
+anc	y	af	Пасёшь скот с другими юношами на дальнем пастбище. Пьёте молоко с кровью.	You herd cattle with the other youths on the far pasture. You drink milk mixed with blood.	m
+anc	y	meso andes	Тебя учат ткать на поясном станке: один конец привязан к дереву, другой к тебе.	You learn to weave on the backstrap loom: one end tied to a tree, the other to you.	
+anc	y	meso	Впервые {пошёл|пошла} с отцом на большой рынок. Там продают обсидиан, перья и собак.	For the first time you go with father to the big market. They sell obsidian, feathers and dogs.	
+anc	y	meso	Ночью пьёте с парнями перебродивший сок агавы. Узнают старики — будет беда.	At night you drink fermented agave sap with the lads. If the old men find out, there will be trouble.	
+anc	y	meso	Жрец посмотрел твой день по священному счёту. Говорит, ты {рождён|рождена} для торговли.	The priest looks up your day in the sacred count. He says you were born for trade.	
+anc	y	andes	Впервые {спустился|спустилась} с ламами в тёплые долины. Там растут перец и кока.	For the first time you go down with the llamas to the warm valleys. Chillies and coca grow there.	
+anc	y	andes	Впервые жуёшь листья коки со взрослыми. Щека немеет.	For the first time you chew coca leaves with the grown-ups. Your cheek goes numb.	
+anc	y	andes	На празднике тебе впервые дали маску и место в хороводе.	At the feast you are given a mask and a place in the round dance for the first time.	
+anc	y	au	Тебе нанесли на тело первые узоры охрой и белой глиной.	Your body is painted for the first time in ochre and white clay.	
+anc	y	au	Ты {ушёл|ушла} с родней в горы, где созрели орехи. Там сотни людей и много песен.	You go with your kin to the hills where the nuts are ripe. Hundreds of people and many songs.	
+anc	y	au	Старики показали тебе, где ходить можно, а где нельзя: там спят предки.	The old people show you where you may walk and where not: there the ancestors sleep.	
+anc	y	au	Учишься бить рыбу острогой с лодки из коры.	You learn to spear fish from a bark canoe.	
+anc	y	au	Плетёшь сумку из травы. Узор выходит такой же, как у бабушки.	You weave a grass bag. The pattern comes out just like grandmother's.	
+anc	y		Хозяин продал твою сестру. Ты не {успел|успела} попрощаться.	The master sells your sister. You have no time to say goodbye.	r0
+anc	y		Тебя впервые позвали шить с женщинами. Сплетни интереснее шитья.	For the first time you are asked to sew with the women. The gossip is better than the sewing.	f
+anc	y	cn	Учитель велел написать знак сто раз. Кисть дрожит.	The teacher tells you to write the character a hundred times. The brush trembles.	lit r3
+anc	a		Ты {сложил|сложила} новый очаг. Первый огонь в нём {зажёг|зажгла} от старого.	You build a new hearth. The first fire in it you light from the old one.	
+anc	a		Брат ушёл в чужие края. Каждую весну ты ждёшь вестей.	Your brother has gone to foreign parts. Every spring you wait for news.	
+anc	a		Зуб ныл всю зиму. Весной он выпал сам, и ты {проспал|проспала} целую ночь.	A tooth aches all winter. In spring it falls out by itself, and you sleep a whole night through.	
+anc	a		Кто-то таскает ваши запасы. Ты {просидел|просидела} в засаде до рассвета.	Someone is stealing your stores. You lie in wait till dawn.	
+anc	a		Жена брата умерла родами. Её ребёнка ты берёшь в свой дом.	Your brother's wife dies in childbirth. You take her baby into your home.	
+anc	a		Старик-сосед учит тебя заговору от змей. Ты не веришь, но запоминаешь.	An old neighbour teaches you a charm against snakes. You don't believe it, but you learn it.	
+anc	a		{Повредил|Повредила} ногу. Всю весну работу за тебя делают родные, и ты злишься.	You hurt your leg. All spring your family does your work, and it makes you angry.	
+anc	a		{Нашёл|Нашла} в старой яме чужие кости и {закопал|закопала} их обратно.	You find a stranger's bones in an old pit and bury them again.	
+anc	a		Умер твой лучший друг. Ты долго не можешь есть.	Your best friend dies. For a long time you cannot eat.	
+anc	a		Теперь на сходе тебя слушают. Говоришь мало, и от этого слушают ещё внимательней.	Now they listen to you at the gathering. You say little, and so they listen harder.	
+anc	a		Ты с {женой|мужем} в ссоре третий день. Помирились за общей миской.	You and your {wife|husband} have quarrelled for three days. You make it up over a shared bowl.	married
+anc	a	cn in me eg med af meso andes	Сеешь и смотришь на небо: не рано ли. Сосед посеял ещё вчера.	You sow and look at the sky: is it too early? Your neighbour sowed yesterday.	
+anc	a	cn in me eg med af meso andes	Мыши добрались до зерна в яме. Половину пришлось выбросить.	Mice get into the grain pit. Half has to be thrown away.	
+anc	a	cn in me eg med af meso andes	Пришли люди господина и забрали десятую часть урожая. Потом пришли ещё раз.	The lord's men come and take a tenth of the harvest. Then they come again.	
+anc	a	cn in me eg med af meso andes	Град побил поле за одну грозу. Осталась одна солома.	Hail flattens the field in a single storm. Only straw is left.	
+anc	a	cn in me eg med af meso andes	С рассвета мелешь зерно на каменной зернотёрке. Поёшь одну и ту же песню, чтобы не уснуть.	From dawn you grind grain on the stone quern. You sing the same song over so as not to fall asleep.	
+anc	a	cn in med af meso	{Расчистил|Расчистила} новое поле у леса. Ночами туда ходят дикие свиньи.	You clear a new field by the forest. At night wild pigs come into it.	
+anc	a	in me eg med af	{Купил|Купила} осла. Он упрямый, но таскает вдвое больше тебя.	You buy a donkey. He is stubborn, but carries twice what you can.	
+anc	a	cn in me med	Волк унёс козу из загона. Теперь ночуешь у загона с собакой.	A wolf takes a goat from the pen. Now you sleep by the pen with the dog.	
+anc	a	cn in me eg med	Пашешь деревянной сохой. Бык упрямится на каждом повороте.	You plough with a wooden ard. The ox balks at every turn.	
+anc	a	cn	Варишь просяную кашу в треногом горшке. Дым ест глаза.	You cook millet porridge in the three-legged pot. The smoke stings your eyes.	
+anc	a	cn	Весь день в залитом поле. Пиявки висят на ногах, как бусы.	All day in the flooded field. Leeches hang on your legs like beads.	
+anc	a	cn	Свинья принесла десять поросят. Спишь у хлева, чтобы она их не задавила.	The sow has ten piglets. You sleep by the sty so she doesn't crush them.	
+anc	a	cn	По дороге прошли барабаны и знамёна: князь идёт на князя. Ваших парней забрали в обоз.	Drums and banners pass along the road: lord marches on lord. Your lads are taken for the baggage train.	
+anc	a	cn	Копаешь новую пещеру в лёссовом обрыве. Зимой в ней тепло.	You dig a new cave home into the loess cliff. It is warm in winter.	
+anc	a	cn	Квасишь овощи на зиму в глиняном чане.	You pickle vegetables for winter in a clay vat.	
+anc	a	cn	Платишь подать коноплёй и шёлком. Мотки пересчитывают дважды.	You pay the tax in hemp and silk. The skeins are counted twice.	
+anc	a	cn	Поле разделено на девять частей, как знак колодца. Среднюю пашете все вместе для господина.	The land is split in nine like the sign for a well. The middle part you all plough together for the lord.	after:-1000 before:-350
+anc	a	cn	Отливаешь бронзовый сосуд в глиняной форме. Треснет — месяц работы зря.	You cast a bronze vessel in a clay mould. If it cracks, a month's work is lost.	r2 after:-1600
+anc	a	cn	Медные монеты с дыркой нанизаны на верёвку. Ты {продал|продала} свинью за целую связку.	Copper coins with a hole are strung on a cord. You sell a pig for a whole string.	after:-350
+anc	a	cn	Мотыга теперь железная, казённой работы. Земля поддаётся легче.	Your hoe is iron now, made in the state workshops. The soil gives more easily.	after:-400
+anc	a	cn	Новый указ: меры и знаки по всей стране одни. Ты учишь письмо заново.	A new decree: one set of measures and characters for the whole land. You learn to write all over again.	lit r3 after:-221
+anc	a	in	Поишь быков у пруда, пока не спадёт жара. Сам{|а} сидишь в воде по шею.	You water the oxen at the pond until the heat breaks. You sit in the water up to your neck.	
+anc	a	in	Брахман сказал: сегодня сеять нельзя, звёзды плохие. Сосед посеял, и ничего.	The Brahmin says today is bad for sowing, the stars are wrong. Your neighbour sows anyway, and nothing happens.	
+anc	a	in	Сезон дождей: одежда не сохнет, змеи заползают в дом от воды.	The rainy season: clothes never dry, and snakes come into the house to escape the water.	
+anc	a	in	Варишь в котле сок сахарного тростника. Пахнет на всю деревню, дети не отходят.	You boil sugar-cane juice in a cauldron. The whole village smells of it, and the children won't leave.	
+anc	a	in	Прядёшь хлопок так тонко, что нить почти не видна.	You spin cotton so fine the thread can hardly be seen.	
+anc	a	in	Обезьяны таскают с крыши сушёный перец. Ты гоняешь их палкой.	Monkeys steal the dried chillies off the roof. You chase them with a stick.	
+anc	a	in	Слон господина пасётся на твоём поле. Прогнать его нельзя.	The lord's elephant is grazing in your field. You may not drive it off.	
+anc	a	in	Монах в жёлтом остановился у дома. Ты {положил|положила} ему в чашу риса, и он ушёл молча.	A monk in yellow stops at your house. You put rice in his bowl and he leaves without a word.	after:-450
+anc	a	in	У дороги на камне высекли указ царя: не убивать животных зря. Тебе его прочли вслух.	The king's edict is carved on a stone by the road: do not kill animals needlessly. Someone reads it aloud to you.	after:-260
+anc	a	me	Пускаешь воду на поле через канавку и заваливаешь её землёй, когда хватит.	You let water into the field through a channel and block it with earth when there is enough.	
+anc	a	me	Стрижёшь храмовых овец. Шерсть идёт в мастерскую, тебе дают ячмень.	You shear the temple sheep. The wool goes to the workshop, you get barley.	
+anc	a	me	Летом вся семья спит на крыше. Ночью слышно, как храпит сосед через двор.	In summer the whole family sleeps on the roof. At night you can hear the neighbour snoring across the yard.	
+anc	a	me	Финики собрали. Нанизываешь их на нитки и вешаешь сушиться.	The dates are in. You string them up to dry.	
+anc	a	me	Пыльная буря три дня. Песок в хлебе, в постели, на зубах.	A dust storm for three days. Sand in the bread, in the bed, between your teeth.	
+anc	a	me	Ты {поклялся|поклялась} богом в суде, что не {брал|брала} овцу. Судья поверил.	You swear by the god in court that you did not take the sheep. The judge believes you.	
+anc	a	me eg	Весь день черпаешь воду журавлём и льёшь в канавку на огород.	All day you lift water with the swing-beam and pour it into the channel for the garden.	
+anc	a	me	Прокатываешь печать по сырой глине: под договором стоит твой знак.	You roll your seal across the wet clay: your mark stands under the contract.	r2 r3
+anc	a	me	Ткёшь в храмовой мастерской. Надсмотрщица пересчитывает нити.	You weave in the temple workshop. The overseer counts the threads.	f r0
+anc	a	me med	В город пришли монеты. Торговцы пробуют их на зуб.	Coins come to town. The traders test them with their teeth.	after:-600
+anc	a	me	По царской дороге мимо деревни скачут гонцы на сменных конях.	Along the royal road, messengers gallop past the village on fresh horses.	after:-520
+anc	a	me	С караваном пришли верблюды. Дети прячутся за стену и смотрят.	Camels come with the caravan. The children hide behind the wall and stare.	after:-1000
+anc	a	me med	Кузнец выковал тебе железный серп. Он режет лучше бронзового и стоит дешевле.	The smith forges you an iron sickle. It cuts better than bronze and costs less.	after:-1000
+anc	a	eg	Ловишь рыбу с папирусной лодки. Крокодил смотрит на тебя из воды.	You fish from a papyrus boat. A crocodile watches you from the water.	
+anc	a	eg	Пришли писцы считать скот. Ты гонишь коров мимо них, а они пишут.	The scribes come to count the cattle. You drive the cows past them while they write.	
+anc	a	eg	Сеешь прямо в мокрый ил, а свиньи втаптывают зерно.	You sow straight into the wet silt, and the pigs tread the seed in.	
+anc	a	eg	В городе теперь правят греки. Писец ведёт счёт на двух языках.	Greeks rule the city now. The scribe keeps the accounts in two languages.	after:-330
+anc	a	med	Сушишь на крыше смоквы на зиму. Осы не дают покоя.	You dry figs on the roof for winter. The wasps give you no peace.	
+anc	a	med	Делаешь сыр из козьего молока и кладёшь его в рассол.	You make cheese from goat's milk and put it in brine.	
+anc	a	med	Корабль с зерном не пришёл. Хлеб на рынке подорожал вдвое.	The grain ship does not come. Bread at the market costs twice as much.	
+anc	a	med	Сосед-рыбак принёс корзину сардин. Солишь их в амфоре.	A fisherman neighbour brings a basket of sardines. You salt them in an amphora.	
+anc	a	med	Держишь пчёл в глиняных трубах. Мёд пахнет тимьяном.	You keep bees in clay pipes. The honey smells of thyme.	
+anc	a	med	{Нанялся|Нанялась} собирать оливки к богатому соседу. Платят маслом.	You hire yourself out to pick olives for a rich neighbour. He pays in oil.	
+anc	a	med	Рубишь лес на холме для корабелов. Через год склон пополз вниз.	You fell trees on the hill for the shipbuilders. A year later the slope starts to slide.	
+anc	a	med	Хозяин отпустил тебя на волю. Ты {свободен|свободна}, а работаешь у него же.	Your master frees you. You are free, and you work for him just the same.	r0
+anc	a	med	Римские солдаты строят дорогу через вашу долину. Прямую, как струна.	Roman soldiers build a road through your valley, straight as a bowstring.	after:-300
+anc	a	med	Ты стоишь в строю с чужим бронзовым щитом: свой ушёл за долги.	You stand in the line with a borrowed bronze shield: your own went for debts.	m
+anc	a	af	Сажаешь просо после первых дождей. Если второй дождь не придёт, всё пропадёт.	You sow millet after the first rains. If a second rain doesn't come, it is all lost.	
+anc	a	af	Строишь амбар на сваях, чтобы до зерна не добрались крысы и термиты.	You build a granary on stilts so the rats and termites can't get at the grain.	
+anc	a	af	Обмазываешь круглую хижину свежей глиной, пока не пошли дожди.	You plaster the round hut with fresh clay before the rains come.	
+anc	a	af	Кочевники пригнали стада к вашей реке. Меняете просо на молоко.	Herders bring their cattle to your river. You trade millet for milk.	
+anc	a	af	Варишь масло из орехов ши. Руки пахнут дымом до самой ночи.	You boil butter from shea nuts. Your hands smell of smoke till night.	
+anc	a	af	Несёшь горшки на рынок, день пути, на голове. Обратно несёшь соль.	You carry pots on your head to the market, a day's walk. You carry salt back.	
+anc	a	af	Чинишь рыболовные корзины к разливу реки.	You mend the fish traps for the river's flood.	
+anc	a	af	Собака выгнала из травы цесарок. Вечером в похлёбке мясо.	The dog flushes guinea fowl from the grass. There is meat in the stew tonight.	
+anc	a	af	Колдун ищет, кто наслал болезнь на соседского ребёнка. Все косятся на старую вдову.	The diviner seeks who sent the sickness on the neighbour's child. Everyone looks sideways at the old widow.	
+anc	a	af	Кузнец взял за мотыгу козу. Его боятся, и дружить с ним выгодно.	The smith takes a goat for a hoe. People fear him, and it pays to be his friend.	after:-500
+anc	a	meso	Выжигаешь лес под новое поле. Через три года земля устанет, и всё сначала.	You burn the forest for a new field. In three years the soil will tire and it starts again.	
+anc	a	meso	Ведёшь на рынок индюков на верёвке. Один всё время ложится.	You lead turkeys to market on a string. One keeps lying down.	
+anc	a	meso	Белишь стены дома известью. На солнце они слепят.	You whitewash the house with lime. In the sun it is blinding.	
+anc	a	meso	Новый обсидиановый нож такой острый, что ты {порезался|порезалась} в первый же день.	The new obsidian knife is so sharp you cut yourself on the first day.	
+anc	a	meso	Несёшь маис для храма в корзине с ремнём через лоб. Шея гудит.	You carry maize for the temple in a basket with a strap across your forehead. Your neck aches.	
+anc	a	meso	В колодах у дома живут пчёлы без жала. Их мёд ценят дороже маиса.	Stingless bees live in logs by the house. Their honey is worth more than maize.	
+anc	a	meso	Плетёшь циновки для всего дома. Спать на новой циновке мягко.	You weave mats for the whole house. A new mat is soft to sleep on.	
+anc	a	meso	С гор привезли огромный камень. Его тянули тысячи людей полгода.	A huge stone is brought down from the mountains. Thousands hauled it for half a year.	after:-1200 before:-400
+anc	a	andes	Пускаешь воду по каменному жёлобу на террасы. Соседи сверху всегда берут больше.	You lead water down the stone channel to the terraces. The neighbours above always take more.	
+anc	a	andes	Делаешь лунки палкой с упором для ноги. За тобой идут и кладут клубни.	You make holes with a foot-plough. Others follow, dropping in the tubers.	
+anc	a	andes	Сушишь мясо ламы на ветру. Выходит твёрдое и солёное.	You dry llama meat in the wind. It comes out hard and salty.	
+anc	a	andes	Рыбачишь на камышовом плоту на высоком озере.	You fish from a reed raft on the high lake.	
+anc	a	andes	Помогаешь соседям строить дом: сегодня ты им, завтра они тебе. Хозяева поят чичей.	You help the neighbours build a house: today you for them, tomorrow they for you. The hosts pour chicha.	
+anc	a	andes	Собираешь на островах птичий помёт для полей. Вонь страшная, урожай будет.	You gather bird droppings on the islands for the fields. The stench is awful, but there will be a harvest.	
+anc	a	andes	Ткёшь плащ с узором вашего рода. По нему тебя узнают за три долины.	You weave a cloak with your clan's pattern. People three valleys away will know you by it.	
+anc	a	andes	Мороз среди лета побил ботву. Ты всё утро ходишь по полю молча.	A frost in midsummer blackens the potato leaves. You walk the field all morning in silence.	
+anc	a	au	Сухой сезон. Перекочёвываете к последнему источнику, а там уже ждут соседи.	The dry season. You move to the last spring, and the neighbours are already there.	
+anc	a	au	Растираешь семена травы между камнями и печёшь лепёшки прямо в золе.	You grind grass seed between stones and bake the cakes straight in the ashes.	
+anc	a	au	Делаешь новое копьё: древко правишь над огнём, наконечник крепишь смолой.	You make a new spear: you straighten the shaft over the fire and fix the head with resin.	
+anc	a	au	Чистишь каменные протоки для угрей. Осенью угри пойдут, и будет пир.	You clear the stone channels for the eels. In autumn the eels will run and there will be a feast.	
+anc	a	au	Обходишь дальние места своей земли: вода, деревья, рисунки на скалах. Всё на месте.	You walk the far places of your country: water, trees, paintings on the rocks. All is in order.	
+anc	a	au	Подновляешь охрой рисунок на скале. Его рисовали деды дедов.	You freshen a rock painting with ochre. Your grandfathers' grandfathers painted it.	
+anc	a	au	Спор с соседями решили копьями: бросали, пока не пролилась кровь. Потом мирились у костра.	The quarrel with the neighbours is settled with spears: thrown until blood is drawn. Then peace by the fire.	
+anc	a	au	Вымачиваешь в ручье ядовитые орехи. Неделями, пока их не станет можно есть.	You soak poisonous nuts in the stream for weeks, until they are safe to eat.	
+anc	j		Ночью {лежал|лежала} на спине и {считал|считала} падающие звёзды, пока не {сбился|сбилась}.	At night you lie on your back counting shooting stars until you lose count.	
+anc	j		Первый тёплый день. Сидишь на солнце и ничего не делаешь.	The first warm day. You sit in the sun and do nothing.	
+anc	j		Над водой стоит радуга, целиком, от края до края.	A rainbow stands over the water, whole, from end to end.	
+anc	j		Соседский малыш уснул у тебя на руках. Ты не шевелишься, чтобы не разбудить.	The neighbours' baby falls asleep in your arms. You keep still so as not to wake it.	
+anc	j		Пели всю ночь у огня. Утром голоса нет, а на душе легко.	You sing all night by the fire. In the morning your voice is gone and your heart is light.	
+anc	j		Купаешься в реке после жаркого дня. Вода холодная до визга.	You bathe in the river after a hot day. The water is cold enough to make you shriek.	
+anc	j		Ты {рассмешил|рассмешила} весь дом своей историей. Смеётся даже дед.	You make the whole house laugh with your story. Even grandfather laughs.	
+anc	j		Тебе приснилась мать, молодая и ласковая. Утро светлое.	You dream of your mother, young and gentle. The morning is bright.	
+anc	j		Первые спелые ягоды. Рты у всех синие.	The first ripe berries. Everyone's mouth is blue.	
+anc	j	cn in me eg med af meso andes	Праздник урожая: все в чистом и с утра навеселе.	Harvest feast: everyone in clean clothes and merry from morning on.	
+anc	j	cn in me eg med af	Последний сноп увезли с поля, и тут пошёл дождь. Успели.	The last sheaf leaves the field and then the rain starts. Just in time.	
+anc	j	cn in me eg med af	Коза принесла тройню, и все трое на ногах.	The goat has triplets, and all three are standing.	
+anc	j	cn	Весной всей деревней идёте к реке смывать болезни. Девушки дарят орхидеи.	In spring the whole village goes to the river to wash away sickness. The girls hand out orchids.	
+anc	j	cn	Персики поспели. Ешь, пока сок не потечёт по локтям.	The peaches are ripe. You eat until the juice runs down to your elbows.	
+anc	j	cn	Зимой пьёшь с братом подогретое просяное вино. Дед поёт старую песню.	In winter you drink warm millet wine with your brother. Grandfather sings an old song.	
+anc	j	in	На свадьбе у соседей молодые делают семь шагов вокруг огня. Ты считаешь вслух со всеми.	At the neighbours' wedding the couple take seven steps round the fire. You count aloud with everyone.	
+anc	j	in	Поспели манго. Дети сидят на дереве и швыряют косточки.	The mangoes are ripe. The children sit in the tree throwing the stones.	
+anc	j	in	После жатвы быков моют в реке и красят им рога.	After the harvest the oxen are washed in the river and their horns are painted.	
+anc	j	in	Павлины пляшут перед дождём. Значит, скоро польёт.	The peacocks dance before the rain. It will pour soon.	
+anc	j	in	В деревню пришли бродячие плясуны с барабанами. Два дня никто не работает.	Wandering dancers come to the village with drums. For two days no one works.	
+anc	j	me	Свежие финики прямо с пальмы. Сладко до ломоты в зубах.	Fresh dates straight off the palm. So sweet your teeth ache.	
+anc	j	me	Играешь с соседом в игру на доске с двадцатью клетками. Три раза подряд {выиграл|выиграла}.	You play the game of twenty squares with a neighbour. You win three times running.	
+anc	j	me	Пришёл караван с юга. На рынке пахнет благовониями, и ты дышишь, пока не прогонят.	A caravan comes from the south. The market smells of incense, and you breathe it in till you are chased off.	
+anc	j	me	Сестра выходит замуж. Гуляют семь дней, и все сыты.	Your sister marries. The feast lasts seven days and everyone eats their fill.	
+anc	j	eg	Праздник опьянения: пьёте до упаду ради богини. Так положено.	The Feast of Drunkenness: you drink till you drop, for the goddess. It is expected.	
+anc	j	eg	Вода ушла, и на чёрной земле проступила первая зелень.	The water has gone, and the first green shows on the black earth.	
+anc	j	med	Открыли молодое вино. Пьёшь его неразбавленным, как варвар.	The new wine is opened. You drink it unmixed, like a barbarian.	
+anc	j	med	Поймали тунца больше человека. Его делит вся деревня.	A tuna bigger than a man is caught. The whole village shares it.	
+anc	j	med	Мимо идёт свадьба с факелами: невесту везут на повозке в дом мужа.	A wedding passes by torchlight: the bride is driven on a cart to her husband's house.	
+anc	j	med	Макаешь хлеб в свежее масло с солью. Больше ничего не нужно.	You dip bread in new oil with salt. Nothing more is needed.	
+anc	j	med	Певец с лирой поёт про Трою. Ты знаешь конец, но всё равно слушаешь.	A singer with a lyre sings of Troy. You know the ending and listen anyway.	after:-700
+anc	j	med	На празднике бьются гладиаторы. Ты {кричал|кричала} до хрипоты.	At the festival the gladiators fight. You shout yourself hoarse.	after:-250
+anc	j	af	Под деревом играешь в лунки с камешками. {Обыграл|Обыграла} самого старосту.	Under the tree you play the pit-and-pebble game. You beat the headman himself.	
+anc	j	af	Начались дожди. Земля пахнет так, что хочется её есть.	The rains begin. The earth smells so good you want to eat it.	
+anc	j	af	Барабан выговорил твоё имя, и вся площадь обернулась на тебя.	The drum speaks your name, and the whole square turns to look at you.	
+anc	j	af	Ешь печёный ямс с пальмовым маслом. Больше ничего не надо.	You eat roast yam with palm oil. You want nothing else.	
+anc	j	af	Сосед принёс с охоты антилопу. Мясо делят на всю деревню, жир отдают детям.	A neighbour brings back an antelope from the hunt. The meat is shared round the village, the fat goes to the children.	
+anc	j	meso	Праздник: дым копала, глиняные флейты, все в цветах.	A feast: copal smoke, clay flutes, everyone in flowers.	
+anc	j	meso	Ешь тамаль с бобами, завёрнутый в лист. Он ещё горячий.	You eat a bean tamale wrapped in a leaf. It is still hot.	
+anc	j	meso	На площадке играют в мяч. Ваши выиграли, и ты {охрип|охрипла}.	The ballgame is played in the court. Your side wins and you are hoarse.	
+anc	j	meso	Колибри зависла перед самым лицом. Ты не дышишь.	A hummingbird hovers right in front of your face. You hold your breath.	
+anc	j	meso	Тебе подарили бусину из зелёного камня. Дороже у тебя ничего нет.	You are given a bead of green stone. You own nothing more precious.	
+anc	j	meso	Холодное утро. Мать даёт тебе горячей маисовой каши с перцем.	A cold morning. Mother gives you hot maize gruel with chilli.	
+anc	j	andes	Варите картошку и мясо в земляной яме на горячих камнях. Пар пахнет на всю долину.	You cook potatoes and meat in an earth pit on hot stones. The steam smells across the valley.	
+anc	j	andes	Играешь на склоне на тростниковой флейте. Ламы поворачивают уши.	You play a reed pipe on the slope. The llamas turn their ears.	
+anc	j	andes	На свадьбе молодым дарят ламу и мешок картошки. Пляшут все.	At the wedding the couple get a llama and a sack of potatoes. Everyone dances.	
+anc	j	andes	Солнце вышло после бури, и снег на вершине горит розовым.	The sun comes out after the storm, and the snow on the peak glows pink.	
+anc	j	andes	В самую длинную ночь никто не спит. Ждёте солнце над горой, и оно приходит.	On the longest night nobody sleeps. You wait for the sun over the mountain, and it comes.	
+anc	j	au	Гроза после засухи. Лягушки поют всю ночь.	A storm after the drought. The frogs sing all night.	
+anc	j	au	Нашли личинок в корнях акации. Печёте их в золе, по вкусу как орехи.	You find grubs in the wattle roots. Roasted in the ashes, they taste of nuts.	
+anc	j	au	Пляски у костра: все расписаны белым, палки стучат в такт.	Dancing by the fire: everyone painted white, sticks clapping in time.	
+anc	j	au	{Нашёл|Нашла} гнездо диких пчёл. Мёд тёмный и кисловатый, все облизывают пальцы.	You find a wild bees' nest. The honey is dark and sour, and everyone licks their fingers.	
+anc	j	au	Кефаль идёт косяком, сама лезет в сети. Едите, пока не надоест.	The mullet run so thick they swim into the nets. You eat until you are sick of it.	
+anc	j		Хозяйка подарила тебе старое платье. Ты носишь его как новое.	The mistress gives you an old dress. You wear it as if it were new.	f r0
+anc	j		Мастер при всех похвалил твою работу.	The master praises your work in front of everyone.	r2
+anc	j		Дочь вышла плясать на празднике, и все смотрят только на неё.	Your daughter dances at the feast, and everyone watches only her.	kids
+anc	o		Лица матери ты уже не помнишь. Помнишь только голос.	You no longer remember your mother's face. Only her voice.	
+anc	o		Встаёшь раньше всех и раздуваешь огонь. Теперь это твоя работа.	You rise before everyone and blow the fire to life. That is your job now.	
+anc	o		Молодые поют твою старую песню, но не так. Ты поправляешь, они смеются.	The young sing your old song, but wrong. You correct them and they laugh.	
+anc	o		Тебя спрашивают о травах: какая от чего. Ты помнишь все.	They ask you about herbs: which one for what. You remember them all.	
+anc	o		Ночью снится, что ты {молод|молода} и бежишь. Просыпаешься с улыбкой.	At night you dream you are young and running. You wake up smiling.	
+anc	o		Уши подводят. Сначала переспрашиваешь, потом просто киваешь.	Your ears fail you. At first you ask again, then you just nod.	
+anc	o		Твоя собака тоже состарилась. Лежите вдвоём на солнце.	Your dog has grown old too. The two of you lie in the sun.	
+anc	o		Умер твой ровесник. На похоронах ты стоишь впереди и думаешь, кто следующий.	Someone your age dies. At the burial you stand at the front and wonder who is next.	
+anc	o		Сидишь с малышами, пока все работают. Любой плач умеешь унять.	You mind the little ones while everyone works. You can hush any crying.	
+anc	o		По цвету неба угадываешь, какой будет год. Молодые спорят, а потом приходят спросить.	You read the coming year from the colour of the sky. The young argue, then come to ask.	
+anc	o	cn	Тебе за шестьдесят. По обычаю на работы для князя тебя больше не гонят.	You are past sixty. By custom you are no longer called up for the lord's labour.	
+anc	o	cn	Сидишь у ворот на солнце и рассказываешь детям, как звали прежнего князя.	You sit at the gate in the sun telling the children the old lord's name.	
+anc	o	cn	Ты сам{|а} {выбрал|выбрала} место для могилы: на склоне, лицом к реке. Гадатель одобрил.	You choose the place for your grave yourself: on the slope, facing the river. The diviner approves.	
+anc	o	cn	Каждый день кланяешься табличкам предков. Скоро и твоя встанет рядом.	Every day you bow to the ancestor tablets. Soon yours will stand beside them.	
+anc	o	cn	Зимой не слезаешь с тёплого места у очага. Тебе приносят туда кашу.	In winter you never leave the warm place by the hearth. They bring you porridge there.	
+anc	o	in	До рассвета идёшь к реке омыться. Холодная вода будит лучше сына.	Before dawn you go to the river to bathe. Cold water wakes you better than any son.	
+anc	o	in	Рассказываешь детям сказки про говорящих зверей. Ты их слышал{|а} от деда.	You tell the children tales of talking animals. You heard them from your grandfather.	
+anc	o	in	Сидишь со стариками под деревом у храма. Спорите о дождях прошлых лет.	You sit with the old men under the tree by the shrine. You argue about the rains of years gone by.	
+anc	o	in	На берегу горит погребальный костёр соседа. Ты смотришь и думаешь о своём.	A neighbour's pyre burns on the riverbank. You watch and think of your own.	
+anc	o	me	Сидишь у ворот со стариками. Обсуждаете каждого, кто проходит.	You sit at the gate with the old men. You discuss everyone who goes by.	
+anc	o	me	Ты помнишь прежнего царя, и он был лучше. Все старики помнят такого.	You remember the old king, and he was better. Every old person remembers one like that.	
+anc	o	eg	Носишь хлеб и пиво на могилу родителей. Скоро кто-то будет носить тебе.	You take bread and beer to your parents' tomb. Soon someone will bring them to you.	
+anc	o	med	Сидишь на пристани и чинишь сети. Пальцы ещё помнят.	You sit on the quay mending nets. Your fingers still remember.	
+anc	o	med	Рассказываешь молодым про большую войну. С каждым годом врагов в рассказе больше.	You tell the young about the great war. Every year there are more enemies in the story.	
+anc	o	med	Разбавляешь вино всё меньше. Говоришь, что для здоровья.	You water your wine less and less. You say it is for your health.	
+anc	o	af	Ты помнишь имена предков рода до девятого колена. Молодые просят повторить.	You know the names of your forebears back nine generations. The young ask you to say them again.	
+anc	o	af	Сидишь в тени у хижины и плетёшь циновки. Мимо идёт вся деревня, и каждый здоровается.	You sit in the shade by the hut weaving mats. The whole village passes, and everyone greets you.	
+anc	o	af	Показываешь молодым, где лежат предки: у этого баобаба, у того камня.	You show the young where the ancestors lie: by this baobab, by that stone.	
+anc	o	af	Ты помнишь, где был лес. Теперь там поля до самого горизонта.	You remember where the forest was. Now there are fields to the horizon.	
+anc	o	meso	Лущишь маис на пороге. Початков больше, чем сил.	You shell maize on the doorstep. There are more cobs than strength.	
+anc	o	meso	На твоих глазах в городе выросла пирамида. Теперь её уже надстраивают.	You saw the pyramid in town go up. Now they are already building on top of it.	
+anc	o	meso	Смотришь, как молодая соседка мелет маис, и поправляешь ей руку.	You watch a young neighbour grind maize and correct her hand.	
+anc	o	meso	Просишь, чтобы после смерти тебе положили в рот зелёную бусину.	You ask for a green bead to be put in your mouth when you die.	
+anc	o	andes	Ты знаешь, какие камни на склоне священные. Молодые уже путают.	You know which stones on the slope are holy. The young mix them up already.	
+anc	o	andes	Жуёшь коку с утра до вечера, и ноги ещё носят тебя в гору.	You chew coca from morning to night, and your legs still carry you uphill.	
+anc	o	andes	Ткёшь себе погребальный плащ. Узор выбираешь долго.	You weave your burial cloak. You take a long time choosing the pattern.	
+anc	o	andes	Помнишь год, когда снег лёг в разгар лета. Молодые не верят.	You remember the year snow fell in midsummer. The young don't believe you.	
+anc	o	au	Теперь ты хранишь песни своей земли. Их доверили тебе, когда умер прежний хранитель.	Now you keep the songs of your country. They came to you when the old keeper died.	
+anc	o	au	Сидишь в тени и правишь каменные лезвия. Молодые несут тебе лучшее мясо.	You sit in the shade sharpening stone blades. The young bring you the best meat.	
+anc	o	au	Идти к дальнему источнику ты уже не можешь. Тебя несут на руках.	You can no longer walk to the far spring. They carry you.	
+anc	o	au	Учишь девушек, какие травы лечат, а какие убивают.	You teach the girls which plants heal and which kill.	
+anc	o	au	Показываешь молодым тёмного эму в Млечном Пути. Когда он встаёт так, пора искать яйца.	You show the young the dark emu in the Milky Way. When it stands like that, it is time to look for eggs.	
+anc	o	au	Ты помнишь берег, где {родился|родилась}. Его давно забрало море.	You remember the shore where you were born. The sea took it long ago.	before:-4000
+anc	o		Тебя зовут на роды в каждый дом. Через твои руки прошла половина деревни.	They call you to every birth. Half the village has passed through your hands.	f
+anc	o		Ученик работает уже лучше тебя. Ты делаешь вид, что не замечаешь.	Your apprentice works better than you now. You pretend not to notice.	r2
+anc	o		Ты слишком {стар|стара} для поля. Хозяин поставил тебя сторожить гусей.	You are too old for the fields. The master sets you to mind the geese.	r0
+anc	x		Ночью река вышла из берегов. Всё, что было в доме, унесло.	The river bursts its banks in the night. Everything in the house is swept away.	
+anc	x		Чужаки напали ночью и увели людей.	Strangers attack in the night and carry people off.	
+anc	x		Затряслась земля. Дом рухнул, а в нём была мать.	The earth shakes. The house falls in, and mother was inside.	
+anc	x		Ты тяжело {заболел|заболела} и неделями не встаёшь. Всё хозяйство валится из рук родных.	You fall gravely ill and cannot get up for weeks. Everything slips from your family's hands.	
+anc	x		Ночью огонь перекинулся с соседской крыши. К утру от дома одни угли.	In the night fire leaps from the neighbour's roof. By morning your house is just embers.	
+anc	x	cn in me eg med af meso andes	Холодное лето: зерно не вызрело.	A cold summer: the grain does not ripen.	
+anc	x	cn in me eg med af meso andes	Ливень смыл поле вместе с семенами. Сеять больше нечем.	A downpour washes away the field and the seed with it. There is nothing left to sow.	
+anc	x	cn in me eg af	Набег кочевников: угнали весь скот.	Nomads raid: all the cattle are driven off.	
+anc	x	cn	Князь собирает войско. Из вашего дома уходят все мужчины, и никто не знает, на сколько.	The lord raises an army. Every man in your house goes, and no one knows for how long.	
+anc	x	cn	Зима без снега, весна без дождя. Просо не взошло.	A winter without snow, a spring without rain. The millet does not come up.	
+anc	x	in	Тигр повадился в деревню. Унёс уже двоих.	A tiger has taken to coming into the village. It has carried off two already.	
+anc	x	in	Дикие слоны за одну ночь вытоптали всё поле.	Wild elephants trample the whole field in one night.	
+anc	x	me	Канал занесло, а чинить некому: всех угнали на войну. Поля сохнут.	The canal silts up and there is no one to clear it: all are taken for the war. The fields dry out.	
+anc	x	med	Враги вырубили ваши оливы. Новые дадут плод, когда ты будешь {стар|стара}.	The enemy cuts down your olive trees. New ones will bear when you are old.	
+anc	x	med	Шторм разбил лодки у берега. В деревне три новые вдовы.	A storm smashes the boats on the shore. Three new widows in the village.	
+anc	x	med	Пришли римляне. Город, что сопротивлялся, продали в рабство целиком.	The Romans come. The town that resisted is sold into slavery, every soul.	after:-250
+anc	x	af	Дожди начались и сразу кончились. Просо засохло по колено.	The rains start and stop at once. The millet withers knee-high.	
+anc	x	af	Река поднялась на месяц раньше. Просо ушло под воду.	The river rises a month early. The millet goes under water.	
+anc	x	meso	Проснулся вулкан. Пепел засыпал поля по колено.	The volcano wakes. Ash buries the fields knee-deep.	
+anc	x	meso	Буря с моря сорвала крыши и положила маис.	A storm from the sea tears off the roofs and flattens the maize.	
+anc	x	meso	Война с соседним городом. Пленных ведут на жертвенник, и твой брат среди них.	War with the next city. The captives are led to the altar, and your brother is among them.	
+anc	x	andes	С гор сошёл сель. Деревня внизу исчезла за одну ночь.	A mudslide comes down the mountain. The village below is gone in a night.	
+anc	x	andes	Мор среди лам: стадо лежит в загоне и не встаёт.	Plague among the llamas: the herd lies in the pen and won't get up.	
+anc	x	andes	Море у берега стало тёплым. Рыба ушла, а ливни смывают дома.	The sea by the shore turns warm. The fish leave, and downpours wash the houses away.	
+anc	x	au	Самая долгая засуха на памяти стариков. Ямы с водой в песке пусты.	The longest drought the old people remember. The water holes in the sand are empty.	
+anc	x	au	Циклон с моря. Деревья лежат, стоянку смыло.	A cyclone from the sea. The trees are down and the camp is washed away.	
+anc	x	au	Чужие пришли на вашу землю с копьями. Началась кровная месть.	Strangers come onto your land with spears. A blood feud begins.	

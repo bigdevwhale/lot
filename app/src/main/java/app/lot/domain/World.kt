@@ -38,6 +38,21 @@ class Era(
     val estates: List<Estate>,
 )
 
+class Area(val key: String, val name: Tx, val regions: Set<String>)
+
+/** What the reader asked of the lot before drawing it; null means "any". Within it the draw keeps the real weights. */
+data class Wish(val eraI: Int? = null, val area: String? = null, val sex: Sex? = null) {
+    val any get() = eraI == null && area == null && sex == null
+
+    fun encode() = listOf(eraI ?: "", area ?: "", sex?.name ?: "").joinToString(",")
+
+    companion object {
+        fun decode(s: String?): Wish = s?.split(',')?.takeIf { it.size == 3 }?.let { p ->
+            Wish(p[0].toIntOrNull(), p[1].ifEmpty { null }, Sex.entries.firstOrNull { it.name == p[2] })
+        } ?: Wish()
+    }
+}
+
 class Region(
     val key: String,
     val name: Tx,
@@ -91,7 +106,7 @@ object World {
                 r("cn", "Китай, Жёлтая река", "China, the Yellow River", 24.0, 112, 35, "cn", "cn"),
                 r("in", "Индия, Ганг", "India, the Ganges", 24.0, 82, 25, "in", "in"),
                 r("mes", "Месопотамия", "Mesopotamia", 9.0, 45, 32, "mes", "me"),
-                r("eg", "Египет, Нил", "Egypt, the Nile", 7.0, 31, 27, "eg", "eg me", true),
+                r("eg", "Египет, Нил", "Egypt, the Nile", 7.0, 31, 27, "eg", "eg", true),
                 r("med", "Средиземноморье", "The Mediterranean", 12.0, 18, 40, "gr", "med it eu", true),
                 r("waf", "Западная Африка", "West Africa", 9.0, 0, 11, "af", "af"),
                 r("meso", "Мезоамерика", "Mesoamerica", 4.0, -98, 19, "am", "meso am"),
@@ -219,6 +234,28 @@ object World {
     val ALL_REGIONS: List<Region> get() = ERAS.flatMap { it.regions }
 
     fun region(key: String, eraI: Int): Region = ERAS[eraI].regions.firstOrNull { it.key == key } ?: ALL_REGIONS.first { it.key == key }
+
+    /** Areas to choose before a draw: the same part of the world under its names in every era. */
+    val AREAS: List<Area> = listOf(
+        Area("cn", Tx("Китай", "China"), setOf("cn", "eas")),
+        Area("in", Tx("Индия", "India"), setOf("in", "sas")),
+        Area("me", Tx("Ближний Восток", "The Middle East"), setOf("me", "mes", "eg")),
+        Area("eu", Tx("Европа", "Europe"), setOf("eur", "med", "fr", "it", "de", "en", "eu")),
+        Area("ru", Tx("Россия", "Russia"), setOf("ru")),
+        Area("af", Tx("Африка", "Africa"), setOf("eaf", "waf", "af")),
+        Area("jp", Tx("Япония", "Japan"), setOf("jp")),
+        Area("sea", Tx("Юго-Восточная Азия", "Southeast Asia"), setOf("sea")),
+        Area("am", Tx("Америка", "The Americas"), setOf("am", "meso", "andes", "latam", "us")),
+        Area("au", Tx("Австралия", "Australia"), setOf("au")),
+    )
+
+    fun area(key: String?) = AREAS.firstOrNull { it.key == key }
+
+    /** Can a lot be drawn for this era and area at all? */
+    fun fits(eraI: Int?, area: String?): Boolean {
+        val a = area(area) ?: return true
+        return ERAS.filter { eraI == null || it.i == eraI }.any { e -> e.regions.any { it.key in a.regions } }
+    }
 
     fun eraOf(year: Int): Era = ERAS.lastOrNull { year >= it.from } ?: ERAS[0]
 

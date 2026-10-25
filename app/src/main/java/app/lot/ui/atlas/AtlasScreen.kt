@@ -22,6 +22,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -35,6 +36,8 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.gestures.detectTapGestures
 import app.lot.container
+import app.lot.domain.Hist
+import app.lot.domain.Sex
 import app.lot.domain.World
 import app.lot.ui.Home
 import app.lot.ui.art.MapArt
@@ -95,14 +98,45 @@ fun AtlasScreen(h: Home, onLife: (Long) -> Unit) {
                     "Died before five: $infants of ${lives.size}. Saw the sea: ${lives.count { it.sawSea }}. Could read: ${lives.count { it.lit }}."), style = T.Small, modifier = Modifier.padding(top = 6.dp))
             }
 
-            val met = lives.filter { it.meet != null }
-            if (met.isNotEmpty()) {
-                Gap(18)
-                Text(w.t("Встречи", "Encounters"), style = T.Heading)
-                Text(w.t("Те, о ком потом писали книги, — увиденные мимоходом.", "People later written about, seen in passing."), style = T.Small)
-                val hist = LocalContext.current.container.content.hist
-                for (l in met) Note(w.x(l.name) + ", " + w.year(l.year), hist.getOrNull(l.meet!!)?.text?.let(w::x) ?: "", onClick = { onLife(l.id) })
+            val hist = LocalContext.current.container.content.hist
+            val seen = h.s.seen
+            fun said(e: Hist) = w.x(e.text.g(seen[e.id]?.sexOf ?: Sex.M))
+
+            // The encounters: people later written about, met in passing; the unmet ones wait as a count.
+            val meets = hist.filter { it.meet }
+            val met = meets.filter { it.id in seen }.sortedBy { it.mid }
+            Gap(18)
+            Text(w.t("Встречи · ${met.size} из ${meets.size}", "Encounters · ${met.size} of ${meets.size}"), style = T.Heading)
+            Text(w.t("Те, о ком потом писали книги, — увиденные мимоходом. Остальные ждут в других веках и странах.",
+                "People later written about, seen in passing. The rest wait in other centuries and lands."), style = T.Small)
+            for (e in met) {
+                val l = seen.getValue(e.id)
+                Note(w.x(l.name) + ", " + w.year(l.year), said(e), onClick = { onLife(l.id) })
             }
+
+            // The chronicle: every real event any life has met, by era, with what is still unseen.
+            Gap(18)
+            Text(w.t("Летопись · ${seen.size} из ${hist.size}", "Chronicle · ${seen.size} of ${hist.size}"), style = T.Heading)
+            Text(w.t("Настоящие события, которые застали твои жизни.", "Real events your lives have lived through."), style = T.Small)
+            Gap(6)
+            for (e in World.ERAS) {
+                val inEra = hist.filter { World.eraOf(it.mid).i == e.i }
+                if (inEra.isEmpty()) continue
+                val got = inEra.count { it.id in seen }
+                Row(Modifier.padding(vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Box(Modifier.size(8.dp).clip(RoundedCornerShape(4.dp)).background(Color(e.color)))
+                    Text(w.x(e.name), style = T.Small.copy(color = C.ink), modifier = Modifier.padding(start = 6.dp).weight(1f))
+                    Text("$got / ${inEra.size}", style = T.Small)
+                }
+            }
+            val lived = hist.filter { it.id in seen && !it.meet }.sortedBy { it.mid }
+            var all by rememberSaveable { mutableStateOf(false) }
+            for (e in if (all) lived else lived.take(6)) {
+                val l = seen.getValue(e.id)
+                Note(w.year(e.from) + (if (e.to != e.from) " – " + w.year(e.to) else "") + " · " + w.x(l.name), said(e), onClick = { onLife(l.id) })
+            }
+            if (lived.size > 6) Text(if (all) w.t("Свернуть", "Show less") else w.t("Вся летопись (${lived.size})", "The whole chronicle (${lived.size})"),
+                style = T.Button.copy(color = C.red), modifier = Modifier.clickable { all = !all }.padding(vertical = 10.dp))
 
             Gap(18)
             Text(w.t("Тетрадка", "Notebook"), style = T.Heading)

@@ -72,3 +72,396 @@ ru	1991	1991	0	Страна, в которой ты {родился|родила
 sea	2004	2004	0	Цунами. Море отступило, а потом вернулось стеной.	The tsunami. The sea draws back, then returns as a wall.
 *	2005	2026	0	В деревню провели мобильную связь. Теперь всё время видно, как живут другие.	Mobile coverage reaches the village. Now you can always see how others live.
 *	2020	2022	0	Пандемия. Два года в масках.	The pandemic. Two years in masks.
+me	-9600	-8200	0	Со всей округи сошлись люди ставить каменные столбы. На столбах — лисы, змеи и кабаны.	People gather from all around to raise stone pillars. Foxes, snakes and boars are carved on them.
+eu	-9700	-8000	0	Лёд уходит на север. Где деды гоняли оленей, теперь растёт лес.	The ice is retreating north. Where your grandfathers hunted reindeer, a forest now grows.
+cn	-3500	-2000	0	С юга принесли зерно, что растёт в воде. Старики не верят, что из него выйдет толк.	Grain that grows in water has come from the south. The old people doubt it will come to anything.
+cn	-1250	-1046	0	Гадатели жгут черепаший панцирь и читают трещины. По трещинам решают, когда сеять.	The diviners burn a turtle shell and read the cracks. The cracks decide when to sow.
+cn	-500	-300	0	Из города привезли железный лемех. Пашется легче, но стоит он как вол.	An iron ploughshare has come from town. It ploughs easier, but it costs as much as an ox.
+cn	-213	-210	0	Император велел сжечь книги. Учитель замуровал свои свитки в стене.	The emperor orders the books burned. The teacher walls his scrolls up inside the house.
+cn	-126	-126	1	Через уезд проехал посол Чжан Цянь — тринадцать лет пропадал на западе. Рассказывал про коней, что потеют кровью.	The envoy Zhang Qian rides through the county after thirteen years in the west. He tells of horses that sweat blood.
+cn	2	2	0	Писцы обошли каждый двор: сколько ртов, сколько земли. В столице сложили — почти шестьдесят миллионов.	Scribes go round every household: how many mouths, how much land. In the capital they add it up: nearly sixty million.
+in	-2600	-1900	0	Купцы с запада принесли печати с быком и непонятными знаками. Говорят, у них города из обожжённого кирпича.	Traders from the west bring seals with a bull and strange signs. They say their cities are built of fired brick.
+in	-1000	-600	0	Лес у реки рубят железными топорами. На вырубках сеют рис.	The forest by the river is felled with iron axes. Rice is sown in the clearings.
+in	-540	-527	1	Мимо прошёл голый монах Махавира. Перед каждым шагом он смотрит под ноги, чтобы не раздавить муравья.	A naked monk called Mahavira walks by. Before every step he looks down so as not to crush an ant.
+in	-302	-290	1	В Паталипутре грек Мегасфен расспрашивал тебя, правда ли, что здесь никто не держит рабов.	In Pataliputra a Greek called Megasthenes asks you whether it is true that nobody here keeps slaves.
+in	-250	1	0	У дороги строят ступу. Монахи просят на неё по горсти риса с дома.	A stupa is being built by the road. The monks ask a handful of rice from every house.
+me	-8000	-6500	0	Соседи перестали кочевать. Бросают зёрна в землю и ждут, когда взойдут.	The neighbours have stopped wandering. They put grain into the ground and wait for it to sprout.
+me	-3500	-3000	0	У соседа телега на колёсах. За раз увозит столько, сколько раньше носили впятером.	The neighbour has a cart on wheels. It carries in one trip what five people used to carry.
+me	-3300	-3000	0	В храме писец выдавливает на глине значки. Теперь каждый мешок ячменя на счету.	In the temple a scribe presses marks into clay. Now every sack of barley is counted.
+me	-2400	-1700	0	Поле побелело от соли. Пшеница не всходит, сеют один ячмень.	The field has turned white with salt. Wheat will not come up; only barley is sown.
+me	-745	-627	0	Ассирийцы угоняют целые города на чужие земли. Мимо идёт колонна, дети сидят у отцов на плечах.	The Assyrians drive whole cities off to foreign lands. A column passes, children riding on their fathers' shoulders.
+me	-597	-539	0	В Вавилон пригнали пленных из Иудеи. Вечерами они сидят у каналов и поют о своём городе.	Captives from Judah have been brought to Babylon. In the evenings they sit by the canals and sing of their city.
+me	-539	-537	0	Персидский царь Кир вошёл в Вавилон без боя. Пленным разрешил вернуться домой.	The Persian king Cyrus enters Babylon without a fight. He lets the captives go home.
+eg	-3100	-3000	0	Царь Юга надел и белую корону, и красную. Теперь страна одна.	The king of the South wears both the white crown and the red. Now the land is one.
+eg	-2200	-2150	0	Который год Нил не поднимается. Храмовые амбары пусты.	Year after year the Nile does not rise. The temple granaries are empty.
+eg	-1650	-1550	0	Чужеземцы с севера привели коней. Таких зверей здесь никто не видел.	Foreigners from the north have brought horses. No one here has seen such beasts.
+eg	-1350	-1334	0	Фараон велел молиться одному солнечному диску. Жрецы Амона молчат и ждут.	Pharaoh orders prayers to the sun disc alone. The priests of Amun keep silent and wait.
+eg	-1157	-1155	0	Строители царских гробниц бросили работу и сели у храма. Им второй месяц не выдают зерна.	The builders of the royal tombs down tools and sit by the temple. They have had no grain for two months.
+eg	-331	-331	0	На берегу размечают новый город. Улицы чертят ячменной мукой, а птицы тут же её склёвывают.	A new city is being marked out on the shore. The streets are drawn in barley flour, and birds peck it up at once.
+med	-776	-393	0	Сосед вернулся из Олимпии. Обогнал всех в беге и получил венок из оливы.	A neighbour is back from Olympia. He outran everyone and won a crown of olive.
+med	-480	-479	0	Персидское войско идёт на Грецию. Кто может, уходит на корабли.	The Persian army marches on Greece. Whoever can gets onto the ships.
+med	-230	-212	1	В Сиракузах старик Архимед чертил круги на песке. Ты {подошёл|подошла} совсем близко, а он даже не поднял головы.	In Syracuse old Archimedes is drawing circles in the sand. You come right up close, and he does not even look up.
+it med	-264	-146	0	Рим воюет с Карфагеном. Забирают всех, у кого есть надел.	Rome is at war with Carthage. Every man with a plot of land is called up.
+it med	-218	-216	0	Говорят, через горы перешли слоны. Карфагенянин Ганнибал уже в Италии.	They say elephants have crossed the mountains. Hannibal of Carthage is already in Italy.
+it med	-73	-71	0	Беглые гладиаторы во главе со Спартаком громят поместья. Рабы бегут к ним толпами.	Runaway gladiators led by Spartacus are sacking the estates. Slaves flock to them.
+med it	-27	14	0	Через долину проложили мощёную дорогу. На столбе написано, сколько миль до Рима.	A paved road is laid through the valley. A milestone says how many miles it is to Rome.
+af	-3500	-2500	0	Озеро в степи пересохло. Пастухи гонят скот на юг.	The lake on the plain has dried up. The herders drive their cattle south.
+af	-1500	-500	0	В низине у реки стали сеять красный рис.	In the river bottoms people have begun to sow red rice.
+af	-800	-200	0	В соседней долине плавят железо в глиняных печах. Мотыга из него служит годами.	In the next valley they smelt iron in clay furnaces. A hoe made from it lasts for years.
+af	-1000	1	0	Часть рода ушла на юг, в лес. Унесли мотыги и клубни ямса.	Part of the clan has gone south into the forest, taking hoes and yam tubers.
+af	-250	1	0	На разливе Нигера вырос город. Туда везут рыбу и рис, оттуда — железо и бусы.	A town has grown on the Niger floodplain. Fish and rice go in; iron and beads come out.
+meso	-5000	-3000	0	Женщины оставляют на семена самые крупные початки. Колос с каждым годом длиннее.	The women keep the biggest cobs for seed. Each year the ears grow longer.
+meso	-1200	-400	0	Олмеки сплавляют по реке на плотах каменную голову ростом с хижину.	The Olmecs float a stone head as tall as a hut down the river on rafts.
+meso	-300	1	0	В лесу поднимаются пирамиды выше деревьев. Строит весь край.	Pyramids taller than the trees rise in the forest. The whole land builds them.
+andes	-4500	-3000	0	Пастухи приручили диких лам. Шерсть больше не нужно добывать охотой.	The herders have tamed wild llamas. Wool no longer has to be hunted.
+andes	-900	-200	0	Люди ходят на поклон в Чавин. Там под землёй живёт бог с клыками.	People go to Chavín to bow down. A god with fangs lives under the ground there.
+andes	-200	1	0	На пустынном плато чертят огромного паука. Целиком его разглядит разве что птица.	A huge spider is being drawn on the desert plain. Only a bird could see the whole of it.
+au	-8000	-6500	0	Море подошло ближе. Земля, по которой деды ходили на юг, стала проливом.	The sea has come closer. The land your grandfathers walked south across is now a strait.
+au	-6600	-4000	0	Старики роют в застывшей лаве канавы для угрей. Угри сами заплывают в плетёные ловушки.	The old men dig channels in the cold lava for eels. The eels swim into the woven traps by themselves.
+au	-3500	-2000	0	С севера пришли рыжие собаки. Теперь они спят у костров.	Red dogs have come from the north. Now they sleep by the fires.
+cn	105	200	0	В уезде пишут на новом материале из коры и тряпья. Дешевле шёлка, легче бамбука.	In the county they write on a new stuff made of bark and rags. Cheaper than silk, lighter than bamboo.
+cn	605	611	0	Император велел рыть канал от Хуанхэ до Янцзы. Мужчин гонят на работы сотнями тысяч.	The emperor orders a canal dug from the Yellow River to the Yangtze. Men are driven to the work by the hundred thousand.
+cn	744	762	1	На постоялом дворе пьяный поэт Ли Бо читал стихи луне. Потом заплатил за всех.	At the inn a drunken poet named Li Bai recites verses to the moon. Then he pays for everyone.
+cn	755	763	0	Мятеж Ань Лушаня. Столица пала, император бежал. По дорогам идут голодные.	The An Lushan rebellion. The capital has fallen and the emperor has fled. Hungry people fill the roads.
+cn	1000	1300	0	Сын старосты сдал экзамен на чин. Деревня гуляла три дня.	The headman's son has passed the examination. The village feasts for three days.
+cn	1012	1100	0	Из Чампы привезли скороспелый рис. Теперь снимают два урожая в год.	Quick-ripening rice has come from Champa. Now there are two harvests a year.
+cn	1024	1100	0	Купцы в Сычуани платят бумажками с печатью. Сосед им не верит и прячет медь в горшке.	Merchants in Sichuan pay with stamped paper notes. The neighbour does not trust them and hides his copper in a pot.
+cn	1080	1084	1	Ссыльный чиновник Су Ши сам пашет склон за городом. Угостил тебя свининой, тушённой по своему рецепту.	Su Shi, an official in exile, ploughs a hillside outside town himself. He treats you to pork stewed his own way.
+cn	1570	1650	0	Подать теперь берут серебром. Говорят, серебро везут с другого края света.	Taxes are now paid in silver. They say the silver comes from the other side of the world.
+cn	1594	1650	0	Из-за моря привезли сладкие клубни. Растут на склонах, где рис не родится.	Sweet tubers have come from over the sea. They grow on slopes where rice won't.
+cn	1645	1650	0	Маньчжуры велели мужчинам брить лоб и носить косу. Кто откажется, лишится головы.	The Manchus order every man to shave his forehead and wear a queue. Whoever refuses loses his head.
+in	375	455	0	При государе из рода Гуптов на дорогах тихо. Купцы ходят без охраны.	Under the Gupta king the roads are quiet. Merchants travel without guards.
+in	450	1190	0	Брат ушёл учиться в Наланду. Говорят, там тысячи монахов и книги до потолка.	Your brother has gone to study at Nalanda. They say there are thousands of monks there and books up to the ceiling.
+in	630	643	1	Мимо прошёл китайский монах Сюаньцзан. За ним везут целую повозку свитков.	A Chinese monk called Xuanzang walks by. A whole cart of scrolls follows him.
+in	1206	1300	0	В Дели теперь султан. Сборщики подати говорят на чужом языке.	There is a sultan in Delhi now. The tax collectors speak a foreign tongue.
+in	1460	1510	1	В Бенаресе ткач Кабир поёт за станком, что Бога не надо искать ни в храме, ни в мечети.	In Benares a weaver called Kabir sings at his loom that you need not look for God in temple or mosque.
+in	1564	1605	0	Падишах Акбар отменил налог с иноверцев. Говорят, он слушает и брахманов, и мулл.	Emperor Akbar has abolished the tax on unbelievers. They say he listens to Brahmins and mullahs alike.
+in	1550	1650	0	Купцы привезли из-за моря жгучий красный перец. Теперь его кладут во всё.	Merchants bring a fiery red pepper from over the sea. Now it goes into everything.
+in	1632	1648	0	В Агре строят гробницу для любимой жены падишаха. Белый мрамор везут на слонах.	In Agra they are building a tomb for the emperor's beloved wife. White marble comes on elephants.
+me	27	30	1	У озера проповедник из Назарета говорил с рыбаками. Ты {постоял|постояла} в толпе и {пошёл|пошла} домой.	By the lake a preacher from Nazareth talks to the fishermen. You stand in the crowd a while, then go home.
+eg	390	415	1	В Александрии учёная женщина Ипатия объясняет, как ходят звёзды. Ты {слушал|слушала} у двери.	In Alexandria a learned woman, Hypatia, explains how the stars move. You listen at the door.
+me eg	636	700	0	Пришли арабы. Кто не принял их веру, платит подушную подать.	The Arabs have come. Those who do not take their faith pay a head tax.
+eg	1065	1072	0	Нил опять не поднялся. Хлеб в Фустате дороже серебра.	Again the Nile has not risen. Bread in Fustat costs more than silver.
+me	1100	1187	0	В замке на холме сидит франкский рыцарь. Половину урожая теперь возят ему.	A Frankish knight sits in the castle on the hill. Half the harvest now goes to him.
+eg	1168	1204	1	В Фустате лекарь Маймонид лечил тебя от лихорадки. Велел пить куриный бульон.	In Fustat the physician Maimonides treats your fever. He tells you to drink chicken broth.
+me	1245	1273	1	В Конье проповедник Руми закружился посреди улицы под стук молоточков золотых дел мастера.	In Konya a preacher named Rumi starts whirling in the street to the tapping of a goldsmith's hammers.
+me	1258	1260	0	Монголы взяли Багдад. Говорят, Тигр почернел от чернил утопленных книг.	The Mongols have taken Baghdad. They say the Tigris ran black with ink from the drowned books.
+eg	1382	1406	1	В Каире седой судья Ибн Хальдун расспрашивал тебя, откуда пришёл твой род и почему осел здесь.	In Cairo a grey-haired judge named Ibn Khaldun asks you where your family came from and why it settled here.
+me	1453	1460	0	Султан взял Константинополь. У большого храма ставят минареты.	The sultan has taken Constantinople. Minarets are going up beside the great church.
+me eg	1550	1650	0	В городе открыли кофейню. Мужчины сидят там до ночи, а муллы ворчат.	A coffee house has opened in town. The men sit there till night, and the mullahs grumble.
+fr	496	510	0	Король франков Хлодвиг крестился в Реймсе. С ним крестились три тысячи воинов.	Clovis, king of the Franks, is baptised at Reims. Three thousand of his warriors are baptised with him.
+fr de	1000	1200	0	Кузнец сделал тяжёлый плуг с отвалом. Тянут его восемь волов со всей деревни.	The smith has made a heavy plough with a mouldboard. It takes eight oxen, gathered from all over the village.
+fr de en	1315	1317	0	Третье лето льют дожди. Хлеб гниёт на корню.	For the third summer the rain does not stop. The grain rots in the fields.
+fr	1340	1450	0	Англичане опять жгут деревни. Крестьяне прячутся в церкви вместе со скотиной.	The English are burning villages again. The peasants hide in the church with their animals.
+fr	1572	1573	0	В Париже за одну ночь перебили гугенотов. Колокола звонили до утра.	In Paris the Huguenots are massacred in a single night. The bells ring until morning.
+it	1205	1226	1	На краю поля босой человек из Ассизи проповедовал птицам. Ты {засмеялся|засмеялась}, а он помахал тебе рукой.	At the edge of the field a barefoot man from Assisi preaches to the birds. You laugh, and he waves to you.
+it de fr	1100	1300	0	Из Венеции привезли перец и сахар. Сахар продают в аптеке, как лекарство.	Pepper and sugar have come from Venice. Sugar is sold at the apothecary's, as a medicine.
+it	1482	1499	1	В Милане бородатый мастер Леонардо долго рисовал твоё лицо. Потом дал монетку и ушёл.	In Milan a bearded master called Leonardo draws your face for a long time. Then he gives you a coin and leaves.
+de	9	12	0	В лесу германцы перебили три римских легиона. Вожди делят римских орлов.	In the forest the Germans have destroyed three Roman legions. The chiefs share out the eagles.
+de	1150	1300	0	Сеньор зовёт переселенцев на восток, на новые земли. Обещает десять лет без подати.	A lord calls for settlers to go east to new lands. He promises ten years without dues.
+de	1522	1522	1	На постоялом дворе в Йене рыцарь с чёрной бородой читал книгу на древнем языке. Потом сказали, что это был Лютер.	At an inn in Jena a black-bearded knight is reading a book in an ancient tongue. Later they say it was Luther.
+de	1524	1525	0	Мужики поднялись под знаменем с башмаком. Требуют отменить барщину.	The peasants rise under a banner with a boot on it. They want an end to forced labour.
+en	1350	1400	0	После мора рук не хватает. Ты {запросил|запросила} двойную плату — и тебе заплатили.	After the plague there are too few hands. You ask for double pay, and you get it.
+en	1381	1381	0	Мужики идут на Лондон. Поп Джон Болл спрашивает: когда Адам пахал, а Ева пряла, кто был господином?	The peasants march on London. The priest John Ball asks: when Adam delved and Eve span, who was then the gentleman?
+en	1387	1399	1	По дороге в Кентербери полный господин Чосер просил каждого паломника рассказать историю.	On the road to Canterbury a stout gentleman named Chaucer asks every pilgrim to tell a story.
+en	1490	1640	0	Общинный луг обнесли изгородью. Теперь там пасутся овцы лорда.	The common has been fenced in. Now the lord's sheep graze there.
+en	1594	1611	1	В лондонском трактире актёр Шекспир слушал, как ты ругаешься, и что-то записывал.	In a London tavern an actor called Shakespeare listens to you swearing and writes something down.
+ru	862	900	0	Из-за моря позвали варяжского князя. Теперь дань везут ему.	A Varangian prince has been called from over the sea. Now the tribute goes to him.
+ru	1050	1450	0	Сосед пишет жене на бересте: пришли рубаху. Она отвечает так же.	The neighbour scratches a note to his wife on birch bark: send me a shirt. She answers the same way.
+ru	1350	1392	1	В лесу у Радонежа игумен Сергий сам колол дрова. Благословил тебя и дал хлеба.	In the forest near Radonezh the abbot Sergius chops his own wood. He blesses you and gives you bread.
+ru	1405	1427	1	Инок Андрей Рублёв расписывал собор. Попросил тебя подержать лестницу.	The monk Andrei Rublev is painting the cathedral. He asks you to hold the ladder.
+ru	1497	1600	0	Уйти от хозяина теперь можно только раз в год — неделю около Юрьева дня.	Now you may leave your master only once a year, in the week around St George's Day.
+ru	1565	1572	0	По дороге скачут опричники с собачьими головами у сёдел. Соседнее село сожгли.	Oprichniki ride down the road with dogs' heads at their saddles. The next village is burned.
+ru	1601	1603	0	Третий год неурожай. В Москве царь раздаёт хлеб, и туда идут тысячами.	The third year of failed harvests. The tsar gives out bread in Moscow, and thousands go there.
+af	330	360	0	Купцы с востока говорят: царь Аксума принял веру в распятого бога. На его монетах теперь крест.	Traders from the east say the king of Axum has taken up the faith of the crucified god. His coins now bear a cross.
+af	300	800	0	Через пески пришли люди на верблюдах. Меняют соль на золото.	Men on camels have come across the sands. They trade salt for gold.
+af	1220	1450	0	Говорят, далеко на юге царь живёт за высокими каменными стенами. Простой люд селится внизу.	They say that far to the south a king lives behind high stone walls. The common folk live below.
+af	1235	1260	0	Сундиата разбил царя-колдуна Сумангуру. Гриоты поют об этом на каждом празднике.	Sundiata has beaten the sorcerer-king Sumanguru. The griots sing of it at every feast.
+af	1327	1400	0	В Томбукту выстроили мечеть из глины. После каждых дождей её обмазывают заново всем городом.	A mosque of clay has been built in Timbuktu. After every rainy season the whole town plasters it again.
+af	1550	1650	0	Португальцы привезли из-за моря новое зерно — маис. Растёт быстрее проса.	The Portuguese bring a new grain from over the sea: maize. It grows faster than millet.
+jp	646	700	0	Землю переписали и поделили по едокам. Подать платят рисом, тканью и работой.	The land has been surveyed and divided by mouths to feed. Taxes are paid in rice, cloth and labour.
+jp	743	752	0	По всей стране собирают на огромного бронзового Будду в Наре. Хоть горсть риса, хоть веточку.	All over the land they collect for a huge bronze Buddha in Nara. A handful of rice will do, or a single twig.
+jp	1281	1281	0	Монгольский флот у Хакаты. Ночью налетел тайфун и разметал корабли.	The Mongol fleet is off Hakata. In the night a typhoon scatters the ships.
+jp	1543	1560	0	На Танэгасиму приплыли чужеземцы с огнестрельными палками. Князь купил две и велел кузнецам сделать такие же.	Foreigners with fire-sticks land on Tanegashima. The lord buys two and has his smiths copy them.
+jp	1549	1551	1	Чужеземный монах Франциск рассказывал через толмача о своём боге. Ты {послушал|послушала} и {пошёл|пошла} по делам.	A foreign monk named Francis speaks of his god through an interpreter. You listen, then go about your business.
+jp	1588	1590	0	Хидэёси велел собрать у крестьян все мечи. Говорят, их переплавят на гвозди для храма.	Hideyoshi orders all swords taken from the peasants. They say they will be melted into nails for a temple.
+sea	680	1100	0	Корабли Шривиджаи ждут ветра в проливе. Купцы платят пошлину и молятся в монастырях.	Srivijaya's ships wait for the wind in the strait. The merchants pay their dues and pray at the monasteries.
+sea	780	830	0	На Яве строят каменную гору, а на ней сотни будд. Камень носят всей округой.	On Java they are building a mountain of stone with hundreds of Buddhas on it. The whole district carries stone.
+sea	1050	1150	0	Царь велел вырыть водоём длиной в полдня пути. Теперь рис растёт и в сухой сезон.	The king has a reservoir dug half a day's walk long. Now rice grows even in the dry season.
+sea	1296	1297	1	Китайский посол Чжоу Дагуань записывал, как женщины на базаре торгуются за каждую рыбу.	A Chinese envoy called Zhou Daguan writes down how the women in the market haggle over every fish.
+sea	1414	1500	0	Князь Малакки принял ислам. Следом за ним принимают купцы, а потом и рыбаки.	The prince of Malacca has taken up Islam. The merchants follow him, and then the fishermen.
+sea	1571	1650	0	Из Манилы раз в год уходит за океан большой корабль. Возвращается с серебром.	Once a year a great ship leaves Manila to cross the ocean. It comes back with silver.
+meso	200	550	0	В большом городе на нагорье живут сто тысяч человек. Туда несут обсидиан и перья.	A hundred thousand people live in the great city on the plateau. Obsidian and feathers are carried there.
+meso	800	950	0	Дожди не приходят. Город пустеет, люди уходят в лес.	The rains do not come. The city empties, and people go off into the forest.
+meso	1450	1454	0	Мороз побил маис. Люди продают себя в рабство за корзину початков.	Frost has killed the maize. People sell themselves into slavery for a basket of cobs.
+meso	1450	1519	0	Цветочная война. Юношей берут в плен не ради выкупа, а для алтаря.	A flower war. Young men are taken captive not for ransom but for the altar.
+meso andes	1550	1650	0	Испанские коровы забрели в маисовое поле. Жаловаться некому.	Spanish cows wander into the maize field. There is no one to complain to.
+andes	100	700	0	Гончары лепят кувшины с лицами — смешными, больными, знакомыми.	The potters make jugs with faces: funny ones, sick ones, familiar ones.
+andes	500	1000	0	Из Тиуанако пришли люди с посохами. Учат поднимать грядки на берегу озера.	Men with staffs have come from Tiwanaku. They teach how to raise beds on the lakeshore.
+andes	1440	1532	0	Инка велел проложить дорогу через горы. На каждом переходе — склад с зерном и одеждой.	The Inca has a road built across the mountains. At every stage there is a storehouse of grain and cloth.
+andes	1450	1532	0	Подошла твоя очередь на миту: месяц таскать камни для крепости.	It is your turn for the mit'a: a month of hauling stone for the fortress.
+andes	1470	1532	0	Мимо пробежал гонец с раковиной. Говорят, свежая рыба с моря доходит до Куско за два дня.	A runner with a conch shell goes past. They say fresh fish from the sea reaches Cusco in two days.
+andes	1573	1650	0	Испанцы забирают каждого седьмого на серебряную гору Потоси. Многие не возвращаются.	The Spaniards take one man in seven to the silver mountain of Potosí. Many never come back.
+au	1	1650	0	Раз в несколько лет, когда родят сосны бунья, сходятся сотни людей. Песни, обмен, свадьбы.	Every few years, when the bunya pines bear, hundreds of people gather. Songs, trading, weddings.
+au	1	1650	0	Из-за пустыни принесли сушёные листья питури. Их жуют на больших сборищах.	Dried pituri leaves have come from across the desert. They are chewed at great gatherings.
+au	1606	1644	0	С моря видели большую лодку с белыми крыльями. Постояла и ушла.	A great canoe with white wings was seen at sea. It stayed a while and left.
+cn	1720	1820	0	Земли не хватает. Распахивают горы под маис, а после дождей склоны съезжают в реку.	There is not enough land. Hillsides are ploughed for maize, and after the rains they slide into the river.
+cn	1820	1850	0	Сын старосты курит опиум. Сначала продал быка, потом землю.	The headman's son smokes opium. First he sold the ox, then the land.
+in	1769	1771	0	Голод в Бенгалии. Умер каждый третий, а налог не снизили.	Famine in Bengal. One in three dies, and the tax is not lowered.
+in	1815	1850	0	На рынок привезли дешёвую английскую ткань. Ткачи сидят без работы.	Cheap English cloth has reached the market. The weavers sit idle.
+sea	1815	1815	0	Взорвалась гора Тамбора. Три дня темно, как ночью.	Mount Tambora explodes. For three days it is dark as night.
+jp	1689	1689	1	Странствующий поэт Басё заночевал у вас и всю ночь ворчал на блох. Утром оставил стишок.	A wandering poet called Bashō spends the night with you and grumbles about the fleas all night. In the morning he leaves a poem.
+jp	1830	1849	1	Старик Хокусай сидел у дороги и рисовал Фудзи. Тебя тоже вписал — крошечной фигуркой на мосту.	Old Hokusai sits by the road drawing Mount Fuji. He puts you in too, a tiny figure on a bridge.
+me	1683	1684	0	Мужчин забрали в поход на Вену. Вернулись немногие.	The men are taken for the campaign against Vienna. Few come back.
+eg	1820	1848	0	Паша велел сеять хлопок на продажу. Мужчин забирают рыть каналы и в солдаты.	The pasha orders cotton sown for sale. The men are taken to dig canals and to be soldiers.
+fr	1709	1709	0	Великий мороз. Вино замёрзло в бочках, птицы падают на лету.	The Great Frost. Wine freezes in the casks, and birds drop from the sky.
+de	1746	1770	0	Король велел сажать картофель. Сажают, но есть пока боятся.	The king orders potatoes planted. People plant them, but are afraid to eat them.
+de	1776	1830	1	В Веймаре важный господин Гёте спрашивал у тебя, как называются травы на лугу.	In Weimar a grand gentleman named Goethe asks you the names of the meadow plants.
+en	1770	1840	0	В долине поставили прядильную фабрику. Детей берут с восьми лет.	A spinning mill has been built in the valley. They take children from the age of eight.
+en	1834	1850	0	Помощь бедным теперь только в работном доме. Мужей и жён там держат порознь.	Poor relief now means the workhouse. Husbands and wives are kept apart there.
+fr de en it us	1816	1816	0	Летом выпал снег. К зиме хлеб подорожал вдвое.	Snow falls in summer. By winter bread costs twice as much.
+it	1796	1800	0	Пришли французы и посадили на площади дерево свободы. Церковное серебро увезли в Париж.	The French arrive and plant a liberty tree in the square. The church silver is carted off to Paris.
+ru	1653	1700	0	Велят креститься тремя перстами. Бабка крестится по-старому и прячет иконы.	Now you must cross yourself with three fingers. Grandmother crosses herself the old way and hides the icons.
+ru	1793	1850	0	Рекрутский набор. Парня забрили на двадцать пять лет — провожали, как покойника.	Conscription. A lad is taken for twenty-five years, and seen off like a dead man.
+ru	1820	1836	1	На почтовой станции курчавый барин ждал лошадей и смешил смотрителя. Потом сказали — Пушкин.	At the posting station a curly-haired gentleman waits for horses and makes the stationmaster laugh. Later they say it was Pushkin.
+af	1720	1850	0	Король меняет пленных у белых на ружья. Ружья нужны, чтобы брать новых пленных.	The king trades captives to the white men for guns. The guns are for taking more captives.
+af	1804	1812	0	Шейх Усман дан Фодио поднял правоверных против царей хауса.	Sheikh Usman dan Fodio raises the faithful against the Hausa kings.
+latam	1695	1760	0	В Минас-Жерайс нашли золото. Хозяин гонит туда всех рабов.	Gold has been found in Minas Gerais. The master drives all his slaves there.
+latam	1799	1804	1	Немецкий барон Гумбольдт мерил в деревне высоту вулкана. Дал тебе посмотреть в свою трубу.	A German baron called Humboldt measures the height of the volcano by the village. He lets you look through his telescope.
+latam	1813	1825	0	Через долину прошла армия Боливара. Говорят, испанцам конец.	Bolívar's army passes through the valley. They say the Spaniards are finished.
+us	1775	1783	0	Ополченцы собираются на лугу с ружьями. Король далеко, а налог близко.	The militia gathers on the green with muskets. The king is far away, but the tax is close.
+us	1838	1839	0	Чероки гонят на запад, за Миссисипи. По дороге умирает каждый четвёртый.	The Cherokee are driven west, beyond the Mississippi. One in four dies on the way.
+us	1848	1855	0	В Калифорнии нашли золото. Сосед бросил ферму и уехал.	Gold has been found in California. A neighbour leaves his farm and goes.
+au	1788	1790	0	На берег высадились люди с ружьями и коровами. Поставили флаг.	People with guns and cows land on the shore. They raise a flag.
+cn	1876	1879	0	Великий голод на севере. У дорог стоят дети с соломинкой в волосах — на продажу.	The great famine in the north. Children stand by the roads with straw in their hair: for sale.
+cn	1911	1912	0	Республика! На базаре мужчинам отрезают косы прямо ножницами.	A republic! In the market men's queues are cut off with shears on the spot.
+jp	1873	1880	0	Землю оценили в деньгах. Налог тоже деньгами, хоть урожай пропади.	The land has been valued in money. The tax is in money too, harvest or no harvest.
+jp	1923	1923	0	Землетрясение в Канто. Токио горит два дня.	The Kantō earthquake. Tokyo burns for two days.
+in	1857	1858	0	Сипаи восстали из-за патронов в сале. Англичане вешают на деревьях у дороги.	The sepoys have risen over cartridges greased with fat. The British hang men from the trees along the road.
+in	1901	1941	1	Седобородый поэт Тагор учит детей под деревьями. Ты {постоял|постояла} и {послушал|послушала}, как они поют.	A grey-bearded poet named Tagore teaches children under the trees. You stop and listen to them sing.
+in	1943	1944	0	Голод в Бенгалии. В Калькутте у ворот просят не риса, а рисового отвара.	Famine in Bengal. At the gates in Calcutta people beg not for rice but for the water it was boiled in.
+sea	1892	1896	1	В Дапитане ссыльный доктор Рисаль учит деревенских детей и бесплатно лечит глаза.	In Dapitan an exiled doctor named Rizal teaches the village children and treats eyes for free.
+sea	1900	1940	0	На месте леса разбили каучуковую плантацию. Платят мало, зато деньгами.	The forest has been cleared for a rubber plantation. The pay is poor, but it is in money.
+me	1915	1916	0	Армянских соседей угнали в сторону пустыни. Через неделю в их доме жили другие.	The Armenian neighbours are marched off toward the desert. A week later others are living in their house.
+me	1948	1949	0	Война. Соседи ушли из деревни, забрав ключ от дома, — думали, на неделю.	War. The neighbours leave the village taking the house key, thinking it is for a week.
+fr	1870	1871	0	Париж в осаде. В мясной лавке продают крыс.	Paris is under siege. The butcher sells rats.
+fr	1888	1889	1	В Арле рыжий голландец Винсент писал поле, пока ты {жал|жала} пшеницу.	In Arles a red-haired Dutchman named Vincent paints the field while you reap the wheat.
+de	1923	1923	0	Хлеб стоит миллиард марок. Зарплату несут домой в корзине.	Bread costs a billion marks. Wages are carried home in a basket.
+de	1938	1942	0	Соседа-еврея увели ночью. Его лавку отдали другому.	The Jewish neighbour is taken away in the night. His shop is given to someone else.
+it	1880	1914	0	Брат уплыл в Америку. Через год прислал денег и карточку, где он в шляпе.	Your brother has sailed to America. A year later he sends money and a photograph of himself in a hat.
+ru	1891	1892	0	Голод на Волге. Пекут хлеб с лебедой.	Famine on the Volga. Bread is baked with goosefoot.
+ru	1892	1898	1	Доктор Чехов в Мелихове вылечил тебе кашель и денег не взял.	Doctor Chekhov at Melikhovo cures your cough and takes no money.
+ru	1929	1933	0	В колхоз забрали корову и лошадь. Кто не пошёл, того раскулачили.	The cow and the horse are taken into the collective farm. Those who refuse are dekulakised.
+ru	1937	1938	0	Ночью приехала машина. Соседа увезли, больше его никто не видел.	A car comes in the night. The neighbour is taken away, and nobody sees him again.
+af	1853	1873	1	Худой белый лекарь Ливингстон спросил, куда течёт ваша река, и записал ответ в книжку.	A thin white doctor called Livingstone asks where your river flows and writes the answer in his notebook.
+af	1889	1897	0	Мор на скот. Пали почти все коровы, пастухи голодают.	A cattle plague. Nearly all the cows are dead, and the herders go hungry.
+af	1900	1930	0	Сосед посадил какао. Через пять лет у него железная крыша.	A neighbour has planted cocoa. Five years later he has an iron roof.
+latam	1888	1888	0	Принцесса подписала указ: рабства в Бразилии больше нет.	The princess signs the decree: there is no more slavery in Brazil.
+latam	1910	1920	0	Сапата говорит: земля тому, кто её пашет. Мужчины уходят к нему.	Zapata says the land belongs to those who till it. The men go off to join him.
+us	1849	1860	1	Долговязый адвокат Линкольн рассказал в суде анекдот. Смеялся даже судья.	A lanky lawyer named Lincoln tells a joke in court. Even the judge laughs.
+us	1934	1937	0	Пыльные бури. Днём темно, на зубах песок. Семьи грузят всё на машину и едут в Калифорнию.	Dust storms. It is dark at noon and there is grit in your teeth. Families load everything into a car and head for California.
+au	1851	1860	0	Нашли золото. Из города уехали все мужчины, даже полицейские.	Gold has been found. Every man has left town, even the police.
+*	1903	1950	0	Над деревней пролетел аэроплан. Собаки лаяли, пока он не скрылся.	An aeroplane flies over the village. The dogs bark until it is gone.
+cn	1980	2015	0	Второго ребёнка нельзя. Штраф — годовой доход.	A second child is not allowed. The fine is a year's income.
+cn	1990	2020	0	Соседская дочь уехала на фабрику в Шэньчжэнь. Домой приезжает раз в год, на Новый год.	The neighbours' daughter has gone to a factory in Shenzhen. She comes home once a year, for the New Year.
+in	1970	1996	0	В деревне открыли молочный кооператив. Молоко сдают дважды в день, деньги дают сразу.	A milk cooperative has opened in the village. Milk is brought in twice a day and paid for on the spot.
+in	1976	1977	0	Чрезвычайное положение. Мужчин уговаривают на стерилизацию, а иногда и не уговаривают.	The Emergency. Men are talked into sterilisation, and sometimes not talked into it.
+sea	1965	1975	0	Над рисовыми полями летают самолёты. Деревню переселили за колючую проволоку.	Aeroplanes fly over the rice fields. The village has been moved behind barbed wire.
+sea	1975	1979	0	Красные кхмеры выгнали всех из городов в поле. Очки на носу — уже повод убить.	The Khmer Rouge drive everyone out of the cities into the fields. Wearing glasses is reason enough to be killed.
+jp	1964	1964	0	Пустили поезд-пулю. До Осаки теперь четыре часа.	The bullet train opens. Osaka is four hours away now.
+me	1973	1980	0	Нефть подорожала вчетверо. В городе растут стеклянные башни, строить их едут люди из Индии.	Oil has quadrupled in price. Glass towers rise in the city, and workers come from India to build them.
+me	2011	2020	0	Война. Семья уходит через границу, в палаточный лагерь.	War. The family crosses the border to a tent camp.
+eu	1948	1960	0	Пришла американская помощь. Поля пашут новым трактором.	American aid arrives. The fields are ploughed with a new tractor.
+de	1961	1961	0	За ночь город перегородили колючей проволокой. Тётя осталась по ту сторону.	Overnight the city is cut in two with barbed wire. Your aunt is left on the other side.
+ru	1961	1961	1	В Москве в открытой машине проехал Гагарин. Улыбнулся прямо в твою сторону.	In Moscow Gagarin rides past in an open car. He smiles right in your direction.
+ru	1986	1986	0	Под Чернобылем взорвалась станция. Детей увозят, яблоки из сада есть нельзя.	The plant near Chernobyl has exploded. Children are taken away, and the apples from the garden must not be eaten.
+af	1990	2010	0	На кладбище каждую неделю хоронят молодых. Внуков растят бабушки.	Every week the young are buried in the graveyard. Grandmothers raise the grandchildren.
+af	2007	2026	0	Племянник прислал деньги из города прямо на телефон. Ты {получил|получила} их в лавке через минуту.	A nephew sends money from the city straight to your phone. You collect it at the shop a minute later.
+latam	1955	1990	0	Семья перебралась в город, на склон над рекой. Дом собрали из того, что нашли.	The family moves to the city, onto a hillside above the river. The house is built from whatever could be found.
+latam	1973	1990	0	Власть взяли военные. Студента с соседней улицы забрали, мать ходит с его фотографией.	The army has taken power. A student from the next street is taken, and his mother walks with his photograph.
+us	1955	1965	0	Чернокожие бойкотируют автобусы. Месяцами ходят на работу пешком.	Black people boycott the buses. For months they walk to work.
+us	1963	1963	1	В Вашингтоне проповедник Кинг говорил о своей мечте. Ты {стоял|стояла} так далеко, что {видел|видела} только белую рубашку.	In Washington a preacher named King speaks of his dream. You stand so far back you can see only a white shirt.
+au	1948	1970	0	Пароходом привезли переселенцев из Европы. Новые соседи говорят по-гречески.	A ship brings settlers from Europe. The new neighbours speak Greek.
+au	1967	1967	0	Референдум: коренных жителей будут считать в переписи. Дед долго молчит.	A referendum: Aboriginal people will be counted in the census. Grandfather says nothing for a long time.
+am	-11000	-9500	0	Больших зверей всё меньше. Охотники ходят за ними по нескольку дней и часто приходят ни с чем.	The great beasts grow scarce. The hunters follow them for days and often come back with nothing.
+cn	-18000	-12000	0	Женщины лепят из глины горшки и обжигают в костре. Теперь можно варить.	The women shape pots from clay and fire them in the hearth. Now food can be boiled.
+cn	-1900	-1500	0	У князя появились котлы из бронзы. В них варят мясо для предков.	The lord has cauldrons of bronze now. Meat for the ancestors is cooked in them.
+cn	-1046	-1040	0	Чжоуский князь разбил Шан. Новые хозяева говорят, что Небо отвернулось от старых.	The lord of Zhou has crushed the Shang. The new masters say Heaven has turned away from the old ones.
+cn	-475	-221	0	Царства воюют без конца. Из деревни опять забирают каждого пятого.	The kingdoms are at war without end. Again one man in five is taken from the village.
+cn	-117	-81	0	Соль и железо теперь продаёт только казна. Соль подорожала, а мотыги стали хуже.	Salt and iron are now sold only by the state. Salt is dearer and the hoes are worse.
+in	-1500	-1000	0	С северо-запада пришли люди на колесницах. Поют гимны огню и пьют сому.	People in chariots come from the north-west. They sing hymns to fire and drink soma.
+in	-320	-185	0	Царские люди меряют поле верёвкой. Четверть урожая — царю.	The king's men measure the field with a rope. A quarter of the harvest goes to the king.
+in	-180	-10	0	На базаре ходят монеты с греческим царём. С одной стороны надпись по-гречески, с другой — по-нашему.	Coins with a Greek king pass in the market. Greek on one side, our own letters on the other.
+me	-2334	-2279	0	Саргон из Аккада подчинил все города. Теперь подать везут ему.	Sargon of Akkad has conquered all the cities. Now the tribute goes to him.
+me	-2112	-2050	0	В Уре строят ступенчатую гору для бога Луны. Каждая семья даёт кирпичи.	In Ur they are building a stepped mountain for the Moon god. Every family gives bricks.
+me	-612	-610	0	Ниневия пала. Беженцы говорят, что от города остались одни холмы золы.	Nineveh has fallen. The refugees say nothing is left of the city but mounds of ash.
+me	-520	-330	0	По царской дороге скачут гонцы. На каждой станции их ждёт свежий конь.	Couriers gallop along the royal road. At every station a fresh horse is waiting.
+eg	-280	-200	0	В Александрии с каждого корабля забирают книги и переписывают. Хозяину возвращают копию.	In Alexandria they take the books off every ship to copy them. The owner gets the copy back.
+eg	-47	-47	0	По Нилу плывёт царица Клеопатра на золочёной барке. Весь берег высыпал смотреть.	Queen Cleopatra sails up the Nile on a gilded barge. The whole bank turns out to watch.
+med	-750	-550	0	Молодые садятся на корабли — основывать новый город за морем. Уплыл и брат матери.	The young men take ship to found a new city over the sea. Your mother's brother goes too.
+med	-600	-500	0	На рынке платят кусочками серебра с печатью. Раньше меняли зерно на горшки.	In the market they pay with little stamped pieces of silver. Before, grain was traded for pots.
+med	-430	-426	0	Чума в Афинах. Люди умирают прямо в храмах.	Plague in Athens. People die in the temples.
+med	-430	-380	1	На Косе лекарь Гиппократ осмотрел тебя. Велел есть ячменную кашу и не тратиться на жрецов.	On Kos the physician Hippocrates examines you. He tells you to eat barley gruel and save your money on priests.
+it med	-71	-70	0	Вдоль дороги на Капую поставили шесть тысяч крестов.	Six thousand crosses stand along the road to Capua.
+af	-900	1	0	Мастер лепит из глины головы с огромными глазами. Их ставят на алтари.	A craftsman models clay heads with huge eyes. They are set on the altars.
+meso	-1400	1	0	На площадке играют в каучуковый мяч. Бить можно только бедром.	On the court they play with a rubber ball. It may only be struck with the hip.
+meso	-500	-100	0	На срезанной вершине горы строят город. Вода далеко внизу, носить её приходится на себе.	A city is being built on a levelled mountaintop. The water is far below, and must be carried up on your back.
+andes	-2600	-2000	0	На побережье насыпают каменные холмы для праздников. Строителям платят сушёной рыбой.	On the coast they raise stone mounds for the festivals. The builders are paid in dried fish.
+cn	9	23	0	Ван Ман объявил всю землю царской. Продавать её нельзя, а деньги меняют чуть не каждый год.	Wang Mang declares all land the emperor's. It may not be sold, and the money changes almost every year.
+cn	184	192	0	Крестьяне в жёлтых повязках поднялись против двора. Говорят, синее небо умерло.	Peasants in yellow headbands rise against the court. They say the blue sky is dead.
+cn	860	960	0	В монастыре печатают сутры с досок. Свиток стоит связку монет.	At the monastery they print sutras from wooden blocks. A scroll costs a string of coins.
+cn	1069	1085	0	Казна весной даёт крестьянам зерно в долг. Осенью забирает с лихвой.	In spring the treasury lends grain to the peasants. In autumn it takes it back with interest.
+cn	1127	1130	0	Чжурчжэни взяли Кайфын. Двор бежит на юг, а следом бегут все.	The Jurchens have taken Kaifeng. The court flees south, and everyone flees after it.
+cn	1344	1348	0	Хуанхэ ушла в новое русло. Половину уезда смыло.	The Yellow River has jumped its course. Half the county is washed away.
+cn	1368	1370	0	Бывший нищий монах Чжу Юаньчжан выгнал монголов. Теперь он император.	Zhu Yuanzhang, once a beggar monk, has driven out the Mongols. Now he is emperor.
+cn	1406	1420	0	В Пекине строят дворец для императора. Брёвна сплавляют с юго-запада годами.	In Beijing a palace is being built for the emperor. The logs take years to float down from the south-west.
+in	550	700	0	Сыновья старосты играют на доске в войну: слоны, кони, колесницы.	The headman's sons play war on a board: elephants, horses, chariots.
+in	1001	1026	0	Из-за гор пришёл Махмуд Газневи. Ограбил храм и увёл слонов.	Mahmud of Ghazni comes over the mountains. He loots the temple and takes the elephants.
+in	1300	1316	0	Султан велел продавать зерно по одной цене. Торговца, что обвешивал, высекли на базаре.	The sultan orders grain sold at one price. A trader who gave short weight is flogged in the market.
+in	1327	1335	0	Султан велел всей столице переселиться на юг. Через несколько лет — вернуться обратно.	The sultan orders the whole capital to move south. A few years later, to move back.
+in	1398	1399	0	Тимур взял Дели. Говорят, из голов сложили башни.	Timur has taken Delhi. They say towers were built of heads.
+in	1498	1510	0	В Каликут пришли корабли с крестами на парусах. Чужаки ищут перец.	Ships with crosses on their sails have come to Calicut. The strangers want pepper.
+in	1526	1530	0	При Панипате султана разбил пришелец Бабур. У него пушки, грохочут как гром.	At Panipat the sultan is beaten by a newcomer called Babur. He has cannon that roar like thunder.
+in	1630	1632	0	Второй год нет дождей. Из деревни уходят целыми семьями.	No rain for the second year. Whole families leave the village.
+me	70	73	0	Римляне сожгли Иерусалимский храм. Пленных гонят в Рим.	The Romans have burned the Temple in Jerusalem. Captives are marched to Rome.
+me	260	270	0	Персидский шах взял в плен римского императора. Говорят, тот подставляет спину, когда шах садится на коня.	The Persian shah has captured a Roman emperor. They say he must bend his back for the shah to mount his horse.
+me	762	766	0	Халиф строит на Тигре круглый город. Каменщиков зовут со всей страны.	The caliph is building a round city on the Tigris. Masons are called from all over the land.
+me	794	850	0	В Багдаде делают бумагу. Говорят, секрет выведали у пленных китайцев.	Paper is made in Baghdad. They say the secret came from Chinese prisoners.
+me	869	883	0	Рабы на солончаках у Басры восстали. Их вождь обещает каждому дом и своих рабов.	The slaves on the salt flats near Basra have risen. Their leader promises each a house and slaves of his own.
+eg	969	975	0	С запада пришли новые халифы и заложили город Каир.	New caliphs come from the west and found a city called Cairo.
+me	1098	1110	0	Франки взяли Иерусалим. Беженцы рассказывают такое, что дети не спят.	The Franks have taken Jerusalem. The refugees tell things that keep the children awake.
+me	1187	1190	0	Салах ад-Дин отбил Иерусалим. Полы в мечети моют розовой водой.	Saladin has retaken Jerusalem. The mosque floors are washed with rosewater.
+me eg	1260	1262	0	Мамлюки разбили монголов у Айн-Джалута. Впервые их кто-то остановил.	The Mamluks have beaten the Mongols at Ain Jalut. For the first time someone has stopped them.
+me	1501	1524	0	Шах Исмаил велел всем молиться по-шиитски. Кто против, того казнят.	Shah Ismail orders everyone to pray the Shia way. Whoever objects is executed.
+eg	1517	1520	0	Турки вошли в Каир. Последнего мамлюкского султана повесили на воротах Зувейла.	The Turks have entered Cairo. The last Mamluk sultan is hanged at the Zuwayla gate.
+fr	732	735	0	У Пуатье франки разбили сарацин. Через деревню везут раненых.	Near Poitiers the Franks have beaten the Saracens. The wounded are carried through the village.
+fr	1140	1300	0	В городе строят собор. Говорят, достроят его разве что внуки.	A cathedral is going up in town. They say only the grandchildren will see it finished.
+fr	1209	1229	0	С севера пришли крестоносцы на здешних еретиков. В Безье перебили весь город.	Crusaders come from the north against the heretics here. In Béziers the whole town is slaughtered.
+fr	1358	1358	0	Мужики поднялись на господ. Через месяц их вешали на каждом дубе.	The peasants rise against the lords. A month later they are hanged from every oak.
+fr	1598	1610	0	Король Генрих хочет, чтобы по воскресеньям у каждого крестьянина в горшке была курица.	King Henry wants every peasant to have a chicken in the pot on Sundays.
+it	1497	1498	0	Во Флоренции монах Савонарола велел жечь зеркала и наряды. Соседка бросила в огонь свою лютню.	In Florence the friar Savonarola has mirrors and finery burned. A neighbour throws her lute on the fire.
+it	1527	1527	0	Наёмники императора разграбили Рим. Говорят, сам папа прятался в крепости.	The emperor's mercenaries have sacked Rome. They say the pope himself hid in the fortress.
+it	1630	1631	0	Чума в Милане. Говорят, её разносят мазальщики, что мажут двери ядом.	Plague in Milan. They say it is spread by anointers who smear poison on the doors.
+de	1241	1242	0	Монголы разбили рыцарей у Легницы. Говорят, у убитых отрезали по уху и набрали девять мешков.	The Mongols have beaten the knights at Legnica. They say they cut an ear from each of the dead and filled nine sacks.
+de ru	1350	1494	0	Ганзейские купцы привезли из Новгорода меха и воск. Обратно повезут сукно и соль.	Hanseatic merchants bring furs and wax from Novgorod. They will take back cloth and salt.
+de	1580	1650	0	В соседнем селе сожгли женщину за колдовство. Говорят, она навела град.	In the next village a woman is burned for witchcraft. They say she called down the hail.
+en	1215	1216	0	Бароны заставили короля Иоанна приложить печать к грамоте. Говорят, теперь и король под законом.	The barons force King John to seal a charter. They say now even the king is under the law.
+en	1337	1453	0	Король набирает лучников. По воскресеньям мужчины стреляют на лугу у церкви.	The king wants archers. On Sundays the men shoot at the butts by the church.
+en	1536	1541	0	Королевские люди закрыли монастырь. Свинец с крыши увезли, монахи разошлись.	The king's men close the abbey. The lead is stripped from the roof and the monks scatter.
+en	1588	1588	0	На холмах зажгли сигнальные костры. Испанский флот у берега.	Beacon fires are lit on the hills. The Spanish fleet is off the coast.
+ru	1016	1054	0	Князь Ярослав записал Правду: за убитого смерда — пять гривен.	Prince Yaroslav has the law written down: five grivnas for a killed peasant.
+ru	1257	1300	0	Ордынские писцы переписали всех. Дань теперь с каждого дыма.	The Horde's scribes have counted everyone. Now tribute is taken from every hearth.
+ru	1380	1380	0	Князь Дмитрий собирает рать на Мамая. Из села ушли все мужики.	Prince Dmitry is raising an army against Mamai. Every man has left the village.
+ru	1480	1482	0	На Угре постояли против ордынцев и разошлись. Говорят, дани больше не будет.	On the Ugra the armies faced the Horde and then parted. They say there will be no more tribute.
+ru	1582	1585	0	Казаки ушли за Камень воевать Сибирь. Вернулись с соболями.	The Cossacks have gone beyond the Stone to conquer Siberia. They come back with sables.
+ru	1605	1613	0	Смута. Цари меняются один за другим, по дорогам ходят шайки.	The Time of Troubles. Tsars come and go, and bands of robbers roam the roads.
+af	800	1076	0	Царь Ганы сидит в шатре, у входа собаки в золотых ошейниках. Каждый может прийти к нему с жалобой.	The king of Ghana sits in his pavilion, with dogs in gold collars at the door. Anyone may come to him with a grievance.
+af	1000	1500	0	Торговцы рассказывают про порты на восточном берегу: туда приходят корабли из Аравии и Индии за золотом и слоновой костью.	Traders tell of ports on the eastern shore where ships from Arabia and India come for gold and ivory.
+af	1400	1650	0	Литейщики при дворе обы отливают из бронзы головы предков.	The casters at the Oba's court cast the heads of ancestors in bronze.
+af	1496	1498	0	Аския Мухаммад едет в Мекку. С ним полторы тысячи всадников и мешки золота.	Askia Muhammad sets out for Mecca, with fifteen hundred horsemen and sacks of gold.
+af	1591	1595	0	Марокканцы с ружьями разбили войско сонгаев. Томбукту разграблен.	Moroccans with muskets have routed the Songhai army. Timbuktu is plundered.
+jp	250	550	0	Для умершего князя насыпают курган. Вокруг ставят глиняных воинов и коней.	A mound is raised for the dead lord. Clay warriors and horses are set around it.
+jp	552	585	0	Из Пэкче привезли статую Будды. Начался мор, и статую бросили в канал.	A statue of the Buddha is brought from Paekche. A plague starts, and the statue is thrown into a canal.
+jp	735	737	0	Оспа пришла с материка. Умер каждый третий.	Smallpox comes from the mainland. One in three dies.
+jp	1180	1185	0	Война Тайра и Минамото. Воины забирают рис прямо с поля.	War between the Taira and the Minamoto. Soldiers take the rice straight from the field.
+jp	1428	1500	0	Крестьяне всей округи сговорились и выгнали ростовщиков. Долговые расписки сожгли.	The peasants of the whole district band together and drive out the moneylenders. The debt papers are burned.
+jp	1467	1477	0	Война Онин. Киото горит десять лет подряд.	The Ōnin War. Kyoto burns for ten years.
+jp	1637	1650	0	Страну закрыли для чужеземцев. За крест на шее — смерть.	The country is closed to foreigners. A cross around the neck means death.
+sea	100	500	0	В порту меняют рис на индийские бусы. Попадаются и монеты с чужим царём из-за моря.	In the port rice is traded for Indian beads. Sometimes coins turn up with a foreign king from over the sea.
+sea	1113	1150	0	Под Ангкором строят новый храм. Тесать камень сгоняют из всех деревень.	A new temple is being built at Angkor. Men from every village are driven there to cut stone.
+sea	1511	1515	0	Португальцы взяли Малакку. Купцы уводят корабли в другие порты.	The Portuguese have taken Malacca. The merchants take their ships to other ports.
+meso	300	800	0	Писцы высекают на камне, какой царь и в какой день взял в плен соседнего.	Scribes carve in stone which king captured which neighbour, and on what day.
+meso	950	1150	0	В Толлане правят воины-ягуары. Говорят, крышу храма там держат каменные воины.	Jaguar warriors rule in Tollan. They say stone warriors hold up the roof of the temple there.
+meso	1325	1340	0	На острове посреди озера видели орла на кактусе. Мешики строят там город.	An eagle was seen on a cactus on an island in the lake. The Mexica are building a city there.
+meso	1521	1521	0	Испанцы и их союзники осадили Теночтитлан. Каналы забиты мёртвыми.	The Spaniards and their allies besiege Tenochtitlan. The canals are choked with the dead.
+andes	900	1450	0	Чиму роют канал из соседней долины. Вода пойдёт туда, куда скажет царь.	The Chimú are digging a canal from the next valley. The water will go where the king says.
+andes	1450	1532	0	Учётчик завязал узлы на шнурке: столько-то душ, столько-то лам.	The tally-keeper ties knots in a cord: so many souls, so many llamas.
+andes	1529	1532	0	Сыновья покойного Инки воюют за трон. Каждый сгоняет людей в своё войско.	The dead Inca's sons are at war over the throne. Each drives men into his own army.
+andes	1600	1601	0	Вулкан Уайнапутина взорвался. Пепел лежит на полях по колено.	The volcano Huaynaputina has exploded. Ash lies knee-deep on the fields.
+cn	1661	1669	0	Велено уйти от моря на тридцать ли. Дома сожгли, чтобы никто не вернулся.	Everyone is ordered thirty li back from the sea. The houses are burned so no one returns.
+cn	1793	1794	0	Говорят, английский посол привёз императору подарки. Император ответил, что Китаю ничего не нужно.	They say an English envoy brought the emperor gifts. The emperor answered that China needs nothing.
+cn	1839	1842	0	Английские корабли обстреливают побережье. Говорят, из-за опиума.	English ships shell the coast. Over opium, they say.
+in	1707	1720	0	Падишах умер, сыновья делят трон. Подать собирают по три раза.	The emperor is dead, and his sons fight for the throne. Taxes are collected three times over.
+in	1765	1790	0	Налог теперь собирает английская компания. Сборщики те же, только жёстче.	An English company collects the taxes now. The same collectors, only harsher.
+in	1810	1850	0	Плантатор-англичанин велел сеять индиго вместо риса. Спорить нельзя.	An English planter orders indigo sown instead of rice. There is no arguing.
+sea	1650	1760	0	Голландцы рубят лишние гвоздичные деревья, чтобы гвоздика не дешевела.	The Dutch cut down surplus clove trees so that cloves stay dear.
+sea	1825	1830	0	Принц Дипонегоро поднял Яву против голландцев. Война идёт пятый год.	Prince Diponegoro has raised Java against the Dutch. The war is in its fifth year.
+sea	1830	1850	0	Голландцы велели засадить пятую часть земли кофе и сахарным тростником — для них.	The Dutch order a fifth of the land planted with coffee and sugar cane, for them.
+jp	1783	1787	0	Вулкан Асама засыпал поля пеплом. Потом три года голод.	Mount Asama buries the fields in ash. Three years of famine follow.
+jp	1830	1830	0	Вся деревня ушла на богомолье в Исэ, не спросясь старосты. Говорят, с неба падают амулеты.	The whole village goes off to Ise on pilgrimage without asking the headman. They say charms are falling from the sky.
+me	1803	1806	0	Ваххабиты взяли Мекку. Паломники боятся идти.	The Wahhabis have taken Mecca. Pilgrims are afraid to go.
+eg	1798	1801	0	Французы высадились в Египте. С ними учёные — меряют пирамиды.	The French have landed in Egypt. Scholars come with them and measure the pyramids.
+fr	1720	1721	0	Бумаги банка Лоу ничего не стоят. Сосед отдал за них виноградник.	John Law's bank notes are worthless. A neighbour sold his vineyard for them.
+fr	1785	1800	0	Говорят, картофель есть можно: сам король носит его цветок в петлице.	They say potatoes are fit to eat: the king himself wears the flower in his buttonhole.
+fr	1830	1830	0	В Париже три дня строят баррикады. Короля опять сменили.	In Paris they build barricades for three days. The king has been changed again.
+de	1740	1786	0	Прусские вербовщики поят парней в трактире. Утром те уже солдаты.	Prussian recruiters buy the lads drinks at the inn. By morning they are soldiers.
+de	1830	1855	0	Полдеревни продаёт всё и уезжает в Америку.	Half the village sells up and leaves for America.
+de	1844	1844	0	Ткачи в Силезии разгромили дом фабриканта. Пришли солдаты.	The weavers in Silesia wreck the mill owner's house. The soldiers come.
+en	1739	1741	1	Проповедник Уайтфилд говорил прямо в поле перед углекопами. По чёрным щекам текли светлые дорожки слёз.	The preacher Whitefield speaks in an open field to the colliers. Tears leave white streaks down their black cheeks.
+en	1811	1813	0	Ночью люди генерала Лудда разбили станки у фабриканта.	In the night General Ludd's men smash the mill owner's frames.
+it	1656	1657	0	Чума в Неаполе. Мёртвых не успевают хоронить.	Plague in Naples. The dead cannot be buried fast enough.
+it	1848	1849	0	Восстания по всей Италии. Студенты строят баррикады и поют.	Uprisings all over Italy. Students build barricades and sing.
+ru	1670	1671	0	Стенька Разин гуляет по Волге. Боярские усадьбы горят.	Stenka Razin roams the Volga. The boyars' manors burn.
+ru	1773	1775	0	Пугачёв называет себя царём Петром. Мужики вешают помещиков на воротах.	Pugachev calls himself Tsar Peter. The peasants hang landowners from their gates.
+af	1701	1720	0	В Кумаси с неба опустился золотой стул. Говорят, в нём душа всего народа ашанти.	In Kumasi a golden stool has come down from the sky. They say the soul of the whole Asante people is in it.
+af	1818	1830	0	Торговцы говорят: на юге вождь Чака собрал войско с короткими копьями. Оттуда бегут толпами.	Traders say that in the south a chief called Shaka has raised an army with short spears. People flee from there in crowds.
+latam andes	1780	1782	0	Тупак Амару поднял индейцев против коррехидоров. Говорят, Инка вернулся.	Túpac Amaru raises the Indians against the corregidores. They say the Inca has returned.
+latam us	1791	1804	0	На сахарном острове рабы восстали — и победили.	On the sugar island the slaves have risen, and won.
+us	1692	1693	0	В Сейлеме вешают ведьм. Девочки кричат и показывают пальцем.	In Salem they are hanging witches. The girls scream and point.
+us	1825	1850	0	По новому каналу баржи идут прямо до Нью-Йорка. За пшеницу дают больше.	Barges go all the way to New York on the new canal. Wheat fetches more.
+au	1720	1850	0	С севера на лодках пришли макассарцы за трепангом. Привезли табак и ножи.	Makassar men come in boats from the north for sea cucumbers. They bring tobacco and knives.
+au	1789	1790	0	Оспа пришла в стойбища. Мёртвые лежат у воды.	Smallpox reaches the camps. The dead lie by the water.
+au	1820	1850	0	Белые пасут овец на ваших землях. Колодцы теперь их.	White men graze sheep on your country. The waterholes are theirs now.
+cn	1900	1901	0	Ихэтуани рвут телеграфные провода и жгут миссии. Потом пришли иностранные войска.	The Boxers tear down telegraph wires and burn the missions. Then foreign armies come.
+cn	1905	1906	0	Экзамены на чин отменили. Деревенский учитель сжёг свои прописи.	The civil examinations are abolished. The village teacher burns his copybooks.
+cn	1934	1935	0	Через уезд прошли красные. За рис, что брали, платили.	The Reds pass through the county. They pay for the rice they take.
+cn	1937	1945	0	Японцы заняли уезд. Взрослые учат детей кланяться часовому.	The Japanese occupy the county. The grown-ups teach the children to bow to the sentry.
+jp	1930	1934	0	Шёлк подешевел втрое. На севере крестьяне продают дочерей в город.	Silk has lost two-thirds of its price. In the north peasants sell their daughters to the city.
+in	1860	1900	0	Через округу провели железную дорогу. До города теперь полдня, а не неделя.	The railway has come through the district. Town is half a day away now, not a week.
+in	1896	1902	0	Голод, а за ним чума. Санитары ходят по домам и жгут постели.	Famine, and plague after it. Inspectors go from house to house burning the bedding.
+sea	1883	1883	0	Взорвался Кракатау. Грохот слышали за тысячи вёрст, волна смыла прибрежные деревни.	Krakatoa explodes. The roar is heard thousands of miles away, and a wave sweeps away the coastal villages.
+sea	1945	1949	0	Объявили независимость. Голландцы вернулись с войсками, и в деревне снова стреляют.	Independence is declared. The Dutch come back with troops, and there is shooting in the village again.
+eg	1869	1869	0	Прорыли канал от моря до моря. На открытие приехала французская императрица.	A canal has been cut from sea to sea. A French empress comes to open it.
+me	1908	1930	0	Англичане нашли нефть. В пустыне выросли вышки, пахнет как от лампы.	The English have struck oil. Derricks rise in the desert, and it smells like a lamp.
+me	1915	1918	0	Саранча и блокада. В горах едят траву.	Locusts and blockade. In the mountains people eat grass.
+fr	1863	1890	0	Тля погубила виноградники. Винодел выкорчевал лозы и уехал в Алжир.	An aphid has killed the vineyards. The winegrower grubs up the vines and leaves for Algeria.
+fr	1936	1936	0	Рабочим дали оплачиваемый отпуск. Ты впервые {увидел|увидела} море.	Workers get paid holidays. You see the sea for the first time.
+de	1871	1871	0	В Версале провозгласили германскую империю. В деревне звонят колокола.	A German empire is proclaimed at Versailles. The village bells ring.
+en	1870	1890	0	Открыли школу для всех. Дети пишут на грифельных досках.	A school for everyone has opened. The children write on slates.
+en	1926	1926	0	Всеобщая стачка. Трамваи стоят, по улицам ходят солдаты.	The General Strike. The trams stand still, and soldiers walk the streets.
+en	1948	1952	0	К врачу теперь можно бесплатно. Бабушка наконец вставила зубы.	The doctor is free now. Grandmother finally gets her false teeth.
+it	1908	1908	0	Землетрясение в Мессине. Город рухнул за полминуты.	The Messina earthquake. The city falls in half a minute.
+it	1922	1925	0	Чернорубашечники поят несогласных касторкой. Соседу досталось при всех.	The Blackshirts dose those who disagree with castor oil. A neighbour gets it in front of everyone.
+ru	1896	1914	0	Переселенцам дают землю в Сибири. Сосед погрузил семью в вагон и уехал.	Settlers are given land in Siberia. A neighbour loads his family into a railway car and goes.
+af	1890	1908	0	Агенты требуют каучук. Кто не принёс нормы, тому рубят руку.	The agents demand rubber. Whoever falls short of the quota has a hand cut off.
+af	1935	1936	0	Итальянцы напали на Эфиопию. С самолётов льют отраву.	The Italians invade Ethiopia. They spray poison from aeroplanes.
+latam	1879	1912	0	В лесу на Амазонке собирают каучук. Сборщики должны хозяину больше, чем заработают за всю жизнь.	Rubber is tapped in the Amazon forest. The tappers owe the boss more than they will earn in a lifetime.
+latam	1904	1914	0	Через перешеек роют канал. Работают люди со всех островов, малярия косит их сотнями.	A canal is being dug across the isthmus. Men from every island work on it, and malaria cuts them down by the hundred.
+us	1862	1890	0	По новому закону можно взять сто шестьдесят акров. Надо только прожить на них пять лет.	Under the new law you can claim a hundred and sixty acres. You only have to live on them five years.
+us	1892	1924	0	Через остров Эллис идут пароходы с переселенцами. Новым соседям переделали имена на американский лад.	Steamers full of immigrants come through Ellis Island. The new neighbours have had their names made American.
+au	1901	1901	0	Колонии объединились в одну страну. Пикник и речи на площади.	The colonies have joined into one country. A picnic and speeches in the square.
+au	1915	1915	0	Из городка ушли в Галлиполи двадцать парней. Вернулись девять.	Twenty young men left the town for Gallipoli. Nine came back.
+*	1920	1960	0	У соседа появилось радио. Вечером слушают всей улицей.	A neighbour has a wireless. In the evening the whole street listens.
+cn	1966	1969	0	Учителя водят по улице в бумажном колпаке. Ученики кричат.	The teacher is paraded through the street in a paper dunce's cap. The pupils shout.
+cn	2008	2020	0	Провели скоростную дорогу. До столицы провинции теперь час.	A high-speed line has been built. The provincial capital is an hour away now.
+in	1991	2010	0	Племянник работает в Бангалоре на компьютерах и шлёт деньги домой.	A nephew works with computers in Bangalore and sends money home.
+sea	1965	1966	0	Ночью забирают тех, кого назвали коммунистами. Река несёт тела.	In the night those named as communists are taken. The river carries bodies.
+jp	1991	2000	0	Пузырь лопнул. Акции соседа стоят как бумага, а кредит остался.	The bubble has burst. A neighbour's shares are worth paper, but the loan remains.
+jp	2011	2011	0	Землетрясение и волна. Из зоны вокруг станции всех вывезли, кошки остались.	An earthquake and a wave. Everyone is moved out of the zone around the plant; the cats stay behind.
+me	1979	1979	0	Шах бежал. Женщинам велели покрыть голову.	The shah has fled. Women are told to cover their heads.
+me	1980	1988	0	Война с соседней страной. Мальчиков отправляют на минные поля.	War with the neighbouring country. Boys are sent onto the minefields.
+it	1955	1970	0	Сосед уехал с юга на завод в Турин. Вернулся на «фиате».	A neighbour leaves the south for a factory in Turin. He comes back in a Fiat.
+fr	1968	1968	0	В Париже студенты строят баррикады. Заводы бастуют.	In Paris students build barricades. The factories strike.
+en	1979	1990	0	Шахту закрыли. Половина улицы без работы.	The pit is closed. Half the street is out of work.
+eu	2002	2002	0	Новые деньги — евро. Бабушка всё пересчитывает на старые.	New money: the euro. Grandmother converts everything back into the old.
+ru	1954	1960	0	Комсомольцы едут поднимать целину. Сосед уехал в Казахстан.	Young Communists go to plough the virgin lands. A neighbour leaves for Kazakhstan.
+ru	1992	1998	0	Выдали ваучер. Ты {отдал|отдала} его за две бутылки водки.	You are issued a voucher. You trade it for two bottles of vodka.
+af	1967	1970	0	Война в Биафре. Дети с раздутыми животами.	The war in Biafra. Children with swollen bellies.
+af	1984	1985	0	Засуха в Эфиопии. Мир смотрит по телевизору, а здесь умирают.	Drought in Ethiopia. The world watches on television while people die here.
+af	1994	1994	0	Сто дней резни. Соседи убивают соседей мачете.	A hundred days of slaughter. Neighbours kill neighbours with machetes.
+latam	1959	1961	0	На Кубе победили бородачи. Землю делят между крестьянами.	The bearded ones have won in Cuba. The land is shared among the peasants.
+latam	1982	1990	0	Цены растут каждый день. Зарплату сразу меняют на доллары.	Prices rise every day. Wages are changed into dollars at once.
+us	1965	1973	0	Соседского парня забрали во Вьетнам. Мать держит на окне флажок.	The boy next door is drafted for Vietnam. His mother keeps a little flag in the window.
+us	1950	1970	0	Семья купила дом в пригороде. Газон, машина, у всех одинаковые крыши.	The family buys a house in the suburbs. A lawn, a car, and all the roofs the same.
+us	2001	2001	0	По телевизору горят две башни. Весь день никто не работает.	On television two towers are burning. Nobody works all day.
+au	2008	2008	0	Премьер-министр попросил прощения у украденных детей. Тётя плачет у телевизора.	The prime minister apologises to the stolen children. Your aunt cries in front of the television.

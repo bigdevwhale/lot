@@ -41,10 +41,10 @@ fun ReadSheet(h: Home, id: Long, onThing: (Long) -> Unit, onClose: () -> Unit) {
     val w = h.w
     val repo = LocalContext.current.container.repo
     val row = h.s.byId[id] ?: return onClose()
-    val page = remember(id, h.s.lives.size) { repo.book(row, h.s) }
+    val entries = remember(id, h.s.lives.size) { repo.book(row, h.s) }
     Sheet(w.t("Книга", "The book"), onClose, w.t("Закрыть", "Close")) {
         Column(Modifier.padding(horizontal = 0.dp)) {
-            Register(page, w, row.gen, row.witness)
+            Register(row.name, row.year, row.death, World.region(row.region, row.eraI).name, row.gen, row.witness, entries, w)
             EndCard(h, row, onThing = onThing)
             Gap(16)
         }

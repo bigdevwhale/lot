@@ -16,7 +16,11 @@ import kotlinx.coroutines.launch
 class AppContainer(context: Context) {
     val app: Context = context.applicationContext
     val db = LotDb.create(app)
-    val content: Content = Content.read(app.assets.open("lines.tsv"), app.assets.open("history.tsv"))
+    val content: Content = Content.read(
+        app.assets.list("lines").orEmpty().sorted().map { app.assets.open("lines/$it") },
+        app.assets.open("history.tsv"),
+        app.assets.list("").orEmpty().filter { it.startsWith("dilemmas") && it.endsWith(".txt") }.sorted().map { app.assets.open(it) },
+    )
     val repo = Repo(db, content)
     val settings = SettingsStore(app)
     val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)

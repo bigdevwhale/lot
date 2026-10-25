@@ -85,7 +85,7 @@ fun LotRoot(settings: Settings) {
     /** A new lot, or a great-grandchild's: watched being drawn on the first tab. */
     fun draw(heirOf: Long?) {
         tab = Tab.DRAW
-        c.write { repo.draw(settings.witness, heirOf) }
+        c.write { repo.draw(settings.witness, heirOf, wish = settings.wish) }
     }
 
     CompositionLocalProvider(LocalToast provides toaster) {

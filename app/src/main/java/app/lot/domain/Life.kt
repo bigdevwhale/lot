@@ -31,6 +31,16 @@ data class Heir(
 
 enum class Mark { PLAIN, HIST, MEET, DEATH }
 
+/**
+ * What the reader has already met before a life was drawn: the Russian text of lines in recent books and every event
+ * any life has seen. Built only from lives that ended before the draw, so replaying the life later gives the same book.
+ */
+class Past(val read: Set<String>, val seen: Set<Int>) {
+    companion object {
+        val NONE = Past(emptySet(), emptySet())
+    }
+}
+
 data class Entry(val age: Int, val text: Tx, val mark: Mark = Mark.PLAIN)
 
 class Door(val text: Tx, val why: Tx?) {
@@ -72,6 +82,8 @@ class End(
     val sawSea: Boolean,
     val meet: Int?,
     val story: Tx?,
+    /** Every real event this life met, by id. */
+    val seen: List<Int> = emptyList(),
 )
 
 /** A life as far as it has been read: the entries so far, and either a choice to make, the end, or more to turn. */
@@ -85,14 +97,22 @@ private fun q0(era: Era, r: Region) = if (era.i == 6 && "af" in r.tags) .12 else
  * One life, replayed from its seed: the same seed, the same picks and the same number of turned pages always give the
  * same life, so only those three are stored.
  */
-class Life private constructor(private val content: Content, seed: Long, heir: Heir?, private val witness: Boolean) {
+class Life private constructor(
+    private val content: Content,
+    seed: Long,
+    heir: Heir?,
+    private val witness: Boolean,
+    private val past: Past,
+    private val wish: Wish,
+) : Person {
     private val rnd = Random(seed)
     val birth: Birth
     private val era: Era
     private val region: Region
     private val sex: Sex
     private val year: Int
-    private var rank: Int
+    override var rank: Int = 0
+        private set
 
     private var death: Int
     private var lit = false
@@ -114,6 +134,34 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
     private var story: Tx? = null
     private var meet: Int? = null
     private var alive = false
+    private var town = false
+    private var age = 0
+    override val now get() = year + age
+    /** Words a fork's outcome leaves behind (faith, brave, moved, ...), read by the epitaph and the question. */
+    private val flags = mutableSetOf<String>()
+    private val eps = mutableListOf<Tx>()
+    private val asks = mutableListOf<Tx>()
+    private val usedForks = mutableSetOf<String>()
+
+    override fun has(cond: String) = when (cond) {
+        "m" -> sex == Sex.M
+        "f" -> sex == Sex.F
+        "lit" -> lit
+        "illit", "!lit" -> !lit
+        "married" -> married
+        "single", "!married" -> !married
+        "kids" -> kidsAlive > 0
+        "!kids" -> kidsAlive == 0
+        "monk" -> monk
+        "town" -> town
+        "poor" -> wealth <= 0
+        "rich" -> wealth >= 2
+        "r0" -> rank == 0
+        "r1" -> rank == 1
+        "r2" -> rank == 2
+        "r3" -> rank == 3
+        else -> cond in flags
+    }
 
     private val entries = mutableListOf<Entry>()
     private val used = mutableSetOf<Line>()
@@ -126,7 +174,11 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             y = heir.year + 70 + rnd.nextInt(25)
             e = World.eraOf(y)
         } else {
-            e = weighted(World.ERAS) { it.births }
+            // A chosen area weighs each era by how many of its people were born there.
+            val area = World.area(wish.area)
+            fun inArea(x: Era) = if (area == null) 1.0 else x.regions.filter { it.key in area.regions }.sumOf { it.w } / x.regions.sumOf { it.w }
+            val eras = World.ERAS.filter { (wish.eraI == null || it.i == wish.eraI) && inArea(it) > 0 }.ifEmpty { World.ERAS }
+            e = weighted(eras) { it.births * inArea(it) }
             val u = rnd.nextDouble().pow(if (e.i == 0) .6 else .75)
             y = (e.to - (e.to - e.from) * (1 - u)).roundToInt().coerceIn(e.from, e.to - 1)
         }
@@ -134,7 +186,7 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
         region = heir?.let { h ->
             val was = World.ALL_REGIONS.firstOrNull { it.key == h.region }
             e.regions.firstOrNull { it.key == h.region } ?: was?.let { w -> e.regions.filter { r -> r.tags.any { it in w.tags } }.maxByOrNull { it.w } }
-        } ?: weighted(e.regions) { it.w }
+        } ?: weighted(World.area(wish.area)?.let { a -> e.regions.filter { it.key in a.regions } }?.ifEmpty { null } ?: e.regions) { it.w }
         val cult = World.culture(region, y)
         val pool = e.estates.filter { s -> s.only == null || s.only.any { it in region.tags } }
         val estate = heir?.let { h ->
@@ -142,7 +194,8 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             pool.filter { it.rank == want }.takeIf { it.isNotEmpty() }?.let { c -> weighted(c) { it.w } }
         } ?: weighted(pool) { it.w }
         rank = estate.rank
-        sex = if (rnd.nextBoolean()) Sex.M else Sex.F
+        val coin = rnd.nextBoolean()
+        sex = (if (heir == null) wish.sex else null) ?: if (coin) Sex.M else Sex.F
         val p = Names.pool(cult)
         val first = (if (sex == Sex.M) p.male else p.female).random(rnd)
         val sur = if (Names.keepsSurnames(cult, e.i)) heir?.sur?.takeIf { heir.cult == cult } ?: p.sur.random(rnd) else null
@@ -180,9 +233,11 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
     private fun add(age: Int, ru: String, en: String, mark: Mark = Mark.PLAIN) = add(age, Tx(ru, en), mark)
 
     private fun line(age: Int, k: Kind, mark: Mark = Mark.PLAIN) {
-        val all = content.lines(era.group, k, region)
+        val all = content.lines(era.group, k, region).filter { it.need.holds(this) }
         val fresh = all.filterNot { it in used }
-        val l = (fresh.ifEmpty { all }).randomOrNull(rnd) ?: return
+        // Lines the reader met in recent lives wait their turn while there are others.
+        val unread = fresh.filterNot { it.text.g(sex).ru in past.read }
+        val l = (unread.ifEmpty { fresh.ifEmpty { all } }).randomOrNull(rnd) ?: return
         used += l
         add(age, l.text, mark)
     }
@@ -194,7 +249,7 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
     private fun door(ru: String, en: String, why: Tx?, act: () -> Unit) = Act(Door(Tx(ru, en), why), act)
     private fun why(ru: String, en: String) = Tx(ru, en)
 
-    private enum class S { BIRTH, CHILD, WORK, YOUTH, MARRY17, MARRY24, JOY, CRISIS, ADULT, LEGACY, OLD, WISH }
+    private enum class S { BIRTH, CHILD, WORK, YOUTH, MARRY17, MARRY24, JOY, CRISIS, ADULT, LEGACY, OLD, WISH, FORK }
 
     fun read(picks: List<Int>, shown: Int): Page {
         var revealed = 0
@@ -215,10 +270,13 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
     }
 
     private fun stop(age: Int, s: S): Ask? {
+        this.age = age
         var hist: Hist? = null
         if (age >= 4) {
-            val h = content.hist.filter { it.id !in usedHist && it.fits(region, era.i, year + age) }.randomOrNull(rnd)
-            if (h != null && rnd.nextDouble() < if (h.meet) .9 else .75) {
+            val all = content.hist.filter { it.id !in usedHist && it.fits(region, era.i, year + age) }
+            // Events no life has met yet come first: they fill the chronicle.
+            val h = all.filterNot { it.id in past.seen }.ifEmpty { all }.randomOrNull(rnd)
+            if (h != null && rnd.nextDouble() < if (h.meet) .85 else .45) {
                 hist = h; usedHist += h.id
                 add(age, h.text, if (h.meet) Mark.MEET else Mark.HIST)
                 if (h.meet) meet = h.id
@@ -244,6 +302,7 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             S.LEGACY -> return legacy()
             S.OLD -> if (hist == null) line(age, Kind.OLD)
             S.WISH -> return wish()
+            S.FORK -> { fork(age)?.let { return it }; if (hist == null) line(age, if (age >= 58) Kind.OLD else Kind.ADULT) }
         }
         return null
     }
@@ -277,6 +336,7 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
                 }
             },
             door(if (e == 6) "Уехать к родне в большой город" else "Уйти в город, в ученики к мастеру", if (e == 6) "Go to relatives in the big city" else "Go to town as an apprentice", town) {
+                this@Life.town = true
                 if (rnd.nextBoolean()) wealth++
                 if (rnd.nextDouble() < .35) sawSea = true
                 if (e == 6) add(12, "{Уехал|Уехала} в город. Спишь у дальней родни на полу.", "You move to the city. You sleep on a distant relative's floor.")
@@ -322,16 +382,61 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
     }
 
     private fun wed(age: Int, ru: String, en: String) {
-        married = true
         add(age, ru, en)
-        val n = (era.fert + (rnd.nextDouble() - .5) * 4).roundToInt().coerceAtLeast(0)
-        kids = n
-        kidsAlive = if (era.i >= 6) n else (n * (1 - era.q0) * (.8 + rnd.nextDouble() * .4)).roundToInt().coerceAtMost(n)
+        bear()
+        val n = kids
         val at = age + 2
         when {
             n == 0 -> add(at, "Детей не было.", "There are no children.")
             n == kidsAlive -> add(at, "Родилось детей: $n.", "Children born: $n.")
             else -> add(at, "Родилось детей: $n. Выросли ${kidsAlive}.", "Children born: $n. Grew up: $kidsAlive.")
+        }
+    }
+
+    /** A marriage and the children it brings, as the era allowed them to live. */
+    private fun bear() {
+        married = true; single = false
+        val n = (era.fert + (rnd.nextDouble() - .5) * 4).roundToInt().coerceAtLeast(0)
+        kids = n
+        kidsAlive = if (era.i >= 6) n else (n * (1 - era.q0) * (.8 + rnd.nextDouble() * .4)).roundToInt().coerceAtMost(n)
+    }
+
+    /** An everyday fork from the dilemmas that fit this era, place, person and age; null when none fits. */
+    private fun fork(age: Int): Ask? {
+        if (rnd.nextDouble() < .2) return null
+        val all = content.dilemmas.filter { it.id !in usedForks && era.group in it.groups && age in it.ages && it.fits(region) && it.need.holds(this) }
+        // A fork met in a recent life (one of its outcomes is in that book) waits while others are left.
+        val c = all.filterNot { d -> d.doors.any { g -> g.outs.any { it.text.g(sex).ru in past.read } } }.ifEmpty { all }
+        if (c.isEmpty()) return null
+        val d = weighted(c) { it.weight }
+        usedForks += d.id
+        val acts = d.doors.map { g ->
+            Act(Door(g.text, g.shut.firstOrNull { sh -> sh.conds.all { has(it) } }?.why)) {
+                val o = weighted(g.outs) { it.weight }
+                add(age, o.text)
+                effects(age, o.fx)
+                g.ep?.let { eps += it.g(sex) }
+                g.ask?.let { asks += it.g(sex) }
+            }
+        }
+        if (acts.none { it.door.open }) return null
+        return ask(age, d.q, *acts.toTypedArray())
+    }
+
+    private fun effects(age: Int, fx: List<String>) {
+        for (f in fx) when {
+            f.startsWith("wealth") -> wealth = (wealth + f.removePrefix("wealth").toInt()).coerceAtLeast(0)
+            f.startsWith("risk") -> if (rnd.nextDouble() * 100 < f.removePrefix("risk").toInt()) death = minOf(death, age + 1 + rnd.nextInt(3))
+            f == "lit" -> if (!lit) { lit = true; firstLit = !parentLit }
+            f == "sea" -> sawSea = true
+            f == "kind" -> kind = true
+            f == "love" -> love = true
+            f == "town" -> town = true
+            f == "free" -> if (rank == 0) rank = 1
+            f == "kids+1" -> { kids++; kidsAlive++ }
+            f == "kids-1" -> if (kidsAlive > 0) kidsAlive--
+            f == "married" -> if (!married) bear()
+            else -> flags += f
         }
     }
 
@@ -427,6 +532,8 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
 
     private fun die(): End {
         val a = death
+        // A fork's risk may have ended a life that was still running.
+        if (alive && a < NOW - year) alive = false
         val how = when {
             a < 5 -> listOf(tx("Лихорадка.", "A fever."), tx("Не {пережил|пережила} зиму.", "The winter was too long."), tx("Жар и понос, три дня.", "Three days of fever and flux."))
             era.i == 6 && a < 60 -> listOf(tx("Сердце.", "The heart."), tx("Авария на дороге.", "A road accident."), tx("Болезнь, которую поздно заметили.", "An illness found too late."))
@@ -446,7 +553,9 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
         val ep = mutableListOf<Tx>()
         if (a < 5 && !alive) ep += listOf(tx("Прожил{|а} мало, но {был|была} {любим|любима}.", "Lived little, and was loved."), tx("Мать помнила до конца своих дней.", "Mother remembered to the end of her days.")).random(rnd)
         else {
+            ep += eps.take(2)
             if (firstLit) ep += tx("{Первый|Первая} в роду, кто {научился|научилась} читать.", "The first in the family to read.")
+            if (birth.estate.rank == 0 && rank > 0) ep += tx("{Родился|Родилась} несвободным, {умер|умерла} {свободным|свободной}.", "Born unfree, died free.")
             if (kids > 0) ep += if (kidsAlive < kids) tx("{Пережил|Пережила} ${Years.childrenAcc(kids - kidsAlive)}.", "Outlived ${Years.childrenEn(kids - kidsAlive)}.")
                 else tx("{Вырастил|Вырастила} ${Years.childrenAcc(kids)}.", "Raised ${Years.childrenEn(kids)}.")
             if (wishSea) ep += tx("{Увидел|Увидела} море на старости лет.", "Saw the sea in old age.")
@@ -457,6 +566,9 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             if (taught) ep += tx("Дети читали благодаря {ему|ей}.", "The children could read because of {him|her}.")
             if (tree) ep += tx("Груша у дома цветёт и сейчас.", "The pear tree by the house still blooms.")
             if (meet != null) ep += tx("Однажды {видел|видела} того, о ком потом писали книги.", "Once met someone later written about in books.")
+            if ("faith" in flags) ep += tx("{Верил|Верила} крепко.", "Kept the faith.")
+            if ("brave" in flags) ep += tx("Не {побоялся|побоялась}.", "Was not afraid.")
+            if ("moved" in flags) ep += tx("{Умер|Умерла} далеко от места, где {родился|родилась}.", "Died far from the place of birth.")
             if (ep.isEmpty()) ep += listOf(tx("{Жил|Жила} как все. Это немало.", "Lived like everyone. That is no small thing."), tx("{Работал|Работала} и не {жаловался|жаловалась}.", "Worked and did not complain.")).random(rnd)
         }
         if (alive) ep.add(0, tx("{Жив|Жива} и сейчас.", "Still alive."))
@@ -477,21 +589,52 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             if (monk) qs += Tx("Эта жизнь прошла в тишине. Где тишина у тебя?", "This life passed in silence. Where is your silence?")
             if (meet != null) qs += Tx("Этот человек видел того, о ком потом писали книги. Кого из встреченных тобой стоит запомнить?", "This person met someone later written about. Who among the people you have met is worth remembering?")
         }
-        // The life's own questions first; the two that fit any life only when it has none.
-        val bridge = (if (qs.size > 2) qs.drop(2) else qs).random(rnd)
+        if (a >= 5) {
+            if (town) qs += Tx("Этот человек ушёл в город за другой жизнью. Куда хочется уйти тебе?", "This person went to town for another life. Where do you want to go?")
+            if ("moved" in flags) qs += Tx("Этот человек всё бросил и ушёл. Что держит на месте тебя?", "This person left everything behind. What keeps you where you are?")
+            if ("faith" in flags) qs += Tx("Этот человек крепко верил. Во что веришь ты?", "This person kept the faith. What do you believe in?")
+            if (birth.estate.rank == 0) qs += Tx("Этот человек родился несвободным. Что ты сегодня можешь сделать, не спрашивая разрешения?", "This person was born unfree. What can you do today without asking anyone's leave?")
+            if (a >= 80) qs += Tx("Этот человек прожил ${Years.yearsRu(a)}. Что хочется успеть к этому возрасту?", "This person lived to $a. What do you want to have done by that age?")
+            if (alive) qs += Tx("Эта жизнь ещё идёт. Что хочется ей пожелать?", "This life is still going. What would you wish it?")
+            qs += asks
+        }
+        // The life's own questions most of the time; now and then one of the questions any life can ask.
+        val own = qs.drop(2)
+        val bridge = if (own.isNotEmpty() && rnd.nextDouble() < .75) own.random(rnd) else (qs.take(2) + ANY_LIFE).random(rnd)
 
-        return End(a, epitaph, bridge, if (birth.heir != null) null else Things.group(era.group).random(rnd),
-            kidsAlive, wealth, rank, lit, sawSea, meet, story)
+        return End(a, epitaph, bridge, if (birth.heir != null) null else Things.pick(era.group, region, rnd),
+            kidsAlive, wealth, rank, lit, sawSea, meet, story, usedHist.toList())
     }
 
     companion object {
+        /** The engine version written into each life: 1 was 1.0.0, 2 brought forks, needs and kept books. */
+        const val VERSION = 2
+
         /** The year the books are written up to. */
         const val NOW = 2026
 
         private val STOPS = listOf(
-            0 to S.BIRTH, 4 to S.CHILD, 8 to S.CHILD, 12 to S.WORK, 15 to S.YOUTH, 17 to S.MARRY17, 24 to S.MARRY24, 28 to S.JOY,
-            33 to S.CRISIS, 39 to S.ADULT, 45 to S.LEGACY, 51 to S.ADULT, 58 to S.OLD, 64 to S.JOY, 70 to S.WISH,
-            76 to S.OLD, 82 to S.OLD, 88 to S.OLD, 94 to S.OLD, 100 to S.OLD,
+            0 to S.BIRTH, 2 to S.CHILD, 5 to S.CHILD, 8 to S.CHILD, 10 to S.CHILD, 12 to S.WORK, 14 to S.YOUTH, 16 to S.YOUTH,
+            17 to S.MARRY17, 19 to S.FORK, 21 to S.JOY, 24 to S.MARRY24, 27 to S.FORK, 30 to S.ADULT, 33 to S.CRISIS, 36 to S.JOY,
+            39 to S.FORK, 42 to S.ADULT, 45 to S.LEGACY, 48 to S.ADULT, 51 to S.FORK, 54 to S.JOY, 58 to S.OLD, 61 to S.OLD,
+            64 to S.FORK, 67 to S.JOY, 70 to S.WISH, 73 to S.OLD, 76 to S.OLD, 80 to S.OLD, 84 to S.OLD, 88 to S.OLD, 92 to S.OLD,
+            96 to S.OLD, 100 to S.OLD,
+        )
+
+        /** Questions any life can ask its reader. */
+        private val ANY_LIFE = listOf(
+            Tx("Какую вещь из твоего дома стоило бы передать правнукам?", "Which thing in your home would be worth handing down to your great-grandchildren?"),
+            Tx("Чьи руки вырастили хлеб, который ты ешь?", "Whose hands grew the bread you eat?"),
+            Tx("Какая дверь сегодня открыта для тебя, но была бы закрыта для этого человека?", "Which door is open to you today that would have been shut to this person?"),
+            Tx("Чему этот человек научил бы тебя за один вечер?", "What could this person teach you in one evening?"),
+            Tx("Какую историю о своей семье ты знаешь — и кому её расскажешь?", "Which story of your family do you know, and who will you tell it to?"),
+            Tx("Что сегодня стоило бы сделать руками?", "What would be worth doing with your hands today?"),
+            Tx("Кого из ушедших тебе не хватает?", "Who among those gone do you miss?"),
+            Tx("О чём этот человек не мог даже мечтать, а у тебя это есть?", "What could this person not even dream of that you have?"),
+            Tx("Когда вокруг в последний раз было по-настоящему темно и тихо?", "When was it last truly dark and quiet around you?"),
+            Tx("Кому сегодня можно помочь так, как помогли бы в деревне?", "Who could you help today the way a village would?"),
+            Tx("Какой праздник этот человек ждал бы весь год — а какой ждёшь ты?", "Which feast would this person have waited for all year, and which do you wait for?"),
+            Tx("Что из того, что у тебя есть, этот человек счёл бы богатством?", "What that you own would this person have called wealth?"),
         )
 
         private val STORIES = listOf(
@@ -501,17 +644,26 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             Tx("о далёком городе с золотыми крышами", "about a far city with golden roofs"),
             Tx("как ты в детстве {потерялся|потерялась} и {нашёлся|нашлась}", "how you were lost as a child and found again"),
             Tx("о кладе под старой грушей, которого никто не нашёл", "about the treasure under the old pear tree that nobody found"),
+            Tx("о прабабке, которая пешком дошла до моря", "about the great-grandmother who walked all the way to the sea"),
+            Tx("о зиме, когда замёрзли птицы", "about the winter the birds froze"),
+            Tx("как дед один раз видел царя", "how grandfather once saw the king"),
+            Tx("о соседе, который ушёл за удачей и вернулся через двадцать лет", "about the neighbour who went to seek his fortune and came back twenty years later"),
+            Tx("о свадьбе, на которой сгорел сарай", "about the wedding at which the barn burned down"),
+            Tx("о говорящей сороке", "about the talking magpie"),
+            Tx("о годе, когда лёд на реке простоял до лета", "about the year the ice stayed on the river till summer"),
+            Tx("о лекарке, которая знала все травы", "about the healer who knew every herb"),
+            Tx("о том, откуда в роду эта вещь", "about where the family keepsake came from"),
         )
 
-        fun read(content: Content, seed: Long, heir: Heir?, picks: List<Int>, shown: Int, witness: Boolean): Page =
-            Life(content, seed, heir, witness).read(picks, shown)
+        fun read(content: Content, seed: Long, heir: Heir?, picks: List<Int>, shown: Int, witness: Boolean, past: Past = Past.NONE, wish: Wish = Wish()): Page =
+            Life(content, seed, heir, witness, past, wish).read(picks, shown)
 
         /** Reads a life to its end with [pick] choosing at every fork, for the demo and the tests. */
-        fun live(content: Content, seed: Long, heir: Heir?, witness: Boolean = false, pick: (Choice, Int) -> Int): Pair<Page, List<Int>> {
+        fun live(content: Content, seed: Long, heir: Heir?, witness: Boolean = false, past: Past = Past.NONE, pick: (Choice, Int) -> Int): Pair<Page, List<Int>> {
             val picks = mutableListOf<Int>()
             var shown = 1
             while (true) {
-                val p = read(content, seed, heir, picks, shown, witness)
+                val p = read(content, seed, heir, picks, shown, witness, past)
                 when {
                     p.end != null -> return p to picks
                     p.pending != null -> picks += pick(p.pending, picks.size)

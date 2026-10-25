@@ -20,6 +20,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -27,8 +28,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
@@ -39,6 +43,9 @@ import app.lot.BuildConfig
 import app.lot.container
 import app.lot.domain.Birth
 import app.lot.domain.Heir
+import app.lot.domain.Sex
+import app.lot.domain.Wish
+import app.lot.domain.World
 import app.lot.ui.Home
 import app.lot.ui.Words
 import app.lot.ui.art.Sack.stage
@@ -80,8 +87,8 @@ fun DrawScreen(h: Home, onDraw: (Long?) -> Unit, onBook: () -> Unit, onSettings:
     }
 
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
-        TopBar(w.t("Жребий", "Lot"), w.t("Ты — один из ста семнадцати миллиардов людей, когда-либо живших на Земле. Кем именно — решит мешок.",
-            "You are one of the 117 billion people who have ever lived. Which one, the sack decides.")) {
+        TopBar(w.t("Жребий", "Lot"), w.t("Ты — один из ста семнадцати миллиардов людей, когда-либо живших на Земле. Кем именно — решит жребий.",
+            "You are one of the 117 billion people who have ever lived. Which one, the lot decides.")) {
             Icon(Icons.Outlined.Settings, w.t("Настройки", "Settings"), tint = C.muted, modifier = Modifier.clip(CircleShape).clickable(onClick = onSettings).padding(10.dp))
         }
         val birth = page?.birth
@@ -105,6 +112,8 @@ fun DrawScreen(h: Home, onDraw: (Long?) -> Unit, onBook: () -> Unit, onSettings:
                     onDraw(null)
                 }
                 Gap(10)
+                WishPanel(h)
+                Gap(10)
                 Flow {
                     Chip(w.t("жить и выбирать", "live and choose"), !h.settings.witness) { c.write { settings.update { it.copy(witness = false) } } }
                     Chip(w.t("быть свидетелем", "be a witness"), h.settings.witness) { c.write { settings.update { it.copy(witness = true) } } }
@@ -120,6 +129,22 @@ fun DrawScreen(h: Home, onDraw: (Long?) -> Unit, onBook: () -> Unit, onSettings:
                         Reveal(page.birth, w, h, ended = false)
                         Gap(10)
                         Btn(if (page.entries.size <= 2) w.t("Открыть книгу", "Open the book") else w.t("Читать дальше", "Read on"), onClick = onBook)
+                        Gap(8)
+                        var ask by remember { mutableStateOf(false) }
+                        Btn(w.t("Тянуть другой жребий", "Draw another lot"), kind = Kind.GHOST) { ask = true }
+                        if (ask) AlertDialog(
+                            onDismissRequest = { ask = false },
+                            containerColor = C.card,
+                            title = { Text(w.t("Оставить эту жизнь?", "Leave this life?"), style = T.Heading) },
+                            text = {
+                                Text(w.t("${w.x(page.birth.name)} останется недочитанной книгой: в архив, атлас и сундук она не попадёт.",
+                                    "${w.x(page.birth.name)} will stay an unfinished book: it won't go to the archive, the atlas or the chest."), style = T.Body)
+                            },
+                            confirmButton = { Text(w.t("Тянуть другой", "Draw another"), style = T.Button.copy(color = C.red), modifier = Modifier.clickable { ask = false; onDraw(null) }.padding(10.dp)) },
+                            dismissButton = { Text(w.t("Читать дальше", "Read on"), style = T.Button.copy(color = C.ink), modifier = Modifier.clickable { ask = false }.padding(10.dp)) },
+                        )
+                        Gap(10)
+                        WishPanel(h)
                     }
                 }
             }
@@ -137,6 +162,52 @@ fun DrawScreen(h: Home, onDraw: (Long?) -> Unit, onBook: () -> Unit, onSettings:
     }
 }
 
+/**
+ * The optional wish before the draw: an era, a part of the world, a sex. Folded away by default, and the folded line says what
+ * is asked. Combinations that never existed (Russia in the Stone Age) are greyed out.
+ */
+@Composable
+private fun WishPanel(h: Home) {
+    val w = h.w
+    val c = LocalContext.current.container
+    val wish = h.settings.wish
+    var open by rememberSaveable { mutableStateOf(false) }
+    fun set(f: (Wish) -> Wish) = c.write { settings.update { it.copy(wish = f(it.wish)) } }
+    val asked = listOfNotNull(
+        wish.eraI?.let { w.x(World.ERAS[it].name) },
+        World.area(wish.area)?.let { w.x(it.name) },
+        wish.sex?.let { if (it == Sex.M) w.t("мальчик", "a boy") else w.t("девочка", "a girl") },
+    )
+    Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(4.dp)).clickable { open = !open }.padding(vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            if (asked.isEmpty()) w.t("Жребий из всех людей", "A lot from everyone") else w.t("Жребий: ", "Lot: ") + asked.joinToString(" · "),
+            style = T.BodyB, modifier = Modifier.weight(1f),
+        )
+        Text(if (open) w.t("свернуть", "fold") else w.t("выбрать", "choose"), style = T.Small.copy(color = C.red))
+    }
+    if (!open) return
+    Text(w.t("Можно сузить жребий. Внутри выбранного он тянет по тем же честным весам.", "You can narrow the lot. Within what you choose it keeps the same fair weights."),
+        style = T.Small, modifier = Modifier.padding(bottom = 6.dp))
+    Label(w.t("Эпоха", "Era"), Modifier.padding(top = 6.dp, bottom = 4.dp))
+    Flow {
+        Chip(w.t("любая", "any"), wish.eraI == null) { set { it.copy(eraI = null) } }
+        for (e in World.ERAS) Chip(w.x(e.name), wish.eraI == e.i, enabled = World.fits(e.i, wish.area)) { set { it.copy(eraI = e.i) } }
+    }
+    Label(w.t("Где", "Where"), Modifier.padding(top = 10.dp, bottom = 4.dp))
+    Flow {
+        Chip(w.t("где угодно", "anywhere"), wish.area == null) { set { it.copy(area = null) } }
+        for (a in World.AREAS) Chip(w.x(a.name), wish.area == a.key, enabled = World.fits(wish.eraI, a.key)) { set { it.copy(area = a.key) } }
+    }
+    Label(w.t("Кем родиться", "Born as"), Modifier.padding(top = 10.dp, bottom = 4.dp))
+    Flow {
+        Chip(w.t("как выпадет", "as it falls"), wish.sex == null) { set { it.copy(sex = null) } }
+        Chip(w.t("мальчиком", "a boy"), wish.sex == Sex.M) { set { it.copy(sex = Sex.M) } }
+        Chip(w.t("девочкой", "a girl"), wish.sex == Sex.F) { set { it.copy(sex = Sex.F) } }
+    }
+    if (!wish.any) Text(w.t("Сбросить", "Clear"), style = T.Small.copy(color = C.red),
+        modifier = Modifier.padding(top = 8.dp).clickable { set { Wish() } }.padding(vertical = 4.dp))
+}
+
 /** Who the lot made you, and how likely that was. */
 @Composable
 fun Reveal(b: Birth, w: Words, h: Home, ended: Boolean) {
@@ -144,6 +215,11 @@ fun Reveal(b: Birth, w: Words, h: Home, ended: Boolean) {
         Label("${w.x(b.era.name)} · ${w.x(b.era.span)}")
         Text(w.x(b.name), style = T.Heading.copy(fontSize = T.Title.fontSize, lineHeight = T.Title.lineHeight), modifier = Modifier.padding(top = 4.dp))
         Text(w.born(b), style = T.Body, modifier = Modifier.padding(top = 4.dp))
+        h.s.cur?.wish?.takeIf { !it.any && b.heir == null }?.let { wish ->
+            val asked = listOfNotNull(wish.eraI?.let { w.x(World.ERAS[it].name) }, World.area(wish.area)?.let { w.x(it.name) },
+                wish.sex?.let { if (it == Sex.M) w.t("мальчик", "a boy") else w.t("девочка", "a girl") })
+            Text(w.t("Жребий из выбранного: ", "A lot from your choice: ") + asked.joinToString(" · "), style = T.Italic, modifier = Modifier.padding(top = 4.dp))
+        }
         b.heir?.let { Text(w.t("Жребий правнука: ${it.name.ru}, ${w.gen(it.gen + 1)}.", "A great-grandchild's lot: ${it.name.en}, ${w.gen(it.gen + 1)}."), style = T.Italic, modifier = Modifier.padding(top = 4.dp)) }
         if (ended) {
             val end = h.s.page?.end

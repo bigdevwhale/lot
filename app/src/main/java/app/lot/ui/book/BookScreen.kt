@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -47,6 +48,7 @@ import app.lot.domain.Heir
 import app.lot.domain.Mark
 import app.lot.domain.Page
 import app.lot.domain.Things
+import app.lot.domain.Tx
 import app.lot.ui.Home
 import app.lot.ui.Words
 import app.lot.ui.art.ThingArt.thing
@@ -69,7 +71,7 @@ fun BookScreen(h: Home, onDraw: (Long?) -> Unit, onArchive: () -> Unit) {
     val c = LocalContext.current.container
     val page = h.s.page
     val cur = h.s.cur
-    Column(Modifier.fillMaxSize()) {
+    Column(Modifier.fillMaxSize().imePadding()) {
         TopBar(w.t("Книга", "The book")) {
             if (h.s.lives.isNotEmpty()) Chip(w.t("Все книги", "All books"), false, onClick = onArchive)
         }
@@ -106,6 +108,12 @@ fun BookScreen(h: Home, onDraw: (Long?) -> Unit, onArchive: () -> Unit) {
 @Composable
 fun Register(page: Page, w: Words, gen: Int, witness: Boolean, dry: Int = Int.MAX_VALUE) {
     val b = page.birth
+    Register(b.name, b.year, page.end?.age, b.region.name, gen, witness, page.entries, w, dry)
+}
+
+/** The register from what a finished life kept: its name, years and the entries as written. */
+@Composable
+fun Register(name: Tx, year: Int, endAge: Int?, region: Tx, gen: Int, witness: Boolean, entries: List<Entry>, w: Words, dry: Int = Int.MAX_VALUE) {
     Column(
         Modifier.padding(horizontal = 12.dp, vertical = 8.dp).fillMaxWidth()
             .drawBehind {
@@ -117,13 +125,13 @@ fun Register(page: Page, w: Words, gen: Int, witness: Boolean, dry: Int = Int.MA
     ) {
         Box(Modifier.fillMaxWidth().background(C.page)) {
             Column {
-                Text(w.x(b.name), style = T.Heading)
-                Text(listOfNotNull(w.year(b.year) + (page.end?.let { " – " + w.year(b.year + it.age) } ?: ""), w.x(b.region.name),
+                Text(w.x(name), style = T.Heading)
+                Text(listOfNotNull(w.year(year) + (endAge?.let { " – " + w.year(year + it) } ?: ""), w.x(region),
                     if (gen > 1) w.gen(gen) else null, if (witness) w.t("свидетель", "witness") else null).joinToString(" · "), style = T.Small)
             }
         }
         Rule(Modifier.padding(top = 6.dp, bottom = 4.dp), C.ink2)
-        for ((i, e) in page.entries.withIndex()) EntryRow(e, w, fresh = i >= dry && !BuildConfig.SHOTS, delayIndex = (i - dry).coerceAtLeast(0))
+        for ((i, e) in entries.withIndex()) EntryRow(e, w, fresh = i >= dry && !BuildConfig.SHOTS, delayIndex = (i - dry).coerceAtLeast(0))
     }
 }
 

@@ -1,6 +1,8 @@
 package app.lot.data
 
 import android.content.Context
+import androidx.room.AutoMigration
+import androidx.room.ColumnInfo
 import androidx.room.Dao
 import androidx.room.Database
 import androidx.room.Entity
@@ -50,6 +52,12 @@ data class LifeRow(
     val dynasty: Long,
     val gen: Int,
     val endedAt: Long,
+    /** The engine that wrote the life: 1.0.0 lives (1) kept no [book] and are read again by today's engine. */
+    @ColumnInfo(defaultValue = "1") val ver: Int = 1,
+    /** The book as it was written, so later versions of the lines never change a finished life. */
+    @ColumnInfo(defaultValue = "") val book: String = "",
+    /** Ids of the real events the life met, for the chronicle. */
+    @ColumnInfo(defaultValue = "") val seen: String = "",
 ) {
     val name get() = Tx(nameRu, nameEn)
     val epitaph get() = Tx(epitaphRu, epitaphEn)
@@ -58,6 +66,7 @@ data class LifeRow(
     val sur get() = surRu?.let { Tx(it, surEn ?: it) }
     val story get() = storyRu?.let { Tx(it, storyEn ?: it) }
     val pickList get() = if (picks.isEmpty()) emptyList() else picks.split(',').map { it.toInt() }
+    val seenIds get() = if (seen.isEmpty()) emptyList() else seen.split(',').map { it.toInt() }
 }
 
 /** A thing in the chest; who held it is the lives that point at it. */
@@ -79,7 +88,7 @@ interface LotDao {
     @Upsert suspend fun meta(m: MetaRow)
 }
 
-@Database(entities = [LifeRow::class, ThingRow::class, MetaRow::class], version = 1, exportSchema = true)
+@Database(entities = [LifeRow::class, ThingRow::class, MetaRow::class], version = 2, exportSchema = true, autoMigrations = [AutoMigration(from = 1, to = 2)])
 abstract class LotDb : RoomDatabase() {
     abstract fun dao(): LotDao
 

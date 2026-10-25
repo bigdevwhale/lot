@@ -2,6 +2,8 @@ package app.lot.ui.components
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -34,11 +36,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.focus.onFocusEvent
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
@@ -52,6 +56,7 @@ import androidx.compose.ui.unit.dp
 import app.lot.ui.theme.C
 import app.lot.ui.theme.T
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 /** The paper of every screen: warm, a little lighter at the top and darker at the foot, with a few foxing spots. */
 fun Modifier.paper() = this.background(C.paper).drawBehind {
@@ -85,10 +90,13 @@ fun Btn(text: String, modifier: Modifier = Modifier, kind: Kind = Kind.INK, enab
 }
 
 @Composable
-fun Chip(text: String, on: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
+fun Chip(text: String, on: Boolean, modifier: Modifier = Modifier, enabled: Boolean = true, onClick: () -> Unit) {
     val shape = RoundedCornerShape(20.dp)
-    Box(modifier.clip(shape).background(if (on) C.ink else C.card).border(1.dp, if (on) C.ink else C.line, shape).clickable(onClick = onClick).padding(horizontal = 13.dp, vertical = 7.dp)) {
-        Text(text, style = T.Body.copy(color = if (on) C.light else C.ink))
+    Box(
+        modifier.clip(shape).background(if (on) C.ink else C.card).border(1.dp, if (on) C.ink else C.line, shape)
+            .clickable(enabled = enabled, onClick = onClick).padding(horizontal = 13.dp, vertical = 7.dp),
+    ) {
+        Text(text, style = T.Body.copy(color = if (on) C.light else if (enabled) C.ink else C.line))
     }
 }
 
@@ -117,7 +125,14 @@ fun Flow(modifier: Modifier = Modifier, gap: Dp = 6.dp, content: @Composable () 
 @Composable
 fun Field(value: String, onChange: (String) -> Unit, hint: String, modifier: Modifier = Modifier, minLines: Int = 2, max: Int = 400) {
     val shape = RoundedCornerShape(3.dp)
-    Box(modifier.fillMaxWidth().clip(shape).background(C.page).border(1.dp, C.line, shape).padding(horizontal = 10.dp, vertical = 8.dp)) {
+    // When the keyboard comes up, the field scrolls itself into view above it.
+    val seen = remember { BringIntoViewRequester() }
+    val scope = rememberCoroutineScope()
+    Box(
+        modifier.fillMaxWidth().bringIntoViewRequester(seen)
+            .onFocusEvent { if (it.isFocused) scope.launch { delay(350); seen.bringIntoView() } }
+            .clip(shape).background(C.page).border(1.dp, C.line, shape).padding(horizontal = 10.dp, vertical = 8.dp),
+    ) {
         if (value.isEmpty()) Text(hint, style = T.Write.copy(color = C.muted.copy(alpha = .6f)))
         BasicTextField(
             value, { onChange(it.take(max)) }, Modifier.fillMaxWidth(), textStyle = T.Write, minLines = minLines, cursorBrush = SolidColor(C.blue),
