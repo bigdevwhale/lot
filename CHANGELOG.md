@@ -6,6 +6,19 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.1.2] - 2026-10-25
+
+### Fixed
+- A widow or widower no longer meets lines about a living spouse; remarrying lifts it.
+- Work at a factory, an office or a warehouse makes the life a town life, so fields and rent stop coming.
+- After emigrating, a life gets only lines, forks and events true anywhere, not those of the home village.
+- Lines about your own children and grandchildren come only to those who have them; three forks ask for what they assumed.
+
+<!-- tg
+«Жребий» 1.1.2: жизни стали связнее — вдова больше не встречает строк о живом муже, а после переезда в город или за океан не выпадает деревенское
+Строки о своих детях и внуках теперь только у тех, у кого они есть
+-->
+
 ## [1.1.1] - 2026-10-25
 
 ### Fixed
