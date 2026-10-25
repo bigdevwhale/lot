@@ -66,13 +66,14 @@ class Repo(private val db: LotDb, val content: Content) {
         return State(lives, things, cur, page, seen).also { _state.value = it }
     }
 
-    fun heir(row: LifeRow?, things: List<ThingRow>): Heir? = row?.let { r ->
+    fun heir(row: LifeRow?, things: List<ThingRow>, lives: List<LifeRow>): Heir? = row?.let { r ->
         val thing = things.firstOrNull { it.id == r.thingId }?.let { Things.of(it.key).name } ?: Tx("", "")
-        Heir(r.id, r.name, r.sexOf, r.year, r.region, r.cult, r.rank, r.wealth, r.sur, r.thingId, thing, r.story, r.dynasty, r.gen)
+        val readers = lives.any { it.dynasty == r.dynasty && it.gen <= r.gen && it.lit }
+        Heir(r.id, r.name, r.sexOf, r.year, r.region, r.cult, r.rank, r.wealth, r.sur, r.thingId, thing, r.story, r.dynasty, r.gen, readers)
     }
 
     fun read(c: Cur, lives: List<LifeRow>, things: List<ThingRow>): Page {
-        val heir = heir(lives.firstOrNull { it.id == c.heirOf }, things)
+        val heir = heir(lives.firstOrNull { it.id == c.heirOf }, things, lives)
         return Life.read(content, c.seed, heir, c.picks, c.shown, c.witness, past(c, lives), c.wish)
     }
 
@@ -86,7 +87,7 @@ class Repo(private val db: LotDb, val content: Content) {
 
     /** The whole book of an archived life, as it was written; a life from 1.0.0 kept no book and is read again. */
     fun book(row: LifeRow, s: State): List<Entry> = if (row.book.isNotEmpty()) decode(row.book)
-    else Life.read(content, row.seed, heir(s.lives.firstOrNull { it.id == row.heirOf }, s.things), row.pickList, Int.MAX_VALUE, row.witness).entries
+    else Life.read(content, row.seed, heir(s.lives.firstOrNull { it.id == row.heirOf }, s.things, s.lives), row.pickList, Int.MAX_VALUE, row.witness).entries
 
     /** Pulls a lot from the sack. [heirOf] makes it the great-grandchild of that life. */
     suspend fun draw(witness: Boolean, heirOf: Long? = null, seed: Long = Random.nextLong(), now: Long = System.currentTimeMillis(), wish: Wish = Wish()): State = lock.withLock {

@@ -42,12 +42,12 @@ med	c		Ты долго {болел|болела}. Когда {встал|вст�
 med	c	it fr	Давишь виноград босыми ногами в большом чане. Ноги потом красные до колен.	You tread grapes barefoot in the big vat. Afterwards your legs are red to the knee.	
 med	c	en de	На Майский день плясали вокруг шеста с лентами.	On May Day you dance round the pole with ribbons.	
 med	c	eu ru cn in me eg af jp sea meso andes	Через деревню проскакал чужой всадник. Все дети бежали за ним до околицы.	A strange rider gallops through the village. All the children run after him to the edge of it.	
-med	y	eu ru cn in me eg af jp sea meso andes	Сгорел амбар. Отстраивали всем миром.	The barn burns down. The whole village builds it again.	
+med	y	eu ru cn in me eg af jp sea meso andes	Сгорел амбар. Отстраивали всем миром.	The barn burns down. The whole village builds it again.	!town
 med	y	eu ru cn in me eg af jp sea meso andes	Господин поднял подати.	The lord raises the dues.	
 med	y	eu ru cn in me eg af jp sea meso andes	Впервые {увидел|увидела} книгу — у писаря. Она пахнет кожей и воском.	For the first time you see a book, the scribe's. It smells of leather and wax.	
 med	y		На посиделках пели до полуночи. Одну песню ты {запомнил|запомнила} на всю жизнь.	At the evening gathering you sing till midnight. You keep one song all your life.	
 med	y	eu ru cn in me eg af jp sea meso andes	Через деревню шли паломники. Один рассказывал про город с золотыми крышами.	Pilgrims pass through the village. One tells of a city with golden roofs.	
-med	y	eu ru	Отец впервые пустил тебя за плуг одного. Борозда вышла кривая.	For the first time father lets you plough alone. The furrow comes out crooked.	m
+med	y	eu ru	Отец впервые пустил тебя за плуг одного. Борозда вышла кривая.	For the first time father lets you plough alone. The furrow comes out crooked.	m !town
 med	y		Мать учит тебя ткать. Первый холст вышел кривой, но его всё равно пустили на рубахи.	Mother teaches you to weave. The first cloth comes out crooked, but it still goes into shirts.	f
 med	y	eu ru cn in me eg af jp sea meso andes	Тебе нравится {дочь|сын} кузнеца. Ты по три раза на дню {ходил|ходила} мимо кузни.	You like the smith's {daughter|son}. You walk past the forge three times a day.	
 med	y	cn	Дядя в третий раз едет сдавать экзамены. Вся семья копила ему на кисти и бумагу.	Your uncle goes to sit the examinations for the third time. The whole family saved for his brushes and paper.	
@@ -121,7 +121,7 @@ med	a	au	Выжигаете сухую траву, чтобы весной пр�
 med	a	au	Весь род ушёл к реке, где пошла рыба. Там встретили соседей и пели три ночи.	The whole clan goes to the river where the fish are running. You meet the neighbours there and sing for three nights.	
 med	a		Поругались с {женой|мужем} из-за курицы. Мирились до вечера.	You quarrel with your {wife|husband} over a hen. Making up takes till evening.	married !widowed
 med	a	eu ru cn in me eg af jp sea meso andes	Дети выросли и ушли в поле без тебя.	The children are grown and go to the field without you.	kids !town
-med	a	eu ru cn in me eg af jp sea meso andes	Сосед одолжил тебе вола. Весной отработаешь.	A neighbour lends you his ox. You will pay him in work in spring.	
+med	a	eu ru cn in me eg af jp sea meso andes	Сосед одолжил тебе вола. Весной отработаешь.	A neighbour lends you his ox. You will pay him in work in spring.	!town
 med	a		Принимаешь гостей. Повар режет третьего барана.	You have guests. The cook slaughters a third ram.	r3
 med	a		Пишешь письмо брату в столицу. Ответа ждать полгода.	You write to your brother in the capital. The answer will take half a year.	lit
 med	a		Переписываешь книгу. Чернила въелись в палец навсегда.	You copy a book. The ink is in your finger for good.	monk lit
@@ -275,10 +275,10 @@ med	y	eu ru cn in me eg af jp sea meso andes	Ночью {убежал|убежа
 med	y		Мать сказала, что ты теперь {взрослый|взрослая}. Ты не знаешь, радоваться или нет.	Mother says you are grown now. You don't know whether to be glad.	
 med	y		Умерла бабушка. Больше некому рассказывать старые сказки.	Grandmother dies. There is no one left to tell the old tales.	
 med	y	eu ru cn in me eg af jp sea meso andes	Тебя впервые отправили на рынок без старших. Всё {продал|продала} и {купил|купила} себе сладкого.	For the first time you go to market without the grown-ups. You sell everything and buy yourself something sweet.	
-med	y	eu ru cn in me eg af jp sea meso andes	Этим летом ты {работал|работала} в поле наравне со взрослыми. К вечеру не чуешь спины.	This summer you work the field as hard as the grown-ups. By evening you can't feel your back.	
+med	y	eu ru cn in me eg af jp sea meso andes	Этим летом ты {работал|работала} в поле наравне со взрослыми. К вечеру не чуешь спины.	This summer you work the field as hard as the grown-ups. By evening you can't feel your back.	!town
 med	y	me	Тебя отдали учиться к ковровщику. Вяжешь узлы, пока не немеют пальцы.	You are apprenticed to a carpet weaver. You tie knots till your fingers go numb.	
 med	y	me eg	На свадьбе женщины пели и били в бубен. Ты {подпевал|подпевала} громче всех.	At the wedding the women sing and beat the tambourine. You sing along louder than anyone.	
-med	y	me eg	Всё лето {гонял|гоняла} быка по кругу у водяного колеса. Скрип слышишь даже во сне.	All summer you drive the ox round the water wheel. You hear it creak even in your sleep.	
+med	y	me eg	Всё лето {гонял|гоняла} быка по кругу у водяного колеса. Скрип слышишь даже во сне.	All summer you drive the ox round the water wheel. You hear it creak even in your sleep.	!town
 med	y	andes	На празднике молодые танцуют всю ночь. Ты {выбрал|выбрала}, с кем попробуешь жить.	At the feast the young dance all night. You choose the one you will try living with.	
 med	y	andes	Ты {бежал|бежала} наперегонки с царским гонцом. Он даже не обернулся.	You race one of the royal runners. He does not even look round.	
 med	y	andes	Тебя отправили с ламами в долину за солью. Обратно шли десять дней.	You are sent down to the valley with the llamas for salt. The way back takes ten days.	

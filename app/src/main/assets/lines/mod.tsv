@@ -222,7 +222,7 @@ mod	y	cn	После школы тебя отправили в деревню. Ж
 mod	y	ru	Летом трудовой лагерь: полешь колхозную свёклу, вечером танцы.	A summer labour camp: weeding kolkhoz beets, dancing in the evening.	before:1992
 mod	y		Ночью под одеялом переписываешься с друзьями в телефоне.	At night under the blanket you text your friends.	after:2008
 mod	y		Голос ломается. Стараешься говорить пореже.	Your voice is breaking. You try to talk as little as you can.	m
-mod	y	af	Пасёшь отцовское стадо уже один, с копьём.	You herd your father's cattle on your own now, with a spear.	m
+mod	y	af	Пасёшь отцовское стадо уже один, с копьём.	You herd your father's cattle on your own now, with a spear.	m !town
 mod	a		{Одолжил|Одолжила} другу денег. Он вернул через три года, с подарком.	You lend a friend money. He pays it back three years later, with a present.	
 mod	a		Зарплату задерживают второй месяц.	Your pay is two months late.	
 mod	a		Переехали. Первую ночь спите на полу среди узлов.	You move house. The first night you sleep on the floor among the bundles.	

@@ -6,6 +6,21 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.2.2] - 2026-10-25
+
+### Added
+- A girl kept from her letters (before the printing age, in the oldest times even in a scribe's house) can try to learn in secret: half of them do, half are caught.
+
+### Fixed
+- A great-grandchild of someone who could read, or a child of scribes, clergy or clerks, is no longer "the first in the family" to read.
+- 51 more lines about olives, vineyards, herds, harvest and the plough no longer come to a life that has moved to a town or a port.
+
+<!-- tg
+«Жребий» 1.2.2: правнуки грамотных и дети писцов больше не «первые в роду», кто выучился читать
+Девочка, которую не пускают к грамоте, теперь может учиться тайком — повезёт или поймают
+Кто осел в порту или в городе, тому больше не выпадают оливы, виноградники и стада
+-->
+
 ## [1.2.1] - 2026-10-25
 
 ### Changed

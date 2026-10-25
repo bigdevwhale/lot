@@ -51,7 +51,7 @@ ind	y		{Сбежал|Сбежала} с бродячим цирком. Чере�
 ind	y		Экзамен в гимназию. Мать ждёт у ворот.	Your entrance exam at the grammar school. Mother waits at the gate.	lit r2 r3
 ind	y	af	Вербовщик набирает парней на рудники. Ты едешь с ними.	A recruiter signs up the young men for the mines. You go with them.	m
 ind	y		Первое любовное письмо. Прячешь его между страниц книги.	Your first love letter. You hide it between the pages of a book.	lit
-ind	y	sea cn in	Ходишь за буйволом на рисовом поле. Тебя он слушается лучше, чем отца.	You drive the buffalo in the rice field. It minds you better than your father.	r1
+ind	y	sea cn in	Ходишь за буйволом на рисовом поле. Тебя он слушается лучше, чем отца.	You drive the buffalo in the rice field. It minds you better than your father.	r1 !town
 ind	y	it de ru	Мать собирает тебе узелок: ты едешь в Америку к дяде.	Mother packs you a bundle: you are going to your uncle in America.	+abroad
 ind	a		В дом провели электричество. Лампочка под потолком ярче десяти свечей.	Electricity comes into the house. The bulb under the ceiling is brighter than ten candles.	
 ind	a		Стачка на заводе. Две недели без денег.	A strike at the works. Two weeks without pay.	r1 +town
@@ -80,7 +80,7 @@ ind	a	me	Ткёшь ковёр для купца из Тебриза. Плати
 ind	a	af	Налог теперь берут деньгами, а не зерном. Идёшь работать на ферму к белым.	The tax is now taken in coin, not grain. You go to work on a white man's farm.	r1
 ind	a	sea	Работаешь на оловянном руднике. С утра до ночи по колено в воде.	You work at the tin mine. Knee-deep in water from dawn to dark.	m r1
 ind	a	latam	Пасёшь скот на эстансии. Хозяин приезжает из города раз в год.	You herd cattle on the estancia. The owner comes out from the city once a year.	m r1 !town
-ind	a	au	Стрижёшь овец от фермы к ферме. За сезон проходишь сотни миль.	You shear sheep from station to station. Hundreds of miles on foot a season.	m
+ind	a	au	Стрижёшь овец от фермы к ферме. За сезон проходишь сотни миль.	You shear sheep from station to station. Hundreds of miles on foot a season.	m !town
 ind	a	fr it	По воскресеньям — кафе, стакан вина и домино.	On Sundays: the café, a glass of wine and dominoes.	m
 ind	a	de	Тебя записали в больничную кассу. Теперь врач бесплатно.	You are enrolled in the sickness fund. Now the doctor costs nothing.	r1 r2
 ind	a		После смены в шахте моешься в корыте у огня. Вода сразу чёрная.	After the shift in the pit you wash in a tub by the fire. The water turns black at once.	m r1
@@ -140,7 +140,7 @@ ind	o	it	{Вернулся|Вернулась} из Америки, чтобы �
 ind	o		Похоронил{|а} последнего друга детства. Некому теперь сказать: «А помнишь?»	You bury your last childhood friend. No one is left to say "remember?"	
 ind	o		Каждое утро ждёшь почтальона: внук на войне.	Every morning you wait for the postman: your grandson is at the war.	kids
 ind	o	latam	Сидишь на пороге с калебасой мате. Солнце садится за пампу.	You sit on the doorstep with a gourd of mate. The sun goes down over the pampas.	
-ind	o	af	Дети ушли в город на рудники. Мотыгу берёшь сам{|а}, а внуки помогают.	The children have gone to the mines in town. You take up the hoe yourself; the grandchildren help.	kids
+ind	o	af	Дети ушли в город на рудники. Мотыгу берёшь сам{|а}, а внуки помогают.	The children have gone to the mines in town. You take up the hoe yourself; the grandchildren help.	kids !town
 ind	x		Война. Мужчин забирают на фронт.	War. The men are taken to the front.	
 ind	x		Холера. Каждый день кого-то несут на кладбище.	Cholera. Every day someone is carried to the graveyard.	
 ind	x		Завод закрылся. Половина улицы без работы.	The works close. Half the street is out of work.	r1
@@ -177,14 +177,14 @@ ind	c	au us	В школу ездишь верхом. Лошадь пасётся
 ind	c	it fr	Давишь виноград ногами вместе со взрослыми. Пятки потом неделю лиловые.	You tread the grapes with the grown-ups. Your heels stay purple for a week.	
 ind	c		В деревню пришёл первый трактор. Бежишь за ним до самого поля.	The first tractor comes to the village. You run behind it all the way to the field.	after:1925
 ind	c	ru	В школе вместо икон — портреты. Учительница стрижена под мальчика.	At school there are portraits instead of icons. The teacher has her hair cut like a boy's.	after:1925
-ind	y		Первый раз жнёшь наравне со взрослыми. К вечеру не разогнуться.	For the first time you reap alongside the grown-ups. By evening you can't straighten up.	
+ind	y		Первый раз жнёшь наравне со взрослыми. К вечеру не разогнуться.	For the first time you reap alongside the grown-ups. By evening you can't straighten up.	!town
 ind	y		Тебя впервые послали на базар продавать без старших. Обратно несёшь всё до копейки.	For the first time you are sent to sell at the market alone. You bring back every last coin.	
 ind	y		Праздничную одежду тебе перешили из отцовской. Ходишь в ней осторожно.	Your feast-day clothes are cut down from your father's. You move carefully in them.	
 ind	y		Ночью с друзьями бегаешь на реку купаться. Дома никто не знает.	At night you slip off to the river with friends to swim. No one at home knows.	
 ind	y		Брата забрали в солдаты. Теперь из детей ты старше всех.	Your brother is taken for a soldier. Now you are the eldest child at home.	
 ind	y		Первый раз всерьёз {поругался|поругалась} с отцом. Ночуешь у тётки.	You quarrel with your father in earnest for the first time. You spend the night at your aunt's.	
 ind	y		Богатый сосед взял тебя в работники. Платит едой.	The rich neighbour takes you on as a hand. The pay is food.	
-ind	y		Тебе доверили отвести скотину на продажу в соседнее село. Торгуешься, как отец.	You are trusted to take a beast to sell in the next village. You haggle just like your father.	
+ind	y		Тебе доверили отвести скотину на продажу в соседнее село. Торгуешься, как отец.	You are trusted to take a beast to sell in the next village. You haggle just like your father.	!town
 ind	y		Старуха-соседка гадает тебе по руке. Говорит, уедешь далеко.	The old woman next door reads your palm. She says you will go far away.	
 ind	y	ru	На посиделки парни приносят гармонь. Девушки прядут и поют.	The lads bring an accordion to the evening gathering. The girls spin and sing.	
 ind	y	cn	Учишься считать на счётах: дядя берёт тебя в лавку.	You learn the abacus: your uncle is taking you into his shop.	
@@ -193,9 +193,9 @@ ind	y	af	Обряд взросления. Неделю живёте за дер�
 ind	y	me	Учишься у ткача на базаре. Мастер кормит тебя обедом и бьёт за спутанную нить.	You learn from a weaver in the bazaar. The master feeds you lunch and beats you for a tangled thread.	
 ind	y	latam	Сафра. Рубишь тростник мачете с рассвета до темноты.	The zafra. You cut cane with a machete from dawn to dark.	
 ind	y	au	Объезжаешь лошадей на соседней станции. Падаешь чаще, чем сидишь в седле.	You break horses on the next station. You fall off more than you stay on.	
-ind	y	us	Нанимаешься на жатву в прериях. Ночуешь в стогах.	You hire on for the harvest on the plains. You sleep in haystacks.	
+ind	y	us	Нанимаешься на жатву в прериях. Ночуешь в стогах.	You hire on for the harvest on the plains. You sleep in haystacks.	!town
 ind	y	en	По субботам танцы в зале над пабом.	On Saturdays there are dances in the room above the pub.	
-ind	y	it fr	Сбор винограда кончился. Вечером танцуешь на току под скрипку.	The grape harvest is over. In the evening you dance on the threshing floor to a fiddle.	
+ind	y	it fr	Сбор винограда кончился. Вечером танцуешь на току под скрипку.	The grape harvest is over. In the evening you dance on the threshing floor to a fiddle.	!town
 ind	y	in	Тебя выдали замуж ещё девочкой. Теперь пора переезжать в дом мужа.	You were married as a little girl. Now it is time to move to your husband's house.	f !monk
 ind	y	de	Подмастерьем идёшь из города в город. В каждом цеху дают ночлег и хлеб.	As a journeyman you walk from town to town. Every guild gives you a bed and bread.	m +town
 ind	y	sea	Тебя на три месяца отдали в монастырь послушником. Бреют голову.	You are sent to the monastery as a novice for three months. They shave your head.	m
@@ -229,7 +229,7 @@ ind	a	au	Почта приходит на станцию раз в месяц, �
 ind	a	en	Платишь по пенни в неделю в похоронный клуб, чтобы не лечь в общую могилу.	You pay a penny a week into the burial club, so you won't end in a pauper's grave.	
 ind	a	de	По вечерам поёшь в хоровом обществе. Готовитесь к празднику песни.	In the evenings you sing in the choral society, practising for the song festival.	
 ind	a	fr	Каждое утро сдаёшь молоко в сыроварню. Там записывают, сколько литров.	Every morning you take your milk to the cheese dairy. They write down how many litres.	
-ind	a	it	Все оливки — под хозяйский пресс. Твоё масло отмеряют ковшом.	All the olives go to the landlord's press. Your share of the oil is measured out by the ladle.	
+ind	a	it	Все оливки — под хозяйский пресс. Твоё масло отмеряют ковшом.	All the olives go to the landlord's press. Your share of the oil is measured out by the ladle.	!town
 ind	a	jp cn	Выкармливаешь шелкопряда. Неделю спишь урывками: черви едят и ночью.	You raise silkworms. For a week you sleep in snatches: they feed all night.	
 ind	a	ru	Сход переделил землю по едокам. Тебе досталась полоса у оврага.	The village assembly shares out the land by mouths. You get a strip by the ravine.	before:1930 !town
 ind	a	ru	На трудодни выдали полмешка ржи за весь год.	For a year of workdays on the kolkhoz you are paid half a sack of rye.	after:1932 r1
@@ -286,9 +286,9 @@ ind	x	ru	Пожар: изба за избой выгорела половина 
 ind	x	cn	Бандиты захватили деревню и требуют выкуп серебром.	Bandits seize the village and demand a ransom in silver.	
 ind	x	in	Чума. Санитары окуривают дома и уводят больных.	Plague. Inspectors fumigate the houses and take the sick away.	
 ind	x	af	Твою землю отдали под ферму белым. Вас переселили на сухие холмы.	Your land is given to a white farmer. You are moved to the dry hills.	!town
-ind	x	us au	Град за десять минут положил всю пшеницу.	In ten minutes the hail flattens the whole wheat crop.	
+ind	x	us au	Град за десять минут положил всю пшеницу.	In ten minutes the hail flattens the whole wheat crop.	!town
 ind	x	jp	Волна смыла рыбацкий посёлок.	A great wave washes the fishing village away.	
 ind	x	latam	Жёлтая лихорадка в порту. Заколачивают дома.	Yellow fever in the port. Houses are boarded up.	
 ind	x	au	Засуха. Овцы падают у пересохших запруд.	Drought. The sheep drop by the dry dams.	!town
-ind	x	it fr	Филлоксера. Виноградник сохнет лоза за лозой.	Phylloxera. The vineyard dies, vine after vine.	
+ind	x	it fr	Филлоксера. Виноградник сохнет лоза за лозой.	Phylloxera. The vineyard dies, vine after vine.	!town
 ind	x		Испанка. За месяц умерло больше, чем за всю войну.	The Spanish flu. More die in a month than in the whole war.	after:1918 before:1920

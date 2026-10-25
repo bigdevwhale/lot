@@ -164,6 +164,24 @@ class LifeTest {
         assertTrue(monks > 20)
     }
 
+    /** A great-grandchild of a reader is never "the first in the family" to read; a girl kept from letters may try in secret. */
+    @Test fun lettersRunInTheFamily() {
+        val rnd = Random(4)
+        var secret = 0
+        repeat(1500) { n ->
+            val heir = Heir(1, app.lot.domain.Tx("Анна", "Anna"), app.lot.domain.Sex.F, -900, "me", "me", 3, 2, null, 5, app.lot.domain.Tx("ложка", "a spoon"), null, 11L, 1, readers = true)
+            val (p, _) = Life.live(content, n.toLong() * 23, heir) { ch, _ ->
+                val open = ch.doors.indices.filter { ch.doors[it].open }
+                open.firstOrNull { ch.doors[it].text.en.startsWith("Learn") } ?: open.random(rnd)
+            }
+            val first = p.entries.firstOrNull { "в роду" in it.text.ru && "перв" in it.text.ru }
+            assertTrue("life $n: ${first?.text?.ru}", first == null)
+            assertTrue("first in family in the epitaph of life $n", "Первая в роду" !in p.end!!.epitaph.ru && "Первый в роду" !in p.end!!.epitaph.ru)
+            if (p.entries.any { it.text.en.startsWith("You are caught bent") || "in secret" in it.text.en || "your brother showed you" in it.text.en }) secret++
+        }
+        assertTrue("no girl ever tried in secret", secret > 0)
+    }
+
     /** A life whose book has been to the sea is never mourned as one that never saw it. */
     @Test fun whoSawTheSeaIsNotSaidNeverTo() {
         val sexes = listOf(app.lot.domain.Sex.M, app.lot.domain.Sex.F)
@@ -185,7 +203,8 @@ class LifeTest {
         fun texts(lines: List<app.lot.domain.Line>) = lines.flatMap { l -> sexes.map { l.text.g(it).ru } }.toSet()
         val moves = texts(content.lines.filter { "town" in it.need.sets }) +
             setOf("Уехал в город, в ученики. Мастер бьёт, но кормит.", "Ушла в город, в ученики. Мастер бьёт, но кормит.",
-                "Ушёл в город, в ученики. Мастер бьёт, но кормит.", "Уехал в город. Спишь у дальней родни на полу.", "Уехала в город. Спишь у дальней родни на полу.")
+                "Ушёл в город, в ученики. Мастер бьёт, но кормит.", "Уехал в город. Спишь у дальней родни на полу.", "Уехала в город. Спишь у дальней родни на полу.",
+                "В порту ты остаёшься насовсем. Домой шлёшь поклоны с купцами.")
         val land = texts(content.lines.filter { it.need.holdsOnlyOutsideTown() })
         val rnd = Random(11)
         var moved = 0

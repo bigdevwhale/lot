@@ -22,6 +22,8 @@ data class Heir(
     val story: Tx?,
     val dynasty: Long,
     val gen: Int,
+    /** Someone in the family line before could read, so this life is not the first. */
+    val readers: Boolean = false,
 ) {
     companion object {
         /** A great-grandchild is born 70 to 94 years later, and must be born by now. */
@@ -117,6 +119,8 @@ class Life private constructor(
     private var death: Int
     private var lit = false
     private val parentLit: Boolean
+    /** An ancestor in the family line could read. */
+    private val kinLit: Boolean
     private var firstLit = false
     private var wealth: Int
     private var married = false
@@ -206,7 +210,9 @@ class Life private constructor(
         if (y + death > NOW) { death = NOW - y; alive = true }
         val share = e.births / World.TOTAL * region.w / e.regions.sumOf { it.w } * estate.w / pool.sumOf { it.w } * .5
         birth = Birth(seed, e, region, cult, estate, sex, y, first, sur, name, share, heir)
-        parentLit = rnd.nextDouble() < if (rank >= 3) (e.lit * 6).coerceAtMost(.95) else e.lit * .6
+        // Scribes, clergy and clerks read for a living; their children are never the first in the family.
+        parentLit = (rnd.nextDouble() < if (rank >= 3) (e.lit * 6).coerceAtMost(.95) else e.lit * .6) || estate.key in READERS
+        kinLit = heir?.readers == true
         wealth = rank
         sawSea = region.sea && rnd.nextDouble() < .5
         lit = when (e.i) {
@@ -322,11 +328,13 @@ class Life private constructor(
     private fun work(): Ask {
         val e = era.i
         val f = sex == Sex.F
+        // Before the printing age girls were not taught, in the oldest times not even in a scribe's house.
+        val girl = f && e in 1..4 && !lit && rank > 0 && (rank < 3 || e < 3)
         val learn = when {
             e == 0 -> why("Письма ещё не придумали.", "Writing has not been invented yet.")
             e < 6 && lit -> why("Ты уже умеешь читать.", "You can read already.")
             rank == 0 && e < 6 -> why("Несвободным учиться запрещено.", "The unfree are forbidden to learn.")
-            e < 5 && f && rank < 3 -> why("Девочек грамоте не учат.", "Girls are not taught their letters.")
+            girl -> why("Девочек грамоте не учат.", "Girls are not taught their letters.")
             e < 4 && rank < 3 -> why("Грамоте учат только детей писцов и знати.", "Only the children of scribes and nobles learn their letters.")
             e == 6 && rank == 0 -> why("Семье нужен твой заработок уже сейчас.", "Your family needs your wages now.")
             else -> null
@@ -342,11 +350,24 @@ class Life private constructor(
             door(if (e == 6) "Учиться дальше" else "Учиться грамоте", if (e == 6) "Stay on at school" else "Learn to read and write", learn) {
                 if (e == 6) { wealth++; add(12, "Учишься дальше. Первым делом — в библиотеку.", "You stay on at school. First thing: the library.") }
                 else {
-                    lit = true; firstLit = !parentLit
+                    lit = true; firstLit = !parentLit && !kinLit
                     if (firstLit) add(12, "{Выучился|Выучилась} читать — {первым|первой} в роду.", "You learn to read, the first in your family.")
-                    else add(12, "{Выучился|Выучилась} читать и писать, как отец.", "You learn to read and write, like your father.")
+                    else if (parentLit) add(12, "{Выучился|Выучилась} читать и писать, как отец.", "You learn to read and write, like your father.")
+                    else add(12, "{Выучился|Выучилась} читать и писать. Грамотные в роду были и до тебя.", "You learn to read and write. There were readers in the family before you.")
                 }
             },
+        )
+        // A girl may still try in secret, from a brother's lessons or a father's tablets; half of them are caught.
+        if (girl) doors += door("Учиться тайком", "Learn in secret", null) {
+            if (rnd.nextBoolean()) {
+                lit = true; firstLit = !parentLit && !kinLit; flags += "secretlit"
+                if (parentLit) add(12, "Подглядывала, как пишет отец, и тайком выучила буквы. Он знает и молчит.", "You watched your father write and learned the letters in secret. He knows and says nothing.")
+                else add(12, "Брат по вечерам показывал тебе буквы, пока никто не видит. Ты выучила все.", "In the evenings your brother showed you the letters when no one was looking. You learned them all.")
+            } else {
+                add(12, "Тебя застали над письменами. Выпороли, и к письму больше не подпускают.", "You are caught bent over the writing. You are beaten and kept away from it from then on.")
+            }
+        }
+        doors.addAll(listOf(
             door(if (e == 6) "Уехать к родне в большой город" else "Уйти в город, в ученики к мастеру", if (e == 6) "Go to relatives in the big city" else "Go to town as an apprentice", town) {
                 this@Life.town = true
                 if (rnd.nextBoolean()) wealth++
@@ -354,14 +375,14 @@ class Life private constructor(
                 if (e == 6) add(12, "{Уехал|Уехала} в город. Спишь у дальней родни на полу.", "You move to the city. You sleep on a distant relative's floor.")
                 else add(12, "{Ушёл|Ушла} в город, в ученики. Мастер бьёт, но кормит.", "You go to town as an apprentice. The master beats you, but feeds you.")
             },
-        )
+        ))
         if (e in 2..4) doors += door("Уйти в монастырь", "Enter a monastery", when {
             rank == 0 -> why("Несвободных не постригают.", "The unfree may not take vows.")
             region.tags.none { it in setOf("eu", "ru", "cn", "jp", "sea", "in") } -> why("Здесь нет монастырей.", "There are no monasteries here.")
             else -> null
         }) {
             monk = true
-            if (rnd.nextDouble() < .7) { lit = true; firstLit = !parentLit }
+            if (rnd.nextDouble() < .7) { lit = true; firstLit = !parentLit && !kinLit }
             add(12, "{Ушёл|Ушла} в монастырь. Семьи не будет — будет тишина и молитва.", "You enter a monastery. There will be no family: there will be silence and prayer.")
         }
         return ask(12, Tx("Детство кончилось. Что дальше?", "Childhood is over. What next?"), *doors.toTypedArray())
@@ -444,7 +465,7 @@ class Life private constructor(
         for (f in fx) when {
             f.startsWith("wealth") -> wealth = (wealth + f.removePrefix("wealth").toInt()).coerceAtLeast(0)
             f.startsWith("risk") -> if (rnd.nextDouble() * 100 < f.removePrefix("risk").toInt()) death = minOf(death, age + 1 + rnd.nextInt(3))
-            f == "lit" -> if (!lit) { lit = true; firstLit = !parentLit }
+            f == "lit" -> if (!lit) { lit = true; firstLit = !parentLit && !kinLit }
             f == "sea" -> sawSea = true
             f == "kind" -> kind = true
             f == "love" -> love = true
@@ -599,6 +620,7 @@ class Life private constructor(
         else {
             ep += eps.take(2)
             if (firstLit) ep += tx("{Первый|Первая} в роду, кто {научился|научилась} читать.", "The first in the family to read.")
+            if ("secretlit" in flags) ep += tx("Грамоте выучилась тайком.", "Learned her letters in secret.")
             if (birth.estate.rank == 0 && rank > 0) ep += tx("{Родился|Родилась} несвободным, {умер|умерла} {свободным|свободной}.", "Born unfree, died free.")
             if (kids > 0) ep += if (kidsAlive < kids) tx("{Пережил|Пережила} ${Years.childrenAcc(kids - kidsAlive)}.", "Outlived ${Years.childrenEn(kids - kidsAlive)}.")
                 else tx("{Вырастил|Вырастила} ${Years.childrenAcc(kids)}.", "Raised ${Years.childrenEn(kids)}.")
@@ -653,6 +675,9 @@ class Life private constructor(
     companion object {
         /** The engine version written into each life: 1 was 1.0.0, 2 brought forks, needs and kept books. */
         const val VERSION = 2
+
+        /** Estates whose fathers read for a living. */
+        private val READERS = setOf("scribe", "clergy", "clerk", "office")
 
         /** The year the books are written up to. */
         const val NOW = 2026
