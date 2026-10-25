@@ -6,6 +6,17 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.2.0] - 2026-10-25
+
+### Added
+- Settings: the book can be printed instead of handwritten.
+- Atlas: tap a dot to see whose birthplace it is: name, years, era and place; tap the note to open the book.
+
+<!-- tg
+«Жребий» 1.2.0: в настройках можно сменить рукописный почерк книги на печатный шрифт
+На атласе нажми на точку — увидишь, чья это жизнь: имя, годы, эпоха и место
+-->
+
 ## [1.1.3] - 2026-10-25
 
 ### Fixed
