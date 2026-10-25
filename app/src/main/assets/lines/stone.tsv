@@ -82,19 +82,19 @@ stone	j		Твой ребёнок принёс первую добычу — ящ
 stone	j		В дождь {спал|спала} под навесом из коры до полудня. Никто не будил.	In the rain you sleep under a bark lean-to till noon. Nobody wakes you.	
 stone	j	au	Ночь такая ясная, что в тёмных пятнах Млечного Пути виден эму.	The night is so clear that you can see the emu in the dark patches of the Milky Way.	
 stone	o		Ты — самый старый в роду. Тебя слушают, когда решают, куда идти.	You are the oldest in the band. They listen to you when deciding where to go.	
-stone	o		Зубы стёрлись. Внуки разжёвывают тебе мясо.	Your teeth are worn down. The grandchildren chew your meat for you.	kids
+stone	o		Зубы стёрлись. Внуки разжёвывают тебе мясо.	Your teeth are worn down. The grandchildren chew your meat for you.	kids grand
 stone	o		Ты помнишь, где была вода сорок зим назад. Это спасло всех.	You remember where there was water forty winters ago. It saves everyone.	
 stone	o		Учишь детей песне, в которую зашита дорога на юг.	You teach the children a song with the road south sewn into it.	
 stone	o		Сидишь у огня и чинишь сети. Руки помнят сами.	You sit by the fire mending nets. The hands remember by themselves.	
 stone	o		На охоту больше не ходишь. Сидишь с малышами и рассказываешь, кто раньше жил в этих горах.	You no longer go hunting. You sit with the little ones and tell who lived in these hills before.	
 stone	o		Ты {пережил|пережила} всех, с кем {рос|росла}. Их имена теперь помнишь только ты.	You have outlived everyone you grew up with. Only you remember their names now.	
 stone	o	au	Ведёшь молодых к священному месту. Поёшь им ту часть песни, что поют только здесь.	You lead the young ones to the sacred place. You sing them the part of the song that is sung only here.	
-stone	o	eu	Руки уже не держат резец. Ты показываешь, как вырезать лошадь, а режет внук.	Your hands can no longer hold the graver. You show how to carve a horse, and your grandson cuts it.	kids
+stone	o	eu	Руки уже не держат резец. Ты показываешь, как вырезать лошадь, а режет внук.	Your hands can no longer hold the graver. You show how to carve a horse, and your grandson cuts it.	kids grand
 stone	o		Ты приняла роды почти у всех женщин стоянки. Полрода прошло через твои руки.	You have delivered the babies of nearly every woman in the camp. Half the band has passed through your hands.	f
-stone	o		На переходах ты отстаёшь. Внуки ждут тебя у каждого ручья.	On the march you fall behind. The grandchildren wait for you at every stream.	kids
+stone	o		На переходах ты отстаёшь. Внуки ждут тебя у каждого ручья.	On the march you fall behind. The grandchildren wait for you at every stream.	kids grand
 stone	o	af	Ты лучше всех понимаешь птицу-медоуказчика. Идёшь за ней медленно, но идёшь.	You understand the honeyguide bird better than anyone. You follow it slowly, but you follow it.	
 stone	o	am	Ты ещё помнишь холодную землю за спиной. Молодые думают, что это сказка.	You still remember the cold land behind you. The young ones think it is a tale.	!town
-stone	o		Внучка нацепила твоё ожерелье из волчьих зубов и важно ходит по стоянке.	Your granddaughter puts on your wolf-tooth necklace and struts around the camp.	kids
+stone	o		Внучка нацепила твоё ожерелье из волчьих зубов и важно ходит по стоянке.	Your granddaughter puts on your wolf-tooth necklace and struts around the camp.	kids grand
 stone	o		Каждый вечер садишься лицом к закату. Говоришь, что там тебя ждут.	Every evening you sit facing the sunset. You say someone is waiting for you there.	
 stone	x		Пришла засуха. Звери ушли, и вы пошли за ними.	Drought comes. The game leaves, and you follow it.	
 stone	x	eu am	Ледник подступил: зима не кончалась.	The ice creeps closer: the winter does not end.	
@@ -159,7 +159,7 @@ stone	o	in	Подновляешь под скалой старый рисуно�
 stone	o	cn	Только ты знаешь, где в горах растёт трава от жара. Молодые ходят за тобой и запоминают.	Only you know where in the hills the herb against fever grows. The young follow you and learn.	
 stone	o	af	Сидишь в тени и сверлишь бусины из скорлупы. Пальцы медленные, но ни одна не треснула.	You sit in the shade drilling eggshell beads. Your fingers are slow, but not one has cracked.	
 stone	o	am	Ты ещё {застал|застала} мамонтов в этих местах. Молодые не верят, что зверь бывает выше дерева.	You still saw mammoths in these parts. The young don't believe a beast can be taller than a tree.	
-stone	o		Правнук спит у тебя на животе. Ты {дожил|дожила} до этого — немногие доживают.	Your great-grandchild sleeps on your belly. You have lived to see this; few do.	kids
+stone	o		Правнук спит у тебя на животе. Ты {дожил|дожила} до этого — немногие доживают.	Your great-grandchild sleeps on your belly. You have lived to see this; few do.	kids grand
 stone	x		Охотники не вернулись. Ждали три дня, потом пошли искать.	The hunters do not come back. You wait three days, then go looking.	
 stone	x	af	Высохло озеро. Рыба лежит в грязи, а пить нечего.	The lake dries up. Fish lie in the mud, and there is nothing to drink.	
 stone	x	me	Вернулись холода. Дикое зерно не родится, газели ушли.	The cold has come back. The wild grain fails, and the gazelles are gone.	
@@ -169,3 +169,20 @@ stone	x	in	Дожди не пришли. Ягодник засох, ручьи �
 stone	x	cn	Река вышла из берегов и стоит над долиной целую луну. Живёте на холме и едите кору.	The river breaks its banks and lies over the valley for a whole moon. You live on a hill and eat bark.	
 stone	x	cn	Земля затряслась, и пещера, где вы зимовали, обрушилась.	The earth shakes, and the cave where you wintered falls in.	!town
 stone	x	au	Лето без дождя. Роды сходятся к последнему колодцу и ссорятся из-за воды.	A summer without rain. The bands crowd round the last waterhole and quarrel over the water.	
+stone	c		Мать перестала кормить тебя грудью: родился младший.	Your mother stops nursing you: a younger one has been born.	small
+stone	c		Ты {сделал|сделала} первые шаги — прямо к огню. Мать успела.	You take your first steps, straight towards the fire. Your mother is quicker.	small
+stone	c		Твоё первое слово — «дай».	Your first word is "give".	small
+stone	c		Спишь между матерью и старшей сестрой. Там теплее всего.	You sleep between your mother and your older sister. It is the warmest place.	small
+stone	c		Тебя носят за спиной, пока мать работает. Мир ты видишь через её плечо.	You are carried on your mother's back while she works. You see the world over her shoulder.	small
+stone	c		Тебя чуть не унесла лихорадка. Бабка просидела рядом три ночи.	A fever nearly takes you. Your grandmother sits by you for three nights.	small
+stone	c		Ты {съел|съела} горсть земли и {остался|осталась} очень {доволен|довольна}.	You eat a handful of earth and are very pleased with yourself.	small
+stone	c		Старшие дети таскают тебя за собой, как куклу.	The older children drag you about like a doll.	small
+stone	c		Засыпаешь под песню, которую мать поёт без слов.	You fall asleep to a song your mother hums without words.	small
+stone	c		Ты {упал|упала} и {рассёк|рассекла} лоб. Шрам останется на всю жизнь.	You fall and cut your forehead. The scar will stay for life.	small
+stone	c		Плачешь, когда отец уходит, и смеёшься, когда он возвращается.	You cry when your father leaves and laugh when he comes back.	small
+stone	c		Таскаешь собаку за хвост, а она терпит.	You pull the dog's tail, and it puts up with it.	small
+stone	c		Ты всё время тянешь в рот блестящее. Мать вынимает и смеётся.	You keep putting shiny things in your mouth. Your mother takes them out and laughs.	small
+stone	c		Сидишь у порога и встречаешь каждого, кто входит, своим словом.	You sit by the door and greet everyone who comes in with your own word.	small
+stone	c		На переходах тебя несут в шкуре за спиной. Ты спишь всю дорогу.	On the moves you are carried in a hide on someone's back. You sleep the whole way.	small
+stone	c		Тебе дали погрызть мозговую кость. Счастливее тебя нет никого у огня.	You are given a marrow bone to gnaw. Nobody by the fire is happier.	small
+stone	c		Засыпаешь у огня, {завёрнутый|завёрнутая} в шкуру с головой.	You fall asleep by the fire, wrapped in a hide up to your head.	small

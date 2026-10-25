@@ -284,7 +284,7 @@ out: 40 | Раздачи нет. Неделю едите отруби с вод�
 id: m_forest_dwelling
 groups: anc med early
 tags: in
-need: kids
+need: kids grand
 ages: 51-70
 weight: 1
 q: Внуки подросли. По древнему обычаю пора оставить дом сыновьям и уйти жить в лес. | The grandchildren are grown. By old custom it is time to leave the house to your sons and go to live in the forest.
@@ -370,7 +370,7 @@ out: 100 | Олив в этот год много. Об играх ты слуш
 id: m_hand_over
 groups: anc med early ind
 tags: *
-need: kids !town
+need: kids !town grown
 ages: 51-70
 weight: 2
 q: Сил всё меньше. Старший сын ждёт, когда ты отдашь ему дом и землю. | Your strength is going. Your eldest son is waiting for you to hand him the house and land.
@@ -441,7 +441,7 @@ out: 30 | Зимой одиноко. Ты разговариваешь с кош
 id: m_grandson
 groups: ind mod
 tags: *
-need: kids
+need: kids grown
 ages: 51-70
 weight: 2
 q: Дочь уезжает на заработки в город и оставляет тебе сына. На год, говорит, может, на два. | Your daughter is going to the city for work and leaving her son with you. A year, she says, maybe two.
@@ -475,7 +475,7 @@ out: 100 | Ты рассказываешь о той деревне всем, к
 id: m_move_to_children
 groups: mod
 tags: *
-need: kids !town
+need: kids !town grown
 ages: 58-70
 weight: 1
 q: Дети зовут к себе в город: {одному|одной} в деревне тебе тяжело. Квартира на девятом этаже. | The children want you to move to the city: it's hard for you alone in the village. The flat is on the ninth floor.
@@ -721,7 +721,7 @@ ask: Кому можно доверить отложенное? | Whom can you t
 id: m_scam_call
 groups: mod
 tags: *
-need: kids
+need: kids grand
 ages: 58-70
 weight: 1
 q: Звонок с чужого номера: внук попал в аварию, деньги нужны прямо сейчас. Голос в трубке плачет. | A call from an unknown number: your grandson has had an accident, the money is needed right now. The voice on the line is crying.
@@ -902,7 +902,7 @@ out: 100 | Они приходят к тебе по очереди, в разн�
 id: m_apprentice_old
 groups: anc med early ind
 tags: *
-need: r2 kids
+need: r2 kids grown
 ages: 51-70
 weight: 1
 q: Чужой парень просится к тебе в ученики. Твои дети за ремесло так и не взялись. | A lad from outside the family asks to be your apprentice. Your own children never took up the trade.
@@ -940,7 +940,7 @@ out: 30 | Сосед продаёт тебе свою полосу за бесц
 id: m_wedding_debt
 groups: anc med early ind
 tags: *
-need: kids !town
+need: kids !town grown
 ages: 39-51
 weight: 1
 q: Дочь выходит замуж. По обычаю гулять должна вся деревня, а денег нет. | Your daughter is getting married. Custom says the whole village must feast, and there's no money.

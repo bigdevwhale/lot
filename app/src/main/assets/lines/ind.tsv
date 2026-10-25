@@ -69,7 +69,7 @@ ind	a		{Открыл|Открыла} свою лавку. Над дверью в
 ind	a		Купили швейную машинку. По ночам шьёшь на заказ.	You buy a sewing machine. At night you sew for others.	f
 ind	a		Живёшь по гудку: гудок будит, гудок отпускает.	You live by the factory whistle: it wakes you and it lets you go.	r1 town
 ind	a		{Женился|Вышла замуж}. У фотографа снялись в чужих нарядах.	You marry. At the photographer's you pose in borrowed clothes.	married !widowed
-ind	a		Дети пошли в школу. Ты учишься читать по их букварю.	Your children start school. You learn to read from their primer.	kids illit
+ind	a		Дети пошли в школу. Ты учишься читать по их букварю.	Your children start school. You learn to read from their primer.	kids illit school
 ind	a	cn	Через деревню протянули телеграф. Старики говорят, столбы тревожат предков.	The telegraph runs through the village. The old men say the poles disturb the ancestors.	
 ind	a	jp	По новому указу отрезал пучок. Отец месяц не разговаривает с тобой.	By the new decree you cut off your topknot. Father won't speak to you for a month.	m
 ind	a	cn	Отрезал косу. Мать спрятала её в сундук.	You cut off your queue. Mother keeps it in a chest.	m
@@ -119,28 +119,28 @@ ind	j	af	Свадьба у соседей. Барабаны до утра.	A wed
 ind	j	au	Пикник у реки, чай в котелке над костром.	A picnic by the river, tea boiled in a billy over the fire.	
 ind	j	me	Вечер в кофейне: сказитель читает про Рустама.	An evening at the coffee house: a storyteller tells of Rustam.	m
 ind	j		Кошка окотилась в корзине с бельём.	The cat has kittens in the laundry basket.	
-ind	o		Внук показывает тебе радио. Ты заглядываешь за ящик: где же там люди?	Your grandson shows you the radio. You look behind the box for the people.	kids
+ind	o		Внук показывает тебе радио. Ты заглядываешь за ящик: где же там люди?	Your grandson shows you the radio. You look behind the box for the people.	kids grand
 ind	o		Пенсии нет. Живёшь у дочери.	No pension. You live with your daughter.	kids
 ind	o		Ты помнишь лошадей на улицах. Теперь по ним ездят автомобили.	You remember horses in the streets. Now cars drive on them.	town
-ind	o		Пишешь внукам крупными печатными буквами. По-другому не умеешь.	You write to the grandchildren in big block letters. It's the only way you know.	lit kids
+ind	o		Пишешь внукам крупными печатными буквами. По-другому не умеешь.	You write to the grandchildren in big block letters. It's the only way you know.	lit kids grand
 ind	o		Тебя снова фотографируют — через шестьдесят лет после первого раза.	You are photographed again, sixty years after the first time.	
 ind	o	de en	Тебе назначили пенсию. Первый раз в жизни деньги ни за что.	You are granted a pension. For the first time in your life, money for nothing.	r1 r2
-ind	o		Внучка читает тебе письма и пишет ответы под твою диктовку.	Your granddaughter reads you the letters and writes your answers as you dictate.	illit kids
-ind	o		Ты помнишь, когда здесь не было железной дороги. Внуки не верят.	You remember when there was no railway here. The grandchildren don't believe you.	kids
+ind	o		Внучка читает тебе письма и пишет ответы под твою диктовку.	Your granddaughter reads you the letters and writes your answers as you dictate.	illit kids grand
+ind	o		Ты помнишь, когда здесь не было железной дороги. Внуки не верят.	You remember when there was no railway here. The grandchildren don't believe you.	kids grand
 ind	o	cn	Сыновья заранее купили тебе гроб. Ты с гордостью показываешь его гостям.	Your sons have bought your coffin in good time. You proudly show it to guests.	kids
 ind	o	jp	Сын стал главой дома. Ты {перебрался|перебралась} в маленькую комнату у сада.	Your son becomes head of the house. You move to the small room by the garden.	kids
 ind	o	in	Едешь на поезде в Бенарес. Входишь в Ганг по пояс и молишься.	You go by train to Benares. You wade into the Ganges to the waist and pray.	
-ind	o	ru	Лежишь на печи и узнаёшь внуков по голосам.	You lie on the stove and know the grandchildren by their voices.	kids
+ind	o	ru	Лежишь на печи и узнаёшь внуков по голосам.	You lie on the stove and know the grandchildren by their voices.	kids grand
 ind	o		Сидишь у проходной и смотришь, как молодые идут на твоё место.	You sit by the factory gate and watch the young ones go in to your old place.	r1
 ind	o		Первый раз в жизни едешь в автомобиле. Держишься за шляпу.	You ride in a motorcar for the first time in your life. You hold on to your hat.	
 ind	o		Пальто, сшитое к свадьбе, ещё служит. Перелицовываешь его второй раз.	The coat made for your wedding still serves. You turn it a second time.	married
-ind	o		Внуки бегают в кино. Ты так ни разу и не {сходил|сходила}: боишься тёмного зала.	The grandchildren run to the cinema. You have never been: the dark hall frightens you.	kids
+ind	o		Внуки бегают в кино. Ты так ни разу и не {сходил|сходила}: боишься тёмного зала.	The grandchildren run to the cinema. You have never been: the dark hall frightens you.	kids grand
 ind	o	us	Сидишь в качалке на веранде. Мимо тарахтит соседский «форд».	You sit in a rocker on the porch. The neighbour's Ford rattles by.	
 ind	o	it	{Вернулся|Вернулась} из Америки, чтобы умереть в своей деревне.	You come back from America to die in your own village.	
 ind	o		Похоронил{|а} последнего друга детства. Некому теперь сказать: «А помнишь?»	You bury your last childhood friend. No one is left to say "remember?"	
-ind	o		Каждое утро ждёшь почтальона: внук на войне.	Every morning you wait for the postman: your grandson is at the war.	kids
+ind	o		Каждое утро ждёшь почтальона: внук на войне.	Every morning you wait for the postman: your grandson is at the war.	kids grand
 ind	o	latam	Сидишь на пороге с калебасой мате. Солнце садится за пампу.	You sit on the doorstep with a gourd of mate. The sun goes down over the pampas.	
-ind	o	af	Дети ушли в город на рудники. Мотыгу берёшь сам{|а}, а внуки помогают.	The children have gone to the mines in town. You take up the hoe yourself; the grandchildren help.	kids !town
+ind	o	af	Дети ушли в город на рудники. Мотыгу берёшь сам{|а}, а внуки помогают.	The children have gone to the mines in town. You take up the hoe yourself; the grandchildren help.	kids !town grand
 ind	x		Война. Мужчин забирают на фронт.	War. The men are taken to the front.	
 ind	x		Холера. Каждый день кого-то несут на кладбище.	Cholera. Every day someone is carried to the graveyard.	
 ind	x		Завод закрылся. Половина улицы без работы.	The works close. Half the street is out of work.	r1
@@ -268,10 +268,10 @@ ind	o	ru	Зимой плетёшь лапти на всю семью.	In winter 
 ind	o	cn	Каждое утро выносишь клетку с птицей под деревья и слушаешь, как она поёт.	Every morning you carry your bird's cage out under the trees and listen to it sing.	
 ind	o	in	По вечерам у храма слушаешь, как читают Рамаяну. Знаешь её наизусть, а всё равно плачешь.	In the evenings you listen to the Ramayana read at the temple. You know it by heart and still you cry.	
 ind	o	jp cn	Каждое утро ставишь рис на алтарь предков.	Every morning you set rice on the ancestors' altar.	
-ind	o	af	У вечернего огня рассказываешь внукам про паука Ананси.	By the evening fire you tell the grandchildren about Anansi the spider.	kids
+ind	o	af	У вечернего огня рассказываешь внукам про паука Ананси.	By the evening fire you tell the grandchildren about Anansi the spider.	kids grand
 ind	o	me	Перебираешь чётки на пороге и здороваешься с каждым прохожим.	You tell your beads on the doorstep and greet everyone who passes.	
 ind	o	sea in	Жуёшь бетель. Зубы красные, как были у твоей бабки.	You chew betel. Your teeth are red, as your grandmother's were.	
-ind	o	latam	Плетёшь шляпы из пальмового листа. Сын возит их в город на продажу.	You weave palm-leaf hats. Your son takes them to town to sell.	kids
+ind	o	latam	Плетёшь шляпы из пальмового листа. Сын возит их в город на продажу.	You weave palm-leaf hats. Your son takes them to town to sell.	kids grown
 ind	o	us	Сидишь у печки в лавке и споришь со стариками о выборах.	You sit by the stove in the general store arguing with the old men about the election.	
 ind	o	en	Ходишь в паб на одну пинту. Твоё место у камина никто не занимает.	You go to the pub for one pint. No one takes your seat by the fire.	
 ind	o	fr de it	После мессы сидишь на лавке у церкви, пока не позовут обедать.	After mass you sit on the bench by the church until they call you to dinner.	
@@ -292,3 +292,22 @@ ind	x	latam	Жёлтая лихорадка в порту. Заколачива�
 ind	x	au	Засуха. Овцы падают у пересохших запруд.	Drought. The sheep drop by the dry dams.	!town
 ind	x	it fr	Филлоксера. Виноградник сохнет лоза за лозой.	Phylloxera. The vineyard dies, vine after vine.	!town
 ind	x		Испанка. За месяц умерло больше, чем за всю войну.	The Spanish flu. More die in a month than in the whole war.	after:1918 before:1920
+ind	c		Мать перестала кормить тебя грудью: родился младший.	Your mother stops nursing you: a younger one has been born.	small
+ind	c		Ты {сделал|сделала} первые шаги — прямо к лестнице. Мать успела.	You take your first steps, straight towards the stairs. Your mother is quicker.	small
+ind	c		Твоё первое слово — «дай».	Your first word is "give".	small
+ind	c		Спишь между матерью и старшей сестрой. Там теплее всего.	You sleep between your mother and your older sister. It is the warmest place.	small
+ind	c		Тебя носят за спиной, пока мать работает. Мир ты видишь через её плечо.	You are carried on your mother's back while she works. You see the world over her shoulder.	small
+ind	c		Тебя чуть не унесла лихорадка. Бабка просидела рядом три ночи.	A fever nearly takes you. Your grandmother sits by you for three nights.	small
+ind	c		Ты {съел|съела} горсть земли и {остался|осталась} очень {доволен|довольна}.	You eat a handful of earth and are very pleased with yourself.	small
+ind	c		Боишься петуха. Он ходит за тобой по всему двору.	You are afraid of the rooster. It follows you all round the yard.	small
+ind	c		Старшие дети таскают тебя за собой, как куклу.	The older children drag you about like a doll.	small
+ind	c		Засыпаешь под песню, которую мать поёт без слов.	You fall asleep to a song your mother hums without words.	small
+ind	c		Ты {упал|упала} и {рассёк|рассекла} лоб. Шрам останется на всю жизнь.	You fall and cut your forehead. The scar will stay for life.	small
+ind	c		Плачешь, когда отец уходит, и смеёшься, когда он возвращается.	You cry when your father leaves and laugh when he comes back.	small
+ind	c		Таскаешь собаку за хвост, а она терпит.	You pull the dog's tail, and it puts up with it.	small
+ind	c		Тебе дали первую ложку. Половина каши на полу.	You are given your first spoon. Half the porridge ends up on the floor.	small
+ind	c		Ты {спрятался|спряталась} под лавку, и тебя полдня искали всей семьёй.	You hide under the bench, and the whole family searches for you half the day.	small
+ind	c		Ты всё время тянешь в рот блестящее. Мать вынимает и смеётся.	You keep putting shiny things in your mouth. Your mother takes them out and laughs.	small
+ind	c		Сидишь у порога и встречаешь каждого, кто входит, своим словом.	You sit by the door and greet everyone who comes in with your own word.	small
+ind	c	eu ru	Тебя крестили зимой в холодной церкви. Ты {кричал|кричала} так, что священник улыбнулся.	You are baptised in winter in a cold church. You scream so hard the priest smiles.	small
+ind	c		Тебя сфотографировали первый раз. Ты сидишь у матери на коленях и не понимаешь, куда смотреть.	You are photographed for the first time. You sit on your mother's lap and don't know where to look.	small

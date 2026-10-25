@@ -83,7 +83,7 @@ anc	a	cn	Приносишь предкам просо и вино. Просиш�
 anc	a	cn	Пришёл указ: каждая семья даёт одного человека на стену.	An order arrives: every family gives one man for the wall.	
 anc	a	cn	Носишь траур по отцу: три года грубая одежда и никакого мяса.	You mourn your father: three years of coarse clothes and no meat.	
 anc	a	cn	Пишешь кистью на бамбуковых планках. Ошибёшься — планку скоблят ножом.	You write with a brush on bamboo slips. Make a mistake and the slip is scraped with a knife.	r3 lit
-anc	a	in	Жрец назначил свадьбу дочери по звёздам. Ждать ещё два месяца.	The priest sets your daughter's wedding by the stars. Two more months to wait.	kids
+anc	a	in	Жрец назначил свадьбу дочери по звёздам. Ждать ещё два месяца.	The priest sets your daughter's wedding by the stars. Two more months to wait.	kids grown
 anc	a	in	Муссон запаздывает. Каждое утро вся деревня смотрит на небо.	The monsoon is late. Every morning the whole village looks at the sky.	
 anc	a	in	Брахман пришёл петь гимны над новым домом. Ты {отдал|отдала} ему тёлку.	A Brahmin comes to chant hymns over the new house. You give him a heifer.	
 anc	a	in	Отец лепил горшки, ты лепишь горшки, и сын будет лепить. Такая у вас каста.	Father made pots, you make pots, and your son will too. That is your caste.	r2 kids
@@ -127,7 +127,7 @@ anc	a	me eg	Ведёшь ослов с медью через пустыню. Д�
 anc	a	cn in me eg med	Бык пал. Пашете с братом, впрягшись сами.	The ox dies. You and your brother plough with yourselves in the harness.	!town
 anc	a		Сосед передвинул межевой камень. Ты видишь это каждое утро.	A neighbour has moved the boundary stone. You see it every morning.	
 anc	a		Лихорадка трясёт тебя неделю. Знахарка лечит горькой травой и заговором.	A fever shakes you for a week. The healer treats you with a bitter herb and a charm.	
-anc	a		Дочь {выдал|выдала} замуж в соседнюю деревню. В доме стало тихо.	You marry your daughter off into the next village. The house goes quiet.	kids
+anc	a		Дочь {выдал|выдала} замуж в соседнюю деревню. В доме стало тихо.	You marry your daughter off into the next village. The house goes quiet.	kids grown
 anc	a		Чужой человек попросился на ночлег. Ты {накормил|накормила} его, а утром он ушёл.	A stranger asks to stay the night. You feed him, and in the morning he is gone.	
 anc	j		Свадьба у соседей: три дня ели мясо и плясали.	The neighbours' wedding: three days of meat and dancing.	
 anc	j		Первый раз {попробовал|попробовала} мёд с финиками.	For the first time you taste honey with dates.	
@@ -165,25 +165,25 @@ anc	j		Хозяин уехал на неделю. Можно спать до в�
 anc	j		Твою работу купил человек из далёкого города. Заплатил не торгуясь.	A man from a far city buys your work. He pays without haggling.	r2
 anc	j	cn in me eg med	Ласточки вернулись под крышу. Год будет добрый.	The swallows are back under the roof. It will be a good year.	
 anc	j		Тихий вечер: все сыты, никто не болен.	A quiet evening: everyone fed, nobody ill.	
-anc	o		Внуки бегают по двору. Ты рассказываешь им про год, когда река не пришла.	The grandchildren run about the yard. You tell them of the year the river did not come.	kids
+anc	o		Внуки бегают по двору. Ты рассказываешь им про год, когда река не пришла.	The grandchildren run about the yard. You tell them of the year the river did not come.	kids grand
 anc	o		Колени болят. Сидишь у порога и плетёшь корзины.	Your knees ache. You sit at the door weaving baskets.	
 anc	o		Тебя зовут рассудить спор о меже: ты помнишь, где она была.	They call you to settle a quarrel over a boundary: you remember where it was.	!town
 anc	o		Ты {пережил|пережила} трёх царей и ни одного не {видел|видела}.	You outlive three kings and never see one of them.	
 anc	o		Собираешь себе в последний путь: горшок, гребень, немного зерна.	You gather things for your last journey: a pot, a comb, a little grain.	
 anc	o	cn	Сын уже заказал тебе гроб. По обычаю это почёт.	Your son has already had a coffin made for you. By custom it is an honour.	kids
-anc	o	cn	На Новый год внуки кланяются тебе. Ты раздаёшь им сушёный унаби.	At New Year the grandchildren bow to you. You hand out dried jujubes.	kids
-anc	o	in	Старые законы велят уйти в лес и жить отшельником. Но жалко внуков.	The old laws say to go to the forest and live as a hermit. But you would miss the grandchildren.	kids
+anc	o	cn	На Новый год внуки кланяются тебе. Ты раздаёшь им сушёный унаби.	At New Year the grandchildren bow to you. You hand out dried jujubes.	kids grand
+anc	o	in	Старые законы велят уйти в лес и жить отшельником. Но жалко внуков.	The old laws say to go to the forest and live as a hermit. But you would miss the grandchildren.	kids grand
 anc	o	in	Просишь, чтобы прах опустили в реку. Сын кивает.	You ask for your ashes to be given to the river. Your son nods.	kids
 anc	o	me	Диктуешь писцу, кому что оставить. Он берёт за это овцу.	You dictate to a scribe who gets what after you. He charges a sheep for it.	!town
 anc	o	me	Река ушла в сторону. В детстве деревня стояла у воды, теперь кругом пыль.	The river has moved away. In your childhood the village stood by the water; now there is dust all round.	
 anc	o	eg	Всю жизнь {копил|копила} на гроб. Теперь он стоит у стены, расписной.	All your life you saved for a coffin. Now it stands against the wall, painted.	
 anc	o	eg	Видишь пятидесятый разлив. Помнишь каждый плохой.	You see your fiftieth flood. You remember every bad one.	
 anc	o	med	Сидишь на скамье у пристани и по парусу узнаёшь, чей корабль.	You sit on the bench by the quay and know by the sail whose ship it is.	
-anc	o	med	Оливу ты {посадил|посадила} в молодости. Теперь с неё собирают внуки.	You planted the olive tree when you were young. Now your grandchildren pick it.	kids !town
+anc	o	med	Оливу ты {посадил|посадила} в молодости. Теперь с неё собирают внуки.	You planted the olive tree when you were young. Now your grandchildren pick it.	kids !town grand
 anc	o	af	Ты старше всех в деревне. Молодые приходят за советом и несут пиво.	You are the oldest in the village. The young come for advice and bring beer.	
 anc	o	meso	Тебе пятьдесят два года, круг замкнулся. Новый огонь зажгли и для тебя.	You are fifty-two: the circle is closed. The new fire is lit for you too.	
 anc	o	andes	Просишь похоронить тебя в пещере над полями, откуда видна вся долина.	You ask to be buried in the cave above the fields, where the whole valley can be seen.	
-anc	o	au	Ты знаешь песню всей дороги до моря. Учишь ей внука, по строчке в день.	You know the song of the whole way to the sea. You teach it to your grandson, a line a day.	kids
+anc	o	au	Ты знаешь песню всей дороги до моря. Учишь ей внука, по строчке в день.	You know the song of the whole way to the sea. You teach it to your grandson, a line a day.	kids grand
 anc	o	in me eg med	Зубов почти не осталось. Хлеб тебе размачивают в молоке.	Hardly a tooth left. They soak your bread in milk.	
 anc	o		Глаза почти не видят. Узнаёшь людей по шагам.	Your eyes are nearly gone. You know people by their steps.	
 anc	o		Ты {пережил|пережила} всех, с кем {играл|играла} в детстве.	You have outlived everyone you played with as a child.	
@@ -192,7 +192,7 @@ anc	o		Мясо тебе подают {первому|первой}. Так зд
 anc	o		Хозяин отпустил тебя: старый раб ему не нужен. Идти некуда.	Your master sets you free: an old slave is no use to him. You have nowhere to go.	r0
 anc	o		Руки трясутся, работать не можешь. Сидишь в мастерской и ворчишь на учеников.	Your hands shake and you can't work. You sit in the workshop grumbling at the apprentices.	r2
 anc	o	me eg	Велишь высечь на камне свои дела. Половину резчик приукрашивает сам.	You have your deeds carved in stone. Half of it the carver embellishes himself.	r3
-anc	o		Правнук сидит у тебя на коленях. Никак не вспомнишь, как его зовут.	A great-grandchild sits on your knee. You cannot remember his name.	kids
+anc	o		Правнук сидит у тебя на коленях. Никак не вспомнишь, как его зовут.	A great-grandchild sits on your knee. You cannot remember his name.	kids grand
 anc	o		Ночами мёрзнешь даже под двумя шкурами. Спишь у самого очага.	At night you are cold even under two hides. You sleep right by the hearth.	
 anc	o		Каждое утро выходишь посмотреть на поле. Работают на нём уже другие.	Every morning you go out to look at the field. Others work it now.	!town
 anc	o		Соседи приходят послушать, как было раньше. Ты немного привираешь.	The neighbours come to hear how things used to be. You fib a little.	
@@ -262,7 +262,7 @@ anc	c	med	По жаре носишь отцу воду на виноградни
 anc	c	cn	Ловишь цикад и держишь их в клетке из соломы.	You catch cicadas and keep them in a straw cage.	
 anc	c	cn	Сидишь на буйволе, пока отец пашет. Буйвол медленный, а ты как князь.	You sit on the buffalo while father ploughs. The buffalo is slow, and you feel like a prince.	
 anc	c	eg	Тебе обрили голову и оставили одну прядь сбоку. Так ходят все дети.	Your head is shaved but for one lock at the side. All the children wear it so.	
-anc	c		Тебе пять лет, и ты уже носишь воду хозяйским детям.	You are five and already carry water for the master's children.	r0
+anc	c		Ты ещё мал{|а}, а уже носишь воду хозяйским детям.	You are still small, and already carry water for the master's children.	r0
 anc	c		Хозяйские дети играют с тобой, пока никто не видит.	The master's children play with you when no one is looking.	r0
 anc	c		Отец даёт тебе раздувать мехи. Искры летят, а ты смеёшься.	Father lets you work the bellows. Sparks fly and you laugh.	r2 after:-3000
 anc	c	med	Тебя водят в школу с рабом-провожатым. Учитель бьёт за ошибки в счёте.	A slave walks you to school. The teacher beats you for mistakes in sums.	m r3 after:-500
@@ -551,3 +551,21 @@ anc	x	andes	Море у берега стало тёплым. Рыба ушла,
 anc	x	au	Самая долгая засуха на памяти стариков. Ямы с водой в песке пусты.	The longest drought the old people remember. The water holes in the sand are empty.	
 anc	x	au	Циклон с моря. Деревья лежат, стоянку смыло.	A cyclone from the sea. The trees are down and the camp is washed away.	+sea
 anc	x	au	Чужие пришли на вашу землю с копьями. Началась кровная месть.	Strangers come onto your land with spears. A blood feud begins.	!town
+anc	c		Мать перестала кормить тебя грудью: родился младший.	Your mother stops nursing you: a younger one has been born.	small
+anc	c		Ты {сделал|сделала} первые шаги — прямо к огню. Мать успела.	You take your first steps, straight towards the fire. Your mother is quicker.	small
+anc	c		Твоё первое слово — «дай».	Your first word is "give".	small
+anc	c		Спишь между матерью и старшей сестрой. Там теплее всего.	You sleep between your mother and your older sister. It is the warmest place.	small
+anc	c		Тебя носят за спиной, пока мать работает. Мир ты видишь через её плечо.	You are carried on your mother's back while she works. You see the world over her shoulder.	small
+anc	c		Тебя чуть не унесла лихорадка. Бабка просидела рядом три ночи.	A fever nearly takes you. Your grandmother sits by you for three nights.	small
+anc	c		Ты {съел|съела} горсть земли и {остался|осталась} очень {доволен|довольна}.	You eat a handful of earth and are very pleased with yourself.	small
+anc	c		Боишься петуха. Он ходит за тобой по всему двору.	You are afraid of the rooster. It follows you all round the yard.	small
+anc	c		Старшие дети таскают тебя за собой, как куклу.	The older children drag you about like a doll.	small
+anc	c		Засыпаешь под песню, которую мать поёт без слов.	You fall asleep to a song your mother hums without words.	small
+anc	c		Ты {упал|упала} и {рассёк|рассекла} лоб. Шрам останется на всю жизнь.	You fall and cut your forehead. The scar will stay for life.	small
+anc	c		Плачешь, когда отец уходит, и смеёшься, когда он возвращается.	You cry when your father leaves and laugh when he comes back.	small
+anc	c		Таскаешь собаку за хвост, а она терпит.	You pull the dog's tail, and it puts up with it.	small
+anc	c		Тебе дали первую ложку. Половина каши на полу.	You are given your first spoon. Half the porridge ends up on the floor.	small
+anc	c		Ты {спрятался|спряталась} под лавку, и тебя полдня искали всей семьёй.	You hide under the bench, and the whole family searches for you half the day.	small
+anc	c		Ты всё время тянешь в рот блестящее. Мать вынимает и смеётся.	You keep putting shiny things in your mouth. Your mother takes them out and laughs.	small
+anc	c		Сидишь у порога и встречаешь каждого, кто входит, своим словом.	You sit by the door and greet everyone who comes in with your own word.	small
+anc	c		Тебе повесили на шею оберег от злых духов. Ты всё время его грызёшь.	A charm against evil spirits is hung round your neck. You chew it all the time.	small

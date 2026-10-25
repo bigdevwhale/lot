@@ -127,6 +127,7 @@ class Life private constructor(
     private var single = false
     private var love = false
     private var byParents = false
+    private var byMaster = false
     private var monk = false
     private var sawSea: Boolean
     private var kind = false
@@ -140,6 +141,8 @@ class Life private constructor(
     private var alive = false
     private var town = false
     private var age = 0
+    /** The age the first child came at; lines about school-age, grown children and grandchildren wait for the years to pass. */
+    private var firstChildAt = -1
     override val now get() = year + age
     /** Words a fork's outcome leaves behind (faith, brave, moved, ...), read by the epitaph and the question. */
     private val flags = mutableSetOf<String>()
@@ -155,6 +158,10 @@ class Life private constructor(
         "married" -> married
         "single", "!married" -> !married
         "kids" -> kidsAlive > 0
+        "small" -> age < 4
+        "school" -> kidsAlive > 0 && firstChildAt >= 0 && age - firstChildAt >= 8
+        "grown" -> kidsAlive > 0 && firstChildAt >= 0 && age - firstChildAt >= 16
+        "grand" -> kidsAlive > 0 && firstChildAt >= 0 && age - firstChildAt >= 36
         "!kids" -> kidsAlive == 0
         "monk" -> monk
         "town" -> town
@@ -243,7 +250,9 @@ class Life private constructor(
         // Abroad, the lines of the home region no longer fit; only those true anywhere do.
         // Behind the monastery gate only the lines written for it fit: no dances, weddings or fields.
         val all = content.lines(era.group, k, region).filter {
-            it.need.holds(this) && ("abroad" !in flags || it.tags.isEmpty()) && (!monk || it.need.names("monk"))
+            it.need.holds(this) && ("abroad" !in flags || it.tags.isEmpty()) && (!monk || it.need.names("monk")) &&
+                // A toddler's page gets only toddler lines, and an older child never does.
+                (k != Kind.CHILD || it.need.names("small") == (age < 4))
         }
         val fresh = all.filterNot { it in used }
         // Lines the reader met in recent lives wait their turn while there are others.
@@ -391,11 +400,18 @@ class Life private constructor(
     private fun marry(age: Int): Ask {
         val e = era.i
         val f = sex == Sex.F
-        val forced = if (e in 1..4 && (f || rank >= 3 || e < 3)) why("Выбирать тебе не дают: старшие уже сговорились.", "You are given no choice: the elders have already agreed.") else null
+        // The unfree are married off by their master, not by their parents.
+        val owned = rank == 0 && e in 1..5
+        val forced = when {
+            owned -> why("Кого тебе взять, решает хозяин.", "Your master decides whom you marry.")
+            e in 1..4 && (f || rank >= 3 || e < 3) -> why("Выбирать тебе не дают: старшие уже сговорились.", "You are given no choice: the elders have already agreed.")
+            else -> null
+        }
         return ask(age, if (age < 20) Tx("Тебя сватают.", "A match is being made for you.") else Tx("Пора заводить семью.", "Time to start a family."),
-            door("Как решили родители", "As your parents decided", null) {
-                byParents = true
-                wed(age, "Свадьбу сыграли, как решили старшие. {Жену|Мужа} ты впервые {увидел|увидела} за неделю до неё.", "The wedding is held as the elders decided. You first saw your {wife|husband} a week before.")
+            door(if (owned) "Как решил хозяин" else "Как решили родители", if (owned) "As your master decided" else "As your parents decided", null) {
+                if (owned) byMaster = true else byParents = true
+                if (owned) wed(age, "Хозяин свёл тебя с {невольницей|невольником} со своего двора. {Жену|Мужа} ты до этого видел{|а} только издали.", "Your master pairs you with {a woman|a man} from his own yard. Until then you had seen {her|him} only from afar.")
+                else wed(age, "Свадьбу сыграли, как решили старшие. {Жену|Мужа} ты впервые {увидел|увидела} за неделю до неё.", "The wedding is held as the elders decided. You first saw your {wife|husband} a week before.")
             },
             door(if (e == 0) "Уйти к тому, кто нравится, в чужой род" else "По любви", if (e == 0) "Go to the one you like, in another band" else "For love", forced) {
                 love = true
@@ -403,6 +419,7 @@ class Life private constructor(
                 else wed(age, "{Женился|Вышла замуж} по любви. Родня ворчала, потом привыкла.", "You marry for love. The family grumbles, then gets used to it.")
             },
             door("Не заводить семью", "Stay unmarried", when {
+                owned -> why("Хозяин не спрашивает, хочешь ли ты семью.", "Your master does not ask whether you want a family.")
                 e == 0 -> why("В одиночку не выжить.", "Nobody survives alone.")
                 e < 5 && f -> why("Одинокой женщине не прожить — разве что в монастыре.", "A woman alone cannot get by, except in a convent.")
                 e < 5 -> why("Без семьи тебе не дадут земли.", "Without a family you will get no land.")
@@ -432,6 +449,7 @@ class Life private constructor(
         val n = (era.fert + (rnd.nextDouble() - .5) * 4).roundToInt().coerceAtLeast(0)
         kids = n
         kidsAlive = if (era.i >= 6) n else (n * (1 - era.q0) * (.8 + rnd.nextDouble() * .4)).roundToInt().coerceAtMost(n)
+        if (n > 0 && firstChildAt < 0) firstChildAt = age + 1
     }
 
     /** An everyday fork from the dilemmas that fit this era, place, person and age; null when none fits. */
@@ -471,7 +489,7 @@ class Life private constructor(
             f == "love" -> love = true
             f == "town" -> town = true
             f == "free" -> if (rank == 0) rank = 1
-            f == "kids+1" -> { kids++; kidsAlive++ }
+            f == "kids+1" -> { kids++; kidsAlive++; if (firstChildAt < 0) firstChildAt = age }
             f == "kids-1" -> if (kidsAlive > 0) kidsAlive--
             f == "married" -> { if (!married) bear(); flags -= "widowed" }
             else -> flags += f
@@ -649,6 +667,7 @@ class Life private constructor(
         else {
             if (!sawSea) qs += tx("${f.ru} так и не {увидел|увидела} моря. Когда море в последний раз было у тебя перед глазами?", "${f.en} never saw the sea. When was the sea last in front of your eyes?")
             if (!lit && a >= 12) qs += tx("${f.ru} так и не {научился|научилась} читать. Какую книгу стоило бы прочесть вслух — и кому?", "${f.en} never learned to read. Which book would be worth reading aloud, and to whom?")
+            if (byMaster) qs += tx("За {него|неё} всё решал хозяин, даже с кем жить. Что в твоём последнем году — твой собственный выбор?", "A master decided everything for {him|her}, even whom to live with. What in your last year was your own choice?")
             if (byParents) qs += tx("За {него|неё} всё решили старшие. Что в твоём последнем году — твой собственный выбор?", "The elders decided everything for {him|her}. What in your last year was your own choice?")
             if (kids > 0) qs += Tx("У этого человека ${if (kids == 1) "был" else "было"} ${Years.childrenNom(kids)}. Кому стоит позвонить сегодня?", "This person had ${Years.childrenEn(kids)}. Who should you call today?")
             if (kind) qs += Tx("В голодный год этот человек делился последним. С кем можешь поделиться ты?", "In a hungry year this person shared the last of it. Who could you share with?")

@@ -21,7 +21,7 @@ out: 30 | Наутро у соседей пропадает овца. Может
 id: o_sister_given
 groups: stone anc med early
 tags: *
-need: !town
+need: !town !r0
 ages: 19-39
 weight: 1
 q: Старшие решили отдать твою сестру за вдовца вдвое старше её. | The elders have decided to give your sister to a widower twice her age.
@@ -36,6 +36,24 @@ ask: Когда в последний раз пришлось заступить
 door: Помочь ей бежать | Help her run away
 out: 40 | Сестра уходит ночью с тем, кого любит. Через год приходит весть: жива. | Your sister leaves by night with the one she loves. A year later word comes: she is alive. | kind brave
 out: 60 | Её ловят на второй день. Позор на всю семью, а тебя бьют. | She is caught on the second day. Shame on the whole family, and you are beaten. | risk5 brave
+
+id: o_sister_master
+groups: anc med early
+tags: *
+need: r0
+ages: 19-39
+weight: 1
+q: Хозяин решил отдать твою сестру за своего старого конюха. Её никто не спрашивал. | The master has decided to give your sister to his old groom. Nobody asked her.
+door: Промолчать | Say nothing
+out: 60 | Свадьбу играют на заднем дворе. Конюх оказывается не злым, и сестра привыкает. | The wedding is held in the back yard. The groom turns out not unkind, and your sister gets used to it. |
+out: 40 | Сестра уходит в его каморку и почти перестаёт смеяться. | Your sister moves into his corner and almost stops laughing. |
+door: Упасть хозяину в ноги | Throw yourself at the master's feet
+out: 40 | Хозяин смеётся, но откладывает свадьбу. К осени он о ней забывает. | The master laughs, but puts off the wedding. By autumn he has forgotten it. | kind brave
+out: 60 | Хозяин велит тебя высечь, чтобы не {лез|лезла} не в своё дело. Свадьба через неделю. | The master has you flogged for meddling. The wedding is a week later. | brave risk5
+ask: Когда в последний раз пришлось заступиться за родного человека? | When did you last stand up for one of your own?
+door: Помочь ей бежать | Help her run away
+out: 30 | Сестра уходит ночью. Её ищут с собаками и не находят. | Your sister slips away by night. They hunt for her with dogs and don't find her. | kind brave
+out: 70 | Беглянку ловят на второй день. Её продают на сторону, а тебя бьют при всех. | The runaway is caught on the second day. She is sold away, and you are beaten in front of everyone. | risk10 brave
 
 id: o_stone_stranger
 groups: stone

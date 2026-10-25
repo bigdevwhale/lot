@@ -6,6 +6,22 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.2.3] - 2026-10-25
+
+### Changed
+- The unfree are married off by their master, not by their parents, and a master decides a sister's fate in a fork of its own.
+- At two a child gets toddler lines only (first steps, first word, the rooster, the scar on the forehead): no goats to herd, lessons or lost milk teeth.
+
+### Fixed
+- Lines and forks about a daughter's wedding, sons at work and school, and grandchildren wait 8, 16 or 36 years after the first child instead of coming the year the children are born.
+- A child's line no longer names an age it may not be.
+
+<!-- tg
+«Жребий» 1.2.3: у невольников жениха или невесту выбирает хозяин, а не родители
+В два года — только строки про малышей: первые шаги, первое слово, петух во дворе; молочные зубы теперь не раньше пяти
+Дочь выдают замуж и внуки появляются не в год рождения детей, а когда те вырастут
+-->
+
 ## [1.2.2] - 2026-10-25
 
 ### Added

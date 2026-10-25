@@ -182,6 +182,63 @@ class LifeTest {
         assertTrue("no girl ever tried in secret", secret > 0)
     }
 
+    /** The unfree are matched by their master, never "as the parents decided"; the elders' fork about a sister is not theirs. */
+    @Test fun aMasterMatchesTheUnfree() {
+        val rnd = Random(6)
+        var owned = 0
+        repeat(3000) { n ->
+            val qs = mutableListOf<app.lot.domain.Choice>()
+            val (p, _) = Life.live(content, n.toLong() * 19, null) { ch, _ -> qs += ch; ch.doors.indices.filter { ch.doors[it].open }.random(rnd) }
+            if (p.birth.estate.rank != 0 || p.birth.era.i !in 1..5) return@repeat
+            // Before 19 nothing can have freed the life yet.
+            val wed = qs.firstOrNull { c -> c.age < 19 && c.doors.any { it.text.en.startsWith("As your") } } ?: return@repeat
+            owned++
+            assertTrue("life $n: ${wed.doors.map { it.text.en }}", wed.doors.none { it.text.en == "As your parents decided" })
+            assertTrue("life $n met the elders' sister fork", qs.none { it.q.en.startsWith("The elders have decided to give your sister") })
+        }
+        assertTrue(owned > 20)
+    }
+
+    /** A line never names the age it is written at: the same line may fall at 2, 5, 8 or 10. */
+    @Test fun linesDoNotNameTheirAge() {
+        val age = Regex("Тебе [а-яё ]{0,12}(год|года|лет)\\b|You are (one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\\b")
+        val named = content.lines.filter { age.containsMatchIn(it.text.ru) || age.containsMatchIn(it.text.en) }.map { it.text.ru }
+        assertTrue(named.joinToString("\n"), named.isEmpty())
+    }
+
+    /** A daughter is not married off, nor grandchildren met, the year the children are born. */
+    @Test fun childrenTakeYearsToGrow() {
+        val sexes = listOf(app.lot.domain.Sex.M, app.lot.domain.Sex.F)
+        fun texts(t: String) = content.lines.filter { it.need.names(t) }.flatMap { l -> sexes.map { l.text.g(it).ru } }.toSet()
+        val wait = mapOf(texts("school") to 7, texts("grown") to 15, texts("grand") to 35)
+        val rnd = Random(8)
+        var checked = 0
+        repeat(3000) { n ->
+            val (p, _) = Life.live(content, n.toLong() * 29, null) { ch, _ -> ch.doors.indices.filter { ch.doors[it].open }.random(rnd) }
+            val born = p.entries.firstOrNull { it.text.ru.startsWith("Родилось детей") }?.age ?: return@repeat
+            for (e in p.entries) for ((set, years) in wait) if (e.text.ru in set) {
+                checked++
+                assertTrue("life $n: children born at $born, and at ${e.age}: ${e.text.ru}", e.age - born >= years)
+            }
+        }
+        assertTrue(checked > 50)
+    }
+
+    /** At two a child is a toddler: no goats to herd, no lessons, no milk teeth falling out. */
+    @Test fun aToddlerIsAToddler() {
+        val sexes = listOf(app.lot.domain.Sex.M, app.lot.domain.Sex.F)
+        val small = content.lines.filter { it.need.names("small") }.flatMap { l -> sexes.map { l.text.g(it).ru } }.toSet()
+        val older = content.lines.filter { it.kind == app.lot.domain.Kind.CHILD && !it.need.names("small") }.flatMap { l -> sexes.map { l.text.g(it).ru } }.toSet()
+        val rnd = Random(12)
+        repeat(2000) { n ->
+            val (p, _) = Life.live(content, n.toLong() * 31, null) { ch, _ -> ch.doors.indices.filter { ch.doors[it].open }.random(rnd) }
+            for (e in p.entries) {
+                assertTrue("life $n at ${e.age}: ${e.text.ru}", !(e.age < 4 && e.text.ru in older))
+                assertTrue("life $n at ${e.age}: ${e.text.ru}", !(e.age >= 4 && e.text.ru in small))
+            }
+        }
+    }
+
     /** A life whose book has been to the sea is never mourned as one that never saw it. */
     @Test fun whoSawTheSeaIsNotSaidNeverTo() {
         val sexes = listOf(app.lot.domain.Sex.M, app.lot.domain.Sex.F)

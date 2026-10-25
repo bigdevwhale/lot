@@ -124,27 +124,27 @@ mod	j		Впервые {увидел|увидела} море. Вода и пра
 mod	j		Сын позвонил просто так.	Your son calls, just because.	kids
 mod	j		Вечер на крыше с друзьями. Песни под гитару.	An evening on the roof with friends. Songs to a guitar.	
 mod	j		Помидоров уродилось столько, что раздаёшь соседям.	So many tomatoes this year you give them to the neighbours.	r1
-mod	o		Внуки звонят по видео из другой страны.	The grandchildren video-call from another country.	kids
+mod	o		Внуки звонят по видео из другой страны.	The grandchildren video-call from another country.	kids grand
 mod	o		Пьёшь таблетки, которых не было, когда ты {родился|родилась}.	You take pills that did not exist when you were born.	
-mod	o		Внучка учит тебя пользоваться телефоном. Ты учишь её лепить пельмени.	Your granddaughter teaches you to use the phone. You teach her to make dumplings.	kids
-mod	o		Ты помнишь жизнь без электричества. Внуки не верят.	You remember life without electricity. The grandchildren don't believe you.	kids
+mod	o		Внучка учит тебя пользоваться телефоном. Ты учишь её лепить пельмени.	Your granddaughter teaches you to use the phone. You teach her to make dumplings.	kids grand
+mod	o		Ты помнишь жизнь без электричества. Внуки не верят.	You remember life without electricity. The grandchildren don't believe you.	kids grand
 mod	o		Каждое утро гуляешь в парке. Здороваешься с одними и теми же собаками.	Every morning you walk in the park and greet the same dogs.	
 mod	o	cn	По утрам танцуешь с соседками на площади под магнитофон.	In the mornings you dance with the neighbours on the square to a tape player.	f
-mod	o	cn	Растишь внука, пока сын работает в другом городе.	You raise your grandson while your son works in another city.	kids
+mod	o	cn	Растишь внука, пока сын работает в другом городе.	You raise your grandson while your son works in another city.	kids grand
 mod	o	in	Живёшь у старшего сына. Невестка приносит чай ровно в шесть.	You live with your eldest son. His wife brings tea at six sharp.	kids
 mod	o	af	Сын каждый месяц шлёт деньги на телефон.	Every month your son sends money to your phone.	kids
 mod	o	af	Под деревом разбираешь споры деревни. Тебя слушают.	Under the tree you settle the village's quarrels. People listen.	m
 mod	o	latam	Смотришь сериал и споришь с соседкой о героях, как о родне.	You watch the soap and argue with the neighbour about the characters as if they were kin.	
 mod	o	ru	Пенсии хватает до двадцатого. Выручает дача.	The pension lasts till the twentieth. The dacha gets you through.	
-mod	o	ru	Варишь варенье. Банок больше, чем внуков.	You make jam. More jars than grandchildren.	kids
+mod	o	ru	Варишь варенье. Банок больше, чем внуков.	You make jam. More jars than grandchildren.	kids grand
 mod	o	jp	Утренняя гимнастика по радио, как в детстве.	Morning exercises to the radio, just like in childhood.	
-mod	o	sea	Сидишь у дома и смотришь, как правнуки гоняют на мопедах.	You sit outside the house watching the great-grandchildren race on mopeds.	kids
+mod	o	sea	Сидишь у дома и смотришь, как правнуки гоняют на мопедах.	You sit outside the house watching the great-grandchildren race on mopeds.	kids grand
 mod	o	me	Кофе с соседями после пятничной молитвы.	Coffee with the neighbours after Friday prayers.	m
 mod	o	us	{Переехал|Переехала} во Флориду. Гольф по вторникам.	You move to Florida. Golf on Tuesdays.	r2 r3 +town
-mod	o	eu	Каждый день забираешь внуков из школы.	Every day you pick the grandchildren up from school.	kids
+mod	o	eu	Каждый день забираешь внуков из школы.	Every day you pick the grandchildren up from school.	kids grand
 mod	o		Плохо слышишь. Телевизор на всю громкость.	Your hearing fails. The television at full volume.	
 mod	o		{Пережил|Пережила} всех друзей детства.	You outlive all your childhood friends.	
-mod	o		Подписываешь старые фотографии, чтобы внуки знали, кто есть кто.	You label old photographs so the grandchildren know who is who.	lit kids
+mod	o		Подписываешь старые фотографии, чтобы внуки знали, кто есть кто.	You label old photographs so the grandchildren know who is who.	lit kids grand
 mod	o		На рынок ходишь не за покупками, а поговорить.	You go to the market not to buy, but to talk.	
 mod	o		{Похоронил|Похоронила} {жену|мужа}. По привычке ставишь на стол две чашки.	You bury your {wife|husband}. Out of habit you set out two cups.	married +widowed
 mod	x		Завод закрыли. Ты {остался|осталась} без работы.	The factory shuts. You are out of work.	r1 r2
@@ -323,3 +323,23 @@ mod	x	jp	Фирма разорилась. Семье сказать стыдно
 mod	x	sea latam	Извержение вулкана. Пепел засыпал поля.	The volcano erupts. Ash buries the fields.	!town
 mod	x	cn	Соседа объявили правым. Здороваться с ним теперь опасно.	Your neighbour is branded a rightist. It is dangerous now even to greet him.	before:1979
 mod	x	ru	Зарплату не платят полгода. Завод расплачивается посудой.	No wages for six months. The factory pays in crockery.	after:1992 before:2000
+mod	c		Мать перестала кормить тебя грудью: родился младший.	Your mother stops nursing you: a younger one has been born.	small
+mod	c		Ты {сделал|сделала} первые шаги — прямо к лестнице. Мать успела.	You take your first steps, straight towards the stairs. Your mother is quicker.	small
+mod	c		Твоё первое слово — «дай».	Your first word is "give".	small
+mod	c		Спишь между матерью и старшей сестрой. Там теплее всего.	You sleep between your mother and your older sister. It is the warmest place.	small
+mod	c		Тебя чуть не унесла лихорадка. Бабка просидела рядом три ночи.	A fever nearly takes you. Your grandmother sits by you for three nights.	small
+mod	c		Ты {съел|съела} горсть земли и {остался|осталась} очень {доволен|довольна}.	You eat a handful of earth and are very pleased with yourself.	small
+mod	c		Боишься петуха. Он ходит за тобой по всему двору.	You are afraid of the rooster. It follows you all round the yard.	small
+mod	c		Старшие дети таскают тебя за собой, как куклу.	The older children drag you about like a doll.	small
+mod	c		Засыпаешь под песню, которую мать поёт без слов.	You fall asleep to a song your mother hums without words.	small
+mod	c		Ты {упал|упала} и {рассёк|рассекла} лоб. Шрам останется на всю жизнь.	You fall and cut your forehead. The scar will stay for life.	small
+mod	c		Плачешь, когда отец уходит, и смеёшься, когда он возвращается.	You cry when your father leaves and laugh when he comes back.	small
+mod	c		Таскаешь собаку за хвост, а она терпит.	You pull the dog's tail, and it puts up with it.	small
+mod	c		Тебе дали первую ложку. Половина каши на полу.	You are given your first spoon. Half the porridge ends up on the floor.	small
+mod	c		Ты {спрятался|спряталась} под лавку, и тебя полдня искали всей семьёй.	You hide under the bench, and the whole family searches for you half the day.	small
+mod	c		Ты всё время тянешь в рот блестящее. Мать вынимает и смеётся.	You keep putting shiny things in your mouth. Your mother takes them out and laughs.	small
+mod	c		Сидишь у порога и встречаешь каждого, кто входит, своим словом.	You sit by the door and greet everyone who comes in with your own word.	small
+mod	c		Тебя сфотографировали первый раз. Ты сидишь у матери на коленях и не понимаешь, куда смотреть.	You are photographed for the first time. You sit on your mother's lap and don't know where to look.	small
+mod	c		Тебя впервые отвели в ясли. Ты {проревел|проревела} до обеда.	You are taken to nursery for the first time. You cry till lunch.	small
+mod	c		Мультики по телевизору. Ты пляшешь под заставку.	Cartoons on the television. You dance to the opening tune.	small
+mod	c		Тебе сделали прививку. На врача ты {обижался|обижалась} целую неделю.	You are vaccinated. You sulk at the doctor for a whole week.	small

@@ -101,7 +101,7 @@ early	a	au	На берегу поселились белые. Рубят дер�
 early	a		Пишешь письма в столицу. Ответ идёт полгода.	You write letters to the capital. A reply takes half a year.	r3 lit
 early	a	fr de en it ru latam	В твоём приходе триста душ. Всех помнишь по имени.	Your parish has three hundred souls. You know them all by name.	m r3
 early	a		В мастерской трое учеников. Младший таскает хлеб, ты делаешь вид, что не видишь.	Three apprentices in your workshop. The youngest steals bread; you pretend not to see.	r2
-early	a		Старший сын ушёл в город и не пишет.	Your eldest son has gone to town and doesn't write.	kids
+early	a		Старший сын ушёл в город и не пишет.	Your eldest son has gone to town and doesn't write.	kids grown
 early	a		Свекровь отдала тебе ключи от кладовой. Теперь ты хозяйка.	Your mother-in-law hands you the larder keys. Now you are mistress of the house.	f married
 early	a		Ночь просидел{|а} с больной коровой. К утру она встала.	You sit up all night with a sick cow. By morning she is on her feet.	!town
 # --- small joys
@@ -132,14 +132,14 @@ early	j		Тёплый дождь после засухи. Дети бегают 
 early	j		Муж вернулся с ярмарки и привёз тебе платок.	Your husband comes back from the fair with a shawl for you.	f married !widowed
 early	j		Жена ни с того ни с сего испекла пирог.	Your wife bakes a pie for no reason at all.	m married !widowed
 # --- old age
-early	o	fr de en it ru us	Внук читает тебе вслух газету. Половину слов ты не понимаешь.	A grandson reads you the newspaper aloud. You understand half the words.	kids
+early	o	fr de en it ru us	Внук читает тебе вслух газету. Половину слов ты не понимаешь.	A grandson reads you the newspaper aloud. You understand half the words.	kids grand
 early	o		Ты пережил{|а} всех своих ровесников.	You outlive everyone your age.	
 early	o		Сидишь на лавке у ворот. Мимо идёт вся улица, и все здороваются.	You sit on the bench by the gate. The whole street goes by, and everyone greets you.	
 early	o		Дети просят рассказать о большой войне. Ты рассказываешь о хлебе.	The children ask about the great war. You tell them about bread.	
 early	o		Очки! Ты снова видишь иголку.	Spectacles! You can see a needle again.	
 early	o	ru	Хозяйство отдал{|а} сыну. Теперь твоё место на печи.	You hand the farm to your son. Your place now is on the stove.	kids
 early	o	ru	Барин дал тебе вольную, когда ты уже не можешь работать.	The master sets you free once you can no longer work.	r0
-early	o	cn	На Новый год внуки кланяются тебе до земли.	At New Year the grandchildren bow to the ground before you.	kids !town
+early	o	cn	На Новый год внуки кланяются тебе до земли.	At New Year the grandchildren bow to the ground before you.	kids !town grand
 early	o	cn	Сыновья заранее купили тебе гроб. Ты им гордишься.	Your sons have bought your coffin in advance. You are proud of it.	kids
 early	o	jp	{Отошёл|Отошла} от дел и {взял|взяла} новое имя. Пишешь хокку.	You retire from the house and take a new name. You write haiku.	lit
 early	o	me	Сидишь во дворе мечети, пока не позовут к молитве.	You sit in the mosque courtyard until the call to prayer.	m
@@ -147,11 +147,11 @@ early	o	af	Ты старейшина. Споры о земле теперь ре
 early	o	au	Поёшь детям песни своей земли, чтобы они не заблудились.	You sing the children the songs of your country so they will not get lost.	!town
 early	o	en	Впереди только работный дом. Говорят, мужей и жён там селят порознь.	Only the workhouse is left. They say husbands and wives are kept apart there.	married
 early	o	us au	Ты помнишь, когда здесь был лес и ни одной дороги.	You remember when this was all forest and not a single road.	
-early	o	latam	Каждое утро ходишь к мессе. Падре моложе твоего внука.	Every morning you go to mass. The padre is younger than your grandson.	kids
+early	o	latam	Каждое утро ходишь к мессе. Падре моложе твоего внука.	Every morning you go to mass. The padre is younger than your grandson.	kids grand
 early	o		Переписываешь завещание каждую весну.	You rewrite your will every spring.	r3 lit
 early	o		Зубов не осталось. Хлеб размачиваешь в молоке.	No teeth left. You soak your bread in milk.	
-early	o		Учишь внучку прясть. Она уже ловчее тебя.	You teach your granddaughter to spin. She is already quicker than you.	f kids
-early	o		Внуки дёргают тебя за бороду, а ты притворяешься, что спишь.	The grandchildren tug at your beard while you pretend to sleep.	m kids
+early	o		Учишь внучку прясть. Она уже ловчее тебя.	You teach your granddaughter to spin. She is already quicker than you.	f kids grand
+early	o		Внуки дёргают тебя за бороду, а ты притворяешься, что спишь.	The grandchildren tug at your beard while you pretend to sleep.	m kids grand
 early	o		Тебя зовут, когда надо вспомнить, где шла старая межа.	They call for you when someone needs to remember where the old boundary ran.	!town
 early	o		{Овдовел|Овдовела}. По привычке ставишь на стол вторую миску.	Widowed. Out of habit you still put out a second bowl.	married +widowed
 early	o		На кладбище ходишь чаще, чем в гости.	You go to the graveyard more often than to the neighbours.	
@@ -398,3 +398,21 @@ early	x	cn	Чиновники пересчитали монахов и поло�
 early	x	cn jp	Землетрясение повалило пагоду. Разбираете камни руками.	An earthquake brings down the pagoda. You clear the stones by hand.	monk
 early	x		Разбойники вломились в обитель. Ты {отсиделся|отсиделась} в погребе с книгами.	Robbers break into the monastery. You hide in the cellar with the books.	monk
 early	x	eu ru	Обитель закрыли указом. {Братию|Сестёр} развезли по другим монастырям.	The monastery is closed by decree. Its people are scattered among other houses.	monk after:1764
+early	c		Мать перестала кормить тебя грудью: родился младший.	Your mother stops nursing you: a younger one has been born.	small
+early	c		Ты {сделал|сделала} первые шаги — прямо к огню. Мать успела.	You take your first steps, straight towards the fire. Your mother is quicker.	small
+early	c		Твоё первое слово — «дай».	Your first word is "give".	small
+early	c		Спишь между матерью и старшей сестрой. Там теплее всего.	You sleep between your mother and your older sister. It is the warmest place.	small
+early	c		Тебя носят за спиной, пока мать работает. Мир ты видишь через её плечо.	You are carried on your mother's back while she works. You see the world over her shoulder.	small
+early	c		Тебя чуть не унесла лихорадка. Бабка просидела рядом три ночи.	A fever nearly takes you. Your grandmother sits by you for three nights.	small
+early	c		Ты {съел|съела} горсть земли и {остался|осталась} очень {доволен|довольна}.	You eat a handful of earth and are very pleased with yourself.	small
+early	c		Боишься петуха. Он ходит за тобой по всему двору.	You are afraid of the rooster. It follows you all round the yard.	small
+early	c		Старшие дети таскают тебя за собой, как куклу.	The older children drag you about like a doll.	small
+early	c		Засыпаешь под песню, которую мать поёт без слов.	You fall asleep to a song your mother hums without words.	small
+early	c		Ты {упал|упала} и {рассёк|рассекла} лоб. Шрам останется на всю жизнь.	You fall and cut your forehead. The scar will stay for life.	small
+early	c		Плачешь, когда отец уходит, и смеёшься, когда он возвращается.	You cry when your father leaves and laugh when he comes back.	small
+early	c		Таскаешь собаку за хвост, а она терпит.	You pull the dog's tail, and it puts up with it.	small
+early	c		Тебе дали первую ложку. Половина каши на полу.	You are given your first spoon. Half the porridge ends up on the floor.	small
+early	c		Ты {спрятался|спряталась} под лавку, и тебя полдня искали всей семьёй.	You hide under the bench, and the whole family searches for you half the day.	small
+early	c		Ты всё время тянешь в рот блестящее. Мать вынимает и смеётся.	You keep putting shiny things in your mouth. Your mother takes them out and laughs.	small
+early	c		Сидишь у порога и встречаешь каждого, кто входит, своим словом.	You sit by the door and greet everyone who comes in with your own word.	small
+early	c	eu ru	Тебя крестили зимой в холодной церкви. Ты {кричал|кричала} так, что священник улыбнулся.	You are baptised in winter in a cold church. You scream so hard the priest smiles.	small

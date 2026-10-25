@@ -128,7 +128,7 @@ med	a		Переписываешь книгу. Чернила въелись в �
 med	a		Встаёшь к полуночной службе. В храме такой холод, что видно дыхание.	You rise for the midnight office. The temple is so cold you can see your breath.	monk
 med	a		{Взял|Взяла} ученика. Ленивый, но руки хорошие.	You take an apprentice. Lazy, but good hands.	r2
 med	a		Родила третьего. Повитуха говорит, легко отделалась.	You give birth to your third. The midwife says you got off lightly.	f married
-med	a	eu ru cn in me eg af jp sea meso andes	Выдали дочь замуж в соседнюю деревню. Дома стало тише.	Your daughter is married off to the next village. The house is quieter.	kids
+med	a	eu ru cn in me eg af jp sea meso andes	Выдали дочь замуж в соседнюю деревню. Дома стало тише.	Your daughter is married off to the next village. The house is quieter.	kids grown
 med	a	eu ru cn in me eg af jp sea meso andes	Живёшь у городских ворот. Днём шум, ночью стража. Тишины не бывает.	You live by the town gate. Noise by day, the watch by night. It is never quiet.	town
 med	a	eu ru	Волки задрали овцу. Всю зиму {сторожил|сторожила} стадо с собакой.	Wolves kill a sheep. All winter you guard the flock with the dog.	!town
 med	a		Бродячий знахарь вырвал тебе зуб. Ты неделю {ругался|ругалась}.	A travelling healer pulls your tooth. You curse for a week.	
@@ -167,7 +167,7 @@ med	j	eu ru cn in me eg af jp sea meso andes	{Жена принесла|Муж �
 med	j	eu ru cn in me eg af jp sea meso andes	{Нашёл|Нашла} в огороде старую монету. Никому не {сказал|сказала}.	You find an old coin in the garden. You tell no one.	!town
 med	j		{Выспался|Выспалась}. Впервые за всю страду.	You sleep your fill. The first time all harvest.	
 med	j		Тёплый дождь после засухи. Стоишь под ним с открытым ртом.	Warm rain after the drought. You stand in it with your mouth open.	
-med	j		Внук сказал первое слово. Твоё имя.	Your grandchild says a first word. Your name.	kids
+med	j		Внук сказал первое слово. Твоё имя.	Your grandchild says a first word. Your name.	kids grand
 med	j	eu me	Соколиная охота. Сокол взял цаплю с первого раза.	Hawking. The falcon takes a heron at the first try.	r3
 med	j		{Справил|Справила} себе новую обувь. Носишь только по праздникам.	You get yourself new shoes. You wear them only on feast days.	
 med	j		{Помирился|Помирилась} с братом после долгой ссоры. Сидели вместе до ночи.	You make peace with your brother after a long quarrel. You sit together till night.	
@@ -175,18 +175,18 @@ med	j		В монастырском саду поспели груши. {Наст
 med	j		Тебе дали книгу на одну ночь. Ты так и не {лёг|легла}.	You are lent a book for one night. You never go to bed.	lit
 med	o		Ты помнишь три голодных года и одну комету.	You remember three hungry years and one comet.	
 med	o	eu ru	Сидишь у печи и чинишь сети.	You sit by the stove mending nets.	
-med	o		Внучка спрашивает, какой была твоя мать. Ты рассказываешь до темноты.	Your granddaughter asks what your mother was like. You tell her till dark.	kids
+med	o		Внучка спрашивает, какой была твоя мать. Ты рассказываешь до темноты.	Your granddaughter asks what your mother was like. You tell her till dark.	kids grand
 med	o		Глаза уже не те, но руки сами помнят, как прясть.	Your eyes are not what they were, but your hands remember how to spin.	f
 med	o	eu ru	Ты {крёстный|крёстная} половине деревни.	You are godparent to half the village.	
 med	o	eu ru cn in me eg af jp sea meso andes	Тебя позвали рассудить спор о меже. Только ты помнишь, где стоял старый камень.	They call you to settle a quarrel over a boundary. Only you remember where the old stone stood.	!town
 med	o		Тебя кормят дети. Ты стараешься есть поменьше.	Your children feed you now. You try to eat less.	kids
-med	o	cn	На Новый год внуки кланяются тебе. Даёшь каждому по медной монетке.	At New Year your grandchildren bow to you. You give each a copper coin.	kids
+med	o	cn	На Новый год внуки кланяются тебе. Даёшь каждому по медной монетке.	At New Year your grandchildren bow to you. You give each a copper coin.	kids grand
 med	o	cn	Гроб тебе купили заранее. Сын каждый год его подкрашивает.	Your coffin was bought in good time. Your son repaints it every year.	kids
 med	o	in	Ты {отправился|отправилась} к Гангу, пока есть силы. Хочешь войти в его воду.	You set out for the Ganges while you still have strength. You want to step into its water.	
 med	o	me	Сидишь со стариками на солнце у мечети. Спорите, чей виноград слаще.	You sit in the sun by the mosque with the old men. You argue whose grapes are sweeter.	m
 med	o	ru	Лежишь на печи. Слышишь всё, что говорят в избе.	You lie on the stove. You hear everything said in the house.	
 med	o	ru	Ты {пережил|пережила} трёх князей. Дань у каждого своя, а поле то же.	You have outlived three princes. Each had his own tribute, the field stayed the same.	!town
-med	o	af	Учишь внуков именам предков. Девять колен без запинки.	You teach your grandchildren the names of the ancestors. Nine generations, without a stumble.	kids
+med	o	af	Учишь внуков именам предков. Девять колен без запинки.	You teach your grandchildren the names of the ancestors. Nine generations, without a stumble.	kids grand
 med	o	jp	На старости лет {постригся|постриглась} при храме, как многие.	In old age you take the tonsure at the temple, as many do.	
 med	o	meso	Ты {дожил|дожила} до Нового огня. Все очаги погасили, жрецы зажгли новый.	You live to see the New Fire. Every hearth is put out and the priests light a new one.	
 med	o	andes	Ты слишком {стар|стара} для миты. Плетёшь верёвки для висячих мостов.	You are too old for mit'a. You twist rope for the hanging bridges.	
@@ -194,7 +194,7 @@ med	o	au	Ты знаешь песни пути лучше всех. Молоды
 med	o	ru eu	Сидишь на завалинке и смотришь на дорогу.	You sit on the bench by the wall and watch the road.	
 med	o		Зубов почти не осталось. Тебе варят кашу помягче.	You have hardly any teeth left. They cook your porridge softer.	
 med	o		Хоронишь последнего друга детства.	You bury the last friend of your childhood.	
-med	o		Правнук спит у тебя на коленях.	Your great-grandchild sleeps on your lap.	kids
+med	o		Правнук спит у тебя на коленях.	Your great-grandchild sleeps on your lap.	kids grand
 med	o	eu	{Заказал|Заказала} заупокойные мессы на сто лет вперёд.	You pay for requiem masses a hundred years ahead.	r3
 med	o		Встать к ночной службе уже не можешь. Брат приносит свечу тебе в келью.	You can no longer rise for the night office. A brother brings a candle to your cell.	monk
 med	o		Рассказываешь молодым, как раньше всё было дешевле.	You tell the young how everything used to be cheaper.	
@@ -230,7 +230,6 @@ med	c		Дед показал тебе звёзды, по которым нахо
 med	c		Бабушка рассказала страшную сказку. Потом ты долго {боялся|боялась} темноты.	Grandmother tells a frightening tale. For a long time after you are afraid of the dark.	
 med	c		Ты {выпросил|выпросила} щенка и {спал|спала} с ним в обнимку.	You beg for a puppy and sleep with it in your arms.	
 med	c		Дети играют в войну на палках. Тебе всегда выпадает быть врагом.	The children play war with sticks. You always have to be the enemy.	
-med	c		Мать перестала кормить тебя грудью: родился младший.	Mother stops nursing you: a younger one has come.	
 med	c		{Залез|Залезла} на самое высокое дерево. Оттуда видно дым чужих костров.	You climb the tallest tree. From there you can see the smoke of strangers' fires.	
 med	c		Ты {заблудился|заблудилась} в зарослях. Нашли к вечеру — по рёву.	You get lost in the scrub. They find you by evening, by your howling.	
 med	c	eu ru cn in me eg af jp sea meso andes	Тебе велели носить воду. Кувшин тяжёлый, половину ты {расплескал|расплескала}.	You are set to carrying water. The jar is heavy, and you spill half.	
@@ -453,7 +452,7 @@ med	o		Ты {видел|видела} две большие засухи. Мол
 med	o		Встаёшь до света по привычке. Делать нечего, а встаёшь.	You rise before dawn out of habit. There is nothing to do, but you rise.	
 med	o	eu ru cn in me eg af jp sea meso andes	Ходишь по деревне с палкой и всех поучаешь. Тебя терпят.	You go round the village with a stick, telling everyone how to do things. They put up with you.	
 med	o	eu ru cn in me eg af jp sea meso andes	Ты помнишь, как на месте этого поля шумел лес.	You remember when this field was forest.	!town
-med	o	cn	Тебе шестьдесят. Начался новый круг лет, внуки поднесли персики долголетия.	You turn sixty. A new cycle of years begins, and the grandchildren bring you peaches of long life.	kids
+med	o	cn	Тебе шестьдесят. Начался новый круг лет, внуки поднесли персики долголетия.	You turn sixty. A new cycle of years begins, and the grandchildren bring you peaches of long life.	kids grand
 med	o	cn	Сидишь у реки с птицей в клетке. Птица поёт, ты дремлешь.	You sit by the river with your bird in its cage. The bird sings, you doze.	
 med	o	cn	Ты помнишь каждый год, когда прорывало дамбу. Чиновники ходят к тебе спрашивать.	You remember every year the dyke broke. Officials come to ask you.	
 med	o	cn	Ты старше всех в деревне. Из уезда тебе прислали шёлк и мясо.	You are the oldest in the village. The county sends you silk and meat.	
@@ -579,3 +578,21 @@ med	x		Ты тяжело {заболел|заболела}. Над тобой м
 med	x	cn	Чиновники пересчитали монахов и половину отправили обратно в мир.	Officials count the monks and send half of them back into the world.	monk
 med	x	cn jp	Землетрясение повалило пагоду. Разбираете камни руками.	An earthquake brings down the pagoda. You clear the stones by hand.	monk
 med	x		Разбойники вломились в обитель. Ты {отсиделся|отсиделась} в погребе с книгами.	Robbers break into the monastery. You hide in the cellar with the books.	monk
+med	c		Мать перестала кормить тебя грудью: родился младший.	Your mother stops nursing you: a younger one has been born.	small
+med	c		Ты {сделал|сделала} первые шаги — прямо к огню. Мать успела.	You take your first steps, straight towards the fire. Your mother is quicker.	small
+med	c		Твоё первое слово — «дай».	Your first word is "give".	small
+med	c		Спишь между матерью и старшей сестрой. Там теплее всего.	You sleep between your mother and your older sister. It is the warmest place.	small
+med	c		Тебя носят за спиной, пока мать работает. Мир ты видишь через её плечо.	You are carried on your mother's back while she works. You see the world over her shoulder.	small
+med	c		Тебя чуть не унесла лихорадка. Бабка просидела рядом три ночи.	A fever nearly takes you. Your grandmother sits by you for three nights.	small
+med	c		Ты {съел|съела} горсть земли и {остался|осталась} очень {доволен|довольна}.	You eat a handful of earth and are very pleased with yourself.	small
+med	c		Боишься петуха. Он ходит за тобой по всему двору.	You are afraid of the rooster. It follows you all round the yard.	small
+med	c		Старшие дети таскают тебя за собой, как куклу.	The older children drag you about like a doll.	small
+med	c		Засыпаешь под песню, которую мать поёт без слов.	You fall asleep to a song your mother hums without words.	small
+med	c		Ты {упал|упала} и {рассёк|рассекла} лоб. Шрам останется на всю жизнь.	You fall and cut your forehead. The scar will stay for life.	small
+med	c		Плачешь, когда отец уходит, и смеёшься, когда он возвращается.	You cry when your father leaves and laugh when he comes back.	small
+med	c		Таскаешь собаку за хвост, а она терпит.	You pull the dog's tail, and it puts up with it.	small
+med	c		Тебе дали первую ложку. Половина каши на полу.	You are given your first spoon. Half the porridge ends up on the floor.	small
+med	c		Ты {спрятался|спряталась} под лавку, и тебя полдня искали всей семьёй.	You hide under the bench, and the whole family searches for you half the day.	small
+med	c		Ты всё время тянешь в рот блестящее. Мать вынимает и смеётся.	You keep putting shiny things in your mouth. Your mother takes them out and laughs.	small
+med	c		Сидишь у порога и встречаешь каждого, кто входит, своим словом.	You sit by the door and greet everyone who comes in with your own word.	small
+med	c		Тебе повесили на шею оберег от злых духов. Ты всё время его грызёшь.	A charm against evil spirits is hung round your neck. You chew it all the time.	small

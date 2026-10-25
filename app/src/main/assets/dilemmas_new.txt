@@ -89,7 +89,7 @@ ask: Что трудно отдать, даже когда всё решили �
 id: n_school_girl
 groups: ind mod
 tags: *
-need: kids !town
+need: kids !town school
 ages: 39-51
 weight: 2
 q: Учительница приходит сама: старшая дочь способная, ей бы в городскую школу. А кто будет полоть? | The teacher comes herself: your eldest girl is clever, she should go to the town school. But who will do the weeding?
