@@ -196,7 +196,7 @@ ind	y	au	Объезжаешь лошадей на соседней станци�
 ind	y	us	Нанимаешься на жатву в прериях. Ночуешь в стогах.	You hire on for the harvest on the plains. You sleep in haystacks.	
 ind	y	en	По субботам танцы в зале над пабом.	On Saturdays there are dances in the room above the pub.	
 ind	y	it fr	Сбор винограда кончился. Вечером танцуешь на току под скрипку.	The grape harvest is over. In the evening you dance on the threshing floor to a fiddle.	
-ind	y	in	Тебя выдали замуж ещё девочкой. Теперь пора переезжать в дом мужа.	You were married as a little girl. Now it is time to move to your husband's house.	f
+ind	y	in	Тебя выдали замуж ещё девочкой. Теперь пора переезжать в дом мужа.	You were married as a little girl. Now it is time to move to your husband's house.	f !monk
 ind	y	de	Подмастерьем идёшь из города в город. В каждом цеху дают ночлег и хлеб.	As a journeyman you walk from town to town. Every guild gives you a bed and bread.	m +town
 ind	y	sea	Тебя на три месяца отдали в монастырь послушником. Бреют голову.	You are sent to the monastery as a novice for three months. They shave your head.	m
 ind	y	ru	Отец берёт тебя в извоз до губернского города. Ночуете на постоялом дворе.	Father takes you carting to the provincial town. You sleep at a coaching inn.	m

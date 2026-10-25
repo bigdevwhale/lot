@@ -49,7 +49,7 @@ anc	y		На празднике тебя {заметил|заметила} кто
 anc	y	cn me eg med	Тебя внесли в списки и дали копьё с бронзовым наконечником.	You are put on the muster roll and given a bronze-tipped spear.	m after:-3000
 anc	y	cn	В доме господина гадатель жжёт черепаший панцирь и читает трещины. Ты {смотрел|смотрела} из-за двери.	In the lord's house the diviner scorches a turtle shell and reads the cracks. You watch from behind the door.	
 anc	y	cn	Тебя учат ткать шёлк. Нить рвётся, мать молча связывает её снова.	You are taught to weave silk. The thread breaks; mother ties it again without a word.	f
-anc	y	in	Тебя сосватали. {Невесту|Жениха} ты {видел|видела} только издали, у колодца.	You are betrothed. You have seen your {bride|groom} only from afar, at the well.	single
+anc	y	in	Тебя сосватали. {Невесту|Жениха} ты {видел|видела} только издали, у колодца.	You are betrothed. You have seen your {bride|groom} only from afar, at the well.	single !monk
 anc	y	in	Тебе надели священный шнур. Теперь ты дважды рождённый.	You receive the sacred thread. Now you are twice-born.	m r3
 anc	y	in	В деревню пришёл отшельник, весь в пепле. Ты носишь ему рис.	A hermit comes to the village, covered in ash. You bring him rice.	
 anc	y	me	В школе писцов тебя бьют палкой за кривой клин.	At the scribes' school you are caned for a crooked wedge.	m r3
@@ -283,7 +283,7 @@ anc	y	cn	На весеннем празднике у реки парни и де
 anc	y	cn	Тебя забрали на общие работы: месяц трамбуешь землю для стены уезда.	You are taken for common labour: a month ramming earth for the county wall.	
 anc	y	cn	Ночью встаёшь кормить шелкопрядов. Они жуют так громко, будто идёт дождь.	At night you get up to feed the silkworms. They chew so loudly it sounds like rain.	
 anc	y	cn	После жатвы ты впервые пьёшь с мужчинами просяное вино. Домой тебя несут.	After the harvest you drink millet wine with the men for the first time. They carry you home.	m
-anc	y	cn	Тебе закололи волосы шпилькой. Теперь ты невеста.	Your hair is pinned up. Now you are of an age to marry.	f
+anc	y	cn	Тебе закололи волосы шпилькой. Теперь ты невеста.	Your hair is pinned up. Now you are of an age to marry.	f !monk
 anc	y	cn	Сосед вернулся с войны. Хвалится, что за отрезанные уши врагов дают землю.	A neighbour comes back from the war. He boasts that land is given for enemies' ears.	after:-350
 anc	y	in	Учишься доить так, чтобы телёнку тоже осталось.	You learn to milk so that something is left for the calf.	
 anc	y	in	Мальчишки поймали кобру в корзину. Ты {держал|держала} крышку.	The boys catch a cobra in a basket. You hold the lid.	

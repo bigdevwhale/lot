@@ -141,6 +141,26 @@ class LifeTest {
         }
     }
 
+    /** Whoever enters a monastery is never wed, matched or given children afterwards. */
+    @Test fun aMonkStaysUnwed() {
+        val rnd = Random(5)
+        val worldly = Regex("Свадьбу сыграли|Женился|Вышла замуж|Родилось детей|ты невеста|тебе (невесту|жениха)|Тебя сосватали|Тебя выдали замуж|твоей свадьбе|огню жениха")
+        var monks = 0
+        repeat(4000) { n ->
+            var vowed = false
+            val (p, _) = Life.live(content, n.toLong() * 17, null) { ch, _ ->
+                val open = ch.doors.indices.filter { ch.doors[it].open }
+                open.firstOrNull { ch.doors[it].text.en == "Enter a monastery" } ?: open.random(rnd)
+            }
+            val at = p.entries.indexOfFirst { it.text.en.startsWith("You enter a monastery") }
+            if (at < 0) return@repeat
+            monks++
+            val late = p.entries.drop(at + 1).firstOrNull { worldly.containsMatchIn(it.text.ru) }
+            assertTrue("life $n took vows and then: ${late?.text?.ru}", late == null)
+        }
+        assertTrue(monks > 20)
+    }
+
     /** Once a life has moved to town (a flat, a hostel, an apprenticeship), lines and forks about fields, harvests and rent stop. */
     @Test fun townLivesLeaveTheLandBehind() {
         val sexes = listOf(app.lot.domain.Sex.M, app.lot.domain.Sex.F)

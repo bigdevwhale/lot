@@ -35,7 +35,7 @@ stone	y		На сходе родов {заметил|заметила} {деву�
 stone	y		{Ушёл|Ушла} {один|одна} за кремнём к дальнему обрыву. {Вернулся|Вернулась} через четыре дня.	You go alone for flint to the far cliff. You come back four days later.	
 stone	y	me	Весной газели идут через долину. Ты {стоял|стояла} в цепи загонщиков и {кричал|кричала} что есть сил.	In spring the gazelles pass through the valley. You stand in the line of beaters and shout with all your might.	
 stone	y	in	Ночью {караулил|караулила} ягодник. В темноте рядом дышали слоны.	At night you guard the berry bushes. In the dark, elephants breathe close by.	
-stone	y		Тебя отдают в соседний род, к огню жениха. Мать плачет и смеётся.	You are given to the next band, to your husband's fire. Your mother cries and laughs.	f
+stone	y		Тебя отдают в соседний род, к огню жениха. Мать плачет и смеётся.	You are given to the next band, to your husband's fire. Your mother cries and laughs.	f !monk
 stone	a		Зима затянулась. Грызли кожу с шалашей.	The winter drags on. You chew the hides off the shelters.	
 stone	a		У реки встретили чужой род. Обменялись ракушками и не стали драться.	At the river you meet a strange band. You trade shells and do not fight.	
 stone	a		{Приложил|Приложила} ладонь к стене пещеры и {обдул|обдула} её охрой.	You lay your hand on the cave wall and blow ochre round it.	

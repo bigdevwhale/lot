@@ -51,7 +51,7 @@ early	y	de	Уходишь подмастерьем странствовать. �
 early	y	us	Семья уходит на запад, за горы. Повозка, корова и мешок семян.	Your family goes west over the mountains. A wagon, a cow and a sack of seed.	
 early	y	latam	Тебя гонят на серебряный рудник. Солнце видишь по воскресеньям.	You are sent down the silver mine. You see the sun on Sundays.	m r0
 early	y	af	Тебе режут на щеках знаки рода. Нельзя ни крикнуть, ни дёрнуться.	They cut your clan marks on your cheeks. You must not cry out or flinch.	
-early	y	in	Свадьбу сыграли ещё в детстве. Теперь тебя везут в дом мужа.	You were married as a child. Now they take you to your husband's house.	f
+early	y	in	Свадьбу сыграли ещё в детстве. Теперь тебя везут в дом мужа.	You were married as a child. Now they take you to your husband's house.	f !monk
 early	y	me	Отец впервые взял тебя в кофейню. Мужчины спорят о цене шёлка.	Father takes you to the coffee house for the first time. The men argue over the price of silk.	m
 early	y	au	Старики уводят тебя в буш. Вернёшься мужчиной.	The elders take you into the bush. You will come back a man.	m
 early	y	sea	На один сезон дождей тебя отдали в монастырь. Бреют голову, учат сутры.	For one rainy season you are sent to the monastery. They shave your head and teach you the sutras.	m
@@ -199,7 +199,7 @@ early	y		Ты уже выше матери. Она смеётся и смотр�
 early	y		Впервые взрослые позвали тебя в круг — плясать.	For the first time the grown-ups call you into the dance.	
 early	y		Впервые идёшь один{|а} к дальней родне. Три дня пути, и всё сам{|а}.	For the first time you walk alone to far-off kin. Three days on the road, all on your own.	
 early	y		Всю ночь {пролежал|пролежала} без сна под звёздами. {Думал|Думала}, какой будет твоя жизнь.	You lie awake all night under the stars, wondering what your life will be.	
-early	y		Взрослые замолкают, когда ты входишь. Значит, говорят о твоей свадьбе.	The grown-ups fall silent when you come in. So they are talking about your wedding.	
+early	y		Взрослые замолкают, когда ты входишь. Значит, говорят о твоей свадьбе.	The grown-ups fall silent when you come in. So they are talking about your wedding.	!monk
 early	y	cn	Пришла сваха с красной карточкой. На ней восемь знаков твоего рождения.	The matchmaker comes with a red card. On it are the eight characters of your birth.	
 early	y	cn	Тебя отдали в ученики к лекарю. Толчёшь корни в ступке и учишь их имена.	You are apprenticed to a herb doctor. You pound roots in a mortar and learn their names.	
 early	y	cn	Праздник драконьих лодок. Гребёшь со всей деревней, барабан бьёт прямо в грудь.	The dragon boat festival. You row with the whole village; the drum beats right in your chest.	
@@ -240,7 +240,7 @@ early	y	au	Ночью у костра тебе впервые доверили �
 early	y	au	Старики говорят, с кем тебе можно сойтись. Сердцу не прикажешь.	The elders tell you whom you may marry. The heart does not listen.	
 early	y	au	Тётки учат тебя женским песням. Мужчинам их слышать нельзя.	Your aunts teach you the women's songs. Men must never hear them.	f
 early	y	de en	Конфирмация. Отвечаешь пастору катехизис без запинки, а колени дрожат.	Confirmation. You answer the pastor's catechism without a stumble, but your knees shake.	
-early	y	fr	Зимние посиделки в хлеву: прядут, поют, сватаются. Тебя проводили до дому.	Winter evenings in the cowshed: spinning, singing, courting. Someone walks you home.	
+early	y	fr	Зимние посиделки в хлеву: прядут, поют, сватаются. Тебя проводили до дому.	Winter evenings in the cowshed: spinning, singing, courting. Someone walks you home.	!monk
 early	y	it	Палио: скачки без седла вокруг площади. Ты орёшь за свой квартал до хрипоты.	The palio: bareback racing round the square. You shout for your quarter till you are hoarse.	
 early	y	en de	Майское дерево. Ленты перепутались, и вы со смехом путаетесь вместе с ними.	The maypole. The ribbons tangle, and you laugh as you tangle with them.	
 early	y	ru	Посиделки в избе: девки прядут, парни балагурят. Лучина трещит, все смеются.	An evening gathering in a hut: girls spin, boys joke. The splinter-light crackles; everyone laughs.	

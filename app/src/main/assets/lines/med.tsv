@@ -52,7 +52,7 @@ med	y		Мать учит тебя ткать. Первый холст вышел
 med	y	eu ru cn in me eg af jp sea meso andes	Тебе нравится {дочь|сын} кузнеца. Ты по три раза на дню {ходил|ходила} мимо кузни.	You like the smith's {daughter|son}. You walk past the forge three times a day.	
 med	y	cn	Дядя в третий раз едет сдавать экзамены. Вся семья копила ему на кисти и бумагу.	Your uncle goes to sit the examinations for the third time. The whole family saved for his brushes and paper.	
 med	y	cn	Мать учит тебя кормить шелкопряда. Он ест день и ночь и шуршит, как дождь.	Mother teaches you to feed the silkworms. They eat day and night and rustle like rain.	f
-med	y	in	Родители нашли тебе {невесту|жениха} из своей касты. Ты {видел|видела} {её|его} один раз, на празднике.	Your parents find you a {bride|groom} of your own caste. You have seen {her|him} once, at a festival.	
+med	y	in	Родители нашли тебе {невесту|жениха} из своей касты. Ты {видел|видела} {её|его} один раз, на празднике.	Your parents find you a {bride|groom} of your own caste. You have seen {her|him} once, at a festival.	!monk
 med	y	in	На Холи тебя обсыпали красным порошком с головы до ног. {Отмывался|Отмывалась} три дня.	At Holi they cover you in red powder from head to foot. It takes three days to wash off.	
 med	y	me	Дядя взял тебя с караваном в соседний город. Ночью погонщики верблюдов пели у костра.	Your uncle takes you with the caravan to the next town. At night the camel drivers sing by the fire.	m
 med	y	ru	На Купалу прыгали через костёр парами. Ты {прыгал|прыгала} с тем, с кем {хотел|хотела}.	On Kupala night you jump over the fire in pairs. You jump with the one you wanted.	
@@ -298,7 +298,7 @@ med	y	au	Учишься добывать огонь, крутя палочку �
 med	y	au	Тебе объяснили, с кем из родни теперь нельзя говорить. Их больше, чем ты {думал|думала}.	They explain which of your kin you may no longer speak to. There are more than you thought.	
 med	y	au	Плывёшь с дядей по реке в лодке из коры. Он бьёт рыбу острогой, ты держишь равновесие.	You go downriver with your uncle in a bark canoe. He spears fish, you keep the balance.	
 med	y	au	Ты {добыл|добыла} первого кенгуру. По обычаю сам ты его не ешь: всё отдаёшь родне.	You kill your first kangaroo. By custom you eat none of it yourself: it all goes to your kin.	m
-med	y	eu ru me	Тебя сосватали. Будущая свекровь пришла смотреть, как ты месишь тесто.	You are spoken for. Your mother-in-law-to-be comes to watch you knead the dough.	f
+med	y	eu ru me	Тебя сосватали. Будущая свекровь пришла смотреть, как ты месишь тесто.	You are spoken for. Your mother-in-law-to-be comes to watch you knead the dough.	f !monk
 med	y	eu	Тебя отдали в ученики к кожевнику. Руки теперь пахнут дубильной ямой.	You are apprenticed to a tanner. Your hands smell of the tanning pit now.	m r2
 med	y	eu ru	Ты {выучился|выучилась} читать по Псалтыри. По вечерам читаешь вслух соседям.	You learn to read from the Psalter. In the evenings you read aloud to the neighbours.	lit
 med	y	de	Разносчик продаёт листки с картинками про какой-то спор попов. Ты {купил|купила} один ради картинки.	A pedlar sells printed sheets about some quarrel of the priests. You buy one for the picture.	after:1520

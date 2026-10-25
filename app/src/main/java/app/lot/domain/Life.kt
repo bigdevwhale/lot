@@ -408,7 +408,9 @@ class Life private constructor(
         if (rnd.nextDouble() < .2) return null
         val all = content.dilemmas.filter {
             it.id !in usedForks && era.group in it.groups && age in it.ages && it.fits(region) && it.need.holds(this) &&
-                ("abroad" !in flags || "*" in it.tags || it.tags.isEmpty())
+                ("abroad" !in flags || "*" in it.tags || it.tags.isEmpty()) &&
+                // A monk has taken vows: no fork may bring a wedding or a child.
+                !(monk && it.doors.any { g -> g.outs.any { o -> o.fx.any { f -> f == "married" || f == "kids+1" } } })
         }
         // A fork met in a recent life (one of its outcomes is in that book) waits while others are left.
         val c = all.filterNot { d -> d.doors.any { g -> g.outs.any { it.text.g(sex).ru in past.read } } }.ifEmpty { all }
