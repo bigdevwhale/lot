@@ -6,6 +6,15 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.1.3] - 2026-10-25
+
+### Fixed
+- Whoever enters a monastery is no longer wed afterwards: forks that can bring a wedding or a child, and lines about your own matchmaking, skip those who took vows.
+
+<!-- tg
+«Жребий» 1.1.3: кто ушёл в монастырь, тот больше не женится и не выходит замуж — ни через развилки, ни через сватовство
+-->
+
 ## [1.1.2] - 2026-10-25
 
 ### Fixed
