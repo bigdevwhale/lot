@@ -35,7 +35,7 @@ fun Onboarding(w: Words) {
     val c = LocalContext.current.container
     var page by rememberSaveable { mutableIntStateOf(0) }
     val tm = rememberTextMeasurer()
-    Column(Modifier.fillMaxSize().paper().verticalScroll(rememberScrollState()).statusBarsPadding().navigationBarsPadding().padding(horizontal = 22.dp, vertical = 18.dp)) {
+    Column(Modifier.fillMaxSize().paper().statusBarsPadding().navigationBarsPadding().verticalScroll(rememberScrollState()).padding(horizontal = 22.dp, vertical = 18.dp)) {
         if (page == 0) {
             val tag = TagText(w.t("ок. 1350", "c. 1350"), w.t("Китай", "China"), w.t("в семье крестьян", "born to peasants"), w.t("девочка", "a girl"))
             Canvas(Modifier.fillMaxWidth().height(280.dp)) { stage(0f, 1f, tag, 3L, tm) }

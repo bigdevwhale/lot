@@ -59,35 +59,35 @@ early	y		Отец отдал тебя в услужение в город. Сп�
 early	y		Первая любовь. Проходишь мимо её дома по три раза на дню.	First love. You walk past her house three times a day.	m
 early	y		Первая любовь. Он прошёл мимо колодца и даже не обернулся.	First love. He walks past the well and doesn't even turn.	f
 # --- grown-up years
-early	a		Приехал землемер. Делят землю.	The surveyor arrives. The land is divided up.	
-early	a		Неурожай: хлеб подорожал втрое.	A bad harvest: bread costs three times as much.	
+early	a		Приехал землемер. Делят землю.	The surveyor arrives. The land is divided up.	!town
+early	a		Неурожай: хлеб подорожал втрое.	A bad harvest: bread costs three times as much.	!town
 early	a	ru	Письмо от брата из города. Читал дьячок, а ты {просил|просила} ещё и ещё.	A letter from your brother in town. The sexton reads it, and you ask for it again and again.	
 early	a		Перекрыли крышу. Впервые за много лет не течёт.	You put a new roof on. For the first time in years it doesn't leak.	
 early	a	ru	Барин проиграл деревню в карты. Новый барин строже.	The master loses the village at cards. The new master is harder.	r0
 early	a		Ребёнку сделали прививку от оспы — первому в селе.	Your child is vaccinated against smallpox, the first in the village.	kids
-early	a	ru	Три дня в неделю на барщине, остальные — на своей полосе.	Three days a week on the master's land, the rest on your own strip.	r0
-early	a	ru	Староста собирает оброк. Чтобы набрать, продаёшь холст.	The steward collects the quitrent. You sell your linen to make it up.	r0
+early	a	ru	Три дня в неделю на барщине, остальные — на своей полосе.	Three days a week on the master's land, the rest on your own strip.	r0 !town
+early	a	ru	Староста собирает оброк. Чтобы набрать, продаёшь холст.	The steward collects the quitrent. You sell your linen to make it up.	r0 !town
 early	a	ru	Сход переделил полосы. Тебе досталась у болота.	The commune redivides the strips. Yours is down by the marsh.	
-early	a	ru	Барин отпустил на заработки в Москву. Возишь кирпич, половину шлёшь на оброк.	The master lets you go to Moscow to earn. You haul bricks and send half home for the quitrent.	m r0
+early	a	ru	Барин отпустил на заработки в Москву. Возишь кирпич, половину шлёшь на оброк.	The master lets you go to Moscow to earn. You haul bricks and send half home for the quitrent.	m r0 !town
 early	a	ru	Барыня взяла тебя в кормилицы. Твоего ребёнка свекровь кормит жёваным хлебом.	The mistress takes you as a wet nurse. Your mother-in-law feeds your own baby chewed bread.	f r0 kids
 early	a	ru	{Ходил|Ходила} пешком на богомолье, за двести вёрст.	You walk two hundred versts on pilgrimage.	
 early	a	cn sea	Сажаешь рис по колено в воде. Спина не разгибается до темноты.	You plant rice knee-deep in water. Your back won't straighten till dark.	
 early	a	cn	Сплавляешь фарфор баржами в Кантон. Каждую чашку перекладывают соломой.	You take porcelain by barge down to Canton. Every cup is packed in straw.	r2
 early	a	cn	Чайный лист собирают с рассвета. Пальцы зелёные до самой зимы.	Tea is picked from dawn. Your fingers stay green till winter.	
-early	a	jp	Чиновник мерит урожай. Рисовый налог — сорок мешков из ста.	The official measures the harvest. The rice tax is forty bales in a hundred.	
+early	a	jp	Чиновник мерит урожай. Рисовый налог — сорок мешков из ста.	The official measures the harvest. The rice tax is forty bales in a hundred.	!town
 early	a	jp	Твоя лавка в Эдо сгорала дважды. Строишь в третий раз.	Your shop in Edo has burned down twice. You build it a third time.	r2
 early	a	in	Приказчики Компании берут ткань по своей цене. Торговаться не дают.	The Company's agents take your cloth at their own price. They won't let you haggle.	r2
 early	a	in	Сборщик заминдара пришёл за своей долей. Твоя теперь меньше.	The zamindar's collector comes for his share. Yours is now the smaller one.	
 early	a	af	На рынке меняешь орехи кола на соль.	At the market you trade kola nuts for salt.	
 early	a	us	С рассвета до темноты в табаке. Надсмотрщик считает листья.	Dawn to dark in the tobacco. The overseer counts the leaves.	r0
-early	a	us latam	Воскресенье — ваше. Копаешь свой огород и поёшь.	Sunday is yours. You dig your own garden and sing.	r0
+early	a	us latam	Воскресенье — ваше. Копаешь свой огород и поёшь.	Sunday is yours. You dig your own garden and sing.	r0 !town
 early	a	us	Сход в молитвенном доме: решают, где ставить мельницу.	A meeting in the meeting house: where to put the mill.	
-early	a	us	Расчищаешь лес под поле. Пни горят всю осень.	You clear the forest for a field. The stumps burn all autumn.	m
+early	a	us	Расчищаешь лес под поле. Пни горят всю осень.	You clear the forest for a field. The stumps burn all autumn.	m !town
 early	a	latam	На гасиенде записали за тобой долг. Он растёт быстрее, чем ты работаешь.	At the hacienda they write down a debt against you. It grows faster than you can work.	
 early	a	latam	Ты метис. В церковной книге тебя записали не так, как отца.	You are a mestizo. The parish book writes you down differently from your father.	
 early	a	en	Мировой судья оштрафовал тебя за силок на зайца.	The magistrate fines you for a hare snare.	m
 early	a	en	Приход даёт пособие хлебом. Брать стыдно, не брать — голодно.	The parish gives relief in bread. It is shameful to take it and hungry not to.	
-early	a	en	Общинный луг огородили. Корову теперь пасти негде.	The common is fenced off. There is nowhere to graze the cow now.	
+early	a	en	Общинный луг огородили. Корову теперь пасти негде.	The common is fenced off. There is nowhere to graze the cow now.	!town
 early	a	en de fr	Прядёшь шерсть на скупщика. Колесо гудит до полуночи.	You spin wool for the clothier. The wheel hums till midnight.	f
 early	a	fr	Соль покупаешь только казённую, по казённой цене.	You may buy only the king's salt, at the king's price.	
 early	a	fr de en it	Десятину сдали снопами. Священник пересчитал дважды.	The tithe is paid in sheaves. The priest counts them twice.	
@@ -103,13 +103,13 @@ early	a	fr de en it ru latam	В твоём приходе триста душ. �
 early	a		В мастерской трое учеников. Младший таскает хлеб, ты делаешь вид, что не видишь.	Three apprentices in your workshop. The youngest steals bread; you pretend not to see.	r2
 early	a		Старший сын ушёл в город и не пишет.	Your eldest son has gone to town and doesn't write.	kids
 early	a		Свекровь отдала тебе ключи от кладовой. Теперь ты хозяйка.	Your mother-in-law hands you the larder keys. Now you are mistress of the house.	f married
-early	a		Ночь просидел{|а} с больной коровой. К утру она встала.	You sit up all night with a sick cow. By morning she is on her feet.	
+early	a		Ночь просидел{|а} с больной коровой. К утру она встала.	You sit up all night with a sick cow. By morning she is on her feet.	!town
 # --- small joys
 early	j		Купили медный котёл. Соседи приходили смотреть.	You buy a copper pot. The neighbours come to look.	
 early	j		Первый раз в жизни {пил|пила} чай. Горько и весело.	For the first time in your life you drink tea. Bitter and merry.	
 early	j		Кукольник на площади. Смеялись так, что болели щёки.	A puppeteer in the square. You laugh till your cheeks ache.	
 early	j	fr de en it ru	Праздник: на столе белый хлеб.	A feast day: white bread on the table.	
-early	j		Дети нашли в поле ёжика и неделю кормили его молоком.	The children find a hedgehog in the field and feed it milk for a week.	
+early	j		Дети нашли в поле ёжика и неделю кормили его молоком.	The children find a hedgehog in the field and feed it milk for a week.	!town
 early	j		Вечером под окнами пели — сватались к соседской дочери.	In the evening they sing under the windows, courting the neighbour's daughter.	
 early	j	ru	На Троицу завивали берёзки. Ты {пел|пела} громче всех.	At Trinity you braid the birch branches. You sing loudest of all.	
 early	j	jp	Всей улицей сидите под цветущей сакурой. Сакэ, рисовые колобки.	The whole street sits under the cherry blossom. Sake and rice balls.	
@@ -118,14 +118,14 @@ early	j	en	Чай с сахаром по воскресеньям. Пусть и
 early	j	in	Дивали: на каждом окне масляный светильник.	Diwali: an oil lamp in every window.	
 early	j	me	Полдня в бане с подругами. Дыни, сплетни, хна.	Half a day at the bathhouse with your friends. Melons, gossip, henna.	f
 early	j	latam	Праздник святого покровителя: процессия, ракеты, бой быков.	The patron saint's fiesta: a procession, rockets, a bullfight.	
-early	j	us	Всем миром ставили соседу амбар. Вечером плясали на новом полу.	The whole neighbourhood raises a barn. In the evening you dance on the new floor.	
+early	j	us	Всем миром ставили соседу амбар. Вечером плясали на новом полу.	The whole neighbourhood raises a barn. In the evening you dance on the new floor.	!town
 early	j	af	Собрали ямс. Пляшете под барабаны до утра.	The yams are in. You dance to the drums till morning.	
 early	j	sea	Театр теней до рассвета. Ты знаешь все слова наизусть.	A shadow play till dawn. You know every word by heart.	
 early	j	au	Пошла черепаха. Вечером жарите мясо на берегу, все сыты.	The turtles are running. In the evening you roast meat on the shore and everyone is full.	
 early	j	fr it	Молодое вино разлили по бочкам. Пробуешь прямо из чана.	The new wine goes into the casks. You taste it straight from the vat.	
 early	j		Младший сделал первые шаги — прямо к тебе.	Your youngest takes their first steps, straight to you.	kids
-early	j		Корова отелилась двойней.	The cow has twin calves.	
-early	j	ru de	Соседка принесла лукошко первой земляники.	The neighbour brings a basket of the first wild strawberries.	
+early	j		Корова отелилась двойней.	The cow has twin calves.	!town
+early	j	ru de	Соседка принесла лукошко первой земляники.	The neighbour brings a basket of the first wild strawberries.	!town
 early	j		Вся деревня гуляла на свадьбе. Три дня ели и плясали.	The whole village at a wedding. Three days of eating and dancing.	
 early	j		{Купил|Купила} у разносчика книжку. Читаешь её всю зиму.	You buy a book from a pedlar. You read it all winter.	lit
 early	j		Тёплый дождь после засухи. Дети бегают под ним голышом.	Warm rain after the drought. The children run about in it naked.	
@@ -139,12 +139,12 @@ early	o		Дети просят рассказать о большой войне
 early	o		Очки! Ты снова видишь иголку.	Spectacles! You can see a needle again.	
 early	o	ru	Хозяйство отдал{|а} сыну. Теперь твоё место на печи.	You hand the farm to your son. Your place now is on the stove.	kids
 early	o	ru	Барин дал тебе вольную, когда ты уже не можешь работать.	The master sets you free once you can no longer work.	r0
-early	o	cn	На Новый год внуки кланяются тебе до земли.	At New Year the grandchildren bow to the ground before you.	kids
+early	o	cn	На Новый год внуки кланяются тебе до земли.	At New Year the grandchildren bow to the ground before you.	kids !town
 early	o	cn	Сыновья заранее купили тебе гроб. Ты им гордишься.	Your sons have bought your coffin in advance. You are proud of it.	kids
 early	o	jp	{Отошёл|Отошла} от дел и {взял|взяла} новое имя. Пишешь хокку.	You retire from the house and take a new name. You write haiku.	lit
 early	o	me	Сидишь во дворе мечети, пока не позовут к молитве.	You sit in the mosque courtyard until the call to prayer.	m
 early	o	af	Ты старейшина. Споры о земле теперь решают под твоим деревом.	You are an elder now. Land quarrels are settled under your tree.	m
-early	o	au	Поёшь детям песни своей земли, чтобы они не заблудились.	You sing the children the songs of your country so they will not get lost.	
+early	o	au	Поёшь детям песни своей земли, чтобы они не заблудились.	You sing the children the songs of your country so they will not get lost.	!town
 early	o	en	Впереди только работный дом. Говорят, мужей и жён там селят порознь.	Only the workhouse is left. They say husbands and wives are kept apart there.	married
 early	o	us au	Ты помнишь, когда здесь был лес и ни одной дороги.	You remember when this was all forest and not a single road.	
 early	o	latam	Каждое утро ходишь к мессе. Падре моложе твоего внука.	Every morning you go to mass. The padre is younger than your grandson.	kids
@@ -152,7 +152,7 @@ early	o		Переписываешь завещание каждую весну.	
 early	o		Зубов не осталось. Хлеб размачиваешь в молоке.	No teeth left. You soak your bread in milk.	
 early	o		Учишь внучку прясть. Она уже ловчее тебя.	You teach your granddaughter to spin. She is already quicker than you.	f kids
 early	o		Внуки дёргают тебя за бороду, а ты притворяешься, что спишь.	The grandchildren tug at your beard while you pretend to sleep.	m kids
-early	o		Тебя зовут, когда надо вспомнить, где шла старая межа.	They call for you when someone needs to remember where the old boundary ran.	
+early	o		Тебя зовут, когда надо вспомнить, где шла старая межа.	They call for you when someone needs to remember where the old boundary ran.	!town
 early	o		{Овдовел|Овдовела}. По привычке ставишь на стол вторую миску.	Widowed. Out of habit you still put out a second bowl.	married
 early	o		На кладбище ходишь чаще, чем в гости.	You go to the graveyard more often than to the neighbours.	
 # --- hard times
@@ -161,13 +161,13 @@ early	x		Война с соседней державой.	War with the neighbour
 early	x		Холера. Колодцы заколотили.	Cholera. The wells are boarded up.	
 early	x		Бунт, а потом каратели.	A revolt, and then the soldiers who put it down.	
 early	x		Пожар. Выгорела вся улица.	Fire. The whole street burns down.	
-early	x		Мор на скотину. За неделю пало всё стадо.	Cattle plague. In a week the whole herd is dead.	
-early	x	af	Ночью в соседнюю деревню пришли ловцы людей. Утром там пусто.	In the night the slave raiders come to the next village. By morning it is empty.	
+early	x		Мор на скотину. За неделю пало всё стадо.	Cattle plague. In a week the whole herd is dead.	!town
+early	x	af	Ночью в соседнюю деревню пришли ловцы людей. Утром там пусто.	In the night the slave raiders come to the next village. By morning it is empty.	!town
 early	x	us latam	Твоих детей продали в другое имение. Ты знаешь только его название.	Your children are sold to another estate. You know only its name.	r0 kids
 early	x	ru	Новый управляющий. Порет всех и за всё.	A new steward. He flogs everyone for everything.	r0
-early	x	jp	Третий год неурожай. Едите солому и коренья.	The third failed harvest. You eat straw and roots.	
-early	x	cn	Река прорвала дамбы. Поля под водой до самого горизонта.	The river breaks the dikes. The fields are under water to the horizon.	
-early	x	en	Общинную землю огородили. Остаётся идти в город.	The common land is enclosed. There is nothing left but to go to town.	
+early	x	jp	Третий год неурожай. Едите солому и коренья.	The third failed harvest. You eat straw and roots.	!town
+early	x	cn	Река прорвала дамбы. Поля под водой до самого горизонта.	The river breaks the dikes. The fields are under water to the horizon.	!town
+early	x	en	Общинную землю огородили. Остаётся идти в город.	The common land is enclosed. There is nothing left but to go to town.	!town
 early	x	au	Пришла болезнь белых людей. Хоронить некому.	The white men's sickness comes. There is no one left to bury the dead.	
 # --- childhood (wave 2)
 early	c		{Нашёл|Нашла} в траве гнездо с пёстрыми яйцами. Никому не {сказал|сказала}.	You find a nest of speckled eggs in the grass. You tell no one.	
@@ -258,9 +258,9 @@ early	a	cn	Тянешь джонку бечевой вверх по реке. П
 early	a	cn	Старейшина вписал в родословную книгу твоё имя. Кистью, рядом с дедовым.	The clan elder writes your name in the genealogy, with a brush, beside your grandfather's.	
 early	a	cn	Носишь ил из пруда под тутовые деревья. В пруду рыба, на деревьях шелкопряд.	You carry silt from the pond to the mulberry trees. Fish in the pond, silkworms in the trees.	
 early	a	cn sea	Буйвол — всё твоё богатство. Моешь его в реке чаще, чем детей.	The buffalo is all your wealth. You wash it in the river more often than the children.	
-early	a	in	Бык ходит по кругу у колодца, кожаный мешок тянет воду на поле. Ты погоняешь с рассвета.	An ox walks round the well; a leather bag lifts water to the field. You drive it from dawn.	
+early	a	in	Бык ходит по кругу у колодца, кожаный мешок тянет воду на поле. Ты погоняешь с рассвета.	An ox walks round the well; a leather bag lifts water to the field. You drive it from dawn.	!town
 early	a	in	Из красильни индиго так несёт, что соседи обходят твой двор стороной.	Your indigo vats stink so much that the neighbours walk round your yard.	
-early	a	in	Панчаят под деревом решил ваш спор о меже. Недовольны обе стороны.	The village council under the tree settles your boundary quarrel. Both sides are unhappy.	
+early	a	in	Панчаят под деревом решил ваш спор о меже. Недовольны обе стороны.	The village council under the tree settles your boundary quarrel. Both sides are unhappy.	!town
 early	a	in	Муссон запаздывает. Каждое утро вся деревня смотрит на небо.	The monsoon is late. Every morning the whole village looks at the sky.	
 early	a	in	Трое парней из деревни ушли в сипаи к Компании. Платят серебром.	Three young men from the village have joined the Company's sepoys. They are paid in silver.	after:1750
 early	a	sea	Возишь по реке на рынок сушёную рыбу. Лодка тебе и дом.	You take dried fish downriver to market. The boat is your home too.	
@@ -277,28 +277,28 @@ early	a	me	В бурю упала финиковая пальма. Её сажа
 early	a	me	Возишь на осле воду в город, в бурдюках. За день — двенадцать ходок.	You bring water into town by donkey, in skins. Twelve trips a day.	
 early	a	af	Строите с соседями дом. Глину на стены мажете руками.	You build a house with the neighbours. You smear the clay on the walls by hand.	
 early	a	af	Кузнец выковал тебе новую мотыгу. Платишь ему двумя курами.	The smith forges you a new hoe. You pay him two chickens.	
-early	a	af	Выжигаешь кусты под новое поле. Через три года уйдёте на другое место.	You burn the bush for a new field. In three years you will move on again.	
-early	a	af	Река отступила. Сеешь в ил, пока он мокрый.	The river falls back. You sow in the mud while it is still wet.	
+early	a	af	Выжигаешь кусты под новое поле. Через три года уйдёте на другое место.	You burn the bush for a new field. In three years you will move on again.	!town
+early	a	af	Река отступила. Сеешь в ил, пока он мокрый.	The river falls back. You sow in the mud while it is still wet.	!town
 early	a	af	С севера пришли верблюды с солью. Плиту соли меняют на золото.	Camels come from the north with salt. A slab of salt is traded for gold.	
 early	a	latam	Варишь сахар на сахарной мельнице. Котлы кипят день и ночь.	You boil sugar at the mill. The kettles boil day and night.	
 early	a	latam	Два дня пути до рынка с корзиной перца за спиной.	Two days' walk to market with a basket of chillies on your back.	
-early	a	latam	Ставишь в поле крест из цветов, чтобы град обошёл кукурузу.	You set a cross of flowers in the field so the hail will pass the maize by.	
+early	a	latam	Ставишь в поле крест из цветов, чтобы град обошёл кукурузу.	You set a cross of flowers in the field so the hail will pass the maize by.	!town
 early	a	us	С соседями варите кленовый сок. Котёл кипит в лесу всю ночь.	With the neighbours you boil maple sap. The kettle boils in the woods all night.	
 early	a	us	Меняешь шкуры на порох в фактории. Торговец обвешивает и не скрывает.	You trade pelts for powder at the post. The trader cheats on the weight and doesn't hide it.	
-early	a	us	В лавке всё пишут в долг до урожая. Осенью платишь зерном.	At the store everything goes on credit till harvest. In autumn you pay in grain.	
+early	a	us	В лавке всё пишут в долг до урожая. Осенью платишь зерном.	At the store everything goes on credit till harvest. In autumn you pay in grain.	!town
 early	a	us	Сбиваешь масло, пока не заломит руки. По субботам возишь его в город.	You churn butter till your arms ache. On Saturdays you take it to town.	
 early	a	au	Ловишь рыбу в каменных запрудах. Их строили ещё деды дедов.	You catch fish in the stone traps your grandfathers' grandfathers built.	
 early	a	au	Ходишь к соседнему народу менять охру на камень для топоров.	You go to the next people to trade ochre for axe stone.	
 early	a	au	Копаешь палкой ямс. К вечеру полное деревянное блюдо.	You dig yams with a stick. By evening the wooden dish is full.	
 early	a	au	Чужаки привели овец на ваши луга. Вода в ручье теперь мутная.	Strangers bring sheep onto your grasslands. The water in the creek is muddy now.	after:1788
-early	a	fr de en it ru	Всю зиму молотишь цепом на гумне. Стук слышно на всю деревню.	All winter you thresh with a flail in the barn. The whole village hears the beat.	
-early	a	fr de en it ru	Сено сметали в стога. Гроза прошла стороной — успели.	The hay is stacked. The storm passes by — you made it in time.	
-early	a	de fr it	Гонишь коров на горное пастбище на всё лето.	You drive the cows up to the mountain pasture for the whole summer.	
+early	a	fr de en it ru	Всю зиму молотишь цепом на гумне. Стук слышно на всю деревню.	All winter you thresh with a flail in the barn. The whole village hears the beat.	!town
+early	a	fr de en it ru	Сено сметали в стога. Гроза прошла стороной — успели.	The hay is stacked. The storm passes by — you made it in time.	!town
+early	a	de fr it	Гонишь коров на горное пастбище на всё лето.	You drive the cows up to the mountain pasture for the whole summer.	!town
 early	a	de	Сплавляешь лес по Рейну на плоту величиной с деревню.	You float timber down the Rhine on a raft the size of a village.	m
 early	a	de	Летом уходишь в Голландию косить. Домой несёшь гульдены в поясе.	In summer you go to Holland to mow. You bring the guilders home in your belt.	
 early	a	de	Князь поменял веру. Через год поменяли и пастора.	The prince changes his faith. A year later the pastor is changed too.	
 early	a	fr	Сборщик тальи ходит по дворам. Окорок прячешь под солому.	The taille collector goes from house to house. You hide the ham under the straw.	
-early	a	it	Таскаешь с поля камни и складываешь в стенку террасы. Дед делал так же.	You carry stones off the field and build them into the terrace wall. Grandfather did the same.	
+early	a	it	Таскаешь с поля камни и складываешь в стенку террасы. Дед делал так же.	You carry stones off the field and build them into the terrace wall. Grandfather did the same.	!town
 early	a	it	Кормишь шелкопряда тутовым листом. Коконы купец увозит в Милан.	You feed the silkworms mulberry leaves. A merchant takes the cocoons to Milan.	
 early	a	en	В городе открыли фабрику. Прясть теперь будет машина.	A mill opens in town. A machine will do the spinning now.	after:1780
 early	a	ru	Зимой ходишь в извоз. Санный обоз до самой Москвы.	In winter you go carting. A sledge train all the way to Moscow.	m
@@ -337,6 +337,6 @@ early	x		Лихорадка. Слегла половина деревни.	A fev
 early	x		Саранча. За один день не осталось ничего зелёного.	Locusts. In a single day nothing green is left.	
 early	x		Наводнение. Вода неделю стоит в домах.	A flood. For a week the water stands in the houses.	
 early	x	jp latam	Землетрясение, а следом пожар.	An earthquake, and then fire.	
-early	x	in	Муссон не пришёл. Колодцы пусты, амбары тоже.	The monsoon never comes. The wells are empty, and so are the granaries.	
+early	x	in	Муссон не пришёл. Колодцы пусты, амбары тоже.	The monsoon never comes. The wells are empty, and so are the granaries.	!town
 early	x	de fr it	Солдаты встали на постой на всю зиму. Съели всё, что было.	Soldiers are quartered on you all winter. They eat everything you have.	
 early	x	me	Чума в городе. Караваны не ходят, базар закрыт.	Plague in the city. The caravans stop; the bazaar is shut.	

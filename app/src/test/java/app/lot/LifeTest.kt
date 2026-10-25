@@ -113,6 +113,55 @@ class LifeTest {
         assertTrue(!World.fits(0, "ru") && World.fits(null, "ru") && World.fits(6, "au"))
     }
 
+    /**
+     * Read the way the app reads: a page at a time, a door picked from what the page shows. The door that was shown open must be
+     * the one that acts, and the book must never rewrite what it already wrote.
+     */
+    @Test fun thePickedDoorIsTheOneThatActs() {
+        val rnd = Random(7)
+        repeat(400) { n ->
+            val seed = rnd.nextLong()
+            val wish = if (n % 3 == 0) app.lot.domain.Wish(area = "eu") else app.lot.domain.Wish()
+            val picks = mutableListOf<Int>()
+            var shown = 1
+            var before = emptyList<app.lot.domain.Entry>()
+            while (true) {
+                val p = Life.read(content, seed, null, picks, shown, false, wish = wish)
+                assertEquals("life $n rewrote its book", before, p.entries.take(before.size))
+                before = p.entries
+                if (p.end != null) break
+                val ch = p.pending
+                if (ch == null) { shown++; continue }
+                val open = ch.doors.indices.filter { ch.doors[it].open }
+                val door = open.random(rnd)
+                picks += door
+                val after = Life.read(content, seed, null, picks, shown, false, wish = wish)
+                assertTrue("life $n: door $door of ${ch.q.en} did not act", after.pending == null)
+            }
+        }
+    }
+
+    /** Once a life has moved to town (a flat, a hostel, an apprenticeship), lines and forks about fields, harvests and rent stop. */
+    @Test fun townLivesLeaveTheLandBehind() {
+        val sexes = listOf(app.lot.domain.Sex.M, app.lot.domain.Sex.F)
+        fun texts(lines: List<app.lot.domain.Line>) = lines.flatMap { l -> sexes.map { l.text.g(it).ru } }.toSet()
+        val moves = texts(content.lines.filter { "town" in it.need.sets }) +
+            setOf("Уехал в город, в ученики. Мастер бьёт, но кормит.", "Ушла в город, в ученики. Мастер бьёт, но кормит.",
+                "Ушёл в город, в ученики. Мастер бьёт, но кормит.", "Уехал в город. Спишь у дальней родни на полу.", "Уехала в город. Спишь у дальней родни на полу.")
+        val land = texts(content.lines.filter { it.need.holdsOnlyOutsideTown() })
+        val rnd = Random(11)
+        var moved = 0
+        repeat(1500) { n ->
+            val (p, _) = Life.live(content, n.toLong() * 31, null) { ch, _ -> ch.doors.indices.filter { ch.doors[it].open }.random(rnd) }
+            val at = p.entries.indexOfFirst { it.text.ru in moves }
+            if (at < 0) return@repeat
+            moved++
+            val late = p.entries.drop(at + 1).firstOrNull { it.text.ru in land }
+            assertTrue("life $n moved to town at ${p.entries[at].age} and then: ${late?.text?.ru}", late == null)
+        }
+        assertTrue(moved > 20)
+    }
+
     @Test fun genitive() {
         assertEquals("Виджая", Names.genitive("Виджай"))
         assertEquals("Никиты", Names.genitive("Никита"))

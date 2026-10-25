@@ -2,6 +2,7 @@ package app.lot
 
 import android.app.Application
 import android.content.Context
+import androidx.appcompat.app.AppCompatDelegate
 import app.lot.data.DemoSeed
 import app.lot.data.LotDb
 import app.lot.data.Repo
@@ -41,7 +42,8 @@ class LotApp : Application() {
         super.onCreate()
         container = AppContainer(this)
         container.scope.launch {
-            if (BuildConfig.DEMO) DemoSeed.seedIfEmpty(container, ru)
+            val lang = AppCompatDelegate.getApplicationLocales().get(0)?.language ?: resources.configuration.locales[0].language
+            if (BuildConfig.DEMO) DemoSeed.seedIfEmpty(container, lang == "ru")
             container.repo.refresh()
             container.ready.value = true
         }

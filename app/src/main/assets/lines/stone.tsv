@@ -45,8 +45,8 @@ stone	a		{Сломал|Сломала} ногу на охоте. Месяц не
 stone	a	af	Выдавливаешь яд из личинок жука на наконечники. Детей гонишь подальше.	You squeeze poison from beetle grubs onto the arrowheads. You chase the children away.	
 stone	a	au	Сняли кору с большого эвкалипта и сделали лодку. Плывёте бить рыбу.	You strip bark from a big gum tree and make a canoe. You paddle out to spear fish.	
 stone	a	eu	Строите дом из костей мамонта: челюсти внизу, бивни сверху, шкуры поверх.	You build a house of mammoth bones: jaws below, tusks above, hides on top.	
-stone	a	am	Много лун шли по льду и тундре. Впереди земля, где нет людей.	For many moons you walk over ice and tundra. Ahead is a land with no people.	
-stone	a	me	Режешь дикий ячмень серпом с кремнёвыми вкладышами. Зерна хватит до весны.	You cut wild barley with a sickle set with flints. The grain will last till spring.	
+stone	a	am	Много лун шли по льду и тундре. Впереди земля, где нет людей.	For many moons you walk over ice and tundra. Ahead is a land with no people.	!town
+stone	a	me	Режешь дикий ячмень серпом с кремнёвыми вкладышами. Зерна хватит до весны.	You cut wild barley with a sickle set with flints. The grain will last till spring.	!town
 stone	a		Твой малыш пошёл — прямо к огню. Ты {успел|успела} поймать.	Your little one walks for the first time, straight to the fire. You catch it just in time.	kids
 stone	a		Родила у ручья, на корточках. К вечеру уже шла со всеми.	You give birth by a stream, squatting. By evening you walk on with the others.	f kids
 stone	a		Лучший кусок мяса отдаёшь родителям жены. Так положено.	You give the best cut of meat to your wife's parents. That is the custom.	m married
@@ -93,7 +93,7 @@ stone	o	eu	Руки уже не держат резец. Ты показывае
 stone	o		Ты приняла роды почти у всех женщин стоянки. Полрода прошло через твои руки.	You have delivered the babies of nearly every woman in the camp. Half the band has passed through your hands.	f
 stone	o		На переходах ты отстаёшь. Внуки ждут тебя у каждого ручья.	On the march you fall behind. The grandchildren wait for you at every stream.	kids
 stone	o	af	Ты лучше всех понимаешь птицу-медоуказчика. Идёшь за ней медленно, но идёшь.	You understand the honeyguide bird better than anyone. You follow it slowly, but you follow it.	
-stone	o	am	Ты ещё помнишь холодную землю за спиной. Молодые думают, что это сказка.	You still remember the cold land behind you. The young ones think it is a tale.	
+stone	o	am	Ты ещё помнишь холодную землю за спиной. Молодые думают, что это сказка.	You still remember the cold land behind you. The young ones think it is a tale.	!town
 stone	o		Внучка нацепила твоё ожерелье из волчьих зубов и важно ходит по стоянке.	Your granddaughter puts on your wolf-tooth necklace and struts around the camp.	kids
 stone	o		Каждый вечер садишься лицом к закату. Говоришь, что там тебя ждут.	Every evening you sit facing the sunset. You say someone is waiting for you there.	
 stone	x		Пришла засуха. Звери ушли, и вы пошли за ними.	Drought comes. The game leaves, and you follow it.	
@@ -103,69 +103,69 @@ stone	x		Лихорадка прошла по стоянке. Умерли тр�
 stone	x	af	Загорелась степь. Бежали к реке, бросив всё.	The grassland catches fire. You run for the river, leaving everything.	
 stone	x	eu	Пещерный медведь проснулся раньше срока и пришёл к стоянке.	A cave bear wakes too early and comes to the camp.	
 stone	x		Ночью разлилась река и унесла стоянку.	The river floods in the night and carries off the camp.	
-stone	x	au	Море поднялось и залило земли предков. Где были холмы, теперь острова.	The sea rises over the lands of the ancestors. Where there were hills, there are islands now.	
+stone	x	au	Море поднялось и залило земли предков. Где были холмы, теперь острова.	The sea rises over the lands of the ancestors. Where there were hills, there are islands now.	!town
 stone	x	am	Большой зверь пропал. Охотники ходят неделями и возвращаются пустыми.	The great beasts are gone. The hunters walk for weeks and come back empty-handed.	
 stone	x		С неба падает пепел, как снег. Трава почернела, вода горчит.	Ash falls from the sky like snow. The grass turns black, the water tastes bitter.	
-stone	c		Тебе велели сторожить вяленое мясо от собак. Ты {уснул|уснула}, а собаки — нет.	You are told to guard the dried meat from the dogs. You fall asleep; the dogs do not.
-stone	c		Дед учит тебя ходить по следу. Сломанная травинка ещё мокрая, говорит он: зверь рядом.	Grandfather teaches you to track. This broken grass is still wet, he says: the beast is close.
-stone	c	me	Ваш дом наполовину в земле, круглый, из камня. Зимой в нём тепло, летом прохладно.	Your house is half sunk in the ground, round, of stone. Warm in winter, cool in summer.
-stone	c	me	Щенок спит с тобой под одной шкурой. Мать ворчит, но не гонит.	A puppy sleeps under the same hide as you. Your mother grumbles but doesn't chase it out.
-stone	c	me	Тебе доверили каменную ступку. Толчёшь жёлуди, пока руки не отвалятся.	You are trusted with the stone mortar. You pound acorns until your arms nearly drop off.
-stone	c	in	Обезьяны утащили у тебя связку плодов. Ты {гнался|гналась} за ними до самого обрыва.	Monkeys steal your bunch of fruit. You chase them all the way to the cliff edge.
-stone	c	in	На стене под скалой нарисованы люди в пляске. Ты {пытался|пыталась} встать так же, как они.	On the wall of the rock shelter people are painted dancing. You try to stand the way they stand.
-stone	c	in	Павлин раскрыл хвост прямо у стоянки. Ты {замер|замерла} и {забыл|забыла} дышать.	A peacock spreads its tail right by the camp. You freeze and forget to breathe.
-stone	c	am	Дед показал, как делать наконечник с желобком посередине. У тебя он раскололся пополам.	Grandfather shows you how to make a point with a groove down the middle. Yours splits in two.
-stone	c	am	Медведь ловит рыбу на перекате. Вы смотрите из кустов и не дышите.	A bear is fishing on the riffle. You watch from the bushes, holding your breath.
-stone	c	am	Тебе сшили первую обувь из бизоньей шкуры. Весь день {ходил|ходила} и {смотрел|смотрела} на ноги.	They sew you your first shoes from bison hide. All day you walk around looking at your feet.
-stone	c	cn	Мать лепит из глины горшок и ставит его в костёр. Вечером в нём булькает похлёбка из улиток.	Your mother shapes a pot from clay and sets it in the fire. In the evening snail broth bubbles in it.
-stone	c	cn	Бамбуковая роща шумит всю ночь. Ты {думал|думала}, это ходят духи.	The bamboo grove rustles all night. You think it is spirits walking.
-stone	c	au	Дядя учит тебя бросать бумеранг. Тот возвращается — прямо тебе в лоб.	Your uncle teaches you to throw the boomerang. It comes back, straight into your forehead.
-stone	y		Старый охотник отдал тебе свой нож. Сказал: у меня будет новый, а у тебя это первый.	The old hunter gives you his knife. He says: I'll get a new one, but this is your first.
-stone	y		Всю ночь {просидел|просидела} {один|одна} в лесу у огня. Утром тебе дали новое имя.	All night you sit alone in the forest by a fire. In the morning you are given a new name.
-stone	y	af	На озере учишься бить рыбу гарпуном с костяными зубцами. Большой окунь тащит тебя в воду.	On the lake you learn to spear fish with a bone-barbed harpoon. A big perch drags you into the water.
-stone	y	cn	Дед учит тебя точить топор о мокрый песчаник. День за днём, пока лезвие не заблестит.	Grandfather teaches you to grind an axe on wet sandstone. Day after day, until the edge shines.
-stone	y	am	В лодке из шкур {плыл|плыла} вдоль берега. На камнях ревут котики, под водой лес из водорослей.	In a hide boat you paddle along the coast. Seals roar on the rocks, a forest of kelp below.
-stone	y	me	Тебя взяли на праздник к камням на холме. Там столько людей, сколько ты не {видел|видела} за всю жизнь.	They take you to the feast at the stones on the hill. There are more people there than you have seen in your life.
-stone	y	eu	На осенней переправе ты впервые {стоял|стояла} в реке с копьём. Олени шли так близко, что брызги летели в лицо.	At the autumn crossing you stand in the river with a spear for the first time. The deer pass so close the spray hits your face.
-stone	y	in	Тебе доверили лезть за мёдом на скалу. Висишь на верёвке из лиан, внизу ущелье.	You are trusted to climb the cliff for honey. You hang on a vine rope, the gorge below.
-stone	y	au	Старшие увели тебя на много дней. {Вернулся|Вернулась} с новым шрамом и новыми песнями.	The elders take you away for many days. You come back with a new scar and new songs.
+stone	c		Тебе велели сторожить вяленое мясо от собак. Ты {уснул|уснула}, а собаки — нет.	You are told to guard the dried meat from the dogs. You fall asleep; the dogs do not.	
+stone	c		Дед учит тебя ходить по следу. Сломанная травинка ещё мокрая, говорит он: зверь рядом.	Grandfather teaches you to track. This broken grass is still wet, he says: the beast is close.	
+stone	c	me	Ваш дом наполовину в земле, круглый, из камня. Зимой в нём тепло, летом прохладно.	Your house is half sunk in the ground, round, of stone. Warm in winter, cool in summer.	
+stone	c	me	Щенок спит с тобой под одной шкурой. Мать ворчит, но не гонит.	A puppy sleeps under the same hide as you. Your mother grumbles but doesn't chase it out.	
+stone	c	me	Тебе доверили каменную ступку. Толчёшь жёлуди, пока руки не отвалятся.	You are trusted with the stone mortar. You pound acorns until your arms nearly drop off.	
+stone	c	in	Обезьяны утащили у тебя связку плодов. Ты {гнался|гналась} за ними до самого обрыва.	Monkeys steal your bunch of fruit. You chase them all the way to the cliff edge.	
+stone	c	in	На стене под скалой нарисованы люди в пляске. Ты {пытался|пыталась} встать так же, как они.	On the wall of the rock shelter people are painted dancing. You try to stand the way they stand.	
+stone	c	in	Павлин раскрыл хвост прямо у стоянки. Ты {замер|замерла} и {забыл|забыла} дышать.	A peacock spreads its tail right by the camp. You freeze and forget to breathe.	
+stone	c	am	Дед показал, как делать наконечник с желобком посередине. У тебя он раскололся пополам.	Grandfather shows you how to make a point with a groove down the middle. Yours splits in two.	
+stone	c	am	Медведь ловит рыбу на перекате. Вы смотрите из кустов и не дышите.	A bear is fishing on the riffle. You watch from the bushes, holding your breath.	
+stone	c	am	Тебе сшили первую обувь из бизоньей шкуры. Весь день {ходил|ходила} и {смотрел|смотрела} на ноги.	They sew you your first shoes from bison hide. All day you walk around looking at your feet.	
+stone	c	cn	Мать лепит из глины горшок и ставит его в костёр. Вечером в нём булькает похлёбка из улиток.	Your mother shapes a pot from clay and sets it in the fire. In the evening snail broth bubbles in it.	
+stone	c	cn	Бамбуковая роща шумит всю ночь. Ты {думал|думала}, это ходят духи.	The bamboo grove rustles all night. You think it is spirits walking.	
+stone	c	au	Дядя учит тебя бросать бумеранг. Тот возвращается — прямо тебе в лоб.	Your uncle teaches you to throw the boomerang. It comes back, straight into your forehead.	
+stone	y		Старый охотник отдал тебе свой нож. Сказал: у меня будет новый, а у тебя это первый.	The old hunter gives you his knife. He says: I'll get a new one, but this is your first.	
+stone	y		Всю ночь {просидел|просидела} {один|одна} в лесу у огня. Утром тебе дали новое имя.	All night you sit alone in the forest by a fire. In the morning you are given a new name.	
+stone	y	af	На озере учишься бить рыбу гарпуном с костяными зубцами. Большой окунь тащит тебя в воду.	On the lake you learn to spear fish with a bone-barbed harpoon. A big perch drags you into the water.	
+stone	y	cn	Дед учит тебя точить топор о мокрый песчаник. День за днём, пока лезвие не заблестит.	Grandfather teaches you to grind an axe on wet sandstone. Day after day, until the edge shines.	
+stone	y	am	В лодке из шкур {плыл|плыла} вдоль берега. На камнях ревут котики, под водой лес из водорослей.	In a hide boat you paddle along the coast. Seals roar on the rocks, a forest of kelp below.	
+stone	y	me	Тебя взяли на праздник к камням на холме. Там столько людей, сколько ты не {видел|видела} за всю жизнь.	They take you to the feast at the stones on the hill. There are more people there than you have seen in your life.	
+stone	y	eu	На осенней переправе ты впервые {стоял|стояла} в реке с копьём. Олени шли так близко, что брызги летели в лицо.	At the autumn crossing you stand in the river with a spear for the first time. The deer pass so close the spray hits your face.	
+stone	y	in	Тебе доверили лезть за мёдом на скалу. Висишь на верёвке из лиан, внизу ущелье.	You are trusted to climb the cliff for honey. You hang on a vine rope, the gorge below.	
+stone	y	au	Старшие увели тебя на много дней. {Вернулся|Вернулась} с новым шрамом и новыми песнями.	The elders take you away for many days. You come back with a new scar and new songs.	
 stone	y		Тебе впервые дали копьеметалку. Твоё копьё улетело дальше отцовского.	For the first time you are given the spear-thrower. Your spear flies further than your father's.	m
-stone	a		К огню вышел чужак — один, без копья. Его накормили, а утром он ушёл.	A stranger comes to the fire alone, without a spear. He is fed, and in the morning he goes.
-stone	a	af	Нанизываешь бусы из скорлупы страусиных яиц. Нитку отдашь другу из дальнего рода: он вспомнит о тебе в голодный год.	You string beads of ostrich eggshell. The string goes to a friend in a far band, who will remember you in a hungry year.
-stone	a	me	Ставите новый дом рядом со старым. Камни для стен всё лето {носил|носила} с реки.	You build a new house beside the old one. All summer you carried stones for the walls up from the river.
-stone	a	eu	Режешь из кости гарпуны с зубцами. Весной в реку придёт лосось.	You carve barbed harpoons from bone. In spring the salmon will come up the river.
-stone	a	in	На рассвете собираешь опавшие цветы махуа. Они сладкие, их сушат впрок.	At dawn you gather fallen mahua flowers. They are sweet, and are dried to keep.
-stone	a	cn	Собираешь дикое просо по краю степи. Зёрна мелкие, зато их много.	You gather wild millet at the edge of the steppe. The grains are small, but there are many.
-stone	a	cn	Тянешь из реки сеть с каменными грузилами. Её всю зиму плели женщины рода.	You haul a net weighted with stones out of the river. The women of the band wove it all winter.
-stone	a	am	Копаешь луковицы камаса на сыром лугу. Потом их два дня томят в земляной яме.	You dig camas bulbs in the wet meadow. Then they are slow-baked for two days in an earth pit.
+stone	a		К огню вышел чужак — один, без копья. Его накормили, а утром он ушёл.	A stranger comes to the fire alone, without a spear. He is fed, and in the morning he goes.	
+stone	a	af	Нанизываешь бусы из скорлупы страусиных яиц. Нитку отдашь другу из дальнего рода: он вспомнит о тебе в голодный год.	You string beads of ostrich eggshell. The string goes to a friend in a far band, who will remember you in a hungry year.	
+stone	a	me	Ставите новый дом рядом со старым. Камни для стен всё лето {носил|носила} с реки.	You build a new house beside the old one. All summer you carried stones for the walls up from the river.	
+stone	a	eu	Режешь из кости гарпуны с зубцами. Весной в реку придёт лосось.	You carve barbed harpoons from bone. In spring the salmon will come up the river.	
+stone	a	in	На рассвете собираешь опавшие цветы махуа. Они сладкие, их сушат впрок.	At dawn you gather fallen mahua flowers. They are sweet, and are dried to keep.	
+stone	a	cn	Собираешь дикое просо по краю степи. Зёрна мелкие, зато их много.	You gather wild millet at the edge of the steppe. The grains are small, but there are many.	
+stone	a	cn	Тянешь из реки сеть с каменными грузилами. Её всю зиму плели женщины рода.	You haul a net weighted with stones out of the river. The women of the band wove it all winter.	
+stone	a	am	Копаешь луковицы камаса на сыром лугу. Потом их два дня томят в земляной яме.	You dig camas bulbs in the wet meadow. Then they are slow-baked for two days in an earth pit.	!town
 stone	a		Каждую ночь рассказываешь детям одну и ту же сказку. Пропустишь слово — поправят.	Every night you tell the children the same tale. Skip a word and they correct you.	kids
 stone	a		Женщины рода ушли вместе за кореньями на три дня. Мужчин оставили с детьми.	The women of the band go off together for roots for three days. The men are left with the children.	f
-stone	j		Рассказываешь у огня, как прошла охота, — и все смеются в нужных местах.	You tell at the fire how the hunt went, and everyone laughs in the right places.
-stone	j		{Проснулся|Проснулась} до рассвета: все спят, огонь ещё тлеет, и тебе тепло.	You wake before dawn: everyone asleep, the fire still glowing, and you are warm.
-stone	j	af	Первый дождь после сухой поры. Дети пляшут в лужах, взрослые тоже.	The first rain after the dry season. The children dance in the puddles, and so do the grown-ups.
-stone	j	me	Весной склон за стоянкой красный от маков. Ты {пролежал|пролежала} в них полдня.	In spring the slope behind the camp is red with poppies. You lie among them half the day.
-stone	j	in	В жару весь род лежит в реке, только головы торчат. Буйволы рядом делают то же самое.	In the heat the whole band lies in the river, only heads showing. The buffalo nearby do the same.
-stone	j	cn	Осенью в горах поспели дикие каштаны. Пекли их на углях всю ночь.	In autumn the wild chestnuts ripen in the hills. You roast them on the coals all night.
-stone	j	am	Перезимовали в землянке. Весной вышли — а вся долина гудит от гусей.	You winter in the earth lodge. In spring you come out, and the whole valley is loud with geese.
-stone	j	eu	Зимой {катался|каталась} с горы на шкуре прямо на речной лёд, как ребёнок.	In winter you slide down the hill on a hide right onto the river ice, like a child.
-stone	j	au	Поспели орехи бунья. Со всех сторон сходятся роды, и пир идёт целую луну.	The bunya nuts are ripe. Bands come in from every side, and the feast lasts a whole moon.
+stone	j		Рассказываешь у огня, как прошла охота, — и все смеются в нужных местах.	You tell at the fire how the hunt went, and everyone laughs in the right places.	
+stone	j		{Проснулся|Проснулась} до рассвета: все спят, огонь ещё тлеет, и тебе тепло.	You wake before dawn: everyone asleep, the fire still glowing, and you are warm.	
+stone	j	af	Первый дождь после сухой поры. Дети пляшут в лужах, взрослые тоже.	The first rain after the dry season. The children dance in the puddles, and so do the grown-ups.	
+stone	j	me	Весной склон за стоянкой красный от маков. Ты {пролежал|пролежала} в них полдня.	In spring the slope behind the camp is red with poppies. You lie among them half the day.	
+stone	j	in	В жару весь род лежит в реке, только головы торчат. Буйволы рядом делают то же самое.	In the heat the whole band lies in the river, only heads showing. The buffalo nearby do the same.	
+stone	j	cn	Осенью в горах поспели дикие каштаны. Пекли их на углях всю ночь.	In autumn the wild chestnuts ripen in the hills. You roast them on the coals all night.	
+stone	j	am	Перезимовали в землянке. Весной вышли — а вся долина гудит от гусей.	You winter in the earth lodge. In spring you come out, and the whole valley is loud with geese.	!town
+stone	j	eu	Зимой {катался|каталась} с горы на шкуре прямо на речной лёд, как ребёнок.	In winter you slide down the hill on a hide right onto the river ice, like a child.	
+stone	j	au	Поспели орехи бунья. Со всех сторон сходятся роды, и пир идёт целую луну.	The bunya nuts are ripe. Bands come in from every side, and the feast lasts a whole moon.	
 stone	j		Вы с {женой|мужем} ушли от стоянки на целый день. Вернулись с пустыми руками и довольные.	You and your {wife|husband} slip away from the camp for a whole day. You come back empty-handed and pleased.	married
-stone	o		Глаза уже плохо видят. Зато ты узнаёшь каждого в роду по шагам.	Your eyes are failing. But you know everyone in the band by their footsteps.
-stone	o		Молодые поют твою любимую песню на новый лад. Ты {ворчал|ворчала}, а потом {стал|стала} подпевать.	The young ones sing your favourite song to a new tune. You grumble, and then you sing along.
-stone	o		За водой ты больше не ходишь. Её приносят тебе {первому|первой} — так положено старшим.	You no longer fetch water. It is brought to you first: that is due to the eldest.
-stone	o	me	Тебе выкопали место под полом дома. Ты {попросил|попросила}: положите со мной собаку.	A place is dug for you under the floor of the house. You ask them to lay the dog with you.
-stone	o	eu	Зимой остаёшься на стоянке с малышами, пока все на охоте. Шьёшь и рассказываешь, как когда-то ходили на мамонта.	In winter you stay in camp with the little ones while everyone hunts. You sew and tell how people once went after mammoth.
-stone	o	in	Подновляешь под скалой старый рисунок. Краска облезла, а зверь должен жить.	Under the rock you touch up an old painting. The paint has flaked, but the beast must live.
-stone	o	cn	Только ты знаешь, где в горах растёт трава от жара. Молодые ходят за тобой и запоминают.	Only you know where in the hills the herb against fever grows. The young follow you and learn.
-stone	o	af	Сидишь в тени и сверлишь бусины из скорлупы. Пальцы медленные, но ни одна не треснула.	You sit in the shade drilling eggshell beads. Your fingers are slow, but not one has cracked.
-stone	o	am	Ты ещё {застал|застала} мамонтов в этих местах. Молодые не верят, что зверь бывает выше дерева.	You still saw mammoths in these parts. The young don't believe a beast can be taller than a tree.
+stone	o		Глаза уже плохо видят. Зато ты узнаёшь каждого в роду по шагам.	Your eyes are failing. But you know everyone in the band by their footsteps.	
+stone	o		Молодые поют твою любимую песню на новый лад. Ты {ворчал|ворчала}, а потом {стал|стала} подпевать.	The young ones sing your favourite song to a new tune. You grumble, and then you sing along.	
+stone	o		За водой ты больше не ходишь. Её приносят тебе {первому|первой} — так положено старшим.	You no longer fetch water. It is brought to you first: that is due to the eldest.	
+stone	o	me	Тебе выкопали место под полом дома. Ты {попросил|попросила}: положите со мной собаку.	A place is dug for you under the floor of the house. You ask them to lay the dog with you.	
+stone	o	eu	Зимой остаёшься на стоянке с малышами, пока все на охоте. Шьёшь и рассказываешь, как когда-то ходили на мамонта.	In winter you stay in camp with the little ones while everyone hunts. You sew and tell how people once went after mammoth.	
+stone	o	in	Подновляешь под скалой старый рисунок. Краска облезла, а зверь должен жить.	Under the rock you touch up an old painting. The paint has flaked, but the beast must live.	
+stone	o	cn	Только ты знаешь, где в горах растёт трава от жара. Молодые ходят за тобой и запоминают.	Only you know where in the hills the herb against fever grows. The young follow you and learn.	
+stone	o	af	Сидишь в тени и сверлишь бусины из скорлупы. Пальцы медленные, но ни одна не треснула.	You sit in the shade drilling eggshell beads. Your fingers are slow, but not one has cracked.	
+stone	o	am	Ты ещё {застал|застала} мамонтов в этих местах. Молодые не верят, что зверь бывает выше дерева.	You still saw mammoths in these parts. The young don't believe a beast can be taller than a tree.	
 stone	o		Правнук спит у тебя на животе. Ты {дожил|дожила} до этого — немногие доживают.	Your great-grandchild sleeps on your belly. You have lived to see this; few do.	kids
-stone	x		Охотники не вернулись. Ждали три дня, потом пошли искать.	The hunters do not come back. You wait three days, then go looking.
-stone	x	af	Высохло озеро. Рыба лежит в грязи, а пить нечего.	The lake dries up. Fish lie in the mud, and there is nothing to drink.
-stone	x	me	Вернулись холода. Дикое зерно не родится, газели ушли.	The cold has come back. The wild grain fails, and the gazelles are gone.
-stone	x	me	Соседний род пришёл ночью за вашими запасами зерна.	The next band comes by night for your stores of grain.
-stone	x	in	Вокруг стоянки ходит тигр-людоед. Уже унёс двоих.	A man-eating tiger circles the camp. It has taken two already.
-stone	x	in	Дожди не пришли. Ягодник засох, ручьи стоят пустые.	The rains do not come. The berry bushes wither, the streams lie empty.
-stone	x	cn	Река вышла из берегов и стоит над долиной целую луну. Живёте на холме и едите кору.	The river breaks its banks and lies over the valley for a whole moon. You live on a hill and eat bark.
-stone	x	cn	Земля затряслась, и пещера, где вы зимовали, обрушилась.	The earth shakes, and the cave where you wintered falls in.
-stone	x	au	Лето без дождя. Роды сходятся к последнему колодцу и ссорятся из-за воды.	A summer without rain. The bands crowd round the last waterhole and quarrel over the water.
+stone	x		Охотники не вернулись. Ждали три дня, потом пошли искать.	The hunters do not come back. You wait three days, then go looking.	
+stone	x	af	Высохло озеро. Рыба лежит в грязи, а пить нечего.	The lake dries up. Fish lie in the mud, and there is nothing to drink.	
+stone	x	me	Вернулись холода. Дикое зерно не родится, газели ушли.	The cold has come back. The wild grain fails, and the gazelles are gone.	
+stone	x	me	Соседний род пришёл ночью за вашими запасами зерна.	The next band comes by night for your stores of grain.	
+stone	x	in	Вокруг стоянки ходит тигр-людоед. Уже унёс двоих.	A man-eating tiger circles the camp. It has taken two already.	
+stone	x	in	Дожди не пришли. Ягодник засох, ручьи стоят пустые.	The rains do not come. The berry bushes wither, the streams lie empty.	
+stone	x	cn	Река вышла из берегов и стоит над долиной целую луну. Живёте на холме и едите кору.	The river breaks its banks and lies over the valley for a whole moon. You live on a hill and eat bark.	
+stone	x	cn	Земля затряслась, и пещера, где вы зимовали, обрушилась.	The earth shakes, and the cave where you wintered falls in.	!town
+stone	x	au	Лето без дождя. Роды сходятся к последнему колодцу и ссорятся из-за воды.	A summer without rain. The bands crowd round the last waterhole and quarrel over the water.	

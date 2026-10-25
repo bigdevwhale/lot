@@ -6,6 +6,22 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.1.1] - 2026-10-25
+
+### Fixed
+- Entries written on one page now appear one after another, not all at once.
+- The screens no longer scroll under the status bar.
+- A fork ignores taps for a moment after it appears, so a quick second tap on "Turn the page" can't pick its first door.
+- A life that has moved to town no longer gets lines and forks about fields, harvests, cattle or rent: lines about a new flat or a factory hostel mark the life as a town life.
+- A father no longer shares his child's name.
+- The demo writes its notebook answers in the app's language.
+
+<!-- tg
+«Жребий» 1.1.1: записи в книге теперь пишутся по очереди, а экран больше не заезжает под шторку
+Кто переехал в город, тому больше не выпадают поле, урожай и аренда участка
+Развилку нельзя выбрать случайным вторым касанием «Дальше»
+-->
+
 ## [1.1.0] - 2026-10-25
 
 ### Added

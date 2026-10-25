@@ -58,7 +58,7 @@ def lines(group):
             if t not in TAGS:
                 err(w, f"tag {t!r}")
         for t in need.split():
-            if t not in NEED and not re.match(r"^(after|before):-?\d+$", t):
+            if t.lstrip("!+") not in NEED and not re.match(r"^(after|before):-?\d+$", t):
                 err(w, f"need {t!r}")
         text(w, ru, "ru"); text(w, en, "en")
         if ru in seen:
@@ -141,7 +141,7 @@ def dilemmas():
             if t != "*" and t not in TAGS:
                 err(w, f"tag {t!r}")
         for t in head.get("need", "").split():
-            if t not in NEED and not re.match(r"^(after|before):-?\d+$", t):
+            if t.lstrip("!") not in NEED and not re.match(r"^(after|before):-?\d+$", t):
                 err(w, f"need {t!r}")
         if not re.match(r"^\d+-\d+$", head.get("ages", "")):
             err(w, "ages must look like 20-55")

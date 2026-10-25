@@ -144,7 +144,7 @@ fun Field(value: String, onChange: (String) -> Unit, hint: String, modifier: Mod
 /** The title of a tab. */
 @Composable
 fun TopBar(title: String, sub: String? = null, end: @Composable RowScope.() -> Unit = {}) {
-    Column(Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 10.dp, top = 14.dp, bottom = 4.dp)) {
+    Column(Modifier.fillMaxWidth().padding(start = 18.dp, end = 10.dp, top = 14.dp, bottom = 4.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(title, style = T.Title, modifier = Modifier.weight(1f))
             end()

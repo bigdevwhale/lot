@@ -131,14 +131,22 @@ fun Register(name: Tx, year: Int, endAge: Int?, region: Tx, gen: Int, witness: B
             }
         }
         Rule(Modifier.padding(top = 6.dp, bottom = 4.dp), C.ink2)
-        for ((i, e) in entries.withIndex()) EntryRow(e, w, fresh = i >= dry && !BuildConfig.SHOTS, delayIndex = (i - dry).coerceAtLeast(0))
+        // The pen finishes one entry before it starts the next.
+        var wait = 0L
+        for ((i, e) in entries.withIndex()) {
+            val fresh = i >= dry && !BuildConfig.SHOTS
+            EntryRow(e, w, fresh, wait)
+            if (fresh) wait += inkMs(e, w) + 150
+        }
     }
 }
 
+private fun inkMs(e: Entry, w: Words) = 900 + e.text.of(w.ru).length * 12
+
 @Composable
-private fun EntryRow(e: Entry, w: Words, fresh: Boolean, delayIndex: Int) {
+private fun EntryRow(e: Entry, w: Words, fresh: Boolean, wait: Long) {
     val ink = remember(e) { Animatable(if (fresh) 0f else 1f) }
-    LaunchedEffect(e) { if (fresh) { kotlinx.coroutines.delay(delayIndex * 500L); ink.animateTo(1f, tween(900 + e.text.of(w.ru).length * 12, easing = LinearEasing)) } }
+    LaunchedEffect(e) { if (fresh) { kotlinx.coroutines.delay(wait); ink.animateTo(1f, tween(inkMs(e, w), easing = LinearEasing)) } }
     Column(Modifier.fillMaxWidth()) {
         if (e.mark == Mark.DEATH) Rule(Modifier.padding(top = 6.dp, bottom = 2.dp), C.ink2)
         Row(Modifier.fillMaxWidth().padding(vertical = 3.dp)) {
@@ -174,6 +182,9 @@ private fun EntryRow(e: Entry, w: Words, fresh: Boolean, delayIndex: Int) {
 @Composable
 fun ChoiceCard(ch: Choice, w: Words, onPick: (Int) -> Unit) {
     var picked by remember(ch) { mutableStateOf(false) }
+    // A fork appears where the "turn the page" button just was: a second quick tap must not pick its first door.
+    var armed by remember(ch) { mutableStateOf(false) }
+    LaunchedEffect(ch) { kotlinx.coroutines.delay(700); armed = true }
     Column(Modifier.padding(horizontal = 12.dp, vertical = 8.dp).fillMaxWidth().clip(RoundedCornerShape(4.dp)).background(C.card).border(1.dp, C.ink2, RoundedCornerShape(4.dp)).padding(12.dp)) {
         Text(w.x(ch.q), style = T.Heading)
         Gap(4)
@@ -181,7 +192,7 @@ fun ChoiceCard(ch: Choice, w: Words, onPick: (Int) -> Unit) {
             val shape = RoundedCornerShape(3.dp)
             Column(
                 Modifier.padding(vertical = 4.dp).fillMaxWidth().clip(shape)
-                    .then(if (d.open) Modifier.background(C.light).border(1.dp, C.line, shape).clickable(enabled = !picked) { picked = true; onPick(i) }
+                    .then(if (d.open) Modifier.background(C.light).border(1.dp, C.line, shape).clickable(enabled = armed && !picked) { picked = true; onPick(i) }
                     else Modifier.background(C.shut).drawBehind {
                         val step = 9.dp.toPx()
                         var x = -size.height

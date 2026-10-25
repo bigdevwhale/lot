@@ -19,7 +19,7 @@ mod	c	af sea in	Малярия. Мать не отходит от тебя не�
 mod	c	latam	Футбол в переулке фавелы. Мяч скатан из носков.	Football in a favela alley. The ball is rolled from socks.	r0
 mod	c	latam	Вечером вся семья смотрит теленовеллу. Тебе велят молчать.	In the evening the whole family watches the telenovela. You are told to hush.	
 mod	c	ru	Лето у бабушки на даче. Клубнику ешь прямо с грядки.	Summer at grandmother's dacha. You eat strawberries straight from the bed.	
-mod	c	ru	В коммуналке у каждой семьи свой выключатель в уборной.	In the kommunalka every family has its own light switch for the toilet.	
+mod	c	ru	В коммуналке у каждой семьи свой выключатель в уборной.	In the kommunalka every family has its own light switch for the toilet.	+town
 mod	c	jp	Жёлтая шапочка, тяжёлый ранец. До школы идёшь {один|одна}.	A yellow cap, a heavy satchel. You walk to school alone.	
 mod	c	me	Летом спите на крыше. Вечером мать поливает её водой, чтобы остыла.	In summer you sleep on the roof. In the evening your mother wets it to cool it down.	
 mod	c	us	Жёлтый школьный автобус. Место у окна — твоё.	The yellow school bus. The window seat is yours.	
@@ -44,7 +44,7 @@ mod	y	af	Едешь в город на матату. Двадцать челов
 mod	y	latam	Тебе пятнадцать. Белое платье, вальс с отцом, вся улица в гостях.	Your quinceañera. A white dress, a waltz with your father, the whole street invited.	f
 mod	y	latam	Играешь за районную команду. Говорят, на тебя приезжал смотреть тренер из клуба.	You play for the neighbourhood team. They say a club coach came to watch you.	m
 mod	y	ru	Выпускной. Всем классом встречаете рассвет на набережной.	Graduation night. The whole class watches the sunrise on the embankment.	
-mod	y	ru	{Поступил|Поступила} в техникум. Общежитие, одна плитка на этаж.	You get into technical college. A hostel, one hotplate per floor.	
+mod	y	ru	{Поступил|Поступила} в техникум. Общежитие, одна плитка на этаж.	You get into technical college. A hostel, one hotplate per floor.	+town
 mod	y	jp	После уроков — курсы. Домой едешь последним поездом.	After school, cram school. You go home on the last train.	lit
 mod	y	sea	Работаешь на швейной фабрике. Половину денег шлёшь домой.	You work at a garment factory. You send half your pay home.	town
 mod	y	me	Летом помогаешь дяде в лавке. Учишься торговаться.	In summer you help your uncle in his shop. You learn to haggle.	
@@ -61,16 +61,16 @@ mod	a		Отправляешь деньги родителям в деревню.
 mod	a		{Купил|Купила} холодильник. Мать открывает его, просто чтобы посмотреть.	You buy a fridge. Your mother opens it just to look.	
 mod	a		Ребёнок поступил в университет — первый в семье.	Your child gets into university, the first in the family.	kids
 mod	a		Работаешь на двух работах. Детей видишь по воскресеньям.	You work two jobs. You see the children on Sundays.	kids
-mod	a	cn	Данвэй дал квартиру: одна комната, кухня в коридоре на три семьи.	The danwei gives you a flat: one room, a kitchen in the corridor shared by three families.	
+mod	a	cn	Данвэй дал квартиру: одна комната, кухня в коридоре на три семьи.	The danwei gives you a flat: one room, a kitchen in the corridor shared by three families.	+town
 mod	a	cn	Едешь домой на Новый год. Сорок часов стоя в поезде.	You go home for the New Year. Forty hours standing on the train.	town
-mod	a	cn	Копишь сыну на квартиру. Без квартиры невесты не найти.	You save for a flat for your son. Without a flat there will be no bride.	kids
+mod	a	cn	Копишь сыну на квартиру. Без квартиры невесты не найти.	You save for a flat for your son. Without a flat there will be no bride.	kids +town
 mod	a	cn	Работаешь на фабрике в большом городе. Ребёнка растят дед с бабушкой.	You work at a factory in a big city. Grandparents raise your child.	kids town
 mod	a	in	В доме свёкра встаёшь первой, ложишься последней.	In your father-in-law's house you are the first up and the last to bed.	f married
-mod	a	in	Пришёл муссон — сеешь рис. Опоздаешь на неделю, пропадёт год.	The monsoon comes and you sow the rice. A week late and the year is lost.	r1
+mod	a	in	Пришёл муссон — сеешь рис. Опоздаешь на неделю, пропадёт год.	The monsoon comes and you sow the rice. A week late and the year is lost.	r1 !town
 mod	a	in	На работу ездишь пригородным поездом. Висишь на подножке.	You commute on the suburban train, hanging from the footboard.	town
 mod	a	in	{Уехал|Уехала} на стройку в Залив. Паспорт забрал хозяин.	You go to a building site in the Gulf. The boss keeps your passport.	r0 r1
 mod	a	sea	Возишь людей на мотобайке. Знаешь каждый переулок.	You carry passengers on your motorbike. You know every alley.	m r0 r1
-mod	a	sea	Жатва риса. Всей деревней, по очереди на каждом поле.	The rice harvest. The whole village, field by field in turn.	r1
+mod	a	sea	Жатва риса. Всей деревней, по очереди на каждом поле.	The rice harvest. The whole village, field by field in turn.	r1 !town
 mod	a	sea in	Работаешь домработницей за границей. Своих детей видишь раз в два года.	You work as a maid abroad. You see your own children every two years.	f kids
 mod	a	af	В деревне пробурили скважину. За водой к реке больше не ходят.	A borehole is drilled in the village. Nobody walks to the river for water any more.	
 mod	a	af	Торгуешь на рынке: помидоры, лук, спички. Место занимаешь затемно.	You sell at the market: tomatoes, onions, matches. You claim your spot before dawn.	f
@@ -80,7 +80,7 @@ mod	a	latam	Брат в Штатах прислал денег. На них пе
 mod	a	latam	До работы два часа на автобусе. Спишь стоя.	Two hours by bus to work. You sleep standing up.	town
 mod	a	ru	Очередь за колбасой. Берёшь и на соседку.	A queue for sausage. You buy some for your neighbour too.	
 mod	a	ru	Выходные на даче: картошка, баня, шашлык.	Weekends at the dacha: potatoes, the banya, shashlik.	
-mod	a	ru	{Получил|Получила} квартиру от завода. Ждали двенадцать лет.	The factory gives you a flat. You waited twelve years.	
+mod	a	ru	{Получил|Получила} квартиру от завода. Ждали двенадцать лет.	The factory gives you a flat. You waited twelve years.	+town
 mod	a	jp	Последняя электричка, галстук ослаблен. Начальник опять звал выпить.	The last train, tie loosened. The boss asked you out drinking again.	m r2
 mod	a	jp	Новогодние дни у родни мужа. Ты на кухне с утра до ночи.	New Year at your husband's family. You are in the kitchen from dawn to night.	f married
 mod	a	me	Рамадан. Вечером вся семья ждёт выстрела пушки, чтобы сесть за стол.	Ramadan. In the evening the whole family waits for the cannon to sit down to eat.	
@@ -140,7 +140,7 @@ mod	o	ru	Варишь варенье. Банок больше, чем внуко
 mod	o	jp	Утренняя гимнастика по радио, как в детстве.	Morning exercises to the radio, just like in childhood.	
 mod	o	sea	Сидишь у дома и смотришь, как правнуки гоняют на мопедах.	You sit outside the house watching the great-grandchildren race on mopeds.	kids
 mod	o	me	Кофе с соседями после пятничной молитвы.	Coffee with the neighbours after Friday prayers.	m
-mod	o	us	{Переехал|Переехала} во Флориду. Гольф по вторникам.	You move to Florida. Golf on Tuesdays.	r2 r3
+mod	o	us	{Переехал|Переехала} во Флориду. Гольф по вторникам.	You move to Florida. Golf on Tuesdays.	r2 r3 +town
 mod	o	eu	Каждый день забираешь внуков из школы.	Every day you pick the grandchildren up from school.	kids
 mod	o		Плохо слышишь. Телевизор на всю громкость.	Your hearing fails. The television at full volume.	
 mod	o		{Пережил|Пережила} всех друзей детства.	You outlive all your childhood friends.	
@@ -148,14 +148,14 @@ mod	o		Подписываешь старые фотографии, чтобы в
 mod	o		На рынок ходишь не за покупками, а поговорить.	You go to the market not to buy, but to talk.	
 mod	o		{Похоронил|Похоронила} {жену|мужа}. По привычке ставишь на стол две чашки.	You bury your {wife|husband}. Out of habit you set out two cups.	married
 mod	x		Завод закрыли. Ты {остался|осталась} без работы.	The factory shuts. You are out of work.	r1 r2
-mod	x		Засуха. Урожай сгорел на корню.	Drought. The harvest withers in the field.	r1
+mod	x		Засуха. Урожай сгорел на корню.	Drought. The harvest withers in the field.	r1 !town
 mod	x		Наводнение. Вода стояла в доме по пояс.	A flood. Water waist-high in the house.	
 mod	x		Война докатилась до вашего города.	The war reaches your town.	
 mod	x	cn jp me latam	Землетрясение. Ночь под открытым небом, дом трещит.	An earthquake. A night under the open sky while the house groans.	
 mod	x	af	Эпидемия. Хоронят каждый день.	An epidemic. Funerals every day.	
 mod	x	ru latam af	Деньги обесценились за месяц. Сбережений больше нет.	The money loses its worth in a month. Your savings are gone.	
 mod	x	sea jp	Тайфун снёс крышу и лодку.	A typhoon takes the roof and the boat.	
-mod	x	af in me	Саранча. За день от поля остались стебли.	Locusts. In a day the field is bare stalks.	r1
+mod	x	af in me	Саранча. За день от поля остались стебли.	Locusts. In a day the field is bare stalks.	r1 !town
 mod	x		Дом снесли под новую дорогу. Денег не дали.	Your house is pulled down for a new road. No money is paid.	r0
 mod	x	us	Банк забрал дом за долги.	The bank takes the house for debt.	r2
 mod	x	af latam	Ночью в деревню пришли вооружённые люди.	Armed men come to the village at night.	
@@ -242,9 +242,9 @@ mod	a	cn	По утрам торгуешь паровыми булочками у
 mod	a	cn	На работу едешь на велосипеде в потоке из тысяч таких же.	You cycle to work in a stream of thousands just like you.	
 mod	a	in	Вечером стоишь с вёдрами в очереди к цистерне с водой.	In the evening you queue with buckets for the water tanker.	
 mod	a	in	Едешь на свадьбу двоюродного брата за тысячу километров. Весь отпуск уходит на неё.	You travel a thousand kilometres to your cousin's wedding. It takes your whole leave.	
-mod	a	sea	Работаешь на плантации масличной пальмы. Каждая гроздь — как мешок цемента.	You work on an oil-palm estate. Every bunch weighs like a sack of cement.	
+mod	a	sea	Работаешь на плантации масличной пальмы. Каждая гроздь — как мешок цемента.	You work on an oil-palm estate. Every bunch weighs like a sack of cement.	!town
 mod	a	sea	Перед работой кладёшь рис в чаши монахам.	Before work you put rice in the monks' bowls.	
-mod	a	jp	Квартира в шесть татами. Днём футон убираешь в стенной шкаф.	A flat of six tatami. By day the futon goes in the wall cupboard.	
+mod	a	jp	Квартира в шесть татами. Днём футон убираешь в стенной шкаф.	A flat of six tatami. By day the futon goes in the wall cupboard.	+town
 mod	a	me	Чай с будущей роднёй: три стакана, и только потом о деле.	Tea with the family you are marrying into: three glasses before anyone talks business.	
 mod	a	af	Работаешь в городе, семья в деревне. Домой — на Рождество.	You work in the city; the family stays in the village. You go home at Christmas.	
 mod	a	af	Шьёшь на машинке под навесом у рынка. Заказчики ждут тут же.	You sew on a machine under an awning by the market. Customers wait right there.	
@@ -252,7 +252,7 @@ mod	a	latam	Собираешь кофе на финке. Платят за ко�
 mod	a	latam	Воскресный обед у матери. Приходят все, никто не предупреждает.	Sunday lunch at your mother's. Everyone comes; no one says so beforehand.	
 mod	a	us	Две недели отпуска в году. Снимаете домик у озера.	Two weeks off a year. You rent a cabin by the lake.	
 mod	a	us	Работаешь в ночную на заправке у трассы.	You work nights at a gas station by the highway.	
-mod	a	au	Работаешь на скотоводческой станции. До ближайших соседей час езды.	You work on a cattle station. The nearest neighbours are an hour's drive away.	
+mod	a	au	Работаешь на скотоводческой станции. До ближайших соседей час езды.	You work on a cattle station. The nearest neighbours are an hour's drive away.	!town
 mod	a	eu	Поезд в 7:12. Каждое утро одни и те же лица.	The 7.12 train. The same faces every morning.	
 mod	a	eu	Ты с юга, работаешь на заводе на севере. В августе едешь домой с полной машиной подарков.	You are from the south, working at a factory in the north. In August you drive home with the car full of presents.	
 mod	a	ru	До ночи на кухне с друзьями: чай, споры, дым коромыслом.	Late into the night in the kitchen with friends: tea, arguments, smoke.	
@@ -295,7 +295,7 @@ mod	o		Тебе впервые уступили место в автобусе. 
 mod	o	cn	Играешь в парке в шахматы. Вокруг десять советчиков.	You play Chinese chess in the park. Ten people stand around giving advice.	
 mod	o	in	Утром ходишь в храм, вечером — на скамейку к таким же старикам.	In the morning you go to the temple; in the evening, to a bench with the other old folk.	
 mod	o	sea	В полнолуние идёшь в храм и несёшь монахам еду.	At the full moon you go to the temple and take food for the monks.	
-mod	o	jp	Тебе за восемьдесят, а ты всё ещё в поле. Молодых в деревне нет.	Past eighty, you still work your field. There are no young people left in the village.	
+mod	o	jp	Тебе за восемьдесят, а ты всё ещё в поле. Молодых в деревне нет.	Past eighty, you still work your field. There are no young people left in the village.	!town
 mod	o	me af	{Совершил|Совершила} хадж. Теперь тебя зовут хаджи.	You make the hajj. Now they call you Hajji.	
 mod	o	af	{Вернулся|Вернулась} из города доживать в деревню. Сажаешь маниок.	You come back from the city to live out your days in the village. You plant cassava.	
 mod	o	latam	По воскресеньям танцуешь на площади дансон.	On Sundays you dance the danzón in the plaza.	
@@ -310,7 +310,7 @@ mod	x		Авария на дороге. Месяц в больнице.	A road ac
 mod	x		Новая болезнь. Город закрыт, на улицах пусто.	A new disease. The city is shut, the streets empty.	
 mod	x		Беспорядки на улицах. Неделю не выходите из дома.	Riots in the streets. For a week you don't leave the house.	
 mod	x		Брата арестовали. Никто не говорит, за что.	Your brother is arrested. No one will say why.	
-mod	x		Неурожай. Продаёшь скотину, чтобы купить зерно.	The harvest fails. You sell the livestock to buy grain.	
+mod	x		Неурожай. Продаёшь скотину, чтобы купить зерно.	The harvest fails. You sell the livestock to buy grain.	!town
 mod	x		Мошенник выманил все сбережения.	A swindler talks you out of all your savings.	
 mod	x	in sea	Циклон. Всей деревней пережидаете ночь в бетонной школе.	A cyclone. The whole village sits out the night in the concrete school.	
 mod	x	af	В соседней стране война. В деревне беженцы, еды не хватает.	War in the next country. Refugees in the village, not enough food.	
@@ -320,6 +320,6 @@ mod	x	us	По улице прошёл торнадо. Ваш дом цел, со
 mod	x	au	Лесной пожар. Уезжаете с тем, что успели закинуть в машину.	A bushfire. You leave with whatever you could throw in the car.	
 mod	x	eu us	Тебя сократили в пятьдесят два. Новой работы нет.	You are laid off at fifty-two. No new job comes.	
 mod	x	jp	Фирма разорилась. Семье сказать стыдно, и каждое утро ты уходишь будто на работу.	The firm goes under. Too ashamed to tell the family, you leave every morning as if for work.	
-mod	x	sea latam	Извержение вулкана. Пепел засыпал поля.	The volcano erupts. Ash buries the fields.	
+mod	x	sea latam	Извержение вулкана. Пепел засыпал поля.	The volcano erupts. Ash buries the fields.	!town
 mod	x	cn	Соседа объявили правым. Здороваться с ним теперь опасно.	Your neighbour is branded a rightist. It is dangerous now even to greet him.	before:1979
 mod	x	ru	Зарплату не платят полгода. Завод расплачивается посудой.	No wages for six months. The factory pays in crockery.	after:1992 before:2000

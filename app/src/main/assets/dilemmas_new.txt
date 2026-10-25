@@ -5,7 +5,7 @@
 id: n_america
 groups: early ind
 tags: eu de en it fr ru
-need:
+need: !town
 ages: 19-39
 weight: 2
 q: Двоюродный брат пишет из Америки: работы много, земля дешёвая. Билет стоит как корова. | A cousin writes from America: plenty of work, cheap land. The ticket costs as much as a cow.
@@ -23,7 +23,7 @@ out: 30 | Неурожай. Вспоминаешь про билет, но уж�
 id: n_shilling
 groups: early
 tags: en
-need: m
+need: m !town
 ages: 19-27
 weight: 1
 q: В трактире вербовщик ставит всем пиво и кладёт на стол шиллинг: «Возьмёшь — и ты солдат короля». | In the tavern a recruiting sergeant buys the beer and lays a shilling down: "Take it and you're the King's man."
@@ -73,7 +73,7 @@ out: 40 | Стачка проваливается, а мастер тебя за
 id: n_kolkhoz
 groups: ind
 tags: ru
-need: r1
+need: r1 !town
 ages: 19-64
 weight: 2
 q: Уполномоченный из района кладёт на стол бумагу. Подпишешь — лошадь и плуг уйдут в колхоз. | The man from the district lays a paper on the table. Sign, and your horse and plough go to the collective farm.
@@ -89,7 +89,7 @@ ask: Что трудно отдать, даже когда всё решили �
 id: n_school_girl
 groups: ind mod
 tags: *
-need: kids
+need: kids !town
 ages: 39-51
 weight: 2
 q: Учительница приходит сама: старшая дочь способная, ей бы в городскую школу. А кто будет полоть? | The teacher comes herself: your eldest girl is clever, she should go to the town school. But who will do the weeding?
@@ -134,7 +134,7 @@ out: 100 | Брат присылает фотографии на фоне чуж
 id: n_rent
 groups: early ind
 tags: en fr de it
-need: r1
+need: r1 !town
 ages: 27-64
 weight: 2
 q: Управляющий поднимает аренду на треть. Говорит, за твой участок другие дадут больше. | The agent raises the rent by a third. He says others will pay more for your plot.
@@ -181,7 +181,7 @@ out: 50 | Оспа приходит зимой. Хоронят каждого п
 id: n_microloan
 groups: mod
 tags: in sea af latam
-need: f
+need: f !town
 ages: 19-51
 weight: 1
 q: Женщины с твоей улицы собирают группу: банк даёт заём пятерым, и каждая отвечает за всех. | The women on your street are forming a group: the bank lends to five, and each answers for all.
@@ -246,7 +246,7 @@ ask: Кому давно пора позвонить? | Who is long overdue a ca
 id: n_retire
 groups: mod
 tags: *
-need:
+need: !town
 ages: 58-70
 weight: 2
 q: На работе намекают: пора на пенсию, твоё место ждёт молодой. | At work they hint: time to retire, a young one is waiting for your place.
@@ -263,7 +263,7 @@ ask: Кем ты будешь, когда работа кончится? | Who w
 id: n_gi_bill
 groups: mod
 tags: us
-need: m
+need: m !town
 ages: 19-27
 weight: 1
 q: Ты вернулся из армии. Правительство платит за колледж. Отец зовёт на ферму: одному ему не справиться. | You're back from the army. The government will pay for college. Your father wants you on the farm: he can't manage alone.
@@ -324,7 +324,7 @@ out: 40 | Завод выживает. Квартиру тебе потом пр
 id: n_joint_family
 groups: ind mod
 tags: in
-need: m
+need: m !town
 ages: 27-39
 weight: 1
 q: Младший брат хочет делиться: свой очаг, своя доля земли. Отец стар и смотрит на тебя, на старшего. | Your younger brother wants to split off: his own hearth, his share of the land. Your father is old and looks to you, the eldest.
@@ -418,7 +418,7 @@ out: 100 | Каждое воскресенье ждёшь звонка из Ло
 id: n_homestead
 groups: ind
 tags: us
-need:
+need: !town
 ages: 19-39
 weight: 1
 q: Говорят, на Западе землю дают даром: сто шестьдесят акров тому, кто проживёт на ней пять лет. | They say out West the land is free: a hundred and sixty acres to whoever lives on it five years.
@@ -510,7 +510,7 @@ out: 50 | Хозяин находит деньги и забирает. | The ma
 id: n_mill
 groups: ind
 tags: *
-need: r1
+need: r1 !town
 ages: 19-27
 weight: 2
 q: В соседнем городе открыли ткацкую фабрику. Платят деньгами, каждую субботу. | A weaving mill has opened in the next town. They pay in money, every Saturday.
@@ -524,7 +524,7 @@ out: 100 | Пашешь, как отец. Фабричный гудок слыш
 id: n_new_seed
 groups: mod
 tags: in sea latam af
-need: r1
+need: r1 !town
 ages: 19-51
 weight: 1
 q: Агроном привозит новые семена: урожай вдвое. Но нужны удобрения и полив, а это в долг. | The agronomist brings new seed: twice the harvest. But it needs fertiliser and water, and that means debt.
@@ -569,7 +569,7 @@ out: 30 | Пожар. Половица горит вместе с чулком. 
 id: n_north_star
 groups: early
 tags: us
-need: r0
+need: r0 !town
 ages: 19-39
 weight: 1
 q: Ночью в хижину стучат: в субботу двое уходят на север, за реку. Есть место для третьего. | A knock on the cabin at night: on Saturday two are going north, across the river. There's room for a third.
@@ -600,7 +600,7 @@ out: 30 | На окраину тянут метро. Через три года 
 id: n_enclosure
 groups: early
 tags: en
-need: r1
+need: r1 !town
 ages: 27-51
 weight: 1
 q: Сквайр огораживает общинный выгон и предлагает деньги за твою полосу земли. | The squire is enclosing the common and offers money for your strip of land.
@@ -632,7 +632,7 @@ out: 100 | Спишь до полудня. Письма тебе по-прежн
 id: n_keju
 groups: early
 tags: cn
-need: kids
+need: kids !town
 ages: 39-51
 weight: 1
 q: Учитель говорит: у сына голова для экзаменов. Но учёба до первой степени — это годы и все ваши деньги. | The tutor says your son has a head for the examinations. But study for the first degree means years and all your money.
@@ -648,7 +648,7 @@ ask: На чью мечту уходят твои силы? | Whose dream does y
 id: n_sepoy
 groups: early
 tags: in
-need: m
+need: m !town
 ages: 19-27
 weight: 1
 q: Компания набирает сипаев. Жалованье каждый месяц, мундир, пенсия. Но могут послать за море. | The Company is recruiting sepoys. Pay every month, a uniform, a pension. But they may send you over the sea.

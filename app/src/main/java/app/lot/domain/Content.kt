@@ -10,13 +10,22 @@ class Need(tokens: Collection<String>) {
     /** `after:1930` and `before:-500` keep a line to the years it belongs to. */
     private val after = tokens.firstOrNull { it.startsWith("after:") }?.substringAfter(':')?.toInt()
     private val before = tokens.firstOrNull { it.startsWith("before:") }?.substringAfter(':')?.toInt()
-    private val rest = tokens.filterNot { it.matches(Regex("r[0-3]")) || ':' in it }.toSet()
+    private val rest = tokens.filterNot { it.matches(Regex("r[0-3]")) || ':' in it || it.startsWith("+") }.toSet()
+    /** `+town` and the like: what a line does to the life once it is written (a line about the new flat makes the life a town life). */
+    val sets = tokens.filter { it.startsWith("+") }.map { it.drop(1) }
 
-    fun holds(p: Person) = (ranks.isEmpty() || p.rank in ranks) && rest.all { p.has(it) } &&
+    /** True for a need that a town life can never meet (it asks for `!town`). */
+    fun holdsOnlyOutsideTown() = "!town" in rest
+
+    private fun Person.check(t: String) = if (t.startsWith("!") && t.drop(1) !in DOOR_NEGATIONS) !has(t.drop(1)) else has(t)
+
+    fun holds(p: Person) = (ranks.isEmpty() || p.rank in ranks) && rest.all { p.check(it) } &&
         (after == null || p.now >= after) && (before == null || p.now < before)
 
     companion object {
         val ANY = Need(emptyList())
+        /** Negations the person answers itself, as door conditions do. */
+        private val DOOR_NEGATIONS = setOf("lit", "married", "kids")
         fun of(s: String) = if (s.isBlank()) ANY else Need(s.trim().split(' '))
     }
 }

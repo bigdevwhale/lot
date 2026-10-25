@@ -85,8 +85,8 @@ object Names {
             val s = if (sex == Sex.F && p.feminine) Tx(sur.ru + "а", sur.en + "a") else sur
             return if (p.surnameFirst) Tx("${s.ru} ${first.ru}", "${s.en} ${first.en}") else Tx("${first.ru} ${s.ru}", "${first.en} ${s.en}")
         }
-        var father = p.male.random(rnd)
-        if (father == first) father = p.male.random(rnd)
+        val i = rnd.nextInt(p.male.size)
+        val father = p.male[i].takeIf { it != first } ?: p.male[(i + 1) % p.male.size]
         return Tx("${first.ru}, ${if (sex == Sex.M) "сын" else "дочь"} ${genitive(father.ru)}", "${first.en}, ${if (sex == Sex.M) "son" else "daughter"} of ${father.en}")
     }
 

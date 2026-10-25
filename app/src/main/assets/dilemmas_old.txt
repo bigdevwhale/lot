@@ -3,7 +3,7 @@
 id: o_stranger_night
 groups: anc med early
 tags: af me eg med eu fr de it en ru in cn jp sea
-need:
+need: !town
 ages: 19-64
 weight: 2
 q: Под вечер в дверь стучит чужой человек. Просит пустить переночевать. | At dusk a stranger knocks at the door and asks to stay the night.
@@ -21,7 +21,7 @@ out: 30 | Наутро у соседей пропадает овца. Может
 id: o_sister_given
 groups: stone anc med early
 tags: *
-need:
+need: !town
 ages: 19-39
 weight: 1
 q: Старшие решили отдать твою сестру за вдовца вдвое старше её. | The elders have decided to give your sister to a widower twice her age.
@@ -185,7 +185,7 @@ out: 40 | Через год свои находят тебе пару. | A year 
 id: o_purse_road
 groups: anc med early
 tags: af me eg med eu fr de it en ru in cn jp sea
-need:
+need: !town
 ages: 19-64
 weight: 1
 q: На дороге лежит кошель. Тяжёлый. Вокруг никого. | A purse lies on the road. Heavy. No one around.
@@ -205,7 +205,7 @@ ask: Какая находка так и осталась у тебя? | What ha
 id: o_widow
 groups: anc med early
 tags: af me eg med eu fr de it en ru in cn jp sea
-need:
+need: !town
 ages: 27-64
 weight: 2
 q: Вдова на краю деревни осталась совсем одна. Крыша течёт, дров нет. | The widow at the edge of the village is all alone now. The roof leaks, and there's no firewood.
@@ -242,7 +242,7 @@ ask: Что ты отдашь за здоровье близкого? | What wou
 id: o_harvest_feast
 groups: anc med early
 tags: af me eg med eu fr de it en ru in cn jp sea meso andes
-need: kids
+need: kids !town
 ages: 19-51
 weight: 1
 q: Праздник урожая: вся деревня пляшет до утра. А у младшего кашель. | Harvest festival: the whole village dances till dawn. And the youngest has a cough.
@@ -257,7 +257,7 @@ ask: Какой праздник пришлось пропустить ради 
 id: o_pig_feud
 groups: anc med early
 tags: af me eg med eu fr de it en ru in cn jp sea
-need:
+need: !town
 ages: 19-55
 weight: 2
 q: Соседский сын украл у вас свинью. Все знают, но никто не видел. | The neighbour's son has stolen your pig. Everyone knows, but nobody saw.
@@ -297,7 +297,7 @@ ask: Чего тебе страшнее всего лишиться? | What are 
 id: o_plague
 groups: med early
 tags: af me eg med eu fr de it en ru in cn jp sea
-need:
+need: !town
 ages: 19-64
 weight: 1
 q: В деревне мор. Мёртвые лежат по дворам, хоронить некому. | Plague in the village. The dead lie in the yards with no one to bury them.
@@ -333,7 +333,7 @@ ask: Куда тебя давно тянет уехать? | Where have you long
 id: o_boundary
 groups: anc med early
 tags: af me eg med eu fr de it en ru in cn jp sea
-need:
+need: !town
 ages: 27-64
 weight: 1
 q: Ночью ты видишь, как сосед двигает межевой камень. На три шага в свою сторону. | At night you see your neighbour move the boundary stone. Three paces his way.
@@ -369,7 +369,7 @@ ask: Чьё детство тебе довелось беречь? | Whose child
 id: o_apprentice
 groups: med early
 tags: af me eg med eu fr de it en ru in cn jp sea
-need:
+need: !town
 ages: 19-27
 weight: 1
 q: Кузнец в городе ищет подмастерье. Семь лет учёбы за хлеб и угол. | A smith in town wants an apprentice. Seven years of learning for bread and a corner to sleep in.
@@ -387,7 +387,7 @@ ask: Чему стоит учиться семь лет? | What is worth seven y
 id: o_steward
 groups: med
 tags: eu fr de it en
-need: kids
+need: kids !town
 ages: 35-55
 weight: 1
 q: Управляющий господина хочет забрать твою дочь на кухню в усадьбу. | The lord's steward wants your daughter for the manor kitchen.
@@ -425,7 +425,7 @@ ask: Чему тебя научил чужой человек? | What did a stra
 id: o_crusade
 groups: med
 tags: eu fr de it en
-need:
+need: !town
 ages: 19-39
 weight: 1
 q: На площади проповедник зовёт в крестовый поход. Обещает отпущение всех грехов. | In the square a preacher calls for a crusade. He promises every sin forgiven.
@@ -443,7 +443,7 @@ ask: Во что хотелось бы верить так же сильно? | 
 id: o_burial_fee
 groups: med
 tags: eu fr de it en
-need:
+need: !town
 ages: 27-55
 weight: 1
 q: Умер отец. Священник требует за отпевание вторую корову. Так заведено. | Your father has died. The priest claims your second-best cow for the burial. That is the custom.
@@ -461,7 +461,7 @@ ask: Как бы хотелось, чтобы тебя проводили? | How
 id: o_horde_tax
 groups: med
 tags: ru
-need:
+need: !town
 ages: 19-64
 weight: 1
 q: Приехал ордынский баскак, переписывает дворы. За недоимку уводят в полон. | The Horde's tax man has come and is counting the households. Those who fall short are led away as captives.
@@ -480,7 +480,7 @@ ask: Где граница, после которой терпеть уже не
 id: o_yuriev
 groups: med
 tags: ru
-need: r1
+need: r1 !town
 ages: 19-51
 weight: 1
 q: Подошёл Юрьев день. Соседний боярин зовёт к себе: три года без податей. | St George's Day is here. A neighbouring boyar invites you onto his land: three years free of dues.
@@ -496,7 +496,7 @@ ask: Где твоё место: там, где родня, или там, гд�
 id: o_corvee_canal
 groups: anc med
 tags: cn
-need:
+need: !town
 ages: 19-39
 weight: 1
 q: Пришёл указ: от каждого двора по человеку — копать канал. На полгода. | An order has come: one person from every household to dig the canal. For half a year.
@@ -517,7 +517,7 @@ ask: Какую повинность ты несёшь, не выбирая? | W
 id: o_exam_cn
 groups: med early
 tags: cn
-need: kids
+need: kids !town
 ages: 35-55
 weight: 1
 q: Учитель говорит: у твоего сына голова для экзаменов. Нужен наставник, а это три урожая. | The teacher says your son has a head for the examinations. That means a tutor, and three harvests' worth of money.
@@ -605,7 +605,7 @@ ask: Какой долг легче простить, чем требовать?
 id: o_griot
 groups: med early
 tags: af
-need:
+need: !town
 ages: 19-51
 weight: 1
 q: На свадьбе гриот обещает вставить твой род в песню. Просит за это козу. | At a wedding the griot promises to put your family in his song. He asks a goat for it.
@@ -622,7 +622,7 @@ ask: Кто будет помнить твоё имя через сорок ле
 id: o_salt
 groups: med
 tags: af
-need:
+need: !town
 ages: 19-39
 weight: 1
 q: Караван уходит на север, в Тагазу, за солью. Нужны молодые. | A caravan is leaving north for Taghaza, for salt. They need young people.
@@ -637,7 +637,7 @@ out: 100 | Просо всходит. Караван возвращается б
 id: o_mita
 groups: med
 tags: andes
-need:
+need: !town
 ages: 19-51
 weight: 1
 q: Пришла очередь вашей семьи в миту: год работы на дороге инки. | Your family's turn for the mit'a has come: a year's work on the Inca's road.
@@ -670,7 +670,7 @@ ask: Чем в твоё время доказывают смелость? | How 
 id: o_cacao
 groups: med
 tags: meso
-need:
+need: !town
 ages: 19-39
 weight: 1
 q: Купец-почтека берёт носильщиков на юг, за какао и перьями кецаля. Полгода пути. | A pochteca merchant is taking porters south, for cacao and quetzal feathers. Half a year on the road.
@@ -685,7 +685,7 @@ out: 100 | Ты сажаешь на одном поле маис, бобы и т
 id: o_ikki
 groups: med
 tags: jp
-need:
+need: !town
 ages: 19-55
 weight: 1
 q: Окрестные деревни поднимаются против нового рисового налога. Гонец зовёт и вашу. | The villages round about are rising against the new rice tax. A runner calls on yours too.
@@ -701,7 +701,7 @@ out: 30 | Вернувшись, соседи с тобой не здороваю
 id: o_tithe
 groups: anc
 tags: me eg
-need:
+need: !town
 ages: 19-64
 weight: 1
 q: Храм требует десятую часть урожая. А урожай скудный. | The temple wants a tenth of the harvest. And the harvest is thin.
@@ -737,7 +737,7 @@ out: 30 | Ушедших вернулось мало. Хозяин в нужде
 id: o_scribe_school
 groups: anc
 tags: me eg
-need: kids
+need: kids !town
 ages: 27-51
 weight: 1
 q: Писец при храме берёт мальчиков в ученики. Учёба долгая, платить зерном. | The temple scribe takes boys as pupils. The study is long, and paid in grain.
@@ -754,7 +754,7 @@ ask: Какая учёба изменила твою жизнь? | What learning
 id: o_debt
 groups: anc
 tags: me med
-need: kids
+need: kids !town
 ages: 27-51
 weight: 1
 q: Долг ростовщику не отдать. По закону он может забрать в дом на три года тебя или ребёнка. | You can't pay the moneylender. By law he may take you or your child into his house for three years.
@@ -772,7 +772,7 @@ ask: Чем однажды пришлось заплатить за долг? | 
 id: o_nile_tomb
 groups: anc
 tags: eg
-need:
+need: !town
 ages: 19-39
 weight: 1
 q: Нил разлился, поля под водой. Писцы набирают людей таскать камни для гробницы фараона. | The Nile is up and the fields are under water. Scribes are gathering men to haul stone for Pharaoh's tomb.
@@ -789,7 +789,7 @@ ask: Что из сделанного тобой переживёт тебя? | 
 id: o_ostrakon
 groups: anc
 tags: med
-need:
+need: !town
 ages: 19-64
 weight: 0.5
 q: Город голосует черепками: кого изгнать на десять лет. На площади раздают черепки. | The city votes with potsherds: whom to exile for ten years. Shards are handed out in the square.
@@ -806,7 +806,7 @@ ask: Когда у тебя в последний раз был голос? | Wh
 id: o_legion
 groups: anc med
 tags: med it
-need:
+need: !town
 ages: 19-27
 weight: 1
 q: Вербовщик набирает в легион. Двадцать лет службы, потом — земля. | A recruiter is enlisting for the legion. Twenty years' service, then land.

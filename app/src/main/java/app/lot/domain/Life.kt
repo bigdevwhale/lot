@@ -240,6 +240,7 @@ class Life private constructor(
         val l = (unread.ifEmpty { fresh.ifEmpty { all } }).randomOrNull(rnd) ?: return
         used += l
         add(age, l.text, mark)
+        for (s in l.need.sets) if (s == "town") town = true else flags += s
     }
 
     private class Act(val door: Door, val act: () -> Unit)

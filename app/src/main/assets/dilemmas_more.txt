@@ -110,7 +110,7 @@ out: 30 | Зверя с каждой зимой меньше. | There is less ga
 id: m_stone_rock
 groups: stone
 tags: au
-need:
+need: !town
 ages: 39-64
 weight: 1
 q: Старики говорят: пора подновить рисунки на священной скале. Идти целую луну, через чужие земли. | The old ones say it is time to repaint the pictures on the sacred rock. A moon's walk, through other people's country.
@@ -131,7 +131,7 @@ ask: Что держится только на том, что его повто�
 id: m_stone_seed
 groups: stone
 tags: me cn
-need:
+need: !town
 ages: 27-64
 weight: 1
 q: Там, где в прошлом году просыпали зерно, взошли колосья. Можно остаться и посеять. | Where grain was spilled last year, ears have come up. You could stay and sow.
@@ -162,7 +162,7 @@ out: 30 | Сон забывается. Охота и так удачная. | Th
 id: m_anc_tablet
 groups: anc
 tags: me
-need:
+need: !town
 ages: 27-64
 weight: 1
 q: Сосед продаёт поле и зовёт тебя в свидетели. Ты знаешь: половина поля — брата, который ушёл с войском. | Your neighbour is selling a field and asks you to witness. You know half of it is his brother's, who went off with the army.
@@ -195,7 +195,7 @@ out: 100 | Она отдаёт последний мешок проса. Зим�
 id: m_colony
 groups: anc
 tags: med
-need:
+need: !town
 ages: 19-27
 weight: 1
 q: Город снаряжает корабли за море: основать поселение на чужом берегу. Каждому обещан надел. | The city is fitting out ships to found a settlement on a far shore. Everyone is promised a plot.
@@ -232,7 +232,7 @@ out: 100 | К осени сны стихают сами. | By autumn the dreams 
 id: m_milpa
 groups: anc med
 tags: meso
-need:
+need: !town
 ages: 27-51
 weight: 1
 q: Поле на склоне выдохлось: третий год кукуруза мелкая. Можно выжечь новый участок в лесу. | The hillside field is worn out: for the third year the maize is small. You could burn a new patch in the forest.
@@ -301,7 +301,7 @@ out: 30 | Невестка ворчит: в доме лишний рот, да �
 id: m_mourning_hut
 groups: anc med
 tags: cn
-need:
+need: !town
 ages: 27-64
 weight: 1
 q: Умерла мать. По обычаю почтительный сын три года живёт в шалаше у её могилы. | Your mother has died. By custom a dutiful son lives three years in a hut by her grave.
@@ -370,7 +370,7 @@ out: 100 | Олив в этот год много. Об играх ты слуш
 id: m_hand_over
 groups: anc med early ind
 tags: *
-need: kids
+need: kids !town
 ages: 51-70
 weight: 2
 q: Сил всё меньше. Старший сын ждёт, когда ты отдашь ему дом и землю. | Your strength is going. Your eldest son is waiting for you to hand him the house and land.
@@ -475,7 +475,7 @@ out: 100 | Ты рассказываешь о той деревне всем, к
 id: m_move_to_children
 groups: mod
 tags: *
-need: kids
+need: kids !town
 ages: 58-70
 weight: 1
 q: Дети зовут к себе в город: {одному|одной} в деревне тебе тяжело. Квартира на девятом этаже. | The children want you to move to the city: it's hard for you alone in the village. The flat is on the ninth floor.
@@ -507,7 +507,7 @@ out: 100 | Соседи ставят свечу и за тебя. Пока их 
 id: m_biwa
 groups: med
 tags: jp
-need:
+need: !town
 ages: 19-64
 weight: 1
 q: В деревню забрёл слепой монах с бивой. Споёт о гибели дома Тайра, если накормят. А год неурожайный. | A blind monk with a biwa has wandered into the village. He'll sing of the fall of the Taira if he's fed. And the harvest was poor.
@@ -521,7 +521,7 @@ out: 100 | Его голос слышен из соседнего дома. Сл
 id: m_fire_next_door
 groups: med early
 tags: ru
-need:
+need: !town
 ages: 19-64
 weight: 1
 q: Ночью загорелся соседский двор. Ветер несёт искры на твою крышу. | At night the neighbour's yard catches fire. The wind carries sparks onto your roof.
@@ -537,7 +537,7 @@ out: 30 | Огонь всё равно перекидывается. Спасл�
 id: m_feet
 groups: med early
 tags: cn
-need: kids after:1100
+need: kids after:1100 !town
 ages: 27-39
 weight: 1
 q: Дочери пять лет. Старшие в доме говорят: пора бинтовать ноги, иначе в хорошую семью её не возьмут. | Your daughter is five. The elders of the house say it is time to bind her feet, or no good family will take her.
@@ -557,7 +557,7 @@ ask: Какую боль терпят ради чужого одобрения? 
 id: m_cloves
 groups: med early
 tags: sea
-need:
+need: !town
 ages: 19-39
 weight: 1
 q: Капитан торгового судна набирает гребцов до островов, где растёт гвоздика. Месяц по морю. | A trading captain is hiring rowers for the islands where cloves grow. A month at sea.
@@ -590,7 +590,7 @@ ask: Какую книгу хотелось бы переписать от ру�
 id: m_rainmaker
 groups: anc med early
 tags: af
-need:
+need: !town
 ages: 27-64
 weight: 1
 q: Третий месяц нет дождя. Вызыватель дождя просит с каждого двора по козе за обряд. | No rain for three months. The rainmaker asks a goat from every household for the rite.
@@ -625,7 +625,7 @@ ask: От чего можно отказаться ради свободы? | Wh
 id: m_kentucky
 groups: early
 tags: us
-need: after:1775 before:1820
+need: after:1775 before:1820 !town
 ages: 19-39
 weight: 1
 q: Сосед продал ферму и уходит за горы, в Кентукки. Говорит, земля там чёрная, как порох. | Your neighbour has sold his farm and is going over the mountains to Kentucky. He says the soil there is black as gunpowder.
@@ -690,7 +690,7 @@ out: 100 | Нитка рвётся, пальцы в мозолях. К свад�
 id: m_silk_mill
 groups: ind
 tags: jp
-need: kids after:1880 before:1940
+need: kids after:1880 before:1940 !town
 ages: 39-51
 weight: 1
 q: Вербовщик с шёлковой фабрики в Нагано даёт задаток за дочь: год работы. Деньги нужны на земельный налог. | A recruiter from a silk mill in Nagano offers an advance for your daughter: a year's work. The money would pay the land tax.
@@ -767,7 +767,7 @@ out: 50 | Она уходит из дома с одной сумкой. Чере
 id: m_greenhouses
 groups: mod
 tags: af
-need:
+need: !town
 ages: 39-64
 weight: 1
 q: Инвестор хочет взять родовую землю под теплицы для роз. Деньги сразу, и работа в теплицах тоже. | An investor wants the family land for rose greenhouses. Money now, and jobs in the greenhouses too.
@@ -798,7 +798,7 @@ out: 40 | Внук говорит, что будет жить здесь, ког
 id: m_shuttle
 groups: mod
 tags: ru
-need: after:1991 before:2000
+need: after:1991 before:2000 !town
 ages: 27-51
 weight: 1
 q: Завод стоит, зарплату дают кастрюлями. Знакомая зовёт челноком в Стамбул: туда с пустыми сумками, обратно с кожанками. | The factory has stopped; wages are paid in saucepans. A friend asks you to go shuttle-trading to Istanbul: out with empty bags, back with leather jackets.
@@ -919,7 +919,7 @@ out: 100 | Мастерская закроется вместе с тобой. |
 id: m_ox
 groups: anc med early
 tags: *
-need:
+need: !town
 ages: 27-64
 weight: 1
 q: У соседа пал вол. В самую пахоту ему не на чем пахать, и он просит твоего. | Your neighbour's ox has died. At the height of ploughing he has nothing to plough with, and he asks for yours.
@@ -940,7 +940,7 @@ out: 30 | Сосед продаёт тебе свою полосу за бесц
 id: m_wedding_debt
 groups: anc med early ind
 tags: *
-need: kids
+need: kids !town
 ages: 39-51
 weight: 1
 q: Дочь выходит замуж. По обычаю гулять должна вся деревня, а денег нет. | Your daughter is getting married. Custom says the whole village must feast, and there's no money.
@@ -955,7 +955,7 @@ out: 30 | Родня жениха обижена. Дочери в новом д�
 id: m_deserter
 groups: med early ind
 tags: *
-need:
+need: !town
 ages: 27-64
 weight: 1
 q: Ночью в сарае прячется беглый солдат. Совсем мальчишка. | At night a runaway soldier is hiding in your barn. Just a boy.
@@ -991,7 +991,7 @@ out: 100 | Подписывает кто-то другой. На ночные с
 id: m_monastery_old
 groups: med early
 tags: ru
-need:
+need: !town
 ages: 58-70
 weight: 1
 q: Подступила старость. Многие в твои годы уходят в монастырь — доживать и молиться. | Old age has come. Many at your age go into a monastery to live out their days in prayer.
