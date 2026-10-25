@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lot</string>
+    <string name="tab_draw">Lot</string>
+    <string name="tab_book">Book</string>
+    <string name="tab_chest">Chest</string>
+    <string name="tab_atlas">Atlas</string>
+</resources>

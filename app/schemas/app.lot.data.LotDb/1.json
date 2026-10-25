@@ -1,0 +1,271 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "d8188993445538883222330ba8e689cd",
+    "entities": [
+      {
+        "tableName": "life",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `seed` INTEGER NOT NULL, `heirOf` INTEGER, `witness` INTEGER NOT NULL, `picks` TEXT NOT NULL, `nameRu` TEXT NOT NULL, `nameEn` TEXT NOT NULL, `sex` TEXT NOT NULL, `year` INTEGER NOT NULL, `death` INTEGER NOT NULL, `eraI` INTEGER NOT NULL, `region` TEXT NOT NULL, `cult` TEXT NOT NULL, `estate` TEXT NOT NULL, `rank` INTEGER NOT NULL, `wealth` INTEGER NOT NULL, `surRu` TEXT, `surEn` TEXT, `kids` INTEGER NOT NULL, `lit` INTEGER NOT NULL, `sawSea` INTEGER NOT NULL, `epitaphRu` TEXT NOT NULL, `epitaphEn` TEXT NOT NULL, `bridgeRu` TEXT NOT NULL, `bridgeEn` TEXT NOT NULL, `answer` TEXT NOT NULL, `thingId` INTEGER NOT NULL, `storyRu` TEXT, `storyEn` TEXT, `meet` INTEGER, `dynasty` INTEGER NOT NULL, `gen` INTEGER NOT NULL, `endedAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "seed",
+            "columnName": "seed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "heirOf",
+            "columnName": "heirOf",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "witness",
+            "columnName": "witness",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "picks",
+            "columnName": "picks",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameRu",
+            "columnName": "nameRu",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameEn",
+            "columnName": "nameEn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sex",
+            "columnName": "sex",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "year",
+            "columnName": "year",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "death",
+            "columnName": "death",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eraI",
+            "columnName": "eraI",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "region",
+            "columnName": "region",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cult",
+            "columnName": "cult",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estate",
+            "columnName": "estate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rank",
+            "columnName": "rank",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wealth",
+            "columnName": "wealth",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "surRu",
+            "columnName": "surRu",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "surEn",
+            "columnName": "surEn",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "kids",
+            "columnName": "kids",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lit",
+            "columnName": "lit",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sawSea",
+            "columnName": "sawSea",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "epitaphRu",
+            "columnName": "epitaphRu",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "epitaphEn",
+            "columnName": "epitaphEn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bridgeRu",
+            "columnName": "bridgeRu",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bridgeEn",
+            "columnName": "bridgeEn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "answer",
+            "columnName": "answer",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thingId",
+            "columnName": "thingId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "storyRu",
+            "columnName": "storyRu",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "storyEn",
+            "columnName": "storyEn",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "meet",
+            "columnName": "meet",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "dynasty",
+            "columnName": "dynasty",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gen",
+            "columnName": "gen",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endedAt",
+            "columnName": "endedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "thing",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `key` TEXT NOT NULL, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "key",
+            "columnName": "key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "meta",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`k` TEXT NOT NULL, `v` TEXT NOT NULL, PRIMARY KEY(`k`))",
+        "fields": [
+          {
+            "fieldPath": "k",
+            "columnName": "k",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "v",
+            "columnName": "v",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "k"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd8188993445538883222330ba8e689cd')"
+    ]
+  }
+}

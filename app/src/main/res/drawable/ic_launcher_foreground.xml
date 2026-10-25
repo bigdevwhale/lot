@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A wooden lot tag on its string, with lines burnt into it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:pivotX="54" android:pivotY="54" android:rotation="-14">
+        <path android:strokeColor="#FFC99A5E" android:strokeWidth="2.4" android:strokeLineCap="round"
+            android:pathData="M33,54 C28,42 22,38 18,30" />
+        <path android:fillColor="#FFD9B077"
+            android:pathData="M40,38 L82,38 Q86,38 86,42 L86,66 Q86,70 82,70 L40,70 L30,54 Z" />
+        <path android:fillColor="#FF3A2414" android:pathData="M37,54 m-3.2,0 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0" />
+        <path android:fillColor="#FF3A1D0C" android:pathData="M48,44.5 h30 v3.6 h-30 z" />
+        <path android:fillColor="#FF3A1D0C" android:pathData="M51,52.4 h24 v2.6 h-24 z" />
+        <path android:fillColor="#FF3A1D0C" android:pathData="M53,59.4 h20 v2.6 h-20 z" />
+    </group>
+</vector>
