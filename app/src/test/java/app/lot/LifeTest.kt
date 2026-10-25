@@ -30,7 +30,7 @@ class LifeTest {
             }
             val end = p.end!!
             assertTrue(end.age in 0..100)
-            assertTrue(p.entries.last().text.ru.startsWith("Умер"))
+            assertTrue(p.entries.last().text.ru.let { it.startsWith("Умер") || it.startsWith("Сейчас") })
             for (e in p.entries) {
                 assertTrue("unmarked ${e.text}", '{' !in e.text.ru && '{' !in e.text.en)
                 assertTrue(e.text.ru.isNotBlank() && e.text.en.isNotBlank())

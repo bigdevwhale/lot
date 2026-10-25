@@ -24,7 +24,7 @@ object Things {
         t(Group.MED, Shape.COIN, "серебряная монетка", "a little silver coin"),
         t(Group.MED, Shape.COMB, "костяной гребень", "a bone comb"),
         t(Group.MED, Shape.WHISTLE, "ивовая свистулька", "a willow whistle"),
-        t(Group.EARLY, Shape.CHARM, "медный нательный образок", "a small copper icon"),
+        t(Group.EARLY, Shape.CHARM, "медный амулет на шнурке", "a copper charm on a cord"),
         t(Group.EARLY, Shape.PIPE, "глиняная трубка", "a clay pipe"),
         t(Group.EARLY, Shape.LETTER, "письмо, которое некому было прочитать", "a letter nobody could read"),
         t(Group.EARLY, Shape.SPOON, "расписная ложка", "a painted spoon"),

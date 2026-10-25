@@ -84,20 +84,20 @@ med	j		Первый снег. Дети катаются с горы на зам�
 med	j		Весной цветут яблони. Ты сидишь под ними просто так, целый час.	In spring the apple trees bloom. You sit under them for an hour, for no reason.
 med	y		Сгорел амбар. Отстраивали всем миром.	The barn burns down. The whole village builds it again.
 med	y		Господин поднял подати.	The lord raises the dues.
-med	y		Впервые {увидел|увидела} книгу — у священника. Она пахнет кожей и воском.	For the first time you see a book, the priest's. It smells of leather and wax.
+med	y		Впервые {увидел|увидела} книгу — у писаря. Она пахнет кожей и воском.	For the first time you see a book, the scribe's. It smells of leather and wax.
 med	y		На посиделках пели до полуночи. Ты {запомнил|запомнила} одну песню на всю жизнь.	At the evening gathering you sing till midnight. You keep one song all your life.
 med	y		Через деревню шли паломники. Один рассказывал про город с золотыми крышами.	Pilgrims pass through the village. One tells of a city with golden roofs.
 med	a		Голодный год. Ели лебеду.	A hungry year. You eat goosefoot.
 med	a		{Ходил|Ходила} на богомолье за три дня пути.	You go on pilgrimage, three days on foot.
 med	a		Купили вторую корову. Теперь молока хватает всем детям.	You buy a second cow. Now there is milk for all the children.
 med	a		Мельник обвесил. Ты промолчал{|а} — он родня господину.	The miller cheats on the weight. You say nothing: he is the lord's kin.
-med	a		Пожар перекинулся с соседнего двора. Спасли детей и икону.	Fire jumps from the next yard. You save the children and the icon.
+med	a		Пожар перекинулся с соседнего двора. Спасли детей и сундук.	Fire jumps from the next yard. You save the children and the chest.
 med	a		Год без войны и без мора. Старики говорят, такого не помнят.	A year with no war and no plague. The old folk say they do not remember one.
 med	o		Ты помнишь три голодных года и одну комету.	You remember three hungry years and one comet.
 med	o		Сидишь у печи и чинишь сети.	You sit by the stove mending nets.
 med	o		Внучка спрашивает, какой была бабушка. Ты рассказываешь до темноты.	Your granddaughter asks what her great-grandmother was like. You tell her till dark.
 med	o		Глаза уже не те, но руки сами помнят, как прясть.	Your eyes are not what they were, but your hands remember how to spin.
-med	o		Ты {крёстный|крёстная} половине деревни.	You are godparent to half the village.
+med	o	eu ru latam	Ты {крёстный|крёстная} половине деревни.	You are godparent to half the village.
 med	x		Неурожай, а за ним мор.	A bad harvest, and plague after it.
 med	x		Пришло войско чужого князя.	A foreign prince's army comes.
 med	x		Река разлилась и унесла скот.	The river floods and carries off the cattle.
@@ -116,7 +116,7 @@ early	j		Праздник: на столе белый хлеб.	A feast day: whi
 early	j		Дети нашли в поле ёжика и неделю кормили его молоком.	The children find a hedgehog in the field and feed it milk for a week.
 early	j		Вечером под окнами пели — сватались к соседской дочери.	In the evening they sing under the windows, courting the neighbour's daughter.
 early	y		Привезли картофель — странный новый корень.	Potatoes arrive: a strange new root.
-early	y		При церкви открыли школу — на одну зиму.	A school opens at the church, for one winter.
+early	y	eu ru latam us	При церкви открыли школу — на одну зиму.	A school opens at the church, for one winter.
 early	y		Вербовщики увели соседского парня в солдаты на двадцать пять лет.	The recruiters take the neighbour's son for a soldier for twenty-five years.
 early	y		Впервые {увидел|увидела} часы. Они тикают, как живые.	You see a clock for the first time. It ticks like something alive.
 early	y		Почтовая карета прошла через село. Все выбежали смотреть.	The mail coach passes through the village. Everyone runs out to look.
@@ -124,7 +124,7 @@ early	a		Приехал землемер, делят землю.	The surveyor ar
 early	a		Неурожай: хлеб подорожал втрое.	A bad harvest: bread costs three times as much.
 early	a		Письмо от брата из города. Читал его дьячок, ты слушал{|а} трижды.	A letter from your brother in town. The sexton reads it; you listen three times.
 early	a		Перекрыли крышу железом. Дождь теперь стучит иначе.	You put an iron roof on. The rain sounds different now.
-early	a		Барин проиграл деревню в карты. Новый барин строже.	The master loses the village at cards. The new master is harder.
+early	a	ru	Барин проиграл деревню в карты. Новый барин строже.	The master loses the village at cards. The new master is harder.
 early	a		Ребёнку сделали прививку от оспы — первому в селе.	Your child is vaccinated against smallpox, the first in the village.
 early	o		Внук читает тебе вслух газету. Половину слов ты не понимаешь.	A grandson reads you the newspaper aloud. You understand half the words.
 early	o		Ты пережил{|а} всех своих ровесников.	You outlive everyone your age.
@@ -145,7 +145,7 @@ ind	j		Впервые {слышал|слышала} граммофон.	You hear
 ind	j		В город приехал цирк с аэропланом.	A circus with an aeroplane comes to town.
 ind	j		В кино показывали поезд, и весь зал пригнулся.	A train comes at you in the cinema, and the whole hall ducks.
 ind	j		Купил{|а} велосипед в рассрочку. Ездишь на нём на работу.	You buy a bicycle on instalments. You ride it to work.
-ind	j		Воскресенье у реки: самовар, гармонь, все свои.	Sunday by the river: a tea urn, an accordion, all your people.
+ind	j	ru	Воскресенье у реки: самовар, гармонь, все свои.	Sunday by the river: a tea urn, an accordion, all your people.
 ind	j		Пришла посылка от родни из-за океана: шоколад и фотография.	A parcel from family across the ocean: chocolate and a photograph.
 ind	y		{Уехал|Уехала} в город на заработки.	You go to the city for work.
 ind	y		Сосед вернулся из Америки и рассказывал про небоскрёбы.	A neighbour comes back from America and talks about skyscrapers.

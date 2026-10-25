@@ -113,6 +113,7 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
     private var kidsAlive = 0
     private var story: Tx? = null
     private var meet: Int? = null
+    private var alive = false
 
     private val entries = mutableListOf<Entry>()
     private val used = mutableSetOf<Line>()
@@ -147,6 +148,8 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
         val sur = if (Names.keepsSurnames(cult, e.i)) heir?.sur?.takeIf { heir.cult == cult } ?: p.sur.random(rnd) else null
         val name = Names.name(cult, e.i, sex, first, sur, rnd)
         death = if (rnd.nextDouble() < q0(e, region)) rnd.nextInt(5) else tri(e.die).roundToInt()
+        // A life that would outrun today stops at today, unfinished.
+        if (y + death > NOW) { death = NOW - y; alive = true }
         val share = e.births / World.TOTAL * region.w / e.regions.sumOf { it.w } * estate.w / pool.sumOf { it.w } * .5
         birth = Birth(seed, e, region, cult, estate, sex, y, first, sur, name, share, heir)
         parentLit = rnd.nextDouble() < if (rank >= 3) (e.lit * 6).coerceAtMost(.95) else e.lit * .6
@@ -433,14 +436,15 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             else -> listOf(tx("{Уснул|Уснула} и не {проснулся|проснулась}.", "Went to sleep and did not wake."), tx("Сердце.", "The heart."), tx("Старость.", "Old age."), tx("Тихо, при детях.", "Quietly, with the children near."))
         }.random(rnd)
         val when_ = when {
+            alive -> tx("Сейчас тебе ${Years.yearsRu(a)}. Дальше книга ещё не написана.", "You are $a now. The rest of the book is not written yet.")
             a < 1 -> tx("{Умер|Умерла} младенцем.", "Died in infancy.")
             a < 5 -> tx("{Умер|Умерла} на ${a + 1}-м году.", "Died aged $a.")
             else -> tx("{Умер|Умерла} в $a ${Years.plural(a, "год", "года", "лет")}.", "Died aged $a.")
         }
-        add(a, when_ + Tx(" ", " ") + how, Mark.DEATH)
+        add(a, if (alive) when_ else when_ + Tx(" ", " ") + how, Mark.DEATH)
 
         val ep = mutableListOf<Tx>()
-        if (a < 5) ep += listOf(tx("Прожил{|а} мало, но {был|была} {любим|любима}.", "Lived little, and was loved."), tx("Мать помнила до конца своих дней.", "Mother remembered to the end of her days.")).random(rnd)
+        if (a < 5 && !alive) ep += listOf(tx("Прожил{|а} мало, но {был|была} {любим|любима}.", "Lived little, and was loved."), tx("Мать помнила до конца своих дней.", "Mother remembered to the end of her days.")).random(rnd)
         else {
             if (firstLit) ep += tx("{Первый|Первая} в роду, кто {научился|научилась} читать.", "The first in the family to read.")
             if (kids > 0) ep += if (kidsAlive < kids) tx("{Пережил|Пережила} ${Years.childrenAcc(kids - kidsAlive)}.", "Outlived ${Years.childrenEn(kids - kidsAlive)}.")
@@ -455,6 +459,7 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             if (meet != null) ep += tx("Однажды {видел|видела} того, о ком потом писали книги.", "Once met someone later written about in books.")
             if (ep.isEmpty()) ep += listOf(tx("{Жил|Жила} как все. Это немало.", "Lived like everyone. That is no small thing."), tx("{Работал|Работала} и не {жаловался|жаловалась}.", "Worked and did not complain.")).random(rnd)
         }
+        if (alive) ep.add(0, tx("{Жив|Жива} и сейчас.", "Still alive."))
         val epitaph = ep.take(3).reduce { x, y -> x + Tx(" ", " ") + y }
 
         val f = birth.first
@@ -462,7 +467,7 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
             Tx("Сколько людей сегодня помнят по имени твою прабабушку?", "How many people today remember your great-grandmother's name?"),
             Tx("Что в твоём сегодняшнем дне показалось бы этому человеку чудом?", "What in your day today would look like a miracle to this person?"),
         )
-        if (a < 5) qs += Tx("Эта жизнь длилась ${Years.yearsRu(a + 1)}. Чего ты ждёшь от своих ближайших четырёх?", "This life lasted ${Years.yearsEn(a + 1)}. What do you hope for from your next four?")
+        if (a < 5 && !alive) qs += Tx("Эта жизнь длилась ${Years.yearsRu(a + 1)}. Чего ты ждёшь от своих ближайших четырёх?", "This life lasted ${Years.yearsEn(a + 1)}. What do you hope for from your next four?")
         else {
             if (!sawSea) qs += tx("${f.ru} так и не {увидел|увидела} моря. Когда море в последний раз было у тебя перед глазами?", "${f.en} never saw the sea. When was the sea last in front of your eyes?")
             if (!lit && a >= 12) qs += tx("${f.ru} так и не {научился|научилась} читать. Какую книгу стоило бы прочесть вслух — и кому?", "${f.en} never learned to read. Which book would be worth reading aloud, and to whom?")
@@ -480,6 +485,9 @@ class Life private constructor(private val content: Content, seed: Long, heir: H
     }
 
     companion object {
+        /** The year the books are written up to. */
+        const val NOW = 2026
+
         private val STOPS = listOf(
             0 to S.BIRTH, 4 to S.CHILD, 8 to S.CHILD, 12 to S.WORK, 15 to S.YOUTH, 17 to S.MARRY17, 24 to S.MARRY24, 28 to S.JOY,
             33 to S.CRISIS, 39 to S.ADULT, 45 to S.LEGACY, 51 to S.ADULT, 58 to S.OLD, 64 to S.JOY, 70 to S.WISH,
@@ -552,5 +560,8 @@ object Years {
         1 -> "один ребёнок"; 2 -> "двое детей"; 3 -> "трое детей"; 4 -> "четверо детей"; 5 -> "пятеро детей"; 6 -> "шестеро детей"; 7 -> "семеро детей"
         else -> "$n детей"
     }
-    fun childrenEn(n: Int) = if (n == 1) "one child" else "$n children"
+    fun childrenEn(n: Int) = when (n) {
+        1 -> "one child"; 2 -> "two children"; 3 -> "three children"; 4 -> "four children"; 5 -> "five children"; 6 -> "six children"; 7 -> "seven children"
+        else -> "$n children"
+    }
 }

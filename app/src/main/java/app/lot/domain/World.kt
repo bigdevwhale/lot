@@ -164,8 +164,8 @@ object World {
                 e("slave", "невольников", "enslaved people", 6.0, 0, "Работаешь на плантации от рассвета до темноты.", "You work on the plantation from dawn to dark.", "latam us af"),
                 e("craft", "ремесленников", "craftsmen", 9.0, 2, "{Стоишь у горна.|Шьёшь на заказ.}", "{You stand at the forge.|You sew to order.}"),
                 e("trade", "торговцев", "merchants", 6.0, 2, "Стоишь за прилавком.", "You stand behind the counter."),
-                e("clergy", "духовенства", "clergy", 2.0, 3, "Читаешь псалтирь над покойниками.", "You read the psalms over the dead."),
-                e("noble", "дворян", "gentry", 2.0, 3, "Учишь французский и танцы.", "You learn French and dancing."),
+                e("clergy", "духовенства", "clergy", 2.0, 3, "Помогаешь отцу в храме: свечи, молитвы, похороны.", "You help your father at the temple: candles, prayers, funerals."),
+                e("noble", "дворян", "gentry", 2.0, 3, "Учишься письму, верховой езде и манерам.", "You learn letters, riding and manners."),
             )),
         Era(5, Group.IND, Tx("Век машин", "Age of machines"), Tx("1850 – 1950", "1850 – 1950"), 1850, 1950, 8.0, .28, Triple(8, 58, 95), .5, 5.0, 0xFF6A3F6E,
             listOf(

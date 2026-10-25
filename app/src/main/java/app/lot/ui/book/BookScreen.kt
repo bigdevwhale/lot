@@ -145,7 +145,18 @@ private fun EntryRow(e: Entry, w: Words, fresh: Boolean, delayIndex: Int) {
                     // The ruled lines of the register, under each written line.
                     val l = lines ?: return@drawBehind
                     for (i in 0 until l.lineCount) { val y = l.getLineBottom(i) - 2.dp.toPx(); drawLine(C.rule, Offset(-44.dp.toPx(), y), Offset(size.width, y), 1f) }
-                }.drawWithContent { clipRect(right = size.width * ink.value) { this@drawWithContent.drawContent() } },
+                }.drawWithContent {
+                    // The pen writes one line after another, left to right.
+                    val l = lines
+                    if (l == null || ink.value >= 1f) { drawContent(); return@drawWithContent }
+                    val widths = (0 until l.lineCount).map { l.getLineRight(it) }
+                    var left = widths.sum() * ink.value
+                    for (i in widths.indices) {
+                        if (left <= 0f) break
+                        clipRect(0f, l.getLineTop(i), minOf(widths[i], left), l.getLineBottom(i)) { this@drawWithContent.drawContent() }
+                        left -= widths[i]
+                    }
+                },
             )
         }
     }

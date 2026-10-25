@@ -73,7 +73,8 @@ fun LotRoot(settings: Settings) {
         CompositionLocalProvider(LocalToast provides toaster) { Box(Modifier.fillMaxSize()) { Onboarding(words); ToastHost(toaster) } }
         return
     }
-    val s = state ?: run { Box(Modifier.fillMaxSize().paper()); return }
+    val ready by c.ready.collectAsStateWithLifecycle()
+    val s = state?.takeIf { ready } ?: run { Box(Modifier.fillMaxSize().paper()); return }
     val home = Home(s, settings, words, System.currentTimeMillis())
 
     var tab by rememberSaveable { mutableStateOf(if (s.page?.end == null && s.page != null) Tab.BOOK else Tab.DRAW) }

@@ -2,7 +2,6 @@ package app.lot
 
 import android.app.Application
 import android.content.Context
-import androidx.appcompat.app.AppCompatDelegate
 import app.lot.data.DemoSeed
 import app.lot.data.LotDb
 import app.lot.data.Repo
@@ -11,6 +10,7 @@ import app.lot.domain.Content
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
 class AppContainer(context: Context) {
@@ -20,6 +20,8 @@ class AppContainer(context: Context) {
     val repo = Repo(db, content)
     val settings = SettingsStore(app)
     val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+    /** False while the demo build is still living its first thirty lives; the screens wait for it. */
+    val ready = MutableStateFlow(!BuildConfig.DEMO)
 
     /** Fire-and-forget so a write survives the screen being closed right after tapping. */
     fun write(block: suspend AppContainer.() -> Unit) {
@@ -35,8 +37,9 @@ class LotApp : Application() {
         super.onCreate()
         container = AppContainer(this)
         container.scope.launch {
-            if (BuildConfig.DEMO) DemoSeed.seedIfEmpty(container, AppCompatDelegate.getApplicationLocales().toLanguageTags().startsWith("ru") || resources.configuration.locales[0].language == "ru")
+            if (BuildConfig.DEMO) DemoSeed.seedIfEmpty(container, ru)
             container.repo.refresh()
+            container.ready.value = true
         }
     }
 }

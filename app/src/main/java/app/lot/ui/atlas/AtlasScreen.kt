@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.systemGestureExclusion
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -60,7 +61,7 @@ fun AtlasScreen(h: Home, onLife: (Long) -> Unit) {
             Pin(r.lon, r.lat, Color(World.ERAS[l.eraI].color), l.death < 5, l.id.toInt())
         }
         Canvas(Modifier.padding(horizontal = 12.dp, vertical = 6.dp).fillMaxWidth().aspectRatio(MapArt.W / MapArt.H)) { map(pins) }
-        Row(Modifier.padding(horizontal = 16.dp), verticalAlignment = Alignment.CenterVertically) {
+        Row(Modifier.padding(start = 16.dp, end = 28.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(if (u >= 1f) w.t("все жизни", "all lives") else w.t("до ", "until ") + w.year(until), style = T.Small, modifier = Modifier.width(118.dp))
             TimeSlider(u, Modifier.weight(1f)) { u = it }
         }
@@ -126,18 +127,21 @@ private fun Note(head: String, body: String, onClick: () -> Unit) {
 /** A thin engraved rule with a brass bead to drag along time. */
 @Composable
 private fun TimeSlider(u: Float, modifier: Modifier, onChange: (Float) -> Unit) {
-    fun at(x: Float, w: Float) = (x / w).coerceIn(0f, 1f)
+    // The track is inset by the bead's radius, and the system back swipe is kept off it.
+    fun at(x: Float, w: Float, r: Float) = ((x - r) / (w - 2 * r)).coerceIn(0f, 1f)
     Canvas(
-        modifier.height(36.dp)
-            .pointerInput(Unit) { detectTapGestures { onChange(at(it.x, size.width.toFloat())) } }
-            .pointerInput(Unit) { detectHorizontalDragGestures { ch, _ -> onChange(at(ch.position.x, size.width.toFloat())) } },
+        modifier.height(40.dp).systemGestureExclusion()
+            .pointerInput(Unit) { detectTapGestures { onChange(at(it.x, size.width.toFloat(), 12.dp.toPx())) } }
+            .pointerInput(Unit) { detectHorizontalDragGestures { ch, _ -> onChange(at(ch.position.x, size.width.toFloat(), 12.dp.toPx())) } },
     ) {
         val y = size.height / 2
-        drawLine(C.line, Offset(0f, y), Offset(size.width, y), 2.dp.toPx())
-        drawLine(C.ink2, Offset(0f, y), Offset(size.width * u, y), 2.dp.toPx())
-        for (t in listOf(.3f, .55f, .8f)) drawLine(C.ink2, Offset(size.width * t, y - 5.dp.toPx()), Offset(size.width * t, y + 5.dp.toPx()), 1.dp.toPx())
-        drawCircle(C.ink2, 9.dp.toPx(), Offset(size.width * u, y))
-        drawCircle(C.woodHi, 6.dp.toPx(), Offset(size.width * u, y))
+        val r = 12.dp.toPx()
+        fun x(t: Float) = r + (size.width - 2 * r) * t
+        drawLine(C.line, Offset(x(0f), y), Offset(x(1f), y), 2.dp.toPx())
+        drawLine(C.ink2, Offset(x(0f), y), Offset(x(u), y), 2.dp.toPx())
+        for (t in listOf(.3f, .55f, .8f)) drawLine(C.ink2, Offset(x(t), y - 5.dp.toPx()), Offset(x(t), y + 5.dp.toPx()), 1.dp.toPx())
+        drawCircle(C.ink2, 9.dp.toPx(), Offset(x(u), y))
+        drawCircle(C.woodHi, 6.dp.toPx(), Offset(x(u), y))
     }
 }
 
