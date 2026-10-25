@@ -51,7 +51,7 @@ import app.lot.ui.theme.T
 
 /** Where you were born across the ages, how your lots compare with everyone ever born, the people met, and your own answers. */
 @Composable
-fun AtlasScreen(h: Home, onLife: (Long) -> Unit) {
+fun AtlasScreen(h: Home, onLife: (Long) -> Unit, first: Long? = null) {
     val w = h.w
     val lives = h.s.lives
     var u by rememberSaveable { mutableFloatStateOf(1f) }
@@ -59,11 +59,33 @@ fun AtlasScreen(h: Home, onLife: (Long) -> Unit) {
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
         TopBar(w.t("Атлас", "Atlas"), if (lives.isEmpty()) w.t("Здесь появятся места твоих рождений.", "Your birthplaces will appear here.")
             else w.t("Жизней: ${lives.size}. Каждая точка — место рождения.", "Lives: ${lives.size}. Each dot is a birthplace."))
-        val pins = lives.filter { u >= 1f || it.year <= until }.map { l ->
+        var picked by rememberSaveable { mutableStateOf(first) }
+        val shown = lives.filter { u >= 1f || it.year <= until }
+        val pins = shown.map { l ->
             val r = World.region(l.region, l.eraI)
-            Pin(r.lon, r.lat, Color(World.ERAS[l.eraI].color), l.death < 5, l.id.toInt())
+            Pin(r.lon, r.lat, Color(World.ERAS[l.eraI].color), l.death < 5, l.id.toInt(), l.id == picked)
         }
-        Canvas(Modifier.padding(horizontal = 12.dp, vertical = 6.dp).fillMaxWidth().aspectRatio(MapArt.W / MapArt.H)) { map(pins) }
+        Canvas(Modifier.padding(horizontal = 12.dp, vertical = 6.dp).fillMaxWidth().aspectRatio(MapArt.W / MapArt.H)
+            .pointerInput(shown) {
+                // The nearest dot within a finger's reach; a tap on open sea closes the note.
+                detectTapGestures { tap ->
+                    val k = size.width / MapArt.W
+                    val near = pins.indices.minByOrNull { (MapArt.at(pins[it]) * k - tap).getDistance() }
+                    picked = near?.takeIf { (MapArt.at(pins[it]) * k - tap).getDistance() < 24.dp.toPx() }?.let { shown[it].id }
+                }
+            }) { map(pins) }
+        shown.firstOrNull { it.id == picked }?.let { l ->
+            val e = World.ERAS[l.eraI]
+            Row(Modifier.padding(horizontal = 16.dp, vertical = 4.dp).fillMaxWidth().clip(RoundedCornerShape(6.dp)).background(C.paperHi)
+                .clickable { onLife(l.id) }.padding(horizontal = 12.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.size(10.dp).clip(RoundedCornerShape(5.dp)).background(Color(e.color)))
+                Column(Modifier.padding(start = 10.dp).weight(1f)) {
+                    Text(w.x(l.name), style = T.BodyB)
+                    Text("${w.year(l.year)} – ${w.year(l.year + l.death)} · ${w.x(e.name)} · ${w.x(World.region(l.region, l.eraI).name)}", style = T.Small)
+                }
+                Text(w.t("Книга ›", "Book ›"), style = T.Small.copy(color = C.red), modifier = Modifier.padding(start = 8.dp))
+            }
+        }
         Row(Modifier.padding(start = 16.dp, end = 28.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(if (u >= 1f) w.t("все жизни", "all lives") else w.t("до ", "until ") + w.year(until), style = T.Small, modifier = Modifier.width(118.dp))
             TimeSlider(u, Modifier.weight(1f)) { u = it }

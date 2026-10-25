@@ -19,6 +19,8 @@ data class Settings(
     val witness: Boolean = false,
     /** The era, area and sex the reader keeps asking of the lot; any by default. */
     val wish: Wish = Wish(),
+    /** The book is written in the registrar's hand; false prints it in plain type. */
+    val hand: Boolean = true,
 )
 
 class SettingsStore(context: Context) {
@@ -26,7 +28,7 @@ class SettingsStore(context: Context) {
 
     val settings: Flow<Settings> = store.data.map { it.read() }
 
-    private fun Preferences.read() = Settings(onboarded = this[ONBOARDED] ?: false, witness = this[WITNESS] ?: false, wish = Wish.decode(this[WISH]))
+    private fun Preferences.read() = Settings(onboarded = this[ONBOARDED] ?: false, witness = this[WITNESS] ?: false, wish = Wish.decode(this[WISH]), hand = this[HAND] ?: true)
 
     suspend fun now(): Settings = settings.first()
 
@@ -36,6 +38,7 @@ class SettingsStore(context: Context) {
             it[ONBOARDED] = s.onboarded
             it[WITNESS] = s.witness
             it[WISH] = s.wish.encode()
+            it[HAND] = s.hand
         }
     }
 
@@ -43,5 +46,6 @@ class SettingsStore(context: Context) {
         val ONBOARDED = booleanPreferencesKey("onboarded")
         val WITNESS = booleanPreferencesKey("witness")
         val WISH = stringPreferencesKey("wish")
+        val HAND = booleanPreferencesKey("hand")
     }
 }

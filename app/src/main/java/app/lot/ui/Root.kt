@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -46,6 +47,7 @@ import app.lot.ui.components.paper
 import app.lot.ui.draw.DrawScreen
 import app.lot.ui.onboarding.Onboarding
 import app.lot.ui.settings.SettingsSheet
+import app.lot.ui.theme.Ink
 import app.lot.ui.theme.C
 import app.lot.ui.theme.T
 
@@ -70,6 +72,7 @@ fun LotRoot(settings: Settings) {
     val state by c.repo.state.collectAsStateWithLifecycle()
     val words = remember(ctx.ru) { Words(ctx.ru) }
     val toaster = remember { Toaster() }
+    SideEffect { Ink.hand = settings.hand }
     LaunchedEffect(Unit) { c.repo.refresh() }
     if (!settings.onboarded) {
         CompositionLocalProvider(LocalToast provides toaster) { Box(Modifier.fillMaxSize()) { Onboarding(words); ToastHost(toaster) } }

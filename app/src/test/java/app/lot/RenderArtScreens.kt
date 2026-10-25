@@ -70,8 +70,13 @@ abstract class ScreensBase {
     @Test fun end() = shot("3-end") { h -> ReadSheet(h, h.story(), {}, {}) }
     @Test fun chest() = shot("4-chest") { ChestScreen(it) {} }
     @Test fun thing() = shot("5-thing") { h -> ThingSheet(h, h.s.things.maxBy { h.s.holders(it.id).size }.id, {}, {}) }
-    @Test fun atlas() = shot("6-atlas") { AtlasScreen(it) {} }
+    @Test fun atlas() = shot("6-atlas") { AtlasScreen(it, {}) }
     @Test fun settings() = shot("7-settings") { SettingsSheet(it) {} }
+    @Test fun atlasPicked() = shot("6-atlas-picked") { h -> AtlasScreen(h, {}, h.story()) }
+    @Test fun endPrinted() {
+        app.lot.ui.theme.Ink.hand = false
+        try { shot("3-end-printed") { h -> ReadSheet(h, h.story(), {}, {}) } } finally { app.lot.ui.theme.Ink.hand = true }
+    }
 }
 
 class RenderArtScreensEn : ScreensBase() {

@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.drawscope.scale
 import app.lot.ui.theme.C
 
 /** A pin on the atlas: where someone was born, coloured by era. */
-class Pin(val lon: Float, val lat: Float, val color: Color, val infant: Boolean, val jitter: Int)
+class Pin(val lon: Float, val lat: Float, val color: Color, val infant: Boolean, val jitter: Int, val on: Boolean = false)
 
 /** An old equirectangular world map, 360×180 units, the continents drawn from a few dozen points each. */
 object MapArt {
@@ -44,6 +44,9 @@ object MapArt {
 
     fun xy(lon: Float, lat: Float) = Offset(lon + 180f, 90f - lat)
 
+    /** Where a pin sits on the map, jitter included, in map units. */
+    fun at(p: Pin) = xy(p.lon, p.lat) + Offset(((p.jitter * 37) % 11 - 5) * .8f, ((p.jitter * 53) % 9 - 4) * .8f)
+
     fun DrawScope.map(pins: List<Pin>) {
         val k = size.width / W
         scale(k, k, Offset.Zero) {
@@ -60,9 +63,9 @@ object MapArt {
                     drawPath(p, C.land)
                     drawPath(p, C.ink2, style = Stroke(.7f, join = StrokeJoin.Round))
                 }
-                for (p in pins) {
-                    val j = Offset(((p.jitter * 37) % 11 - 5) * .8f, ((p.jitter * 53) % 9 - 4) * .8f)
-                    val c = xy(p.lon, p.lat) + j
+                for (p in pins.sortedBy { it.on }) {
+                    val c = at(p)
+                    if (p.on) drawCircle(C.ink, 5.2f, c, style = Stroke(1f))
                     drawCircle(C.page, 3.6f, c)
                     drawCircle(p.color, 2.8f, c)
                     if (p.infant) drawCircle(C.page, .9f, c)

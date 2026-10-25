@@ -50,6 +50,16 @@ fun SettingsSheet(h: Home, onClose: () -> Unit) {
             }
         }
         Gap(10)
+        Card {
+            Text(w.t("Почерк книги", "The book's hand"), style = T.Heading)
+            Text(w.t("Родилась в семье пахаря. Видела море.", "Born to a ploughman's family. Saw the sea."),
+                style = T.Write, modifier = Modifier.padding(top = 6.dp))
+            Flow(Modifier.padding(top = 8.dp)) {
+                Chip(w.t("рукописный", "handwritten"), st.hand) { c.write { settings.update { it.copy(hand = true) } } }
+                Chip(w.t("печатный", "printed"), !st.hand) { c.write { settings.update { it.copy(hand = false) } } }
+            }
+        }
+        Gap(10)
         CommunityLinks(w)
         Gap(10)
         Card {

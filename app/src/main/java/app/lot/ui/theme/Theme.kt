@@ -3,6 +3,9 @@ package app.lot.ui.theme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
@@ -57,6 +60,11 @@ val Serif = FontFamily(
 /** The registrar's hand in the book. */
 val Hand = FontFamily(Font(R.font.marck_script, FontWeight.Normal))
 
+/** Whether the book is written by hand or printed; a setting, read by the book's styles. */
+object Ink {
+    var hand by mutableStateOf(true)
+}
+
 object T {
     val Title = TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 32.sp, color = C.ink)
     val Heading = TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 19.sp, lineHeight = 24.sp, color = C.ink)
@@ -67,9 +75,12 @@ object T {
     val Label = TextStyle(fontFamily = Serif, fontSize = 11.sp, lineHeight = 14.sp, letterSpacing = 1.4.sp, color = C.muted)
     val Button = TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 16.sp, lineHeight = 20.sp)
     val Big = TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 20.sp, lineHeight = 24.sp, color = C.ink)
-    val Write = TextStyle(fontFamily = Hand, fontSize = 21.sp, lineHeight = 26.sp, color = C.blue)
-    val WriteAge = TextStyle(fontFamily = Hand, fontSize = 20.sp, lineHeight = 26.sp, color = C.red)
-    val Epitaph = TextStyle(fontFamily = Hand, fontSize = 24.sp, lineHeight = 30.sp, color = C.ink)
+    val Write get() = if (Ink.hand) TextStyle(fontFamily = Hand, fontSize = 21.sp, lineHeight = 26.sp, color = C.blue)
+        else TextStyle(fontFamily = Serif, fontSize = 16.sp, lineHeight = 23.sp, color = C.blue)
+    val WriteAge get() = if (Ink.hand) TextStyle(fontFamily = Hand, fontSize = 20.sp, lineHeight = 26.sp, color = C.red)
+        else TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 15.sp, lineHeight = 23.sp, color = C.red)
+    val Epitaph get() = if (Ink.hand) TextStyle(fontFamily = Hand, fontSize = 24.sp, lineHeight = 30.sp, color = C.ink)
+        else TextStyle(fontFamily = Serif, fontStyle = FontStyle.Italic, fontSize = 19.sp, lineHeight = 26.sp, color = C.ink)
 }
 
 @Composable
