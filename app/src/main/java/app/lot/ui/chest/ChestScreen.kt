@@ -71,6 +71,10 @@ fun ChestScreen(h: Home, onThing: (Long) -> Unit) {
                         else holders.firstOrNull()?.let { w.year(it.year) } ?: "",
                         style = T.Small.copy(fontSize = T.Label.fontSize, color = if (holders.size > 1) C.red else C.muted),
                     )
+                    if (holders.size > 1) Text(
+                        "${w.year(holders.minOf { it.year })} – ${w.year(holders.maxOf { it.year + it.death })}",
+                        style = T.Small.copy(fontSize = T.Label.fontSize, color = C.muted, textAlign = TextAlign.Center),
+                    )
                 }
             }
         }
@@ -87,7 +91,14 @@ fun ThingSheet(h: Home, id: Long, onLife: (Long) -> Unit, onClose: () -> Unit) {
     Sheet(w.x(k.name).replaceFirstChar { it.uppercase() }, onClose, w.t("Закрыть", "Close")) {
         Canvas(Modifier.size(110.dp).align(Alignment.CenterHorizontally)) { thing(k.shape) }
         Text(
-            if (holders.size > 1) w.t("Переходила из рук в руки: ${w.n(holders.size, "поколение", "поколения", "поколений", "", "")}.", "Passed from hand to hand: ${holders.size} generations.")
+            if (holders.size > 1) {
+                // The thing has been in the family from the first holder's birth to the last holder's death (or today).
+                val from = holders.minOf { it.year }
+                val to = holders.maxOf { it.year + it.death }
+                val y = to - from
+                w.t("Переходила из рук в руки: ${w.n(holders.size, "поколение", "поколения", "поколений", "", "")}, ${w.n(y, "год", "года", "лет", "", "")} — с ${w.year(from)} по ${w.year(to)}.",
+                    "Passed from hand to hand: ${holders.size} generations, $y years, from ${w.year(from)} to ${w.year(to)}.")
+            }
             else w.t("Одна жизнь.", "One life."),
             style = T.Italic, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
         )

@@ -9,14 +9,25 @@ weight: 2
 q: Под вечер в дверь стучит чужой человек. Просит пустить переночевать. | At dusk a stranger knocks at the door and asks to stay the night.
 door: Пустить к очагу | Let him in by the hearth
 shut: f !married | Незамужней пускать в дом чужого мужчину нельзя. | An unmarried woman cannot let a strange man into the house.
-out: 60 | Он ест молча, а утром оставляет на лавке хороший нож. | He eats in silence and in the morning leaves a good knife on the bench. | wealth+1 kind
-out: 25 | Он до полуночи рассказывает о дальних землях. Дети помнят его годами. | He tells of far lands till midnight. The children remember him for years. | kind
-out: 15 | Утром его нет. Нет и твоего плаща. | In the morning he is gone. So is your cloak. | wealth-1
+out: 15 | Он до полуночи рассказывает о дальних землях. Дети помнят его годами. | He tells of far lands till midnight. The children remember him for years. | kind
+out: 10 | Утром его нет. Нет и твоего плаща. | In the morning he is gone. So is your cloak. | wealth-1
+out: 30 | Он ест молча, а утром оставляет на лавке медный нож. | He eats in silence and in the morning leaves a copper knife on the bench. | wealth+1 kind | @anc
+out: 25 | Это беглый раб. Утром за ним приходят люди хозяина и бьют заодно тебя. | He is a runaway slave. In the morning his master's men come for him and beat you as well. | kind risk5 | @anc
+out: 30 | Это паломник. Уходя, он дарит тебе ракушку из святого места и молится за ваш дом. | He is a pilgrim. As he leaves he gives you a shell from a holy place and prays for your house. | faith kind | @med #eu
+out: 30 | Это монах с чашей для подаяний. Утром он читает сутру у вашего порога. | He is a monk with an alms bowl. In the morning he chants a sutra at your door. | faith kind | @med !#eu !#ru !#me !#af
+out: 20 | Он идёт из соседней долины, где мор. Через месяц мор приходит и к вам. | He comes from the next valley, where there is plague. A month later it reaches you too. | kind risk10 | @med
+out: 30 | Это беглый солдат. Утром он меняет мундир на старую рубаху твоего отца и уходит лесом. | He is a deserter. In the morning he swaps his uniform for your father's old shirt and goes off through the woods. | kind | @early
+out: 25 | Это коробейник. Утром он дарит детям ленту и печатную картинку со святым. | He is a pedlar. In the morning he gives the children a ribbon and a printed picture of a saint. | kind | @early #eu
 ep: Никого не {оставлял|оставляла} ночью за дверью. | Never left anyone outside at night.
 ask: Кого ты пустишь к себе переночевать? | Whom would you let sleep under your roof?
 door: Не открывать | Keep the door shut
-out: 70 | Шаги уходят в темноту. Ты долго не можешь уснуть. | The footsteps go off into the dark. You lie awake a long time. |
-out: 30 | Наутро у соседей пропадает овца. Может, это он. | Next morning the neighbours are missing a sheep. Maybe it was him. |
+out: 20 | Шаги уходят в темноту. Ты долго не можешь уснуть. | The footsteps go off into the dark. You lie awake a long time. |
+out: 15 | Наутро у соседей пропадает овца. Может, это он. | Next morning the neighbours are missing a sheep. Maybe it was him. |
+out: 30 | Он ночует у храма. Утром жрец говорит, что это был посланец бога, и долго смотрит на тебя. | He sleeps by the temple. In the morning the priest says he was a messenger of the god, and gives you a long look. | faith | @anc
+out: 30 | Утром его находят у дороги замёрзшим. Хоронят без имени, за оградой. | In the morning he is found frozen by the road. He is buried without a name, outside the churchyard wall. | | @med #eu
+out: 25 | Через неделю говорят: это был гонец князя. Князь велел запомнить двор, где ему не открыли. | A week later word goes round: he was the prince's messenger. The prince has had the house that shut him out marked. | wealth-1 | @med
+out: 30 | Утром по деревне ходят солдаты и ищут беглого. Хорошо, что дверь была заперта. | In the morning soldiers go through the village looking for a runaway. Just as well the door stayed shut. | | @early
+out: 20 | У колодца говорят: ночью у мельника увели лошадь. | At the well they say the miller's horse was taken in the night. | | @early
 
 id: o_sister_given
 groups: stone anc med early
@@ -26,16 +37,32 @@ ages: 19-39
 weight: 1
 q: Старшие решили отдать твою сестру за вдовца вдвое старше её. | The elders have decided to give your sister to a widower twice her age.
 door: Промолчать | Say nothing
-out: 60 | Свадьба. Вдовец оказывается не злым. Сестра привыкает. | A wedding. The widower turns out not unkind. Your sister gets used to it. | wealth+1
-out: 40 | Сестра уходит к нему и почти перестаёт смеяться. | Your sister goes to him and almost stops laughing. |
+out: 20 | Сестра уходит к нему и почти перестаёт смеяться. | Your sister goes to him and almost stops laughing. |
+out: 35 | Вдовец — лучший охотник рода. Всю зиму сестра ходит в новой шкуре. | The widower is the band's best hunter. All winter your sister wears a new hide. | wealth+1 | @stone
+out: 25 | Сестра растит его детей от первой жены как своих. | Your sister raises his children by his first wife as her own. | kind | @stone
+out: 35 | За сестру дают двух волов и медный браслет. Отец доволен. | Two oxen and a copper bracelet are given for your sister. Father is pleased. | wealth+1 | @anc
+out: 25 | Сестра уходит в его дом третьей женой. Первые две встречают её молча. | Your sister goes to his house as third wife. The first two meet her in silence. | | @anc
+out: 30 | Свадьба. Вдовец оказывается не злым. Сестра привыкает. | A wedding. The widower turns out not unkind. Your sister gets used to it. | wealth+1 | @med
+out: 30 | Сестру увозят в красном паланкине. Свекровь встречает её у ворот без улыбки. | Your sister is carried off in a red sedan chair. Her mother-in-law meets her at the gate without a smile. | | !@stone #cn
+out: 30 | Сестру венчают на Покров. Через год она рожает мальчика, и вдовец в ней души не чает. | Your sister is wed at Intercession. A year later she bears a boy, and the widower dotes on her. | love | @early #ru
+out: 30 | Вдовец пишет у нотариуса брачный договор: если он умрёт, дом достанется сестре. | The widower has a notary draw up a marriage contract: if he dies, the house goes to your sister. | wealth+1 | @early #eu
 door: Заступиться перед старшими | Speak up before the elders
 shut: f | Женщину старшие не слушают. | The elders don't listen to a woman.
-out: 50 | Старшие ворчат, но ждут до осени. Осенью к сестре сватается парень из соседнего рода. | The elders grumble but wait till autumn. In autumn a lad from the next clan asks for her. | kind
-out: 50 | Тебя не слушают. Свадьбу играют всё равно, а родня жениха тебя запоминает. | Nobody listens. The wedding goes ahead, and the groom's kin remember you. |
+out: 20 | Тебя не слушают. Свадьбу играют всё равно, а родня жениха тебя запоминает. | Nobody listens. The wedding goes ahead, and the groom's kin remember you. |
+out: 35 | Старшие ворчат, но ждут до осени. Осенью к сестре сватается парень из соседнего рода. | The elders grumble but wait till autumn. In autumn a lad from the next clan asks for her. | kind | @stone
+out: 35 | Ты отдаёшь вдовцу свою козу, лишь бы он отступился. Он берёт козу и отступается. | You give the widower your goat if he'll give her up. He takes the goat and gives her up. | wealth-1 kind | @anc
+out: 35 | Старшие ворчат, но ждут до осени. Осенью к сестре сватается парень из соседнего села. | The elders grumble but wait till autumn. In autumn a lad from the next village asks for her. | kind | @med
+out: 20 | Сваха уже взяла подарки. Отказать — опозорить обе семьи. Свадьбу играют в срок. | The matchmaker has already taken the gifts. To refuse would shame both families. The wedding is held on time. | | !@stone #cn
+out: 35 | Ты ведёшь сестру к священнику. Он отказывается венчать её против воли. | You take your sister to the priest. He refuses to marry her against her will. | kind brave | @early #eu
+out: 35 | Ты идёшь к священнику: по указу без согласия невесты венчать нельзя. Свадьбу отменяют. | You go to the priest: by decree no bride may be wed without her consent. The wedding is called off. | kind brave | @early #ru
 ask: Когда в последний раз пришлось заступиться за родного человека? | When did you last stand up for one of your own?
 door: Помочь ей бежать | Help her run away
-out: 40 | Сестра уходит ночью с тем, кого любит. Через год приходит весть: жива. | Your sister leaves by night with the one she loves. A year later word comes: she is alive. | kind brave
-out: 60 | Её ловят на второй день. Позор на всю семью, а тебя бьют. | She is caught on the second day. Shame on the whole family, and you are beaten. | risk5 brave
+out: 20 | Её ловят на второй день. Позор на всю семью, а тебя бьют. | She is caught on the second day. Shame on the whole family, and you are beaten. | risk5 brave
+out: 35 | Сестра уходит к чужому роду за перевалом. На большом сборе ты видишь её с младенцем на руках. | Your sister goes to a strange band over the pass. At the great gathering you see her with a baby in her arms. | kind brave | @stone
+out: 30 | Сестра уходит ночью с тем, кого любит. Через год приходит весть: жива. | Your sister leaves by night with the one she loves. A year later word comes: she is alive. | kind brave | !@stone
+out: 30 | Сестра прячется в женском монастыре. Аббатиса не выдаёт её ни старшим, ни вдовцу. | Your sister hides in a convent. The abbess won't give her up to the elders or the widower. | kind brave faith | @med #eu
+out: 30 | Сестра уходит в обитель и принимает постриг. Вдовец остаётся ни с чем. | Your sister goes to a convent and takes the veil. The widower is left with nothing. | kind brave faith | @med #ru
+out: 30 | Сестра уходит в город и нанимается в служанки. Раз в год от неё привозит поклон возчик. | Your sister goes to town and hires out as a servant. Once a year a carter brings her greetings. | kind brave | @early
 
 id: o_sister_master
 groups: anc med early
@@ -45,15 +72,26 @@ ages: 19-39
 weight: 1
 q: Хозяин решил отдать твою сестру за своего старого конюха. Её никто не спрашивал. | The master has decided to give your sister to his old groom. Nobody asked her.
 door: Промолчать | Say nothing
-out: 60 | Свадьбу играют на заднем дворе. Конюх оказывается не злым, и сестра привыкает. | The wedding is held in the back yard. The groom turns out not unkind, and your sister gets used to it. |
-out: 40 | Сестра уходит в его каморку и почти перестаёт смеяться. | Your sister moves into his corner and almost stops laughing. |
+out: 20 | Сестра уходит в его каморку и почти перестаёт смеяться. | Your sister moves into his corner and almost stops laughing. |
+out: 35 | Свадьбы нет: хозяин просто велит ей спать при конюшне. Её дети тоже будут его рабами. | There is no wedding: the master just tells her to sleep by the stable. Her children will be his slaves too. | | @anc
+out: 35 | Свадьбу играют на заднем дворе. Конюх оказывается не злым, и сестра привыкает. | The wedding is held in the back yard. The groom turns out not unkind, and your sister gets used to it. | | @med
+out: 35 | Свадьбу играют на заднем дворе, барин дарит молодым рубль. Конюх не злой, сестра привыкает. | The wedding is held in the back yard, and the master gives the couple a rouble. The groom's not unkind; your sister gets used to it. | | @early #ru
+out: 30 | Их венчают в воскресенье, а через месяц хозяин продаёт обоих на другую плантацию. | They are married on Sunday, and a month later the master sells them both to another plantation. | | @early !#ru !#af
 door: Упасть хозяину в ноги | Throw yourself at the master's feet
-out: 40 | Хозяин смеётся, но откладывает свадьбу. К осени он о ней забывает. | The master laughs, but puts off the wedding. By autumn he has forgotten it. | kind brave
-out: 60 | Хозяин велит тебя высечь, чтобы не {лез|лезла} не в своё дело. Свадьба через неделю. | The master has you flogged for meddling. The wedding is a week later. | brave risk5
+out: 20 | Хозяин велит тебя высечь, чтобы не {лез|лезла} не в своё дело. Свадьба через неделю. | The master has you flogged for meddling. The wedding is a week later. | brave risk5
+out: 30 | Хозяин смеётся и отдаёт конюху другую рабыню. Сестру он оставляет прясть в доме. | The master laughs and gives the groom another slave girl. He keeps your sister spinning in the house. | kind brave | @anc
+out: 30 | Хозяин смеётся, но откладывает свадьбу. К осени он о ней забывает. | The master laughs, but puts off the wedding. By autumn he has forgotten it. | kind brave | @med
+out: 30 | За сестру вступается барыня: ей нужна горничная. Свадьбу отменяют. | The mistress speaks up for your sister: she needs a maid. The wedding is off. | kind brave | @early #ru
+out: 30 | Хозяин велит надсмотрщику дать тебе двадцать плетей. Свадьба в воскресенье. | The master tells the overseer to give you twenty lashes. The wedding is on Sunday. | brave risk10 | @early !#ru
 ask: Когда в последний раз пришлось заступиться за родного человека? | When did you last stand up for one of your own?
 door: Помочь ей бежать | Help her run away
-out: 30 | Сестра уходит ночью. Её ищут с собаками и не находят. | Your sister slips away by night. They hunt for her with dogs and don't find her. | kind brave
-out: 70 | Беглянку ловят на второй день. Её продают на сторону, а тебя бьют при всех. | The runaway is caught on the second day. She is sold away, and you are beaten in front of everyone. | risk10 brave
+out: 20 | Беглянку ловят на второй день. Её продают на сторону, а тебя бьют при всех. | The runaway is caught on the second day. She is sold away, and you are beaten in front of everyone. | risk10 brave
+out: 30 | Сестра бежит в храм и обнимает алтарь. Жрецы велят хозяину продать её. Новый хозяин мягче. | Your sister runs to the temple and clings to the altar. The priests make the master sell her. The new master is gentler. | kind brave | @anc #med
+out: 25 | Сестра уходит ночью. Её ищут с собаками и не находят. | Your sister slips away by night. They hunt for her with dogs and don't find her. | kind brave | @anc
+out: 30 | Сестра пробирается в город. Через год и день хозяин уже не может её вернуть. | Your sister slips into the town. After a year and a day her master can no longer claim her back. | kind brave | @med #eu
+out: 25 | Сестра уходит ночью. Её ищут с собаками и не находят. | Your sister slips away by night. They hunt for her with dogs and don't find her. | kind brave | @med !#eu
+out: 30 | Сестра уходит в леса к староверам. Беглых там не выдают. | Your sister goes into the forests to the Old Believers. They don't give runaways up. | kind brave | @early #ru
+out: 30 | Сестра уходит ночью в горы, к беглым. У них там свои деревни. | Your sister flees by night to the runaways in the hills. They have villages of their own there. | kind brave | @early !#ru
 
 id: o_stone_stranger
 groups: stone
@@ -208,16 +246,28 @@ ages: 19-64
 weight: 1
 q: На дороге лежит кошель. Тяжёлый. Вокруг никого. | A purse lies on the road. Heavy. No one around.
 door: Взять себе | Keep it
-out: 60 | Серебра хватает на корову. Никто ни о чём не спрашивает. | There's silver enough for a cow. Nobody asks a thing. | wealth+1
-out: 25 | Через неделю по сёлам ездит слуга и расспрашивает о кошеле. Ты закапываешь его под порогом. | A week later a servant rides round the villages asking about a purse. You bury it under the doorstep. | wealth+1
 out: 15 | Хозяин находит тебя. Тебя секут на площади. | The owner finds you. You are flogged in the square. | risk5 wealth-1
+out: 35 | В кошеле медные кольца и кусок серебра. Хватает на козу и мешок ячменя. | The purse holds copper rings and a lump of silver. Enough for a goat and a sack of barley. | wealth+1 | @anc !#cn !#in
+out: 35 | В кошеле бронзовые монеты в виде лопаток. Хватает на свинью. | The purse holds bronze coins shaped like spades. Enough for a pig. | wealth+1 | @anc #cn
+out: 35 | В кошеле серебряные монеты с выбитыми знаками. Хватает на корову. | The purse holds silver coins punched with marks. Enough for a cow. | wealth+1 | @anc #in
+out: 30 | Серебра хватает на корову. Никто ни о чём не спрашивает. | There's silver enough for a cow. Nobody asks a thing. | wealth+1 | @med !#cn
+out: 30 | В кошеле связка медных монет с дыркой. На неё можно прожить зиму. | The purse holds a string of copper cash. You could live a winter on it. | wealth+1 | !@anc #cn
+out: 20 | Через неделю по сёлам ездит слуга и расспрашивает о кошеле. Ты закапываешь его под порогом. | A week later a servant rides round the villages asking about a purse. You bury it under the doorstep. | wealth+1 | !@anc
+out: 35 | В кошеле серебро и сложенная бумага с печатью. Серебро ты тратишь, бумагу бросаешь в печь. | The purse holds silver and a folded paper with a seal. You spend the silver and put the paper in the stove. | wealth+1 | @early
 door: Отнести старосте | Take it to the headman
 shut: r0 | Найдут серебро у раба — никто не поверит, что найдено. | If silver turns up on a slave, nobody believes it was found.
-out: 50 | Хозяин — купец. Он даёт тебе монету и при всех называет честным человеком. | The owner is a merchant. He gives you a coin and calls you honest in front of everyone. | kind
-out: 50 | Староста забирает кошель. Больше его никто не видит. | The headman takes the purse. Nobody sees it again. |
+out: 20 | Староста забирает кошель. Больше его никто не видит. | The headman takes the purse. Nobody sees it again. |
+out: 30 | Кошель принадлежит жрецу храма. Он даёт тебе кувшин масла и благословение. | The purse belongs to a temple priest. He gives you a jar of oil and a blessing. | kind faith | @anc
+out: 30 | Хозяин — купец. Он даёт тебе монету и при всех называет честным человеком. | The owner is a merchant. He gives you a coin and calls you honest in front of everyone. | kind | !@anc
+out: 25 | Староста отдаёт кошель господину. Тот оставляет его себе: что найдено на его земле — его. | The headman hands the purse to the lord. He keeps it: what's found on his land is his. | | @med #eu
+out: 30 | О находке объявляют в церкви. Хозяин не находится, и через год серебро отдают тебе. | The find is cried in church. No owner comes forward, and after a year the silver is yours. | wealth+1 kind | @early #eu
+out: 25 | Староста пишет бумагу в уезд. Кошель уезжает с бумагой, а тебе остаётся расписка. | The headman writes to the district. The purse goes off with the paper; you are left with a receipt. | | @early !#eu
 ep: {Вернул|Вернула} хозяину найденное серебро. | Returned silver found on the road.
 door: Пройти мимо | Walk past
-out: 100 | Ты обходишь его стороной. Мало ли чьё. | You walk round it. Who knows whose it is. |
+out: 30 | Ты обходишь его стороной. Мало ли чьё. | You walk round it. Who knows whose it is. |
+out: 25 | Вечером говорят: кошель поднял пастух, а кошель был сборщика податей. Пастуха бьют палками как вора. | In the evening they say a shepherd picked it up, and it belonged to the tax collector. The shepherd is beaten as a thief. | | @anc
+out: 25 | Кошель поднимает сосед. Летом он кроет дом черепицей вместо соломы. | A neighbour picks it up. In summer he roofs his house with tiles instead of thatch. | | @med
+out: 25 | Кошель поднимает сосед. Вскоре он открывает у дороги лавку. | A neighbour picks it up. Soon he opens a little shop by the road. | | @early
 ask: Какая находка так и осталась у тебя? | What have you found and kept?
 
 id: o_widow
@@ -229,15 +279,29 @@ weight: 2
 q: Вдова на краю деревни осталась совсем одна. Крыша течёт, дров нет. | The widow at the edge of the village is all alone now. The roof leaks, and there's no firewood.
 door: Взять её к себе | Take her in
 shut: poor | Вам самим едва хватает. | You barely have enough yourselves.
-out: 60 | Она прядёт за двоих и знает траву от любой хвори. | She spins for two and knows a herb for every ailment. | kind wealth+1
-out: 40 | Она ворчит с утра до ночи. Но дети её любят. | She grumbles from dawn to dusk. But the children love her. | kind
+out: 20 | Она ворчит с утра до ночи. Но дети её любят. | She grumbles from dawn to dusk. But the children love her. | kind
+out: 35 | Она мелет зерно на камне за двоих и знает траву от любой хвори. | She grinds grain on the quern for two and knows a herb for every ailment. | kind wealth+1 | @anc
+out: 35 | Она прядёт за двоих и знает траву от любой хвори. | She spins for two and knows a herb for every ailment. | kind wealth+1 | @med
+out: 35 | Она вяжет чулки на продажу и умеет заговаривать бородавки. | She knits stockings to sell and can charm away warts. | kind wealth+1 | @early #eu
+out: 35 | Она нянчит детей и знает сто сказок. По вечерам у вас полон дом соседских ребят. | She minds the children and knows a hundred tales. In the evenings your house is full of the neighbours' children. | kind | @early !#eu
 door: Носить ей дрова и хлеб | Bring her wood and bread
-out: 70 | Она доживает до весны. У колодца при всех кланяется тебе в пояс. | She lives till spring. At the well she bows low to you in front of everyone. | kind
-out: 30 | В самые холода она всё равно умирает. Твой голос — последний, что она слышала. | In the worst of the cold she dies all the same. Yours was the last voice she heard. | kind
+out: 20 | Она доживает до весны. У колодца при всех кланяется тебе в пояс. | She lives till spring. At the well she bows low to you in front of everyone. | kind
+out: 15 | В самые холода она всё равно умирает. Твой голос — последний, что она слышала. | In the worst of the cold she dies all the same. Yours was the last voice she heard. | kind | !#eg !#in !#sea !#af
+out: 30 | Ты носишь ей ячменные лепёшки. Перед смертью она отдаёт тебе свой ткацкий станок. | You bring her barley cakes. Before she dies she gives you her loom. | kind wealth+1 | @anc !#eg
+out: 30 | Она доживает до разлива. На празднике Нила она отдаёт тебе свой медный амулет. | She lives to see the flood. At the Nile feast she gives you her copper amulet. | kind | @anc #eg
+out: 30 | Она доживает до весны и ткёт тебе пояс. Ты носишь его до старости. | She lives till spring and weaves you a belt. You wear it till you are old. | kind | @med
+out: 30 | Она доживает до Пасхи и красит тебе яйцо луковой шелухой. | She lives till Easter and dyes you an egg with onion skins. | kind faith | @med #ru
+out: 30 | Ты носишь ей дрова до весны. Весной приходит письмо от её сына-солдата: жив, кланяется. | You bring her wood till spring. In spring a letter comes from her soldier son: alive, sends his respects. | kind | @early
 ep: Эти руки носили дрова одинокой вдове. | These hands carried wood to a lonely widow.
 door: Это забота её родни | That's for her kin to see to
-out: 70 | Родни нет. Весной дом стоит пустой, и ты забираешь её козу. | There are no kin. In spring the house stands empty and you take her goat. | wealth+1
-out: 30 | Её находят в самые холода. Деревня долго об этом говорит. | She is found in the worst of the cold. The village talks of it a long time. |
+out: 20 | Родни нет. Весной дом стоит пустой, и ты забираешь её козу. | There are no kin. In spring the house stands empty and you take her goat. | wealth+1
+out: 30 | Через месяц приходит племянник, забирает её коз, а её саму уводит в свою деревню. | A month later a nephew turns up, takes her goats and takes her off to his village. | | @anc
+out: 30 | Её забирают в богадельню при монастыре. Её корову монастырь оставляет себе. | She is taken into the monastery almshouse. The monastery keeps her cow. | | @med #eu
+out: 30 | Её находят в самые холода. Деревня долго об этом говорит. | She is found in the worst of the cold. The village talks of it a long time. | | @med #ru
+out: 25 | Её землю берут за долги, а сама она уходит просить милостыню у храма. | Her land is taken for debts, and she goes to beg at the temple. | | @med !#eu !#ru
+out: 30 | Приход назначает ей хлеб со дворов по очереди. Твоя очередь — по четвергам. | The parish puts her bread on each household in turn. Your turn is Thursdays. | | @early #eu
+out: 30 | Мир решает кормить её по очереди. Твой черёд — каждый четверг. | The village commune decides to feed her by turns. Yours is every Thursday. | | @early #ru
+out: 25 | В её дом въезжает дальний родственник с пятью детьми. Ей достаётся чулан. | A distant cousin moves into her house with five children. She gets the storeroom. | | @early !#eu !#ru
 ask: Кто рядом с тобой живёт совсем один? | Who near you lives all alone?
 
 id: o_cure_seller
@@ -249,12 +313,23 @@ weight: 1
 q: У ребёнка жар. На базаре человек продаёт снадобье и просит половину всего, что у вас есть. | Your child has a fever. At the market a man sells a cure and asks half of all you have.
 door: Купить | Buy it
 shut: poor | Отдать нечего: у вас нет и половины. | You have nothing to give: you don't have even half that.
-out: 50 | На третий день жар спадает. Снадобье или время — кто знает. | On the third day the fever breaks. The cure or time, who knows. | wealth-1
-out: 30 | Это мел с мёдом. Ребёнок поправляется сам. | It's chalk and honey. The child gets well on its own. | wealth-1
-out: 20 | Не помогает. Ты хоронишь ребёнка и годами обходишь этот базар. | It doesn't help. You bury the child and for years go round that market. | wealth-1 kids-1
+out: 20 | На третий день жар спадает. Снадобье или время — кто знает. | On the third day the fever breaks. The cure or time, who knows. | wealth-1
+out: 15 | Не помогает. Ты хоронишь ребёнка и годами обходишь этот базар. | It doesn't help. You bury the child and for years go round that market. | wealth-1 kids-1
+out: 30 | Это амулет: заклинание на глиняной табличке. Ты вешаешь его над постелью, и жар спадает. | It's an amulet, a spell on a clay tablet. You hang it over the bed, and the fever breaks. | wealth-1 faith | @anc #me
+out: 30 | Это папирус с заговором от демона. Его растворяют в пиве и дают выпить. Жар спадает. | It's a papyrus with a spell against the demon. It's soaked in beer and drunk. The fever breaks. | wealth-1 faith | @anc #eg
+out: 30 | Это толчёный рог с мёдом. Ребёнок морщится, но к утру спит спокойно. | It's ground horn with honey. The child makes a face, but by morning sleeps quietly. | wealth-1 | @anc !#me !#eg
+out: 30 | Это мел с мёдом. Ребёнок поправляется сам. | It's chalk and honey. The child gets well on its own. | wealth-1 | @med !#cn
+out: 25 | Это порошок из «рога единорога». Ребёнок поправляется, а остаток ты бережёшь до новой беды. | It's powdered "unicorn horn". The child gets well, and you keep the rest for the next trouble. | wealth-1 | @med #eu
+out: 30 | Лекарь щупает пульс на обеих руках и даёт горький отвар. На третий день жар спадает. | The doctor feels the pulse at both wrists and gives a bitter brew. On the third day the fever breaks. | wealth-1 | !@anc #cn
+out: 30 | Это «иезуитская кора» из-за моря. Горькая до слёз, но жар уходит за два дня. | It's "Jesuits' bark" from over the sea. Bitter enough to make you cry, but the fever is gone in two days. | wealth-1 | @early #eu
+out: 25 | Это пузырёк «чудесного эликсира» с печатной наклейкой. Внутри спирт с сахаром. | It's a little bottle of "wonder elixir" with a printed label. Inside: spirit and sugar. | wealth-1 | @early
 door: Лечить по-старому: отвар, молитва, тепло | Treat it the old way: brew, prayer, warmth
-out: 70 | Три ночи ты не спишь. На четвёртую ребёнок просит есть. | Three nights you don't sleep. On the fourth the child asks for food. | faith
-out: 30 | К весне ребёнок угасает. | By spring the child fades away. | kids-1
+out: 20 | Три ночи ты не спишь. На четвёртую ребёнок просит есть. | Three nights you don't sleep. On the fourth the child asks for food. | faith
+out: 15 | К весне ребёнок угасает. | By spring the child fades away. | kids-1
+out: 30 | Ты несёшь в храм глиняную фигурку ребёнка и оставляешь у ног богини. На четвёртую ночь жар спадает. | You take a clay figure of the child to the temple and leave it at the goddess's feet. On the fourth night the fever breaks. | faith | @anc
+out: 30 | Знахарка шепчет над водой и вешает ребёнку на шею мешочек с травами. Он выздоравливает. | The wise woman whispers over water and hangs a bag of herbs round the child's neck. The child recovers. | faith | @med !#cn !#jp
+out: 30 | Ты жжёшь бумажные деньги для духов и варишь отвар из корней. На пятый день жар уходит. | You burn paper money for the spirits and boil a root brew. On the fifth day the fever goes. | faith | !@anc #cn
+out: 30 | Ты обтираешь ребёнка уксусом и не даёшь сбросить одеяло. На четвёртую ночь он просит есть. | You sponge the child with vinegar and keep the blanket on. On the fourth night the child asks for food. | | @early
 ask: Что ты отдашь за здоровье близкого? | What would you give for the health of someone close?
 
 id: o_harvest_feast
@@ -265,11 +340,21 @@ ages: 19-51
 weight: 1
 q: Праздник урожая: вся деревня пляшет до утра. А у младшего кашель. | Harvest festival: the whole village dances till dawn. And the youngest has a cough.
 door: Пойти на праздник | Go to the festival
-out: 60 | Ты пляшешь до рассвета. Дома ребёнок спит у бабки на руках. | You dance till dawn. At home the child sleeps in grandmother's arms. | love
-out: 25 | За ковшом пива сосед предлагает тебе выгодный обмен. | Over a dipper of beer a neighbour offers you a good trade. | wealth+1
+out: 20 | Ты пляшешь до рассвета. Дома ребёнок спит у бабки на руках. | You dance till dawn. At home the child sleeps in grandmother's arms. | love
 out: 15 | К утру у ребёнка жар. Ты сидишь у постели и коришь себя. | By morning the child is burning. You sit by the bed blaming yourself. |
+out: 30 | Жрецы несут первые снопы в храм. Все пьют ячменное пиво из одного кувшина через тростинки. | The priests carry the first sheaves to the temple. Everyone drinks barley beer from one jar through reeds. | love | @anc #me
+out: 30 | Пляшут у костров до утра. Старейшина даёт тебе первый кусок жертвенного мяса. | They dance by the fires till morning. The elder gives you the first piece of the sacrificial meat. | love | @anc !#me
+out: 30 | За ковшом пива сосед предлагает тебе выгодный обмен. | Over a dipper of beer a neighbour offers you a good trade. | wealth+1 | @med #eu
+out: 30 | Всем миром варят пиво. За братиной сосед сватает свою дочь за твоего старшего. | The whole village brews beer. Over the loving cup the neighbour offers his daughter for your eldest. | love | @med #ru
+out: 30 | Все едят на крышах круглые пряники и смотрят на полную луну. | Everyone eats round cakes on the roofs and watches the full moon. | love | @med #cn
+out: 30 | Женщины рисуют у порогов узоры рисовой мукой, мужчины гоняют раскрашенных быков. | The women draw patterns in rice flour at the doors; the men race painted bulls. | love | !@anc #in
+out: 30 | Скрипач играет до утра, а помещик выкатывает бочку вина. | A fiddler plays till dawn, and the squire rolls out a barrel of wine. | love | @early #eu
+out: 30 | Под балалайку пляшут до утра. Тебе достаётся пряник с барского стола. | People dance to the balalaika till morning. You get a gingerbread from the manor table. | love | @early #ru
 door: Остаться дома | Stay at home
-out: 100 | Издалека слышна музыка. Ребёнок засыпает у тебя на коленях. | You hear the music from afar. The child falls asleep on your lap. | kind
+out: 25 | Издалека слышна музыка. Ребёнок засыпает у тебя на коленях. | You hear the music from afar. The child falls asleep on your lap. | kind
+out: 30 | Ребёнок засыпает под далёкие барабаны. Утром соседи приносят вам кусок праздничной лепёшки. | The child falls asleep to distant drums. In the morning the neighbours bring you a piece of the feast bread. | kind | @anc
+out: 30 | Утром соседка приносит пирог и рассказывает, кто с кем плясал. | In the morning a neighbour brings a pie and tells you who danced with whom. | kind | @med
+out: 30 | Ребёнок засыпает. Утром говорят, что на празднике подрались и двоих высекли на сходе. | The child falls asleep. In the morning they say there was a fight at the feast, and two men were flogged before the village. | kind | @early
 ask: Какой праздник пришлось пропустить ради близкого? | What celebration have you missed for someone close?
 
 id: o_pig_feud
@@ -281,16 +366,28 @@ weight: 2
 q: Соседский сын украл у вас свинью. Все знают, но никто не видел. | The neighbour's son has stolen your pig. Everyone knows, but nobody saw.
 door: Пойти к ним с братьями | Go round with your brothers
 shut: f | Женщине не идти с дубьём на соседский двор. | A woman can't take a club to the neighbour's yard.
-out: 50 | Свинью возвращают. С тех пор вы не здороваетесь. | The pig comes back. You stop greeting each other. | brave
-out: 30 | Драка. Сосед ломает тебе руку, ты ему — нос. | A fight. The neighbour breaks your arm; you break his nose. | brave risk5
-out: 20 | Вражда тянется до внуков. | The feud runs on to the grandchildren. |
+out: 20 | Свинью возвращают. С тех пор вы не здороваетесь. | The pig comes back. You stop greeting each other. | brave
+out: 15 | Вражда тянется до внуков. | The feud runs on to the grandchildren. |
+out: 30 | Драка. Сосед ломает тебе руку, ты ему — нос. | A fight. The neighbour breaks your arm; you break his nose. | brave risk5 | @anc
+out: 25 | Старейшины мирят вас у жертвенника: сосед отдаёт двух поросят, вы вместе едите мясо. | The elders make peace between you at the altar: the neighbour gives two piglets, and you eat the meat together. | brave kind | @anc
+out: 30 | Драка. Сосед ломает тебе руку, ты ему — нос. Господин штрафует обоих. | A fight. The neighbour breaks your arm; you break his nose. The lord fines you both. | brave risk5 wealth-1 | @med
+out: 25 | Свинью возвращают. В воскресенье на паперти вы стоите в разных концах. | The pig comes back. On Sunday at the church door you stand at opposite ends. | brave | @med #eu
+out: 30 | Сосед хватается за ружьё. Братья уводят тебя силой, пока не дошло до беды. | The neighbour reaches for his gun. Your brothers drag you away before it comes to that. | brave | @early
+out: 25 | Свинью возвращают. Но через месяц у вас ночью сгорает сарай. | The pig comes back. But a month later your shed burns down in the night. | brave wealth-1 | @early
 door: Пойти к старосте | Go to the headman
 shut: r0 | Слово холопа против слова свободного ничего не стоит. | A bondsman's word is worth nothing against a free man's.
-out: 60 | Староста велит отдать двух поросят. Сосед приводит самых тощих. | The headman orders two piglets in return. The neighbour brings the scrawniest. | wealth+1
-out: 40 | Староста соседу кум. Дело тянется, свинью давно съели. | The headman is the neighbour's godfather. The case drags on; the pig is long eaten. |
+out: 20 | Староста соседу кум. Дело тянется, свинью давно съели. | The headman is the neighbour's crony. The case drags on; the pig is long eaten. |
+out: 30 | Старейшины велят соседу поклясться перед богами. Он клянётся и отдаёт свинью, лишь бы не клясться. | The elders tell the neighbour to swear before the gods. Rather than swear, he gives the pig back. | wealth+1 | @anc
+out: 30 | Староста велит отдать двух поросят. Сосед приводит самых тощих. | The headman orders two piglets in return. The neighbour brings the scrawniest. | wealth+1 | @med
+out: 25 | Дело идёт в суд к уездному чиновнику. Чиновник берёт подарки с обоих и тянет год. | The case goes to the county magistrate. He takes gifts from both sides and drags it out a year. | wealth-1 | !@anc #cn
+out: 30 | Дело разбирает мировой суд при помещике. Соседского сына секут, свинью отдают тебе. | The squire's court hears the case. The neighbour's son is flogged and the pig goes to you. | wealth+1 | @early #ru
+out: 30 | Дело идёт к мировому судье в город. Пошлина съедает полсвиньи. | The case goes to the justice of the peace in town. The fees eat up half the pig. | | @early #eu
 door: Забыть | Let it go
-out: 70 | Через год сосед молча приносит мешок зерна. | A year later the neighbour brings a sack of grain without a word. | kind
-out: 30 | Летом у вас пропадает гусь. | In summer you lose a goose. | wealth-1
+out: 20 | Летом у вас пропадает гусь. | In summer you lose a goose. | wealth-1
+out: 30 | Через год сосед молча приносит мешок зерна. | A year later the neighbour brings a sack of grain without a word. | kind | @anc
+out: 30 | Через год сосед молча приносит мешок зерна. | A year later the neighbour brings a sack of grain without a word. | kind | @med
+out: 30 | На Пасху сосед подходит первым и зовёт к себе на окорок. | At Easter the neighbour comes over first and asks you round for ham. | kind | @early #eu
+out: 30 | Сосед молча помогает тебе на покосе. Свинью больше никто не вспоминает. | The neighbour helps you at haymaking without a word. Nobody mentions the pig again. | kind | @early !#eu
 ask: Какую обиду проще забыть, чем помнить? | Which grudge is easier to forget than to keep?
 
 id: o_bandits
@@ -301,15 +398,29 @@ ages: 19-64
 weight: 1
 q: Ночью к дому выходят трое с ножами. Просят хлеба и не уходят. | Three men with knives come to the house at night. They want bread and won't leave.
 door: Отдать, что просят | Give them what they ask
-out: 70 | Они едят, забирают мешок муки и уходят. Зима будет голодной. | They eat, take a sack of flour and go. The winter will be hungry. | wealth-1
-out: 30 | Старший кланяется на пороге. Весной у калитки находят мешок соли. | The leader bows at the door. In spring a sack of salt is left at your gate. | wealth+1 kind
+out: 20 | Они едят, забирают мешок муки и уходят. Зима будет голодной. | They eat, take a sack of flour and go. The winter will be hungry. | wealth-1
+out: 30 | Это беглые рабы с рудников. Старший кланяется и уводит своих в горы. | They are runaway slaves from the mines. The leader bows and takes his men off into the hills. | kind | @anc
+out: 25 | Они забирают ячмень и козу. Наутро писец пишет жалобу, но её никто не читает. | They take the barley and a goat. In the morning a scribe writes a complaint, but nobody reads it. | wealth-1 | @anc
+out: 30 | Старший кланяется на пороге. Весной у калитки находят мешок соли. | The leader bows at the door. In spring a sack of salt is left at your gate. | wealth+1 kind | @med
+out: 25 | Это солдаты разбитого войска. Они уходят, забрав и муку, и сапоги. | They are soldiers from a beaten army. They go, taking the flour and the boots. | wealth-1 | @med
+out: 30 | Они уходят на рассвете. Через месяц их вешают у заставы, и ты узнаёшь одного. | They leave at dawn. A month later they are hanged by the toll gate, and you recognise one. | wealth-1 | @early
+out: 25 | Старший оставляет на столе медный пятак за хлеб. Говорят, это люди атамана с Волги. | The leader leaves a copper coin on the table for the bread. They say they are the ataman's men from the Volga. | kind | @early #ru
 door: Взять топор | Take up the axe
-out: 40 | Они уходят. Видно, искали лёгкой добычи. | They go. They wanted easy pickings. | brave
-out: 60 | Тебя ранят. Уходя, они поджигают крышу. | You are wounded. As they go, they set the roof alight. | risk25 wealth-1 brave
+out: 20 | Тебя ранят. Уходя, они поджигают крышу. | You are wounded. As they go, they set the roof alight. | risk25 wealth-1 brave
+out: 30 | Они уходят. Видно, искали лёгкой добычи. | They go. They wanted easy pickings. | brave | @anc
+out: 25 | Ты рубишь одного. Утром старейшины решают, что вира не нужна: он пришёл ночью с ножом. | You cut one down. In the morning the elders rule there's no blood price: he came at night with a knife. | brave risk10 | @anc
+out: 30 | Они уходят. Видно, искали лёгкой добычи. | They go. They wanted easy pickings. | brave | @med
+out: 25 | Ты отбиваешься до рассвета. Утром господин хвалит тебя и забирает их ножи себе. | You hold them off till dawn. In the morning the lord praises you and keeps their knives. | brave risk10 | @med
+out: 30 | Ты снимаешь со стены старое ружьё. Оно не заряжено, но они этого не знают. | You take the old gun down from the wall. It isn't loaded, but they don't know that. | brave | @early
+out: 25 | Один стреляет из пистолета. Пуля уходит в потолок, а они в ночь. | One of them fires a pistol. The ball goes into the ceiling, and they go into the night. | brave risk10 | @early
 door: Тайком послать сына за соседями | Quietly send your son for the neighbours
 shut: !kids | Послать некого: детей у тебя нет. | There's no one to send: you have no children.
-out: 50 | Сбегается полдеревни с вилами. Разбойников ведут к господину. | Half the village comes running with pitchforks. The robbers are taken to the lord. | brave
-out: 50 | Соседи боятся и не идут. А разбойники замечают, что мальчишка пропал. | The neighbours are afraid and don't come. And the robbers notice the boy is gone. | risk15
+out: 20 | Соседи боятся и не идут. А разбойники замечают, что мальчишка пропал. | The neighbours are afraid and don't come. And the robbers notice the boy is gone. | risk15
+out: 30 | Сбегается полдеревни с мотыгами. Разбойников ведут на суд к царским людям. | Half the village comes running with hoes. The robbers are taken to the king's men for judgement. | brave | @anc
+out: 30 | Сбегается полдеревни с вилами. Разбойников ведут к господину. | Half the village comes running with pitchforks. The robbers are taken to the lord. | brave | @med
+out: 30 | Сын бьёт в набат. Сбегается деревня, разбойников связывают и везут в город на суд. | Your son rings the alarm bell. The village runs up; the robbers are tied and carted to town for trial. | brave | @early #eu
+out: 30 | Сын бьёт в набат. Мужики с кольями берут их в сарае и везут к исправнику. | Your son rings the alarm. The men take them in the barn with stakes and cart them to the district police. | brave | @early #ru
+out: 25 | Соседи сбегаются с гонгом и факелами. Разбойники бегут, бросив один нож. | The neighbours come with a gong and torches. The robbers run, dropping a knife. | brave | @early !#eu !#ru
 ask: Чего тебе страшнее всего лишиться? | What are you most afraid to lose?
 
 id: o_plague
@@ -320,13 +431,20 @@ ages: 19-64
 weight: 1
 q: В деревне мор. Мёртвые лежат по дворам, хоронить некому. | Plague in the village. The dead lie in the yards with no one to bury them.
 door: Остаться и хоронить | Stay and bury them
-out: 50 | Неделю ты копаешь ямы. Хворь тебя обходит. | A week you dig graves. The sickness passes you by. | kind faith
-out: 50 | На десятый день под мышкой вздувается шишка. | On the tenth day a lump swells under your arm. | kind risk40
+out: 20 | Неделю ты копаешь ямы. Хворь тебя обходит. | A week you dig graves. The sickness passes you by. | kind faith
+out: 15 | На десятый день под мышкой вздувается шишка. | On the tenth day a lump swells under your arm. | kind risk40
+out: 30 | Ты возишь мёртвых на телеге к общей яме. Священник служит над всеми сразу. | You cart the dead to a common pit. The priest says the office over all of them at once. | kind faith | @med #eu
+out: 25 | Хоронишь и молишься Николе. Хворь тебя обходит, а в деревне ставят часовню. | You bury them and pray to St Nicholas. The sickness passes you by, and the village builds a chapel. | kind faith | @med #ru
+out: 25 | Ты хоронишь соседей и жжёшь их солому. Сам{|а} ты не заболеваешь. | You bury the neighbours and burn their straw. You don't fall ill yourself. | kind faith | @med !#eu !#ru
+out: 30 | Ты хоронишь в известь, как велел лекарь. У тебя лопаются руки, но хворь обходит. | You bury them in quicklime, as the doctor said. Your hands crack, but the sickness passes you by. | kind | @early
+out: 25 | Это холера. На третий день у тебя сводит живот. | It's cholera. On the third day your stomach cramps. | kind risk40 | @early
 ep: {Хоронил|Хоронила} мёртвых в мор, когда другие бежали. | Buried the dead in the plague when others fled.
 door: Бежать в лес | Flee to the woods
 shut: r0 | Холопу бежать некуда: беглых ловят и клеймят. | A bondsman has nowhere to run: runaways are caught and branded.
-out: 60 | До холодов вы живёте в шалаше. Возвращаетесь в полупустую деревню, где земли теперь вдоволь. | You live in a hut of branches till the cold. You come back to a half-empty village with land to spare. | wealth+1
-out: 40 | Хворь бежит вместе с вами. | The sickness flees with you. | risk25
+out: 20 | Хворь бежит вместе с вами. | The sickness flees with you. | risk25
+out: 35 | До холодов вы живёте в шалаше. Возвращаетесь в полупустую деревню, где земли теперь вдоволь. | You live in a hut of branches till the cold. You come back to a half-empty village with land to spare. | wealth+1 | @med
+out: 30 | На дорогах заставы: чужих гонят назад. Ты ночуешь в лесу, пока мор не уходит. | There are guard posts on the roads: strangers are turned back. You sleep in the woods till the plague is gone. | risk10 | @early
+out: 25 | Ты пересиживаешь мор на дальнем хуторе. Вернувшись, находишь дом запечатанным и окуренным. | You sit out the plague on a far farm. When you come back the house has been sealed and smoked. | | @early #eu
 ask: Что значит не бросить своих? | What does it mean not to abandon your own?
 
 id: o_merchant_coast
@@ -339,13 +457,19 @@ q: Купец набирает людей в обоз до моря. Плати�
 door: Пойти с обозом | Go with the caravan
 shut: f | Женщин в обоз не берут. | Women aren't taken on the caravan.
 shut: r0 | Хозяин тебя не отпустит. | Your master won't let you go.
-out: 50 | Ты видишь море. Солёное, без другого берега. Домой везёшь деньги и рассказы. | You see the sea. Salt, with no far shore. You bring home money and stories. | sea wealth+1
-out: 30 | В порту ты остаёшься насовсем. Домой шлёшь поклоны с купцами. | You stay in the port for good. You send greetings home with merchants. | sea moved town
 out: 20 | На перевале обоз грабят. Домой ты бредёшь пешком, без гроша. | Robbers take the caravan on a pass. You walk home without a coin. | risk15
+out: 30 | Ты ведёшь ослов с медью до гавани. Там стоят корабли с глазами на носу. | You lead donkeys loaded with copper to the harbour. Ships stand there with eyes painted on their bows. | sea wealth+1 | @anc
+out: 25 | В гавани ты остаёшься грести на торговом корабле. Домой не возвращаешься. | At the harbour you stay on to row a merchant ship. You never come home. | sea moved town | @anc
+out: 30 | Ты видишь море. Солёное, без другого берега. Домой везёшь деньги и рассказы. | You see the sea. Salt, with no far shore. You bring home money and stories. | sea wealth+1 | @med
+out: 25 | В порту ты остаёшься насовсем. Домой шлёшь поклоны с купцами. | You stay in the port for good. You send greetings home with merchants. | sea moved town | @med
+out: 30 | В порту ты впервые видишь трёхмачтовый корабль. Домой везёшь деньги и кулёк сахара. | In the port you see a three-masted ship for the first time. You bring home money and a cone of sugar. | sea wealth+1 | @early
+out: 25 | В порту вербовщик спаивает тебя. Просыпаешься ты матросом, в море. | In the port a crimp gets you drunk. You wake up a sailor, at sea. | sea moved risk15 | @early
 ep: {Ушёл|Ушла} с обозом к морю. | Went with a caravan to the sea.
 door: Остаться дома | Stay at home
-out: 80 | Обоз уходит на рассвете. Ты долго смотришь ему вслед. | The caravan leaves at dawn. You watch it go a long time. |
-out: 20 | С обозом уходит твой друг. Он не возвращается. | Your friend goes with the caravan. He never comes back. |
+out: 30 | Обоз уходит на рассвете. Ты долго смотришь ему вслед. | The caravan leaves at dawn. You watch it go a long time. |
+out: 20 | С обозом уходит твой друг. Он не возвращается. | Your friend goes with the caravan. He never comes back. | | @anc
+out: 20 | С обозом уходит твой друг. Через три года он возвращается в сапогах и с женой из чужих краёв. | Your friend goes with the caravan. Three years later he's back in boots, with a wife from foreign parts. | | @med
+out: 20 | С обозом уходит твой друг. Через год от него приходит письмо из порта, и ты несёшь его к дьячку прочесть. | Your friend goes with the caravan. A year later a letter comes from the port, and you take it to the clerk to read. | | @early
 ask: Куда тебя давно тянет уехать? | Where have you long wanted to go?
 
 id: o_boundary
@@ -356,16 +480,26 @@ ages: 27-64
 weight: 1
 q: Ночью ты видишь, как сосед двигает межевой камень. На три шага в свою сторону. | At night you see your neighbour move the boundary stone. Three paces his way.
 door: Передвинуть обратно ночью | Move it back at night
-out: 60 | Камень стоит, где стоял. Сосед молчит, и ты молчишь. | The stone stands where it stood. The neighbour says nothing, and nor do you. |
-out: 40 | Он передвигает снова. И так до весны. | He moves it again. And so till spring. |
+out: 20 | Камень стоит, где стоял. Сосед молчит, и ты молчишь. | The stone stands where it stood. The neighbour says nothing, and nor do you. |
+out: 30 | Он передвигает снова. И так до весны. | He moves it again. And so till spring. | | @med
+out: 30 | Ты ставишь камень на место, а под ним зарываешь черепок с проклятием тому, кто тронет межу. | You put the stone back and bury a shard under it cursing anyone who moves the boundary. | faith | @anc
+out: 30 | Ты ставишь камень на место и вбиваешь рядом дубовый кол с зарубкой. | You put the stone back and drive an oak stake with a notch beside it. | | @med
+out: 30 | Ты ставишь камень на место. Утром сосед приводит землемера с цепью. | You put the stone back. In the morning the neighbour brings a surveyor with a chain. | | @early
 door: Созвать сход | Call the village meeting
 shut: f | На сход ходят мужчины. | Only men go to the meeting.
 shut: r0 | Холопа на сходе не слушают. | Nobody at the meeting listens to a bondsman.
-out: 60 | Старики помнят, где шла межа. Камень возвращают, соседа стыдят. | The old men remember the line. The stone goes back; the neighbour is shamed. | wealth+1
-out: 40 | Сход делит спор пополам. Ты теряешь полтора шага земли и друга. | The meeting splits the difference. You lose a pace and a half of land, and a friend. |
+out: 20 | Сход делит спор пополам. Ты теряешь полтора шага земли и друга. | The meeting splits the difference. You lose a pace and a half of land, and a friend. |
+out: 30 | Писец приносит табличку с обмером полей. Камень возвращают, соседа штрафуют ячменём. | The scribe brings the tablet with the field measurements. The stone goes back; the neighbour is fined in barley. | wealth+1 | @anc #me
+out: 30 | После разлива межи всё равно мерят заново. Землемер с верёвкой отдаёт тебе всё до пяди. | After the flood the fields are measured anew anyway. The surveyor with his rope gives you every inch. | wealth+1 | @anc #eg
+out: 30 | Старики помнят, где шла межа. Камень возвращают, соседа стыдят. | The old men remember the line. The stone goes back; the neighbour is shamed. | wealth+1 | @anc !#me !#eg
+out: 30 | Старики помнят, где шла межа. Камень возвращают, соседа стыдят. | The old men remember the line. The stone goes back; the neighbour is shamed. | wealth+1 | @med
+out: 25 | Межу обходят с детьми и секут их у каждого камня, чтобы запомнили. Камень возвращают. | They walk the bounds with the children and smack them at every stone so they'll remember. The stone goes back. | wealth+1 | @med #eu
+out: 30 | Достают из сундука старую межевую книгу. Камень возвращают, сосед платит штраф. | The old boundary register comes out of the chest. The stone goes back, and the neighbour pays a fine. | wealth+1 | @early
 door: Оставить как есть | Leave it be
-out: 70 | Три шага — это сноп в год. Эти снопы ты считаешь всю жизнь. | Three paces is a sheaf a year. You count those sheaves all your life. | wealth-1
-out: 30 | В голодный год сосед делится с тобой зерном. Может, из-за камня. | In a hungry year the neighbour shares his grain with you. Perhaps because of the stone. | kind
+out: 20 | Три шага — это сноп в год. Эти снопы ты считаешь всю жизнь. | Three paces is a sheaf a year. You count those sheaves all your life. | wealth-1
+out: 30 | В голодный год сосед делится с тобой зерном. Может, из-за камня. | In a hungry year the neighbour shares his grain with you. Perhaps because of the stone. | kind | @anc
+out: 30 | В голодный год сосед делится с тобой зерном. Может, из-за камня. | In a hungry year the neighbour shares his grain with you. Perhaps because of the stone. | kind | @med
+out: 30 | Через двадцать лет при новом обмере камень так и записывают. Твои внуки пашут на три шага меньше. | Twenty years later the new survey writes the stone down where it stands. Your grandchildren plough three paces less. | wealth-1 | @early
 ask: Какую свою межу ты не отдашь? | Which of your boundaries will you never give up?
 
 id: o_wetnurse
@@ -377,11 +511,20 @@ weight: 1
 q: Богатому дому нужна кормилица. Платят хорошо, но жить придётся у них. | A rich house needs a wet nurse. The pay is good, but you'd have to live with them.
 door: Пойти в кормилицы | Become the wet nurse
 shut: !kids | Молока у тебя нет: своего младенца нет. | You have no milk: you have no baby of your own.
-out: 50 | Господский ребёнок растёт на твоём молоке, твой — на козьем. | The master's child grows on your milk, yours on goat's milk. | wealth+1
-out: 30 | Выкормыш любит тебя всю жизнь и навещает в старости. | The nursling loves you all its life and visits you when you are old. | wealth+1 love
-out: 20 | Без тебя твой младенец слабеет. | Without you, your own baby weakens. | wealth+1 kids-1
+out: 15 | Без тебя твой младенец слабеет. | Without you, your own baby weakens. | wealth+1 kids-1
+out: 20 | Господский ребёнок растёт на твоём молоке, твой — на козьем. | The master's child grows on your milk, yours on goat's milk. | wealth+1
+out: 30 | С тобой заключают договор при свидетелях: два года, масло, зерно и одежда. Ребёнок — мальчик писца. | A contract is made before witnesses: two years, oil, grain and clothes. The child is a scribe's boy. | wealth+1 | @anc
+out: 25 | Выкормыш любит тебя всю жизнь и навещает в старости. | The nursling loves you all its life and visits you when you are old. | wealth+1 love | @anc
+out: 30 | Выкормыш любит тебя всю жизнь и навещает в старости. | The nursling loves you all its life and visits you when you are old. | wealth+1 love | @med
+out: 25 | Ты кормишь сына князя. Когда он вырастает, твой сын служит при нём молочным братом. | You nurse the prince's son. When he grows up, your own son serves him as his milk brother. | wealth+1 love | @med
+out: 30 | Тебя везут в город, в дом с зеркалами. Своего младенца ты оставляешь деревенской бабке. | You are taken to town, to a house with mirrors. You leave your own baby with an old village woman. | wealth+1 town | @early #eu
+out: 30 | Тебя берут в барский дом, в кокошнике и сарафане. Своего кормит золовка. | You are taken into the manor house, in a headdress and sarafan. Your sister-in-law nurses your own. | wealth+1 | @early #ru
+out: 25 | Выкормыш вырастает и забывает тебя. Только мать его каждый год шлёт тебе отрез ткани. | The nursling grows up and forgets you. Only his mother sends you a length of cloth every year. | wealth+1 | @early
 door: Отказать | Refuse
-out: 100 | Ты кормишь своего. Денег нет, зато он спит у тебя на груди. | You nurse your own. No money, but he sleeps at your breast. |
+out: 30 | Ты кормишь своего. Денег нет, зато он спит у тебя на груди. | You nurse your own. No money, but he sleeps at your breast. |
+out: 25 | В кормилицы идёт соседка. Через год она приходит в гости в серьгах. | The neighbour goes as wet nurse instead. A year later she visits in earrings. | | @med
+out: 25 | Ты кормишь своего. Осенью он уже бегает за курами. | You nurse your own. By autumn he is running after the hens. | | @anc
+out: 25 | В кормилицы идёт соседка. Её младенец зимой умирает на рожке. | The neighbour goes instead. Her own baby dies on the bottle that winter. | | @early
 ask: Чьё детство тебе довелось беречь? | Whose childhood have you watched over?
 
 id: o_apprentice
@@ -394,12 +537,17 @@ q: Кузнец в городе ищет подмастерье. Семь лет
 door: Пойти в учение | Take the apprenticeship
 shut: f | Девушек в кузню не берут. | Girls aren't taken in a smithy.
 shut: r0 | Господин не отпустит тебя в город. | Your lord won't let you go to town.
-out: 60 | Через семь лет у тебя своё клеймо. | Seven years on, you have your own maker's mark. | town wealth+1
-out: 25 | Мастер бьёт и ничему не учит. На пятый год ты уходишь. | The master beats you and teaches nothing. In the fifth year you walk out. | town
 out: 15 | Искра попадает в глаз. | A spark flies into your eye. | town risk5
+out: 20 | Мастер бьёт и ничему не учит. На пятый год ты уходишь. | The master beats you and teaches nothing. In the fifth year you walk out. | town
+out: 30 | Через семь лет ты куёшь свой первый меч. Цех принимает тебя в мастера. | Seven years on you forge your first sword. The guild makes you a master. | town wealth+1 | @med #eu
+out: 30 | Через семь лет у тебя своё клеймо. | Seven years on, you have your own maker's mark. | town wealth+1 | @med !#eu
+out: 30 | Ты куёшь подковы для почтовых лошадей и обручи для бочек. Через семь лет у тебя своя кузня у заставы. | You forge shoes for post horses and hoops for barrels. Seven years on you have your own forge by the toll gate. | town wealth+1 | @early
+out: 25 | Мастер получает заказ от казны на ядра. Ты учишься у горна день и ночь. | The master gets a state order for cannonballs. You learn at the furnace day and night. | town wealth+1 | @early
 ep: {Ушёл|Ушла} в учение к кузнецу. | Was apprenticed to a smith.
 door: Остаться в деревне | Stay in the village
-out: 100 | Ты пашешь, как отец. Подковы возишь чинить в город. | You plough like your father. You take the horseshoes to town to be mended. |
+out: 30 | Ты пашешь, как отец. Подковы возишь чинить в город. | You plough like your father. You take the horseshoes to town to be mended. |
+out: 25 | Ты пашешь, как отец. Через десять лет в деревне ставят свою кузню, и кузнец — чужак. | You plough like your father. Ten years on the village gets its own forge, and the smith is a stranger. | | @med
+out: 25 | Ты пашешь, как отец. Зимой ездишь в город извозом. | You plough like your father. In winter you go to town to drive a cart for hire. | | @early
 ask: Чему стоит учиться семь лет? | What is worth seven years of learning?
 
 id: o_steward
@@ -520,16 +668,23 @@ weight: 1
 q: Пришёл указ: от каждого двора по человеку — копать канал. На полгода. | An order has come: one person from every household to dig the canal. For half a year.
 door: Пойти самому | Go yourself
 shut: f | На канал гонят мужчин. | They send men to the canal.
-out: 50 | Полгода в глине по колено. Возвращаешься кожа да кости. | Half a year knee-deep in clay. You come home skin and bone. |
-out: 30 | На канале у тебя появляется друг с юга. Он учит тебя считать. | On the canal you make a friend from the south. He teaches you to count. |
-out: 20 | По лагерю ходит лихорадка. | Fever goes round the camp. | risk25
+out: 20 | Полгода в глине по колено. Возвращаешься кожа да кости. | Half a year knee-deep in clay. You come home skin and bone. |
+out: 15 | По лагерю ходит лихорадка. | Fever goes round the camp. | risk25
+out: 30 | Вы роете деревянными лопатами с железной оковкой. Надсмотрщик считает корзины земли. | You dig with wooden spades shod with iron. The overseer counts the baskets of earth. | | @anc
+out: 25 | На канале у тебя появляется друг с юга. Он учит тебя считать. | On the canal you make a friend from the south. He teaches you to count. | | @anc
+out: 30 | Это Великий канал. По готовому руслу мимо вас уже идут баржи с рисом для столицы. | It's the Grand Canal. Barges of rice for the capital already pass along the finished stretch. | | @med
+out: 25 | Под конец вам платят связкой монет и мешком риса. | At the end you're paid a string of cash and a sack of rice. | wealth+1 | @med
 door: Отправить младшего брата | Send your younger brother
-out: 60 | Брат возвращается к жатве. Злой, но живой. | Your brother is back by harvest. Angry, but alive. |
-out: 40 | Брат не возвращается. Мать до самой смерти не говорит с тобой. | Your brother doesn't come back. Your mother doesn't speak to you till she dies. |
+out: 20 | Брат возвращается к жатве. Злой, но живой. | Your brother is back by harvest. Angry, but alive. |
+out: 15 | Брат не возвращается. Мать до самой смерти не говорит с тобой. | Your brother doesn't come back. Your mother doesn't speak to you till she dies. |
+out: 30 | Брат возвращается с наколкой на лбу: ударил надсмотрщика. | Your brother comes back with a mark tattooed on his forehead: he hit an overseer. | | @anc
+out: 30 | Брат шлёт весть через писца: кормят просом, бьют редко. К Новому году он дома. | Your brother sends word through a letter-writer: millet to eat, few beatings. He's home by New Year. | | @med
 door: Откупиться у чиновника | Pay off the official
 shut: poor | Откупиться нечем. | You have nothing to pay with.
-out: 70 | Чиновник берёт двух свиней и вычёркивает ваш двор. | The official takes two pigs and crosses out your household. | wealth-1
-out: 30 | Деньги взяты, а через месяц приходит новый чиновник с тем же указом. | The money is taken, and a month later a new official comes with the same order. | wealth-2
+out: 20 | Деньги взяты, а через месяц приходит новый чиновник с тем же указом. | The money is taken, and a month later a new official comes with the same order. | wealth-2
+out: 30 | Чиновник берёт двух свиней и соскабливает ваш двор с бамбуковой дощечки. | The official takes two pigs and scrapes your household off the bamboo slip. | wealth-1 | @anc
+out: 30 | Ты платишь чиновнику серебром, и вместо тебя идёт нанятый бедняк. | You pay the official in silver, and a hired pauper goes in your place. | wealth-1 | @med
+out: 25 | Чиновник берёт двух свиней и вычёркивает ваш двор. | The official takes two pigs and crosses out your household. | wealth-1 | @med
 ask: Какую повинность ты несёшь, не выбирая? | What duty do you carry without ever choosing it?
 
 id: o_exam_cn
@@ -541,13 +696,17 @@ weight: 1
 q: Учитель говорит: у твоего сына голова для экзаменов. Нужен наставник, а это три урожая. | The teacher says your son has a head for the examinations. That means a tutor, and three harvests' worth of money.
 door: Продать поле и учить сына | Sell a field and educate your son
 shut: poor | Продавать нечего: поле не ваше, вы его арендуете. | There's nothing to sell: the field isn't yours, you rent it.
-out: 25 | Сын сдаёт уездный экзамен. В деревне с вами теперь говорят иначе. | Your son passes the county examination. The village speaks to you differently now. | wealth+2
-out: 50 | Сын трижды проваливается. Учит детей грамоте в соседнем селе. | Your son fails three times. He teaches children their letters in the next village. | wealth-1
-out: 25 | Сын проваливается, а к плугу вернуться не может. Пьёт. | Your son fails and can't go back to the plough. He drinks. | wealth-2
+out: 20 | Сын трижды проваливается. Учит детей грамоте в соседнем селе. | Your son fails three times. He teaches children their letters in the next village. | wealth-1
+out: 25 | Сын сдаёт уездный экзамен. В деревне с вами теперь говорят иначе. | Your son passes the county examination. The village speaks to you differently now. | wealth+2 | @med
+out: 25 | Сын проваливается, а к плугу вернуться не может. Пьёт. | Your son fails and can't go back to the plough. He drinks. | wealth-2 | @med
+out: 25 | Сын сдаёт экзамен на первую степень. У ваших ворот ставят шест с флагом. | Your son passes the first degree. A flagpole is raised at your gate. | wealth+2 | @early
+out: 30 | Двенадцать лет сын пишет восьмичленные сочинения. В сорок он всё ещё сдаёт. | Twelve years your son writes eight-legged essays. At forty he is still sitting the exams. | wealth-1 | @early
+out: 20 | Сын проваливается и пропадает в опиумной курильне. | Your son fails and loses himself in the opium dens. | wealth-2 | @early
 ep: {Продал|Продала} поле, чтобы сын учился. | Sold a field so a son could study.
 door: Оставить сына в поле | Keep your son in the fields
-out: 70 | Сын пашет и женится. Иногда палочкой выводит иероглифы на земле. | Your son ploughs and marries. Sometimes he writes characters in the dirt with a stick. |
-out: 30 | Сын этого так и не прощает. | Your son never forgives you for it. |
+out: 20 | Сын этого так и не прощает. | Your son never forgives you for it. |
+out: 30 | Сын пашет и женится. Иногда палочкой выводит иероглифы на земле. | Your son ploughs and marries. Sometimes he writes characters in the dirt with a stick. | | @med
+out: 30 | Сын пашет и женится. По вечерам он покупает у разносчика дешёвые книжки с романами. | Your son ploughs and marries. In the evenings he buys cheap novels from a pedlar. | | @early
 ask: Чем пришлось пожертвовать ради чужого будущего? | What have you given up for someone else's future?
 
 id: o_varanasi
@@ -559,12 +718,19 @@ weight: 1
 q: Соседи идут в Варанаси, к Гангу. Зовут с собой. Месяц пути пешком. | The neighbours are going on pilgrimage to Varanasi, to the Ganges. They ask you along. A month on foot.
 door: Пойти | Go
 shut: r0 | Хозяин не отпустит тебя на месяц. | Your master won't spare you for a month.
-out: 60 | На рассвете ты входишь в Ганг вместе с тысячами других. Домой несёшь кувшин священной воды. | At dawn you step into the Ganges among thousands. You carry home a jar of holy water. | faith
-out: 25 | Жрецы у реки берут за каждую молитву. До дома ты доходишь без гроша. | The priests by the river charge for every prayer. You reach home without a coin. | faith wealth-1
+out: 20 | На рассвете ты входишь в Ганг вместе с тысячами других. Домой несёшь кувшин священной воды. | At dawn you step into the Ganges among thousands. You carry home a jar of holy water. | faith
 out: 15 | В Варанаси лихорадка. | There's fever in Varanasi. | risk25 faith
+out: 30 | В Каши ты слушаешь под деревом странствующего учителя. Домой несёшь не воду, а его слова. | In Kashi you listen to a wandering teacher under a tree. You carry home not water but his words. | faith | @anc
+out: 30 | Жрецы у реки берут за каждую молитву. До дома ты доходишь без гроша. | The priests by the river charge for every prayer. You reach home without a coin. | faith wealth-1 | @med
+out: 25 | У переправы сборщик берёт с паломников подать. Ты отдаёшь последнюю медь. | At the ferry a collector takes the pilgrim tax. You hand over your last copper. | faith wealth-1 | @med
+out: 30 | До Варанаси ты плывёшь на барже. На берегу англичанин рисует тебя в книжечку. | You go down to Varanasi by barge. On the bank an Englishman sketches you in his little book. | faith | @early
+out: 25 | У гхата брахман вписывает твоё имя в толстую книгу. Там уже есть твой дед. | At the ghat a Brahmin writes your name in his thick register. Your grandfather is already there. | faith | @early
 ep: Эти ноги дошли до Ганга. | These feet walked to the Ganges.
 door: Остаться и передать горсть риса для жрецов | Stay, and send a handful of rice for the priests
-out: 100 | Соседи возвращаются с водой из Ганга и делятся с тобой каплей. | The neighbours come back with Ganges water and share a drop with you. |
+out: 30 | Соседи возвращаются с водой из Ганга и делятся с тобой каплей. | The neighbours come back with Ganges water and share a drop with you. |
+out: 25 | Соседи возвращаются через два месяца. Одного нет. | The neighbours come back two months later. One is missing. | | @anc
+out: 25 | Соседи привозят воду из Ганга и медные браслеты детям. | The neighbours bring back Ganges water and copper bangles for the children. | | @med
+out: 25 | Соседи приносят воду из Ганга и рассказы о белых солдатах в городе. | The neighbours bring back Ganges water and stories of white soldiers in the city. | | @early
 ask: Куда хотелось бы дойти пешком? | Where would you like to walk to?
 
 id: o_caste_council
@@ -576,15 +742,22 @@ weight: 1
 q: Совет касты требует штраф: твой брат ел с людьми чужой касты. | The caste council demands a fine: your brother ate with people of another caste.
 door: Заплатить и устроить обед для всей касты | Pay, and give a feast for the whole caste
 shut: poor | Обед на всю касту вам не по силам. | A feast for the whole caste is beyond you.
-out: 80 | Брата снова пускают к общему колодцу. Ты два года в долгах. | Your brother is let back to the common well. You're two years in debt. | wealth-1 kind
 out: 20 | Обед выходит богатым. Старейшины говорят о тебе с уважением. | It's a rich feast. The elders speak of you with respect. | wealth-1
+out: 35 | Брата снова пускают к общему колодцу. Ты два года в долгах. | Your brother is let back to the common well. You're two years in debt. | wealth-1 kind | @med
+out: 25 | Брата очищают: он пьёт пять даров коровы, морщится, и его прощают. | Your brother is cleansed: he drinks the five gifts of the cow, grimaces, and is forgiven. | wealth-1 kind faith | @med
+out: 35 | Ты занимаешь у ростовщика под четверть в год. Брата прощают, а долг переходит к твоему сыну. | You borrow from the moneylender at a quarter a year. Your brother is forgiven, and the debt passes to your son. | wealth-2 kind | @early
 door: Отречься от брата | Disown your brother
-out: 60 | Брат уходит в город. Больше ты его не видишь. | Your brother goes off to the city. You never see him again. |
-out: 40 | Брат прижился у тех, с кем ел. Говорят, он счастлив. | Your brother has settled with those he ate with. He's happy, they say. |
+out: 20 | Брат прижился у тех, с кем ел. Говорят, он счастлив. | Your brother has settled with those he ate with. He's happy, they say. |
+out: 30 | Брат уходит в город. Больше ты его не видишь. | Your brother goes off to the city. You never see him again. | | @med
+out: 25 | Брат уходит к бродячим аскетам. Через десять лет ты видишь его на ярмарке, в пепле. Он тебя не узнаёт. | Your brother goes off with the wandering ascetics. Ten years later you see him at a fair, smeared in ash. He doesn't know you. | | @med
+out: 30 | Брат нанимается в сипаи Компании. Через год он присылает деньги, и ты их не берёшь. | Your brother enlists as a sepoy with the Company. A year later he sends money, and you won't take it. | | @early
+out: 25 | Брат крестится у миссионеров. Теперь он ест со всеми, только не с вами. | Your brother is baptised by the missionaries. Now he eats with everyone except you. | | @early
 door: Спорить с советом | Argue with the council
 shut: f | Женщину на совет не зовут. | Women aren't called to the council.
-out: 30 | Один старик встаёт на твою сторону. Штраф уменьшают вдвое. | One old man takes your side. The fine is halved. | brave
-out: 70 | Совет запрещает всей семье брать воду из общего колодца. | The council bars your whole family from the common well. | wealth-1 brave
+out: 20 | Совет запрещает всей семье брать воду из общего колодца. | The council bars your whole family from the common well. | wealth-1 brave
+out: 30 | Один старик встаёт на твою сторону. Штраф уменьшают вдвое. | One old man takes your side. The fine is halved. | brave | @med
+out: 30 | Ты грозишь пойти в суд Компании. Совет смеётся, но штраф уменьшает. | You threaten to go to the Company's court. The council laughs, but lowers the fine. | brave | @early
+out: 25 | Совет отлучает семью: цирюльник и прачка к вам больше не ходят. | The council casts the family out: the barber and the washerman stop coming. | wealth-1 brave | @early
 ask: С кем тебе не позволяли сидеть за одним столом? | Whom were you not allowed to sit at the table with?
 
 id: o_caravan
@@ -596,11 +769,16 @@ weight: 1
 q: Хозяин каравана нанимает погонщиков до Дамаска. Сорок дней через пустыню. | The caravan master is hiring drivers to Damascus. Forty days across the desert.
 door: Наняться | Sign on
 shut: f | Женщин в погонщики не берут. | Women aren't taken as drivers.
-out: 50 | В Дамаске базар торгует шёлком и стеклом. Тебе платят серебром. | In Damascus the bazaar sells silk and glass. You're paid in silver. | wealth+1 town
-out: 30 | В пустыне пустеют два бурдюка. Три дня ты пьёшь верблюжье молоко. | Two waterskins run dry in the desert. For three days you drink camel's milk. | brave
-out: 20 | На караван нападают кочевники. | Nomads attack the caravan. | risk20
+out: 20 | В пустыне пустеют два бурдюка. Три дня ты пьёшь верблюжье молоко. | Two waterskins run dry in the desert. For three days you drink camel's milk. | brave
+out: 15 | На караван нападают кочевники. | Nomads attack the caravan. | risk20
+out: 30 | В Дамаске базар торгует шёлком и стеклом. Тебе платят серебром. | In Damascus the bazaar sells silk and glass. You're paid in silver. | wealth+1 town | @med
+out: 25 | В караван-сарае ты слушаешь сказителя. Сорок ночей он рассказывает одну историю. | In a caravanserai you hear a storyteller. Forty nights he tells one story. | | @med
+out: 30 | В Дамаске тебе платят пиастрами. В кофейне ты пьёшь первую в жизни чашку кофе. | In Damascus you're paid in piastres. In a coffee house you drink the first cup of coffee in your life. | wealth+1 town | @early
+out: 25 | Караван идёт вместе с паломниками на Мекку. Паша платит бедуинам за проход, и вас не трогают. | The caravan travels with the pilgrims to Mecca. The pasha pays the Bedouin for passage, and nobody touches you. | faith | @early
 door: Остаться в оазисе | Stay in the oasis
-out: 100 | Финики созревают в срок. Караван уходит без тебя. | The dates ripen on time. The caravan leaves without you. |
+out: 30 | Финики созревают в срок. Караван уходит без тебя. | The dates ripen on time. The caravan leaves without you. |
+out: 25 | Через полгода караван возвращается. Погонщики привозят из Дамаска стеклянные бусы для невест. | Half a year later the caravan returns. The drivers bring glass beads from Damascus for the brides. | | @med
+out: 25 | Караван возвращается без половины верблюдов: на дороге были бедуины. Ты собираешь финики и думаешь, что повезло. | The caravan returns half its camels short: the Bedouin were out. You pick dates and think yourself lucky. | | @early
 ask: Какой дальний путь до сих пор зовёт? | What long road still calls you?
 
 id: o_qadi
@@ -612,12 +790,15 @@ weight: 1
 q: Сосед взял у тебя в долг и не отдаёт. Можно пойти к кади. | A neighbour borrowed from you and won't pay it back. You could go to the qadi.
 door: Пойти к кади | Go to the qadi
 shut: r0 | Раб со свободным не судится. | A slave can't take a free man to court.
-out: 50 | Кади выслушивает обоих и велит соседу вернуть долг до праздника. | The qadi hears you both and orders the neighbour to pay before the feast. | wealth+1
-out: 30 | Нужны два свидетеля, а у тебя один. Дело проиграно. | You need two witnesses and have one. The case is lost. |
-out: 20 | Сосед приводит трёх свидетелей, что долг отдан. Все трое лгут. | The neighbour brings three witnesses that the debt was paid. All three lie. | wealth-1
+out: 20 | Нужны два свидетеля, а у тебя один. Дело проиграно. | You need two witnesses and have one. The case is lost. |
+out: 30 | Кади выслушивает обоих и велит соседу вернуть долг до праздника. | The qadi hears you both and orders the neighbour to pay before the feast. | wealth+1 | @med
+out: 20 | Сосед приводит трёх свидетелей, что долг отдан. Все трое лгут. | The neighbour brings three witnesses that the debt was paid. All three lie. | wealth-1 | @med
+out: 30 | Кади находит запись в судебной книге: долг был записан. Сосед платит и пошлину. | The qadi finds the entry in the court register: the debt was written down. The neighbour pays, fees and all. | wealth+1 | @early
+out: 25 | Кади берёт пошлину с обоих и откладывает дело до приезда нового паши. | The qadi takes a fee from both and puts the case off till the new pasha arrives. | wealth-1 | @early
 door: Простить долг | Forgive the debt
-out: 60 | Соседу стыдно. Через год он приносит больше, чем брал. | The neighbour is ashamed. A year later he brings back more than he took. | kind wealth+1
-out: 40 | Деньги пропали. Зато теперь сосед кланяется тебе первым. | The money is gone. But now the neighbour bows to you first. | kind
+out: 20 | Деньги пропали. Зато теперь сосед кланяется тебе первым. | The money is gone. But now the neighbour bows to you first. | kind
+out: 30 | Соседу стыдно. Через год он приносит больше, чем брал. | The neighbour is ashamed. A year later he brings back more than he took. | kind wealth+1 | @med
+out: 30 | В пятницу имам говорит в проповеди о прощённом долге. Все оборачиваются на тебя. | On Friday the imam preaches about a forgiven debt. Everyone turns to look at you. | kind faith | @early
 ask: Какой долг легче простить, чем требовать? | Which debt is easier to forgive than to claim?
 
 id: o_griot
@@ -629,12 +810,15 @@ weight: 1
 q: На свадьбе гриот обещает вставить твой род в песню. Просит за это козу. | At a wedding the griot promises to put your family in his song. He asks a goat for it.
 door: Отдать козу | Give the goat
 shut: poor | Козы у вас нет. | You have no goat.
-out: 70 | Твоё имя поют на свадьбах ещё сорок лет. | Your name is sung at weddings for forty years. | wealth-1
-out: 30 | Гриот путает имена. Песня выходит про чужой род. | The griot mixes up the names. The song comes out about another family. | wealth-1
+out: 20 | Гриот путает имена. Песня выходит про чужой род. | The griot mixes up the names. The song comes out about another family. | wealth-1
+out: 35 | Твоё имя поют на свадьбах ещё сорок лет. | Your name is sung at weddings for forty years. | wealth-1 | @med
+out: 25 | Гриот ставит твой род в песню рядом с родом Сундиаты. На рынке тебе кланяются. | The griot puts your family in the song next to the line of Sundiata. People bow to you at the market. | wealth-1 | @med
+out: 35 | Гриот поёт под кору. Твоё имя поют сорок лет, и внуки знают песню наизусть. | The griot sings to the kora. Your name is sung for forty years, and your grandchildren know the song by heart. | wealth-1 | @early
 ep: Это имя пели гриоты. | The griots sang this name.
 door: Оставить козу себе | Keep the goat
-out: 80 | Песня про соседей. Ты подпеваешь. | The song is about the neighbours. You sing along. |
 out: 20 | Гриот поёт про скупых. Все понимают, про кого. | The griot sings about misers. Everyone knows whom he means. |
+out: 30 | Песня про соседей. Ты подпеваешь. | The song is about the neighbours. You sing along. | | @med
+out: 30 | Козу ты меняешь у купцов с побережья на порох и нитку бус. | You trade the goat with the coast merchants for gunpowder and a string of beads. | | @early
 ask: Кто будет помнить твоё имя через сорок лет? | Who will remember your name in forty years?
 
 id: o_salt
@@ -744,13 +928,18 @@ weight: 1
 q: Хозяину нужны люди на войну. Кто пойдёт, тому обещана свобода. | Your master needs men for the war. Whoever goes is promised freedom.
 door: Пойти | Go
 shut: f | Женщин на войну не берут. | Women aren't taken to war.
-out: 40 | Ты возвращаешься со шрамом и свободой. | You come back with a scar and your freedom. | free brave
-out: 30 | Ты возвращаешься, а хозяин уже не помнит обещания. | You come back, and the master no longer remembers his promise. | brave
-out: 30 | Битва страшнее, чем рассказывали. Из десятка ваших возвращаются трое. | The battle is worse than they said. Of your ten, three come back. | risk40 brave
+out: 20 | Ты возвращаешься, а хозяин уже не помнит обещания. | You come back, and the master no longer remembers his promise. | brave
+out: 20 | Битва страшнее, чем рассказывали. Из десятка ваших возвращаются трое. | The battle is worse than they said. Of your ten, three come back. | risk40 brave
+out: 30 | Ты гребёшь на военном корабле. После победы город отпускает гребцов на волю. | You row on a warship. After the victory the city frees its rowers. | free brave sea | @anc #med
+out: 30 | Ты несёшь щит за хозяином. Он погибает, а его вдова отпускает тебя. | You carry your master's shield. He falls, and his widow sets you free. | free brave | @anc !#med
+out: 30 | Ты возвращаешься со шрамом и свободой. | You come back with a scar and your freedom. | free brave | @med !#ru
+out: 30 | После похода князь велит отпустить ратников. Тебе дают надел у засечной черты. | After the campaign the prince has the fighting men freed. You get a plot by the frontier line. | free brave moved | @med #ru
 ask: Чем можно заплатить за свободу? | What can freedom be paid for with?
 door: Остаться | Stay
-out: 70 | Ты работаешь за ушедших. Их доля теперь твоя. | You work for those who left. Their share is yours now. |
-out: 30 | Ушедших вернулось мало. Хозяин в нужде продаёт часть людей, и тебя тоже. | Few of those who went come back. The master, in need, sells some of his people, you among them. | moved
+out: 20 | Ты работаешь за ушедших. Их доля теперь твоя. | You work for those who left. Their share is yours now. |
+out: 30 | Ушедших вернулось мало. Хозяин в нужде продаёт часть людей, и тебя тоже. | Few of those who went come back. The master, in need, sells some of his people, you among them. | moved | @anc
+out: 30 | Хозяину нужен выкуп за сына из плена. Он продаёт часть людей, и тебя тоже. | The master needs a ransom for his son, taken captive. He sells some of his people, you among them. | moved | @med
+out: 25 | Вернувшиеся свободными селятся рядом. Ты носишь им воду и смотришь, как они пашут своё. | Those who came back free settle nearby. You carry them water and watch them plough their own. | | @med
 
 id: o_scribe_school
 groups: anc
@@ -824,16 +1013,19 @@ ask: Когда у тебя в последний раз был голос? | Wh
 id: o_legion
 groups: anc med
 tags: med it
-need: !town
+need: !town after:-200 before:450
 ages: 19-27
 weight: 1
 q: Вербовщик набирает в легион. Двадцать лет службы, потом — земля. | A recruiter is enlisting for the legion. Twenty years' service, then land.
 door: Записаться | Sign up
 shut: f | Женщин в легион не берут. | Women aren't taken into the legion.
 shut: r0 | Рабов в легион не берут. | Slaves aren't taken into the legion.
-out: 40 | Через двадцать лет ты получаешь надел у чужой реки и ставишь дом. | Twenty years on you get a plot by a foreign river and build a house. | moved wealth+1 brave
-out: 30 | Ты видишь Рейн, Дунай и море на краю света. Дома тебя уже не узнают. | You see the Rhine, the Danube and the sea at the edge of the world. At home nobody knows you any more. | moved sea brave
-out: 30 | Чужой лес. Из твоей когорты не возвращается никто. | A foreign forest. Nobody from your cohort comes back. | risk50 brave
+out: 20 | Чужой лес. Из твоей когорты не возвращается никто. | A foreign forest. Nobody from your cohort comes back. | risk50 brave
+out: 30 | Через двадцать лет ты получаешь надел у чужой реки и ставишь дом. | Twenty years on you get a plot by a foreign river and build a house. | moved wealth+1 brave | @anc
+out: 30 | Тебя отправляют в Египет. Двадцать лет ты стоишь на постах у Нила и женишься на местной. | You are sent to Egypt. Twenty years you stand guard along the Nile and marry a local woman. | moved brave married | @anc
+out: 30 | Ты видишь Рейн, Дунай и море на краю света. Дома тебя уже не узнают. | You see the Rhine, the Danube and the sea at the edge of the world. At home nobody knows you any more. | moved sea brave | @med
+out: 25 | Ты стоишь на Адриановом валу. Ветер, дождь и пикты по ту сторону. | You stand on Hadrian's Wall. Wind, rain, and the Picts on the other side. | moved brave | @med
 door: Остаться на отцовской земле | Stay on your father's land
-out: 70 | Виноградник родит. Ты возишь вино в город. | The vineyard bears. You take wine to town. | wealth+1
-out: 30 | Земли мало, братьев много. Ты идёшь в город таскать мешки. | Little land, many brothers. You go to town to carry sacks. | town
+out: 20 | Земли мало, братьев много. Ты идёшь в город таскать мешки. | Little land, many brothers. You go to town to carry sacks. | town
+out: 30 | Виноградник родит. Ты возишь вино в город. | The vineyard bears. You take wine to town. | wealth+1 | @anc
+out: 30 | Виноградник родит. Но подати растут, и ты отдаёшь землю под защиту соседа-богача. | The vineyard bears. But the taxes keep rising, and you put your land under a rich neighbour's protection. | | @med

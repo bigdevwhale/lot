@@ -1,0 +1,634 @@
+# What to leave behind: the fixed fork at 45 or 48 (slot: legacy). Id prefix l_.
+# The engine draws one block that fits the life. Every era and region needs blocks for those with children (kids),
+# those without (!kids) and monks (need names monk).
+
+id: l_teach
+slot: legacy
+groups: anc med early ind
+tags: *
+need: kids
+ages: 43-50
+weight: 1
+q: Дети подросли. Чему ты успеешь их научить? | The children are growing up. What will you have time to teach them?
+door: Своему делу | Your own trade
+out: 20 | Дети знают твоё дело лучше тебя. | The children know your trade better than you do. |
+out: 40 | Старший бросает твоё дело на второй год. Младший держится и ходит за тобой хвостом. | The eldest gives up your trade in the second year. The youngest sticks to it and follows you everywhere. | | !@ind
+out: 40 | Дети всё равно уходят на фабрику. Но руки у них твои. | The children go to the factory all the same. But they have your hands. | | @ind
+ep: {Научил|Научила} детей своему делу. | Taught the children a trade.
+ask: Чему ты можешь научить того, кто рядом? | What can you teach the person next to you?
+door: Читать | To read
+shut: !lit | Ты и сам{|а} не умеешь читать. | You cannot read yourself.
+out: 10 | Вечерами дети читают вслух, а ты поправляешь. | In the evenings the children read aloud and you correct them. | taught
+out: 50 | Учишь детей грамоте по единственной книге в доме. | You teach the children their letters from the only book in the house. | taught | @med @early @ind
+out: 50 | Учишь сына знакам на сырой глине. Он лепит таблички и смеётся. | You teach your son the signs in wet clay. He shapes tablets and laughs. | taught | @anc #me
+out: 50 | Учишь детей знакам на бамбуковых планках. Они пишут их палочкой на песке. | You teach the children the signs on bamboo slips. They write them with a stick in the sand. | taught | @anc #cn
+out: 50 | Учишь детей письму на черепках. Черепков в доме теперь не выбрасывают. | You teach the children to write on potsherds. Nobody throws out a broken pot now. | taught | @anc !#me !#cn
+ep: Дети читали благодаря {ему|ей}. | The children could read thanks to {him|her}.
+ask: Кого ты научишь тому, что знаешь сам? | Whom will you teach what you know?
+door: Рассказывать истории | Tell them stories
+out: 100 | Вечерами рассказываешь детям %story%. Они просят ещё. | In the evenings you tell the children %story%. They ask for more. | story
+ask: Какую историю твоей семьи ты знаешь? | Which story of your family do you know?
+
+id: l_rainy_day
+slot: legacy
+groups: anc med early ind mod
+tags: *
+need: kids
+ages: 43-50
+weight: 1
+q: Есть немного лишнего. Отложить на чёрный день или потратить на детей сейчас? | There is a little to spare. Put it by for a rainy day, or spend it on the children now?
+door: Отложить | Put it by
+shut: r0 !@mod | У несвободных своего нет. | The unfree own nothing.
+shut: poor | Откладывать нечего: до весны бы дотянуть. | There is nothing to put by: you must last till spring.
+out: 20 | Откладываешь понемногу. Кубышку никому не показываешь. | You put a little aside. You show the hoard to nobody. | wealth+1
+out: 50 | Под половицей горшок с монетами. Ночью проверяешь, на месте ли. | Under the floorboard, a pot of coins. At night you check it is still there. | wealth+1 | @med @early
+out: 50 | Зерно в яме, обмазанной глиной. В голодный год его хватит до весны. | Grain in a pit lined with clay. In a hungry year it will last till spring. | wealth+1 | @anc
+out: 50 | Носишь в сберегательную кассу по монете. Книжку прячешь за иконой. | You take a coin at a time to the savings bank. The book is hidden behind the icon. | wealth+1 | @ind #ru
+out: 50 | Носишь в сберегательную кассу понемногу. Книжку держишь в жестянке из-под чая. | You take a little to the savings bank. The book lives in a tea tin. | wealth+1 | @ind !#ru
+out: 50 | Откладываешь каждый месяц. Дети не знают, сколько там. | You put some aside every month. The children don't know how much. | wealth+1 | @mod
+ask: Что ты откладываешь на потом? | What are you putting off for later?
+door: Потратить на детей | Spend it on the children
+out: 30 | Новая одежда на всех. Дети ходят по улице, как на праздник. | New clothes for all. The children walk down the street as if it were a feast day. | kind
+out: 40 | Купил{|а} детям обувь. Первые сапоги в их жизни. | You buy the children shoes. The first boots of their lives. | kind | @med @early @ind
+out: 40 | Платишь за учёбу. Старший уезжает в город с твоим чемоданом. | You pay for schooling. The eldest leaves for town with your suitcase. | kind | @mod
+out: 30 | Летом везёшь детей к тёплой воде. Они спят на одной кровати и не хотят домой. | In summer you take the children to warm water. They sleep in one bed and don't want to go home. | kind | @mod !poor
+ep: Не {жалел|жалела} для детей. | Spared nothing for the children.
+
+id: l_slave_children
+slot: legacy
+groups: anc med early
+tags: *
+need: kids r0
+ages: 43-50
+weight: 2
+q: Своего у тебя нет, даже дети не твои. Что им всё-таки оставить? | You own nothing; even the children are not yours. What can you leave them all the same?
+door: Ремесло, которое ценит хозяин | A craft the master values
+out: 60 | Учишь сына всему, что умеешь. Ремесленника не продают в поле. | You teach your son all you know. A craftsman is not sold off to the fields. |
+out: 40 | Учишь дочь шить. Её берут в дом хозяйки, к теплу. | You teach your daughter to sew. She is taken into the mistress's house, near the warmth. |
+door: Выкупить одного ребёнка | Buy out one child
+shut: poor | Ты копишь годами, а набралось на пару башмаков. | You save for years and have enough for a pair of shoes.
+out: 30 | Хозяин берёт деньги и отпускает младшего. Ты стоишь у ворот, пока не стемнеет. | The master takes the money and lets the youngest go. You stand at the gate till dark. | free kind
+out: 70 | Хозяин берёт деньги и говорит: в другой раз. Другого раза нет. | The master takes the money and says: another time. There is no other time. | wealth-1
+door: Песни и истории своих | The songs and stories of your people
+out: 100 | Ночью рассказываешь детям %story%. Хозяин этого не отнимет. | At night you tell the children %story%. The master cannot take that away. | story
+ep: {Оставил|Оставила} детям то, чего не отнять. | Left the children what could not be taken.
+ask: Что у тебя есть такого, чего никто не отнимет? | What do you have that no one can take?
+
+id: l_will
+slot: legacy
+groups: ind mod
+tags: *
+need: kids !r0
+ages: 43-50
+weight: 1
+q: Нотариус спрашивает, что писать в завещании. | The notary asks what to put in the will.
+door: Всем поровну | Equal shares for all
+out: 60 | Пишете поровну. Нотариус кивает: так спокойнее. | You write equal shares. The notary nods: it is calmer that way. |
+out: 40 | Поровну так поровну. Потом дети всё равно спорят о часах. | Equal shares it is. Later the children quarrel over the clock anyway. |
+door: Дом тому, кто будет рядом | The house to whoever stays near
+out: 60 | Пишешь дом младшей дочери. Остальные узнают об этом не скоро. | You leave the house to the youngest daughter. The others will not learn of it for a long time. |
+out: 40 | Пишешь дом тому, кто останется. Старший обижается и полгода не пишет. | You leave the house to whoever stays. The eldest takes offence and doesn't write for half a year. |
+door: Ничего не писать | Write nothing
+out: 100 | Уходишь, ничего не подписав. Разберутся сами. | You leave without signing anything. They will sort it out. |
+ask: Кому достанется нажитое? | Who will get what you have built up?
+
+id: l_daughter_study
+slot: legacy
+groups: mod
+tags: *
+need: kids after:1955
+ages: 43-50
+weight: 1
+q: Дочь хочет учиться в большом городе. Дома нужны руки. | Your daughter wants to study in a big city. Hands are needed at home.
+door: Отпустить и помогать | Let her go and help
+shut: poor | Денег на дорогу и комнату нет. | There is no money for the fare and a room.
+out: 60 | Посылаешь ей каждый месяц понемногу. Через пять лет она привозит диплом и кладёт тебе на колени. | You send her a little every month. Five years later she brings home a diploma and lays it on your lap. | wealth-1 kind
+out: 40 | Она уезжает и остаётся там. Звонит по воскресеньям. | She leaves and stays there. She phones on Sundays. | wealth-1
+ep: Дочь выучилась. | The daughter got her education.
+door: Пусть решает сама | Let her decide herself
+out: 50 | Она уезжает сама, с одной сумкой. Учится и работает по ночам. | She goes on her own with one bag. She studies and works nights. |
+out: 50 | Она остаётся. Иногда спрашивает, что было бы, если бы уехала. | She stays. Sometimes she asks what would have happened if she had gone. |
+door: Сначала замуж | Marriage first
+out: 60 | Её свадьба через год. Учебники лежат на шкафу. | Her wedding is a year later. The textbooks sit on top of the wardrobe. |
+out: 40 | Она не спорит, а осенью всё равно уезжает. | She doesn't argue, and in the autumn she leaves anyway. |
+ask: Кого ты удерживаешь рядом, хотя пора отпустить? | Whom are you keeping close when it is time to let go?
+
+id: l_mod_hands
+slot: legacy
+groups: mod
+tags: *
+need: kids
+ages: 43-50
+weight: 1
+q: Дети выросли с телефонами в руках. Что им передать из своего? | The children grew up with phones in their hands. What of yours can you pass on?
+door: Научить делу руками | Teach them to work with their hands
+out: 60 | По субботам чините с сыном старый мотоцикл. Говорите мало. | On Saturdays you fix an old motorbike with your son. You say little. |
+out: 40 | Учишь дочь печь хлеб. Получается со второго раза. | You teach your daughter to bake bread. It works the second time. |
+door: Записать, откуда вы | Write down where you come from
+shut: !lit | Ты и сам{|а} не умеешь читать. | You cannot read yourself.
+out: 100 | Записываешь в тетрадь имена прадедов и сёл. Тетрадь лежит у старшего. | You write the names of great-grandparents and villages in a notebook. The eldest keeps it. |
+ep: {Записал|Записала}, откуда род. | Wrote down where the family came from.
+door: Рассказывать истории | Tell them stories
+out: 100 | За ужином рассказываешь детям %story%. Они делают вид, что не слушают. | Over supper you tell the children %story%. They pretend not to listen. | story
+ask: Что ты знаешь о своих прадедах? | What do you know of your great-grandparents?
+
+id: l_nokids
+slot: legacy
+groups: stone anc med early ind mod
+tags: *
+need: !kids
+ages: 43-50
+weight: 1
+q: Детей у тебя нет. Кому достанется то, что ты умеешь? | You have no children. Who will get what you know how to do?
+door: Взять ученика | Take on a pupil
+out: 30 | Соседский мальчишка ходит за тобой. Через год он делает всё, как ты. | A neighbour's boy follows you about. In a year he does everything as you do. | kind
+out: 70 | Учишь сына соседей тесать кремень. Он злится, режет пальцы и не уходит. | You teach the neighbours' son to knap flint. He gets angry, cuts his fingers and stays. | kind | @stone
+out: 70 | Берёшь в ученики сироту. Он ест за двоих и работает за двоих. | You take an orphan as your apprentice. He eats for two and works for two. | kind | @anc @med @early @ind
+out: 70 | Учишь своему делу молодую соседку. Она звонит тебе, когда что-то не выходит. | You teach your trade to a young neighbour. She rings you when something won't work. | kind | @mod
+ep: {Вырастил|Вырастила} ученика. | Raised a pupil.
+ask: Кому можно передать то, что умеешь? | Who could you pass on what you can do to?
+door: Раздать нажитое при жизни | Give away what you have while you live
+shut: poor | Раздавать нечего. | There is nothing to give.
+shut: r0 !@mod | У несвободных своего нет. | The unfree own nothing.
+out: 40 | Раздаёшь вещи тем, кому нужнее. Дом становится тихим и пустым. | You give your things to those who need them more. The house grows quiet and bare. | kind wealth-1
+out: 60 | Отдаёшь храму поле. Тебя поминают по праздникам. | You give a field to the temple. You are remembered on feast days. | wealth-1 faith | @anc @med @early
+out: 60 | Отдаёшь деньги на школу в родном селе. На стене висит табличка с твоим именем. | You give money for the school in your home village. A plaque on the wall bears your name. | wealth-1 kind | @ind @mod
+ep: Раздал{|а} всё при жизни. | Gave everything away while alive.
+door: Рассказывать истории чужим детям | Tell stories to other people's children
+out: 100 | Соседские дети сидят у твоего порога. Рассказываешь им %story%. | The neighbours' children sit on your doorstep. You tell them %story%. | story
+ask: Какую историю ты расскажешь чужим детям? | Which story would you tell other people's children?
+
+id: l_nephew
+slot: legacy
+groups: anc med early ind
+tags: *
+need: !kids
+ages: 43-50
+weight: 1
+q: Сестра овдовела. Просит взять к себе её младшего. | Your sister is widowed. She asks you to take her youngest.
+door: Взять к себе | Take him in
+out: 60 | Мальчик живёт у тебя. Через год он зовёт тебя так, как звал отца. | The boy lives with you. A year on he calls you what he called his father. | kind
+out: 40 | Мальчик скучает по матери и молчит. Ты ставишь ему отдельную миску и ждёшь. | The boy misses his mother and says nothing. You give him his own bowl and wait. | kind
+ep: {Вырастил|Вырастила} сестриного сына. | Raised a sister's son.
+ask: Кого можно взять под крыло? | Whom could you take under your wing?
+door: Помогать ей издали | Help her from afar
+shut: poor | Помогать нечем: самим бы прокормиться. | There is nothing to help with: you can barely feed yourself.
+shut: r0 | Тебе нечего ей послать. | You have nothing to send her.
+out: 100 | Каждую осень отправляешь сестре мешок зерна. Она шлёт поклон. | Every autumn you send your sister a sack of grain. She sends her thanks. | wealth-1 kind
+door: Отказать | Refuse
+out: 60 | Сестра уходит. Мальчика берёт её свёкор. | Your sister leaves. Her father-in-law takes the boy. |
+out: 40 | Мальчика отдают в чужой дом. Ты видишь его на рынке: вырос. | The boy is given to strangers. You see him at the market: he has grown. |
+
+id: l_nokids_temple
+slot: legacy
+groups: anc med early
+tags: *
+need: !kids
+ages: 43-50
+weight: 1
+q: Детей нет, и некому будет поминать тебя. | There are no children, and no one will remember you after.
+door: Отдать храму часть нажитого | Give part of what you have to the temple
+shut: r0 | У несвободных своего нет. | The unfree own nothing.
+shut: poor | Отдавать нечего. | There is nothing to give.
+out: 100 | Отдаёшь храму. Твоё имя вписывают туда, где поминают. | You give to the temple. Your name is written where the dead are remembered. | faith wealth-1
+ep: Имя {его|её} вписано для поминовения. | {His|Her} name is written to be remembered.
+door: Сделать что-то для всех | Do something for everyone
+out: 40 | Кладёшь мостки через ручей. Ходят все, а помнят, кто положил. | You lay planks across the stream. Everyone uses them, and they remember who laid them. | kind
+out: 60 | Чистишь старый колодец. Вода снова сладкая. | You clean out the old well. The water is sweet again. | kind
+ep: {Вычистил|Вычистила} колодец для всех. | Cleaned the well for everyone.
+door: Жить, как живётся | Live as you live
+out: 100 | Решаешь, что помнить тебя будут, кому надо. Спишь спокойно. | You decide that whoever needs to will remember you. You sleep soundly. |
+ask: Кто тебя вспомнит добрым словом? | Who will remember you kindly?
+
+id: l_mod_flat
+slot: legacy
+groups: ind mod
+tags: *
+need: !kids !r0
+ages: 43-50
+weight: 1
+q: Детей нет. Кому оставить дом и то, что накоплено? | There are no children. Who gets the home and what you have saved?
+door: Племяннице | Your niece
+out: 70 | Пишешь всё на племянницу. Она приезжает чаще, чем раньше. | You leave it all to your niece. She visits more often than before. |
+out: 30 | Пишешь на племянницу. Она узнаёт об этом и плачет у тебя на кухне. | You leave it to your niece. She finds out and cries in your kitchen. | love
+door: Тем, кому хуже | Those worse off
+out: 100 | Оставляешь всё детскому дому на соседней улице. Там висит твоя фотография. | You leave everything to the orphanage down the street. Your photograph hangs there. | kind
+ep: {Оставил|Оставила} всё сиротам. | Left everything to orphans.
+door: Прожить самому | Spend it yourself
+shut: poor | Тратить особенно нечего. | There is not much to spend.
+out: 100 | Едешь туда, куда всю жизнь {собирался|собиралась}. Присылаешь соседке открытку. | You go where you always meant to go. You send your neighbour a postcard. | moved wealth-1
+ask: На что ты потратишь то, что откладываешь «на потом»? | What will you spend what you save "for later" on?
+
+id: l_nokids_memoir
+slot: legacy
+groups: ind mod
+tags: *
+need: !kids
+ages: 43-50
+weight: 1
+q: Детей нет. Хочется, чтобы что-то осталось после тебя. | There are no children. You want something to remain after you.
+door: Записать, что помнишь | Write down what you remember
+shut: !lit | Ты и сам{|а} не умеешь читать. | You cannot read yourself.
+out: 100 | Исписал{|а} три тетради. Их найдут на чердаке через полвека. | You fill three notebooks. They will be found in an attic half a century later. |
+ep: {Оставил|Оставила} три тетради воспоминаний. | Left three notebooks of memories.
+door: Помогать соседским детям | Help the neighbours' children
+out: 100 | Соседские дети делают у тебя уроки. Ты кормишь их супом. | The neighbours' children do their homework at your table. You feed them soup. | kind
+ask: Чей ребёнок мог бы прийти к тебе за помощью? | Whose child could come to you for help?
+door: Посадить сад | Plant an orchard
+shut: town | В городе у тебя нет ни клочка земли. | In town you have no patch of land.
+out: 100 | Сажаешь яблони за домом. Они переживут тебя. | You plant apple trees behind the house. They will outlive you. |
+
+id: l_stone_hunt
+slot: legacy
+groups: stone
+tags: *
+need: kids
+ages: 43-50
+weight: 1
+q: Ноги уже не те. Пора отдать сыновьям свои охотничьи тропы. | Your legs are not what they were. It is time to give your sons your hunting trails.
+door: Отвести их по всем тропам | Walk them along every trail
+out: 70 | Полную луну ходите вместе. Ты показываешь, где пьёт олень и где спит медведь. | A whole moon you walk together. You show where the deer drinks and where the bear sleeps. |
+out: 30 | На дальней тропе ты падаешь в ручей. Сыновья несут тебя домой и смеются всю дорогу. | On the far trail you fall into a stream. Your sons carry you home laughing all the way. | risk5
+ep: {Показал|Показала} детям все тропы. | Showed the children every trail.
+door: Научить делать наконечники | Teach them to make points
+out: 100 | Сидите у огня и бьёте камень о камень. У младшего выходит лучше, чем у тебя. | You sit by the fire striking stone on stone. The youngest does it better than you. |
+door: Рассказать, что видел{|а} | Tell them what you have seen
+out: 100 | У огня рассказываешь детям %story%. Они повторяют слово в слово. | By the fire you tell the children %story%. They repeat it word for word. | story
+ask: Какие тропы ты знаешь, а другие нет? | Which paths do you know that others don't?
+
+id: l_stone_cache
+slot: legacy
+groups: stone
+tags: *
+need: kids
+ages: 43-50
+weight: 1
+q: Зима будет долгой. Что оставить детям, если ты её не переживёшь? | The winter will be long. What will you leave the children if you don't outlive it?
+door: Тайник со шкурами и кремнём | A cache of hides and flint
+out: 100 | Прячешь запас кремня и шкур в сухой пещере. Показываешь место только старшему. | You hide a store of flint and hides in a dry cave. You show the place only to the eldest. | wealth+1
+door: Научить, где искать еду зимой | Teach them where to find food in winter
+out: 70 | Учишь детей искать орехи под снегом и ловить рыбу подо льдом. | You teach the children to find nuts under snow and catch fish under ice. |
+out: 30 | Ищете вместе корни у реки. Младший запомнил место, которое ты забыл{|а}. | You hunt for roots by the river. The youngest remembers a place you forgot. |
+door: Песню рода | The family's song
+out: 100 | Поёшь детям песню, в которой имена всех, кто был до вас. Теперь они знают её. | You sing the children the song with the names of everyone before you. Now they know it. | story
+ep: {Передал|Передала} детям песню рода. | Passed on the family's song.
+
+id: l_stone_band
+slot: legacy
+groups: stone
+tags: *
+need: !kids
+ages: 43-50
+weight: 1
+q: Своих детей у тебя нет. Род всё равно растит всех вместе. | You have no children of your own. The band raises all of them together anyway.
+door: Учить всех детей рода | Teach all the band's children
+out: 100 | Дети ходят за тобой к реке. Ты учишь их ставить ловушки на рыбу. | The children follow you to the river. You teach them to set fish traps. | kind
+ep: Учил{|а} чужих детей, как своих. | Taught others' children as {his|her} own.
+door: Расписать стену пещеры | Paint the cave wall
+out: 100 | Охрой и сажей рисуешь на стене оленя. Его увидят через тысячи лет. | With ochre and soot you paint a deer on the wall. It will be seen thousands of years later. |
+door: Пересказывать старое | Retell the old tales
+out: 100 | У огня рассказываешь детям %story%. Они засыпают, не дослушав. | By the fire you tell the children %story%. They fall asleep before the end. | story
+
+id: l_land_sons
+slot: legacy
+groups: anc med early ind
+tags: *
+need: kids m !town r1
+ages: 43-50
+weight: 2
+q: Земли мало, а сыновей несколько. Как её делить? | There is little land and several sons. How to divide it?
+door: Поровну на всех | Equally among all
+out: 60 | Каждому по полоске. Через поколение на них не прокормить и одного. | A strip for each. In a generation, none of them will feed even one. |
+out: 40 | Делите поровну. Братья ругаются из-за межи, но работают рядом. | You divide it equally. The brothers quarrel over the boundary but work side by side. |
+door: Всё старшему | Everything to the eldest
+out: 60 | Старший остаётся на земле. Младшие уходят в город искать работу. | The eldest stays on the land. The younger ones go to town to look for work. |
+out: 40 | Младшие уходят в солдаты. Один не возвращается. | The younger ones go for soldiers. One does not come back. | kids-1 | @med @early @ind
+ep: Сберёг землю целой. | Kept the land whole.
+door: Продать землю и учить детей | Sell the land and educate the children
+shut: !@ind | Землю не продают. Она принадлежит роду. | Land is not sold. It belongs to the family.
+out: 50 | Продаёшь поле. Сыновья уезжают учиться в город. | You sell the field. Your sons leave for school in town. | wealth-1 town
+out: 50 | Продаёшь поле. Деньги кончаются раньше, чем учёба. | You sell the field. The money runs out before the schooling does. | wealth-1
+ask: Что ты делишь между близкими? | What are you dividing among your nearest?
+
+id: l_dowry
+slot: legacy
+groups: med early ind
+tags: eu fr de it en ru in
+need: kids !r0
+ages: 43-50
+weight: 2
+q: Дочь на выданье. Что дать за ней? | Your daughter is of age to marry. What will you give with her?
+door: Сундук и корову | A chest and a cow
+shut: poor | Корова одна, и без неё вам не прожить. | You have one cow, and you can't live without it.
+out: 70 | Корова уходит со двора за дочерью. Сундук везут на телеге, все соседи смотрят. | The cow leaves the yard behind your daughter. The chest goes on a cart, the whole street watching. | wealth-1
+out: 30 | Приданого мало, сватья недовольна. Дочь всё равно счастлива. | The dowry is small and the in-laws are unhappy. Your daughter is happy all the same. |
+door: Всё, что есть | Everything you have
+shut: poor | Отдавать нечего. | There is nothing to give.
+out: 50 | Отдаёте за дочерью всё. Сами зимуете на хлебе и воде. | You give everything with your daughter. You spend the winter on bread and water. | wealth-2
+out: 50 | Дочь уходит в богатый дом. Тебя туда зовут только по праздникам. | Your daughter goes to a rich house. You are invited only on feast days. | wealth-2 | #in
+ep: Отдал{|а} за дочерью всё. | Gave everything for {his|her} daughter.
+door: Ничего, пусть берут по любви | Nothing: let them take her for love
+out: 40 | Жених берёт её без приданого. Над ним смеются, а он не слышит. | The groom takes her without a dowry. They laugh at him; he doesn't hear. | love
+out: 60 | Сваты уходят. Дочь сидит дома ещё три года. | The matchmakers leave. Your daughter stays at home three more years. |
+ask: Что не жалко отдать ради чужого счастья? | What would you give for someone else's happiness?
+
+id: l_workshop
+slot: legacy
+groups: med early ind
+tags: eu fr de it en ru cn jp me
+need: kids r2
+ages: 43-50
+weight: 2
+q: Мастерская одна, а детей несколько. Кому её отдать? | There is one workshop and several children. Who gets it?
+door: Старшему | The eldest
+out: 70 | Старший получает мастерскую и твой молоток. Остальные идут подмастерьями к чужим. | The eldest gets the workshop and your hammer. The others go as journeymen to strangers. |
+out: 30 | Старший не любит дела, но держит его. Без тебя всё идёт хуже. | The eldest does not love the work but keeps it going. Without you it goes worse. |
+door: Самому способному | The most able
+shut: !@ind #eu | Цех не примет в мастера дочь, а она способнее всех. | The guild will not take a daughter as a master, and she is the ablest of all.
+shut: !@ind #fr | Цех не примет в мастера дочь, а она способнее всех. | The guild will not take a daughter as a master, and she is the ablest of all.
+shut: !@ind #de | Цех не примет в мастера дочь, а она способнее всех. | The guild will not take a daughter as a master, and she is the ablest of all.
+shut: !@ind #it | Цех не примет в мастера дочь, а она способнее всех. | The guild will not take a daughter as a master, and she is the ablest of all.
+shut: !@ind #en | Цех не примет в мастера дочь, а она способнее всех. | The guild will not take a daughter as a master, and she is the ablest of all.
+out: 100 | Мастерскую получает младший. Старший хлопает дверью и уходит. | The youngest gets the workshop. The eldest slams the door and leaves. |
+door: Продать и разделить деньги | Sell and divide the money
+out: 100 | Мастерскую покупает сосед. Дети получают по кошельку и разъезжаются. | A neighbour buys the workshop. The children each get a purse and go their ways. | wealth+1
+ask: Кому ты передашь своё дело? | Who will you hand your work to?
+
+id: l_icon
+slot: legacy
+groups: early ind
+tags: ru
+need: kids
+ages: 43-50
+weight: 2
+q: В доме одна старая икона, ещё от прадеда. Кому она достанется? | There is one old icon in the house, from your great-grandfather. Who will have it?
+door: Старшему сыну | The eldest son
+out: 70 | Старший обещает держать её в красном углу. Держит. | The eldest promises to keep it in the icon corner. He does. | faith
+out: 30 | Икону прячут в сундук. Достают на Пасху. | The icon is hidden in a chest. They take it out at Easter. | faith | after:1925
+door: Дочери, которая рядом | The daughter who stays near
+out: 100 | Дочь вешает икону у себя над кроватью. Говорит, что по ночам с ней спокойнее. | Your daughter hangs the icon over her bed. She says the nights are calmer with it. |
+door: Отдать в церковь | Give it to the church
+out: 70 | Икону ставят в приделе. Ходишь смотреть на неё по воскресеньям. | The icon is set in a side chapel. You go to look at it on Sundays. | faith
+out: 30 | Церковь закрывают. Что стало с иконой, никто не знает. | The church is closed. Nobody knows what became of the icon. | | after:1925
+ask: Какая вещь в доме старше всех вас? | Which thing in your home is older than any of you?
+
+id: l_emigrate
+slot: legacy
+groups: ind
+tags: eu fr de it en ru me
+need: kids !america after:1880 before:1925
+ages: 43-50
+weight: 2
+q: Сын собирается в Америку. Говорит, там платят деньгами, а не обещаниями. | Your son means to go to America. He says there they pay in money, not promises.
+door: Дать денег на билет | Give him money for the ticket
+shut: poor | На билет не хватит и всего дома. | The whole house would not pay for the ticket.
+out: 50 | Сын уезжает. Через год приходит письмо и пять долларов. | Your son leaves. A year later comes a letter and five dollars. | wealth-1
+out: 50 | Сын уезжает. Письма приходят всё реже, потом перестают. | Your son leaves. The letters come less often, then stop. | wealth-1
+ep: Отпустил{|а} сына за океан. | Let {his|her} son go across the ocean.
+door: Отпустить с пустыми руками | Let him go with nothing
+out: 60 | Он копит год в порту и всё-таки уезжает. Пишет, что моет посуду в Нью-Йорке. | He saves a year at the port and leaves after all. He writes that he washes dishes in New York. |
+out: 40 | Денег на билет он так и не собрал. Женится и остаётся рядом. | He never saves enough for the ticket. He marries and stays nearby. |
+door: Удержать | Keep him
+out: 100 | Сын остаётся. Иногда вечером смотрит в сторону станции. | Your son stays. Some evenings he looks towards the station. |
+ask: Кого пришлось отпустить далеко? | Whom have you let go far away?
+
+id: l_savings_book
+slot: legacy
+groups: mod
+tags: ru
+need: kids after:1955 before:1990
+ages: 43-50
+weight: 2
+q: На сберкнижке скопилось. На что? | Your savings book has grown. What for?
+door: Детям на кооператив | A flat for the children
+out: 100 | Копишь детям на квартиру. Пока лежит, проценты капают. | You save for a flat for the children. While it sits, the interest drips in. | wealth+1
+ep: Копил{|а} детям на квартиру. | Saved for a flat for the children.
+door: На «Жигули» | A Zhiguli car
+shut: poor | Очередь на машину на годы, а денег не хватит и в конце. | The queue for a car is years long, and there won't be enough money at the end of it.
+out: 100 | Через три года во дворе стоит машина. Летом едете всей семьёй на Юг. | Three years later a car stands in the yard. In summer the whole family drives south. | wealth-1
+door: Детям на море | The children to the seaside
+out: 100 | Везёшь детей в Сочи. Они впервые видят море. | You take the children to Sochi. They see the sea for the first time. | wealth-1 kind sea
+ask: На что ты копишь? | What are you saving for?
+
+id: l_cn_exam
+slot: legacy
+groups: med early ind
+tags: cn
+need: kids before:1905
+ages: 43-50
+weight: 2
+q: Сын хочет сдавать государственный экзамен. Это годы учёбы, и в поле его не будет. | Your son wants to sit the state examination. That is years of study, and he won't be in the fields.
+door: Нанять учителя | Hire a teacher
+shut: poor | Учителю платят рисом, а риса едва хватает самим. | A teacher is paid in rice, and there is barely enough for you.
+out: 30 | Сын сдаёт с третьего раза. Имя рода вписывают в уездную книгу. | Your son passes at the third try. The family name is entered in the county book. | wealth-1
+out: 70 | Сын проваливается раз за разом. Учит соседских детей за горсть риса. | Your son fails time after time. He teaches the neighbours' children for a handful of rice. | wealth-1
+door: Учить самому | Teach him yourself
+shut: !lit | Ты и сам{|а} не знаешь иероглифов. | You do not know the characters yourself.
+out: 100 | Ночью при лампе учите вместе классические книги. Он читает уже лучше тебя. | At night by the lamp you study the classics together. He already reads better than you. | taught
+ep: {Учил|Учила} сына иероглифам. | Taught {his|her} son the characters.
+door: Оставить в поле | Keep him in the fields
+out: 100 | Сын остаётся. Рис растёт, книг в доме нет. | Your son stays. The rice grows; there are no books in the house. |
+ask: Чему тебе не дали выучиться? | What were you never allowed to learn?
+
+id: l_jp_heir
+slot: legacy
+groups: med early ind
+tags: jp
+need: kids !r0
+ages: 43-50
+weight: 2
+q: Своим детям дом не удержать. Есть способный подмастерье. | Your own children could not hold the house together. There is an able apprentice.
+door: Усыновить подмастерье | Adopt the apprentice
+out: 70 | Подмастерье берёт твою фамилию и женится на старшей дочери. Дом стоит. | The apprentice takes your name and marries your eldest daughter. The house stands. |
+out: 30 | Он берёт фамилию, а родной сын уходит из дома. Ты долго не можешь простить себе. | He takes the name, and your own son leaves home. You cannot forgive yourself for a long time. | kids-1
+ep: Сберёг{|ла} дом. | Kept the house going.
+door: Оставить родному сыну | Leave it to your own son
+out: 50 | Сын старается. Дело идёт хуже, но это ваше дело. | Your son tries. The business goes worse, but it is yours. |
+out: 50 | Через десять лет лавку продают за долги. | Ten years later the shop is sold for debt. | wealth-1
+door: Отдать дочери | Give it to your daughter
+shut: !@ind | Дом наследует мужчина. Дочь в нём только до свадьбы. | A man inherits the house. A daughter lives in it only until she marries.
+out: 100 | Дочь ведёт лавку. Соседи шепчутся, а покупатели ходят. | Your daughter runs the shop. The neighbours whisper, and the customers come. |
+ask: Кому можно доверить то, что строится годами? | Whom would you trust with what you have built?
+
+id: l_in_trade
+slot: legacy
+groups: med early ind
+tags: in
+need: kids r1 r2
+ages: 43-50
+weight: 2
+q: Сын не хочет лепить горшки, как его отец и дед. Хочет быть писцом. | Your son doesn't want to make pots like his father and grandfather. He wants to be a scribe.
+door: Отправить учиться письму | Send him to learn to write
+shut: !r3 | Писцами рождаются. Учитель не возьмёт мальчика из твоей касты. | Scribes are born, not made. The teacher won't take a boy of your caste.
+out: 100 | Сын учится у брахмана. Приходит домой с пальцами в чернилах. | Your son studies with a Brahmin. He comes home with ink on his fingers. | wealth-1
+door: Учить своему делу | Teach him your trade
+out: 70 | Сын у гончарного круга. Горшки выходят кривые, потом ровные. | Your son at the potter's wheel. The pots come out crooked, then true. |
+out: 30 | Сын работает молча. Ночью ты слышишь, как он плачет. | Your son works in silence. At night you hear him weep. |
+door: Отпустить в город | Let him go to the city
+out: 60 | Он уходит в город. Там никто не спрашивает, чей он. | He goes to the city. There no one asks whose son he is. | | @ind
+out: 40 | Он уходит и возвращается через год, без денег и без улыбки. | He goes, and comes back a year later with no money and no smile. |
+ask: Чего от тебя ждут по праву рождения? | What is expected of you by birth?
+
+id: l_af_cattle
+slot: legacy
+groups: anc med early ind
+tags: af
+need: kids !r0
+ages: 43-50
+weight: 2
+q: Сын хочет жениться. Сколько коров отдать за невесту? | Your son wants to marry. How many cows to give for the bride?
+door: Лучших коров | The best cows
+shut: poor | В стаде три коровы. | There are three cows in the herd.
+out: 70 | Отдаёте лучших. Невеста приходит с песнями, её родня довольна. | You give the best. The bride comes with songs, her kin content. | wealth-1
+out: 30 | Отдаёте лучших. Через год в засуху их не хватает вам самим. | You give the best. A year later in the drought you miss them yourselves. | wealth-2
+door: Как велит обычай, не больше | As custom demands, no more
+out: 100 | Торгуетесь три дня. Свадьба скромная, но весёлая. | You haggle three days. The wedding is modest but merry. |
+door: Пусть отработает | Let him work for her
+out: 100 | Сын три года пасёт стадо родни невесты. Возвращается с женой и с сыном. | Your son herds the bride's family's cattle for three years. He comes back with a wife and a son. |
+ask: Чем можно поступиться ради своих детей? | What would you give for your children's wedding?
+
+id: l_andes_quipu
+slot: legacy
+groups: med
+tags: andes
+need: kids
+ages: 43-50
+weight: 2
+q: Узлы кипу помнят всё: подати, урожаи, имена. Кому передать, что ты знаешь? | The quipu knots remember everything: tribute, harvests, names. Who will you pass on what you know to?
+door: Научить сына читать узлы | Teach your son to read the knots
+shut: !r3 | Узлы читают только хранители, а ты не из них. | Only the keepers read the knots, and you are not one of them.
+out: 100 | Сын перебирает шнуры с закрытыми глазами. Он помнит урожаи за двадцать лет. | Your son runs the cords through his fingers with his eyes shut. He remembers twenty years of harvests. | taught
+door: Отдать сыну свою долю на террасах | Give your son your share of the terraces
+out: 70 | Айлью передаёт твою полосу сыну. Он сеет кукурузу там, где сеял{|а} ты. | The ayllu passes your strip to your son. He sows maize where you sowed. |
+out: 30 | Землю переделили. Сыну досталась полоса выше, где холодно. | The land is redivided. Your son gets a higher strip, where it is cold. |
+door: Рассказывать у огня | Tell stories by the fire
+out: 100 | Рассказываешь детям %story%. Где-то наверху холодно, а у огня тепло. | You tell the children %story%. Somewhere above it is cold, but by the fire it is warm. | story
+
+id: l_meso_school
+slot: legacy
+groups: med
+tags: meso
+need: kids
+ages: 43-50
+weight: 2
+q: Младшего сына пора отдавать в школу при храме. В какую? | It's time to send your youngest to a temple school. Which one?
+door: В школу для знати | The school for nobles
+shut: !r3 | Туда берут только детей знати. | Only nobles' children are taken there.
+out: 100 | Сын учится читать знаки на складных книгах и считать дни. | Your son learns to read the signs in folding books and to count the days. |
+door: В школу для воинов | The warriors' school
+out: 60 | Сына учат носить щит и копать каналы. Он приходит домой гордый. | Your son is taught to carry a shield and dig canals. He comes home proud. |
+out: 40 | Сына берут на войну. Он не возвращается. | Your son is taken to war. He does not come back. | kids-1
+door: Оставить при себе | Keep him with you
+out: 100 | Сын помогает тебе на поле. Ты учишь его своему делу. | Your son helps you in the field. You teach him your trade. |
+ask: Чему ты хочешь научить младших в своей семье? | What do you want to teach the youngest in your family?
+
+id: l_us_letters
+slot: legacy
+groups: early ind
+tags: us latam
+need: kids r0 before:1890
+ages: 43-50
+weight: 2
+q: Детей учить грамоте нельзя. Можно поплатиться спиной. | Teaching the children to read is forbidden. It can cost you your back.
+door: Учить тайком | Teach them in secret
+shut: !lit | Ты и сам{|а} не умеешь читать. | You cannot read yourself.
+out: 70 | Ночью учите буквы по листку из старой Библии. Листок прячешь в стене. | At night you learn letters from a page of an old Bible. You hide the page in the wall. | taught brave
+out: 30 | Надсмотрщик видит, как сын пишет в пыли. Тебя секут. | The overseer sees your son writing in the dust. You are flogged. | taught brave risk10
+ep: Дети читали благодаря {ему|ей}. | The children could read thanks to {him|her}.
+door: Учить песни и молитвы | Teach them songs and prayers
+out: 100 | В поле поёте вместе. В песне говорится о реке, за которой свобода. | You sing together in the field. The song speaks of a river with freedom on the other side. | faith
+door: Рассказывать о своих | Tell them about your people
+out: 100 | Ночью шёпотом рассказываешь детям %story%. | At night, in a whisper, you tell the children %story%. | story
+ask: Чему пришлось учиться тайком? | What have you learned in secret?
+
+id: l_au_songs
+slot: legacy
+groups: stone anc med early ind
+tags: au
+need: kids
+ages: 43-50
+weight: 2
+q: Детям пора узнать песни своей земли: где вода, где можно, где нельзя. | It is time the children learned the songs of their country: where the water is, where to go and not to go.
+door: Пройти с ними по песенной тропе | Walk the song path with them
+out: 70 | Идёте от колодца к колодцу. Ты поёшь, они запоминают дорогу. | You walk from waterhole to waterhole. You sing; they learn the way. |
+out: 30 | На тропе теперь ограда и овцы. Ты поёшь у ограды. | There is a fence across the path now, and sheep. You sing at the fence. | | @early @ind
+ep: {Передал|Передала} детям песни земли. | Passed on the songs of the land.
+door: Научить жечь траву | Teach them to burn the grass
+out: 100 | Учишь жечь траву понемногу, чтобы пришли кенгуру. | You teach them to burn the grass a little at a time, so the kangaroos come. |
+door: Рассказать у огня | Tell them by the fire
+out: 100 | У огня рассказываешь детям %story%. Звёзды над вами те же, что над предками. | By the fire you tell the children %story%. The stars above are the ones your ancestors saw. | story
+
+id: l_me_school
+slot: legacy
+groups: med early ind
+tags: me eg af
+need: kids after:1000
+ages: 43-50
+weight: 1
+q: Учитель при мечети берёт мальчиков учить Коран. Отдать ли сына? | The teacher at the mosque takes boys to learn the Qur'an. Will you send your son?
+door: Отдать к учителю | Send him to the teacher
+shut: poor | Учителю нужно платить, а сын нужен в поле. | The teacher must be paid, and your son is needed in the field.
+out: 70 | Сын сидит с другими на циновке и повторяет суры. Учит и тебя тому, что выучил. | Your son sits on the mat with others and recites the suras. He teaches you what he has learned. | faith
+out: 30 | Сын сбегает от учителя на базар. Учитель возвращает его за ухо. | Your son runs off from the teacher to the bazaar. The teacher brings him back by the ear. |
+door: Учить дома | Teach him at home
+shut: !lit | Ты и сам{|а} не умеешь читать. | You cannot read yourself.
+out: 100 | По вечерам читаете вместе. Он водит пальцем по строкам справа налево. | In the evenings you read together. He follows the lines with his finger, right to left. | taught
+door: Оставить при себе | Keep him with you
+out: 100 | Сын работает с тобой. Молитвы он знает на слух. | Your son works with you. He knows the prayers by ear. |
+
+id: l_monk_novices
+slot: legacy
+groups: med early
+tags: *
+need: monk
+ages: 43-50
+weight: 1
+q: В обители новые послушники. Что ты им оставишь? | There are new novices in the monastery. What will you leave them?
+door: Учить послушников грамоте | Teach the novices to read
+shut: !lit | Ты и сам{|а} не умеешь читать. | You cannot read yourself.
+out: 100 | Учишь послушников грамоте. Самый бестолковый потом пишет лучше всех. | You teach the novices their letters. The slowest one ends up writing best of all. | taught
+ep: Послушники читали благодаря {ему|ей}. | The novices could read thanks to {him|her}.
+door: Учить своему послушанию | Teach them your task
+out: 60 | Учишь их печь хлеб для всей обители. Хлеб у них подгорает, потом нет. | You teach them to bake bread for the whole house. Their bread burns, then doesn't. |
+out: 40 | Учишь их ухаживать за пчёлами. Младший больше не боится. | You teach them to keep the bees. The youngest is no longer afraid. |
+door: Рассказывать истории | Tell them stories
+out: 100 | Вечерами рассказываешь послушникам %story%. Они просят ещё. | In the evenings you tell the novices %story%. They ask for more. | story
+
+id: l_monk_book
+slot: legacy
+groups: med early
+tags: *
+need: monk
+ages: 43-50
+weight: 1
+q: Настоятель спрашивает, чем ты хочешь заниматься оставшиеся годы. | The abbot asks what you want to do with your remaining years.
+door: Переписать книгу для обители | Copy a book for the monastery
+shut: !lit | Ты и сам{|а} не умеешь читать. | You cannot read yourself.
+out: 100 | Год над одной книгой. Она будет стоять в библиотеке, когда тебя забудут. | A year over one book. It will stand in the library when you are forgotten. |
+ep: {Переписал|Переписала} книгу для обители. | Copied a book for the monastery.
+door: Работать в саду | Work in the garden
+out: 100 | Разбиваешь новые грядки с травами. Ими будут лечить ещё сто лет. | You lay out new beds of herbs. They will heal people for a hundred years. |
+door: Ходить за больными | Look after the sick
+out: 70 | Сидишь с больными у ворот. Не все выживают, но никто не умирает один. | You sit with the sick at the gate. Not all live, but none die alone. | kind
+out: 30 | От больного заражаешься сам{|а}. Месяц лежишь, потом встаёшь. | You catch the sickness yourself. A month in bed, then you get up. | kind risk10
+ask: Чем ты займёшь годы, которые остались? | How will you fill the years you have left?
+
+id: l_monk_chronicle
+slot: legacy
+groups: med early
+tags: *
+need: monk
+ages: 43-50
+weight: 1
+q: Тебе поручают вести летопись обители. Писать как было или как велят? | You are to keep the monastery's chronicle. Write what happened, or what you are told?
+door: Писать как было | Write what happened
+shut: !lit | Ты не умеешь писать. Летопись отдают другому. | You cannot write. The chronicle goes to another.
+out: 60 | Пишешь и про голод, и про ссору с князем. Через сто лет тебе поверят. | You write of the famine and of the quarrel with the lord. A hundred years on they will believe you. | brave
+out: 40 | Настоятель вырывает страницу. Ты пишешь её снова, мельче. | The abbot tears out a page. You write it again, smaller. | brave
+ep: Писал{|а} правду. | Wrote the truth.
+door: Писать как велят | Write what you are told
+shut: !lit | Ты не умеешь писать. Летопись отдают другому. | You cannot write. The chronicle goes to another.
+out: 100 | Летопись выходит ровной и скучной. Настоятель доволен. | The chronicle comes out smooth and dull. The abbot is pleased. |
+door: Запомнить и рассказать | Remember it and tell it
+out: 100 | Рассказываешь молодым %story%. Они перескажут дальше. | You tell the young ones %story%. They will pass it on. | story
+ask: Что о твоём времени должны узнать потом? | What should later people know about your time?

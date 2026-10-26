@@ -38,13 +38,16 @@ interface Person {
     val rank: Int
     /** The year the life has reached. */
     val now: Int
-    /** m f lit illit married single kids monk town, plus the door words !lit poor rich !married !kids. */
+    /** m f lit illit married single kids monk town, the door words poor rich, `@med` for the era group and `#cn` for a region tag. */
     fun has(cond: String): Boolean
 }
 
 class Line(val group: Group, val kind: Kind, val tags: Set<String>, val text: Tx, val need: Need) {
-    /** "sea" asks for a coast; other tags ask for a region that carries one of them. */
-    fun fits(r: Region) = tags.isEmpty() || tags.any { if (it == "sea") r.sea else it in r.tags }
+    /** A tag asks for a region that carries it; in the stone age, where no region is Southeast Asia, "sea" asks for a coast. */
+    fun fits(r: Region) = tags.isEmpty() || tags.any { it in r.tags || (it == "sea" && group == Group.STONE && r.sea) }
+
+    /** A stone-age line about the coast, lived by the sea. */
+    val coast get() = group == Group.STONE && "sea" in tags
 }
 
 /** A real event. [meet] marks someone later written about, met in passing. Its id is its row, so rows are only ever appended. */
@@ -56,13 +59,17 @@ class Hist(val id: Int, val tags: Set<String>, val from: Int, val to: Int, val m
     val mid get() = (from + to) / 2
 }
 
-class Outcome(val weight: Double, val text: Tx, val fx: List<String>)
+/** One way a door can play out; [need] keeps it to the times, places and people it is true for. */
+class Outcome(val weight: Double, val text: Tx, val fx: List<String>, val need: Need = Need.ANY)
 
 class Shut(val conds: List<String>, val why: Tx)
 
 class Gate(val text: Tx, val shut: List<Shut>, val outs: List<Outcome>, val ep: Tx?, val ask: Tx?)
 
-/** An everyday fork from dilemmas*.txt. */
+/** Where a fork stands in a life: an everyday fork, or the crisis, the legacy or the last wish every life comes to. */
+enum class Slot { FORK, CRISIS, LEGACY, WISH }
+
+/** A fork from dilemmas*.txt. */
 class Dilemma(
     val id: String,
     val groups: Set<Group>,
@@ -72,6 +79,7 @@ class Dilemma(
     val weight: Double,
     val q: Tx,
     val doors: List<Gate>,
+    val slot: Slot = Slot.FORK,
 ) {
     fun fits(r: Region) = "*" in tags || tags.isEmpty() || tags.any { it in r.tags }
 }
@@ -135,12 +143,13 @@ class Content(val lines: List<Line>, val hist: List<Hist>, val dilemmas: List<Di
                         shut = (d["shut"] as List<String>).map { s -> bars(s).let { Shut(it[0].split(' ').filter { c -> c.isNotBlank() }, Tx(it[1], it[2])) } },
                         outs = (d["out"] as List<String>).map { o ->
                             val c = bars(o)
-                            Outcome(c[0].toDouble(), Tx(c[1], c[2]), c.getOrElse(3) { "" }.split(' ').filter { it.isNotBlank() })
+                            Outcome(c[0].toDouble(), Tx(c[1], c[2]), c.getOrElse(3) { "" }.split(' ').filter { it.isNotBlank() }, Need.of(c.getOrElse(4) { "" }))
                         },
                         ep = (d["ep"] as String?)?.let(::pair),
                         ask = (d["ask"] as String?)?.let(::pair),
                     )
                 },
+                slot = Slot.valueOf((head["slot"] ?: "fork").uppercase()),
             )
         }
     }

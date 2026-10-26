@@ -144,13 +144,21 @@ class Life private constructor(
     /** The age the first child came at; lines about school-age, grown children and grandchildren wait for the years to pass. */
     private var firstChildAt = -1
     override val now get() = year + age
+    /**
+     * The era the life has reached, whose lines and forks it gets: born in 1936, it reads of the war and then of the television.
+     * A monk keeps to the cloister of the era he was born in, since only those eras have one.
+     */
+    private val group get() = if (monk) era.group else World.eraOf(now).group
     /** Words a fork's outcome leaves behind (faith, brave, moved, ...), read by the epitaph and the question. */
     private val flags = mutableSetOf<String>()
     private val eps = mutableListOf<Tx>()
     private val asks = mutableListOf<Tx>()
     private val usedForks = mutableSetOf<String>()
+    /** The stops of this life: the crisis and the legacy come at different ages in different lives. */
+    private val stops: List<Pair<Int, S>>
+    private val crisisAt: Int
 
-    override fun has(cond: String) = when (cond) {
+    override fun has(cond: String): Boolean = when (cond) {
         "m" -> sex == Sex.M
         "f" -> sex == Sex.F
         "lit" -> lit
@@ -172,7 +180,12 @@ class Life private constructor(
         "r1" -> rank == 1
         "r2" -> rank == 2
         "r3" -> rank == 3
-        else -> cond in flags
+        else -> when (cond[0]) {
+            '@' -> group.name.equals(cond.drop(1), ignoreCase = true)
+            '#' -> cond.drop(1) in region.tags
+            '!' -> !has(cond.drop(1))
+            else -> cond in flags
+        }
     }
 
     private val entries = mutableListOf<Entry>()
@@ -227,6 +240,15 @@ class Life private constructor(
             5 -> rnd.nextDouble() < e.lit * if (rank >= 2) 1.6 else .8
             else -> false
         }
+        crisisAt = listOf(30, 33, 36, 42).random(rnd)
+        stops = STOPS.swap(33, crisisAt).swap(45, listOf(45, 48).random(rnd))
+    }
+
+    /** The stops with the kinds at ages [a] and [b] trading places. */
+    private fun List<Pair<Int, S>>.swap(a: Int, b: Int): List<Pair<Int, S>> {
+        val sa = first { it.first == a }.second
+        val sb = first { it.first == b }.second
+        return map { (age, s) -> age to when (age) { a -> sb; b -> sa; else -> s } }
     }
 
     private fun <T> weighted(list: List<T>, w: (T) -> Double): T {
@@ -249,7 +271,7 @@ class Life private constructor(
     private fun line(age: Int, k: Kind, mark: Mark = Mark.PLAIN) {
         // Abroad, the lines of the home region no longer fit; only those true anywhere do.
         // Behind the monastery gate only the lines written for it fit: no dances, weddings or fields.
-        val all = content.lines(era.group, k, region).filter {
+        val all = content.lines(group, k, region).filter {
             it.need.holds(this) && ("abroad" !in flags || it.tags.isEmpty()) && (!monk || it.need.names("monk")) &&
                 // A toddler's page gets only toddler lines, and an older child never does.
                 (k != Kind.CHILD || it.need.names("small") == (age < 4))
@@ -261,7 +283,7 @@ class Life private constructor(
         used += l
         add(age, l.text, mark)
         // A line about the coast was lived by it.
-        if ("sea" in l.tags) sawSea = true
+        if (l.coast) sawSea = true
         for (s in l.need.sets) when (s) {
             "town" -> town = true
             "sea" -> sawSea = true
@@ -283,7 +305,7 @@ class Life private constructor(
         var pi = 0
         var pending: Choice? = null
         var end: End? = null
-        for ((age, s) in STOPS) {
+        for ((age, s) in stops) {
             if (revealed >= shown) break
             revealed++
             if (s != S.BIRTH && age >= death) { end = die(); break }
@@ -324,12 +346,13 @@ class Life private constructor(
             S.MARRY17 -> if (sex == Sex.F && era.i in 1..4 && !monk) return marry(age) else if (hist == null) line(age, Kind.YOUTH)
             S.MARRY24 -> if (!married && !monk && !single) return marry(age) else if (hist == null) line(age, Kind.ADULT)
             S.JOY -> line(age, Kind.JOY)
-            S.CRISIS -> { if (hist == null) line(age, Kind.HARD, Mark.HIST); return crisis() }
-            S.ADULT -> if (hist == null || rnd.nextBoolean()) line(age, Kind.ADULT)
-            S.LEGACY -> return legacy()
+            S.CRISIS -> { fork(age, Slot.CRISIS)?.let { return it }; if (hist == null) line(age, Kind.HARD, Mark.HIST) }
+            // Not every hard year is the great one: some pass in a line, before it, so the same flood does not come twice.
+            S.ADULT -> if (hist == null || rnd.nextBoolean()) line(age, if (age < crisisAt && rnd.nextDouble() < .2) Kind.HARD else Kind.ADULT)
+            S.LEGACY -> { fork(age, Slot.LEGACY)?.let { return it }; if (hist == null) line(age, Kind.ADULT) }
             S.OLD -> if (hist == null) line(age, Kind.OLD)
-            S.WISH -> return wish()
-            S.FORK -> { fork(age)?.let { return it }; if (hist == null) line(age, if (age >= 58) Kind.OLD else Kind.ADULT) }
+            S.WISH -> { fork(age, Slot.WISH)?.let { return it }; if (hist == null) line(age, Kind.OLD) }
+            S.FORK -> { if (rnd.nextDouble() >= .2) fork(age, Slot.FORK)?.let { return it }; if (hist == null) line(age, if (age >= 58) Kind.OLD else Kind.ADULT) }
         }
         return null
     }
@@ -337,14 +360,16 @@ class Life private constructor(
     private fun work(): Ask {
         val e = era.i
         val f = sex == Sex.F
+        // Where only scribes and nobles learn, a farmer's daughter is shut out by her station, as her brothers are.
+        val station = e in 1..3 && rank < 3
         // Before the printing age girls were not taught, in the oldest times not even in a scribe's house.
-        val girl = f && e in 1..4 && !lit && rank > 0 && (rank < 3 || e < 3)
+        val girl = f && e in 1..4 && !lit && rank > 0 && !station && (rank < 3 || e < 3)
         val learn = when {
             e == 0 -> why("Письма ещё не придумали.", "Writing has not been invented yet.")
             e < 6 && lit -> why("Ты уже умеешь читать.", "You can read already.")
             rank == 0 && e < 6 -> why("Несвободным учиться запрещено.", "The unfree are forbidden to learn.")
+            station -> why("Грамоте учат только детей писцов и знати.", "Only the children of scribes and nobles learn their letters.")
             girl -> why("Девочек грамоте не учат.", "Girls are not taught their letters.")
-            e < 4 && rank < 3 -> why("Грамоте учат только детей писцов и знати.", "Only the children of scribes and nobles learn their letters.")
             e == 6 && rank == 0 -> why("Семье нужен твой заработок уже сейчас.", "Your family needs your wages now.")
             else -> null
         }
@@ -357,16 +382,19 @@ class Life private constructor(
         val doors = mutableListOf(
             door("Работать с родителями", "Work alongside your parents", null) { add(12, birth.estate.work) },
             door(if (e == 6) "Учиться дальше" else "Учиться грамоте", if (e == 6) "Stay on at school" else "Learn to read and write", learn) {
-                if (e == 6) { wealth++; add(12, "Учишься дальше. Первым делом — в библиотеку.", "You stay on at school. First thing: the library.") }
+                if (e == 6) { wealth++; add(12, study()) }
                 else {
                     lit = true; firstLit = !parentLit && !kinLit
-                    if (firstLit) add(12, "{Выучился|Выучилась} читать — {первым|первой} в роду.", "You learn to read, the first in your family.")
-                    else if (parentLit) add(12, "{Выучился|Выучилась} читать и писать, как отец.", "You learn to read and write, like your father.")
-                    else add(12, "{Выучился|Выучилась} читать и писать. Грамотные в роду были и до тебя.", "You learn to read and write. There were readers in the family before you.")
+                    val got = when {
+                        firstLit -> Tx("{Выучился|Выучилась} читать — {первым|первой} в роду.", "You learn to read, the first in your family.")
+                        parentLit -> Tx("{Выучился|Выучилась} читать и писать, как отец.", "You learn to read and write, like your father.")
+                        else -> Tx("{Выучился|Выучилась} читать и писать. Грамотные в роду были и до тебя.", "You learn to read and write. There were readers in the family before you.")
+                    }
+                    add(12, school() + Tx(" ", " ") + got)
                 }
             },
         )
-        // A girl may still try in secret, from a brother's lessons or a father's tablets; half of them are caught.
+        // A girl whose brothers are taught may still try in secret, from their lessons or a father's tablets; half of them are caught.
         if (girl) doors += door("Учиться тайком", "Learn in secret", null) {
             if (rnd.nextBoolean()) {
                 lit = true; firstLit = !parentLit && !kinLit; flags += "secretlit"
@@ -381,8 +409,7 @@ class Life private constructor(
                 this@Life.town = true
                 if (rnd.nextBoolean()) wealth++
                 if (rnd.nextDouble() < .35) sawSea = true
-                if (e == 6) add(12, "{Уехал|Уехала} в город. Спишь у дальней родни на полу.", "You move to the city. You sleep on a distant relative's floor.")
-                else add(12, "{Ушёл|Ушла} в город, в ученики. Мастер бьёт, но кормит.", "You go to town as an apprentice. The master beats you, but feeds you.")
+                add(12, apprentice())
             },
         ))
         if (e in 2..4) doors += door("Уйти в монастырь", "Enter a monastery", when {
@@ -392,9 +419,83 @@ class Life private constructor(
         }) {
             monk = true
             if (rnd.nextDouble() < .7) { lit = true; firstLit = !parentLit && !kinLit }
-            add(12, "{Ушёл|Ушла} в монастырь. Семьи не будет — будет тишина и молитва.", "You enter a monastery. There will be no family: there will be silence and prayer.")
+            add(12, when {
+                has("#eu") || has("#ru") -> Tx("{Ушёл|Ушла} в монастырь. Семьи не будет — будет тишина и молитва.", "You enter a monastery. There will be no family: there will be silence and prayer.")
+                has("#in") -> Tx("{Ушёл|Ушла} в обитель. Семьи не будет — будут тишина и учитель.", "You enter a monastery. There will be no family: there will be silence and a teacher.")
+                else -> Tx("{Ушёл|Ушла} в буддийский монастырь. Тебе обрили голову. Семьи не будет — будут тишина и сутры.", "You enter a Buddhist monastery. Your head is shaved. There will be no family: there will be silence and the sutras.")
+            })
         }
-        return ask(12, Tx("Детство кончилось. Что дальше?", "Childhood is over. What next?"), *doors.toTypedArray())
+        val q = when (e) {
+            0 -> any(Tx("Детство кончилось. Чему учиться?", "Childhood is over. What will you learn?"), Tx("Ты уже не ребёнок. Что дальше?", "You are no longer a child. What next?"))
+            6 -> any(Tx("Детство кончилось. Что дальше?", "Childhood is over. What next?"), Tx("Пора решать, что дальше.", "Time to decide what comes next."))
+            else -> any(Tx("Детство кончилось. Что дальше?", "Childhood is over. What next?"), Tx("Пора к делу. К какому?", "Time to work. At what?"), Tx("Ты уже не ребёнок. Кем быть?", "You are no longer a child. What will you be?"))
+        }
+        return ask(12, q, *doors.toTypedArray())
+    }
+
+    /** One of several ways to tell the same thing, so that two lives do not read alike. */
+    private fun any(vararg t: Tx) = t[rnd.nextInt(t.size)]
+
+    /** Where and how the letters were learned, as the time and place taught them. */
+    private fun school(): Tx {
+        val e = era.i
+        return when {
+            e == 5 && has("#ru") -> Tx("Три зимы ходишь в церковно-приходскую школу.", "For three winters you go to the parish school.")
+            e == 5 -> any(Tx("Ходишь в школу. Грифельная доска, мел, линейка учителя.", "You go to school. A slate, chalk, the teacher's ruler."),
+                Tx("Ходишь в школу за две деревни. Зимой — по темноте.", "You walk to the school two villages away. In winter, in the dark."))
+            has("#andes") -> Tx("Счётчик учит тебя читать узлы на шнурах: каждый узел — число.", "A counter teaches you to read the knots on the cords: every knot is a number.")
+            has("#meso") -> Tx("Жрец учит тебя знакам из книг, сложенных гармошкой.", "A priest teaches you the signs from the folding books.")
+            has("#eg") && e == 1 -> Tx("Пишешь тростинкой на черепках: папирус дорог.", "You write with a reed on potsherds: papyrus is dear.")
+            has("#me") && e == 1 -> Tx("Писец при храме учит тебя знакам на мокрой глине.", "A temple scribe teaches you the signs on wet clay.")
+            has("#me") -> Tx("В школе при мечети учишь буквы по Корану, нараспев.", "At the mosque school you learn your letters from the Quran, chanting.")
+            has("#cn") && e == 1 -> Tx("Переписываешь знаки на бамбуковые планки, пока рука не запомнит.", "You copy the characters onto bamboo slips until your hand remembers them.")
+            has("#cn") -> Tx("Учишь «Троесловие» наизусть. Учитель бьёт линейкой по ладони.", "You learn the Three Character Classic by heart. The teacher strikes your palm with a ruler.")
+            has("#in") -> Tx("Учитель пишет буквы пальцем на песке, а ты повторяешь.", "The teacher writes the letters in the sand with his finger, and you copy him.")
+            has("#jp") -> Tx("В школе при храме учишься писать кистью.", "At the temple school you learn to write with a brush.")
+            has("#sea") -> Tx("Монахи в деревенском храме учат тебя буквам на пальмовых листьях.", "The monks at the village temple teach you letters on palm leaves.")
+            has("#af") -> Tx("Учитель-марабут учит тебя арабским буквам на деревянной доске.", "A marabout teaches you Arabic letters on a wooden board.")
+            has("#med") && e == 1 -> Tx("Пишешь палочкой на восковой табличке, а учитель стоит над душой.", "You write with a stylus on a wax tablet while the teacher stands over you.")
+            has("#ru") -> Tx("Дьячок учит тебя по Псалтири и бьёт указкой по пальцам.", "The sexton teaches you from the Psalter and raps your fingers with a pointer.")
+            has("#us") -> Tx("Ходишь в школу в одну комнату. Читаете по Библии.", "You go to a one-room school. You read from the Bible.")
+            e == 4 && has("#eu") -> Tx("Ходишь в приходскую школу. Букварь один на троих.", "You go to the parish school. One primer between three.")
+            has("#eu") || has("#latam") -> Tx("Священник учит тебя буквам по Псалтири.", "The priest teaches you your letters from the Psalter.")
+            else -> Tx("Тебя учат буквам по единственной книге в доме.", "You learn your letters from the only book in the house.")
+        }
+    }
+
+    /** Staying on at school in our time. */
+    private fun study(): Tx = when {
+        has("#cn") || has("#jp") -> Tx("Учишься дальше. Готовишься к экзаменам до ночи, и дома все ходят на цыпочках.", "You stay on at school. You study for the exams till late, and at home everyone tiptoes.")
+        has("#in") || has("#af") -> Tx("Учишься дальше. До школы час пешком, а семья копит на форму.", "You stay on at school. It is an hour's walk away, and the family saves for the uniform.")
+        has("#ru") -> Tx("Учишься дальше. После уроков сидишь в районной библиотеке.", "You stay on at school. After lessons you sit in the district library.")
+        else -> any(Tx("Учишься дальше. Первым делом — в библиотеку.", "You stay on at school. First thing: the library."),
+            Tx("Учишься дальше. По субботам подрабатываешь, чтобы платить за книги.", "You stay on at school. On Saturdays you work to pay for the books."))
+    }
+
+    /** Going to town at twelve, as the town of that time took you. */
+    private fun apprentice(): Tx {
+        val e = era.i
+        val f = sex == Sex.F
+        return when {
+            e == 6 && has("#cn") && now >= 1985 -> Tx("{Уехал|Уехала} к родне на юг, на сборочный завод. Общежитие на восьмерых.", "You go to relatives in the south, to an assembly plant. A dormitory for eight.")
+            e == 6 && has("#ru") -> Tx("{Уехал|Уехала} в город, в училище. Общежитие, койка у окна.", "You go to the city, to a trade school. A hostel, a bed by the window.")
+            e == 6 && (has("#in") || has("#af") || has("#sea")) -> any(Tx("{Уехал|Уехала} в город к дяде. Чистишь ботинки на вокзале.", "You go to the city to your uncle. You shine shoes at the station."),
+                Tx("{Уехал|Уехала} в город. Спишь у дальней родни на полу.", "You move to the city. You sleep on a distant relative's floor."))
+            e == 6 && has("#latam") -> Tx("{Уехал|Уехала} в город. Живёте на окраине, в доме из шлакоблоков на склоне.", "You move to the city. You live on the edge, in a cinder-block house on a slope.")
+            e == 6 -> any(Tx("{Уехал|Уехала} в город. Спишь у дальней родни на полу.", "You move to the city. You sleep on a distant relative's floor."),
+                Tx("{Уехал|Уехала} в большой город. Тётя кормит и спрашивает, когда домой.", "You move to the big city. Your aunt feeds you and asks when you're going home."))
+            e == 5 && f -> Tx("Уехала в город, в прислуги. Хозяйка строгая, зато сыта.", "You go to town into service. The mistress is strict, but you are fed.")
+            e == 5 -> any(Tx("Уехал в город. Ночуешь в бараке, работаешь на фабрике.", "You go to town. You sleep in a barracks and work at the mill."),
+                Tx("Уехал в город, в ученики к печатнику. Руки в краске до локтей.", "You go to town, apprenticed to a printer. Ink up to your elbows."))
+            e == 1 && (has("#me") || has("#eg")) -> Tx("{Ушёл|Ушла} в город, в ученики к медникам. Спишь под верстаком.", "You go to town, apprenticed to the coppersmiths. You sleep under the bench.")
+            e == 1 -> Tx("{Ушёл|Ушла} в город, в ученики к гончару. Месишь глину с утра до ночи.", "You go to town, apprenticed to a potter. You knead clay from morning to night.")
+            has("#cn") -> Tx("{Ушёл|Ушла} в город, в ученики в лавку. Первые три года только подметаешь и подаёшь чай.", "You go to town, apprenticed in a shop. For the first three years you only sweep and serve tea.")
+            has("#jp") -> Tx("{Ушёл|Ушла} в город, в ученики. Первые годы моешь полы и кланяешься.", "You go to town as an apprentice. For the first years you wash floors and bow.")
+            has("#ru") -> Tx("{Ушёл|Ушла} в город, к сапожнику в мальчики. Спишь в сенях.", "You go to town as a cobbler's boy. You sleep in the passage.")
+            has("#eu") -> any(Tx("{Ушёл|Ушла} в город, в ученики. Мастер бьёт, но кормит.", "You go to town as an apprentice. The master beats you, but feeds you."),
+                Tx("{Ушёл|Ушла} в город, к кожевнику. Вонь такая, что неделю не можешь есть.", "You go to town, to a tanner. The stink is such that you can't eat for a week."))
+            else -> Tx("{Ушёл|Ушла} в город, в ученики. Мастер бьёт, но кормит.", "You go to town as an apprentice. The master beats you, but feeds you.")
+        }
     }
 
     private fun marry(age: Int): Ask {
@@ -410,13 +511,11 @@ class Life private constructor(
         return ask(age, if (age < 20) Tx("Тебя сватают.", "A match is being made for you.") else Tx("Пора заводить семью.", "Time to start a family."),
             door(if (owned) "Как решил хозяин" else "Как решили родители", if (owned) "As your master decided" else "As your parents decided", null) {
                 if (owned) byMaster = true else byParents = true
-                if (owned) wed(age, "Хозяин свёл тебя с {невольницей|невольником} со своего двора. {Жену|Мужа} ты до этого видел{|а} только издали.", "Your master pairs you with {a woman|a man} from his own yard. Until then you had seen {her|him} only from afar.")
-                else wed(age, "Свадьбу сыграли, как решили старшие. {Жену|Мужа} ты впервые {увидел|увидела} за неделю до неё.", "The wedding is held as the elders decided. You first saw your {wife|husband} a week before.")
+                wed(age, if (owned) mastered() else arranged())
             },
             door(if (e == 0) "Уйти к тому, кто нравится, в чужой род" else "По любви", if (e == 0) "Go to the one you like, in another band" else "For love", forced) {
                 love = true
-                if (e == 0) wed(age, "{Ушёл в чужой род за той, что нравилась.|Ушла в чужой род за тем, кто нравился.}", "You go to another band for the one you like.")
-                else wed(age, "{Женился|Вышла замуж} по любви. Родня ворчала, потом привыкла.", "You marry for love. The family grumbles, then gets used to it.")
+                wed(age, loved())
             },
             door("Не заводить семью", "Stay unmarried", when {
                 owned -> why("Хозяин не спрашивает, хочешь ли ты семью.", "Your master does not ask whether you want a family.")
@@ -426,13 +525,52 @@ class Life private constructor(
                 else -> null
             }) {
                 single = true
-                add(age, "{Решил|Решила} жить {один|одна}. Свободы больше, рук меньше.", "You decide to live alone. More freedom, fewer hands.")
+                add(age, any(Tx("{Решил|Решила} жить {один|одна}. Свободы больше, рук меньше.", "You decide to live alone. More freedom, fewer hands."),
+                    Tx("Живёшь {один|одна}. По воскресеньям обедаешь у сестры.", "You live alone. On Sundays you have lunch at your sister's."),
+                    if (era.i == 6) Tx("Семью не заводишь. Работа, друзья, дорога.", "You don't start a family. Work, friends, the road.")
+                    else Tx("Семью не заводишь. Соседи судачат, а ты не слушаешь.", "You don't start a family. The neighbours gossip, and you don't listen.")))
             },
         )
     }
 
-    private fun wed(age: Int, ru: String, en: String) {
-        add(age, ru, en)
+    /** A match the elders made, as it was made in that time and place. */
+    private fun arranged(): Tx = when {
+        era.i == 0 -> Tx("Старшие сговорились с соседним родом. {Жену тебе привели|Тебя отдали} на большом сборе у реки.", "The elders made a deal with the next band. {Your wife is brought to you|You are given away} at the great gathering by the river.")
+        era.i == 6 && (has("#in") || has("#me")) -> Tx("Брак устроили родители, как принято. На свадьбе триста гостей, и половину ты не знаешь.", "Your parents arrange the marriage, as is the custom. Three hundred guests, and you don't know half of them.")
+        era.i == 6 -> Tx("Родители познакомили тебя с {дочерью|сыном} своих друзей. Через полгода свадьба.", "Your parents introduce you to their friends' {daughter|son}. Six months later, a wedding.")
+        era.i == 5 -> any(Tx("Родители нашли партию через знакомых. Венчались в мае.", "Your parents found a match through friends. The wedding is in May."),
+            Tx("Отцы ударили по рукам. Свадьбу сыграли после жатвы.", "The fathers shook hands on it. The wedding is after the harvest."))
+        has("#cn") -> Tx("Сваха сверила восемь знаков судьбы. {Невесту|Жениха} ты впервые {увидел|увидела} в день свадьбы.", "The matchmaker compared the eight characters of fate. You first see your {bride|groom} on the wedding day.")
+        has("#in") -> Tx("Астролог сверил гороскопы, и свадьбу сыграли. {Жену|Мужа} ты до того не {видел|видела}.", "The astrologer matched the horoscopes, and the wedding is held. You had never seen your {wife|husband} before.")
+        has("#me") -> Tx("Отцы сговорились о выкупе. {Невесту|Жениха} ты {увидел|увидела} только на свадьбе.", "The fathers agreed the bride-price. You see your {bride|groom} only at the wedding.")
+        has("#ru") -> Tx("Сговорились по осени, после урожая. {Жену|Мужа} ты до свадьбы {видел|видела} раз, на посиделках.", "The match is made in autumn, after the harvest. You had seen your {wife|husband} once before, at an evening gathering.")
+        has("#jp") -> Tx("Сват принёс подарки от семьи {невесты|жениха}. Свадьбу сыграли до новой луны.", "The go-between brings gifts from the {bride's|groom's} family. The wedding is held before the new moon.")
+        else -> any(Tx("Свадьбу сыграли, как решили старшие. {Жену|Мужа} ты впервые {увидел|увидела} за неделю до неё.", "The wedding is held as the elders decided. You first saw your {wife|husband} a week before."),
+            Tx("Отцы ударили по рукам. Свадьбу сыграли после жатвы.", "The fathers shook hands on it. The wedding is after the harvest."))
+    }
+
+    /** A match the master made. */
+    private fun mastered(): Tx = when {
+        has("#ru") -> Tx("По барскому слову вас записали парой. {Жену|Мужа} ты до этого {видел|видела} только в церкви.", "On the master's word you are written down as a pair. Until then you had seen your {wife|husband} only in church.")
+        has("#us") || has("#latam") -> Tx("Хозяин свёл тебя с {невольницей|невольником} с соседнего двора. Закон такого брака не признаёт.", "Your master pairs you with {a woman|a man} from the next yard. The law does not recognise such a marriage.")
+        else -> Tx("Хозяин свёл тебя с {невольницей|невольником} со своего двора. {Жену|Мужа} ты до этого {видел|видела} только издали.", "Your master pairs you with {a woman|a man} from his own yard. Until then you had seen {her|him} only from afar.")
+    }
+
+    /** A match made for love. */
+    private fun loved(): Tx = when (era.i) {
+        0 -> Tx("{Ушёл в чужой род за той, что нравилась.|Ушла в чужой род за тем, кто нравился.}", "You go to another band for the one you like.")
+        6 -> if (has("#ru")) Tx("Познакомились в институте. Расписались в загсе, гуляли в столовой.", "You meet at college. You sign at the registry office and celebrate in a canteen.")
+            else any(Tx("Познакомились на учёбе. Расписались в будний день, без гостей.", "You meet as students. You marry on a weekday, with no guests."),
+                Tx("Познакомились на свадьбе у друзей. Через год — своя.", "You meet at a friend's wedding. A year later it is your own."))
+        5 -> any(Tx("Познакомились на танцах. {Женился|Вышла замуж} через полгода.", "You meet at a dance. Six months later you marry."),
+            Tx("Познакомились на фабрике, у соседних станков. Свадьбу справляли в складчину.", "You meet at the mill, at neighbouring machines. Everyone chips in for the wedding."))
+        else -> any(Tx("{Женился|Вышла замуж} по любви. Родня ворчала, потом привыкла.", "You marry for love. The family grumbles, then gets used to it."),
+            Tx("{Женился|Вышла замуж} по любви, против воли отца. Он год с тобой не разговаривал.", "You marry for love, against your father's wishes. He doesn't speak to you for a year."),
+            Tx("Познакомились на празднике у реки. Через год сыграли свадьбу.", "You meet at a feast by the river. A year later, the wedding."))
+    }
+
+    private fun wed(age: Int, t: Tx) {
+        add(age, t)
         bear()
         val n = kids
         val at = age + 2
@@ -452,11 +590,10 @@ class Life private constructor(
         if (n > 0 && firstChildAt < 0) firstChildAt = age + 1
     }
 
-    /** An everyday fork from the dilemmas that fit this era, place, person and age; null when none fits. */
-    private fun fork(age: Int): Ask? {
-        if (rnd.nextDouble() < .2) return null
+    /** A fork from the dilemmas of [slot] that fits this era, place, person and age; null when none fits. */
+    private fun fork(age: Int, slot: Slot): Ask? {
         val all = content.dilemmas.filter {
-            it.id !in usedForks && era.group in it.groups && age in it.ages && it.fits(region) && it.need.holds(this) &&
+            it.slot == slot && it.id !in usedForks && group in it.groups && age in it.ages && it.fits(region) && it.need.holds(this) &&
                 ("abroad" !in flags || "*" in it.tags || it.tags.isEmpty()) &&
                 // A monk has taken vows: only the forks of the cloister.
                 (!monk || it.need.names("monk"))
@@ -468,8 +605,14 @@ class Life private constructor(
         usedForks += d.id
         val acts = d.doors.map { g ->
             Act(Door(g.text, g.shut.firstOrNull { sh -> sh.conds.all { has(it) } }?.why)) {
-                val o = weighted(g.outs) { it.weight }
-                add(age, o.text)
+                // The outcomes true for this century and place; those with no need are true anywhere.
+                val o = weighted(g.outs.filter { it.need.holds(this) }.ifEmpty { g.outs }) { it.weight }
+                var text = o.text
+                if ("story" in o.fx) {
+                    val s = tell()
+                    text = Tx(text.ru.replace("%story%", s.ru), text.en.replace("%story%", s.en))
+                }
+                add(age, text)
                 effects(age, o.fx)
                 g.ep?.let { eps += it.g(sex) }
                 g.ask?.let { asks += it.g(sex) }
@@ -477,6 +620,13 @@ class Life private constructor(
         }
         if (acts.none { it.door.open }) return null
         return ask(age, d.q, *acts.toTypedArray())
+    }
+
+    /** The story told to the children: half the time the one the great-grandparent told. */
+    private fun tell(): Tx {
+        val s = birth.heir?.story?.takeIf { rnd.nextBoolean() } ?: STORIES.random(rnd).g(sex)
+        story = s
+        return s
     }
 
     private fun effects(age: Int, fx: List<String>) {
@@ -492,125 +642,13 @@ class Life private constructor(
             f == "kids+1" -> { kids++; kidsAlive++; if (firstChildAt < 0) firstChildAt = age }
             f == "kids-1" -> if (kidsAlive > 0) kidsAlive--
             f == "married" -> { if (!married) bear(); flags -= "widowed" }
+            f == "taught" -> taught = true
+            f == "tree" -> tree = true
+            f == "wishsea" -> { sawSea = true; wishSea = true }
+            f == "story" -> {}
             else -> flags += f
         }
     }
-
-    private fun crisis(): Ask {
-        val unfree = rank == 0 && era.i < 6
-        return ask(33, Tx("Беда. Что делать?", "Hard times. What now?"),
-            door(if (monk) "Переждать в обители" else "Переждать дома", if (monk) "Sit it out in the monastery" else "Sit it out at home", null) {
-                if (rnd.nextDouble() < .25) {
-                    death = minOf(death, 33 + rnd.nextInt(3))
-                    add(33, "Пережидали. Не все пережили.", "You wait it out. Not everyone lives through it.")
-                } else {
-                    wealth = (wealth - 1).coerceAtLeast(0)
-                    add(33, "Пережидали. Выжили, но всё нажитое ушло.", "You wait it out. You live, but everything you had is gone.")
-                }
-            },
-            door(when { era.i == 0 -> "Уйти всем родом за зверем"; monk -> "Уйти с братией в другую обитель"; unfree -> "Бежать"; else -> "Уйти всей семьёй в другие края" },
-                when { era.i == 0 -> "Move the whole band after the game"; monk -> "Leave with the others for another monastery"; unfree -> "Run away"; else -> "Leave with the family for other lands" }, null) {
-                if (rnd.nextDouble() < .4) sawSea = true
-                if (monk) {
-                    val lost = rnd.nextDouble() < .15
-                    if (lost) death = minOf(death, 35)
-                    add(33, if (lost) Tx("Ушли. Дорога забрала многих.", "You leave. The road takes many.")
-                        else Tx("Ушли. Дорога забрала стариков, новая обитель приняла остальных.", "You leave. The road takes the old ones; another monastery takes in the rest."))
-                } else if (unfree && rnd.nextDouble() < .4) {
-                    death = minOf(death, 34)
-                    add(33, "Беглых поймали.", "The runaways are caught.")
-                } else if (unfree) {
-                    rank = 1
-                    add(33, "{Бежал|Бежала}. На новом месте никто не знает, кем ты {был|была}.", "You run. In the new place nobody knows what you were.")
-                } else if (rnd.nextDouble() < .15) {
-                    death = minOf(death, 35)
-                    add(33, "Ушли. Дорога забрала многих.", "You leave. The road takes many.")
-                } else {
-                    add(33, "Ушли. Дорога забрала старших, но на новом месте есть земля.", "You leave. The road takes the old ones, but there is land in the new place.")
-                }
-            },
-            door(if (monk) "Раздать монастырский хлеб голодным" else "Поделиться последним с соседями", if (monk) "Give the monastery's bread to the hungry" else "Share the last you have with the neighbours",
-                if (wealth <= 0 && era.i > 0) why("Делиться нечем: у вас самих пусто.", "There is nothing to share: your own stores are empty.") else null) {
-                kind = true
-                wealth = (wealth - 1).coerceAtLeast(0)
-                if (monk) add(33, "Хлеб раздали у ворот. Обитель голодает вместе со всеми, и этого не забудут.", "The bread is given out at the gate. The monastery goes hungry with everyone, and it will not be forgotten.")
-                else add(33, "{Отдал|Отдала} соседям половину запасов. Этого не забудут.", "You give the neighbours half of what you have. It will not be forgotten.")
-            },
-        )
-    }
-
-    private fun legacy(): Ask {
-        if (monk) return cloisterLegacy()
-        val none = if (kidsAlive == 0) why("Детей у тебя нет.", "You have no children.") else null
-        return ask(45, Tx("Что оставить детям?", "What will you leave the children?"),
-            door("Научить своему делу", "Teach them your trade", none) { add(45, "Дети знают твоё дело лучше тебя.", "The children know your trade better than you do.") },
-            door("Научить читать", "Teach them to read", none ?: if (!lit) why("Ты и сам{|а} не умеешь читать.", "You cannot read yourself.") else null) {
-                taught = true
-                add(45, "Учишь детей грамоте по единственной книге в доме.", "You teach the children their letters from the only book in the house.")
-            },
-            door("Копить на чёрный день", "Save for a rainy day", if (rank == 0 && era.i < 6) why("У несвободных своего нет.", "The unfree own nothing.") else null) {
-                wealth++
-                when (era.i) {
-                    0 -> add(45, "Запас кремня и шкур — в сухой пещере.", "A store of flint and hides, in a dry cave.")
-                    6 -> add(45, "Откладываешь понемногу каждый месяц.", "You put a little aside every month.")
-                    else -> add(45, "Под половицей — горшок с монетами.", "Under the floorboard, a pot of coins.")
-                }
-            },
-            door("Рассказывать истории", "Tell them stories", null) {
-                val old = birth.heir?.story
-                if (old != null && rnd.nextBoolean()) {
-                    story = old
-                    add(45, Tx("Рассказываешь ту же историю, что рассказывали тебе: ${old.ru}.", "You tell the same story you were told: ${old.en}."))
-                } else {
-                    val s = STORIES.random(rnd).g(sex)
-                    story = s
-                    add(45, Tx("Вечерами рассказываешь детям ${s.ru}. Они просят ещё.", "In the evenings you tell the children ${s.en}. They ask for more."))
-                }
-            },
-        )
-    }
-
-    /** A monk leaves no children: what is left is the novices, the books and the stories. */
-    private fun cloisterLegacy(): Ask {
-        val unread = if (!lit) why("Ты и сам{|а} не умеешь читать.", "You cannot read yourself.") else null
-        return ask(45, Tx("Что оставить после себя?", "What will you leave behind?"),
-            door("Учить послушников грамоте", "Teach the novices to read", unread) {
-                taught = true
-                add(45, "Учишь послушников грамоте. Самый бестолковый потом пишет лучше всех.", "You teach the novices their letters. The slowest one ends up writing best of all.")
-            },
-            door("Переписать книгу для обители", "Copy a book for the monastery", unread) {
-                add(45, "Год над одной книгой. Она будет стоять в библиотеке, когда тебя забудут.", "A year over one book. It will stand in the library when you are forgotten.")
-            },
-            door("Рассказывать истории", "Tell them stories", null) {
-                val s = STORIES.random(rnd).g(sex)
-                story = s
-                add(45, Tx("Вечерами рассказываешь послушникам ${s.ru}. Они просят ещё.", "In the evenings you tell the novices ${s.en}. They ask for more."))
-            },
-        )
-    }
-
-    private fun wish(): Ask = ask(70, Tx("Последнее желание.", "One last wish."),
-        door("Увидеть море", "See the sea", when {
-            sawSea -> why("Ты его уже {видел|видела}.", "You have seen it already.")
-            rank == 0 && era.i < 6 -> why("Тебя не отпустят.", "You will not be let go.")
-            wealth < 1 && era.i < 5 -> why("Дорога к морю — месяц пути и все деньги дома.", "The road to the sea is a month's walk and all the money in the house.")
-            else -> null
-        }) {
-            sawSea = true; wishSea = true
-            add(70, "Море. Стоишь у воды до темноты и молчишь.", "The sea. You stand by the water until dark and say nothing.")
-        },
-        door("Помириться с братом", "Make peace with your brother", null) {
-            add(70, "Помирились. Сидели рядом до ночи и не вспоминали, из-за чего.", "You make peace. You sit side by side till night and never mention what it was about.")
-        },
-        door(if (monk) "Посадить дерево в монастырском саду" else "Посадить дерево у дома", if (monk) "Plant a tree in the monastery garden" else "Plant a tree by the house", when {
-            era.i == 0 -> why("Дома нет: род кочует.", "There is no house: the band moves on.")
-            rank == 0 && era.i < 6 && !monk -> why("Земля не твоя.", "The land is not yours.")
-            else -> null
-        }) {
-            tree = true
-            add(70, "{Посадил|Посадила} грушу. Плодов ты не увидишь.", "You plant a pear tree. You will not see its fruit.")
-        },
-    )
 
     private fun die(): End {
         val a = death
@@ -644,7 +682,7 @@ class Life private constructor(
                 else tx("{Вырастил|Вырастила} ${Years.childrenAcc(kids)}.", "Raised ${Years.childrenEn(kids)}.")
             if (wishSea) ep += tx("{Увидел|Увидела} море на старости лет.", "Saw the sea in old age.")
             else if (!sawSea) ep += tx("Моря так и не {увидел|увидела}.", "Never saw the sea.")
-            if (kind) ep += tx("В голодный год {делился|делилась} последним.", "Shared the last of it in a hungry year.")
+            if (kind) ep += tx("Не {отказывал|отказывала} тем, кто просил.", "Never turned away anyone who asked.")
             if (love) ep += tx("{Выбрал|Выбрала} сердцем.", "Chose with the heart.")
             if (monk) ep += tx("{Жил|Жила} в тишине.", "Lived in silence.")
             if (taught) ep += if (monk) tx("Послушники читали благодаря {ему|ей}.", "The novices could read because of {him|her}.") else tx("Дети читали благодаря {ему|ей}.", "The children could read because of {him|her}.")
@@ -670,7 +708,7 @@ class Life private constructor(
             if (byMaster) qs += tx("За {него|неё} всё решал хозяин, даже с кем жить. Что в твоём последнем году — твой собственный выбор?", "A master decided everything for {him|her}, even whom to live with. What in your last year was your own choice?")
             if (byParents) qs += tx("За {него|неё} всё решили старшие. Что в твоём последнем году — твой собственный выбор?", "The elders decided everything for {him|her}. What in your last year was your own choice?")
             if (kids > 0) qs += Tx("У этого человека ${if (kids == 1) "был" else "было"} ${Years.childrenNom(kids)}. Кому стоит позвонить сегодня?", "This person had ${Years.childrenEn(kids)}. Who should you call today?")
-            if (kind) qs += Tx("В голодный год этот человек делился последним. С кем можешь поделиться ты?", "In a hungry year this person shared the last of it. Who could you share with?")
+            if (kind) qs += Tx("Этот человек не отказывал тем, кто просил. Кому можешь помочь ты?", "This person never turned away anyone who asked. Who could you help?")
             if (monk) qs += Tx("Эта жизнь прошла в тишине. Где тишина у тебя?", "This life passed in silence. Where is your silence?")
             if (meet != null) qs += Tx("Этот человек видел того, о ком потом писали книги. Кого из встреченных тобой стоит запомнить?", "This person met someone later written about. Who among the people you have met is worth remembering?")
         }

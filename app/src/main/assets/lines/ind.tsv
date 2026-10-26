@@ -32,7 +32,7 @@ ind	c		В лавке на углу за одну монетку дают гор�
 ind	c		Тебя впервые везут в город поездом. Всю дорогу стоишь у окна.	You are taken to town by train for the first time. You stand at the window the whole way.	
 ind	c	in	Бабушка рассказывает про Раму, пока мать печёт лепёшки.	Grandmother tells of Rama while mother bakes the flatbread.	
 ind	y		{Уехал|Уехала} в город на заработки.	You go to the city for work.	+town
-ind	y		Сосед вернулся из Америки и рассказывает про небоскрёбы.	A neighbour is back from America and talks about skyscrapers.	
+ind	y		Сосед вернулся из Америки и рассказывает про небоскрёбы.	A neighbour is back from America and talks about skyscrapers.	!america
 ind	y		{Записался|Записалась} в вечернюю школу для рабочих.	You sign up for night school for workers.	town
 ind	y		Первое жалованье. {Купил|Купила} матери платок.	Your first wages. You buy your mother a shawl.	
 ind	y		На сходке говорят о восьмичасовом дне. Ты слушаешь до темноты.	At a meeting they talk of the eight-hour day. You listen until dark.	r1
@@ -52,7 +52,7 @@ ind	y		Экзамен в гимназию. Мать ждёт у ворот.	Your
 ind	y	af	Вербовщик набирает парней на рудники. Ты едешь с ними.	A recruiter signs up the young men for the mines. You go with them.	m
 ind	y		Первое любовное письмо. Прячешь его между страниц книги.	Your first love letter. You hide it between the pages of a book.	lit
 ind	y	sea cn in	Ходишь за буйволом на рисовом поле. Тебя он слушается лучше, чем отца.	You drive the buffalo in the rice field. It minds you better than your father.	r1 !town
-ind	y	it de ru	Мать собирает тебе узелок: ты едешь в Америку к дяде.	Mother packs you a bundle: you are going to your uncle in America.	+abroad
+ind	y	it de ru	Мать собирает тебе узелок: ты едешь в Америку к дяде.	Mother packs you a bundle: you are going to your uncle in America.	+abroad +america +abroad
 ind	a		В дом провели электричество. Лампочка под потолком ярче десяти свечей.	Electricity comes into the house. The bulb under the ceiling is brighter than ten candles.	
 ind	a		Стачка на заводе. Две недели без денег.	A strike at the works. Two weeks without pay.	r1 +town
 ind	a		Пришло письмо от брата — он за океаном.	A letter from your brother: he is across the ocean.	
@@ -91,7 +91,7 @@ ind	a		Едешь на воды лечиться. Пьёшь из кружки �
 ind	a		У тебя дома телефон. Когда звонишь в контору, слышит весь дом.	You have a telephone at home. When you ring the office, the whole house hears.	r3 town
 ind	a		Ребёнок родился в больнице. Первый в семье, кто родился не дома.	Your child is born in a hospital, the first in the family not born at home.	kids
 ind	a	us	Заказываешь по каталогу. Посылка идёт три недели.	You order from the mail-order catalogue. The parcel takes three weeks.	
-ind	a		Старший уехал в Америку. Его письма хранишь в жестяной коробке.	Your eldest has gone to America. You keep the letters in a tin box.	kids
+ind	a		Старший уехал в Америку. Его письма хранишь в жестяной коробке.	Your eldest has gone to America. You keep the letters in a tin box.	kids !america
 ind	a		Первый раз голосуешь. Бюллетень держишь обеими руками.	You vote for the first time. You hold the ballot in both hands.	m
 ind	a		Полжизни сбережений — в акции железной дороги.	Half a lifetime's savings go into railway shares.	r2 r3
 ind	j		Впервые {услышал|услышала} граммофон. Голос из трубы, а человека нет.	You hear a gramophone for the first time. A voice from the horn, and no one there.	

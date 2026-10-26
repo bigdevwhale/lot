@@ -29,7 +29,7 @@ Tab-separated, one line per row, 6 columns; lines starting with `#` are comments
   - `x` hard times (drought, war, plague, famine, fire, a cruel master): one line that opens a crisis.
 - **tags**: empty = anywhere. Otherwise space-separated region tags, the line fits a region carrying ANY of them:
   `af` Africa · `me` Near/Middle East · `eg` Egypt · `med` Mediterranean (Greece, Rome) · `eu` Europe · `fr` France · `de` Germany/central Europe · `it` Italy · `en` England/Britain · `ru` Rus'/Russia · `in` India · `cn` China · `jp` Japan · `sea` Southeast Asia · `meso` Mesoamerica · `andes` Andes · `am` the Americas before 1500 · `latam` Latin America after 1500 · `us` North America/USA · `au` Australia.
-  Special tag `sea` also means "a coastal region" for stone-age lines; prefer the explicit region tags.
+  In every era but stone `sea` is Southeast Asia and nothing else. Only in `stone` lines, where no region is Southeast Asia, does `sea` mean "a coastal region". A line about the sea elsewhere uses `+sea` in need, not the tag.
 - **need**: empty = anyone. Otherwise space-separated conditions, ALL must hold:
   `m` / `f` (male / female) · `r0` unfree (slave, serf, bondsman, urban poor today) · `r1` common (peasant, worker) · `r2` craft and trade · `r3` the top (noble, clergy, scribe, rich). Several `r` tokens mean any of them (`r2 r3`) ·
   `lit` / `illit` (can read / can't) · `married` · `single` · `kids` (has living children) · `monk` · `town` (went to town to work or learn).
@@ -56,7 +56,7 @@ Most people who ever lived were peasants: most lines should fit a common rural l
 
 ## dilemmas*.txt
 
-Every `dilemmas*.txt` file is read. Everyday forks that are not the fixed ones (work at 12, marriage, crisis at 33, legacy at 45, last wish at 70). Blocks separated by a blank line:
+Every `dilemmas*.txt` file is read. Everyday forks, and (with `slot:`) the fixed crisis, legacy and last wish. Work at 12 and marriage stay in code. Blocks separated by a blank line:
 
 ```
 id: well_dispute
@@ -81,6 +81,30 @@ ep: {Мирил|Мирила} соседей. | Made peace between neighbours.
 - **At least one door must be open for everyone the dilemma's `need` allows.** Shut doors are the point: show who could not take that door and why, in one plain line.
 - Effects (space-separated, may be empty): `wealth+1 wealth-1 wealth+2 wealth-2` · `riskN` (N% chance of dying within three years: risk5…risk60) · `lit` (learns to read) · `sea` (sees the sea) · `kind` · `love` · `town` · `moved` · `free` (an unfree person becomes free) · `faith` · `brave` · `kids+1` · `kids-1` (a child dies) · `married` (marries now if single).
 - Outcomes are not judgements. A kind choice can end badly, a selfish one well. That is life.
+
+### Outcomes that know the century
+
+An `out:` line may carry a fifth column, a need: `weight | ru | en | effects | need`. The outcome can only come when the need holds, so one fork can play out differently in different centuries and places. Besides the usual need tokens (`after:1930` and `before:1917` included, to keep an outcome to its years) it takes:
+
+- `@stone @anc @med @early @ind @mod`: the era group;
+- `#cn #eu #ru …`: a region tag;
+- any token negated with `!`: `!@mod`, `!#cn`.
+
+Among a door's outcomes, those whose need holds are drawn by weight. Every door keeps at least one outcome with no need, which is the fallback. A dilemma that spans several groups should give each group its own outcomes: in 1100 the stranger leaves a knife, in 1900 he leaves a newspaper and the address of a factory.
+
+The same `@group` and `#tag` tokens work in `need:` and in `shut:` conditions, so a door can be shut only in some times: `shut: r0 !@mod | …`.
+
+### The fixed forks: slot
+
+A block with `slot: crisis`, `slot: legacy` or `slot: wish` is not an everyday fork. It fills one of the fixed places of every life:
+
+- `crisis`: hard times, once in a life between 30 and 42 (`ages: 28-44`). A concrete calamity of its era and place: famine, plague, a raid, a flood, locusts, a war, a crash. Usually three doors: sit it out, leave, help others.
+- `legacy`: what to leave behind, once at 45 or 48 (`ages: 43-50`). Those with children (`need: kids`) and those without (`need: !kids`) both need blocks.
+- `wish`: the last wish at 70 (`ages: 68-72`).
+
+Each slot draws one block that fits the life (era, region, need) with every check an everyday fork gets; a monk gets only blocks whose need names `monk`. So every era, every region and both monks and the unfree must have blocks in each slot.
+
+Effects for these blocks besides the usual ones: `taught` (taught the children or novices to read: the epitaph says so), `tree` (planted a tree by the house), `wishsea` (sees the sea at last, in old age), `story` (tells a story; the outcome text holds `%story%` where the story goes, such as «Вечерами рассказываешь детям %story%.»; the story is "how great-grandfather outwitted a wolf", or the one the great-grandparent told).
 
 ## Checking
 

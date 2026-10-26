@@ -1,0 +1,610 @@
+# The last wish: the fixed fork at 70 (slot: wish). Id prefix w_.
+# The engine draws one block that fits the life. Every era and region needs blocks; monks get only blocks whose need names monk.
+
+id: w_classic
+slot: wish
+groups: anc med early ind mod
+tags: *
+ages: 68-72
+weight: 1
+q: Чего тебе хочется напоследок? | What do you wish for, at the last?
+door: Увидеть море | See the sea
+shut: sea | Ты его уже {видел|видела}. | You have seen it already.
+shut: r0 !@mod | Тебя не отпустят. | You will not be let go.
+shut: poor !@ind !@mod | Дорога к морю — месяц пути и все деньги дома. | The road to the sea is a month's walk and all the money in the house.
+out: 20 | Море. Стоишь у воды до темноты и молчишь. | The sea. You stand by the water until dark and say nothing. | wishsea
+out: 40 | Неделю едешь на телеге с купцами. Море. Мочишь в нём ноги и смеёшься, как в детстве. | A week on a cart with merchants. The sea. You wet your feet in it and laugh like a child. | wishsea | @anc @med @early
+out: 40 | Сутки в поезде, в третьем классе. Море. Стоишь у воды до темноты. | A day and a night on the train, third class. The sea. You stand by the water till dark. | wishsea | @ind
+out: 40 | Едешь к морю на автобусе. Сидишь на складном стуле у воды до темноты. | You take a bus to the sea. You sit on a folding chair by the water till dark. | wishsea | @mod
+ask: Что ты давно хочешь увидеть своими глазами? | What have you long wanted to see with your own eyes?
+door: Помириться с братом | Make peace with your brother
+out: 70 | Помирились. Сидели рядом до ночи и не вспоминали, из-за чего. | You make peace. You sit side by side till night and never mention what it was about. | kind
+out: 30 | Брат умер прошлой зимой. Сидишь у его могилы и говоришь всё, что не сказал{|а}. | Your brother died last winter. You sit by his grave and say all you never said. |
+ep: {Помирился|Помирилась} с братом. | Made peace with {his|her} brother.
+ask: С кем пора помириться? | With whom is it time to make peace?
+door: Посадить грушу у дома | Plant a pear tree by the house
+shut: r0 !@mod | Земля не твоя. | The land is not yours.
+shut: town @mod | У тебя квартира на пятом этаже. | You live in a flat on the fifth floor.
+shut: #meso | Груша здесь не растёт. | Pears do not grow here.
+shut: #andes | Груша здесь не растёт. | Pears do not grow here.
+shut: #af | Груша здесь не растёт. | Pears do not grow here.
+shut: #eg | Груша здесь не растёт. | Pears do not grow here.
+shut: #sea | Груша здесь не растёт. | Pears do not grow here.
+shut: #au !@mod | Груша здесь не растёт. | Pears do not grow here.
+out: 100 | {Посадил|Посадила} грушу. Плодов ты не увидишь. | You plant a pear tree. You will not see its fruit. | tree
+ask: Что стоит посадить для тех, кто будет после? | What would you plant for those who come after?
+
+id: w_peace
+slot: wish
+groups: anc med early ind mod
+tags: *
+ages: 68-72
+weight: 1
+q: С сестрой вы не говорите много лет. Из-за чего, уже и не вспомнить. | You and your sister have not spoken for years. Neither of you remembers why.
+door: Прийти к ней | Go to her
+out: 60 | Она открывает дверь и долго смотрит. Потом ставит на стол вторую чашку. | She opens the door and looks at you a long time. Then she sets out a second cup. | kind
+out: 40 | Она не пускает тебя на порог. Через месяц приходит сама. | She will not let you over the threshold. A month later she comes to you. | kind
+ep: {Помирился|Помирилась} с сестрой. | Made peace with {his|her} sister.
+ask: Кому пора сказать первое слово? | Who is waiting for you to speak first?
+door: Написать ей | Write to her
+shut: !lit | Ты не умеешь писать. | You cannot write.
+out: 60 | Пишешь три строчки. Ответ приходит длинный, на четырёх страницах. | You write three lines. The answer is long, four pages. |
+out: 40 | Письмо возвращается. Сестры больше нет. | The letter comes back. Your sister is gone. |
+door: Оставить как есть | Leave it as it is
+out: 100 | Её хоронят зимой. Стоишь в стороне, у ограды. | She is buried in winter. You stand apart, by the fence. |
+
+id: w_grave
+slot: wish
+groups: anc med early ind mod
+tags: af me eg med eu fr de it en ru cn jp sea meso andes au latam us
+ages: 68-72
+weight: 1
+q: Где ты хочешь лежать, когда придёт время? | Where do you want to lie when the time comes?
+door: Рядом с родителями | Next to your parents
+out: 30 | Ходишь к родительской могиле и показываешь соседям: вот здесь. | You visit your parents' grave and show the neighbours: here. |
+out: 70 | Хозяин разрешает. Своих хоронят за оврагом, без камня, но рядом. | The master allows it. His people are buried beyond the ravine, with no stone, but together. | | r0 !@mod
+out: 70 | Едешь в родное место и покупаешь участок рядом с родителями. Красишь им оградку. | You go home and buy a plot next to your parents. You paint their railing. | wealth-1 | @ind @mod
+out: 70 | Просишь, чтобы тебя отнесли к своим. Обещают. | You ask to be carried to your own people. They promise. | | @anc @med @early !r0
+ep: Лежит рядом с отцом и матерью. | Lies beside father and mother.
+door: Рядом с {женой|мужем} | Next to your {wife|husband}
+shut: !married | Ты так и не {женился|вышла замуж}. | You never married.
+out: 100 | Выбираешь место под деревом, чтобы вам обоим была тень. | You pick a place under a tree, so there is shade for you both. | love
+ep: Лежит рядом с {женой|мужем}. | Lies beside {his wife|her husband}.
+door: Где решат дети | Wherever the children decide
+shut: !kids | Детей у тебя нет. | You have no children.
+out: 100 | Говоришь детям: где вам удобнее навещать. Они переглядываются. | You tell the children: wherever is easiest for you to visit. They glance at each other. | kind
+ask: Где твои корни? | Where are your roots?
+
+id: w_grandkids
+slot: wish
+groups: anc med early ind mod
+tags: *
+need: kids grand
+ages: 68-72
+weight: 1
+q: Внуки не отходят от тебя. Чем их занять, пока есть силы? | The grandchildren won't leave your side. What will you do with them while you have the strength?
+door: Научить читать | Teach them to read
+shut: !lit | Ты и сам{|а} не умеешь читать. | You cannot read yourself.
+out: 100 | Внучка читает тебе вслух по слогам. Ты притворяешься, что не можешь без очков. | Your granddaughter reads aloud to you, syllable by syllable. You pretend you can't without glasses. | taught
+ep: Внуки читали благодаря {ему|ей}. | The grandchildren could read thanks to {him|her}.
+door: Рассказывать | Tell them stories
+out: 100 | Рассказываешь внукам %story%. Младший пересказывает всем на улице. | You tell the grandchildren %story%. The youngest retells it to the whole street. | story
+door: Учить своему делу | Teach them your trade
+out: 60 | Внук держит инструмент так же, как ты. Не учил{|а}, сам взял. | Your grandson holds the tool just as you do. You never taught him that; he picked it up. |
+out: 40 | Внукам скучно. Они убегают на улицу, а ты доделываешь сам{|а}. | The grandchildren are bored. They run outside and you finish alone. |
+ask: Чему тебя научили бабушки и деды? | What did your grandparents teach you?
+
+id: w_dish
+slot: wish
+groups: anc med early ind mod
+tags: *
+ages: 68-72
+weight: 1
+q: Хочется ещё раз поесть того, что готовила мать. | You want to eat once more what your mother used to cook.
+door: Приготовить по памяти | Cook it from memory
+out: 20 | Готовишь по памяти. Выходит не так, но запах тот же. | You cook from memory. It doesn't come out the same, but the smell is right. |
+out: 80 | Варишь щи из кислой капусты, как мать. Выходит почти так же. | You make sour-cabbage soup as your mother did. It comes out almost the same. | | #ru
+out: 80 | Варишь рисовую кашу с солёной рыбой. Пахнет домом. | You cook rice gruel with salt fish. It smells of home. | | #cn
+out: 80 | Лепишь рисовые колобки со сливой умэ. Соль та же, руки другие. | You shape rice balls with umeboshi plum. The salt is the same; the hands are different. | | #jp
+out: 80 | Варишь чечевицу с тмином и печёшь лепёшки. Ешь руками, не спеша. | You cook lentils with cumin and bake flatbread. You eat with your hands, slowly. | | #in
+out: 80 | Варишь бобовую похлёбку с луком и маслом. Макаешь в неё хлеб. | You make bean soup with onion and oil. You dip bread in it. | | #it
+out: 80 | Варишь бобовую похлёбку с луком и маслом. Макаешь в неё хлеб. | You make bean soup with onion and oil. You dip bread in it. | | #med
+out: 80 | Варишь гороховую похлёбку с салом. Ешь две миски. | You cook pea soup with bacon. You eat two bowls. | | #de
+out: 80 | Печёшь овсяные лепёшки на сковороде. Первую съедаешь горячей. | You bake oatcakes on the griddle. You eat the first one hot. | | #en
+out: 80 | Варишь луковую похлёбку и бросаешь в неё корки. Как дома. | You make onion soup and drop crusts into it. Like home. | | #fr
+out: 80 | Растираешь кукурузу на камне и печёшь лепёшки. Руки помнят всё. | You grind maize on the stone and bake tortillas. Your hands remember everything. | | #meso
+out: 80 | Варишь похлёбку из чуньо, картошки, высушенной на морозе. | You cook a stew of chuño, potatoes freeze-dried in the frost. | | #andes
+out: 80 | Варишь просяную кашу и ешь её с кислым молоком. | You cook millet porridge and eat it with sour milk. | | #af
+out: 80 | Печёшь лепёшки и ешь их с финиками, как в детстве. | You bake flatbread and eat it with dates, as in childhood. | | #me
+out: 80 | Печёшь лепёшки и ешь их с финиками, как в детстве. | You bake flatbread and eat it with dates, as in childhood. | | #eg
+ask: Какую еду из детства ты помнишь до сих пор? | What food from childhood do you still remember?
+door: Попросить детей | Ask the children
+shut: !kids | Детей у тебя нет. | You have no children.
+out: 100 | Дочь готовит по твоим словам. Пробуешь: соли мало. Потом: вот так. | Your daughter cooks as you tell her. You taste: not enough salt. Then: that's it. | love
+door: Не надо | Never mind
+out: 100 | Так, как у матери, уже не будет. Ешь, что дают, и вспоминаешь. | It will never be the way she made it. You eat what is given and remember. |
+
+id: w_see_city
+slot: wish
+groups: anc med early ind mod
+tags: *
+need: !town
+ages: 68-72
+weight: 1
+q: Всю жизнь прожил{|а} в деревне. Хочется хоть раз увидеть большой город. | You have lived all your life in the village. You want to see a big city just once.
+door: Поехать | Go
+shut: r0 !@mod | Тебя не отпустят. | You will not be let go.
+shut: poor !@mod | На дорогу денег нет. | There is no money for the road.
+out: 30 | Город шумит. Ты стоишь посреди улицы, пока тебя не толкают. | The city roars. You stand in the middle of the street until someone shoves you. | moved
+out: 70 | За стенами дома в три этажа и храм выше любого дерева. Ты боишься потеряться. | Within the walls, houses three storeys high and a temple taller than any tree. You fear getting lost. | moved | @anc @med @early
+out: 70 | Едешь поездом. Трамвай, вывески, в витрине часы. Дома рассказываешь неделю. | You go by train. A tram, signs, a clock in a shop window. Back home you talk of it for a week. | moved | @ind
+out: 70 | Племянник возит тебя по городу на машине. Ты держишься за ручку двери и смотришь вверх. | Your nephew drives you round the city. You hold the door handle and look up. | moved | @mod
+door: Расспросить того, кто был | Ask someone who has been
+out: 100 | Сосед рассказывает про город весь вечер. Полночи не спишь. | Your neighbour talks about the city all evening. You lie awake half the night. |
+door: Остаться | Stay
+out: 100 | Решаешь, что и так видел{|а} довольно. Твоё село тебе милее. | You decide you have seen enough. Your village is dearer to you. |
+ask: Какое место ты всё откладываешь увидеть? | Which place do you keep putting off seeing?
+
+id: w_born_village
+slot: wish
+groups: med early ind mod
+tags: *
+need: town
+ages: 68-72
+weight: 1
+q: Хочется ещё раз увидеть деревню, где ты родил{ся|ась}. | You want to see the village where you were born once more.
+door: Поехать | Go
+shut: r0 !@mod | Тебя не отпустят. | You will not be let go.
+out: 30 | Дом стоит. В нём чужие люди, они пускают тебя посмотреть. | The house still stands. Strangers live there; they let you look. |
+out: 70 | Ищешь дом и не находишь. Узнаёшь только колодец. | You look for the house and can't find it. You recognise only the well. |
+out: 70 | Деревни нет. На её месте поле. Находишь в траве камень от фундамента. | The village is gone. There is a field there. You find a stone from the foundations. | | @mod
+door: Расспросить земляка | Ask someone from home
+out: 100 | Земляк рассказывает, кто умер и кто уехал. Почти никого не осталось. | Someone from home tells you who has died and who has left. Hardly anyone remains. |
+door: Не ехать | Don't go
+out: 100 | Пусть будет такой, какой ты её помнишь. | Let it stay as you remember it. |
+ask: Куда тебе хочется вернуться? | Where do you long to go back to?
+
+id: w_unfree
+slot: wish
+groups: anc med early
+tags: *
+need: r0
+ages: 68-72
+weight: 2
+q: Своего у тебя ничего нет. Но и у тебя есть последнее желание. | Nothing is yours. But even you have a last wish.
+door: Просить о воле | Ask for freedom
+out: 20 | Хозяин долго молчит. Потом говорит: иди. Ты не знаешь, куда. | The master is silent a long time. Then he says: go. You don't know where to. | free
+out: 80 | Хозяин смеётся. Работников и так мало. | The master laughs. He is short of hands as it is. |
+ep: Просил{|а} о воле. | Asked for freedom.
+door: Увидеть своих | See your own people
+out: 60 | Тебя отпускают на день к родне за реку. Вы сидите до темноты. | You are let go for a day to your kin across the river. You sit together till dark. | kind
+out: 40 | Не отпускают. Родня передаёт с проезжим горсть сушёных яблок. | You are not let go. Your kin send a handful of dried apples with a traveller. |
+door: Ничего не просить | Ask for nothing
+out: 100 | Сидишь вечером у стены и смотришь, как садится солнце. Это у тебя никто не отнимет. | In the evening you sit by the wall and watch the sun go down. No one can take that. |
+ask: Что тебе не нужно ни у кого просить? | What do you need to ask no one for?
+
+id: w_stone_water
+slot: wish
+groups: stone
+tags: *
+ages: 68-72
+weight: 1
+q: Старики говорили: за горами лежит большая вода без другого берега. | The old ones said that beyond the hills lies a great water with no other shore.
+door: Пойти с молодыми | Go with the young ones
+shut: sea | Ты её уже {видел|видела}. | You have seen it already.
+out: 70 | Много дней пути. Большая вода шумит и не кончается. Ты сидишь у неё до ночи. | Many days on the way. The great water roars and never ends. You sit by it till night. | wishsea
+out: 30 | Ты {дошёл|дошла}. Обратно тебя несут на шкуре. | You get there. On the way back they carry you on a hide. | wishsea risk20
+ep: {Видел|Видела} большую воду. | Saw the great water.
+door: Слушать тех, кто видел | Listen to those who have seen it
+out: 100 | Охотник рассказывает про воду, у которой нет края. Ты закрываешь глаза и видишь её. | A hunter tells of the water that has no edge. You close your eyes and see it. |
+door: Остаться у огня | Stay by the fire
+out: 100 | Рассказываешь младшим %story%. Огонь трещит. | You tell the little ones %story%. The fire crackles. | story
+
+id: w_stone_cave
+slot: wish
+groups: stone
+tags: *
+ages: 68-72
+weight: 1
+q: Хочется ещё раз увидеть место, где на скале ладони всего рода. | You want to see once more the place where the hands of the whole band are on the rock.
+door: Дойти туда | Go there
+out: 70 | Прикладываешь ладонь к скале и дуешь охрой. Теперь там и твоя рука. | You lay your palm on the rock and blow ochre over it. Now your hand is there too. |
+out: 30 | Дорога трудная. Ты {дошёл|дошла}, но назад идёшь три дня. | The way is hard. You get there, but the walk back takes three days. | risk10
+ep: Ладонь {его|её} осталась на скале. | {His|Her} hand is still on the rock.
+door: Попросить молодых | Ask the young ones
+out: 100 | Девочка из рода оставляет там свою ладонь, а рядом твою, как ты её научил{|а}. | A girl of the band leaves her own hand there, and yours beside it, as you showed her. |
+door: Остаться | Stay
+out: 100 | Сидишь у огня. Помнишь каждую ладонь на той скале. | You sit by the fire. You remember every hand on that rock. |
+ask: Где остался твой след? | Where have you left your mark?
+
+id: w_stone_hunt
+slot: wish
+groups: stone
+tags: *
+ages: 68-72
+weight: 1
+q: Молодые идут на большую охоту. Хочется с ними в последний раз. | The young ones are going on a great hunt. You want to go with them one last time.
+door: Пойти | Go
+out: 60 | Ты загонщик, как в юности. Зверь выходит прямо на копья. Все смеются и хлопают тебя по плечу. | You drive the game, as in your youth. The beast runs straight onto the spears. Everyone laughs and slaps your back. | brave
+out: 40 | Зверь разворачивается на тебя. Ты не успеваешь отскочить. | The beast turns on you. You are too slow to jump aside. | brave risk30
+door: Ждать у огня | Wait by the fire
+out: 100 | Чинишь копья и ждёшь. Вечером тебе дают лучший кусок. | You mend the spears and wait. In the evening you are given the best piece. |
+door: Научить младших | Teach the little ones
+out: 100 | Пока молодые на охоте, рассказываешь детям %story%. | While the young ones hunt, you tell the children %story%. | story
+
+id: w_stone_kin
+slot: wish
+groups: stone
+tags: *
+ages: 68-72
+weight: 1
+q: Сестра много зим назад ушла в другой род. Хочется её увидеть. | Many winters ago your sister went to another band. You want to see her.
+door: Пойти к ним | Go to them
+out: 60 | Ты находишь их стоянку у реки. Сестра узнаёт тебя по голосу. | You find their camp by the river. Your sister knows you by your voice. | kind
+out: 40 | Стоянка пустая, костры холодные. Ты идёшь назад один{|а}. | The camp is empty, the fires cold. You walk back alone. | risk10
+door: Передать бусы с охотниками | Send beads with the hunters
+out: 100 | Охотники уносят твои бусы. Весной приносят от сестры перо. | The hunters take your beads. In spring they bring back a feather from your sister. |
+door: Вспоминать её | Remember her
+out: 100 | Рассказываешь детям рода о сестре: как она смеялась и как пела. | You tell the band's children about your sister: how she laughed and how she sang. |
+ask: Кого давно не доводилось видеть? | Who haven't you seen in a long time?
+
+id: w_au_country
+slot: wish
+groups: stone anc med early ind
+tags: au
+ages: 68-72
+weight: 2
+q: Хочется вернуться на свою землю, к воде, у которой ты родил{ся|ась}. | You want to go back to your country, to the water where you were born.
+door: Пойти туда | Go there
+out: 60 | Идёшь много дней. Садишься у воды и поёшь ей. Вода помнит тебя. | You walk many days. You sit by the water and sing to it. The water remembers you. |
+out: 40 | У воды ограда, за ней овцы. Ты садишься по эту сторону и поёшь. | There is a fence by the water and sheep beyond it. You sit on this side and sing. | | @early @ind
+ep: Вернул{ся|ась} на свою землю. | Went back to {his|her} country.
+door: Петь о ней | Sing about it
+out: 100 | Поёшь молодым песню своей земли. Они просят ещё раз. | You sing the young ones the song of your country. They ask for it again. |
+door: Остаться | Stay
+out: 100 | Смотришь на звёзды и находишь среди них своих. | You look at the stars and find your own among them. |
+
+id: w_cn_roots
+slot: wish
+groups: anc med early ind mod
+tags: cn
+ages: 68-72
+weight: 2
+q: Опавшие листья возвращаются к корням. Хочется домой, к могилам предков. | Fallen leaves return to the roots. You want to go home, to the graves of your ancestors.
+door: Вернуться домой | Go home
+shut: r0 !@mod | Тебя не отпустят. | You will not be let go.
+out: 60 | Ты подметаешь могилы предков и жжёшь бумажные деньги. Дома ты спишь как в детстве. | You sweep the ancestors' graves and burn paper money. At home you sleep as you did as a child. | faith | !@anc
+out: 60 | Ты приносишь предкам вино и просо. Дома ты спишь как в детстве. | You bring the ancestors wine and millet. At home you sleep as you did as a child. | faith | @anc
+out: 40 | Деревни нет. На её месте завод. Могилы перенесли, никто не знает куда. | The village is gone. A factory stands there. The graves were moved; no one knows where. | | @mod
+out: 10 | Ты стоишь у могил предков и долго кланяешься. | You stand at the ancestors' graves and bow for a long time. | faith
+ep: Вернул{ся|ась} к корням. | Returned to {his|her} roots.
+door: Поставить табличку предков дома | Set up the ancestors' tablet at home
+out: 100 | Вырезаешь имена на дощечке. Каждое утро ставишь перед ней чашку чая. | You carve the names on a tablet. Every morning you set a cup of tea before it. | faith | !@anc
+out: 100 | Вырезаешь имена на дощечке. Каждое утро кланяешься ей. | You carve the names on a tablet. Every morning you bow to it. | faith
+door: Отправить детей | Send the children
+shut: !kids | Детей у тебя нет. | You have no children.
+out: 100 | Сын едет прибрать могилы. Привозит горсть земли, и ты держишь её в ладони. | Your son goes to tend the graves. He brings back a handful of earth, and you hold it in your palm. |
+ask: Где лежат твои предки? | Where do your ancestors lie?
+
+id: w_af_names
+slot: wish
+groups: anc med early ind
+tags: af
+ages: 68-72
+weight: 2
+q: Хочется, чтобы дети знали имена всех предков, до самого первого. | You want the children to know the names of all the ancestors, back to the very first.
+door: Позвать сказителя | Call the griot
+shut: poor | Сказителю нужно заплатить, а платить нечем. | The griot must be paid, and you have nothing to pay with.
+out: 100 | Сказитель поёт всю ночь. Имена идут одно за другим, твоё последнее. | The griot sings all night. The names come one after another; yours is last. | wealth-1
+door: Рассказать самому | Tell them yourself
+out: 100 | Называешь имена, сколько помнишь, и рассказываешь %story%. | You say the names, as many as you remember, and tell %story%. | story
+door: Отвести детей к могилам | Take the children to the graves
+out: 100 | Показываешь детям камни у старого дерева. Говоришь, кто где. | You show the children the stones by the old tree. You tell who lies where. |
+ask: Сколько имён своих предков ты знаешь? | How many of your ancestors' names do you know?
+
+id: w_eg_tomb
+slot: wish
+groups: anc
+tags: eg
+ages: 68-72
+weight: 2
+q: Пора готовиться к жизни после смерти. | It is time to prepare for the life after death.
+door: Заказать гроб и фигурки | Order a coffin and figurines
+shut: poor | Гроб стоит дороже твоего дома. | A coffin costs more than your house.
+out: 100 | Мастер расписывает гроб. Маленькие фигурки будут работать за тебя на том свете. | A craftsman paints the coffin. The little figurines will work for you in the next world. | wealth-1 faith
+door: Попросить писца написать твоё имя | Ask a scribe to write your name
+shut: r0 | Рабу имя на камне не пишут. | No one writes a slave's name on stone.
+out: 100 | Писец выбивает твоё имя на камне. Пока его читают, ты жив{|а}. | A scribe carves your name in stone. As long as it is read, you live. | faith
+ep: Имя {его|её} выбито на камне. | {His|Her} name is cut in stone.
+door: Лечь в песок, как все | Lie in the sand like everyone
+out: 100 | Просишь положить с тобой хлеб и кувшин пива. Песок сохранит тебя лучше, чем ты думаешь. | You ask for bread and a jug of beer to be laid with you. The sand will keep you better than you think. |
+ask: Что останется от тебя, кроме имени? | What will remain of you besides your name?
+
+id: w_olympia
+slot: wish
+groups: anc
+tags: med
+need: after:-776
+ages: 68-72
+weight: 2
+q: Хочется ещё раз увидеть игры в Олимпии. | You want to see the games at Olympia once more.
+door: Пойти | Go
+shut: f married | Замужним женщинам смотреть на игры нельзя. | Married women may not watch the games.
+shut: r0 | Хозяин не отпустит. | Your master will not let you go.
+out: 70 | Сидишь на склоне холма. Бегуны в пыли, крик такой, что не слышно себя. | You sit on the hillside. Runners in the dust, a roar so loud you can't hear yourself. | moved
+out: 30 | Жара. Ты падаешь на склоне и долго приходишь в себя в тени. | The heat. You collapse on the slope and take a long time to come round in the shade. | moved risk15
+door: Слушать вернувшихся | Listen to those who return
+out: 100 | Соседи рассказывают, кто победил. Ты споришь с ними до хрипоты. | The neighbours tell who won. You argue with them till you're hoarse. |
+door: Остаться дома | Stay home
+out: 100 | Сидишь под оливой и вспоминаешь игры, которые {видел|видела} в молодости. | You sit under the olive tree and remember the games you saw in your youth. |
+
+id: w_hajj
+slot: wish
+groups: med early ind mod
+tags: me eg af
+need: after:700
+ages: 68-72
+weight: 2
+q: Хочется совершить хадж, пока ноги носят. | You want to make the pilgrimage to Mecca while your legs still carry you.
+door: Отправиться в Мекку | Set off for Mecca
+shut: poor | Хадж стоит больше, чем весь твой дом. | The pilgrimage costs more than your whole house.
+shut: r0 !@mod | Тебя не отпустят. | You will not be let go.
+shut: f !married | Женщине нельзя в хадж без мужа или брата. | A woman may not make the pilgrimage without a husband or brother.
+out: 50 | Месяцы с караваном. Ты стоишь у Каабы в белом и не можешь говорить. | Months with the caravan. You stand by the Kaaba in white and cannot speak. | faith moved
+out: 30 | Караван попадает в песчаную бурю. Ты {дошёл|дошла}, но слёг{|ла} на обратном пути. | The caravan is caught in a sandstorm. You arrive, but fall ill on the way back. | faith moved risk20 | !@mod
+out: 50 | Летишь самолётом в Джидду. У Каабы плачешь, и незнакомец берёт тебя под руку. | You fly to Jeddah. At the Kaaba you weep, and a stranger takes your arm. | faith moved | @mod
+ep: {Совершил|Совершила} хадж. | Made the pilgrimage to Mecca.
+door: Отправить сына вместо себя | Send your son in your place
+shut: !kids | Детей у тебя нет. | You have no children.
+shut: poor | Хадж стоит больше, чем весь твой дом. | The pilgrimage costs more than your whole house.
+out: 100 | Сын возвращается через год. Привозит тебе флягу воды из Замзама. | Your son returns a year later. He brings you a flask of Zamzam water. | faith wealth-1
+door: Молиться дома | Pray at home
+out: 100 | Молишься на старом коврике, повернувшись к Мекке. Этого достаточно. | You pray on the old rug, turned towards Mecca. It is enough. | faith
+ask: Куда тебе нужно дойти хоть раз в жизни? | Where must you go at least once in your life?
+
+id: w_kashi
+slot: wish
+groups: med early ind mod
+tags: in
+ages: 68-72
+weight: 2
+q: Кто умирает в Каши, на берегу Ганга, тот больше не родится. Хочется туда. | Whoever dies in Kashi, on the Ganges, is not born again. You want to go there.
+door: Отправиться в Каши | Set off for Kashi
+shut: poor | Дорога съест всё, что вы накопили. | The road would eat up all you have saved.
+shut: r0 !@mod | Тебя не отпустят. | You will not be let go.
+out: 50 | Месяц пешком. Ты входишь в Ганг на рассвете. Вода холодная и тёплая сразу. | A month on foot. You step into the Ganges at dawn. The water is cold and warm at once. | faith moved | !@ind !@mod
+out: 50 | Поездом, третьим классом. Ты входишь в Ганг на рассвете. Вокруг тысячи людей. | By train, third class. You step into the Ganges at dawn. Thousands of people around you. | faith moved | @ind @mod
+out: 30 | Ты остаёшься в Каши. Каждое утро сидишь у реки и смотришь на костры. | You stay in Kashi. Every morning you sit by the river and watch the pyres. | faith moved
+ep: Дожил{|а} свой век в Каши. | Lived out {his|her} days in Kashi.
+door: Окунуться в свою реку | Bathe in your own river
+out: 100 | Входишь в деревенскую реку и молишься. Говорят, все реки текут в Ганг. | You step into the village river and pray. They say all rivers flow into the Ganges. | faith
+door: Попросить детей отвезти прах | Ask the children to take your ashes
+shut: !kids | Детей у тебя нет. | You have no children.
+out: 100 | Сын обещает отвезти твой прах в Каши. Ты успокаиваешься. | Your son promises to take your ashes to Kashi. You are at peace. |
+
+id: w_holyland
+slot: wish
+groups: med early ind
+tags: eu fr de it en
+ages: 68-72
+weight: 2
+q: Хочется перед смертью поклониться святым местам. | Before you die you want to pray at the holy places.
+door: В Иерусалим | To Jerusalem
+shut: poor | Такая дорога не по карману. | A journey like that is beyond your means.
+shut: r0 | Сеньор не отпустит. | Your lord will not let you go.
+out: 50 | Корабль из Венеции, потом пешком. Ты целуешь камень Гроба Господня. | A ship from Venice, then on foot. You kiss the stone of the Holy Sepulchre. | faith sea moved | !@ind
+out: 50 | Пароход из Марселя. В Иерусалиме жарко, и ты плачешь у Гроба Господня. | A steamer from Marseilles. Jerusalem is hot, and you weep at the Holy Sepulchre. | faith sea moved | @ind
+out: 30 | На корабле лихорадка. До Иерусалима ты не {дошёл|дошла}. | Fever on the ship. You never reach Jerusalem. | sea risk40
+ep: {Поклонился|Поклонилась} Гробу Господню. | Prayed at the Holy Sepulchre.
+door: В Рим или в Сантьяго | To Rome or Santiago
+shut: r0 | Сеньор не отпустит. | Your lord will not let you go.
+out: 100 | Месяцы пешком с посохом и раковиной на шляпе. Ты {дошёл|дошла}. | Months on foot with a staff and a shell on your hat. You get there. | faith moved
+door: К местному святому | To the local saint
+out: 100 | Ходишь к мощам в соседний монастырь. Ставишь свечу и стоишь, пока не догорит. | You walk to the relics at the next monastery. You light a candle and stand till it burns out. | faith
+
+id: w_kiev
+slot: wish
+groups: med early ind
+tags: ru
+need: after:1060 before:1925
+ages: 68-72
+weight: 2
+q: Хочется сходить пешком в Киев, поклониться печерским угодникам. | You want to walk to Kyiv, to pray to the saints of the Caves.
+door: Идти пешком | Walk
+shut: r0 | Барин не отпустит. | The master will not let you go.
+out: 70 | Два месяца пути с котомкой. Со свечой в руке ты спускаешься в пещеры. Там тихо. | Two months on the road with a bag. Candle in hand you go down into the caves. It is quiet there. | faith moved
+out: 30 | В дороге тебя застигают дожди. Ты {дошёл|дошла}, но больше не встаёшь. | The rains catch you on the road. You get there, but never get up again. | faith moved risk40
+ep: {Ходил|Ходила} пешком в Киев. | Walked to Kyiv.
+door: Передать свечу с богомольцами | Send a candle with the pilgrims
+out: 100 | Отдаёшь богомолкам медяк на свечу. Они обещают поставить. | You give the pilgrims a copper for a candle. They promise to light it. | faith
+door: Остаться | Stay
+out: 100 | Молишься у себя в церкви. Батюшка говорит, что Бог везде. | You pray in your own church. The priest says God is everywhere. |
+
+id: w_ise
+slot: wish
+groups: early ind
+tags: jp
+ages: 68-72
+weight: 2
+q: Вся округа идёт поклониться в Исэ, к великой богине. Хочется и тебе. | The whole district is going to pray at Ise, to the great goddess. You want to go too.
+door: Пойти с разрешения | Go with leave
+shut: poor | Деревня собирает деньги на дорогу, но твоей очереди ещё нет. | The village pools money for the road, but your turn has not come.
+out: 100 | Три недели пути. Ты хлопаешь в ладоши перед воротами святилища. | Three weeks on the road. You clap your hands before the shrine gate. | faith moved
+ep: {Ходил|Ходила} в Исэ. | Went to Ise.
+door: Уйти тайком | Slip away without leave
+out: 60 | Идёшь без спроса, как многие. По дороге тебя кормят чужие люди. | You go without leave, like many. On the road strangers feed you. | faith moved brave
+out: 40 | Тебя возвращают с полдороги. Дома смеются, а ты нет. | You are brought back halfway. At home they laugh; you don't. |
+door: Остаться дома | Stay home
+out: 100 | Сосед приносит тебе из Исэ бумажный амулет. Ты кладёшь его на полку богов. | A neighbour brings you a paper charm from Ise. You set it on the god-shelf. | faith
+
+id: w_andes_apu
+slot: wish
+groups: med
+tags: andes
+ages: 68-72
+weight: 2
+q: Хочется ещё раз подняться к горе-покровительнице с подношением. | You want to climb once more to the guardian mountain with an offering.
+door: Подняться | Climb
+out: 70 | Наверху ветер. Ты кладёшь листья коки и кукурузу под камень. | It is windy at the top. You lay coca leaves and maize under a stone. | faith
+out: 30 | Наверху холодно, и ты долго не можешь отдышаться. | It is cold up there, and you cannot get your breath for a long time. | faith risk15
+door: Передать подношение с молодыми | Send the offering with the young
+out: 100 | Юноша из айлью несёт твоё подношение. Возвращается и говорит, что гора приняла. | A youth of the ayllu carries your offering. He comes back and says the mountain accepted it. |
+door: Поклониться издали | Bow from afar
+out: 100 | Каждое утро кланяешься горе с порога. Она стоит, как стояла. | Every morning you bow to the mountain from the doorway. It stands as it always has. |
+
+id: w_meso_market
+slot: wish
+groups: med
+tags: meso
+ages: 68-72
+weight: 2
+q: Хочется ещё раз увидеть большой рынок в столице. | You want to see the great market in the capital once more.
+door: Пойти | Go
+shut: r0 | Хозяин не отпустит. | Your master will not let you go.
+out: 70 | Какао, перья, обсидиан, перец. Ты ходишь до вечера и покупаешь горсть бобов какао. | Cacao, feathers, obsidian, chillies. You walk till evening and buy a handful of cacao beans. | moved
+out: 30 | Толпа такая, что ты теряешься. Тебя выводит к воротам мальчишка-носильщик. | The crowd is so thick you get lost. A porter boy leads you out to the gate. | moved
+door: Слушать купцов | Listen to the merchants
+out: 100 | Проходящий купец рассказывает про рынок. Ты угощаешь его тамалес. | A passing merchant tells of the market. You give him tamales. |
+door: Остаться | Stay
+out: 100 | На своём поле тебе спокойнее. Кукуруза высокая. | You are easier in your own field. The maize is tall. |
+
+id: w_bell
+slot: wish
+groups: med early ind
+tags: eu fr de it en ru
+need: after:1300 !town
+ages: 68-72
+weight: 1
+q: Хочется ещё раз подняться на колокольню, откуда видно всё село. | You want to climb the bell tower once more, where you can see the whole village.
+door: Подняться | Climb up
+out: 70 | Сто ступенек, отдых на каждой десятой. Сверху видно твой дом и поле. | A hundred steps, a rest at every tenth. From the top you see your house and field. |
+out: 30 | На середине лестницы сердце колотится. Ты садишься и спускаешься назад. | Halfway up your heart pounds. You sit down and climb back down. | risk10
+door: Попросить звонаря позвонить | Ask the ringer to let you ring
+out: 100 | Звонарь даёт тебе верёвку. Колокол бьёт, и всё село оборачивается. | The ringer hands you the rope. The bell strikes, and the whole village turns to look. |
+ep: {Звонил|Звонила} в колокол. | Rang the bell.
+door: Остаться внизу | Stay below
+out: 100 | Сидишь на паперти и слушаешь колокол. Каждый удар знаешь. | You sit on the church steps listening to the bell. You know every stroke. |
+
+id: w_phone
+slot: wish
+groups: mod
+tags: *
+need: kids after:1975 before:2008
+ages: 68-72
+weight: 2
+q: Старший давно живёт за границей. Хочется услышать его голос. | Your eldest has long lived abroad. You want to hear their voice.
+door: Позвонить | Call
+shut: poor | Минута разговора стоит как половина пенсии. | A minute's call costs half your pension.
+out: 60 | На почте ждёшь соединения два часа. Слышно плохо, но это его голос. | At the post office you wait two hours to be put through. The line is bad, but it is that voice. |
+out: 40 | Не дозвониться. Ты пробуешь каждый вечер неделю. На восьмой берут трубку. | You can't get through. You try every evening for a week. On the eighth someone answers. |
+door: Написать письмо | Write a letter
+shut: !lit | Ты не умеешь писать. | You cannot write.
+out: 100 | Пишешь письмо на двух листах. Ответ приходит через месяц, с фотографией. | You write two pages. The answer comes a month later, with a photograph. |
+door: Ждать звонка | Wait for a call
+out: 70 | Звонок под Новый год. Говорите три минуты. Ты повторяешь их себе весь январь. | A call at New Year. You talk three minutes. You go over them all January. |
+out: 30 | Звонка нет. Ты не отходишь от телефона. | There is no call. You stay by the phone. |
+ask: Кому пора позвонить? | Who is it time to call?
+
+id: w_video
+slot: wish
+groups: mod
+tags: *
+need: kids grand after:2008
+ages: 68-72
+weight: 1
+q: Внучка хочет научить тебя видеозвонкам. | Your granddaughter wants to teach you video calls.
+door: Учиться | Learn
+out: 70 | Через неделю звонишь всем родственникам по очереди. Они видят только твой нос. | A week later you are calling every relative in turn. They can only see your nose. | love
+out: 30 | Ничего не выходит. Внучка звонит сама и держит телефон у твоего уха. | It doesn't work. Your granddaughter calls herself and holds the phone to your ear. |
+door: Попросить научить чему-то её | Ask her to learn something from you
+out: 100 | Учишь внучку своему делу, а она тебя телефону. Оба смеётесь над неуклюжестью. | You teach your granddaughter your trade, and she teaches you the phone. You laugh at each other's clumsiness. | kind
+door: Отказаться | Refuse
+out: 100 | Говоришь, что видел{|а} в жизни достаточно лиц. Она смеётся и не настаивает. | You say you have seen enough faces in your life. She laughs and lets it go. |
+
+id: w_us_son
+slot: wish
+groups: early ind
+tags: us latam
+need: r0 kids before:1888
+ages: 68-72
+weight: 2
+q: Сына продали за реку много лет назад. Хочется знать, жив ли он. | Your son was sold away across the river years ago. You want to know if he is alive.
+door: Расспрашивать всех, кто проходит | Ask everyone who passes
+out: 40 | Проезжий возчик говорит: видел такого, жив, у него дети. Ты молишься всю ночь. | A passing carter says: I saw him, he lives, he has children. You pray all night. | faith
+out: 60 | Никто не знает. Ты всё равно спрашиваешь каждого. | No one knows. You ask everyone anyway. |
+door: Просить хозяина узнать | Ask the master to find out
+out: 30 | Хозяин пишет письмо. Через полгода ответ: жив. | The master writes a letter. Six months later the answer: alive. |
+out: 70 | Хозяин отмахивается. | The master waves you away. |
+door: Уйти искать | Go and look for him
+out: 30 | Ты находишь его на чужой плантации. Вы видитесь одну ночь. | You find him on another plantation. You have one night together. | brave
+out: 70 | Тебя ловят на второй день. | You are caught on the second day. | brave risk30
+ep: Не {переставал|переставала} искать сына. | Never stopped looking for {his|her} son.
+
+id: w_ru_freedom
+slot: wish
+groups: early ind
+tags: ru
+need: r0 before:1862
+ages: 68-72
+weight: 2
+q: Хочется умереть вольным человеком. | You want to die a free person.
+door: Просить барина | Ask the master
+out: 20 | Барин подписывает вольную. Ты держишь бумагу и не можешь её прочесть. | The master signs your release. You hold the paper and cannot read it. | free
+out: 80 | Барин говорит: старый работник не много стоит, но и вольная денег стоит. | The master says: an old worker is not worth much, but freedom costs money. |
+door: Выкупиться | Buy your freedom
+shut: poor | Вольная стоит больше, чем ты заработал{|а} за всю жизнь. | Freedom costs more than you have earned in your whole life.
+out: 100 | Отдаёшь всё, что копил{|а} тридцать лет. {Вольный|Вольная}. | You give up all you saved for thirty years. Free. | free wealth-2
+ep: {Умер|Умерла} {вольным|вольной}. | Died free.
+door: Не просить | Ask for nothing
+out: 100 | Говоришь себе, что на том свете крепостных нет. | You tell yourself there are no serfs in the next world. | faith
+
+id: w_monk_home
+slot: wish
+groups: med early
+tags: *
+need: monk
+ages: 68-72
+weight: 1
+q: Хочется ещё раз увидеть дом, из которого ты {ушёл|ушла} в обитель. | You want to see once more the home you left for the monastery.
+door: Просить настоятеля отпустить | Ask the abbot to let you go
+out: 60 | Настоятель отпускает на неделю. Ты сидишь на могиле матери и молчишь. | The abbot lets you go for a week. You sit by your mother's grave in silence. | faith
+out: 40 | Дома никто тебя не узнаёт. Ты ночуешь у чужих и уходишь затемно. | No one at home knows you. You spend the night with strangers and leave before dawn. |
+door: Молиться за своих | Pray for your own
+out: 100 | Каждый вечер называешь в молитве имена родных. Их всё больше среди умерших. | Every evening you name your family in your prayers. More and more of them among the dead. | faith
+door: Не ворошить | Leave it alone
+out: 100 | Ты {ушёл|ушла} оттуда давно. Обитель и есть твой дом. | You left there long ago. The monastery is your home. |
+
+id: w_monk_bell
+slot: wish
+groups: med early
+tags: *
+need: monk
+ages: 68-72
+weight: 1
+q: Хочется в последний раз позвонить к утренней молитве. | You want to ring for the morning prayer one last time.
+door: Подняться на звонницу | Climb to the bells
+out: 70 | Ты звонишь в темноте. Обитель просыпается от твоего звона. | You ring in the dark. The monastery wakes to your bell. | faith
+out: 30 | На лестнице у тебя кружится голова. Звонишь, держась за стену. | Your head spins on the stairs. You ring holding on to the wall. | faith risk10
+ep: Будил{|а} обитель звоном. | Woke the monastery with the bell.
+door: Учить молодого звонаря | Teach the young ringer
+out: 100 | Молодой звонарь сбивается, потом нет. Ты слушаешь снизу. | The young ringer stumbles, then doesn't. You listen from below. | kind
+door: Слушать из кельи | Listen from your cell
+out: 100 | Лежишь в келье и слушаешь колокол. Каждый удар знаешь. | You lie in your cell and listen to the bell. You know every stroke. |
+
+id: w_monk_peace
+slot: wish
+groups: med early
+tags: *
+need: monk
+ages: 68-72
+weight: 1
+q: С {одним из братии|одной из сестёр} вы не говорите двадцать лет. | You and one of the {brethren|sisters} have not spoken for twenty years.
+door: Попросить прощения | Ask forgiveness
+out: 70 | {Он|Она} молча обнимает тебя. Вечером вы вместе поёте на службе. | {He|She} embraces you without a word. In the evening you sing together at the office. | kind faith
+out: 30 | {Он отворачивается. Через неделю приходит сам|Она отворачивается. Через неделю приходит сама} и садится рядом. | {He turns away. A week later he|She turns away. A week later she} comes and sits beside you. | kind
+ep: Попросил{|а} прощения {первым|первой}. | Asked forgiveness first.
+door: Молиться за {него|неё} | Pray for {him|her}
+out: 100 | Молишься за {него|неё} каждую ночь. {Он|Она} не знает, но спит спокойнее. | You pray for {him|her} every night. {He doesn't|She doesn't} know, but sleeps better. | faith
+door: Оставить как есть | Leave it as it is
+out: 100 | Вы стоите в разных концах храма. Так уже привычно. | You stand at opposite ends of the church. It is a habit by now. |
+ask: С кем так давно нет разговора, что это стало привычкой? | Who have you not spoken to for so long that it has become a habit?

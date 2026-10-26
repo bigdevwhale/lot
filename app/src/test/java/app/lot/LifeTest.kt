@@ -152,13 +152,13 @@ class LifeTest {
                 val open = ch.doors.indices.filter { ch.doors[it].open }
                 open.firstOrNull { ch.doors[it].text.en == "Enter a monastery" } ?: open.random(rnd)
             }
-            val at = p.entries.indexOfFirst { it.text.en.startsWith("You enter a monastery") }
+            val at = p.entries.indexOfFirst { it.text.en.startsWith("You enter a") && "monastery" in it.text.en }
             if (at < 0) return@repeat
             monks++
             val late = p.entries.drop(at + 1).firstOrNull { worldly.containsMatchIn(it.text.ru) }
             assertTrue("life $n took vows and then: ${late?.text?.ru}", late == null)
             // Behind the gate the book has no dances, fairs or feasts of the village; real events still reach it.
-            val loud = p.entries.drop(at + 1).firstOrNull { it.mark == app.lot.domain.Mark.PLAIN && "рассказываешь" !in it.text.ru && village.containsMatchIn(it.text.ru) }
+            val loud = p.entries.drop(at + 1).firstOrNull { it.mark == app.lot.domain.Mark.PLAIN && !it.text.ru.contains("рассказываешь", ignoreCase = true) && village.containsMatchIn(it.text.ru) }
             assertTrue("life $n took vows and then: ${loud?.text?.ru}", loud == null)
         }
         assertTrue(monks > 20)
@@ -289,5 +289,27 @@ class LifeTest {
             assertTrue("${e.name.en} ${r.key} $k", content.lines(e.group, k, r).count { it.need === app.lot.domain.Need.ANY } >= 2)
         }
         assertTrue(content.hist.size > 60)
+    }
+
+    /** Whoever lives through them meets a crisis, a legacy and a last wish, each told for its own time and place. */
+    @Test fun everyLifeMeetsItsFixedForks() {
+        val rnd = Random(13)
+        val crises = mutableMapOf<app.lot.domain.Group, MutableSet<String>>()
+        repeat(4000) { n ->
+            val asked = mutableListOf<Pair<Int, String>>()
+            val (p, _) = Life.live(content, n.toLong() * 37 + 3, null) { ch, _ ->
+                asked += ch.age to ch.q.ru
+                ch.doors.indices.filter { ch.doors[it].open }.random(rnd)
+            }
+            val b = p.birth
+            val a = p.end!!.age
+            val who = "life $n, ${b.era.name.en} ${b.region.key} ${b.estate.key} ${b.sex}: ${asked.map { it.first }}"
+            val crisis = asked.firstOrNull { it.first in setOf(30, 33, 36, 42) }
+            if (a > 42) assertTrue("no crisis in $who", crisis != null)
+            if (a > 48) assertTrue("no legacy in $who", asked.any { it.first in setOf(45, 48) })
+            if (a > 70) assertTrue("no last wish in $who", asked.any { it.first == 70 })
+            crisis?.let { crises.getOrPut(b.era.group) { mutableSetOf() } += it.second }
+        }
+        for ((g, qs) in crises) assertTrue("$g: only ${qs.size} crises", qs.size >= 4)
     }
 }

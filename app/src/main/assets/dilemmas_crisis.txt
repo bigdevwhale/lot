@@ -1,0 +1,1302 @@
+# The crisis of a life (slot: crisis), once between 30 and 42. A concrete calamity of its era and place.
+# Id prefix c_. A monk meets only the c_monk_ blocks.
+
+# ---------- stone ----------
+
+id: c_stone_dry
+slot: crisis
+groups: stone
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: Второй год нет дождей. Звери ушли от водопоя, ручей пересох до камней. | The rains have failed two years running. The game has left the waterhole and the stream is dry to the stones.
+door: Идти за зверем в чужие края | Follow the game into strange country
+out: 50 | Идёте много дней. Находите реку и остаётесь у неё. | You walk for many days. You find a river and stay by it. | moved
+out: 30 | У новой реки уже живут чужие. Приходится уходить и оттуда. | Strangers already live by the new river. You have to move on again. | moved risk10
+out: 20 | В пути умирают двое стариков. Их оставляют под камнями. | Two of the old ones die on the way. You leave them under stones. | moved
+ep: {Ходил|Ходила} за зверем в чужие края. | Followed the game into strange country.
+door: Копать коренья и ждать дождя | Dig roots and wait for rain
+out: 50 | Едите коренья и ящериц. Осенью приходит дождь. | You eat roots and lizards. In autumn the rain comes. |
+out: 30 | Дождь не приходит. Слабые умирают один за другим. | The rain does not come. The weak die one after another. | risk15
+out: 20 | Умирает младший. Остальные дожидаются дождя. | Your youngest dies. The rest live to see the rain. | kids-1 | kids
+door: Отдавать свою долю старикам и детям | Give your share to the old and the young
+out: 60 | Ты слабеешь, но все дотягивают до дождей. | You grow weak, but everyone lasts until the rains. | kind
+out: 40 | Сам{|а} еле {выжил|выжила}. Старики помнят это до смерти. | You barely live yourself. The old ones remember it till they die. | kind risk15
+ep: В засуху {отдавал|отдавала} свою долю другим. | In the drought gave away a share to others.
+ask: Чем можно поделиться, когда еды мало? | What can you share when there is little to eat?
+
+id: c_stone_cold
+slot: crisis
+groups: stone
+tags: eu cn am
+need:
+ages: 28-44
+weight: 1
+q: Зима не кончается. Стада не пришли, мясо в ямах кончилось. | Winter will not end. The herds have not come, and the meat pits are empty.
+door: Идти с охотниками далеко на север | Go far north with the hunters
+shut: f | Женщин на дальнюю охоту не берут. | Women are not taken on the long hunt.
+out: 50 | Стадо находите за три перехода. Тащите мясо домой на волокушах. | You find a herd three days off and drag the meat home on sledges. | brave
+out: 30 | В пути застаёт буран. Возвращаются не все. | A blizzard catches you on the way. Not everyone comes back. | brave risk20
+out: 20 | Ты отмораживаешь пальцы, но мясо приносишь. | You lose fingers to the frost, but you bring the meat. | brave
+ep: В голодную зиму {ходил|ходила} за мясом на север. | In the hungry winter went north for meat.
+door: Варить шкуры и кости | Boil hides and bones
+out: 60 | Варите старые шкуры и кости. Дотягиваете до весны. | You boil old hides and bones. You last until spring. |
+out: 40 | Весной из стойбища выходят не все. | In spring not everyone walks out of the camp. | risk15
+door: Просить мяса у соседнего стойбища | Beg meat from the next camp
+out: 50 | Соседи делятся. Летом вы отдаёте им долг. | The neighbours share. In summer you pay them back. |
+out: 30 | У них тоже голод. Уходите ни с чем. | They are starving too. You leave with nothing. |
+out: 20 | Остаётесь у них насовсем. Их речь становится твоей. | You stay with them for good. Their speech becomes yours. | moved
+ask: У кого можно попросить, когда совсем плохо? | Whom could you ask when things are at their worst?
+
+id: c_stone_cough
+slot: crisis
+groups: stone
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: По стоянке ходит кашель с жаром. Уже троих отнесли за холм. | A cough with fever goes round the camp. Three have already been carried over the hill.
+door: Сидеть у больных | Sit with the sick
+out: 50 | Поишь больных отваром из коры. Половина встаёт. | You give the sick bark broth. Half of them get up again. | kind
+out: 30 | Ты сам{|а} {слёг|слегла}, но к луне {поднялся|поднялась}. | You fall ill yourself, but are up again by the new moon. | kind risk10
+out: 20 | Ты {слёг|слегла} сам{|а}. Кашель не отпускает. | You fall ill yourself. The cough won't let go. | kind risk40
+ep: Не {бросил|бросила} больных. | Did not leave the sick.
+ask: С кем ты просидишь до утра, если он заболеет? | Whom would you sit up with all night if they fell ill?
+door: Уйти от стоянки к дальнему ручью | Leave the camp for the far stream
+out: 60 | Уходите своей семьёй. Болезнь вас не догоняет. | You leave with your own family. The sickness does not follow. |
+out: 40 | Болезнь уходит вместе с вами. | The sickness comes along with you. | risk20
+door: Просить духов | Ask the spirits
+out: 50 | Знахарь пляшет всю ночь. Ты отдаёшь духам лучшую шкуру. Кашель стихает. | The healer dances all night. You give the spirits your best hide. The cough dies down. | faith
+out: 50 | Духи молчат. Кашель уносит ещё двоих. | The spirits are silent. The cough takes two more. | faith risk10
+
+id: c_stone_strangers
+slot: crisis
+groups: stone
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: На ваших охотничьих местах появились чужие. Ночью у ручья убили вашего охотника. | Strangers have come onto your hunting grounds. At night they killed one of your hunters by the stream.
+door: Идти на них ночью | Go against them by night
+shut: f | Женщин в такой поход не берут. | Women are not taken on such a raid.
+out: 40 | Чужие уходят за горы. У ручья снова стоят ваши ловушки. | The strangers go off beyond the hills. Your traps stand by the stream again. | brave
+out: 40 | Схватка у ручья. Ты {вернулся|вернулась} с копьём в бедре. | A fight by the stream. You come back with a spear wound in the thigh. | brave risk20
+out: 20 | Возвращаются не все. | Not everyone comes back. | brave risk30
+door: Уйти за реку | Move across the river
+out: 70 | За рекой новые места. Через год кажется, что так было всегда. | Across the river is new country. A year later it feels as if it was always so. | moved
+out: 30 | Земля за рекой беднее. Зиму голодаете. | The land across the river is poorer. You go hungry all winter. | moved risk10
+door: Позвать их к костру | Call them to the fire
+out: 50 | Приходят трое. Едите вместе, меняетесь бусами. Через год ваши дети женятся. | Three of them come. You eat together and trade beads. A year later your young people marry. | kind brave
+out: 50 | Они не приходят. Через месяц пропадает ещё один охотник. | They don't come. A month later another hunter goes missing. | brave risk10
+ep: {Позвал|Позвала} чужих к своему костру. | Called strangers to the fire.
+ask: С кем пора сесть и поговорить, а не воевать? | Whom is it time to sit down and talk with, instead of fighting?
+
+id: c_stone_sea
+slot: crisis
+groups: stone
+tags: sea
+need:
+ages: 28-44
+weight: 1
+q: Море год от года подходит ближе. Где была долина с оленями, теперь залив. | Year by year the sea creeps closer. Where the deer valley was, there is now a bay.
+door: Уйти вглубь земли | Move inland
+out: 60 | Уходите к холмам. Рыбы больше нет, зато есть орехи и олени. | You move to the hills. No more fish, but there are nuts and deer. | moved
+out: 40 | На холмах свои люди и свои тропы. Вас пускают не сразу. | The hills have their own people and their own paths. They don't let you in at once. | moved risk10
+door: Ставить стоянку выше по берегу | Camp higher up the shore
+out: 60 | В новом заливе много рыбы. Тюленей хватает на всех. | The new bay is full of fish. There are seals enough for all. |
+out: 40 | Ночью шторм заливает стоянку и уносит лодки. | A storm at night floods the camp and takes the boats. | risk10
+door: Плыть к дальнему берегу | Paddle to the far shore
+out: 50 | Два дня в лодке. На том берегу пусто и много птицы. | Two days in the boat. The far shore is empty and full of birds. | moved brave
+out: 50 | Ветер переворачивает лодку у самого берега. | The wind overturns the boat just short of the shore. | brave risk30
+ep: {Ушёл|Ушла} на лодке к дальнему берегу. | Paddled away to the far shore.
+
+id: c_stone_fire
+slot: crisis
+groups: stone
+tags: af au am in
+need:
+ages: 28-44
+weight: 1
+q: Трава сухая. Огонь идёт по степи, и ветер несёт его к стоянке. | The grass is dry. Fire runs across the plain, and the wind is driving it at the camp.
+door: Бежать к реке | Run for the river
+out: 70 | Сидите в воде, пока огонь идёт мимо. | You sit in the water while the fire goes by. |
+out: 30 | Огонь съедает всё, что не унесли: шкуры, копья, запасы. | The fire eats everything you could not carry: hides, spears, stores. | risk5
+door: Пустить встречный огонь | Light a backfire
+out: 60 | Ваш огонь выжигает траву перед стоянкой. Пожар обходит вас. | Your fire burns the grass before the camp. The blaze goes round you. | brave
+out: 40 | Ветер поворачивает. Ты {обжёгся|обожглась}, но стоянка цела. | The wind turns. You are burned, but the camp is safe. | brave risk15
+door: Нести старика на спине | Carry an old man on your back
+out: 60 | Добегаешь до воды с ним на спине. Он живёт ещё пять зим. | You reach the water with him on your back. He lives five more winters. | kind
+out: 40 | Дым догоняет. Обоих вытаскивают из воды без сил. | The smoke catches up. Both of you are pulled from the water spent. | kind risk15
+ep: {Вынес|Вынесла} старика из огня. | Carried an old man out of the fire.
+ask: Кого ты вынесешь из огня на своей спине? | Whom would you carry on your back?
+
+# ---------- anc ----------
+
+id: c_anc_drought
+slot: crisis
+groups: anc
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: Третий год засуха. Колодец пересох, зерна до весны не хватит. | The third year of drought. The well is dry, and the grain won't last till spring.
+door: Тянуть на том, что есть | Get by on what there is
+out: 40 | Едите траву и коренья. Дотягиваете до дождей. | You eat grass and roots. You last until the rains. |
+out: 30 | Съедаете семенное зерно. Весной сеете в долг. | You eat the seed grain. In spring you sow on borrowed seed. | wealth-1 | !r0
+out: 30 | Хозяин урезает паёк вдвое. Дотягиваете до весны. | The master cuts the ration by half. You last till spring. | | r0
+out: 15 | Умирает младший. Остальные дожидаются дождя. | Your youngest dies. The rest live to see the rain. | kids-1 | kids
+door: Уйти с семьёй к большой реке | Take the family to the great river
+shut: r0 | Хозяин тебя не отпустит. | Your master will not let you go.
+out: 60 | У реки вода и чужие поля. Нанимаешься к чужим. | By the river there is water and other men's fields. You hire yourself out. | moved
+out: 40 | Дорога долгая. Доходят не все. | The road is long. Not everyone arrives. | moved risk15
+ep: В засуху {увёл|увела} своих к реке. | In the drought led the family to the river.
+door: Делить последнее с соседями | Share the last with the neighbours
+out: 60 | Варите одну похлёбку на три двора. Дотягиваете все. | You cook one pot for three households. Everyone gets through. | kind
+out: 40 | Делишь до последнего зерна. Весной ты слабее всех. | You share down to the last grain. By spring you are the weakest of all. | kind risk15
+ep: В засуху {делил|делила} последнее с соседями. | In the drought shared the last with the neighbours.
+ask: С кем ты поделишься последним? | With whom would you share your last?
+
+id: c_anc_nile
+slot: crisis
+groups: anc
+tags: eg
+need:
+ages: 28-44
+weight: 1
+q: Нил не поднялся. Поля сухие, а в житницах храма зерно лежит до крыши. | The Nile has not risen. The fields are dry, while the temple granaries are full to the roof.
+door: Просить зерна у храма | Beg grain from the temple
+out: 60 | Жрецы дают зерно в долг, под будущий урожай. | The priests lend you grain against next year's harvest. | wealth-1 faith
+out: 40 | Зерно дают по горсти в день. Хватает, чтобы не умереть. | They give a handful a day. Enough not to die. | faith
+door: Идти на царскую стройку за хлеб | Work on the king's building for bread
+shut: f | Камни таскают мужчины. | Men haul the stones.
+out: 60 | До разлива таскаешь камни. Кормят хлебом, луком и пивом. | You haul stone until the flood. They feed you bread, onions and beer. |
+out: 40 | С салазок срывается камень. Тебе ломает ногу. | A block slips off the sledge. It breaks your leg. | risk10
+ep: В голодный год {строил|строила} для царя. | In the hungry year built for the king.
+door: Отдать за зерно утварь и украшения | Trade your pots and jewellery for grain
+shut: poor | Отдавать нечего. | There is nothing to give.
+out: 70 | Медные браслеты уходят за два мешка ячменя. | The copper bracelets go for two sacks of barley. | wealth-1
+out: 30 | Купец обманывает: в мешках половина песка. | The merchant cheats you: the sacks are half sand. | wealth-1
+
+id: c_anc_huanghe
+slot: crisis
+groups: anc
+tags: cn
+need:
+ages: 28-44
+weight: 1
+q: Жёлтая река прорвала дамбы. Деревни под водой до самого горизонта. | The Yellow River has broken its dykes. The villages are under water to the horizon.
+door: Идти на дамбу по зову старосты | Answer the headman's call to the dyke
+out: 60 | Месяц носишь землю в корзинах. Пролом закрыли. | For a month you carry earth in baskets. The breach is closed. | kind brave
+out: 40 | Ночью дамбу прорывает снова. Многих уносит. | At night the dyke breaks again. Many are swept away. | brave risk20
+ep: {Носил|Носила} землю на дамбу. | Carried earth to the dyke.
+door: Уйти на юг искать сухую землю | Go south looking for dry land
+shut: r0 | Хозяин тебя не отпустит. | Your master will not let you go.
+out: 60 | За рекой Хуай находишь пустую землю и строишь хижину. | Beyond the Huai you find empty land and build a hut. | moved
+out: 40 | По дорогам ходят тысячи таких же. Хлеба нет нигде. | Thousands like you walk the roads. There is no bread anywhere. | moved risk15
+door: Переждать на холме у храма предков | Wait it out on the hill by the ancestral shrine
+out: 60 | К зиме вода уходит. Поле занесло илом, оно родит лучше прежнего. | By winter the water goes. Silt covers the field, and it yields better than before. | faith
+out: 40 | Вода стоит до весны. Едите рыбу и кору. | The water stays till spring. You eat fish and bark. | faith risk10
+
+id: c_anc_siege
+slot: crisis
+groups: anc
+tags: me med cn in eg
+need:
+ages: 28-44
+weight: 1
+q: Город в осаде. Хлеб на исходе, воду дают по чашке. | The city is under siege. Bread is running out; water is given by the cup.
+door: Стоять на стене | Stand on the wall
+shut: f | На стену женщин не ставят. | Women are not put on the wall.
+shut: r0 | Рабу оружия не дадут. | A slave is not given a weapon.
+out: 50 | Враг уходит, не взяв стен. Ты возвращаешься домой со шрамом. | The enemy leaves without taking the walls. You come home with a scar. | brave
+out: 30 | Стрела попадает в плечо. Рана долго гноится. | An arrow strikes your shoulder. The wound festers a long time. | brave risk20
+out: 20 | Стену проламывают. Бьёшься в проломе до темноты. | The wall is breached. You fight in the gap till dark. | brave risk40
+ep: {Стоял|Стояла} на стене в осаду. | Stood on the wall in the siege.
+door: Носить на стены воду и камни | Carry water and stones to the walls
+out: 60 | День за днём носишь кувшины по лестнице. Осада снята. | Day after day you carry jars up the stairs. The siege is lifted. | brave
+out: 40 | Сверху летит камень из пращи. Падаешь с лестницы. | A sling stone comes over. You fall from the stairs. | brave risk15
+door: Бежать из города ночью | Slip out of the city by night
+out: 50 | Уходите через сухой ров. Через неделю город пал, а вы далеко. | You get out through the dry ditch. A week later the city falls, and you are far away. | moved
+out: 30 | У вражеского костра вас ловят. Отпускают, забрав всё. | You are caught by an enemy fire. They let you go and keep everything. | wealth-1
+out: 40 | Уходишь в темноте. На новом месте никто не знает, чей ты раб. | You slip away in the dark. In the new place nobody knows whose slave you were. | free moved brave | r0
+out: 20 | У рва тебя ловят свои же и возвращают хозяину. | Your own side catches you by the ditch and returns you to your master. | risk15 | r0
+
+id: c_anc_locust
+slot: crisis
+groups: anc
+tags: me eg af in
+need:
+ages: 28-44
+weight: 1
+q: Пришла саранча. Небо потемнело, на полях стоит хруст. | The locusts have come. The sky has gone dark and the fields crackle.
+door: Бить в котлы и жечь костры | Beat the pots and light fires
+out: 50 | Туча сворачивает. Половина поля цела. | The swarm turns aside. Half the field is saved. |
+out: 50 | Саранча съедает всё, что было зелёным. | The locusts eat everything that was green. | wealth-1
+door: Собирать саранчу в мешки | Gather the locusts in sacks
+out: 70 | Сушите саранчу на крышах. Ею кормитесь до весны. | You dry the locusts on the roofs. They feed you till spring. |
+out: 30 | Саранчи много, зерна нет. К весне все худые, но живые. | Plenty of locusts, no grain. By spring everyone is thin, but alive. | risk5
+door: Нести жертву богам | Bring an offering to the gods
+out: 60 | Отдаёшь в храм последнего козлёнка. На другой год поле родит. | You give your last kid goat to the temple. The next year the field bears. | faith
+out: 40 | Жрецы молятся. Саранча летит дальше, когда есть уже нечего. | The priests pray. The locusts move on when there is nothing left to eat. | faith wealth-1
+
+id: c_anc_plague
+slot: crisis
+groups: anc
+tags: med me
+need:
+ages: 28-44
+weight: 1
+q: В городе мор. Люди падают на улицах, мёртвых не успевают хоронить. | Plague in the city. People drop in the streets; the dead can't be buried fast enough.
+door: Ходить за больными | Nurse the sick
+out: 50 | Носишь воду, обмываешь, хоронишь. Тебя болезнь не берёт. | You carry water, wash the sick, bury the dead. The sickness passes you by. | kind
+out: 50 | Ты {заболел|заболела} сам{|а}. Соседка носит тебе воду. | You fall ill yourself. A neighbour brings you water. | kind risk30
+ep: В мор {ходил|ходила} за больными. | In the plague nursed the sick.
+ask: За кем ты будешь ухаживать, даже рискуя собой? | Whom would you nurse at a risk to yourself?
+door: Уйти к родне в деревню | Go to kin in the country
+shut: r0 | Хозяин тебя не отпустит. | Your master will not let you go.
+out: 70 | В деревне тихо. Мор до неё не доходит. | The village is quiet. The plague doesn't reach it. |
+out: 30 | В деревне тебя боятся и не пускают за ограду. Живёшь в шалаше. | In the village they fear you and won't let you past the fence. You live in a shelter. | risk10
+door: Принести жертву богу-врачевателю | Make an offering to the healing god
+out: 60 | Несёшь в храм петуха. Мор обходит твой дом. | You take a cockerel to the temple. The plague passes your house. | faith
+out: 40 | Храм полон больных. Ты уходишь оттуда с жаром. | The temple is full of the sick. You leave it with a fever. | faith risk20
+
+id: c_anc_maize
+slot: crisis
+groups: anc
+tags: meso
+need:
+ages: 28-44
+weight: 1
+q: Дожди не пришли. Маис засох на корню. Жрецы говорят, что боги голодны. | The rains have not come. The maize has withered on the stalk. The priests say the gods are hungry.
+door: Отдать богам свою кровь | Give your blood to the gods
+out: 60 | Колешь себе уши шипом агавы и капаешь кровь на бумагу из коры. Через месяц идёт дождь. | You pierce your ears with an agave thorn and let the blood fall on bark paper. A month later it rains. | faith
+out: 40 | Кровь сожгли в храме. Дождя всё нет. | The blood is burned in the temple. Still no rain. | faith risk10
+door: Уйти к побережью, где дожди | Go down to the coast where it rains
+shut: r0 | Хозяин тебя не отпустит. | Your master will not let you go.
+out: 60 | На побережье маис растёт дважды в год. Ты остаёшься там. | On the coast the maize grows twice a year. You stay there. | moved sea
+out: 40 | Местные дают работу за еду. Своим тебя не считают. | The locals give you work for food. They never count you as one of them. | moved sea
+door: Делить зерно с роднёй | Share the grain with your kin
+out: 60 | Одна лепёшка на двоих. Доживаете до урожая. | One tortilla for two. You last until harvest. | kind
+out: 40 | Зерно кончается раньше дождей. Едите кактус. | The grain runs out before the rain. You eat cactus. | kind risk10
+
+id: c_anc_terraces
+slot: crisis
+groups: anc med
+tags: andes
+need:
+ages: 28-44
+weight: 1
+q: Ливни смыли террасы. Вода с гор унесла поля и каналы. | Rains have washed away the terraces. Water off the mountains has carried off the fields and channels.
+door: Чинить террасы всей общиной | Rebuild the terraces with the whole community
+out: 60 | Всю зиму таскаете камни и землю. К севу террасы стоят. | All winter you haul stones and earth. By sowing time the terraces stand. | kind
+out: 40 | Стена обрушивается на работающих. Тебя достают из-под камней. | A wall falls on the workers. You are dug out from under the stones. | kind risk15
+ep: {Чинил|Чинила} террасы со всеми. | Rebuilt the terraces with everyone.
+door: Уйти к родне в высокие пастбища | Go up to kin in the high pastures
+out: 70 | Живёшь у родни, пасёшь лам. Ешь сушёный картофель. | You live with kin and herd llamas. You eat freeze-dried potatoes. |
+out: 30 | Наверху холодно. Зима долгая. | It is cold up there. The winter is long. | risk10
+door: Принести жертву горе | Make an offering to the mountain
+out: 60 | Поднимаешься к вершине с чичей и листьями коки. Гора принимает дар. | You climb to the peak with maize beer and coca leaves. The mountain accepts the gift. | faith
+out: 40 | Наверху застаёт снег. Спускаешься с обмороженными ногами. | Snow catches you at the top. You come down with frostbitten feet. | faith risk10
+
+id: c_anc_nomads
+slot: crisis
+groups: anc
+tags: cn me in
+need:
+ages: 28-44
+weight: 1
+q: Из степи идут конные. Говорят, они в двух днях пути и жгут всё на своей дороге. | Horsemen are coming out of the steppe. They say they are two days away and burn everything in their path.
+door: Закопать зерно и уйти в горы | Bury the grain and flee to the hills
+out: 60 | Возвращаешься через месяц. Дом сожжён, но зерно в яме цело. | You come back a month later. The house is burned, but the grain in the pit is safe. |
+out: 40 | Яму находят. Весной сеять нечем. | They find the pit. In spring there is nothing to sow. | wealth-1
+door: Укрыться за стенами города | Shelter behind the city walls
+out: 60 | Конные стоят под стенами неделю и уходят. | The horsemen sit under the walls a week and leave. |
+out: 40 | В тесноте за стенами начинается горячка. | In the crush behind the walls a fever starts. | risk15
+door: Встать с копьём у брода | Stand at the ford with a spear
+shut: f | Копьё женщине не дадут. | No one will give a woman a spear.
+shut: r0 | Рабу оружия не дадут. | A slave is not given a weapon.
+out: 50 | Конные не идут через брод и поворачивают. | The horsemen won't cross the ford and turn back. | brave
+out: 50 | Стрелы летят с того берега. Тебя выносят на щите. | Arrows come from the far bank. You are carried off on a shield. | brave risk30
+ep: {Стоял|Стояла} у брода против конных. | Stood at the ford against the horsemen.
+
+id: c_anc_dry_songs
+slot: crisis
+groups: anc med
+tags: au
+need:
+ages: 28-44
+weight: 1
+q: Высохли водоёмы, к которым ведут песни предков. Кенгуру ушли. | The waterholes the ancestors' songs lead to have dried up. The kangaroos have gone.
+door: Идти по песне к дальней воде | Follow the song to the far water
+out: 60 | Десять дней от колодца к колодцу. Дальняя вода жива. | Ten days from soak to soak. The far water is alive. | brave
+out: 40 | Один колодец пуст. Двое стариков не доходят. | One soak is empty. Two of the old ones don't make it. | brave risk15
+door: Просить приюта у соседнего народа | Ask a neighbouring people for shelter
+out: 60 | Соседи пускают на свою воду. За это вы будете должны им годами. | The neighbours let you use their water. You will owe them for years. |
+out: 40 | Соседи говорят на другом языке и смотрят косо. Но не гонят. | The neighbours speak another tongue and look at you askance. But they don't drive you off. | moved
+door: Ждать у последней воды | Wait at the last water
+out: 50 | Копаете ямки в песке русла. Воды хватает до дождей. | You dig holes in the sandy riverbed. There is water enough till the rains. |
+out: 50 | Вода кончается раньше дождей. | The water runs out before the rains. | risk20
+
+# ---------- med ----------
+
+id: c_med_famine
+slot: crisis
+groups: med
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: Второй год неурожай. Едят траву и толчёную кору. | A second year of failed harvests. People eat grass and ground bark.
+door: Спрятать зерно от сборщиков | Hide the grain from the tax collectors
+out: 50 | Яму под полом не находят. Весной есть что сеять. | They don't find the pit under the floor. In spring you have seed to sow. |
+out: 30 | Яму находят. Забирают всё, а тебя секут во дворе. | They find the pit. They take everything and flog you in the yard. | wealth-1 risk10
+out: 20 | Тебя ведут к начальнику уезда. Отпускают с колодкой на шее. | You are taken before the magistrate and let go with a cangue on your neck. | wealth-1 risk10 | #cn
+ep: В голодный год {прятал|прятала} зерно от сборщиков. | In the hungry year hid the grain from the collectors.
+door: Уйти побираться в город | Go begging to the town
+shut: r0 | Тебя не отпустят с земли. | You are bound to the land and will not be let go.
+out: 50 | У церкви раздают хлеб. Доживаешь до лета. | They hand out bread at the church. You last until summer. | | #eu
+out: 50 | У ворот монастыря раздают кашу. Доживаешь до лета. | They give out gruel at the monastery gate. You last until summer. | | #cn #jp #sea #in
+out: 40 | В городе таких же тысячи. Ночуешь под стеной и ешь, что дадут. | The town is full of people like you. You sleep under the wall and eat what you're given. | moved
+out: 30 | В городе горячка. Ты {слёг|слегла} в первую же неделю. | There is fever in the town. You fall ill in the first week. | risk20
+door: Делиться с теми, кто стучит | Share with those who knock
+out: 60 | Половину похлёбки отдаёшь чужим детям. Все дотягивают до весны. | You give half your pottage to other people's children. Everyone lasts till spring. | kind
+out: 40 | Делишься, пока есть. Весной ты слабее всех. | You share while there is any. By spring you are the weakest of all. | kind risk15
+ep: В голодный год не {гнал|гнала} от двери просящих. | In the hungry year turned no one away from the door.
+ask: Кого ты не прогонишь от своей двери? | Whom would you not turn away from your door?
+
+id: c_med_black_death
+slot: crisis
+groups: med
+tags: fr de it en ru me eg
+need: after:1346
+ages: 28-44
+weight: 1
+q: С моря пришёл мор. Люди покрываются чёрными нарывами и умирают за три дня. | A pestilence has come from the sea. People break out in black swellings and die in three days.
+door: Ходить за больными | Nurse the sick
+out: 50 | Носишь воду из дома в дом. Мор тебя не трогает. | You carry water from house to house. The plague doesn't touch you. | kind
+out: 50 | На третью неделю у тебя под мышкой нарыв. | In the third week a swelling comes up under your arm. | kind risk40
+ep: В чёрный мор {ходил|ходила} за больными. | In the Black Death nursed the sick.
+ask: Ради кого стоит остаться, когда все бегут? | For whom would you stay when everyone else runs?
+door: Бежать из города | Flee the town
+shut: r0 | Тебя не отпустят с земли. | You are bound to the land and will not be let go.
+out: 60 | Живёшь в лесной сторожке до зимы. Мор уходит без тебя. | You live in a forest hut till winter. The plague passes without you. |
+out: 40 | В соседней деревне тебя гонят камнями. Боятся, что ты {принёс|принесла} мор. | In the next village they drive you off with stones, afraid you bring the plague. | moved risk10
+door: Молиться со всеми день и ночь | Pray with everyone day and night
+out: 50 | Ходите с молитвой вокруг города. Твой дом мор обходит. | You walk round the town in prayer. The plague passes your house. | faith
+out: 50 | Молишься в толпе. Через неделю у тебя жар. | You pray in the crowd. A week later you have a fever. | faith risk30
+
+id: c_med_mongols
+slot: crisis
+groups: med
+tags: ru cn me
+need: after:1210 before:1300
+ages: 28-44
+weight: 1
+q: Идут монголы. Говорят, они в двух днях пути, а города, что не открыли ворот, сожжены. | The Mongols are coming. They say they are two days away, and every city that shut its gates has been burned.
+door: Уйти в леса и горы | Flee to the forests and hills
+out: 60 | Зимуете в землянке. Весной на месте деревни пепел, но вы живы. | You winter in a dugout. In spring the village is ashes, but you are alive. | wealth-1
+out: 40 | Конные находят вашу тропу в лесу. Спасаются не все. | The horsemen find your trail in the woods. Not everyone gets away. | risk20
+door: Встать на стенах | Stand on the walls
+shut: f | На стены женщин не ставят. | Women are not put on the walls.
+shut: r0 | Холопу оружия не дадут. | A bondsman is not given a weapon.
+out: 40 | Город держится три недели. Потом ворота открывают изнутри. | The city holds for three weeks. Then the gates are opened from inside. | brave risk30
+out: 30 | Тебя уводят в полон. Через два года ты бежишь домой. | You are taken captive. Two years later you escape home. | brave moved risk15
+out: 30 | Монголы уходят дальше, не начав осады. | The Mongols move on without laying siege. | brave
+ep: {Стоял|Стояла} на стенах против монголов. | Stood on the walls against the Mongols.
+door: Выйти навстречу с дарами | Go out to meet them with gifts
+shut: poor | Дарить нечего. | You have nothing to give.
+out: 60 | Дары берут. С вашей деревни назначают дань, но её не жгут. | The gifts are taken. Your village is set a tribute, but not burned. | wealth-1 brave
+out: 40 | Дары берут, а людей уводят всё равно. | They take the gifts and lead the people off anyway. | wealth-1 risk20
+
+id: c_med_northmen
+slot: crisis
+groups: med
+tags: en fr de
+need: after:790 before:1070
+ages: 28-44
+weight: 1
+q: Вверх по реке идут ладьи северян. Монастырь ниже по течению уже горит. | Northmen's ships are coming up the river. The monastery downstream is already burning.
+door: Угнать скотину в лес | Drive the cattle into the woods
+out: 60 | Неделю сидишь в чаще с коровами. Северяне берут только то, что осталось в домах. | You sit a week in the thicket with the cows. The Northmen take only what was left in the houses. | wealth-1
+out: 40 | Коровы мычат и выдают вас. Коров уводят. | The cows low and give you away. They are driven off. | wealth-1 risk10
+door: Встать с соседями у брода | Stand at the ford with the neighbours
+shut: f | Женщину к броду с топором не пустят. | No one will let a woman stand at the ford with an axe.
+out: 40 | Северяне видят у брода вилы и топоры и плывут дальше. | The Northmen see pitchforks and axes at the ford and row on. | brave
+out: 60 | Северяне выходят на берег. Бой короткий. | The Northmen come ashore. The fight is short. | brave risk40
+ep: {Стоял|Стояла} у брода против северян. | Stood at the ford against the Northmen.
+door: Собрать серебро на откуп | Gather silver to buy them off
+shut: poor | Серебра у тебя нет. | You have no silver.
+out: 70 | Северяне берут серебро и уходят. Обещают вернуться через год. | The Northmen take the silver and leave. They promise to come back next year. | wealth-1
+out: 30 | Серебро берут, а деревню жгут всё равно. | They take the silver and burn the village anyway. | wealth-2
+
+id: c_med_soldiers
+slot: crisis
+groups: med
+tags: fr de it en
+need:
+ages: 28-44
+weight: 1
+q: Война. Через округу идёт войско. Те, что шли весной, сожгли мельницу. | War. An army is marching through the district. The ones who came in spring burned the mill.
+door: Спрятаться в лесу | Hide in the woods
+out: 60 | Возвращаешься в пустой дом. Соломы на крыше нет, но стены стоят. | You come back to an empty house. The thatch is gone, but the walls stand. | wealth-1
+out: 40 | В лесу находят и вас. Отнимают всё, даже сапоги. | They find you in the woods too. They take everything, even your boots. | wealth-1 risk10
+door: Укрыться в городе за стенами | Shelter in the walled town
+shut: r0 | Сеньор не отпустит тебя с земли. | Your lord will not let you leave the land.
+out: 60 | Ночуешь в чужом сарае у стены. Войско проходит мимо. | You sleep in someone's shed by the wall. The army goes by. |
+out: 40 | Город осаждают. Месяц едите крыс и овёс. | The town is besieged. For a month you eat rats and oats. | risk15
+door: Кормить солдат, чтобы не жгли | Feed the soldiers so they won't burn you
+out: 60 | Солдаты съедают всё до зерна. Зато дом цел. | The soldiers eat everything down to the seed corn. But the house still stands. | wealth-1
+out: 40 | Солдаты едят, пьют и бьют посуду. Наутро уходят. | The soldiers eat, drink and smash the crockery. In the morning they leave. | risk5
+ep: {Кормил|Кормила} солдат, чтобы спасти дом. | Fed the soldiers to save the house.
+
+id: c_med_cn_flood
+slot: crisis
+groups: med
+tags: cn
+need:
+ages: 28-44
+weight: 1
+q: Река прорвала дамбы. Уезд под водой, начальник уезда зовёт всех на работы. | The river has broken its dykes. The county is under water, and the magistrate calls everyone to work.
+door: Идти на дамбу | Go to the dyke
+out: 60 | Два месяца живёшь в шалаше на насыпи. Платят рисом. | Two months you live in a shelter on the embankment. They pay in rice. | brave
+out: 40 | Насыпь оседает под ногами. Тебя вытаскивают из воды без сил. | The embankment gives way underfoot. You are pulled from the water half dead. | brave risk20
+ep: {Строил|Строила} дамбу в год большой воды. | Built the dyke in the year of high water.
+door: Уйти на юг, к Янцзы | Go south to the Yangtze
+shut: r0 | Хозяин не отпустит тебя с поля. | Your master will not let you leave the field.
+out: 60 | На юге земля мокрая и тёплая. Учишься сажать рис в воду. | In the south the land is wet and warm. You learn to plant rice in water. | moved
+out: 40 | В пути вас грабят. До юга доходишь ни с чем. | You are robbed on the way. You reach the south with nothing. | moved wealth-1
+door: Просить риса у старших в роду | Ask the clan elders for rice
+out: 70 | Род открывает свой амбар. Записывают каждую меру. | The clan opens its granary. Every measure is written down. |
+out: 30 | Старшие дают риса, а за это забирают твоё поле. | The elders give you rice and take your field for it. | wealth-1
+
+id: c_med_jp_cold
+slot: crisis
+groups: med
+tags: jp
+need:
+ages: 28-44
+weight: 1
+q: Холодное лето. Рис не вызрел, а люди князя требуют подать сполна. | A cold summer. The rice hasn't ripened, but the lord's men want the full tax.
+door: Прятать рис | Hide rice
+out: 50 | Мешок под полом не находят. Им кормитесь до весны. | They don't find the sack under the floor. It feeds you till spring. |
+out: 50 | Мешок находят. Тебя бьют палками при всей деревне. | They find the sack. You are beaten with sticks before the whole village. | risk10 wealth-1
+door: Идти всей деревней к замку с прошением | Go with the whole village to petition the castle
+shut: r0 | Прошение от слуги никто не примет. | No one will accept a petition from a servant.
+out: 40 | Подать уменьшают на треть. Старосту, что нёс прошение, казнят. | The tax is cut by a third. The headman who carried the petition is executed. | brave
+out: 60 | Прошение не читают. Зачинщиков ищут до зимы. | The petition goes unread. They hunt for the ringleaders till winter. | brave risk15
+ep: {Ходил|Ходила} к замку просить за деревню. | Went to the castle to plead for the village.
+door: Молиться в храме и есть коренья | Pray at the temple and eat roots
+out: 60 | Монахи раздают кашу раз в день. Доживаешь до весны. | The monks give out gruel once a day. You last till spring. | faith
+out: 40 | Едите корни папоротника и солому. К весне все опухшие, но живые. | You eat fern roots and straw. By spring you are all swollen, but alive. | faith risk10
+
+id: c_med_in_monsoon
+slot: crisis
+groups: med
+tags: in
+need:
+ages: 28-44
+weight: 1
+q: Муссон не пришёл. Колодцы пусты, а раджа всё равно требует свою долю урожая. | The monsoon has failed. The wells are empty, but the raja still wants his share of the harvest.
+door: Просить раджу простить подать | Petition the raja to forgive the tax
+shut: r0 | Тебя к радже не пустят даже на порог. | You will not be let past the raja's threshold.
+out: 50 | Раджа прощает половину. Он сам боится бунта. | The raja forgives half. He fears a revolt himself. | brave
+out: 50 | Стражники гонят от ворот палками. | The guards drive you from the gate with sticks. | risk5
+door: Уйти к большой реке | Go to the great river
+shut: r0 | Тебя держит долг хозяину. | Your debt to the master holds you.
+out: 60 | У реки хватает воды. Нанимаешься на чужие поля. | There is water enough by the river. You hire yourself out on other men's fields. | moved
+out: 40 | Дорога полна таких же. Многие ложатся у обочины. | The road is full of people like you. Many lie down by the wayside. | moved risk15
+door: Носить воду в храм и молиться о дожде | Carry water to the temple and pray for rain
+out: 50 | Каждое утро льёшь воду на камень бога. В конце лета идёт дождь. | Every morning you pour water over the god's stone. At the end of summer the rain comes. | faith
+out: 50 | Дождя нет до осени. Храм раздаёт рис, пока он есть. | No rain until autumn. The temple hands out rice while it lasts. | faith risk10
+
+id: c_med_fire_wood
+slot: crisis
+groups: med early
+tags: ru
+need:
+ages: 28-44
+weight: 1
+q: Пожар. Огонь идёт по крышам, ветер несёт его к твоему двору. | Fire. It runs along the roofs, and the wind drives it at your yard.
+door: Таскать воду и раскатывать соседние срубы | Carry water and pull down the houses in its way
+out: 50 | Раскатываете два сруба баграми. Огонь останавливается у твоего плетня. | You pull down two houses with hooks. The fire stops at your fence. | brave
+out: 50 | Рядом падает горящее бревно. Ты {обгорел|обгорела}, но двор цел. | A burning log falls beside you. You are burned, but the yard is saved. | brave risk15
+door: Выносить добро и уходить | Carry out your goods and go
+out: 60 | Спасаешь икону, сундук и корову. Дом сгорает к полудню. | You save the icon, the chest and the cow. The house is gone by noon. | wealth-1
+out: 40 | Выносишь, что {успел|успела}. Остальное в пепле. | You carry out what you can. The rest is ash. | wealth-2
+door: Тащить из огня соседских детей | Pull the neighbours' children out of the fire
+out: 60 | Выносишь двоих через окно. Сам{|а} весь в саже. | You carry two out through the window. You are black with soot. | kind brave
+out: 40 | Обваливается потолок. Тебя вытаскивают за ноги. | The ceiling comes down. They pull you out by the legs. | kind brave risk20
+ep: {Вынес|Вынесла} из огня соседских детей. | Carried the neighbours' children out of the fire.
+ask: За кем ты пойдёшь в огонь? | For whom would you go into a fire?
+
+id: c_med_meso_famine
+slot: crisis
+groups: med
+tags: meso
+need:
+ages: 28-44
+weight: 1
+q: Четвёртый год неурожай. Говорят, на побережье люди продают себя в рабы за корзину маиса. | The fourth year of failed harvests. They say on the coast people sell themselves as slaves for a basket of maize.
+door: Продать себя на побережье за маис | Sell yourself on the coast for maize
+shut: r0 | Ты и так себе не принадлежишь. | You don't belong to yourself as it is.
+out: 60 | Уходишь к купцам на побережье. Твоя семья жива. | You go to the merchants on the coast. Your family lives. | moved sea kind
+out: 40 | Через три года голод кончается. Родня выкупает тебя обратно. | Three years later the famine ends. Your kin buy you back. | sea kind
+ep: В голод {продал|продала} себя за маис ради семьи. | In the famine, sold self for maize to save the family.
+door: Жить на кореньях и траве | Live on roots and weeds
+out: 50 | Едите корни, ящериц и кору. Дожди возвращаются. | You eat roots, lizards and bark. The rains come back. |
+out: 50 | Дожди не возвращаются. Слабые умирают. | The rains don't come back. The weak die. | risk20
+door: Делить последнее с соседями | Share the last with the neighbours
+out: 60 | Варите один котёл на три двора. Доживаете до урожая. | You cook one pot for three households. You last until harvest. | kind
+out: 40 | Делишься, пока есть что. Потом нечего и тебе. | You share while there is anything. Then there is nothing for you either. | kind risk15
+
+id: c_med_andes_storehouse
+slot: crisis
+groups: med
+tags: andes
+need: after:1440 before:1533
+ages: 28-44
+weight: 1
+q: Град побил картофель и киноа. А в амбарах Инки на склоне зерно лежит рядами. | Hail has beaten down the potatoes and quinoa. Yet in the Inca's storehouses on the slope the grain lies in rows.
+door: Просить курака открыть амбары | Ask the curaca to open the storehouses
+out: 70 | Амбары открывают. Каждому дому отмеряют долю и завязывают узелок на шнуре. | The storehouses are opened. Each household gets its share, and a knot is tied on the cord. |
+out: 30 | Амбары берегут для войска. Дают мало. | The storehouses are kept for the army. You get little. | risk10
+door: Морозить и сушить последний картофель | Freeze and dry the last potatoes
+out: 60 | Ночью мороз, днём солнце. Топчешь картофель ногами. Чуньо хватает до весны. | Frost by night, sun by day. You tread the potatoes underfoot. The chuño lasts till spring. |
+out: 40 | Картофеля слишком мало. К весне едите траву. | There are too few potatoes. By spring you are eating grass. | risk10
+door: Уйти к родне в тёплую долину | Go down to kin in the warm valley
+shut: r0 | Без слова курака из общины не уходят. | Nobody leaves the community without the curaca's word.
+out: 70 | В долине растёт маис. Работаешь на поле родни. | Maize grows in the valley. You work your kin's field. | moved
+out: 30 | В долине лихорадка. | There is fever in the valley. | moved risk15
+
+id: c_med_af_drought
+slot: crisis
+groups: med
+tags: af
+need:
+ages: 28-44
+weight: 1
+q: Засуха. Скот падает у пустых водопоев, просо не взошло. | Drought. The cattle drop at the empty waterholes; the millet has not come up.
+door: Уйти к большой реке | Go to the great river
+shut: r0 | Хозяин тебя не отпустит. | Your master will not let you go.
+out: 60 | У Нигера рыба и вода. Остаёшься у рыбаков. | On the Niger there are fish and water. You stay with the fishermen. | moved
+out: 40 | Земля у реки чужая. Платишь за неё половиной урожая. | The riverside land belongs to others. You pay half your harvest for it. | moved wealth-1
+door: Менять уцелевший скот на зерно | Trade the surviving cattle for grain
+shut: poor | Скота у тебя нет. | You have no cattle.
+out: 70 | Кочевники дают за быка два мешка проса. Дотягиваете до дождей. | The herders give two sacks of millet for an ox. You last till the rains. | wealth-1
+out: 30 | Зерно дорожает каждый день. Отдаёшь всех коров. | Grain costs more every day. You give up all the cows. | wealth-2
+door: Просить дождя у предков | Ask the ancestors for rain
+out: 50 | Режете козу у дерева предков. Дождь приходит через неделю. | You kill a goat at the ancestors' tree. The rain comes a week later. | faith
+out: 50 | Предки молчат. Дождь приходит только осенью. | The ancestors are silent. The rain comes only in autumn. | faith risk10
+
+id: c_med_typhoon
+slot: crisis
+groups: med
+tags: sea
+need:
+ages: 28-44
+weight: 1
+q: Пришла большая вода. Буря сорвала крыши и залила рисовые поля морем. | The great water has come. A storm tore off the roofs and flooded the paddies with sea water.
+door: Чинить поля и дома | Mend the fields and houses
+out: 60 | Всю зиму носишь землю и пресную воду. Поле снова родит, хоть и хуже. | All winter you carry earth and fresh water. The field bears again, if poorly. |
+out: 40 | Соль не уходит из земли. Два года урожая нет. | The salt won't leave the soil. Two years without a harvest. | wealth-1
+door: Уйти к родне в горы | Go up to kin in the hills
+shut: r0 | Хозяин тебя не отпустит. | Your master will not let you go.
+out: 70 | В горах сажают рис на склонах. Живёшь у родни до весны. | In the hills they plant rice on the slopes. You live with kin till spring. |
+out: 30 | В горах лихорадка. | There is fever in the hills. | risk15
+door: Отнести последний рис в храм | Take the last rice to the temple
+out: 60 | Монахи молятся за деревню. Соседи помогают тебе поднять дом. | The monks pray for the village. The neighbours help you raise your house. | faith
+out: 40 | Рис отдан. Дома пусто до урожая. | The rice is given. The house is bare until harvest. | faith risk10
+
+# ---------- monks (med early) ----------
+
+id: c_monk_plague
+slot: crisis
+groups: med early
+tags: *
+need: monk
+ages: 28-44
+weight: 1
+q: В обитель пришёл мор. Каждый день хоронят своих, а у ворот лежат больные из деревни. | Plague has come to the monastery. Every day you bury one of your own, and the sick from the village lie at the gate.
+door: Ходить за больными | Nurse the sick
+out: 50 | Носишь воду и меняешь солому под больными. Тебя мор не трогает. | You carry water and change the straw under the sick. The plague doesn't touch you. | kind faith
+out: 50 | На третью неделю ты {слёг|слегла} сам{|а}. | In the third week you fall ill yourself. | kind faith risk40
+ep: В мор {ходил|ходила} за больными у ворот обители. | In the plague nursed the sick at the monastery gate.
+ask: За кем ты будешь ухаживать, даже рискуя собой? | Whom would you nurse even at a risk to yourself?
+door: Затворить ворота и молиться | Bar the gate and pray
+out: 60 | Ворота заперты. Мор обходит обитель. | The gate is barred. The plague passes the monastery by. | faith
+out: 40 | Мор проходит сквозь запертые ворота. | The plague comes through the barred gate. | faith risk20
+door: Записывать имена умерших | Write down the names of the dead
+shut: !lit | Ты не знаешь грамоты. | You can't write.
+out: 100 | Список растёт каждый день. Через сто лет по нему будут искать предков. | The list grows every day. A hundred years on, people will look for their ancestors in it. | faith
+
+id: c_monk_raid
+slot: crisis
+groups: med early
+tags: *
+need: monk
+ages: 28-44
+weight: 1
+q: К обители идут чужие воины. Говорят, в соседнем монастыре никого не оставили в живых. | Foreign warriors are coming to the monastery. They say no one was left alive in the next one.
+door: Унести святыни и книги в лес | Carry the relics and books into the forest
+out: 60 | Неделю сидите в пещере над рекой. Святыни целы. | You sit a week in a cave above the river. The relics are safe. | brave faith
+out: 40 | Погоня находит тропу. Книги бросаете в снег и бежите. | They find your trail. You drop the books in the snow and run. | risk20
+ep: {Спас|Спасла} святыни обители. | Saved the monastery's relics.
+door: Остаться и встретить их у ворот | Stay and meet them at the gate
+out: 40 | Воины забирают серебро и уходят. Людей не трогают. | The warriors take the silver and leave. No one is harmed. | brave faith
+out: 60 | Ворота ломают. Ты стоишь у алтаря до конца. | They break the gate. You stand by the altar to the end. | brave faith risk40
+door: Увести в лес детей из деревни | Lead the village children into the forest
+out: 70 | Дети живут с тобой в землянке до весны. Матери плачут, когда их видят. | The children live with you in a dugout till spring. Their mothers weep when they see them. | kind brave
+out: 30 | Зима в лесу долгая. Не все дети доживают до весны. | Winter in the forest is long. Not all the children see spring. | kind risk10
+ep: {Увёл|Увела} в лес деревенских детей. | Led the village children into the forest.
+
+id: c_monk_famine_gate
+slot: crisis
+groups: med early
+tags: *
+need: monk
+ages: 28-44
+weight: 1
+q: Голод. У ворот обители стоят крестьяне, а зерна в амбаре своим на одну зиму. | Famine. Peasants stand at the monastery gate, and the granary holds one winter's grain for those inside.
+door: Раздать зерно у ворот | Give the grain out at the gate
+out: 60 | Варите кашу в большом котле. Деревня доживает до весны, обитель тоже. | You cook gruel in the big pot. The village lasts till spring, the monastery too. | kind faith
+out: 40 | Зерно кончается к середине зимы. В обители едят жёлуди. | The grain runs out by midwinter. In the monastery you eat acorns. | kind risk10
+ep: В голод {раздал|раздала} зерно обители. | In the famine gave away the monastery's grain.
+ask: Что ты отдашь, если отдавать придётся последнее? | What would you give, if giving meant your last?
+door: Беречь зерно для своих | Keep the grain for your own
+out: 60 | Ворота закрыты. По ночам слышно, как за стеной плачут дети. | The gate stays shut. At night you hear children crying beyond the wall. |
+out: 40 | Крестьяне ломают ворота и уносят амбар по мешку. | The peasants break the gate and carry off the granary sack by sack. | risk10
+door: Идти просить хлеба у владыки | Go and beg bread from the lord
+out: 50 | Владыка присылает три воза зерна. | The lord sends three carts of grain. | brave faith
+out: 50 | Дорога долгая. Ты возвращаешься с пустыми руками. | The road is long. You come back empty-handed. |
+
+id: c_monk_closed
+slot: crisis
+groups: med early
+tags: *
+need: monk
+ages: 28-44
+weight: 1
+q: Вышел указ: обитель закрыть, земли и колокола отобрать, всех разогнать. | An edict has come: the monastery is to be closed, its lands and bells taken, everyone sent away.
+door: Уйти в мир | Go back into the world
+out: 50 | Живёшь у дальней родни. Учишь детей грамоте за хлеб. | You live with distant kin. You teach children their letters for bread. | moved
+out: 50 | В миру ты никому не {нужен|нужна}. Просишь подаяние у дорог. | In the world nobody needs you. You beg by the roads. | moved risk10
+door: Перейти в дальнюю обитель | Go to a distant house
+out: 60 | Полгода идёшь пешком. Тебя принимают как своего. | You walk for half a year. You are taken in as one of their own. | moved faith
+out: 40 | Та обитель тоже под указом. Ты приходишь к пустым стенам. | That house too is under the edict. You arrive at empty walls. | moved risk10
+door: Остаться в лесу у старых стен | Stay in the forest by the old walls
+out: 60 | Ставишь келью у разорённых стен. Крестьяне тайком носят хлеб. | You build a cell by the ruined walls. The peasants bring you bread in secret. | faith brave
+out: 40 | За тобой приходят стражники. | The guards come for you. | faith brave risk20
+ep: {Остался|Осталась} у старых стен. | Stayed by the old walls.
+
+id: c_monk_library
+slot: crisis
+groups: med early
+tags: *
+need: monk
+ages: 28-44
+weight: 1
+q: Ночью горит книгохранилище. Огонь уже на лестнице. | At night the library is on fire. The flames are already on the stairs.
+door: Выносить книги | Carry out the books
+out: 50 | Выносишь охапку свитков и книг. Остальное сгорает до утра. | You carry out an armful of scrolls and books. The rest burns before morning. | brave
+out: 50 | Дым валит с ног. Тебя выносят вместе с книгами. | The smoke knocks you down. You are carried out along with the books. | brave risk20
+ep: {Вынес|Вынесла} книги из огня. | Carried the books out of the fire.
+door: Носить воду со всеми | Carry water with the others
+out: 60 | Цепочка вёдер до колодца. Огонь не перекидывается на храм. | A chain of buckets to the well. The fire doesn't spread to the sanctuary. |
+out: 40 | Храм сгорает вместе с книгами. | The sanctuary burns along with the books. | risk5
+door: Потом записать по памяти, что сгорело | Afterwards write down from memory what burned
+shut: !lit | Ты не знаешь грамоты. | You can't write.
+out: 100 | Годами пишешь сгоревшие книги по памяти. Возвращается не всё, но многое. | For years you write the burned books from memory. Not all of it comes back, but much does. | faith
+
+# ---------- early ----------
+
+id: c_early_dearth
+slot: crisis
+groups: early
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: Неурожай. Зерно на базаре вздорожало втрое, а лавочник больше не даёт в долг. | The harvest has failed. Grain at market costs three times as much, and the shopkeeper gives no more credit.
+door: Продать скотину | Sell the livestock
+shut: poor | Скотины давно нет. | The livestock went long ago.
+shut: r0 !#ru | Своего у тебя нет ничего, даже рубахи. | Nothing is yours, not even your shirt.
+out: 60 | Корову уводят за мешок муки. Дети плачут. Зато до весны хватает. | The cow is led away for a sack of flour. The children cry. But it lasts till spring. | wealth-1
+out: 40 | Скупщик даёт полцены: все продают скот. | The dealer gives half price: everyone is selling. | wealth-2
+door: Идти на заработки в город | Go to town to earn
+shut: r0 | Без хозяйского пропуска не уйти никуда. | Without the master's pass you can go nowhere.
+out: 50 | Таскаешь мешки в порту. Каждую неделю шлёшь домой медяки. | You haul sacks at the docks. Every week you send home a few coppers. | town
+out: 50 | В городе таких же толпы. Работы нет, и ты возвращаешься. | The town is full of people like you. There is no work, and you go back. | risk5
+door: Делиться с теми, кто голоднее | Share with those who are hungrier
+out: 60 | Половину каши отдаёшь соседским детям. Дотягиваете все. | You give half your porridge to the neighbours' children. Everyone gets through. | kind
+out: 40 | Делишься до последнего. К весне еле стоишь на ногах. | You share down to the last. By spring you can barely stand. | kind risk15
+ep: В голодный год не {отказал|отказала} просящим. | In the hungry year refused no one who asked.
+ask: С кем ты поделишься, когда и у тебя почти ничего нет? | Whom would you share with when you have almost nothing yourself?
+
+id: c_early_smallpox
+slot: crisis
+groups: early
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: В округе оспа. Дети умирают, взрослые выходят из болезни рябыми. | Smallpox in the district. Children die, and grown-ups come out of it pockmarked.
+door: Привить своих у лекаря | Have your family inoculated
+shut: poor | Лекарю платить нечем. | There is nothing to pay the doctor with.
+out: 70 | Лекарь втирает гной в царапину на руке. Неделю жар, потом проходит. | The doctor rubs pus into a scratch on the arm. A week of fever, then it passes. |
+out: 30 | После прививки ты болеешь тяжело, но выживаешь. | After the inoculation you are badly ill, but you live. | risk10
+door: Ходить за больными соседями | Nurse the sick neighbours
+out: 50 | Тебя оспа не берёт. Ты {болел|болела} ею в детстве. | The pox doesn't take you. You had it as a child. | kind
+out: 50 | Ты {заболел|заболела}. Лицо остаётся рябым навсегда. | You fall ill. Your face stays pocked for ever. | kind risk25
+ep: В оспу {ходил|ходила} за больными. | In the smallpox nursed the sick.
+door: Запереться дома | Lock yourselves in at home
+out: 60 | Месяц никто не выходит за ворота. Оспа обходит ваш дом. | For a month no one goes past the gate. The pox passes your house. |
+out: 40 | Оспа приходит и в запертый дом. Умирает младший. | The pox comes into the locked house too. Your youngest dies. | kids-1 | kids
+out: 40 | Оспа приходит и в запертый дом. | The pox comes into the locked house too. | risk20
+
+id: c_early_recruits
+slot: crisis
+groups: early
+tags: ru
+need: after:1705
+ages: 28-44
+weight: 1
+q: Рекрутский набор. С деревни берут троих на двадцать пять лет, и жребий выпал твоему брату. | Conscription. Three are taken from the village for twenty-five years, and the lot has fallen on your brother.
+door: Проводить, как по обычаю | See him off as custom wants
+out: 60 | Провожаете с воем, как покойника. Через двадцать лет приходит одно письмо. | You see him off wailing, as if he were dead. Twenty years later one letter comes. |
+out: 40 | Брат больше не возвращается. Его жена живёт у вас. | Your brother never comes back. His wife lives with you. | kind
+door: Нанять за него охотника | Hire a substitute for him
+shut: poor | Таких денег нет и не будет. | There is no such money and never will be.
+out: 70 | Отдаёте все деньги и корову. Вместо брата идёт чужой, ему нечего терять. | You give all your money and the cow. A stranger with nothing to lose goes in your brother's place. | wealth-2 kind
+out: 30 | Охотник берёт задаток и пропадает. Брат идёт всё равно. | The substitute takes the deposit and vanishes. Your brother goes anyway. | wealth-1
+door: Помочь брату бежать | Help your brother run away
+out: 40 | Брат уходит на Дон. Больше вы его не видите, но слышите, что жив. | Your brother goes off to the Don. You never see him again, but hear he is alive. | brave kind
+out: 60 | Брата ловят на третий день. Тебя секут на конюшне. | Your brother is caught on the third day. You are flogged in the stables. | brave risk10
+ep: {Помог|Помогла} брату уйти от солдатчины. | Helped a brother escape the army.
+
+id: c_early_cholera
+slot: crisis
+groups: early
+tags: ru fr de en it us in me
+need: after:1830
+ages: 28-44
+weight: 1
+q: Пришла холера. Город оцеплен, на заставах жгут смолу, мёртвых вывозят на телегах. | Cholera has come. The town is cordoned off, tar burns at the barriers, the dead go out on carts.
+door: Ходить за больными | Nurse the sick
+out: 50 | Растираешь больных, поишь, держишь за руку. Холера тебя не трогает. | You rub the sick, give them drink, hold their hands. The cholera doesn't touch you. | kind
+out: 50 | Утром ты не можешь встать. | One morning you can't get up. | kind risk40
+ep: В холерный год {ходил|ходила} за больными. | In the cholera year nursed the sick.
+ask: К кому ты пойдёшь, когда к нему все боятся ходить? | Whom would you go to when everyone is afraid to?
+door: Уйти через оцепление | Slip through the cordon
+out: 50 | Ночью уходите оврагами к родне. Холера остаётся в городе. | At night you get away through the gullies to kin. The cholera stays in town. |
+out: 50 | Солдаты ловят вас и сажают в карантин. Две недели в бараке среди больных. | Soldiers catch you and put you in quarantine. Two weeks in a barrack among the sick. | risk20
+door: Запереться и жечь можжевельник | Shut yourselves in and burn juniper
+out: 60 | Окна заткнуты тряпками, дом в дыму. Холера уходит к осени. | The windows are stuffed with rags, the house full of smoke. The cholera is gone by autumn. |
+out: 40 | Вода в колодце та же, что у всех. Холера приходит и к вам. | The well water is the same as everyone's. The cholera comes to you too. | risk20
+
+id: c_early_potato
+slot: crisis
+groups: early
+tags: en
+need: after:1845 !town
+ages: 28-44
+weight: 1
+q: Картофель сгнил в земле, весь до клубня. Есть нечего, а за аренду всё равно ждут. | The potatoes have rotted in the ground, every one. There is nothing to eat, yet the rent is still due.
+door: Плыть в Америку | Take ship for America
+shut: poor | Денег на билет нет. | There is no money for the fare.
+out: 50 | Шесть недель в трюме. Нью-Йорк встречает дождём и работой в порту. | Six weeks in the hold. New York meets you with rain and work on the docks. | sea moved america abroad
+out: 50 | В трюме горячка. Кого-то опускают в море в мешке. | Fever in the hold. Someone is lowered into the sea in a sack. | sea moved risk25 america abroad
+ep: {Уплыл|Уплыла} от голода за океан. | Crossed the ocean to get away from the hunger.
+door: Идти на казённые работы за похлёбку | Work on the relief roads for soup
+out: 50 | Бьёшь камень для дороги, которая никуда не ведёт. За это дают похлёбку. | You break stones for a road that leads nowhere. For that you get soup. |
+out: 50 | На работах горячка и холод. Падают каждый день. | Fever and cold on the works. People drop every day. | risk25
+door: Делиться с соседями последним | Share your last with the neighbours
+out: 50 | Пустая похлёбка на два дома. Доживаете до весны. | Thin soup for two houses. You last till spring. | kind
+out: 50 | Соседей выселяют. Вы пускаете их к себе, и всех выгоняют вместе. | The neighbours are evicted. You take them in, and you are all turned out together. | kind wealth-1 risk10
+
+id: c_early_cn_silver
+slot: crisis
+groups: early
+tags: cn
+need:
+ages: 28-44
+weight: 1
+q: Подать велят платить серебром, а серебро вздорожало вдвое. Продаёшь урожай, и всё равно не хватает. | The tax must be paid in silver, and silver now costs twice as much. You sell the harvest and still it isn't enough.
+door: Уйти в горы на пустые земли | Go up into the hills to empty land
+shut: r0 | Хозяин не отпустит тебя с поля. | Your master won't let you leave the field.
+out: 60 | Выжигаешь склон и сажаешь батат и кукурузу. Подать там никто не спрашивает. | You burn off a slope and plant sweet potatoes and maize. Up there no one asks for tax. | moved
+out: 40 | После трёх дождей склон сползает в реку вместе с полем. | After three rains the slope slides into the river with your field. | moved wealth-1
+door: Вступить в тайное общество | Join a secret society
+out: 50 | Клянёшься на крови. Братья помогают деньгами и прячут от сборщиков. | You swear on blood. The brothers help with money and hide you from the collectors. | brave
+out: 50 | Общество раскрывают. Головы выставляют у ворот уезда. | The society is uncovered. Heads are set up at the county gate. | brave risk30
+door: Заложить землю богатому соседу | Mortgage the land to a rich neighbour
+shut: poor | Земли у тебя нет. | You have no land.
+out: 60 | Сосед платит подать. Ты пашешь ту же землю, но уже за половину урожая. | The neighbour pays the tax. You plough the same land, now for half the harvest. | wealth-1
+out: 40 | Через три года земля его. Ты у него арендатор. | Three years later the land is his. You are his tenant. | wealth-2
+
+id: c_early_jp_rice
+slot: crisis
+groups: early
+tags: jp
+need:
+ages: 28-44
+weight: 1
+q: Холодный год, рис не вызрел. В городе скупщики держат рис в амбарах и ждут цены. | A cold year; the rice didn't ripen. In town the dealers keep the rice in their storehouses, waiting for the price.
+door: Идти с толпой громить рисовые лавки | Go with the crowd to smash the rice shops
+out: 50 | Рис рассыпают прямо на улице. Ты приносишь домой полмешка. | The rice is spilled in the street. You carry home half a sack. | brave
+out: 50 | Зачинщиков хватают. Тебя держат в тюрьме до весны. | The ringleaders are seized. You are kept in prison till spring. | brave risk15
+door: Есть отруби и корни | Eat bran and roots
+out: 60 | Варите отруби с травой. Доживаете до урожая. | You boil bran with grass. You last until harvest. |
+out: 40 | Деревня пустеет. Каждый третий дом стоит пустой. | The village empties. Every third house is without people. | risk15
+door: Молиться в храме и раздавать, что есть | Pray at the temple and give what you have
+out: 60 | Варишь у храма похлёбку для нищих. Монахи записывают твоё имя. | You cook soup by the temple for the beggars. The monks write down your name. | kind faith
+out: 40 | Отдаёшь последнее. Зиму живёшь подаянием. | You give your last. You live on alms all winter. | kind faith risk10
+
+id: c_early_in_company
+slot: crisis
+groups: early
+tags: in
+need: after:1765
+ages: 28-44
+weight: 1
+q: Засуха, а Компания не прощает подать. Сборщики забирают последнее зерно. | Drought, and the Company forgives no tax. The collectors take the last grain.
+door: Продать быка | Sell the bullock
+shut: poor | Быка давно нет. | There's been no bullock for a long time.
+out: 60 | За быка дают мешок риса. Пахать весной нечем. | The bullock fetches a sack of rice. There is nothing to plough with in spring. | wealth-1
+out: 40 | Бык дохнет раньше, чем находится покупатель. | The bullock dies before a buyer turns up. | wealth-1
+door: Уйти в Калькутту | Go to Calcutta
+out: 50 | Таскаешь тюки на пристани. Спишь под навесом. | You haul bales at the landing stage. You sleep under an awning. | moved town
+out: 50 | По дороге в город лежат мёртвые. Доходят не все. | The dead lie along the road to the city. Not everyone arrives. | moved risk25
+door: Делить последнее с соседями | Share the last with the neighbours
+out: 60 | Одна лепёшка на семью соседа и твою. Дождь приходит в срок. | One flatbread for the neighbour's family and yours. The rain comes on time. | kind
+out: 40 | Делишь, пока есть. Деревня редеет. | You share while there is anything. The village thins out. | kind risk15
+ep: В голод не {отказал|отказала} соседям. | In the famine refused the neighbours nothing.
+
+id: c_early_sold
+slot: crisis
+groups: early
+tags: latam us
+need: r0
+ages: 28-44
+weight: 1
+q: Хозяин умер в долгах. Людей продают с торгов, семьи разлучат. | The master has died in debt. His people are to be sold at auction; families will be split.
+door: Бежать в болота, к беглым | Run to the swamps, to the runaways
+out: 40 | Неделю идёшь по воде, чтобы не взяли собаки. В лагере беглых тебе дают мотыгу. | For a week you walk through water so the dogs lose you. In the runaways' camp they hand you a hoe. | free moved brave
+out: 60 | Собаки находят тебя на второй день. Клеймо и плеть. | The dogs find you on the second day. The brand and the whip. | brave risk20
+ep: {Бежал|Бежала} с торгов. | Ran from the auction block.
+door: Просить, чтобы продали вместе | Beg to be sold together
+out: 50 | Покупатель берёт всех разом. Новый хозяин не добрее старого. | The buyer takes you all together. The new master is no kinder than the old. | kind
+out: 50 | Тебя продают на юг, детей в другую сторону. | You are sold south, the children the other way. | moved
+door: Молчать и молиться | Keep silent and pray
+out: 60 | В последнюю ночь поёте все вместе. Утром вас разводят. | On the last night you all sing together. In the morning you are led apart. | faith
+out: 40 | Торги откладывают. Ещё год вы вместе. | The sale is put off. Another year together. | faith
+
+id: c_early_raiders
+slot: crisis
+groups: early
+tags: af
+need:
+ages: 28-44
+weight: 1
+q: Ночью пришли ловцы людей. Две деревни у реки уже пусты, людей угнали к побережью. | Slave raiders came by night. Two villages by the river are empty already, the people driven to the coast.
+door: Уйти в скалы на холме | Hide among the rocks on the hill
+out: 60 | Неделю сидите в пещерах. Ловцы уходят ни с чем. | A week in the caves. The raiders leave empty-handed. |
+out: 40 | Ловцы ждут у воды. Кого-то из ваших уводят. | The raiders wait by the water. Some of your people are taken. | risk20
+door: Защищать деревню | Defend the village
+shut: f | Копьё женщине не дадут. | No one will give a woman a spear.
+shut: r0 | Рабу оружия не дадут. | A slave is not given a weapon.
+out: 50 | Ловцы не ждали отпора и уходят к другим. | The raiders didn't expect a fight and go off to others. | brave
+out: 50 | У них ружья. Тебя уводят к побережью в колодке. | They have guns. You are led to the coast in a yoke. | brave moved sea risk40
+ep: {Защищал|Защищала} деревню от ловцов людей. | Defended the village against the slavers.
+door: Прятать чужих детей | Hide other people's children
+out: 60 | Трое соседских детей сидят у тебя в зернохранилище. Их не находят. | Three neighbours' children hide in your granary. They aren't found. | kind brave
+out: 40 | Детей находят. Тебя бьют, но оставляют. | The children are found. You are beaten, but left behind. | kind risk10
+
+id: c_early_yellow_fever
+slot: crisis
+groups: early
+tags: us latam
+need:
+ages: 28-44
+weight: 1
+q: В порту жёлтая лихорадка. Кто может, уезжает за город. Улицы пустые, только телеги с гробами. | Yellow fever in the port. Whoever can is leaving town. The streets are empty but for the coffin carts.
+door: Уехать за город | Leave for the country
+shut: poor | Ехать не на что и некуда. | There is nothing to go with and nowhere to go.
+shut: r0 | Хозяева уезжают, а тебя оставляют стеречь дом. | The masters leave and you are left to guard the house.
+out: 70 | Пережидаешь на ферме у знакомых. Осенью возвращаешься в пустой город. | You wait it out on a friend's farm. In autumn you come back to an empty town. |
+out: 30 | Лихорадку ты увозишь с собой. | You take the fever with you. | risk25
+door: Ходить за больными | Nurse the sick
+out: 50 | Поишь больных и выносишь вёдра. Тебя лихорадка не берёт. | You give the sick water and carry out the buckets. The fever doesn't take you. | kind
+out: 50 | Глаза желтеют на второй неделе. | Your eyes turn yellow in the second week. | kind risk35
+ep: В лихорадку {ходил|ходила} за больными. | In the yellow fever nursed the sick.
+door: Закрыть ставни и ждать | Close the shutters and wait
+out: 60 | Месяц в душном доме. Лихорадка уходит с первыми холодами. | A month in the stifling house. The fever goes with the first cold. |
+out: 40 | Комары летят и в закрытый дом. | The mosquitoes get into the shut house too. | risk20
+
+# ---------- ind ----------
+
+id: c_ind_hunger
+slot: crisis
+groups: ind
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: Неурожай. Цены на хлеб растут каждую неделю, лавочник больше не пишет в долг. | The harvest has failed. Bread costs more each week, and the shopkeeper won't put anything more on the slate.
+door: Ехать в город на заработки | Go to the city for work
+out: 60 | Устраиваешься на фабрику. Спишь в бараке, деньги шлёшь домой. | You get on at a factory. You sleep in a barracks and send money home. | town
+out: 40 | Работы нет. Неделю ночуешь на вокзале и возвращаешься. | There's no work. You sleep a week at the station and go back. | risk5
+door: Продать, что есть ценного | Sell what you have of value
+shut: poor | Продавать нечего. | There is nothing to sell.
+out: 70 | Часы и праздничный платок уходят в ломбард. Хватает до весны. | The watch and the best shawl go to the pawnshop. It lasts till spring. | wealth-1
+out: 30 | За всё дают гроши. Продаёшь и швейную машинку. | They give pennies for everything. You sell the sewing machine too. | wealth-2
+door: Делиться с соседями | Share with the neighbours
+out: 60 | Варите суп в одной кастрюле на две семьи. Дотягиваете. | You cook soup in one pot for two families. You get through. | kind
+out: 40 | Делишься, пока есть. Весной ты {похудел|похудела} так, что не узнать. | You share while there is any. By spring you are thin past recognising. | kind risk10
+ep: В голодный год {делился|делилась} с соседями. | In the hungry year shared with the neighbours.
+
+id: c_ind_cholera
+slot: crisis
+groups: ind
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: В округе холера. Санитары сыплют известь в канавы, на дверях больных мелом ставят крест. | Cholera in the district. Sanitary men pour lime into the ditches and chalk a cross on the doors of the sick.
+door: Ходить за больными соседями | Nurse the sick neighbours
+out: 50 | Кипятишь воду, поишь, меняешь бельё. Тебя холера не трогает. | You boil water, give drink, change the linen. The cholera doesn't touch you. | kind
+out: 50 | На третий день у тебя судороги. | On the third day the cramps start. | kind risk35
+ep: В холеру {ходил|ходила} за соседями. | In the cholera nursed the neighbours.
+door: Пить только кипячёную и ждать | Drink only boiled water and wait
+out: 70 | Пьёте только из самовара. Холера обходит ваш дом. | You drink only from the kettle. The cholera passes your house. |
+out: 30 | Ребёнок пьёт из колодца во дворе. | A child drinks from the well in the yard. | risk15
+door: Уехать к родне в другой край | Go to kin in another part of the country
+shut: poor | Денег на билет нет. | There's no money for the ticket.
+out: 70 | Месяц живёшь у родни. Холера проходит без тебя. | You spend a month with kin. The cholera passes without you. |
+out: 30 | На станции карантин. Тебя держат в бараке неделю. | Quarantine at the station. You are held in a barracks for a week. | risk10
+
+id: c_ind_war
+slot: crisis
+groups: ind
+tags: fr de en it ru us jp cn au in me sea af
+need: after:1914 before:1946
+ages: 28-44
+weight: 1
+q: Война. На станции грузят эшелоны, по дворам ходят с повестками. | War. Trains are loading at the station, and men go door to door with call-up papers.
+door: Идти на фронт | Go to the front
+shut: f !#ru | Женщин на фронт не берут. | Women are not taken for the front.
+out: 40 | Возвращаешься через три года. Медаль и двух пальцев нет. | You come back three years later. A medal, and two fingers gone. | brave moved
+out: 30 | Ранение под зиму. Полгода по госпиталям. | Wounded before winter. Half a year in hospitals. | brave moved risk25
+out: 30 | Похоронку приносят в дождь. | The death notice comes on a rainy day. | brave moved risk60
+ep: {Был|Была} на фронте. | Was at the front.
+door: Работать для фронта в тылу | Work for the front at home
+out: 60 | Двенадцать часов у станка, хлеб по карточкам. | Twelve hours at the machine, bread on ration cards. | kind
+out: 40 | Работаешь в госпитале. Пишешь письма за тех, кто сам не может. | You work in a hospital. You write letters for those who can't. | kind
+door: Уехать подальше от войны | Get away from the war
+shut: poor | Ехать не на что. | There's nothing to travel on.
+out: 60 | Уезжаешь к дальней родне. Война до вас не доходит. | You go to distant kin. The war doesn't reach you there. | moved
+out: 40 | Война доходит и туда. | The war reaches there too. | moved risk15
+
+id: c_ind_flu
+slot: crisis
+groups: ind
+tags: *
+need: after:1918 before:1920
+ages: 28-44
+weight: 1
+q: Испанка. Хоронят каждый день, гробов не хватает, школы закрыты. | The Spanish flu. Burials every day, not enough coffins, the schools shut.
+door: Ходить за больными | Nurse the sick
+out: 50 | Носишь бульон по квартирам. Тебя испанка не берёт. | You carry broth from flat to flat. The flu doesn't take you. | kind
+out: 50 | Ты {свалился|свалилась} с жаром на второй неделе. | You go down with fever in the second week. | kind risk30
+ep: В испанку {носил|носила} больным еду. | In the Spanish flu brought food to the sick.
+door: Закрыться дома | Shut yourselves in at home
+out: 70 | Месяц не выходите. Окна закрыты марлей. Обошло. | A month indoors, gauze over the windows. It passes you by. |
+out: 30 | Кто-то из своих приносит болезнь с работы. | One of the family brings it home from work. | risk20
+door: Работать как ни в чём не бывало | Keep working as if nothing were wrong
+out: 60 | Половина цеха лежит. Тебе платят за двоих. | Half the shop is down. You are paid for two. | wealth+1
+out: 40 | Тебя увозят с работы в больницу. | You are taken from work to hospital. | risk25
+
+id: c_ind_slump
+slot: crisis
+groups: ind
+tags: us en de fr it au latam
+need: town after:1929 before:1940
+ages: 28-44
+weight: 1
+q: Завод закрыли. Банк, где лежали сбережения, лопнул. | The factory has closed. The bank that held your savings has gone bust.
+door: Ехать по стране искать работу | Go across the country looking for work
+out: 50 | Едешь на крыше товарного вагона. В другом штате находишь работу на стройке. | You ride on the roof of a freight car. In another state you find work on a building site. | moved | #us
+out: 50 | Месяц едешь, где поездом, где пешком. Находишь сезонную работу на юге. | A month on the road, by train and on foot. You find seasonal work in the south. | moved
+out: 50 | Работы нет и там. Возвращаешься {худым|худой} и {злым|злой}. | No work there either. You come back thin and angry. | risk5
+door: Стоять в очереди за бесплатным супом | Stand in the soup line
+out: 70 | Каждое утро очередь на три квартала. Суп жидкий, но горячий. | Every morning the line stretches three blocks. The soup is thin, but hot. |
+out: 30 | В очереди слышишь про общественные работы. Берут и тебя. | In the line you hear about public works. They take you on. |
+door: Пустить к себе соседей, которых выселили | Take in the evicted neighbours
+out: 60 | Шесть человек в двух комнатах. Зато никто не на улице. | Six people in two rooms. But nobody is on the street. | kind
+out: 40 | Сосед находит работу и потом устраивает и тебя. | The neighbour finds work and later gets you a place too. | kind
+ep: В годы без работы {пустил|пустила} к себе выселенных. | In the years without work took in the evicted.
+ask: Кого ты пустишь к себе, если тому некуда идти? | Whom would you take in if they had nowhere to go?
+
+id: c_ind_grain_taken
+slot: crisis
+groups: ind
+tags: ru
+need: !town after:1918 before:1934
+ages: 28-44
+weight: 1
+q: Хлеб выгребают подчистую. По дворам ходят с железными щупами, ищут ямы. | They take every last grain. Men go yard to yard with iron probes, looking for pits.
+door: Закопать мешок в огороде | Bury a sack in the garden
+out: 50 | Мешок не находят. Им кормитесь до весны. | They don't find the sack. It feeds you till spring. | brave
+out: 50 | Щуп находит мешок. Тебя записывают в кулаки. | The probe finds the sack. You are written down as a kulak. | brave risk25 wealth-2
+door: Уехать в город на стройку | Leave for a building site in the city
+out: 60 | Без справки берут копать котлован. Живёшь в бараке, получаешь паёк. | They take you without papers to dig foundations. You live in a barracks and get a ration. | town moved
+out: 40 | Без справки снимают с поезда и возвращают. | Without papers you are taken off the train and sent back. | risk15
+door: Делить последнее с соседями | Share the last with the neighbours
+out: 50 | Варите лебеду на две семьи. Доживаете до нового хлеба. | You boil goosefoot for two families. You last until the new grain. | kind
+out: 50 | Делишь до последнего. Весной сосед несёт тебя в больницу на руках. | You share down to the last. In spring a neighbour carries you to hospital. | kind risk25
+ep: В голод {делил|делила} последнее с соседями. | In the famine shared the last with the neighbours.
+
+id: c_ind_cn_flood
+slot: crisis
+groups: ind
+tags: cn
+need:
+ages: 28-44
+weight: 1
+q: Река снова прорвала дамбы. Поле под водой, а солдаты генерала забирают последний рис. | The river has broken its dykes again. The field is under water, and the general's soldiers take the last rice.
+door: Уйти на северо-восток, за Великую стену | Go northeast, beyond the Great Wall
+out: 60 | Месяц пешком. В Маньчжурии пустая земля, ставишь фанзу. | A month on foot. In Manchuria there is empty land, and you build a mud house. | moved
+out: 40 | Зима там такая, что трескаются деревья. | The winter there cracks the trees. | moved risk20
+door: Идти на дамбу за похлёбку | Work on the dyke for gruel
+out: 60 | Носишь землю в корзинах. Миссия раздаёт рис за работу. | You carry earth in baskets. A mission hands out rice for the work. |
+out: 40 | В лагерях у дамбы тиф. | Typhus in the camps by the dyke. | risk25
+door: Делить рис с роднёй | Share the rice with your kin
+out: 60 | Одна чашка на двоих. Род держится вместе. | One bowl for two. The clan holds together. | kind
+out: 40 | Рис кончается к зиме. Едите кору вяза. | The rice runs out by winter. You eat elm bark. | kind risk15
+
+id: c_ind_in_famine
+slot: crisis
+groups: ind
+tags: in
+need:
+ages: 28-44
+weight: 1
+q: Муссон не пришёл. А зерно с округи по железной дороге увозят в порт. | The monsoon has failed. And the district's grain goes by rail to the port.
+door: Идти на казённые работы | Go on the government relief works
+out: 50 | Бьёшь камень на насыпи. За день дают горсть зерна. | You break stones on an embankment. A day's work earns a handful of grain. |
+out: 50 | В лагере работ холера. | Cholera in the relief camp. | risk30
+door: Подписать контракт на плантации за морем | Sign a contract for the plantations over the sea
+out: 60 | Пять лет на сахарных полях на далёком острове. Назад не возвращаешься. | Five years in the cane fields on a far island. You never go back. | sea moved
+out: 40 | В трюме лихорадка. До острова доплывают не все. | Fever in the hold. Not everyone reaches the island. | sea moved risk25
+ep: {Уплыл|Уплыла} по контракту за море. | Went over the sea on an indenture.
+door: Продать украшения | Sell the jewellery
+shut: poor | Продавать нечего. | There is nothing to sell.
+out: 70 | Серебряные браслеты уходят к ростовщику. Хватает до дождей. | The silver bangles go to the moneylender. It lasts till the rains. | wealth-1
+out: 30 | Ростовщик даёт треть цены. | The moneylender gives a third of the price. | wealth-2
+
+id: c_ind_rinderpest
+slot: crisis
+groups: ind
+tags: af
+need: after:1889 before:1905
+ages: 28-44
+weight: 1
+q: На скот напал мор. Коровы падают сотнями, в саванне пахнет падалью. | A plague has struck the cattle. Cows drop by the hundred; the savanna stinks of carrion.
+door: Идти на рудники к белым | Go to the white men's mines
+out: 50 | Год под землёй. Привозишь домой деньги и кашель. | A year underground. You bring home money and a cough. | moved wealth+1
+out: 50 | В шахте обвал. | A cave-in at the mine. | moved risk30
+door: Уйти к родне, где скот уцелел | Go to kin where the cattle survived
+out: 60 | Родня принимает. Пасёшь их стадо за молоко. | Your kin take you in. You herd their cattle for milk. | moved
+out: 40 | Мор доходит и туда. | The plague gets there too. | moved risk15
+door: Делить последнее молоко с соседями | Share the last milk with the neighbours
+out: 60 | Одна корова на три двора. Доживаете до дождей. | One cow for three households. You last till the rains. | kind
+out: 40 | Падает и последняя корова. | The last cow goes down too. | kind risk15
+
+id: c_ind_strike
+slot: crisis
+groups: ind
+tags: fr de en it us ru jp
+need: town
+ages: 28-44
+weight: 1
+q: Хозяин снизил плату. Рабочие встали, ворота закрыты, кассы нет. | The owner has cut the pay. The workers have struck; the gates are shut and the pay office closed.
+door: Стоять с забастовщиками | Stand with the strikers
+out: 50 | Через месяц хозяин уступает. Прибавка маленькая, но вы её выбили. | A month later the owner gives way. The rise is small, but you won it. | brave
+out: 50 | Приходят солдаты. Тебя увозят в участок. | Soldiers come. You are taken to the police station. | brave risk20
+ep: {Стоял|Стояла} со всеми у фабричных ворот. | Stood with the others at the factory gate.
+door: Вернуться к станку | Go back to the machine
+out: 60 | Проходишь сквозь толпу у ворот. Платят, но с тобой больше не здороваются. | You walk through the crowd at the gate. You are paid, but no one greets you any more. | wealth+1
+out: 40 | Камень в спину у ворот. | A stone in the back at the gate. | risk10
+door: Уехать к родне в деревню | Go to kin in the country
+out: 70 | Лето работаешь на поле у родни. Осенью возвращаешься на фабрику. | You work kin's fields all summer. In autumn you go back to the factory. |
+out: 30 | Место на фабрике занято, пока тебя не было. | Your place at the factory is taken while you were away. | wealth-1
+
+# ---------- mod ----------
+
+id: c_mod_closed
+slot: crisis
+groups: mod
+tags: *
+need: town !r3
+ages: 28-44
+weight: 1
+q: Завод закрыли. Расчёт выдали за полмесяца. | The plant has closed. You were paid off with half a month's wages.
+door: Ехать на заработки далеко | Go far away for work
+out: 60 | Работаешь вахтой на другом конце страны. Домой приезжаешь раз в два месяца. | You work rotation shifts at the other end of the country. You come home every two months. | moved wealth+1
+out: 40 | Обещали стройку, а дали койку в вагончике и полплаты. | They promised a building job and gave you a bunk in a trailer and half pay. | moved
+door: Торговать на рынке чем придётся | Sell whatever you can at the market
+out: 60 | Стоишь за прилавком в любую погоду. Через год у тебя свой ларёк. | You stand behind a stall in any weather. A year later you have your own kiosk. | wealth+1
+out: 40 | Торговля не идёт. Отдаёшь долг за товар полгода. | Trade doesn't go. You spend half a year paying off the stock. | wealth-1
+door: Вернуться к родителям, на землю | Go back to your parents and the land
+out: 70 | Огород, куры, тишина. Денег мало, но голодать не приходится. | A garden, hens, quiet. Little money, but no hunger. |
+out: 30 | В деревне работы нет тоже. Пьют все. | No work in the village either. Everyone drinks. | risk5
+
+id: c_mod_flood
+slot: crisis
+groups: mod
+tags: *
+need:
+ages: 28-44
+weight: 1
+q: Вода поднялась за ночь до окон. Мост снесло, света нет. | Overnight the water has risen to the windows. The bridge is gone, and the power is out.
+door: Таскать мешки с песком на дамбу | Haul sandbags to the levee
+out: 60 | Двое суток без сна. Дамба держит. | Two days without sleep. The levee holds. | kind brave
+out: 40 | Вода смывает тебя с насыпи. Вылавливают ниже по течению. | The water washes you off the bank. They fish you out downstream. | kind brave risk15
+ep: В наводнение {таскал|таскала} мешки на дамбу. | In the flood hauled sandbags to the levee.
+door: Уехать к родне | Go to relatives
+out: 70 | Месяц живёшь у родни. Возвращаешься в дом, где ил по колено. | A month with relatives. You come back to a house with silt to the knee. | wealth-1
+out: 30 | Дом признают аварийным. Новый дают через три года. | The house is condemned. A new one comes three years later. | wealth-1
+door: Остаться стеречь дом | Stay and guard the house
+out: 60 | Сидишь на чердаке три дня. Лодка привозит хлеб и воду. | Three days in the attic. A boat brings bread and water. |
+out: 40 | Вода поднимается выше. Тебя снимают с крыши вертолётом. | The water climbs higher. A helicopter lifts you off the roof. | risk10
+
+id: c_mod_covid
+slot: crisis
+groups: mod
+tags: *
+need: after:2020 before:2022
+ages: 28-44
+weight: 1
+q: Пандемия. Города закрыты, в больницах нет мест, люди говорят только о цифрах. | A pandemic. Cities are shut, the hospitals are full, people talk of nothing but numbers.
+door: Работать там, где нужны руки | Work where hands are needed
+out: 60 | Возишь еду, моешь палаты, стоишь на кассе. Ты не болеешь. | You deliver food, clean wards, work the till. You don't fall ill. | kind brave
+out: 40 | Ты {заболел|заболела}. Две недели не можешь надышаться. | You fall ill. For two weeks you can't get enough breath. | kind brave risk10
+door: Сидеть дома | Stay at home
+out: 70 | Полгода в четырёх стенах. Печёшь хлеб, звонишь родителям каждый вечер. | Half a year within four walls. You bake bread and call your parents every evening. |
+out: 30 | Работу теряешь. Сбережения уходят за полгода. | You lose your job. Your savings are gone in six months. | wealth-1
+door: Носить продукты старикам в подъезде | Carry groceries to the old people in the building
+out: 70 | Оставляешь пакеты у дверей. Старики кричат «спасибо» через дверь. | You leave bags at the doors. The old people shout thanks through them. | kind
+out: 30 | Одна из соседок умирает. Её родные потом приносят тебе пирог. | One of the neighbours dies. Her family later bring you a pie. | kind
+ep: В пандемию {носил|носила} еду старикам. | In the pandemic brought food to the old.
+
+id: c_mod_ru_nineties
+slot: crisis
+groups: mod
+tags: ru
+need: after:1991 before:2000
+ages: 28-44
+weight: 1
+q: Зарплату не платят полгода. Деньги, что лежали на книжке, сгорели. | No wages for half a year. The money in your savings book has gone up in smoke.
+door: Возить вещи из Турции | Haul goods from Turkey
+out: 60 | Клетчатые сумки, автобусы, таможня. Через год у тебя место на рынке. | Checked bags, buses, customs. A year later you have a pitch at the market. | wealth+1 brave
+out: 40 | На трассе отбирают весь товар. Год отдаёшь долг. | On the highway the goods are all taken. You spend a year paying back the debt. | wealth-1 risk5
+door: Сажать картошку на даче | Grow potatoes at the dacha
+out: 70 | Шесть соток кормят семью до весны. | The little plot feeds the family till spring. |
+out: 30 | Урожай выкапывают ночью чужие. | Strangers dig up your crop at night. | wealth-1
+door: Уехать на заработки в Москву | Go to Moscow for work
+out: 60 | Охраняешь склад и спишь там же. Каждый месяц шлёшь домой деньги. | You guard a warehouse and sleep in it. Every month you send money home. | moved wealth+1
+out: 40 | Работодатель исчезает, не заплатив. | The employer vanishes without paying. | moved
+
+id: c_mod_war
+slot: crisis
+groups: mod
+tags: me af sea
+need:
+ages: 28-44
+weight: 1
+q: В город пришла война. По ночам стреляют, магазины пусты, воду дают по часам. | The war has come to the city. There is shooting at night, the shops are empty, and water comes on for an hour a day.
+door: Уехать с семьёй через границу | Take the family across the border
+shut: poor | Платить перевозчику нечем. | There's nothing to pay the smuggler with.
+out: 60 | Палатка в лагере, потом комната у чужих людей. Ты жив{|а}, все живы. | A tent in a camp, then a room with strangers. You are alive; everyone is. | moved wealth-2
+out: 40 | На границе стреляют. Доходите не все. | There is shooting at the border. Not all of you get across. | moved risk25
+door: Остаться и ждать | Stay and wait
+out: 50 | Год в подвале по ночам. Война уходит из города. | A year of nights in the cellar. The war leaves the city. |
+out: 50 | Снаряд попадает в соседний дом. | A shell hits the house next door. | risk25
+door: Помогать в больнице | Help at the hospital
+out: 60 | Носишь носилки и воду. Врачи знают тебя по имени. | You carry stretchers and water. The doctors know you by name. | kind brave
+out: 40 | Больницу обстреливают. | The hospital is shelled. | kind brave risk30
+ep: В войну {помогал|помогала} в больнице. | In the war helped at the hospital.
+
+id: c_mod_cn_famine
+slot: crisis
+groups: mod
+tags: cn
+need: after:1959 before:1962
+ages: 28-44
+weight: 1
+q: Еду дают только в общей столовой, а столовая пустая. Котлы сдали на сталь. | Food comes only from the commune canteen, and the canteen is empty. The pots were given up for steel.
+door: Прятать зерно от бригады | Hide grain from the brigade
+out: 50 | Горсть риса в стене. Варите ночью, чтобы не видели дыма. | A handful of rice in the wall. You cook at night so no one sees the smoke. | brave
+out: 50 | Зерно находят. На собрании тебя ставят перед всеми. | The grain is found. At the meeting you are made to stand before everyone. | brave risk20
+door: Бежать к морю, в Гонконг | Run for the sea and Hong Kong
+out: 40 | Ночью плывёшь через залив. Утром ты на другом берегу. | At night you swim across the bay. In the morning you are on the far shore. | sea moved brave
+out: 60 | Ловят на берегу и возвращают в деревню. | You are caught on the shore and sent back to the village. | sea brave risk20
+door: Делить последнее с соседями | Share the last with the neighbours
+out: 50 | Варите траву и кору на две семьи. Доживаете до весны. | You boil grass and bark for two families. You last till spring. | kind
+out: 50 | Делишь, пока есть. Ноги пухнут к зиме. | You share while there is any. By winter your legs are swelling. | kind risk30
+ep: В голод {делил|делила} последнее с соседями. | In the famine shared the last with the neighbours.
+
+id: c_mod_sahel
+slot: crisis
+groups: mod
+tags: af
+need: !town
+ages: 28-44
+weight: 1
+q: Третий год засуха. Колодцы пересохли, стадо пало. | The third year of drought. The wells are dry and the herd is dead.
+door: Уйти в город | Go to the city
+out: 60 | Хижина из жести на окраине. Работаешь на стройке. | A tin shack on the edge of town. You work on building sites. | town moved
+out: 40 | В городе работы нет. Продаёшь воду на перекрёстке. | There's no work in the city. You sell water at a crossroads. | town moved
+door: Ждать грузовиков с помощью | Wait for the aid lorries
+out: 60 | Раз в неделю привозят муку и масло. Доживаете до дождей. | Once a week they bring flour and oil. You last till the rains. |
+out: 40 | Грузовики не приходят месяц. | The lorries don't come for a month. | risk20
+door: Ехать через пустыню и море в Европу | Go across the desert and the sea to Europe
+out: 40 | Год пути. Ты работаешь на теплицах в Испании и шлёшь деньги домой. | A year on the road. You work in Spanish greenhouses and send money home. | sea moved brave wealth+1
+out: 60 | Лодка переворачивается у берега. | The boat capsizes near the shore. | sea moved brave risk50
+
+id: c_mod_in_debt
+slot: crisis
+groups: mod
+tags: in
+need: !town
+ages: 28-44
+weight: 1
+q: Хлопок погиб от червя. Долг ростовщику за семена растёт каждый месяц. | The worm has killed the cotton. The debt to the moneylender for the seed grows every month.
+door: Взять новый долг под следующий урожай | Borrow again against the next harvest
+out: 50 | Следующий год дождливый. Долг почти закрыт. | The next year is wet. The debt is almost paid. |
+out: 50 | Снова неурожай. Землю забирают за долги. | Another failed harvest. The land is taken for the debt. | wealth-2
+door: Ехать в город на стройку | Go to the city to work on building sites
+out: 60 | Таскаешь кирпичи на голове. Каждый месяц отсылаешь долг. | You carry bricks on your head. Every month you send money for the debt. | town moved
+out: 40 | Спишь на стройке под брезентом. Падаешь с лесов. | You sleep on the site under a tarpaulin. You fall from the scaffolding. | town moved risk20
+door: Просить помощи у деревенского совета | Ask the village council for help
+out: 50 | Совет выбивает отсрочку. Ростовщик ждёт. | The council gets you a delay. The moneylender waits. |
+out: 50 | Совет разводит руками. | The council throws up its hands. | wealth-1
+
+id: c_mod_crash
+slot: crisis
+groups: mod
+tags: us latam eu jp au
+need: !r0
+ages: 28-44
+weight: 1
+q: Кризис. Банк заморозил счета, а платёж за дом вырос вдвое. | A crash. The bank has frozen accounts, and the payment on the house has doubled.
+door: Продать дом и снимать | Sell the house and rent
+out: 60 | Дом уходит за полцены. Переезжаете в съёмную квартиру. | The house goes for half its price. You move into a rented flat. | wealth-1
+out: 40 | Дом не продаётся. Банк забирает его сам. | The house won't sell. The bank takes it. | wealth-2
+door: Работать на двух работах | Work two jobs
+out: 60 | Днём офис, ночью доставка. Платёж вносишь в срок. | Office by day, deliveries by night. You make the payment on time. | brave
+out: 40 | Через год ты {свалился|свалилась} от усталости. | A year later you collapse from exhaustion. | risk10
+door: Выходить на улицу с кастрюлей | Go out on the street banging a pot
+out: 50 | На площади тысячи. Правительство уходит, но денег это не возвращает. | Thousands in the square. The government falls, but it doesn't bring the money back. | brave | #latam
+out: 50 | Стоишь с соседями у банка. Часть денег отдают через год. | You stand with the neighbours outside the bank. Some of the money comes back a year later. | brave
+out: 50 | Полиция разгоняет толпу. | The police break up the crowd. | brave risk5

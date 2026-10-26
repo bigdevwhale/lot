@@ -6,6 +6,29 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.3.0] - 2026-10-26
+
+### Changed
+- The great crisis of a life is a real calamity of its time and place, no longer the same "Hard times" everywhere: 64 of them, from a stone-age grass fire and the Nile that did not rise to the Black Death, the Irish blight, the Spanish flu, the slump, the Russian nineties and the plant that closed. Each has its own doors and outcomes, and it comes at 30, 33, 36 or 42.
+- What to leave behind and the last wish are drawn from 32 forks each, by era, region, children and station: the land among the sons, the dowry, the workshop, the savings book, the hajj, Kashi, the Kyiv caves, a call to a son abroad.
+- Forks that span several eras now play out by era: 509 new outcomes, so the stranger at the door is a runaway slave in Babylon and a deserter in 1812.
+- 62 new everyday forks, most for the stone age, the ancient world and the industrial age.
+- Work at twelve and marriage are told by time and place: clay tablets, bamboo slips and the parish primer; the matchmaker's eight characters, the astrologer, the registry office.
+- A life's lines and forks follow the year it has reached, not the year it was born: born in 1936, it reads of the war and then of the television.
+- The chest shows the years a keepsake has been in the family, not only the generations.
+
+### Fixed
+- Lines from Southeast Asia (buffaloes, durian, rubber trees) no longer come to every coastal land.
+- A peasant girl in the old eras is shut out of letters by her station, as her brothers are, and no longer gets the door to learn in secret.
+- Someone who has sailed to America no longer sees a son or a cousin leave for America.
+- A slave's uncle no longer sits the state exams.
+
+<!-- tg
+«Жребий» 1.3.0: жизни больше не идут по одному сценарию
+Беда в каждом веке своя — засуха у охотников, чума, ирландский голод, испанка, закрытый завод; наследство и последнее желание тоже зависят от времени и места
+Развилки играют по-разному в разные века, добавлено 62 новых; в сундуке видны годы, которые реликвия провела в семье
+-->
+
 ## [1.2.3] - 2026-10-25
 
 ### Changed
