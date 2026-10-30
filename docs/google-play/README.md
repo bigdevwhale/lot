@@ -38,7 +38,7 @@
 
 | Поле | Значение |
 |---|---|
-| App name | `Lot: One Life in 117 Billion` |
+| App name | `Lot: The Lottery of Birth` |
 | Default language | English (United States) – en-US |
 | App or game | **Game** (см. «Категория» в разделе 3) |
 | Free or paid | Free |
