@@ -21,6 +21,9 @@ def main(raw: str):
         out = ROOT / f"docs/screenshots/{lang}"
         out.mkdir(parents=True, exist_ok=True)
         for f in sorted(src.glob("*.png")):
+            # The renders that only check a variant (the printed hand, a picked pin) are not README screenshots.
+            if f.stem.endswith(("-printed", "-picked")):
+                continue
             img = Image.open(f).convert("RGB")
             if img.width > 1080:
                 img = img.resize((1080, round(img.height * 1080 / img.width)), Image.LANCZOS)
