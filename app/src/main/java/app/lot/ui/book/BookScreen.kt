@@ -3,7 +3,6 @@ package app.lot.ui.book
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -33,6 +32,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextLayoutResult
@@ -51,7 +54,9 @@ import app.lot.domain.Things
 import app.lot.domain.Tx
 import app.lot.ui.Home
 import app.lot.ui.Words
-import app.lot.ui.art.ThingArt.thing
+import app.lot.ui.art.Ico
+import app.lot.ui.art.Pic
+import app.lot.ui.art.ThingPic
 import app.lot.ui.components.Btn
 import app.lot.ui.components.Chip
 import app.lot.ui.components.Field
@@ -59,8 +64,10 @@ import app.lot.ui.components.Gap
 import app.lot.ui.components.Kind
 import app.lot.ui.components.Label
 import app.lot.ui.components.LocalToast
+import app.lot.ui.components.Paper
 import app.lot.ui.components.Rule
 import app.lot.ui.components.TopBar
+import app.lot.ui.components.inner
 import app.lot.ui.theme.C
 import app.lot.ui.theme.T
 
@@ -76,9 +83,13 @@ fun BookScreen(h: Home, onDraw: (Long?) -> Unit, onArchive: () -> Unit) {
             if (h.s.lives.isNotEmpty()) Chip(w.t("Все книги", "All books"), false, onClick = onArchive)
         }
         if (page == null || cur == null) {
-            Text(w.t("Книга пуста. Сначала вытяни жребий.", "The book is empty. Draw a lot first."), style = T.Italic, textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 30.dp, vertical = 40.dp))
-            Box(Modifier.padding(horizontal = 16.dp)) { Btn(w.t("К мешку", "To the sack")) { onDraw(null) } }
+            Column(Modifier.fillMaxWidth().padding(horizontal = 30.dp, vertical = 24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                Pic("pic/empty_book", Modifier.size(190.dp))
+                Text(w.t("Книга пуста", "The book is empty"), style = T.Heading, modifier = Modifier.padding(top = 8.dp))
+                Text(w.t("Сначала вытяни жребий: книга запишет, кем он тебя сделал.", "Draw a lot first: the book will write down who it made you."),
+                    style = T.Italic, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 4.dp))
+            }
+            Box(Modifier.padding(horizontal = 16.dp)) { Btn(w.t("К мешку", "To the sack"), icon = "tab_draw") { onDraw(null) } }
             return
         }
         val scroll = rememberScrollState()
@@ -92,14 +103,14 @@ fun BookScreen(h: Home, onDraw: (Long?) -> Unit, onArchive: () -> Unit) {
                 val row = cur.lifeId?.let { id -> h.s.byId[id] }
                 if (row != null) EndCard(h, row, onThing = null)
                 Column(Modifier.padding(horizontal = 16.dp)) {
-                    if (row != null && Heir.possible(row.year, row.kids)) { Gap(4); Btn(w.t("Тянуть жребий правнука", "Draw a great-grandchild's lot")) { onDraw(row.id) } }
+                    if (row != null && Heir.possible(row.year, row.kids)) { Gap(4); Btn(w.t("Тянуть жребий правнука", "Draw a great-grandchild's lot"), icon = "tab_chest") { onDraw(row.id) } }
                     Gap(8)
-                    Btn(w.t("Новый жребий", "A new lot"), kind = if (row != null && Heir.possible(row.year, row.kids)) Kind.GHOST else Kind.INK) { onDraw(null) }
+                    Btn(w.t("Новый жребий", "A new lot"), kind = if (row != null && Heir.possible(row.year, row.kids)) Kind.GHOST else Kind.INK, icon = "tab_draw") { onDraw(null) }
                 }
             }
         }
         if (page.canTurn) Box(Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
-            Btn(w.t("Дальше", "Turn the page")) { dry = page.entries.size; c.write { repo.turn() } }
+            Btn(w.t("Дальше", "Turn the page"), icon = "quill") { dry = page.entries.size; c.write { repo.turn() } }
         }
     }
 }
@@ -117,8 +128,15 @@ fun Register(name: Tx, year: Int, endAge: Int?, region: Tx, gen: Int, witness: B
     Column(
         Modifier.padding(horizontal = 12.dp, vertical = 8.dp).fillMaxWidth()
             .drawBehind {
-                drawRect(C.ink2.copy(alpha = .12f), Offset(0f, 3.dp.toPx()), size)
+                // The pages beneath, each a little further out, then this page with the shadow of the spine on its left.
+                for (i in 3 downTo 1) {
+                    val d = (i * 2.5f).dp.toPx()
+                    drawRect(C.ink2.copy(alpha = .10f), Offset(d * .4f, d + 1.dp.toPx()), size)
+                    drawRect(if (i % 2 == 0) C.paper else C.paperHi, Offset(d * .4f, d), size)
+                    drawRect(C.line.copy(alpha = .8f), Offset(d * .4f, d), size, style = Stroke(1f))
+                }
                 drawRect(C.page)
+                drawRect(Brush.horizontalGradient(listOf(C.ink2.copy(alpha = .16f), Color.Transparent), 0f, 18.dp.toPx()), size = Size(18.dp.toPx(), size.height))
                 drawLine(C.red.copy(alpha = .3f), Offset(54.dp.toPx(), 0f), Offset(54.dp.toPx(), size.height), 1f)
             }
             .border(1.dp, C.line).padding(horizontal = 12.dp, vertical = 12.dp),
@@ -185,12 +203,18 @@ fun ChoiceCard(ch: Choice, w: Words, onPick: (Int) -> Unit) {
     // A fork appears where the "turn the page" button just was: a second quick tap must not pick its first door.
     var armed by remember(ch) { mutableStateOf(false) }
     LaunchedEffect(ch) { kotlinx.coroutines.delay(700); armed = true }
-    Column(Modifier.padding(horizontal = 12.dp, vertical = 8.dp).fillMaxWidth().clip(RoundedCornerShape(4.dp)).background(C.card).border(1.dp, C.ink2, RoundedCornerShape(4.dp)).padding(12.dp)) {
-        Text(w.x(ch.q), style = T.Heading)
-        Gap(4)
+    val plate = remember { Paper.plate() }
+    Column(Modifier.padding(horizontal = 12.dp, vertical = 8.dp).fillMaxWidth().clip(plate).background(C.card)
+        .drawBehind { drawRect(C.red, size = Size(size.width, 3.dp.toPx())); inner(plate, 4.dp.toPx(), C.line.copy(alpha = .6f)) }
+        .border(1.dp, C.ink2, plate).padding(horizontal = 14.dp, vertical = 14.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Ico("signpost", Modifier.padding(end = 10.dp).size(28.dp), tint = C.red)
+            Text(w.x(ch.q), style = T.Heading)
+        }
+        Gap(6)
         for ((i, d) in ch.doors.withIndex()) {
-            val shape = RoundedCornerShape(3.dp)
-            Column(
+            val shape = remember { Paper.ticket() }
+            Row(
                 Modifier.padding(vertical = 4.dp).fillMaxWidth().clip(shape)
                     .then(if (d.open) Modifier.background(C.light).border(1.dp, C.line, shape).clickable(enabled = armed && !picked) { picked = true; onPick(i) }
                     else Modifier.background(C.shut).drawBehind {
@@ -199,9 +223,14 @@ fun ChoiceCard(ch: Choice, w: Words, onPick: (Int) -> Unit) {
                         while (x < size.width) { drawLine(C.line.copy(alpha = .45f), Offset(x, size.height), Offset(x + size.height, 0f), 1.5f); x += step }
                     })
                     .padding(horizontal = 12.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
             ) {
-                Text(w.x(d.text), style = T.Body.copy(color = if (d.open) C.ink else C.muted, textDecoration = if (d.open) null else TextDecoration.LineThrough))
-                d.why?.let { Text(w.x(it), style = T.Italic.copy(color = C.red, fontSize = T.Small.fontSize, lineHeight = T.Small.lineHeight), modifier = Modifier.padding(top = 2.dp)) }
+                Ico(if (d.open) "door_open" else "door_shut", Modifier.padding(end = 10.dp).size(26.dp), tint = if (d.open) C.ink2 else C.muted.copy(alpha = .7f))
+                Column(Modifier.weight(1f)) {
+                    Text(w.x(d.text), style = T.Body.copy(color = if (d.open) C.ink else C.muted, textDecoration = if (d.open) null else TextDecoration.LineThrough))
+                    d.why?.let { Text(w.x(it), style = T.Italic.copy(color = C.red, fontSize = T.Small.fontSize, lineHeight = T.Small.lineHeight), modifier = Modifier.padding(top = 2.dp)) }
+                }
+                if (d.open) Text("›", style = T.Title.copy(color = C.muted), modifier = Modifier.padding(start = 8.dp))
             }
         }
     }
@@ -215,15 +244,19 @@ fun EndCard(h: Home, row: LifeRow, onThing: ((Long) -> Unit)?) {
     val toast = LocalToast.current
     val thing = h.s.thing(row.thingId)
     val holders = h.s.holders(row.thingId)
-    Column(Modifier.padding(horizontal = 12.dp, vertical = 8.dp).fillMaxWidth().clip(RoundedCornerShape(4.dp)).background(C.card).border(1.dp, C.line, RoundedCornerShape(4.dp)).padding(14.dp),
+    val plate = remember { Paper.plate() }
+    Column(Modifier.padding(horizontal = 12.dp, vertical = 8.dp).fillMaxWidth().clip(plate).background(C.card)
+        .drawBehind { inner(plate, 4.dp.toPx(), C.line.copy(alpha = .6f)) }.border(1.dp, C.line, plate).padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Label(w.t("Эпитафия", "Epitaph"))
+        Ico("candle", Modifier.size(34.dp), tint = C.ink2)
+        Label(w.t("Эпитафия", "Epitaph"), Modifier.padding(top = 4.dp))
         Text(w.x(row.epitaph), style = T.Epitaph, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 6.dp))
         if (thing != null) {
             Rule(Modifier.padding(vertical = 12.dp))
             val kind = Things.of(thing.key)
-            Row(Modifier.fillMaxWidth().then(if (onThing != null) Modifier.clickable { onThing(thing.id) } else Modifier), verticalAlignment = Alignment.CenterVertically) {
-                Canvas(Modifier.size(56.dp)) { thing(kind.shape) }
+            Row(Modifier.fillMaxWidth().clip(Paper.ticket()).background(C.paperHi.copy(alpha = .8f))
+                .then(if (onThing != null) Modifier.clickable { onThing(thing.id) } else Modifier).padding(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                ThingPic(kind, Modifier.size(76.dp))
                 Column(Modifier.padding(start = 12.dp).weight(1f)) {
                     Label(w.t("В сундук", "To the chest"))
                     Text(w.x(kind.name).replaceFirstChar { it.uppercase() }, style = T.BodyB)
@@ -234,13 +267,16 @@ fun EndCard(h: Home, row: LifeRow, onThing: ((Long) -> Unit)?) {
         }
         Rule(Modifier.padding(vertical = 12.dp))
         Column(Modifier.fillMaxWidth()) {
-            Label(w.t("Вопрос тебе", "A question for you"))
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Ico("lantern", Modifier.padding(end = 6.dp).size(22.dp), tint = C.muted)
+                Label(w.t("Вопрос тебе", "A question for you"))
+            }
             Text(w.x(row.bridge), style = T.Italic.copy(color = C.ink), modifier = Modifier.padding(top = 6.dp, bottom = 8.dp))
             var text by remember(row.id) { mutableStateOf(row.answer) }
             Field(text, { text = it }, w.t("Можно не отвечать…", "You don't have to answer…"))
             if (text.trim() != row.answer) {
                 Gap(8)
-                Btn(w.t("Записать в тетрадку", "Write it in the notebook"), kind = Kind.SOFT) {
+                Btn(w.t("Записать в тетрадку", "Write it in the notebook"), kind = Kind.SOFT, icon = "notebook") {
                     c.write { repo.answer(row.id, text) }
                     toast.show(w.t("Записано. Тетрадка — в атласе.", "Written down. The notebook is in the atlas."))
                 }

@@ -1,6 +1,10 @@
 package app.lot.ui
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -10,7 +14,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -24,9 +32,14 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.lot.R
@@ -34,6 +47,8 @@ import app.lot.container
 import app.lot.data.Settings
 import app.lot.data.State
 import app.lot.ru
+import app.lot.ui.art.Ico
+import app.lot.ui.art.hasPic
 import app.lot.ui.atlas.AtlasScreen
 import app.lot.ui.book.ArchiveSheet
 import app.lot.ui.book.BookScreen
@@ -47,8 +62,8 @@ import app.lot.ui.components.paper
 import app.lot.ui.draw.DrawScreen
 import app.lot.ui.onboarding.Onboarding
 import app.lot.ui.settings.SettingsSheet
-import app.lot.ui.theme.Ink
 import app.lot.ui.theme.C
+import app.lot.ui.theme.Ink
 import app.lot.ui.theme.T
 
 /** Everything a screen reads, at one moment. */
@@ -97,14 +112,14 @@ fun LotRoot(settings: Settings) {
         Box(Modifier.fillMaxSize().paper()) {
             Column(Modifier.fillMaxSize().statusBarsPadding()) {
                 Box(Modifier.weight(1f).fillMaxWidth().clipToBounds()) {
-                    when (tab) {
+                    Crossfade(tab, animationSpec = tween(220), label = "tab") { t -> when (t) {
                         Tab.DRAW -> DrawScreen(home, onDraw = ::draw, onBook = { tab = Tab.BOOK }, onSettings = { push(Overlay.Settings) })
                         Tab.BOOK -> BookScreen(home, onDraw = ::draw, onArchive = { push(Overlay.Archive) })
                         Tab.CHEST -> ChestScreen(home, onThing = { push(Overlay.Thing(it)) })
                         Tab.ATLAS -> AtlasScreen(home, onLife = { push(Overlay.Read(it)) })
-                    }
+                    } }
                 }
-                TabBar(tab) { tab = it }
+                TabBar(tab, waiting = s.page?.end == null && s.page != null) { tab = it }
             }
             when (val o = overlays.lastOrNull()) {
                 Overlay.Settings -> SettingsSheet(home, onClose = { pop() })
@@ -119,16 +134,42 @@ fun LotRoot(settings: Settings) {
 }
 
 @Composable
-private fun TabBar(tab: Tab, onTab: (Tab) -> Unit) {
-    val items = listOf(Tab.DRAW to R.string.tab_draw, Tab.BOOK to R.string.tab_book, Tab.CHEST to R.string.tab_chest, Tab.ATLAS to R.string.tab_atlas)
-    Row(Modifier.fillMaxWidth().background(C.bar).navigationBarsPadding().padding(horizontal = 6.dp, vertical = 6.dp)) {
-        for ((t, label) in items) {
+private fun TabBar(tab: Tab, waiting: Boolean, onTab: (Tab) -> Unit) {
+    val items = listOf(
+        Triple(Tab.DRAW, R.string.tab_draw, "tab_draw"), Triple(Tab.BOOK, R.string.tab_book, "tab_book"),
+        Triple(Tab.CHEST, R.string.tab_chest, "tab_chest"), Triple(Tab.ATLAS, R.string.tab_atlas, "tab_atlas"),
+    )
+    Row(
+        Modifier.fillMaxWidth().background(C.bar).drawBehind { drawLine(C.barOn.copy(alpha = .25f), Offset(0f, 0f), Offset(size.width, 0f), 1.dp.toPx()) }
+            .navigationBarsPadding().padding(horizontal = 6.dp, vertical = 4.dp),
+    ) {
+        // The icons only when all four are painted: a bar of mixed tabs looks broken.
+        val painted = items.map { hasPic("icon/${it.third}") }.all { it }
+        for ((t, label, icon) in items) {
             val sel = t == tab
-            Box(
-                Modifier.weight(1f).padding(horizontal = 2.dp).background(if (sel) C.ink2.copy(alpha = .5f) else C.bar, androidx.compose.foundation.shape.RoundedCornerShape(6.dp))
-                    .clickable { onTab(t) }.padding(vertical = 11.dp),
-                contentAlignment = Alignment.Center,
-            ) { Text(stringResource(label), style = T.Button.copy(color = if (sel) C.barOn else C.barText, fontSize = T.Small.fontSize)) }
+            val fg by animateColorAsState(if (sel) C.barOn else C.barText, label = "tab")
+            val glow by animateFloatAsState(if (sel) 1f else 0f, label = "tabGlow")
+            Column(
+                Modifier.weight(1f).padding(horizontal = 2.dp).clip(RoundedCornerShape(10.dp))
+                    .then(if (painted) Modifier else Modifier.background(C.ink2.copy(alpha = .5f * glow)))
+                    .selectable(sel, role = Role.Tab) { onTab(t) }.padding(vertical = if (painted) 6.dp else 11.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+                if (painted) Box(
+                    Modifier.size(width = 56.dp, height = 30.dp).clip(RoundedCornerShape(15.dp)).background(C.ink2.copy(alpha = .55f * glow)),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Ico(icon, Modifier.size(22.dp), tint = fg)
+                    // A life is open and waits in the book.
+                    if (t == Tab.BOOK && waiting && !sel) Box(Modifier.align(Alignment.TopEnd).padding(top = 3.dp, end = 12.dp).size(7.dp).clip(CircleShape).background(C.barOn))
+                }
+                Text(
+                    stringResource(label),
+                    style = if (painted) T.Small.copy(color = fg, fontSize = T.Label.fontSize, fontWeight = if (sel) FontWeight.Bold else FontWeight.Normal)
+                    else T.Button.copy(color = fg, fontSize = T.Small.fontSize),
+                    modifier = Modifier.padding(top = if (painted) 2.dp else 0.dp),
+                )
+            }
         }
     }
 }

@@ -12,3 +12,5 @@
 *.keystore
 *.jks
 /design
+tools/art/raw/
+__pycache__/

@@ -85,9 +85,10 @@ class RenderArtIcon {
         val c = ApplicationProvider.getApplicationContext<android.content.Context>()
         val bmp = Bitmap.createBitmap(512, 512, Bitmap.Config.ARGB_8888)
         val canvas = android.graphics.Canvas(bmp)
-        for (id in listOf(R.drawable.ic_launcher_background, R.drawable.ic_launcher_foreground)) {
+        // The painted layers of the launcher icon; docs/logo.png and the Play icon are made by tools/art/icon.py.
+        for (id in listOf(R.mipmap.ic_launcher_background, R.mipmap.ic_launcher_foreground)) {
             ContextCompat.getDrawable(c, id)!!.apply { setBounds(0, 0, 512, 512); draw(canvas) }
         }
-        File("../docs/logo.png").apply { parentFile?.mkdirs() }.outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        File(System.getProperty("render.out") ?: "build/art", "icon.png").apply { parentFile?.mkdirs() }.outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
     }
 }

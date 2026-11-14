@@ -6,6 +6,22 @@ line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is 
 then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
 -->
 
+## [1.4.0] - 2026-11-14
+
+### Changed
+- Painted throughout: all 64 keepsakes, an era plate for each part of the world, the sack, the tag and the app icon.
+- The atlas is an old chart, with a painted sea and land, a compass rose, a ship and a sea serpent.
+- Cards, buttons and doors look like old paper; headings are set in Cormorant Garamond.
+- Era, place and sex are chosen in one sheet; the archive filters by era.
+- Support for the app in the settings.
+
+<!-- tg
+«Жребий» 1.4.0: приложение нарисовано заново
+Все 64 вещи в сундуке, виньетки эпох для каждой части света, мешок, бирка и иконка — живописные; атлас стал старинной картой
+Блоки похожи на старую бумагу, заголовки набраны новым шрифтом; эпоху, место и пол выбирают в одной шторке, архив фильтруется по эпохам
+В настройках можно поддержать приложение
+-->
+
 ## [1.3.0] - 2026-10-26
 
 ### Changed

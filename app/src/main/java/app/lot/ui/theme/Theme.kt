@@ -57,6 +57,9 @@ val Serif = FontFamily(
     Font(R.font.pt_serif_italic, FontWeight.Normal, FontStyle.Italic),
 )
 
+/** The display face: Cormorant Garamond, like the title pages of old printed books. Body text stays in PT Serif. */
+val Display = FontFamily(Font(R.font.cormorant_bold, FontWeight.Bold))
+
 /** The registrar's hand in the book. */
 val Hand = FontFamily(Font(R.font.marck_script, FontWeight.Normal))
 
@@ -66,15 +69,16 @@ object Ink {
 }
 
 object T {
-    val Title = TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 28.sp, lineHeight = 32.sp, color = C.ink)
-    val Heading = TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 19.sp, lineHeight = 24.sp, color = C.ink)
+    val Title = TextStyle(fontFamily = Display, fontWeight = FontWeight.Bold, fontSize = 34.sp, lineHeight = 36.sp, color = C.ink)
+    val Heading = TextStyle(fontFamily = Display, fontWeight = FontWeight.Bold, fontSize = 23.sp, lineHeight = 26.sp, color = C.ink)
     val Body = TextStyle(fontFamily = Serif, fontSize = 15.sp, lineHeight = 21.sp, color = C.ink)
     val BodyB = Body.copy(fontWeight = FontWeight.Bold)
     val Italic = Body.copy(fontStyle = FontStyle.Italic, color = C.muted)
     val Small = TextStyle(fontFamily = Serif, fontSize = 13.sp, lineHeight = 18.sp, color = C.muted)
     val Label = TextStyle(fontFamily = Serif, fontSize = 11.sp, lineHeight = 14.sp, letterSpacing = 1.4.sp, color = C.muted)
-    val Button = TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 16.sp, lineHeight = 20.sp)
-    val Big = TextStyle(fontFamily = Serif, fontWeight = FontWeight.Bold, fontSize = 20.sp, lineHeight = 24.sp, color = C.ink)
+    val Button = TextStyle(fontFamily = Display, fontWeight = FontWeight.Bold, fontSize = 19.sp, lineHeight = 22.sp)
+    /** Numbers: lining figures, as old-style ones jump up and down in a row of counts. */
+    val Big = TextStyle(fontFamily = Display, fontWeight = FontWeight.Bold, fontSize = 25.sp, lineHeight = 28.sp, color = C.ink, fontFeatureSettings = "lnum")
     val Write get() = if (Ink.hand) TextStyle(fontFamily = Hand, fontSize = 21.sp, lineHeight = 26.sp, color = C.blue)
         else TextStyle(fontFamily = Serif, fontSize = 16.sp, lineHeight = 23.sp, color = C.blue)
     val WriteAge get() = if (Ink.hand) TextStyle(fontFamily = Hand, fontSize = 20.sp, lineHeight = 26.sp, color = C.red)

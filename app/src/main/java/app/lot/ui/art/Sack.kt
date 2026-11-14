@@ -3,6 +3,10 @@ package app.lot.ui.art
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.FilterQuality
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.DrawScope
@@ -25,6 +29,9 @@ import kotlin.random.Random
 /** The four lines burnt into the wooden tag. */
 class TagText(val year: String, val place: String, val family: String, val sex: String)
 
+/** The painted sack and blank tag (assets/art/stage); without them the stage is drawn in code. */
+class SackArt(val sack: ImageBitmap, val tag: ImageBitmap)
+
 /**
  * The stage of the draw: a hessian sack and the wooden tag rising out of it, in 250×330 units.
  * [shake] tilts the sack in degrees; [rise] lifts the tag from inside the mouth (0) to the top (1); no tag when [tag] is null.
@@ -34,25 +41,35 @@ object Sack {
     const val H = 330f
     private const val TOP = 130f
 
-    fun DrawScope.stage(shake: Float, rise: Float, tag: TagText?, seed: Long, tm: TextMeasurer) {
+    fun DrawScope.stage(shake: Float, rise: Float, tag: TagText?, seed: Long, tm: TextMeasurer, art: SackArt? = null) {
         val k = minOf(size.width / W, size.height / H)
         translate((size.width - W * k) / 2, (size.height - H * k) / 2) {
             scale(k, k, Offset.Zero) {
-                translate(0f, TOP) { rotate(shake, Offset(125f, 180f)) { sack() } }
+                translate(0f, TOP) { rotate(shake, Offset(125f, 180f)) { if (art != null) painted(art.sack) else sack() } }
                 if (tag != null && rise > 0f) {
                     val e = rise.coerceIn(0f, 1f)
                     val cy = 200f + (75f - 200f) * e
                     val s = .5f + .5f * e
                     val rot = -8f + 5f * e
-                    // Inside the sack until it clears the mouth.
-                    clipRect(0f, -200f, W, TOP + 78f) {
+                    // Inside the sack until it clears the mouth (the painted sack's front lip sits higher).
+                    clipRect(0f, -200f, W, TOP + if (art != null) MOUTH else 78f) {
                         translate(125f - 110f, cy - 60f) {
-                            scale(s, s, Offset(110f, 60f)) { rotate(rot, Offset(110f, 60f)) { tag(tag, seed, tm) } }
+                            scale(s, s, Offset(110f, 60f)) { rotate(rot, Offset(110f, 60f)) { tag(tag, seed, tm, art?.tag) } }
                         }
                     }
                 }
             }
         }
+    }
+
+    /** Where the painted sack sits in the stage, and the line of its front lip. */
+    private const val MOUTH = 50f
+
+    private fun DrawScope.painted(img: ImageBitmap) {
+        drawOval(C.ink.copy(alpha = .16f), Offset(34f, 192f), Size(182f, 14f))
+        val w = 200f
+        val h = w * img.height / img.width
+        drawImage(img, dstOffset = IntOffset(25, (203 - h).toInt()), dstSize = IntSize(w.toInt(), h.toInt()), filterQuality = FilterQuality.High)
     }
 
     private val body = Path().apply {
@@ -94,8 +111,15 @@ object Sack {
     }
 
     /** The tag in its own 220×120 units: wood grain from [seed], a hole with a string, four burnt lines. */
-    fun DrawScope.tag(t: TagText, seed: Long, tm: TextMeasurer) {
+    fun DrawScope.tag(t: TagText, seed: Long, tm: TextMeasurer, img: ImageBitmap? = null) {
         drawPath(Path().apply { moveTo(22f, 60f); cubicTo(10f, 30f, -10f, 30f, -24f, 6f) }, C.string, style = Stroke(3f, cap = StrokeCap.Round))
+        if (img != null) {
+            // The painted tag, its hole over the string's end; the words are burnt in on top.
+            // Stretched a touch to the code tag's height, so the four lines keep their room.
+            drawImage(img, dstOffset = IntOffset(0, 4), dstSize = IntSize(220, 112), filterQuality = FilterQuality.High)
+            words(t, tm)
+            return
+        }
         drawPath(tagShape, Brush.verticalGradient(listOf(C.woodHi, C.woodLo), 4f, 116f))
         clipPath(tagShape) {
             val r = Random(seed)
@@ -109,6 +133,10 @@ object Sack {
         }
         drawPath(tagShape, C.ink2, style = Stroke(2f))
         drawCircle(C.sackDark, 6f, Offset(22f, 60f))
+        words(t, tm)
+    }
+
+    private fun DrawScope.words(t: TagText, tm: TextMeasurer) {
         burn(tm, t.year, 32f, 21f, bold = true)
         burn(tm, t.place, 56f, 14f)
         burn(tm, t.family, 77f, 12.5f, italic = true)
