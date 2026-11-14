@@ -3,7 +3,8 @@
 python tools/play.py
 
 Takes docs/screenshots/<lang>/*.jpg (1080 px wide renders of the demo, see tools/shots.py) and writes
-the 512 px icon, the 1024x500 feature graphics and seven 1080x1920 captioned screenshots per language.
+the 1024x500 feature graphics and seven 1080x1920 captioned screenshots per language. The 512 px icon is made by
+tools/art/icon.py from the painted icon layers.
 Play wants screenshots no longer than twice their width, so each screen is cut short under its caption.
 """
 from pathlib import Path
@@ -14,6 +15,8 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs/google-play/graphics"
 SHOTS = ROOT / "docs/screenshots"
 FONT = ROOT / "app/src/main/res/font"
+# The app's display face, as on its screens' titles.
+DISPLAY = "cormorant_bold.ttf"
 
 PAPER = (0xEF, 0xE0, 0xBF)
 PAGE = (0xF7, 0xEC, 0xD2)
@@ -34,8 +37,33 @@ PAGES = [
 ]
 
 
+def lining(name):
+    """A copy of the font whose plain digits are its lining figures (the 'lnum' feature), kept under app/build:
+    Pillow without raqm cannot switch features on, and Cormorant's default old-style figures jump about in "117"."""
+    out = ROOT / "app/build" / name.replace(".ttf", "-lining.ttf")
+    if out.exists() and out.stat().st_mtime > (FONT / name).stat().st_mtime:
+        return out
+    from fontTools.ttLib import TTFont
+    f = TTFont(FONT / name)
+    gsub = f["GSUB"].table
+    swap = {}
+    for rec in gsub.FeatureList.FeatureRecord:
+        if rec.FeatureTag == "lnum":
+            for i in rec.Feature.LookupListIndex:
+                for st in gsub.LookupList.Lookup[i].SubTable:
+                    swap.update(getattr(st, "mapping", {}) or {})
+    for table in f["cmap"].tables:
+        for code in range(0x30, 0x3A):
+            g = table.cmap.get(code)
+            if g in swap:
+                table.cmap[code] = swap[g]
+    out.parent.mkdir(parents=True, exist_ok=True)
+    f.save(out)
+    return out
+
+
 def font(name, size):
-    return ImageFont.truetype(str(FONT / name), size)
+    return ImageFont.truetype(str(lining(name) if name == DISPLAY else FONT / name), size)
 
 
 def register(w, h):
@@ -69,8 +97,8 @@ def screenshot(src, caption):
     d = ImageDraw.Draw(g)
     d.rectangle((0, 0, W, 330), fill=PAPER)
     d.rectangle((60, 40, W - 60, 46), fill=INK)
-    size = min(fit("pt_serif_bold.ttf", line, 80, W - 140).size for line in caption)
-    title = font("pt_serif_bold.ttf", size)
+    size = min(fit(DISPLAY, line, 80, W - 140).size for line in caption)
+    title = font(DISPLAY, size)
     d.text((W / 2, 135), caption[0], font=title, fill=INK, anchor="mm")
     d.text((W / 2, 235), caption[1], font=title, fill=RED, anchor="mm")
     d.rectangle((60, 318, W - 60, 321), fill=INK)
@@ -96,22 +124,16 @@ def feature(lang):
     name, lines = ("Lot", ["You are one of", "117 billion.", "The lot decides which."]) if lang == "en" else \
         ("Жребий", ["Ты — один из", "117 миллиардов.", "Кем — решит жребий."])
     d.rectangle((48, 100, 490, 106), fill=INK)
-    d.text((48, 118), name, font=fit("pt_serif_bold.ttf", name, 96, 440), fill=INK)
+    d.text((48, 118), name, font=fit(DISPLAY, name, 96, 440), fill=INK)
     d.rectangle((48, 240, 490, 242), fill=INK)
-    sub = font("pt_serif_bold.ttf", 34)
+    sub = font(DISPLAY, 40)
     for i, l in enumerate(lines):
-        d.text((48, 266 + i * 46), l, font=sub, fill=RED if i == 2 else INK)
+        d.text((48, 262 + i * 52), l, font=sub, fill=RED if i == 2 else INK)
     g.convert("RGB").save(OUT / f"feature-graphic-{lang}.png", optimize=True)
-
-
-def icon():
-    """The README logo is already a full square, so Play's mask finds no corners."""
-    Image.open(ROOT / "docs/logo.png").convert("RGB").resize((512, 512), Image.LANCZOS).save(OUT / "icon-512.png", optimize=True)
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    icon()
     for lang in ("en", "ru"):
         feature(lang)
         folder = OUT / f"screenshots-{lang}"
